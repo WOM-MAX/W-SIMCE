@@ -6,13 +6,17 @@ colegios de Chile. Fase 0: **rebanada vertical** de 4° básico Matemática.
 ## Estado actual
 
 - Esquema completo en Neon (26 tablas) aplicado con `prisma db push`.
-- Banco sembrado con los **30 ítems reales** de `ENSAYO-4B-MAT-01`, sus
-  alternativas, claves y justificaciones.
+- **Banco completo importado**: 1.159 ítems (8 bancos, formas 1 a 3) con 4.636
+  alternativas, 147 textos de Lectura, 352 figuras, 191 objetivos y 1.073 indicadores.
+- 19 ensayos de 30 ítems listos para asignar.
 - 1 colegio, 1 curso (4° básico B), 20 estudiantes con código + PIN y una
   asignación vigente.
 - Página de inicio y `/api/health` leyendo de la base.
 
 Todavía **no** están implementados: login, rendición, corrección y reportes.
+
+El banco se importa desde el proyecto de ensayos con `pnpm db:importar`
+(idempotente; no duplica ítems si se corre de nuevo).
 
 ## Requisitos
 

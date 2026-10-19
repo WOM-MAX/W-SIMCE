@@ -3,8 +3,8 @@
 **Qué es:** plataforma de gestión, rendición y analítica de evaluaciones estandarizadas
 para colegios de Chile (SIMCE). Nombre comercial: **W-SIMCE**.
 **Última actualización:** 19 de octubre de 2026.
-**Estado:** Fase 0 en curso. Repositorio creado, base en Neon con esquema y semilla,
-app funcionando en local, despliegue en Railway pendiente de la URL.
+**Estado:** Fase 0 en curso. Repositorio creado, **banco completo importado en Neon**
+(1.159 ítems), app funcionando en local, despliegue en Railway pendiente de la URL.
 
 > Este archivo existe dos veces con el mismo contenido:
 > `C:\Proyectos\W-SIMCE\docs\BITACORA.md` (versionado, viaja con el código) y
@@ -21,7 +21,7 @@ app funcionando en local, despliegue en Railway pendiente de la URL.
 | Remoto | https://github.com/WOM-MAX/W-SIMCE (rama `main`) |
 | Base de datos | Neon, proyecto `neondb`, región `sa-east-1` (São Paulo) |
 | App en producción | Railway — **pendiente: falta la URL pública** |
-| Banco de ítems original | `ENSAYOS SIMCE APP\app\datos\` (1.159 ítems, 147 textos, 362 figuras) |
+| Banco de ítems original | `ENSAYOS SIMCE APP\app\datos\` (fuente; ya importado a Neon) |
 | Referencia visual | k-simce.com (capturas del panel de alumno) |
 
 **Credenciales de la base:** están en `C:\Proyectos\W-SIMCE\.env`, que **no se versiona**.
@@ -35,7 +35,12 @@ direct). No las escribas en documentos ni en el chat.
 | Comprobación | Resultado | Cómo se verificó |
 | --- | --- | --- |
 | Esquema en Neon | 26 tablas | `prisma db push` y consulta a `information_schema` |
-| Banco sembrado | 30 ítems, 120 alternativas, 30 claves, 1 ensayo | conteos en la base |
+| Banco en Neon | **1.159 ítems, 4.636 alternativas, 1.159 claves** (una por ítem) | conteos y agrupación por banco |
+| Currículum en Neon | 191 objetivos, 1.073 indicadores, 22 ejes | conteos |
+| Textos de Lectura | 147, y los 480 ítems de Lectura con su texto | conteo con `textoId` |
+| Figuras | 352 construidas a primitivas y enlazadas a 376 ítems | `Figura.primitivas` (JSON) |
+| Ensayos | 19 de 30 ítems (18 importados + 1 de la semilla) | listado por nivel |
+| Cobertura de OA | 114 de 114 objetivos usables; **0 ítems sin OA** | `group by` por nivel |
 | Nómina | 20 estudiantes matriculados en 4° B | conteo de `Matricula` |
 | App local | `GET /` 200 y `/api/health` 200 con datos reales | navegador y `curl` |
 | Build de producción | correcto (3 rutas, 102 kB JS compartido) | `pnpm build` |
@@ -45,6 +50,10 @@ direct). No las escribas en documentos ni en el chat.
 
 La portada actual muestra los conteos reales de Neon y la asignación sembrada.
 No hay login, ni rendición, ni reportes todavía.
+
+Nota sobre las figuras: el catálogo original registra 362; se importaron **352**,
+que son las que algún ítem referencia. Las 10 restantes pertenecen al ensayo de
+muestra (`MUE-*`), que se excluyó a propósito porque no es una forma del banco.
 
 ---
 
@@ -142,7 +151,13 @@ pnpm dev              # http://localhost:3005
 Comprobación rápida: `http://localhost:3005/api/health` debe devolver
 `{"ok":true,...,"conteos":{...}}`.
 
-Para recrear la base desde cero: `pnpm db:push` y luego `pnpm db:seed`.
+Para recrear la base desde cero: `pnpm db:push`, luego `pnpm db:seed` (rebanada de
+4° B) y opcionalmente `pnpm db:importar` (banco completo, idempotente). El banco ya
+está cargado en Neon: no hace falta volver a importarlo.
+
+El importador (`prisma/importar-banco.mjs`) lee los archivos del proyecto de ensayos,
+construye las figuras a primitivas con `FIGURAS.obtener(id)` y no duplica nada si se
+corre dos veces.
 
 ---
 
@@ -171,6 +186,8 @@ como variable de entorno en Railway y en el `.env` local.
 ## 9. Pendientes priorizados
 
 **P0 — cerrar la rebanada vertical (4° B Matemática, 30 ítems, 20 alumnos):**
+0. ~~Importar el banco completo~~ — **hecho**: 1.159 ítems, 147 textos, 352 figuras,
+   19 ensayos, 191 OA y 1.073 indicadores en Neon.
 1. Login: docente por correo, alumno por código + PIN; sesión con cookie y CSRF.
 2. Iniciar intento: crea `Intento` + `IntentoItem` copiando metadata, devuelve ítems **sin clave**.
 3. Rendición: una a una y cuadernillo, reloj del servidor, autoguardado por lote,
@@ -238,6 +255,8 @@ la base, y exporta el resumen para UTP.
 | 13:20 | Se prepara el despliegue: Dockerfile, migración inicial, `railway.toml`, CI |
 | 13:35 | `main` en GitHub, CI verde (incluye build y arranque de la imagen) |
 | 13:40 | Se separa liveness/readiness y se empuja `f7ca303` |
+| 13:45 | Se agrega la bitácora y se saca el `AUTH_SECRET` del repositorio (`8d5ae52`) |
+| 13:50 | Se importa el **banco completo**: 1.159 ítems, 147 textos, 352 figuras, 19 ensayos |
 
 ---
 
