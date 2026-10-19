@@ -8,6 +8,7 @@ const ERRORES: Record<string, string> = {
   credenciales: 'Los datos no coinciden con ninguna cuenta.',
   colegio: 'Tu cuenta no está asociada a ningún colegio.',
   interno: 'No se pudo iniciar sesión. Inténtalo de nuevo.',
+  configuracion: 'El servidor no tiene configurado el secreto de sesión. Avisa a quien administra el sistema.',
 };
 
 const CLASE_INPUT =

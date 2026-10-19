@@ -82,7 +82,10 @@ export async function POST(request: Request) {
 
     return volver(request, '/');
   } catch (error) {
+    const mensaje = error instanceof Error ? error.message : String(error);
     console.error('login', error);
-    return volver(request, '/login?error=interno');
+    // Un secreto de sesion ausente es configuracion, no un fallo del usuario.
+    const codigo = mensaje.includes('SESSION_SECRET') ? 'configuracion' : 'interno';
+    return volver(request, `/login?error=${codigo}`);
   }
 }
