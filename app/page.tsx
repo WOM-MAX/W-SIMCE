@@ -1,9 +1,15 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
+import { sesionActual } from '@/lib/auth';
 
 export const dynamic = 'force-dynamic';
 
 export default async function Inicio() {
+  const sesion = await sesionActual();
+  if (!sesion) redirect('/login');
+  if (sesion.tipo === 'estudiante') redirect('/alumno');
+
   const [colegios, cursos, estudiantes, items, ensayos, asignaciones] = await Promise.all([
     prisma.colegio.count(),
     prisma.curso.count(),
@@ -41,12 +47,22 @@ export default async function Inicio() {
               <p className="text-xs text-slate-500">Evaluación estandarizada · Colegio Acrópolis</p>
             </div>
           </div>
-          <Link
-            href="/api/health"
-            className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50"
-          >
-            Estado de la base
-          </Link>
+          <div className="flex items-center gap-3">
+            <span className="hidden text-xs text-slate-500 sm:inline">
+              {sesion.nombre} · {sesion.rol}
+            </span>
+            <Link
+              href="/api/health"
+              className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50"
+            >
+              Estado de la base
+            </Link>
+            <form action="/api/auth/logout" method="post">
+              <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50">
+                Salir
+              </button>
+            </form>
+          </div>
         </div>
       </header>
 
