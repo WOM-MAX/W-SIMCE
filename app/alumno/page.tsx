@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
+import { Marca } from '@/components/marca';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,18 +36,7 @@ export default async function Alumno() {
     <div className="min-h-dvh bg-slate-50">
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-6 py-4">
-          <div className="flex items-center gap-3">
-            <span
-              className="grid h-10 w-10 place-items-center rounded-xl text-sm font-bold text-white"
-              style={{ background: 'linear-gradient(135deg,#14B8A6,#10B981)' }}
-            >
-              W
-            </span>
-            <div>
-              <h1 className="text-lg font-semibold tracking-tight">W-SIMCE</h1>
-              <p className="text-xs text-slate-500">Hola, {sesion.nombre}</p>
-            </div>
-          </div>
+          <Marca subtitulo={`Hola, ${sesion.nombre}`} />
           <form action="/api/auth/logout" method="post">
             <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50">
               Salir

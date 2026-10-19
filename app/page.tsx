@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { Marca } from '@/components/marca';
+import { MODULOS, ETIQUETA_ESTADO, CLASE_ESTADO } from '@/lib/modulos';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,21 +38,20 @@ export default async function Inicio() {
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <span
-              className="grid h-10 w-10 place-items-center rounded-xl text-sm font-bold text-white"
-              style={{ background: 'linear-gradient(135deg,#14B8A6,#10B981)' }}
-            >
-              W
-            </span>
-            <div>
-              <h1 className="text-lg font-semibold tracking-tight">W-SIMCE</h1>
-              <p className="text-xs text-slate-500">Evaluación estandarizada · Colegio Acrópolis</p>
-            </div>
+            <Marca subtitulo="Evaluación estandarizada · Colegio Acrópolis" />
           </div>
           <div className="flex items-center gap-3">
             <span className="hidden text-xs text-slate-500 sm:inline">
               {sesion.nombre} · {sesion.rol}
             </span>
+            {sesion.rol === 'ADMIN' || sesion.rol === 'UTP' ? (
+              <a
+                href="/admin"
+                className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50"
+              >
+                Administración
+              </a>
+            ) : null}
             <Link
               href="/api/health"
               className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50"
@@ -106,13 +107,28 @@ export default async function Inicio() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-dashed border-slate-300 bg-white/60 p-5 text-sm text-slate-600">
-          <p className="font-medium text-slate-800">Siguiente en la rebanada</p>
-          <ol className="mt-2 list-decimal space-y-1 pl-5">
-            <li>Iniciar intento y rendir 30 preguntas con reloj y autoguardado.</li>
-            <li>Cerrar por tiempo en el servidor.</li>
-            <li>Reporte por eje y habilidad, con exportación para UTP.</li>
-          </ol>
+        <section className="rounded-2xl border border-slate-200 bg-white">
+          <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
+            <h2 className="font-semibold text-slate-900">Módulos</h2>
+            <span className="text-xs text-slate-400">
+              {MODULOS.filter((m) => m.estado === 'listo').length} de {MODULOS.length} listos
+            </span>
+          </div>
+          <ul className="divide-y divide-slate-50">
+            {MODULOS.map((m) => (
+              <li key={m.id} className="flex flex-wrap items-start gap-3 px-5 py-4">
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-slate-800">{m.nombre}</p>
+                  <p className="text-xs text-slate-500">{m.detalle}</p>
+                </div>
+                <span
+                  className={`rounded-full px-2.5 py-1 text-xs font-medium ${CLASE_ESTADO[m.estado]}`}
+                >
+                  {ETIQUETA_ESTADO[m.estado]}
+                </span>
+              </li>
+            ))}
+          </ul>
         </section>
       </main>
     </div>

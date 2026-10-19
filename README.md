@@ -107,3 +107,20 @@ Dos decisiones que sostienen los informes históricos:
   abrir la plataforma a usuarios reales.
 - Datos de menores: antes de producción hay que resolver base legal,
   minimización, retención y control de acceso (Ley 21.719).
+
+## Administración
+
+El primer administrador se crea desde la consola, porque no hay ninguno todavía:
+
+```bash
+node --env-file=.env prisma/crear-admin.mjs admin@acropolis.cl "clave-de-8-o-mas"
+```
+
+Si el correo ya existe, lo promueve a ADMIN y le cambia la clave.
+
+Con esa cuenta, `/admin` permite crear docentes (con rol DOCENTE, UTP o ADMIN),
+crear estudiantes con código automático, y restablecer claves y PIN.
+
+La sesión se firma con HMAC-SHA256 y viaja en una cookie `httpOnly`. Requiere
+`SESSION_SECRET` de 32 caracteres o más en el entorno; sin ella el login
+responde con un error de configuración, no con un fallo genérico.

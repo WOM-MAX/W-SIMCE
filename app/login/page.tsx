@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
+import { Marca } from '@/components/marca';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,17 +29,8 @@ export default async function Login({
   return (
     <div className="min-h-dvh bg-slate-50">
       <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-5xl items-center gap-3 px-6 py-4">
-          <span
-            className="grid h-10 w-10 place-items-center rounded-xl text-sm font-bold text-white"
-            style={{ background: 'linear-gradient(135deg,#14B8A6,#10B981)' }}
-          >
-            W
-          </span>
-          <div>
-            <h1 className="text-lg font-semibold tracking-tight">W-SIMCE</h1>
-            <p className="text-xs text-slate-500">Evaluación estandarizada · Colegio Acrópolis</p>
-          </div>
+        <div className="mx-auto flex max-w-5xl items-center px-6 py-4">
+          <Marca subtitulo="Evaluación estandarizada · Colegio Acrópolis" />
         </div>
       </header>
 

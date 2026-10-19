@@ -105,3 +105,11 @@ export async function exigirSesion(): Promise<Sesion> {
   if (!sesion) throw new Error('SIN_SESION');
   return sesion;
 }
+
+// Administración: solo ADMIN y UTP de un colegio.
+export async function sesionAdmin(): Promise<Extract<Sesion, { tipo: 'usuario' }> | null> {
+  const sesion = await sesionActual();
+  if (!sesion || sesion.tipo !== 'usuario') return null;
+  if (sesion.rol !== 'ADMIN' && sesion.rol !== 'UTP') return null;
+  return sesion;
+}
