@@ -53,8 +53,11 @@ export default async function Alumno({
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-6 py-4">
           <Marca subtitulo={`Hola, ${sesion.nombre}`} />
           <form action="/api/auth/logout" method="post">
-            <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo">
-              Salir
+            <button
+              className="rounded-lg border border-borde px-3 py-2 text-xs font-medium text-slate-700 hover:bg-fondo"
+              title="Cierra tu sesión y vuelve a la pantalla de acceso"
+            >
+              Cerrar sesión
             </button>
           </form>
         </div>
