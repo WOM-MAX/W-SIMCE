@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { sesionAdmin } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Marca } from '@/components/marca';
+import { Panel } from '@/components/panel';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,6 +12,7 @@ const MENSAJES: Record<string, string> = {
   usuario: 'Docente creado.',
   estudiante: 'Estudiante creado.',
   clave: 'Credencial actualizada.',
+  configuracion: 'Configuración guardada.',
 };
 
 const ERRORES: Record<string, string> = {
@@ -20,6 +21,7 @@ const ERRORES: Record<string, string> = {
   curso: 'Elige un curso válido.',
   clave: 'La clave o el PIN deben tener al menos 4 caracteres.',
   permiso: 'No tienes permisos de administración.',
+  cortes: 'Los cortes deben ir de 0 a 100 y el segundo ser mayor que el primero.',
   interno: 'No se pudo completar la operación.',
 };
 
@@ -55,31 +57,83 @@ export default async function Admin({
     }),
   ]);
 
-  return (
-    <div className="min-h-dvh bg-fondo">
-      <header className="border-b border-borde bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
-          <Marca subtitulo="Administración de cuentas" />
-          <div className="flex items-center gap-3">
-            <a href="/" className="text-xs text-tenue hover:text-slate-800">
-              Volver al panel
-            </a>
-            <form action="/api/auth/logout" method="post">
-              <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo">
-                Salir
-              </button>
-            </form>
-          </div>
-        </div>
-      </header>
+  const configuracion =
+    (await prisma.configuracionColegio.findUnique({
+      where: { colegioId: sesion.colegioId },
+    })) ?? {
+      estudiantesVenResultados: false,
+      corteElemental: 50,
+      corteAdecuado: 75,
+    };
 
-      <main className="mx-auto max-w-6xl space-y-6 px-6 py-8">
+  return (
+    <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/admin">
+      <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight text-marca">Administración</h1>
+          <p className="text-xs text-tenue">Cuentas y configuración del colegio</p>
+        </div>
         {aviso ? (
           <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-marca">{aviso}</p>
         ) : null}
         {fallo ? (
           <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{fallo}</p>
         ) : null}
+
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Resultados y niveles de logro</h2>
+          <p className="mt-1 mb-4 text-xs text-tenue">
+            Decide si el estudiante ve su puntaje y fija los cortes con que la UTP clasifica a cada
+            curso.
+          </p>
+          <form
+            action="/api/admin/configuracion"
+            method="post"
+            className="grid gap-4 sm:grid-cols-3"
+          >
+            <label className="flex items-start gap-3 sm:col-span-3">
+              <input
+                type="checkbox"
+                name="estudiantesVenResultados"
+                defaultChecked={configuracion.estudiantesVenResultados}
+                className="mt-0.5 h-4 w-4 accent-acento"
+              />
+              <span className="text-sm text-slate-700">
+                El estudiante ve su puntaje y su nivel de logro
+                <span className="block text-xs text-tenue">
+                  Si está desactivado, solo docentes y UTP ven los resultados.
+                </span>
+              </span>
+            </label>
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+              Corte Insuficiente / Elemental (%)
+              <input
+                name="corteElemental"
+                type="number"
+                min="0"
+                max="100"
+                defaultValue={configuracion.corteElemental}
+                className={CLASE_INPUT}
+              />
+            </label>
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+              Corte Elemental / Adecuado (%)
+              <input
+                name="corteAdecuado"
+                type="number"
+                min="0"
+                max="100"
+                defaultValue={configuracion.corteAdecuado}
+                className={CLASE_INPUT}
+              />
+            </label>
+            <div className="flex items-end">
+              <button className="w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+                Guardar
+              </button>
+            </div>
+          </form>
+        </section>
 
         <section className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-borde bg-white p-6">
@@ -222,7 +276,7 @@ export default async function Admin({
             ))}
           </ul>
         </section>
-      </main>
-    </div>
+      </div>
+    </Panel>
   );
 }

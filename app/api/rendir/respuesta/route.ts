@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { cerrarSiVencido, estudianteActual } from '@/lib/rendicion';
+import { corregirIntento } from '@/lib/correccion';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
@@ -58,6 +59,8 @@ export async function POST(request: Request) {
           version: { increment: 1 },
         },
       });
+
+      await corregirIntento(intentoId);
 
       return volver(request, `/rendir/${intentoId}/fin?respondidas=${respondidas}&total=${total}`);
     }

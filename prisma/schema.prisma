@@ -70,6 +70,7 @@ model Colegio {
   usuarios  Membresia[]
   estudiantes Estudiante[]
   ensayos   Ensayo[]
+  configuracion ConfiguracionColegio?
 }
 
 model AnioEscolar {
@@ -415,3 +416,18 @@ model Evento {
 
   @@index([entidad, entidadId])
 }
+
+// ------------------------------------------------------------ configuracion ---
+
+// Decisiones del colegio que no son datos de evaluación.
+model ConfiguracionColegio {
+  colegioId               String   @id @db.Uuid
+  // Si está activo, el estudiante ve su puntaje y su nivel de logro.
+  estudiantesVenResultados Boolean @default(false)
+  // Cortes de nivel de logro en porcentaje de logro. Provisional: los fija la UTP.
+  corteElemental          Int      @default(50)
+  corteAdecuado           Int      @default(75)
+  actualizadoEn           DateTime @updatedAt
+  colegio                 Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+}
+

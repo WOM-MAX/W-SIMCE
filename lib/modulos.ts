@@ -31,7 +31,7 @@ export const MODULOS: Modulo[] = [
     id: 'correccion',
     nombre: 'Corrección',
     detalle: 'Puntaje por ítem, resultado global y desglose por eje, habilidad, bloom y dificultad.',
-    estado: 'pendiente',
+    estado: 'listo',
   },
   {
     id: 'reportes',

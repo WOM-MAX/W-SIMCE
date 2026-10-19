@@ -1,8 +1,7 @@
-import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
-import { Marca, Candado } from '@/components/marca';
+import { Panel } from '@/components/panel';
 import { MODULOS, ETIQUETA_ESTADO, CLASE_ESTADO } from '@/lib/modulos';
 
 export const dynamic = 'force-dynamic';
@@ -34,42 +33,13 @@ export default async function Inicio() {
   ];
 
   return (
-    <div className="min-h-dvh">
-      <header className="border-b border-borde bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-3">
-            <Marca subtitulo="Evaluación estandarizada · Colegio Acrópolis" />
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="hidden text-xs text-tenue sm:inline">
-              {sesion.nombre} · {sesion.rol}
-            </span>
-            <Link
-              href="/api/health"
-              className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo"
-            >
-              Estado de la base
-            </Link>
-            <form action="/api/auth/logout" method="post">
-              <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo">
-                Salir
-              </button>
-            </form>
-            {sesion.rol === 'ADMIN' || sesion.rol === 'UTP' ? (
-              <a
-                href="/admin"
-                title="Administración"
-                aria-label="Administración"
-                className="grid h-8 w-8 place-items-center rounded-lg border border-borde text-slate-600 hover:bg-fondo"
-              >
-                <Candado className="h-4 w-4" />
-              </a>
-            ) : null}
-          </div>
+    <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/">
+      <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight text-marca">Inicio</h1>
+          <p className="text-xs text-tenue">Evaluación estandarizada · Colegio Acrópolis</p>
         </div>
-      </header>
 
-      <main className="mx-auto max-w-6xl space-y-6 px-6 py-8">
         <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {tarjetas.map((t) => (
             <div key={t.etiqueta} className="rounded-2xl border border-borde bg-white p-5">
@@ -103,7 +73,8 @@ export default async function Inicio() {
             ))}
             {asignaciones.length === 0 && (
               <p className="px-5 py-10 text-center text-sm text-tenue">
-                Todavía no hay asignaciones. Corre <code className="rounded bg-borde px-1">pnpm db:seed</code>.
+                Todavía no hay asignaciones. Corre{' '}
+                <code className="rounded bg-borde px-1">pnpm db:seed</code>.
               </p>
             )}
           </div>
@@ -132,7 +103,7 @@ export default async function Inicio() {
             ))}
           </ul>
         </section>
-      </main>
-    </div>
+      </div>
+    </Panel>
   );
 }

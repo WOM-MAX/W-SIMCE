@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual, type Sesion } from '@/lib/auth';
+import { corregirIntento } from '@/lib/correccion';
 
 export type SesionEstudiante = Extract<Sesion, { tipo: 'estudiante' }>;
 
@@ -27,6 +28,7 @@ export async function cerrarSiVencido(intentoId: string): Promise<boolean> {
     where: { id: intentoId },
     data: { estado: 'EXPIRADO', enviadoEn: intento.fechaLimite, tiempoUsadoSeg: usado },
   });
+  await corregirIntento(intentoId);
   return true;
 }
 
