@@ -9,7 +9,11 @@ function fecha(d: Date) {
   return d.toLocaleDateString('es-CL', { day: '2-digit', month: 'short', year: 'numeric' });
 }
 
-export default async function Alumno() {
+export default async function Alumno({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
   const sesion = await sesionActual();
   if (!sesion) redirect('/login');
   if (sesion.tipo !== 'estudiante') redirect('/');
@@ -29,8 +33,19 @@ export default async function Alumno() {
 
   const intentos = await prisma.intento.findMany({
     where: { estudianteId: sesion.id },
-    select: { asignacionId: true, estado: true, numero: true },
+    select: { id: true, asignacionId: true, estado: true, numero: true },
   });
+
+  const { error } = await searchParams;
+  const MENSAJES: Record<string, string> = {
+    asignacion: 'Esa evaluación no está disponible para tu curso.',
+    noabre: 'Todavía no se abre esa evaluación.',
+    cerrada: 'El plazo de esa evaluación ya terminó.',
+    intentos: 'Ya usaste los intentos permitidos.',
+    vacio: 'La evaluación no tiene preguntas cargadas.',
+    interno: 'No se pudo comenzar. Inténtalo otra vez.',
+  };
+  const aviso = error ? (MENSAJES[error] ?? MENSAJES.interno) : null;
 
   return (
     <div className="min-h-dvh bg-slate-50">
@@ -47,6 +62,10 @@ export default async function Alumno() {
 
       <main className="mx-auto max-w-4xl space-y-6 px-6 py-8">
         <h2 className="text-base font-semibold text-slate-900">Tus evaluaciones</h2>
+
+        {aviso ? (
+          <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{aviso}</p>
+        ) : null}
 
         {!sesion.cursoId ? (
           <p className="rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-sm text-slate-600">
@@ -95,14 +114,22 @@ export default async function Alumno() {
                     </span>
                   </div>
 
-                  {disponible || enCurso ? (
-                    <button
-                      disabled
-                      className="mt-4 rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white opacity-60"
-                      title="La rendición se habilita en la siguiente entrega"
+                  {enviado ? (
+                    <p className="mt-4 text-xs text-slate-400">Ya la rendiste.</p>
+                  ) : enCurso ? (
+                    <a
+                      href={`/rendir/${propios.find((i) => i.estado === 'EN_CURSO')?.id}/1`}
+                      className="mt-4 inline-block rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
                     >
-                      {enCurso ? 'Continuar' : 'Comenzar'} (próximamente)
-                    </button>
+                      Continuar donde quedaste
+                    </a>
+                  ) : disponible ? (
+                    <form action="/api/rendir/iniciar" method="post" className="mt-4">
+                      <input type="hidden" name="asignacionId" value={a.id} />
+                      <button className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700">
+                        Comenzar
+                      </button>
+                    </form>
                   ) : null}
                 </li>
               );
