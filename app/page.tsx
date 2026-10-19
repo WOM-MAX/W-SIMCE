@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
-import { Marca } from '@/components/marca';
+import { Marca, Candado } from '@/components/marca';
 import { MODULOS, ETIQUETA_ESTADO, CLASE_ESTADO } from '@/lib/modulos';
 
 export const dynamic = 'force-dynamic';
@@ -44,14 +44,6 @@ export default async function Inicio() {
             <span className="hidden text-xs text-tenue sm:inline">
               {sesion.nombre} · {sesion.rol}
             </span>
-            {sesion.rol === 'ADMIN' || sesion.rol === 'UTP' ? (
-              <a
-                href="/admin"
-                className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo"
-              >
-                Administración
-              </a>
-            ) : null}
             <Link
               href="/api/health"
               className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo"
@@ -63,6 +55,16 @@ export default async function Inicio() {
                 Salir
               </button>
             </form>
+            {sesion.rol === 'ADMIN' || sesion.rol === 'UTP' ? (
+              <a
+                href="/admin"
+                title="Administración"
+                aria-label="Administración"
+                className="grid h-8 w-8 place-items-center rounded-lg border border-borde text-slate-600 hover:bg-fondo"
+              >
+                <Candado className="h-4 w-4" />
+              </a>
+            ) : null}
           </div>
         </div>
       </header>
