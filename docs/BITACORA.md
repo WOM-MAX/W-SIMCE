@@ -162,8 +162,9 @@ Falta:
 3. Generar dominio y verificar `/api/live` y `/api/health` en producción.
 4. Poner la URL real en esta bitácora.
 
-Valor de `AUTH_SECRET` generado (aún sin uso, sirve para las sesiones):
-`V+np5xVJe2wbyFrwFJ8xRHOhaHBSbe/UdLpscn2LhCI=`
+Valor de `AUTH_SECRET`: **no se escribe en este documento**. Se genera con
+`openssl rand -base64 32` (o cualquier generador de 32 bytes) y se carga únicamente
+como variable de entorno en Railway y en el `.env` local.
 
 ---
 
