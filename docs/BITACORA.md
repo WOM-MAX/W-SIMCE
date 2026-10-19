@@ -3,8 +3,9 @@
 **Qué es:** plataforma de gestión, rendición y analítica de evaluaciones estandarizadas
 para colegios de Chile (SIMCE). Nombre comercial: **W-SIMCE**.
 **Última actualización:** 19 de octubre de 2026.
-**Estado:** Fase 0 en curso. Repositorio creado, **banco completo importado en Neon**
-(1.159 ítems), app funcionando en local, despliegue en Railway pendiente de la URL.
+**Estado:** Fase 0 desplegada en producción. Acceso, administración, generación de
+ensayos, rendición, corrección y reportes funcionando. Pendiente asignar los
+ensayos a un curso (ver sección 14).
 
 > Este archivo existe dos veces con el mismo contenido:
 > `C:\Proyectos\W-SIMCE\docs\BITACORA.md` (versionado, viaja con el código) y
@@ -268,3 +269,159 @@ la base, y exporta el resumen para UTP.
 4. Lee esta bitácora y sigue por los pendientes P0.
 
 Si retomas en este mismo equipo, el proyecto ya está listo: solo `pnpm dev`.
+
+---
+
+## 14. Plan de continuación (20 de octubre de 2026)
+
+**Estado al cierre del 19 de octubre:** la aplicación está completa en su flujo
+principal y desplegada. Último commit en `main`: `be8fd5b`.
+Producción responde en https://w-simce-production.up.railway.app con 200,
+1 colegio, 1 curso, 20 estudiantes, 1.159 ítems y 19 ensayos.
+
+> Nota de rutas: esta bitácora se escribió en otro equipo y menciona
+> `C:\Proyectos\W-SIMCE`. En este equipo el clon vive en
+> `E:\DEEPSEEK\ACRO-WOM\W-SIMCE`. El resto del contenido sigue siendo válido.
+
+### 14.1 Cómo arrancar en cinco minutos
+
+1. `cd E:\DEEPSEEK\ACRO-WOM\W-SIMCE` y `pnpm dev` (puerto 3005).
+2. Abrir `http://localhost:3005/login`.
+3. Entrar como `admin@acropolis.cl` con clave `Acropolis2026`.
+4. Comprobar `http://localhost:3005/api/health`.
+5. Para probar como estudiante, ventana de incógnito con `W4B-01` y PIN `1234`.
+
+El `.env` necesita tres variables: `DATABASE_URL` (pooled), `DIRECT_URL`
+(directa) y `SESSION_SECRET` (32 caracteres o más). Las tres están puestas en
+local y en Railway.
+
+### 14.2 Qué quedó construido
+
+| Módulo | Rutas | Estado |
+| --- | --- | --- |
+| Acceso | `/login`, `/api/auth/login`, `/api/auth/logout` | Listo |
+| Panel | `/` con barra lateral | Listo |
+| Administración | `/admin`, `/api/admin/*` | Listo |
+| Generar ensayos | `/ensayos/nuevo`, `/ensayos`, `/api/ensayos/crear` | Listo |
+| Rendición | `/alumno`, `/rendir/[id]/[orden]`, `/rendir/[id]/fin` | Listo |
+| Corrección | `/correccion`, `lib/correccion.ts` | Listo |
+| Reportes | `/reportes`, `/api/reportes/csv` | Listo |
+
+Decisiones tomadas que no hay que volver a discutir:
+
+- Un intento por asignación (`Asignacion.intentosPermitidos`, por defecto 1).
+- Una pregunta por pantalla, con navegación hacia atrás y respuestas
+  modificables hasta el envío.
+- El cierre por tiempo lo decide el servidor en cada petición. El reloj del
+  navegador es solo informativo.
+- `tiempoMin = 0` significa sin límite propio: manda la fecha de cierre del
+  ensayo.
+- La escala de logro es lineal de 100 a 1000 sobre el porcentaje. Es una regla
+  declarada, no una calibración psicométrica.
+- Los cortes de nivel (Insuficiente, Elemental, Adecuado) son 50 y 75 por
+  defecto y se editan en `/admin`. Son provisionales.
+- El estudiante solo ve sus resultados si el colegio activa el interruptor en
+  `/admin`.
+- El ensayo generado queda en BORRADOR hasta que se asigne.
+- La paleta sale del emblema: azul `#202858`, naranja `#F84828`, blanco.
+
+### 14.3 Prioridad 0: asignar ensayos a un curso
+
+Es lo único que impide cerrar el ciclo completo. Hoy se pueden generar ensayos,
+pero no llegan a ningún estudiante.
+
+Qué hacer:
+
+1. Página `/ensayos/[id]/asignar` con: curso, fecha de apertura, fecha de
+   cierre e intentos permitidos.
+2. Ruta `POST /api/ensayos/asignar` que cree la `Asignacion` y pase el
+   `Ensayo.estado` a `PUBLICADO` en la misma transacción. Guardar `docenteId`
+   con el usuario de la sesión.
+3. Botón "Asignar" en la fila de cada ensayo en `/ensayos`.
+4. Validaciones: el ensayo debe tener ítems, el curso debe ser del colegio,
+   `cierraEn` mayor que `abreEn`, y no duplicar una asignación activa del mismo
+   ensayo al mismo curso.
+5. Prueba de extremo a extremo: asignar el ensayo a 4° básico B, entrar como
+   `W4B-01`, rendirlo, verlo en `/correccion` y en `/reportes`.
+
+Riesgo bajo: la rendición ya copia la metadata de cada ítem al crear el intento,
+así que un ensayo generado hoy se comporta igual que el del seed.
+
+### 14.4 Prioridad 1: Ley 21.719 y trazabilidad
+
+Son datos de menores. Antes de abrirlo a docentes y estudiantes reales hay que
+resolver esto, aunque no sea visible en pantalla.
+
+1. La tabla `Evento` existe y está sin usar. Registrar al menos: inicio de
+   sesión correcto y fallido, creación y borrado de estudiantes, importación
+   desde Excel, generación y asignación de ensayos, envío de intento y cambio
+   de claves.
+2. Definir plazo de retención y qué se borra. Hoy nada se borra nunca.
+3. Derecho de acceso y supresión: el borrado ya existe y arrastra intentos y
+   respuestas, pero falta una exportación de todos los datos de un estudiante.
+4. Base legal y consentimiento: lo define el colegio, no la aplicación, pero la
+   aplicación debe permitir cumplirlo.
+
+### 14.5 Prioridad 2: límite de intentos en el login
+
+Hoy se puede probar claves sin freno. Con códigos de estudiante de cuatro
+dígitos el PIN es trivial de adivinar por fuerza bruta.
+
+Propuesta: contar fallos por correo o código más IP, y bloquear quince minutos
+tras cinco fallos. Se puede apoyar en `Evento` en lugar de añadir otra tabla.
+
+### 14.6 Prioridad 3: versión imprimible en PDF
+
+La pestaña "Imprimible (PDF)" del generador está marcada como pronto. Es la
+tarea más cara de las que quedan y conviene estimarla antes de empezar.
+
+Complicación conocida: las figuras son primitivas propias (rect, line, text,
+circle, poly, path) que hoy se dibujan en SVG. Una librería de PDF no las
+entiende; habría que transformarlas a instrucciones equivalentes o rasterizar
+cada figura. Revisar cuántos ítems del banco traen figura antes de decidir.
+
+### 14.7 Prioridad 4: pulido
+
+- Iconos por eje en las tarjetas del generador, como la aplicación original.
+- Cambio de la propia clave sin pasar por administración.
+- Paginación o filtro por curso en el listado de estudiantes; con 500
+  importados la tabla se hace inmanejable.
+- Revisar el correo del administrador: hoy no se puede editar el nombre.
+
+### 14.8 Deudas técnicas conocidas
+
+- `prisma generate` y `prisma migrate deploy` fallan con EPERM en Windows si el
+  servidor de desarrollo está corriendo, porque tiene tomada la DLL del motor.
+  Parar el servidor antes.
+- `prisma/seed.mjs` depende de la ruta `ORIGEN_BANCO` del equipo del autor. El
+  banco ya está cargado en Neon, así que no bloquea, pero el seed no es
+  reproducible en otro equipo sin el material original.
+- `exceljs` agregó 176 paquetes. Es la única dependencia pesada añadida.
+- No hay pruebas automatizadas. Toda la verificación de esta sesión fue manual
+  con `curl` contra el servidor local, y conviene repetirla al tocar auth o
+  rendición.
+- La bitácora original dice que existe una copia en OneDrive
+  (`ENSAYOS SIMCE APP\BITACORA-W-SIMCE.md`). Al actualizar esta, sincronizar
+  aquella.
+
+### 14.9 Comandos que se usaron
+
+```
+pnpm dev                                       # servidor local en 3005
+node node_modules/typescript/bin/tsc --noEmit  # tipos
+node node_modules/next/dist/bin/next build     # build de producción
+node node_modules/prisma/build/index.js migrate deploy
+node --env-file=.env prisma/crear-admin.mjs correo@colegio.cl "clave"
+curl -s -o NUL -w "%{http_code}" https://w-simce-production.up.railway.app/api/health
+```
+
+### 14.10 Credenciales de prueba
+
+| Perfil | Usuario | Clave |
+| --- | --- | --- |
+| Administrador | `admin@acropolis.cl` | `Acropolis2026` |
+| Docente del seed | `docente@acropolis.cl` | `demo1234` |
+| Estudiantes | `W4B-01` a `W4B-20` | `1234` |
+
+La clave del administrador conviene cambiarla desde `/admin` en cuanto se use
+con datos reales.
