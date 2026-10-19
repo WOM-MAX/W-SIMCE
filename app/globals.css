@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --marca: #14b8a6;
+  --marca-oscura: #0f766e;
+  --fondo: #f8fafc;
+}
+
+html,
+body {
+  background: var(--fondo);
+  color: #0f172a;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,417 @@
+// W-SIMCE — esquema de datos.
+// Multi-tenant por colegio; el ítem se versiona y el intento guarda una copia
+// de la metadata (eje, habilidad, bloom, dificultad) para que los informes
+// históricos no cambien si mañana se edita el banco.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Rol {
+  ADMIN
+  UTP
+  DOCENTE
+}
+
+enum EstadoItem {
+  BORRADOR
+  REVISION
+  APROBADO
+  RETIRADO
+}
+
+enum EstadoEnsayo {
+  BORRADOR
+  PUBLICADO
+}
+
+enum OrigenEnsayo {
+  MANUAL
+  ALEATORIO
+  IMPORTADO
+}
+
+enum EstadoIntento {
+  EN_CURSO
+  ENVIADO
+  EXPIRADO
+  ANULADO
+}
+
+enum EstadoMatricula {
+  ACTIVA
+  RETIRADA
+}
+
+enum Dimension {
+  EJE
+  HABILIDAD
+  BLOOM
+  DIFICULTAD
+}
+
+// ---------------------------------------------------------------- tenancy ---
+
+model Colegio {
+  id        String   @id @default(uuid()) @db.Uuid
+  nombre    String
+  rbd       String?  @unique
+  comuna    String?
+  creadoEn  DateTime @default(now())
+
+  anios     AnioEscolar[]
+  cursos    Curso[]
+  usuarios  Membresia[]
+  estudiantes Estudiante[]
+  ensayos   Ensayo[]
+}
+
+model AnioEscolar {
+  id        String   @id @default(uuid()) @db.Uuid
+  colegioId String   @db.Uuid
+  anio      Int
+  estado    String   @default("activo")
+  colegio   Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+  cursos    Curso[]
+
+  @@unique([colegioId, anio])
+}
+
+model Usuario {
+  id           String   @id @default(uuid()) @db.Uuid
+  email        String   @unique
+  hashPassword String
+  nombre       String
+  activo       Boolean  @default(true)
+  creadoEn     DateTime @default(now())
+
+  membresias   Membresia[]
+  asignaciones Asignacion[]
+}
+
+model Membresia {
+  id        String   @id @default(uuid()) @db.Uuid
+  usuarioId String   @db.Uuid
+  colegioId String   @db.Uuid
+  rol       Rol
+  usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  colegio   Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+
+  @@unique([usuarioId, colegioId])
+}
+
+model Nivel {
+  id         String    @id @default(uuid()) @db.Uuid
+  codigo     String    @unique
+  nombre     String
+  orden      Int
+  cursos     Curso[]
+  ejes       Eje[]
+  items      Item[]
+  ensayos    Ensayo[]
+}
+
+model Asignatura {
+  id     String @id @default(uuid()) @db.Uuid
+  codigo String @unique
+  nombre String
+  ejes   Eje[]
+  items  Item[]
+  ensayos Ensayo[]
+}
+
+model Eje {
+  id           String     @id @default(uuid()) @db.Uuid
+  nivelId      String     @db.Uuid
+  asignaturaId String     @db.Uuid
+  clave        String
+  nombre       String
+  nivel        Nivel      @relation(fields: [nivelId], references: [id], onDelete: Cascade)
+  asignatura   Asignatura @relation(fields: [asignaturaId], references: [id], onDelete: Cascade)
+  objetivos    Objetivo[]
+  items        Item[]
+
+  @@unique([nivelId, asignaturaId, clave])
+}
+
+model Objetivo {
+  id            String     @id @default(uuid()) @db.Uuid
+  ejeId         String     @db.Uuid
+  codigo        String
+  texto         String
+  usaEnEnsayos  Boolean    @default(true)
+  eje           Eje        @relation(fields: [ejeId], references: [id], onDelete: Cascade)
+  indicadores   Indicador[]
+  items         Item[]
+
+  @@unique([ejeId, codigo])
+}
+
+model Indicador {
+  id         String   @id @default(uuid()) @db.Uuid
+  objetivoId String   @db.Uuid
+  texto      String
+  objetivo   Objetivo @relation(fields: [objetivoId], references: [id], onDelete: Cascade)
+}
+
+model Curso {
+  id        String   @id @default(uuid()) @db.Uuid
+  colegioId String   @db.Uuid
+  anioId    String   @db.Uuid
+  nivelId   String   @db.Uuid
+  letra     String
+  nombre    String
+  colegio   Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+  anio      AnioEscolar @relation(fields: [anioId], references: [id], onDelete: Cascade)
+  nivel     Nivel    @relation(fields: [nivelId], references: [id])
+  matriculas Matricula[]
+  asignaciones Asignacion[]
+
+  @@unique([colegioId, anioId, nivelId, letra])
+}
+
+model Estudiante {
+  id           String   @id @default(uuid()) @db.Uuid
+  colegioId    String   @db.Uuid
+  nombres      String
+  apellidos    String
+  codigoAcceso String
+  pinHash      String
+  email        String?
+  colegio      Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+  matriculas   Matricula[]
+  intentos     Intento[]
+
+  @@unique([colegioId, codigoAcceso])
+}
+
+model Matricula {
+  id           String          @id @default(uuid()) @db.Uuid
+  estudianteId String          @db.Uuid
+  cursoId      String          @db.Uuid
+  estado       EstadoMatricula @default(ACTIVA)
+  desde        DateTime        @default(now())
+  estudiante   Estudiante      @relation(fields: [estudianteId], references: [id], onDelete: Cascade)
+  curso        Curso           @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+
+  @@unique([estudianteId, cursoId, desde])
+}
+
+// ------------------------------------------------------------------ banco ---
+
+model Item {
+  id           String      @id @default(uuid()) @db.Uuid
+  codigo       String      @unique
+  nivelId      String      @db.Uuid
+  asignaturaId String      @db.Uuid
+  ejeId        String      @db.Uuid
+  objetivoId   String?     @db.Uuid
+  habilidad    String
+  bloom        String
+  conocimiento String
+  dificultad   String
+  estado       EstadoItem  @default(BORRADOR)
+  figuraId     String?     @db.Uuid
+  textoId      String?     @db.Uuid
+  nivel        Nivel       @relation(fields: [nivelId], references: [id])
+  asignatura   Asignatura  @relation(fields: [asignaturaId], references: [id])
+  eje          Eje         @relation(fields: [ejeId], references: [id])
+  objetivo     Objetivo?   @relation(fields: [objetivoId], references: [id])
+  figura       Figura?     @relation(fields: [figuraId], references: [id])
+  texto        TextoLectura? @relation(fields: [textoId], references: [id])
+  versiones    ItemVersion[]
+
+  @@index([nivelId, asignaturaId, ejeId])
+}
+
+model ItemVersion {
+  id              String        @id @default(uuid()) @db.Uuid
+  itemId          String        @db.Uuid
+  version         Int           @default(1)
+  enunciado       String
+  clave           String
+  justificacion   String
+  hashContenido   String
+  creadoEn        DateTime      @default(now())
+  item            Item          @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  alternativas    Alternativa[]
+  ensayoItems     EnsayoItem[]
+  intentoItems    IntentoItem[]
+
+  @@unique([itemId, version])
+}
+
+model Alternativa {
+  id                 String      @id @default(uuid()) @db.Uuid
+  itemVersionId      String      @db.Uuid
+  letra              String
+  texto              String?
+  esClave            Boolean     @default(false)
+  justificacionError String
+  itemVersion        ItemVersion @relation(fields: [itemVersionId], references: [id], onDelete: Cascade)
+
+  @@unique([itemVersionId, letra])
+}
+
+model Figura {
+  id         String    @id @default(uuid()) @db.Uuid
+  codigo     String    @unique
+  primitivas Json
+  ancho      Int
+  alto       Int
+  items      Item[]
+}
+
+model TextoLectura {
+  id      String @id @default(uuid()) @db.Uuid
+  codigo  String @unique
+  titulo  String
+  tipo    String
+  cuerpo  String
+  fuente  String?
+  palabras Int?
+  items   Item[]
+}
+
+// -------------------------------------------------------------- evaluación ---
+
+model Ensayo {
+  id           String        @id @default(uuid()) @db.Uuid
+  colegioId    String?       @db.Uuid
+  nivelId      String        @db.Uuid
+  asignaturaId String        @db.Uuid
+  titulo       String
+  tiempoMin    Int
+  estado       EstadoEnsayo  @default(BORRADOR)
+  origen       OrigenEnsayo  @default(IMPORTADO)
+  creadoEn     DateTime      @default(now())
+  colegio      Colegio?      @relation(fields: [colegioId], references: [id])
+  nivel        Nivel         @relation(fields: [nivelId], references: [id])
+  asignatura   Asignatura    @relation(fields: [asignaturaId], references: [id])
+  items        EnsayoItem[]
+  asignaciones Asignacion[]
+}
+
+model EnsayoItem {
+  id            String      @id @default(uuid()) @db.Uuid
+  ensayoId      String      @db.Uuid
+  orden         Int
+  itemVersionId String      @db.Uuid
+  puntaje       Float       @default(1)
+  ensayo        Ensayo      @relation(fields: [ensayoId], references: [id], onDelete: Cascade)
+  itemVersion   ItemVersion @relation(fields: [itemVersionId], references: [id])
+
+  @@unique([ensayoId, orden])
+  @@unique([ensayoId, itemVersionId])
+}
+
+model Asignacion {
+  id                String   @id @default(uuid()) @db.Uuid
+  ensayoId          String   @db.Uuid
+  cursoId           String   @db.Uuid
+  docenteId         String?  @db.Uuid
+  abreEn            DateTime
+  cierraEn          DateTime
+  intentosPermitidos Int     @default(1)
+  creadaEn          DateTime @default(now())
+  ensayo            Ensayo   @relation(fields: [ensayoId], references: [id], onDelete: Cascade)
+  curso             Curso    @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+  docente           Usuario? @relation(fields: [docenteId], references: [id])
+  intentos          Intento[]
+
+  @@index([cursoId])
+}
+
+model Intento {
+  id            String        @id @default(uuid()) @db.Uuid
+  asignacionId  String        @db.Uuid
+  estudianteId  String        @db.Uuid
+  numero        Int           @default(1)
+  estado        EstadoIntento @default(EN_CURSO)
+  iniciadoEn    DateTime      @default(now())
+  fechaLimite   DateTime
+  enviadoEn     DateTime?
+  tiempoUsadoSeg Int?
+  version       Int           @default(0)
+  asignacion    Asignacion    @relation(fields: [asignacionId], references: [id], onDelete: Cascade)
+  estudiante    Estudiante    @relation(fields: [estudianteId], references: [id], onDelete: Cascade)
+  items         IntentoItem[]
+  resultado     ResultadoIntento?
+
+  @@unique([asignacionId, estudianteId, numero])
+  @@index([asignacionId, estado])
+}
+
+model IntentoItem {
+  id            String      @id @default(uuid()) @db.Uuid
+  intentoId     String      @db.Uuid
+  orden         Int
+  itemVersionId String      @db.Uuid
+  ejeClave      String
+  habilidad     String
+  bloom         String
+  dificultad    String
+  intento       Intento     @relation(fields: [intentoId], references: [id], onDelete: Cascade)
+  itemVersion   ItemVersion @relation(fields: [itemVersionId], references: [id])
+  respuesta     Respuesta?
+
+  @@unique([intentoId, orden])
+  @@unique([intentoId, itemVersionId])
+}
+
+model Respuesta {
+  id            String      @id @default(uuid()) @db.Uuid
+  intentoItemId String      @unique @db.Uuid
+  letra         String?
+  correcta      Boolean     @default(false)
+  respondidoEn  DateTime    @default(now())
+  segundos      Int?
+  intentoItem   IntentoItem @relation(fields: [intentoItemId], references: [id], onDelete: Cascade)
+}
+
+model ResultadoIntento {
+  id               String   @id @default(uuid()) @db.Uuid
+  intentoId        String   @unique @db.Uuid
+  correctas        Int
+  total            Int
+  pctLogro         Decimal  @db.Decimal(5, 2)
+  puntajeEscala    Int?
+  nivelLogro       String?
+  algoritmoVersion String   @default("v1")
+  calculadoEn      DateTime @default(now())
+  intento          Intento  @relation(fields: [intentoId], references: [id], onDelete: Cascade)
+  dimensiones      ResultadoDimension[]
+}
+
+model ResultadoDimension {
+  id         String    @id @default(uuid()) @db.Uuid
+  intentoId  String    @db.Uuid
+  dimension  Dimension
+  clave      String
+  correctas  Int
+  total      Int
+  pct        Decimal   @db.Decimal(5, 2)
+  resultado  ResultadoIntento @relation(fields: [intentoId], references: [intentoId], onDelete: Cascade)
+
+  @@unique([intentoId, dimension, clave])
+  @@index([dimension, clave])
+}
+
+model Evento {
+  id        String   @id @default(uuid()) @db.Uuid
+  colegioId String?  @db.Uuid
+  actorId   String?  @db.Uuid
+  entidad   String
+  entidadId String
+  accion    String
+  payload   Json?
+  ocurridoEn DateTime @default(now())
+
+  @@index([entidad, entidadId])
+}

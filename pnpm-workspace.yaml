@@ -1,0 +1,8 @@
+# Configuración de pnpm. En pnpm 12 los permisos de scripts se declaran aquí
+# (no en package.json). Prisma necesita ejecutar su instalación para descargar
+# motores y generar el cliente; sin esto, `pnpm install` falla con
+# ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  '@prisma/client': true
+  '@prisma/engines': true
+  prisma: true
