@@ -13,7 +13,7 @@ const ERRORES: Record<string, string> = {
 };
 
 const CLASE_INPUT =
-  'mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-teal-500';
+  'mt-1 w-full rounded-lg border border-borde bg-white px-3 py-2 text-sm text-marca outline-none focus:border-acento';
 
 export default async function Login({
   searchParams,
@@ -27,8 +27,8 @@ export default async function Login({
   const mensaje = error ? (ERRORES[error] ?? ERRORES.interno) : null;
 
   return (
-    <div className="min-h-dvh bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-dvh bg-fondo">
+      <header className="border-b border-borde bg-white">
         <div className="mx-auto flex max-w-5xl items-center px-6 py-4">
           <Marca subtitulo="Evaluación estandarizada · Colegio Acrópolis" />
         </div>
@@ -41,15 +41,15 @@ export default async function Login({
           </p>
         ) : null}
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-base font-semibold text-slate-900">Docentes y equipo</h2>
-          <p className="mt-1 mb-5 text-xs text-slate-500">
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Docentes y equipo</h2>
+          <p className="mt-1 mb-5 text-xs text-tenue">
             Correo institucional y clave. UTP y administración usan el mismo acceso.
           </p>
 
           <form action="/api/auth/login" method="post" className="space-y-3">
             <input type="hidden" name="tipo" value="docente" />
-            <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
               Correo
               <input
                 name="email"
@@ -60,7 +60,7 @@ export default async function Login({
                 className={CLASE_INPUT}
               />
             </label>
-            <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
               Clave
               <input
                 name="clave"
@@ -72,22 +72,22 @@ export default async function Login({
             </label>
             <button
               type="submit"
-              className="w-full rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800"
+              className="w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white transition hover:bg-marca-oscuro"
             >
               Entrar
             </button>
           </form>
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-6">
-          <h2 className="text-base font-semibold text-slate-900">Estudiantes</h2>
-          <p className="mt-1 mb-5 text-xs text-slate-500">
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Estudiantes</h2>
+          <p className="mt-1 mb-5 text-xs text-tenue">
             Código entregado por el colegio y PIN de cuatro dígitos.
           </p>
 
           <form action="/api/auth/login" method="post" className="space-y-3">
             <input type="hidden" name="tipo" value="estudiante" />
-            <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
               Código
               <input
                 name="codigo"
@@ -98,7 +98,7 @@ export default async function Login({
                 className={CLASE_INPUT}
               />
             </label>
-            <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
               PIN
               <input
                 name="pin"
@@ -111,14 +111,14 @@ export default async function Login({
             </label>
             <button
               type="submit"
-              className="w-full rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-teal-700"
+              className="w-full rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white transition hover:bg-acento-oscuro"
             >
               Entrar
             </button>
           </form>
         </section>
 
-        <p className="md:col-span-2 text-center text-xs text-slate-400">
+        <p className="md:col-span-2 text-center text-xs text-tenue">
           Si no recuerdas tus datos, pídelos a la coordinación académica.
         </p>
       </main>

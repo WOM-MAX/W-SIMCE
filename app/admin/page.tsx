@@ -6,7 +6,7 @@ import { Marca } from '@/components/marca';
 export const dynamic = 'force-dynamic';
 
 const CLASE_INPUT =
-  'mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-teal-500';
+  'mt-1 w-full rounded-lg border border-borde bg-white px-3 py-2 text-sm text-marca outline-none focus:border-acento';
 
 const MENSAJES: Record<string, string> = {
   usuario: 'Docente creado.',
@@ -56,16 +56,16 @@ export default async function Admin({
   ]);
 
   return (
-    <div className="min-h-dvh bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-dvh bg-fondo">
+      <header className="border-b border-borde bg-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
           <Marca subtitulo="Administración de cuentas" />
           <div className="flex items-center gap-3">
-            <a href="/" className="text-xs text-slate-500 hover:text-slate-800">
+            <a href="/" className="text-xs text-tenue hover:text-slate-800">
               Volver al panel
             </a>
             <form action="/api/auth/logout" method="post">
-              <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50">
+              <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo">
                 Salir
               </button>
             </form>
@@ -75,29 +75,29 @@ export default async function Admin({
 
       <main className="mx-auto max-w-6xl space-y-6 px-6 py-8">
         {aviso ? (
-          <p className="rounded-xl bg-teal-50 px-4 py-3 text-sm text-teal-800">{aviso}</p>
+          <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-acento-oscuro">{aviso}</p>
         ) : null}
         {fallo ? (
           <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{fallo}</p>
         ) : null}
 
         <section className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-base font-semibold text-slate-900">Nuevo docente o directivo</h2>
-            <p className="mt-1 mb-4 text-xs text-slate-500">
+          <div className="rounded-2xl border border-borde bg-white p-6">
+            <h2 className="text-base font-semibold text-marca">Nuevo docente o directivo</h2>
+            <p className="mt-1 mb-4 text-xs text-tenue">
               La clave se guarda cifrada con scrypt. No se puede recuperar, solo restablecer.
             </p>
             <form action="/api/admin/usuarios" method="post" className="space-y-3">
-              <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                 Nombre
                 <input name="nombre" required placeholder="Ana Pérez" className={CLASE_INPUT} />
               </label>
-              <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                 Correo
                 <input name="email" type="email" required placeholder="ana@acropolis.cl" className={CLASE_INPUT} />
               </label>
               <div className="grid gap-3 sm:grid-cols-2">
-                <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                   Rol
                   <select name="rol" className={CLASE_INPUT} defaultValue="DOCENTE">
                     <option value="DOCENTE">Docente</option>
@@ -105,34 +105,34 @@ export default async function Admin({
                     <option value="ADMIN">Administrador</option>
                   </select>
                 </label>
-                <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                   Clave inicial
                   <input name="clave" required minLength={4} className={CLASE_INPUT} />
                 </label>
               </div>
-              <button className="w-full rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">
+              <button className="w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Crear docente
               </button>
             </form>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-base font-semibold text-slate-900">Nuevo estudiante</h2>
-            <p className="mt-1 mb-4 text-xs text-slate-500">
+          <div className="rounded-2xl border border-borde bg-white p-6">
+            <h2 className="text-base font-semibold text-marca">Nuevo estudiante</h2>
+            <p className="mt-1 mb-4 text-xs text-tenue">
               El código de acceso se genera solo y es el que se entrega al estudiante.
             </p>
             <form action="/api/admin/estudiantes" method="post" className="space-y-3">
               <div className="grid gap-3 sm:grid-cols-2">
-                <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                   Nombres
                   <input name="nombres" required placeholder="Martina" className={CLASE_INPUT} />
                 </label>
-                <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                   Apellidos
                   <input name="apellidos" required placeholder="González Rojas" className={CLASE_INPUT} />
                 </label>
               </div>
-              <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                 Curso
                 <select name="cursoId" required className={CLASE_INPUT}>
                   {cursos.map((c) => (
@@ -142,30 +142,30 @@ export default async function Admin({
                   ))}
                 </select>
               </label>
-              <label className="block text-xs font-medium uppercase tracking-wide text-slate-400">
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                 PIN inicial
                 <input name="pin" required minLength={4} defaultValue="1234" className={CLASE_INPUT} />
               </label>
-              <button className="w-full rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700">
+              <button className="w-full rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro">
                 Crear estudiante
               </button>
             </form>
           </div>
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white">
-          <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
-            <h2 className="font-semibold text-slate-900">Docentes y equipo</h2>
-            <span className="text-xs text-slate-400">{usuarios.length}</span>
+        <section className="rounded-2xl border border-borde bg-white">
+          <div className="flex items-center justify-between border-b border-borde px-5 py-4">
+            <h2 className="font-semibold text-marca">Docentes y equipo</h2>
+            <span className="text-xs text-tenue">{usuarios.length}</span>
           </div>
-          <ul className="divide-y divide-slate-50">
+          <ul className="divide-y divide-borde">
             {usuarios.map((u) => (
               <li key={u.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-slate-800">{u.nombre}</p>
-                  <p className="truncate text-xs text-slate-500">{u.email}</p>
+                  <p className="truncate text-xs text-tenue">{u.email}</p>
                 </div>
-                <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs text-slate-600">
+                <span className="rounded-full bg-borde px-2.5 py-1 text-xs text-slate-600">
                   {u.membresias[0]?.rol ?? 'SIN ROL'}
                 </span>
                 <form action="/api/admin/clave" method="post" className="flex items-center gap-2">
@@ -176,9 +176,9 @@ export default async function Admin({
                     required
                     minLength={4}
                     placeholder="Nueva clave"
-                    className="w-32 rounded-lg border border-slate-200 px-2 py-1 text-xs"
+                    className="w-32 rounded-lg border border-borde px-2 py-1 text-xs"
                   />
-                  <button className="rounded-lg border border-slate-200 px-2 py-1 text-xs text-slate-600 hover:bg-slate-50">
+                  <button className="rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
                     Cambiar
                   </button>
                 </form>
@@ -187,20 +187,20 @@ export default async function Admin({
           </ul>
         </section>
 
-        <section className="rounded-2xl border border-slate-200 bg-white">
-          <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
-            <h2 className="font-semibold text-slate-900">Estudiantes</h2>
-            <span className="text-xs text-slate-400">{estudiantes.length}</span>
+        <section className="rounded-2xl border border-borde bg-white">
+          <div className="flex items-center justify-between border-b border-borde px-5 py-4">
+            <h2 className="font-semibold text-marca">Estudiantes</h2>
+            <span className="text-xs text-tenue">{estudiantes.length}</span>
           </div>
-          <ul className="divide-y divide-slate-50">
+          <ul className="divide-y divide-borde">
             {estudiantes.map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
-                <span className="w-20 font-mono text-xs text-slate-500">{e.codigoAcceso}</span>
+                <span className="w-20 font-mono text-xs text-tenue">{e.codigoAcceso}</span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-slate-800">
                     {e.nombres} {e.apellidos}
                   </p>
-                  <p className="truncate text-xs text-slate-500">
+                  <p className="truncate text-xs text-tenue">
                     {e.matriculas[0]?.curso.nombre ?? 'Sin matrícula activa'}
                   </p>
                 </div>
@@ -212,9 +212,9 @@ export default async function Admin({
                     required
                     minLength={4}
                     placeholder="Nuevo PIN"
-                    className="w-28 rounded-lg border border-slate-200 px-2 py-1 text-xs"
+                    className="w-28 rounded-lg border border-borde px-2 py-1 text-xs"
                   />
-                  <button className="rounded-lg border border-slate-200 px-2 py-1 text-xs text-slate-600 hover:bg-slate-50">
+                  <button className="rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
                     Cambiar
                   </button>
                 </form>

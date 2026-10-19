@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  --marca: #14b8a6;
-  --marca-oscura: #0f766e;
-  --fondo: #f8fafc;
+/* Paleta medida sobre el emblema del Colegio Acrópolis.
+   Azul del anillo, trazo cálido del óvalo y blanco del interior. */
+@theme {
+  --color-marca: #202858;
+  --color-marca-oscuro: #18224a;
+  --color-acento: #f84828;
+  --color-acento-oscuro: #d63818;
+  --color-acento-suave: #fdede9;
+  --color-fondo: #f7f8fa;
+  --color-borde: #e6e8ee;
+  --color-tenue: #5a6480;
+  --color-superficie: #ffffff;
 }
 
 html,
 body {
-  background: var(--fondo);
-  color: #0f172a;
+  background: var(--color-fondo);
+  color: var(--color-marca);
 }
 
 .tabular {

@@ -29,7 +29,7 @@ export function Reloj({ limiteIso }: { limiteIso: string }) {
   return (
     <span
       className={`tabular rounded-full px-3 py-1 text-xs font-medium ${
-        apurado ? 'bg-rose-50 text-rose-700' : 'bg-slate-100 text-slate-600'
+        apurado ? 'bg-rose-50 text-rose-700' : 'bg-borde text-slate-600'
       }`}
       title="Tiempo restante"
     >

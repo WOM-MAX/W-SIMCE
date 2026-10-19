@@ -40,20 +40,20 @@ export default async function Pregunta({
   const ultima = actual === total;
 
   return (
-    <div className="min-h-dvh bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-dvh bg-fondo">
+      <header className="border-b border-borde bg-white">
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-3 px-6 py-4">
           <Marca subtitulo={intento.asignacion.ensayo.titulo} />
           <div className="flex items-center gap-3">
-            <span className="text-xs text-slate-500">
+            <span className="text-xs text-tenue">
               Pregunta {actual} de {total}
             </span>
             <Reloj limiteIso={intento.fechaLimite.toISOString()} />
           </div>
         </div>
-        <div className="h-1 w-full bg-slate-100">
+        <div className="h-1 w-full bg-borde">
           <div
-            className="h-1 bg-teal-500 transition-all"
+            className="h-1 bg-acento-suave0 transition-all"
             style={{ width: `${Math.round((respondidas / total) * 100)}%` }}
           />
         </div>
@@ -61,7 +61,7 @@ export default async function Pregunta({
 
       <main className="mx-auto max-w-4xl space-y-5 px-6 py-8">
         {lectura ? (
-          <details className="rounded-2xl border border-slate-200 bg-white px-5 py-4" open={actual === 1}>
+          <details className="rounded-2xl border border-borde bg-white px-5 py-4" open={actual === 1}>
             <summary className="cursor-pointer text-sm font-medium text-slate-700">
               Texto de lectura: {lectura.titulo}
             </summary>
@@ -69,18 +69,18 @@ export default async function Pregunta({
               {lectura.cuerpo}
             </div>
             {lectura.fuente ? (
-              <p className="mt-3 text-xs text-slate-400">Fuente: {lectura.fuente}</p>
+              <p className="mt-3 text-xs text-tenue">Fuente: {lectura.fuente}</p>
             ) : null}
           </details>
         ) : null}
 
-        <section className="rounded-2xl border border-slate-200 bg-white p-6">
-          <p className="mb-4 whitespace-pre-line text-base leading-relaxed text-slate-900">
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <p className="mb-4 whitespace-pre-line text-base leading-relaxed text-marca">
             {version.enunciado}
           </p>
 
           {figura ? (
-            <div className="mb-5 rounded-xl border border-slate-100 bg-white p-3 text-slate-900">
+            <div className="mb-5 rounded-xl border border-borde bg-white p-3 text-marca">
               <Figura primitivas={figura.primitivas} />
             </div>
           ) : null}
@@ -93,16 +93,16 @@ export default async function Pregunta({
               {version.alternativas.map((alt) => (
                 <label
                   key={alt.id}
-                  className="flex cursor-pointer items-start gap-3 rounded-xl border border-slate-200 p-3 text-sm transition hover:border-teal-400 has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/40"
+                  className="flex cursor-pointer items-start gap-3 rounded-xl border border-borde p-3 text-sm transition hover:border-acento has-[:checked]:border-acento has-[:checked]:bg-acento-suave/40"
                 >
                   <input
                     type="radio"
                     name="letra"
                     value={alt.letra}
                     defaultChecked={elegida === alt.letra}
-                    className="mt-0.5 h-4 w-4 accent-teal-600"
+                    className="mt-0.5 h-4 w-4 accent-acento"
                   />
-                  <span className="font-mono text-xs text-slate-400">{alt.letra}</span>
+                  <span className="font-mono text-xs text-tenue">{alt.letra}</span>
                   <span className="flex-1 text-slate-800">{alt.texto ?? ''}</span>
                 </label>
               ))}
@@ -114,12 +114,12 @@ export default async function Pregunta({
                 name="accion"
                 value="anterior"
                 disabled={actual === 1}
-                className="rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 disabled:opacity-40"
+                className="rounded-lg border border-borde px-4 py-2 text-sm text-slate-600 hover:bg-fondo disabled:opacity-40"
               >
                 Anterior
               </button>
 
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-tenue">
                 {respondidas} de {total} respondidas
               </span>
 
@@ -128,7 +128,7 @@ export default async function Pregunta({
                   type="submit"
                   name="accion"
                   value="enviar"
-                  className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800"
+                  className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro"
                 >
                   Enviar evaluación
                 </button>
@@ -137,7 +137,7 @@ export default async function Pregunta({
                   type="submit"
                   name="accion"
                   value="siguiente"
-                  className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
+                  className="rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro"
                 >
                   Guardar y seguir
                 </button>
@@ -146,7 +146,7 @@ export default async function Pregunta({
           </form>
         </section>
 
-        <p className="text-center text-xs text-slate-400">
+        <p className="text-center text-xs text-tenue">
           Cada paso guarda tu respuesta. Si el tiempo termina, el servidor cierra la evaluación
           con lo que lleves respondido.
         </p>

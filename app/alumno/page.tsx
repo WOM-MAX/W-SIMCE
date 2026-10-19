@@ -48,12 +48,12 @@ export default async function Alumno({
   const aviso = error ? (MENSAJES[error] ?? MENSAJES.interno) : null;
 
   return (
-    <div className="min-h-dvh bg-slate-50">
-      <header className="border-b border-slate-200 bg-white">
+    <div className="min-h-dvh bg-fondo">
+      <header className="border-b border-borde bg-white">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-6 py-4">
           <Marca subtitulo={`Hola, ${sesion.nombre}`} />
           <form action="/api/auth/logout" method="post">
-            <button className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs text-slate-600 hover:bg-slate-50">
+            <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-600 hover:bg-fondo">
               Salir
             </button>
           </form>
@@ -61,18 +61,18 @@ export default async function Alumno({
       </header>
 
       <main className="mx-auto max-w-4xl space-y-6 px-6 py-8">
-        <h2 className="text-base font-semibold text-slate-900">Tus evaluaciones</h2>
+        <h2 className="text-base font-semibold text-marca">Tus evaluaciones</h2>
 
         {aviso ? (
           <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{aviso}</p>
         ) : null}
 
         {!sesion.cursoId ? (
-          <p className="rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-sm text-slate-600">
+          <p className="rounded-2xl border border-dashed border-borde bg-white p-6 text-sm text-slate-600">
             No tienes una matrícula activa. Pide a tu profesor que revise tu situación.
           </p>
         ) : asignaciones.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-sm text-slate-600">
+          <p className="rounded-2xl border border-dashed border-borde bg-white p-6 text-sm text-slate-600">
             No hay evaluaciones abiertas para tu curso.
           </p>
         ) : (
@@ -91,21 +91,21 @@ export default async function Alumno({
                     ? 'Disponible'
                     : 'Aún no abre';
               const color = enviado
-                ? 'bg-slate-100 text-slate-600'
+                ? 'bg-borde text-slate-600'
                 : disponible
-                  ? 'bg-teal-50 text-teal-700'
+                  ? 'bg-acento-suave text-acento'
                   : 'bg-amber-50 text-amber-700';
 
               return (
-                <li key={a.id} className="rounded-2xl border border-slate-200 bg-white p-5">
+                <li key={a.id} className="rounded-2xl border border-borde bg-white p-5">
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
                       <p className="font-medium text-slate-800">{a.ensayo.titulo}</p>
-                      <p className="text-xs text-slate-500">
+                      <p className="text-xs text-tenue">
                         {a.ensayo.asignatura.nombre} · {a.curso.nombre} ·{' '}
                         {a.ensayo._count.items} preguntas · {a.ensayo.tiempoMin} min
                       </p>
-                      <p className="mt-1 text-xs text-slate-400">
+                      <p className="mt-1 text-xs text-tenue">
                         Abre {fecha(a.abreEn)} · cierra {fecha(a.cierraEn)}
                       </p>
                     </div>
@@ -115,18 +115,18 @@ export default async function Alumno({
                   </div>
 
                   {enviado ? (
-                    <p className="mt-4 text-xs text-slate-400">Ya la rendiste.</p>
+                    <p className="mt-4 text-xs text-tenue">Ya la rendiste.</p>
                   ) : enCurso ? (
                     <a
                       href={`/rendir/${propios.find((i) => i.estado === 'EN_CURSO')?.id}/1`}
-                      className="mt-4 inline-block rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700"
+                      className="mt-4 inline-block rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro"
                     >
                       Continuar donde quedaste
                     </a>
                   ) : disponible ? (
                     <form action="/api/rendir/iniciar" method="post" className="mt-4">
                       <input type="hidden" name="asignacionId" value={a.id} />
-                      <button className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700">
+                      <button className="rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro">
                         Comenzar
                       </button>
                     </form>

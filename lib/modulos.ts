@@ -25,7 +25,7 @@ export const MODULOS: Modulo[] = [
     id: 'rendicion',
     nombre: 'Rendición',
     detalle: 'Las 30 preguntas con reloj, autoguardado y cierre por tiempo en el servidor.',
-    estado: 'pendiente',
+    estado: 'listo',
   },
   {
     id: 'correccion',
@@ -48,7 +48,7 @@ export const ETIQUETA_ESTADO: Record<EstadoModulo, string> = {
 };
 
 export const CLASE_ESTADO: Record<EstadoModulo, string> = {
-  listo: 'bg-teal-50 text-teal-700',
+  listo: 'bg-acento-suave text-acento',
   'en-curso': 'bg-amber-50 text-amber-700',
-  pendiente: 'bg-slate-100 text-slate-500',
+  pendiente: 'bg-borde text-tenue',
 };
