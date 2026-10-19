@@ -1,0 +1,143 @@
+import ExcelJS from 'exceljs';
+import { prisma } from '@/lib/prisma';
+import { hashClave, sesionAdmin } from '@/lib/auth';
+import { siguienteCodigo } from '@/lib/estudiantes';
+import { volver } from '@/lib/http';
+
+const MAX_FILAS = 500;
+
+function normalizar(valor: string): string {
+  return valor
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase();
+}
+
+export async function POST(request: Request) {
+  const sesion = await sesionAdmin();
+  if (!sesion) return volver(request, '/');
+
+  const form = await request.formData();
+  const archivo = form.get('archivo');
+
+  if (!(archivo instanceof File) || archivo.size === 0) {
+    return volver(request, '/admin?error=archivo');
+  }
+
+  try {
+    const libro = new ExcelJS.Workbook();
+    await libro.xlsx.load(await archivo.arrayBuffer());
+    const hoja = libro.worksheets[0];
+    if (!hoja) return volver(request, '/admin?error=archivo');
+
+    // Cabeceras por nombre, sin acentos ni mayúsculas.
+    const columnas = new Map<string, number>();
+    hoja.getRow(1).eachCell((celda, numero) => {
+      columnas.set(normalizar(celda.text), numero);
+    });
+
+    const colNombres = columnas.get('nombres');
+    const colApellidos = columnas.get('apellidos');
+    const colCurso = columnas.get('curso');
+    const colPin = columnas.get('pin') ?? columnas.get('clave');
+
+    if (!colNombres || !colApellidos || !colCurso) {
+      return volver(request, '/admin?error=columnas');
+    }
+
+    const cursos = await prisma.curso.findMany({
+      where: { colegioId: sesion.colegioId },
+      include: { nivel: true },
+    });
+    const porNombre = new Map<string, (typeof cursos)[number]>();
+    for (const curso of cursos) {
+      porNombre.set(normalizar(curso.nombre), curso);
+      porNombre.set(normalizar(`${curso.nivel.nombre} ${curso.letra}`), curso);
+    }
+
+    // Para no duplicar al reimportar la misma planilla.
+    const existentes = await prisma.estudiante.findMany({
+      where: { colegioId: sesion.colegioId },
+      include: { matriculas: { where: { estado: 'ACTIVA' } } },
+    });
+    const yaEstan = new Set<string>();
+    for (const e of existentes) {
+      for (const m of e.matriculas) {
+        yaEstan.add(`${normalizar(e.nombres)}|${normalizar(e.apellidos)}|${m.cursoId}`);
+      }
+    }
+
+    let creados = 0;
+    let omitidos = 0;
+    let errores = 0;
+    const detalles: string[] = [];
+
+    const ultimaFila = Math.min(hoja.rowCount, MAX_FILAS + 1);
+
+    for (let numero = 2; numero <= ultimaFila; numero += 1) {
+      const fila = hoja.getRow(numero);
+      const nombres = fila.getCell(colNombres).text.trim();
+      const apellidos = fila.getCell(colApellidos).text.trim();
+      const nombreCurso = fila.getCell(colCurso).text.trim();
+      const pin = (colPin ? fila.getCell(colPin).text.trim() : '') || '1234';
+
+      // Fila vacía o la nota aclaratoria al pie.
+      if (!nombres && !apellidos && !nombreCurso) continue;
+      if (normalizar(nombres).startsWith('una fila por estudiante')) continue;
+
+      if (!nombres || !apellidos || !nombreCurso) {
+        errores += 1;
+        if (detalles.length < 5) detalles.push(`Fila ${numero}: faltan datos.`);
+        continue;
+      }
+
+      const curso = porNombre.get(normalizar(nombreCurso));
+      if (!curso) {
+        errores += 1;
+        if (detalles.length < 5) detalles.push(`Fila ${numero}: curso "${nombreCurso}" no existe.`);
+        continue;
+      }
+
+      if (pin.length < 4) {
+        errores += 1;
+        if (detalles.length < 5) detalles.push(`Fila ${numero}: el PIN debe tener al menos 4 caracteres.`);
+        continue;
+      }
+
+      const llave = `${normalizar(nombres)}|${normalizar(apellidos)}|${curso.id}`;
+      if (yaEstan.has(llave)) {
+        omitidos += 1;
+        continue;
+      }
+
+      const codigoAcceso = await siguienteCodigo(sesion.colegioId, `W${curso.nivel.codigo}-`);
+      const estudiante = await prisma.estudiante.create({
+        data: {
+          colegioId: sesion.colegioId,
+          nombres,
+          apellidos,
+          codigoAcceso,
+          pinHash: hashClave(pin),
+        },
+      });
+      await prisma.matricula.create({ data: { estudianteId: estudiante.id, cursoId: curso.id } });
+
+      yaEstan.add(llave);
+      creados += 1;
+    }
+
+    const params = new URLSearchParams({
+      ok: 'importados',
+      n: String(creados),
+      o: String(omitidos),
+      e: String(errores),
+    });
+    if (detalles.length) params.set('d', detalles.join(' | ').slice(0, 400));
+
+    return volver(request, `/admin?${params.toString()}`);
+  } catch (error) {
+    console.error('importar estudiantes', error);
+    return volver(request, '/admin?error=archivo');
+  }
+}

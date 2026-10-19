@@ -22,19 +22,39 @@ const ERRORES: Record<string, string> = {
   clave: 'La clave o el PIN deben tener al menos 4 caracteres.',
   permiso: 'No tienes permisos de administración.',
   cortes: 'Los cortes deben ir de 0 a 100 y el segundo ser mayor que el primero.',
+  archivo: 'No se pudo leer el archivo. Sube un .xlsx válido.',
+  columnas: 'La planilla debe tener las columnas Nombres, Apellidos y Curso.',
+  seleccion: 'No marcaste ningún estudiante.',
   interno: 'No se pudo completar la operación.',
 };
 
 export default async function Admin({
   searchParams,
 }: {
-  searchParams: Promise<{ ok?: string; error?: string }>;
+  searchParams: Promise<{
+    ok?: string;
+    error?: string;
+    n?: string;
+    o?: string;
+    e?: string;
+    d?: string;
+  }>;
 }) {
   const sesion = await sesionAdmin();
   if (!sesion) redirect('/');
 
-  const { ok, error } = await searchParams;
-  const aviso = ok ? (MENSAJES[ok] ?? null) : null;
+  const { ok, error, n, o, e, d } = await searchParams;
+
+  let aviso: string | null = null;
+  if (ok === 'importados') {
+    aviso = `Importados: ${n ?? '0'}. Omitidos por duplicado: ${o ?? '0'}. Con errores: ${e ?? '0'}.`;
+    if (d) aviso = `${aviso} ${d}`;
+  } else if (ok === 'borrados') {
+    aviso = `Estudiantes borrados: ${n ?? '0'}.`;
+  } else if (ok) {
+    aviso = MENSAJES[ok] ?? null;
+  }
+
   const fallo = error ? (ERRORES[error] ?? ERRORES.interno) : null;
 
   const [usuarios, estudiantes, cursos] = await Promise.all([
@@ -133,6 +153,42 @@ export default async function Admin({
               </button>
             </div>
           </form>
+        </section>
+
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Importar estudiantes desde Excel</h2>
+          <p className="mt-1 mb-4 text-xs text-tenue">
+            Descarga la plantilla, completa una fila por estudiante y súbela. Los que ya existen en
+            el mismo curso se omiten, así que puedes volver a subir la planilla sin duplicar.
+          </p>
+          <div className="flex flex-wrap items-end gap-4">
+            <a
+              href="/api/admin/plantilla"
+              className="rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo"
+            >
+              Descargar plantilla
+            </a>
+            <form
+              action="/api/admin/importar"
+              method="post"
+              encType="multipart/form-data"
+              className="flex flex-wrap items-end gap-3"
+            >
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+                Archivo .xlsx
+                <input
+                  name="archivo"
+                  type="file"
+                  accept=".xlsx"
+                  required
+                  className="mt-1 block text-xs text-slate-700"
+                />
+              </label>
+              <button className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+                Importar
+              </button>
+            </form>
+          </div>
         </section>
 
         <section className="grid gap-6 lg:grid-cols-2">
@@ -241,14 +297,36 @@ export default async function Admin({
           </ul>
         </section>
 
+        <form id="borrar-estudiantes" action="/api/admin/eliminar-estudiantes" method="post" />
+
         <section className="rounded-2xl border border-borde bg-white">
-          <div className="flex items-center justify-between border-b border-borde px-5 py-4">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-borde px-5 py-4">
             <h2 className="font-semibold text-marca">Estudiantes</h2>
-            <span className="text-xs text-tenue">{estudiantes.length}</span>
+            <div className="flex items-center gap-3">
+              <span className="text-xs text-tenue">{estudiantes.length}</span>
+              <button
+                form="borrar-estudiantes"
+                className="rounded-lg border border-acento px-3 py-1.5 text-xs font-medium text-acento-oscuro hover:bg-acento-suave"
+                title="Borra los estudiantes marcados, con sus intentos y respuestas"
+              >
+                Borrar marcados
+              </button>
+            </div>
           </div>
+          <p className="border-b border-borde bg-fondo px-5 py-2 text-xs text-tenue">
+            Borrar un estudiante elimina también sus intentos y respuestas. Marca con cuidado.
+          </p>
           <ul className="divide-y divide-borde">
             {estudiantes.map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
+                <input
+                  type="checkbox"
+                  name="ids"
+                  value={e.id}
+                  form="borrar-estudiantes"
+                  aria-label={`Marcar a ${e.nombres} ${e.apellidos}`}
+                  className="h-4 w-4 accent-acento"
+                />
                 <span className="w-20 font-mono text-xs text-tenue">{e.codigoAcceso}</span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-slate-800">
