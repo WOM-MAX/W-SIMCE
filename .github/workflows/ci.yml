@@ -32,3 +32,33 @@ jobs:
       - run: pnpm exec prisma validate
       - run: pnpm exec tsc --noEmit
       - run: pnpm build
+
+  # Construye la misma imagen que Railway desplegará, sin publicarla.
+  # Detecta acá lo que si no aparece recién en el primer deploy.
+  imagen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          load: true
+          tags: w-simce:ci
+      - name: Arranca la imagen y consulta el healthcheck
+        run: |
+          docker run -d --name w-simce -p 3000:3000 \
+            -e DATABASE_URL=postgresql://ci:ci@localhost:5432/ci \
+            -e DIRECT_URL=postgresql://ci:ci@localhost:5432/ci \
+            w-simce:ci
+          for i in $(seq 1 30); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/api/health || true)
+            if [ "$code" = "200" ] || [ "$code" = "503" ]; then
+              echo "la app respondio con HTTP $code (503 es esperado sin base)"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "la imagen no respondio"; docker logs w-simce; exit 1
+

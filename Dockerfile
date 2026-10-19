@@ -31,8 +31,13 @@ ENV HOSTNAME=0.0.0.0
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs
 
+# El CLI de Prisma vive en la imagen para que el pre-deploy de Railway pueda
+# ejecutar `prisma migrate deploy` sin descargar nada en caliente.
+RUN npm install -g prisma@6.19.3
+
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
 
 USER nextjs
 EXPOSE 3000
