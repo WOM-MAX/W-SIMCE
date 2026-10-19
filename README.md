@@ -17,20 +17,39 @@ Todavía **no** están implementados: login, rendición, corrección y reportes.
 ## Requisitos
 
 - Node.js 22+ (probado con 24.21)
-- pnpm 12+
+- pnpm 12 (`npm install -g pnpm@12.3.4` si no lo tienes)
 
-## Puesta en marcha
+## Primer clone (la base ya existe en Neon)
 
 ```bash
+git clone https://github.com/WOM-MAX/W-SIMCE.git
+cd W-SIMCE
+# crea .env con las dos cadenas de Neon (ver más abajo)
 pnpm install
-pnpm exec prisma generate
-pnpm db:push          # aplica el esquema en Neon
-pnpm db:seed          # carga la rebanada (borra y recrea los datos)
 pnpm dev              # http://localhost:3005
+```
+
+Comprobación: `http://localhost:3005/api/health` debe responder
+`{"ok":true,...,"conteos":{...}}`. No hace falta `db:push` ni `db:seed`: el esquema
+y la semilla ya están aplicados en Neon.
+
+## Solo si quieres recrear la base
+
+```bash
+pnpm exec prisma generate
+pnpm db:push          # aplica el esquema
+pnpm db:seed          # carga la rebanada
 ```
 
 `pnpm db:seed` hace `TRUNCATE ... CASCADE` de todas las tablas: es para
 desarrollo, no lo corras contra datos reales.
+
+## Push desde otro equipo
+
+El repositorio se clona sin credenciales por ser público, pero para hacer `push`
+desde otra máquina necesitas autenticarte: Git Credential Manager (ventana del
+navegador) o una clave SSH registrada en GitHub. La bitácora
+[`docs/BITACORA.md`](docs/BITACORA.md) tiene el detalle.
 
 ## Variables de entorno
 
