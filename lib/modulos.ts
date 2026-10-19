@@ -48,7 +48,7 @@ export const ETIQUETA_ESTADO: Record<EstadoModulo, string> = {
 };
 
 export const CLASE_ESTADO: Record<EstadoModulo, string> = {
-  listo: 'bg-acento-suave text-acento',
+  listo: 'bg-acento-suave text-marca',
   'en-curso': 'bg-amber-50 text-amber-700',
   pendiente: 'bg-borde text-tenue',
 };

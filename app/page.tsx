@@ -82,7 +82,7 @@ export default async function Inicio() {
         <section className="rounded-2xl border border-borde bg-white">
           <div className="flex items-center justify-between border-b border-borde px-5 py-4">
             <h2 className="font-semibold text-marca">Asignaciones de la rebanada</h2>
-            <span className="rounded-full bg-acento-suave px-2.5 py-1 text-xs font-medium text-acento">
+            <span className="rounded-full bg-acento-suave px-2.5 py-1 text-xs font-medium text-marca">
               Fase 0 · 4° básico Matemática
             </span>
           </div>

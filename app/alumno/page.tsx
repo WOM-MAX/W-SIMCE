@@ -93,7 +93,7 @@ export default async function Alumno({
               const color = enviado
                 ? 'bg-borde text-slate-600'
                 : disponible
-                  ? 'bg-acento-suave text-acento'
+                  ? 'bg-acento-suave text-marca'
                   : 'bg-amber-50 text-amber-700';
 
               return (
@@ -119,14 +119,14 @@ export default async function Alumno({
                   ) : enCurso ? (
                     <a
                       href={`/rendir/${propios.find((i) => i.estado === 'EN_CURSO')?.id}/1`}
-                      className="mt-4 inline-block rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro"
+                      className="mt-4 inline-block rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover"
                     >
                       Continuar donde quedaste
                     </a>
                   ) : disponible ? (
                     <form action="/api/rendir/iniciar" method="post" className="mt-4">
                       <input type="hidden" name="asignacionId" value={a.id} />
-                      <button className="rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro">
+                      <button className="rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
                         Comenzar
                       </button>
                     </form>

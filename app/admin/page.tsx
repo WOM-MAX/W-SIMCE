@@ -75,7 +75,7 @@ export default async function Admin({
 
       <main className="mx-auto max-w-6xl space-y-6 px-6 py-8">
         {aviso ? (
-          <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-acento-oscuro">{aviso}</p>
+          <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-marca">{aviso}</p>
         ) : null}
         {fallo ? (
           <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">{fallo}</p>
@@ -146,7 +146,7 @@ export default async function Admin({
                 PIN inicial
                 <input name="pin" required minLength={4} defaultValue="1234" className={CLASE_INPUT} />
               </label>
-              <button className="w-full rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro">
+              <button className="w-full rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
                 Crear estudiante
               </button>
             </form>

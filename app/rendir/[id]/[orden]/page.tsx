@@ -137,7 +137,7 @@ export default async function Pregunta({
                   type="submit"
                   name="accion"
                   value="siguiente"
-                  className="rounded-lg bg-acento px-4 py-2 text-sm font-medium text-white hover:bg-acento-oscuro"
+                  className="rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover"
                 >
                   Guardar y seguir
                 </button>
