@@ -48,12 +48,16 @@ export async function POST(request: Request) {
       return volver(request, '/alumno?error=intentos');
     }
 
-    const limite = new Date(
-      Math.min(
-        ahora.getTime() + asignacion.ensayo.tiempoMin * 60_000,
-        asignacion.cierraEn.getTime()
-      )
-    );
+    // tiempoMin 0 significa sin límite propio: manda la fecha de cierre.
+    const limite =
+      asignacion.ensayo.tiempoMin > 0
+        ? new Date(
+            Math.min(
+              ahora.getTime() + asignacion.ensayo.tiempoMin * 60_000,
+              asignacion.cierraEn.getTime()
+            )
+          )
+        : asignacion.cierraEn;
 
     const intento = await prisma.intento.create({
       data: {

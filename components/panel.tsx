@@ -25,9 +25,11 @@ export function Panel({
 }) {
   const menu: Item[] = [
     { href: '/', nombre: 'Inicio' },
+    { href: '/ensayos/nuevo', nombre: 'Generar ensayo' },
+    { href: '/ensayos', nombre: 'Ensayos' },
     { href: '/correccion', nombre: 'Corrección' },
     { href: '/admin', nombre: 'Administración' },
-    { href: '/reportes', nombre: 'Reportes', pronto: true },
+    { href: '/reportes', nombre: 'Reportes' },
   ];
 
   const visibles = menu.filter(

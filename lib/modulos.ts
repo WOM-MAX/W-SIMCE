@@ -22,6 +22,12 @@ export const MODULOS: Modulo[] = [
     estado: 'listo',
   },
   {
+    id: 'ensayos',
+    nombre: 'Generar ensayos',
+    detalle: 'Ensayos en borrador, al azar o por eje. Falta asignarlos a un curso.',
+    estado: 'en-curso',
+  },
+  {
     id: 'rendicion',
     nombre: 'Rendición',
     detalle: 'Las 30 preguntas con reloj, autoguardado y cierre por tiempo en el servidor.',
