@@ -17,6 +17,15 @@ export default async function Fin({ params }: { params: Promise<{ id: string }> 
     include: {
       asignacion: { include: { ensayo: true } },
       items: { select: { respuesta: { select: { letra: true } } } },
+      resultado: {
+        select: {
+          pctLogro: true,
+          puntajeEscala: true,
+          nivelLogro: true,
+          correctas: true,
+          total: true,
+        },
+      },
     },
   });
 
@@ -25,6 +34,12 @@ export default async function Fin({ params }: { params: Promise<{ id: string }> 
   const total = intento.items.length;
   const respondidas = intento.items.filter((i) => i.respuesta?.letra).length;
   const expirado = intento.estado === 'EXPIRADO';
+
+  const configuracion = await prisma.configuracionColegio.findUnique({
+    where: { colegioId: sesion.colegioId },
+  });
+  const verResultados = configuracion?.estudiantesVenResultados ?? false;
+  const resultado = verResultados ? intento.resultado : null;
 
   return (
     <div className="min-h-dvh bg-fondo">
@@ -68,10 +83,28 @@ export default async function Fin({ params }: { params: Promise<{ id: string }> 
             </div>
           </dl>
 
-          <p className="mt-5 rounded-xl bg-amber-50 px-4 py-3 text-xs text-amber-800">
-            El resultado se publica cuando el docente cierra la corrección. Todavía no está
-            disponible.
-          </p>
+          {resultado ? (
+            <div className="mt-5 rounded-xl bg-acento-suave px-4 py-4">
+              <p className="text-xs uppercase tracking-wide text-marca/70">Tu resultado</p>
+              <div className="mt-2 flex flex-wrap items-end gap-4">
+                <p className="tabular text-3xl font-semibold text-marca">
+                  {resultado.puntajeEscala ?? '—'}
+                  <span className="ml-1 text-xs font-normal text-tenue">puntos</span>
+                </p>
+                <p className="text-sm text-slate-700">
+                  {resultado.correctas} de {resultado.total} correctas ·{' '}
+                  {Number(resultado.pctLogro)}% de logro
+                </p>
+                <span className="rounded-full bg-white px-2.5 py-1 text-xs font-medium text-marca">
+                  {resultado.nivelLogro ?? 'Sin nivel'}
+                </span>
+              </div>
+            </div>
+          ) : (
+            <p className="mt-5 rounded-xl bg-amber-50 px-4 py-3 text-xs text-amber-800">
+              El resultado se publica cuando el colegio lo habilita. Todavía no está disponible.
+            </p>
+          )}
 
           <a
             href="/alumno"

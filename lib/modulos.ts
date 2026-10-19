@@ -37,7 +37,7 @@ export const MODULOS: Modulo[] = [
     id: 'reportes',
     nombre: 'Reportes',
     detalle: 'Informe por curso y estudiante, con exportación para UTP.',
-    estado: 'pendiente',
+    estado: 'listo',
   },
 ];
 

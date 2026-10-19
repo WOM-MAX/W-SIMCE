@@ -33,8 +33,21 @@ export default async function Alumno({
 
   const intentos = await prisma.intento.findMany({
     where: { estudianteId: sesion.id },
-    select: { id: true, asignacionId: true, estado: true, numero: true },
+    select: {
+      id: true,
+      asignacionId: true,
+      estado: true,
+      numero: true,
+      resultado: {
+        select: { pctLogro: true, puntajeEscala: true, nivelLogro: true, correctas: true, total: true },
+      },
+    },
   });
+
+  const configuracion = await prisma.configuracionColegio.findUnique({
+    where: { colegioId: sesion.colegioId },
+  });
+  const verResultados = configuracion?.estudiantesVenResultados ?? false;
 
   const { error } = await searchParams;
   const MENSAJES: Record<string, string> = {
@@ -118,7 +131,29 @@ export default async function Alumno({
                   </div>
 
                   {enviado ? (
-                    <p className="mt-4 text-xs text-tenue">Ya la rendiste.</p>
+                    <div className="mt-4">
+                      <p className="text-xs text-tenue">Ya la rendiste.</p>
+                      {verResultados && propios[0]?.resultado ? (
+                        <p className="mt-2 flex flex-wrap items-center gap-2 text-sm">
+                          <span className="rounded-full bg-fondo px-2.5 py-1 text-xs text-slate-700">
+                            {propios[0].resultado.correctas} de {propios[0].resultado.total} correctas
+                          </span>
+                          <span className="rounded-full bg-fondo px-2.5 py-1 text-xs text-slate-700">
+                            {Number(propios[0].resultado.pctLogro)}% de logro
+                          </span>
+                          <span className="rounded-full bg-fondo px-2.5 py-1 text-xs text-slate-700">
+                            Puntaje {propios[0].resultado.puntajeEscala ?? '—'}
+                          </span>
+                          <span className="rounded-full bg-acento-suave px-2.5 py-1 text-xs font-medium text-marca">
+                            {propios[0].resultado.nivelLogro ?? 'Sin nivel'}
+                          </span>
+                        </p>
+                      ) : (
+                        <p className="mt-1 text-xs text-tenue">
+                          El resultado se publica cuando el colegio lo habilita.
+                        </p>
+                      )}
+                    </div>
                   ) : enCurso ? (
                     <a
                       href={`/rendir/${propios.find((i) => i.estado === 'EN_CURSO')?.id}/1`}
