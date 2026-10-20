@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-304",
+    "titulo": "La beca de octavo",
+    "tipo": "narrativo",
+    "palabras": 336,
+    "cuerpo": "La beca se entregaba a un estudiante por curso y cubría los tres años de enseñanza media. Se decidía por notas, pero en caso de empate el consejo de profesores podía considerar otros antecedentes.\n\nEn octavo B había dos candidatos: Ignacio, con promedio 6,7, y Marisol, con 6,7. El reglamento dejaba el desempate al consejo.\n\nIgnacio llevaba dos años en el taller de robótica y había armado con otros tres estudiantes un sistema para avisar cuando la bomba de agua del invernadero dejaba de funcionar. Marisol era la única de su familia que había llegado a octavo; trabajaba los sábados en el negocio de su madre y había sostenido el promedio desde tercero básico.\n\nEl consejo se reunió un miércoles. La profesora de matemáticas propuso a Ignacio por el proyecto. La profesora jefe propuso a Marisol por el esfuerzo sostenido.\n\nEl director hizo una pregunta que cambió la conversación:\n\n—¿Alguno de los dos necesitaría la beca para continuar?\n\nNadie había revisado ese punto. La beca cubría matrícula y materiales, no alimentación ni transporte, y no distinguía por situación económica.\n\nUna profesora buscó los antecedentes en el sistema: el apoderado de Ignacio había presentado una solicitud de beca de alimentación ese mismo año. La de Marisol no había presentado ninguna.\n\nEl consejo discute ese dato. Alguien plantea que entonces Marisol necesita más la beca, porque no tiene otra ayuda. Otro responde que el argumento señala lo contrario: si la familia de Ignacio ya no puede cubrir la alimentación, tampoco podrá cubrir la matrícula.\n\nSe acordó finalmente entregar la beca a Ignacio y pedir a la asistente social que revisara la situación de Marisol, con la posibilidad de postularla a un fondo distinto que no estaba en la discusión inicial.\n\nMarisol se enteró al día siguiente. Cuando la llamaron a la oficina, entró pensando que había perdido.\n\nSalió con dos papeles: la explicación del fondo nuevo y una carta firmada por el director en la que se comprometía a revisar cada año los criterios de la beca mientras él estuviera en el cargo."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-316",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué el consejo de profesores tuvo que decidir entre los dos estudiantes?",
+      "alternativas": [
+        "Porque ninguno cumplía el promedio mínimo.",
+        "Porque los dos tenían el mismo promedio de 6,7 y el reglamento dejaba el desempate al consejo.",
+        "Porque la beca se decidía por sorteo.",
+        "Porque ambos habían presentado un proyecto."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que Ignacio y Marisol tenían ambos 6,7 y que el reglamento dejaba el desempate al consejo de profesores."
+    },
+    {
+      "codigo": "8B-LEC-NAR-317",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una pregunta",
+      "enunciado": "¿Qué efecto tiene la pregunta del director sobre la conversación del consejo?",
+      "alternativas": [
+        "Confirma la decisión que ya estaba tomada.",
+        "Introduce un criterio que nadie había revisado: la necesidad económica de cada estudiante.",
+        "Obliga al consejo a repetir la votación por notas.",
+        "Descarta a los dos candidatos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto aclara que nadie había revisado ese punto y que la beca no distinguía por situación económica. La pregunta desplaza la discusión de los méritos al antecedente económico."
+    },
+    {
+      "codigo": "8B-LEC-NAR-318",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un argumento",
+      "enunciado": "Alguien plantea que Marisol necesita más la beca porque no tiene otra ayuda. ¿Qué responde otro miembro del consejo?",
+      "alternativas": [
+        "Que el argumento prueba lo contrario: si la familia de Ignacio no puede cubrir la alimentación, tampoco podrá cubrir la matrícula.",
+        "Que la beca de alimentación no existe en el colegio.",
+        "Que Marisol no había presentado antecedentes por descuido.",
+        "Que los méritos académicos son el único criterio válido."
+      ],
+      "clave": "A",
+      "justificacion": "El texto registra esa réplica: el dato de la solicitud de alimentación, leído con cuidado, indica que la familia de Ignacio tiene dificultades económicas que también afectarían la matrícula."
+    },
+    {
+      "codigo": "8B-LEC-NAR-319",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una decisión",
+      "enunciado": "¿Qué buscó resolver el consejo al pedir que la asistente social revisara el caso de Marisol?",
+      "alternativas": [
+        "Reemplazar la beca por un premio menor.",
+        "Buscar una vía de apoyo distinta para que la decisión entre los dos candidatos no dejara a uno sin opciones.",
+        "Verificar si Marisol decía la verdad sobre su trabajo.",
+        "Postergar la decisión hasta el año siguiente."
+      ],
+      "clave": "B",
+      "justificacion": "El consejo asigna la beca a Ignacio y además abre un camino que no estaba en la discusión inicial: un fondo distinto. La gestión apunta a no dejar sin apoyo a la otra candidata."
+    },
+    {
+      "codigo": "8B-LEC-NAR-320",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué muestra la carta firmada por el director al final del cuento?",
+      "alternativas": [
+        "Que la beca quedó anulada para el año siguiente.",
+        "Que el consejo reconoce que los criterios del reglamento eran insuficientes y se compromete a revisarlos.",
+        "Que Marisol ganó la beca por decisión del director.",
+        "Que Ignacio renunció a la beca."
+      ],
+      "clave": "B",
+      "justificacion": "El cuento muestra que la discusión dejó a la vista un vacío del reglamento: la beca no consideraba la situación económica. La carta del director se compromete a revisar los criterios cada año."
+    }
+  ]
+}

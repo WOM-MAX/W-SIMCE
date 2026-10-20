@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DIS-303",
+    "titulo": "Plan de emergencia del edificio",
+    "tipo": "informativo-discontinuo",
+    "palabras": 196,
+    "cuerpo": "PLAN DE EMERGENCIA\nEdificio Los Lingues, 12 pisos, 96 departamentos\n\nANTES\nCada departamento debe tener una linterna, una radio a pilas y una copia del plano de la escalera.\nRevisar el extintor del pasillo una vez al año.\nIdentificar dos salidas: la escalera principal y la escalera de servicio.\n\nDURANTE UN SISMO\nNo usar el ascensor en ningún caso.\nUbicarse junto a un muro estructural, lejos de ventanas y de muebles altos.\nNo salir durante el movimiento: la escalera se usa cuando el movimiento termina.\n\nDESPUÉS\nBajar por la escalera, no correr y no empujar.\nEl punto de encuentro es la plaza frente al edificio, a 40 metros de la puerta.\nNadie vuelve a entrar hasta que la administración lo autorice.\n\nRESPONSABILIDADES\nEl comité de emergencia tiene 5 integrantes y se reúne en el primer piso.\nCada integrante revisa un tramo de escalera: del piso 1 al 3, del 4 al 6, del 7 al 9 y del 10 al 12. El quinto coordinador se queda en el punto de encuentro para contar a los vecinos.\n\nEJERCICIO\nUn simulacro al año, en octubre. Se registra el tiempo total de evacuación. El año pasado fue de 6 minutos 40 segundos."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DIS-311",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el plan, ¿cuándo se debe usar la escalera?",
+      "alternativas": [
+        "Durante el movimiento, para salir rápido.",
+        "Cuando el movimiento termina.",
+        "Solo si falla el ascensor.",
+        "En cualquier momento, siempre que no haya humo."
+      ],
+      "clave": "B",
+      "justificacion": "El plan indica expresamente que no se debe salir durante el movimiento y que la escalera se usa cuando el movimiento termina. También prohíbe el ascensor en cualquier caso."
+    },
+    {
+      "codigo": "8B-LEC-DIS-312",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de un plan",
+      "enunciado": "Una persona vive en el piso 8. ¿Qué integrante del comité revisa su tramo de escalera?",
+      "alternativas": [
+        "El que cubre del 1 al 3.",
+        "El que cubre del 4 al 6.",
+        "El que cubre del 7 al 9.",
+        "El coordinador del punto de encuentro."
+      ],
+      "clave": "C",
+      "justificacion": "Los tramos están definidos del 1 al 3, del 4 al 6, del 7 al 9 y del 10 al 12. El piso 8 pertenece al tercer tramo, del 7 al 9."
+    },
+    {
+      "codigo": "8B-LEC-DIS-313",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de una instrucción",
+      "enunciado": "¿Por qué el quinto integrante se queda en el punto de encuentro en lugar de revisar un tramo?",
+      "alternativas": [
+        "Porque no puede subir escaleras.",
+        "Porque alguien debe contar a los vecinos y saber quién falta al llegar abajo.",
+        "Porque el comité solo tiene cuatro tramos asignados.",
+        "Porque en la plaza se reúne el comité completo."
+      ],
+      "clave": "B",
+      "justificacion": "El plan asigna al quinto coordinador la tarea de contar a los vecinos en el punto de encuentro. Las cuatro personas restantes cubren los cuatro tramos de escalera."
+    },
+    {
+      "codigo": "8B-LEC-DIS-314",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre instrucciones",
+      "enunciado": "El plan pide ubicarse junto a un muro estructural y luego bajar por la escalera. ¿Por qué el orden de esas dos instrucciones es importante?",
+      "alternativas": [
+        "Porque la escalera no está disponible durante el movimiento.",
+        "Porque primero hay que proteger la vida durante el sismo y solo después evacuar con seguridad.",
+        "Porque los muros estructurales están en la escalera.",
+        "Porque el ascensor demora en reaccionar."
+      ],
+      "clave": "B",
+      "justificacion": "El plan ordena las acciones en dos momentos: durante el sismo se busca un lugar protegido y no se sale; después se baja por la escalera. La razón es que desplazarse mientras el edificio se mueve es más peligroso."
+    },
+    {
+      "codigo": "8B-LEC-DIS-315",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una práctica",
+      "enunciado": "Un vecino dice que no hace falta hacer el simulacro porque todos conocen las instrucciones. ¿Cuál es la objeción más consistente según el plan?",
+      "alternativas": [
+        "Que el simulacro sirve solo para los miembros del comité.",
+        "Que el simulacro permite medir el tiempo real de evacuación y detectar problemas que el texto no anticipa.",
+        "Que las instrucciones del plan son demasiado largas para recordarlas.",
+        "Que el año pasado la evacuación demoró muy poco."
+      ],
+      "clave": "B",
+      "justificacion": "El plan incluye un simulacro anual con registro del tiempo de evacuación, y menciona el dato del año anterior. Ese registro practica el procedimiento y da información que el texto escrito no entrega."
+    }
+  ]
+}

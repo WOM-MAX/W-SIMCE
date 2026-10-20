@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INF-303",
+    "titulo": "Por qué un olor trae un recuerdo",
+    "tipo": "informativo",
+    "palabras": 342,
+    "cuerpo": "Un olor puede devolver un recuerdo completo en un segundo: el pasillo de una casa, una tarde, una persona. Esa experiencia es tan común que casi todo el mundo tiene un ejemplo, y tiene una explicación en la forma en que el cerebro procesa los olores.\n\nLos demás sentidos envían su información por una ruta que pasa primero por una estación de relevo, el tálamo, y desde allí llega a la corteza. El olfato hace algo distinto: la señal va directamente a zonas profundas del cerebro, entre ellas la amígdala y el hipocampo, antes de llegar a la corteza.\n\nLa amígdala participa en las emociones y el hipocampo en la formación de recuerdos. Que el olor llegue tan pronto a esas dos estructuras explica por qué un aroma puede traer al mismo tiempo una imagen y una emoción, sin que la persona haya hecho el esfuerzo de recordar.\n\nEl olfato también tiene menos conexión con el lenguaje que la vista o el oído. Por eso cuesta tanto nombrar un olor: se puede reconocer con precisión y no encontrar la palabra. Las comparaciones ayudan, y por eso las descripciones de perfumes recurren a otros olores conocidos.\n\nHay un dato que suele sorprender: el olfato se cansa rápido. Después de unos minutos en una habitación con un olor fuerte, la persona deja de percibirlo. Ese fenómeno se llama adaptación y ocurre porque los receptores responden cada vez menos a un estímulo constante.\n\nConviene aclarar un malentendido frecuente. No es que el olor tenga propiedades especiales para el recuerdo, sino que su ruta cerebral involucra desde el comienzo las zonas que guardan la carga emocional de lo vivido. Un recuerdo traído por un olor no es más verdadero que otro: es más inmediato."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INF-311",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué diferencia la ruta del olfato de la de los otros sentidos?",
+      "alternativas": [
+        "Que el olfato no llega a la corteza cerebral.",
+        "Que la señal olfatoria va directamente a la amígdala y el hipocampo antes de llegar a la corteza.",
+        "Que los otros sentidos no pasan por el tálamo.",
+        "Que el olfato tarda más en llegar al cerebro."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que los demás sentidos pasan primero por el tálamo, mientras que la señal del olfato va directamente a zonas profundas, entre ellas la amígdala y el hipocampo, antes de llegar a la corteza."
+    },
+    {
+      "codigo": "8B-LEC-INF-312",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de dos estructuras",
+      "enunciado": "¿Por qué un olor puede traer a la vez una imagen y una emoción?",
+      "alternativas": [
+        "Porque el olor se guarda en la memoria visual.",
+        "Porque llega temprano a la amígdala, que participa en las emociones, y al hipocampo, que participa en los recuerdos.",
+        "Porque la corteza procesa los olores dos veces.",
+        "Porque el olfato está conectado con el lenguaje."
+      ],
+      "clave": "B",
+      "justificacion": "El texto atribuye a la amígdala la participación en las emociones y al hipocampo la formación de recuerdos, y explica que el olor llega pronto a esas dos estructuras."
+    },
+    {
+      "codigo": "8B-LEC-INF-313",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre sentidos y lenguaje",
+      "enunciado": "¿Por qué cuesta tanto nombrar un olor, según el texto?",
+      "alternativas": [
+        "Porque los olores son todos parecidos entre sí.",
+        "Porque el olfato tiene menos conexión con el lenguaje que la vista o el oído.",
+        "Porque las palabras para olores no existen en ningún idioma.",
+        "Porque la adaptación borra el recuerdo del nombre."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que el olfato tiene menos conexión con el lenguaje que la vista o el oído, y por eso se puede reconocer un olor con precisión y no encontrar la palabra."
+    },
+    {
+      "codigo": "8B-LEC-INF-314",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "aplicación de un concepto",
+      "enunciado": "Una persona entra a una habitación con olor fuerte y a los diez minutos ya no lo percibe. ¿Cómo se explica según el texto?",
+      "alternativas": [
+        "Porque el olor se ha ido del ambiente.",
+        "Porque los receptores responden cada vez menos a un estímulo constante, fenómeno llamado adaptación.",
+        "Porque el cerebro olvidó el olor por falta de atención.",
+        "Porque el hipocampo dejó de registrar la señal."
+      ],
+      "clave": "B",
+      "justificacion": "El texto describe ese fenómeno como adaptación: después de unos minutos con un olor fuerte la persona deja de percibirlo, porque los receptores responden cada vez menos a un estímulo constante."
+    },
+    {
+      "codigo": "8B-LEC-INF-315",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una creencia",
+      "enunciado": "Alguien dice que los recuerdos que trae un olor son más verdaderos que otros. Según el texto, ¿cuál es la corrección adecuada?",
+      "alternativas": [
+        "Que tiene razón, porque el olfato no se equivoca.",
+        "Que no son más verdaderos, sino más inmediatos, por la ruta que sigue la señal olfatoria.",
+        "Que los recuerdos olfativos son inventados por la amígdala.",
+        "Que ningún recuerdo puede comprobarse."
+      ],
+      "clave": "B",
+      "justificacion": "El último párrafo corrige justamente ese malentendido: el recuerdo traído por un olor no es más verdadero que otro, es más inmediato, porque la ruta involucra desde el comienzo las zonas que guardan la carga emocional."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DRA-302",
+    "titulo": "El ruido del departamento de arriba",
+    "tipo": "dramático",
+    "palabras": 316,
+    "cuerpo": "(Pasillo del edificio. Se encuentran TERESA, del 4A, y ÓSCAR, del 5A. Llevan carpetas: los dos vienen de una reunión de copropietarios.)\n\nTERESA: Óscar, necesito hablar con usted.\n\nÓSCAR: Si es por el ruido, ya lo sé. Mi hija estudia piano.\n\nTERESA: Estudia a las once de la noche.\n\nÓSCAR: Estudia cuando llega de su trabajo. Trabaja hasta las nueve y media.\n\nTERESA: Yo entro a trabajar a las siete de la mañana.\n\nÓSCAR: Y yo entiendo eso.\n\nTERESA: No parece, porque hace tres meses que duermo cuatro horas.\n\nÓSCAR: (Se pasa la mano por la cara.) ¿Qué quiere que haga? ¿Que le diga que deje el piano?\n\nTERESA: No sé. Pero no puede ser que la única solución sea acostumbrarse.\n\nÓSCAR: (Silencio.) Mi hija lleva cinco años en el piano. Es lo único que la sostiene desde que nos separamos.\n\nTERESA: (Baja la voz.) Eso no lo sabía.\n\nÓSCAR: No lo digo para justificarme. Lo digo porque no es un capricho.\n\nTERESA: Está bien. Entonces busquemos algo que no sea dejar de tocar ni que yo deje de dormir.\n\nÓSCAR: ¿Como qué?\n\nTERESA: El reglamento dice que después de las diez no se pueden tocar instrumentos. No dice nada de dos horas antes.\n\nÓSCAR: Entonces quiere que cambie el horario, no que deje.\n\nTERESA: Proponer que sea hasta las diez. Y del lado mío, en el 4A, si hay un día especial, me avisa y yo lo aguanto.\n\nÓSCAR: (Después de una pausa.) Los martes y jueves son los días de su clase. Los demás días puede practicar antes de las diez.\n\nTERESA: Eso me sirve.\n\nÓSCAR: Se lo voy a proponer a ella. No le prometo que diga que sí.\n\nTERESA: No le pido que la obligue. Le pido que se lo proponga.\n\n(Los dos caminan hacia el ascensor.)\n\nÓSCAR: (Mientras esperan.) ¿Por qué no me lo dijo antes?\n\nTERESA: (Se encoge de hombros.) Porque pensé que era obvio."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DRA-306",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es el conflicto entre Teresa y Óscar?",
+      "alternativas": [
+        "Que Óscar trabaja hasta tarde y no cuida a su hija.",
+        "Que la hija de Óscar estudia piano a las once de la noche y Teresa entra a trabajar a las siete.",
+        "Que Teresa quiere que la hija de Óscar deje el piano definitivamente.",
+        "Que los dos vienen de la misma reunión de copropietarios."
+      ],
+      "clave": "B",
+      "justificacion": "Teresa plantea que el piano se estudia a las once de la noche, que ella entra a trabajar a las siete de la mañana y que hace tres meses duerme cuatro horas."
+    },
+    {
+      "codigo": "8B-LEC-DRA-307",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una réplica",
+      "enunciado": "¿Qué efecto tiene en la conversación el dato de que la hija de Óscar estudia piano desde hace cinco años y desde la separación?",
+      "alternativas": [
+        "Hace que Teresa se enoje más.",
+        "Hace que Teresa baje la voz y cambie el enfoque hacia una solución que no implique dejar de tocar.",
+        "Convence a Teresa de renunciar a su reclamo.",
+        "Hace que Óscar decida prohibir el piano."
+      ],
+      "clave": "B",
+      "justificacion": "El texto marca que Teresa baja la voz después de conocer el dato, y su intervención siguiente propone buscar algo que no sea dejar de tocar ni dejar de dormir."
+    },
+    {
+      "codigo": "8B-LEC-DRA-308",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un argumento",
+      "enunciado": "¿Para qué Óscar aclara «no lo digo para justificarme»?",
+      "alternativas": [
+        "Para que Teresa no lo acuse del problema.",
+        "Para distanciarse de la excusa y mostrar que el motivo de su hija es real.",
+        "Para indicar que Teresa también tiene la culpa.",
+        "Para cambiar de tema."
+      ],
+      "clave": "B",
+      "justificacion": "Óscar reconoce que la información podría leerse como una justificación. Al negarlo, aclara que no busca excusarse sino que la situación sea comprendida en sus términos."
+    },
+    {
+      "codigo": "8B-LEC-DRA-309",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una propuesta",
+      "enunciado": "¿Qué caracteriza la solución que propone Teresa?",
+      "alternativas": [
+        "Aplicar el reglamento al pie de la letra para prohibir el piano.",
+        "Buscar un acuerdo que considere las dos necesidades: un horario límite y flexibilidad en días especiales.",
+        "Lograr que Óscar obligue a su hija a dejar la clase de piano.",
+        "Dejar la situación sin cambio alguno."
+      ],
+      "clave": "B",
+      "justificacion": "Teresa propone que el piano sea hasta las diez y además ofrece aguantar en días especiales si le avisan. La solución reparte concesiones en lugar de imponer una sola voluntad."
+    },
+    {
+      "codigo": "8B-LEC-DRA-310",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "Teresa dice al final que no lo dijo antes «porque pensé que era obvio». ¿Qué muestra esa respuesta sobre el conflicto?",
+      "alternativas": [
+        "Que el problema era grave desde el principio y todos lo sabían.",
+        "Que dar por evidente lo que uno necesita puede retrasar la búsqueda de una solución.",
+        "Que Teresa no tenía razones para reclamar.",
+        "Que Óscar conocía el reclamo desde hacía meses."
+      ],
+      "clave": "B",
+      "justificacion": "Teresa esperó tres meses. Su explicación revela que no planteó el problema porque suponía que el otro debía notarlo, y el texto muestra que la conversación solo avanzó al exponer los motivos de cada parte."
+    }
+  ]
+}
