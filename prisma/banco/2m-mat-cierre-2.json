@@ -1,0 +1,324 @@
+{
+  "lote": "2M matemática, cierre 2",
+  "nivel": "2M",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N2M-MAT-21",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "probabilidad condicional con tabla",
+      "figura": {
+        "ancho": 300,
+        "alto": 140,
+        "elementos": [
+          { "op": "rect", "x": 20, "y": 20, "w": 260, "h": 100, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 52, "x2": 280, "y2": 52, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 86, "x2": 280, "y2": 86, "grosor": 1 },
+          { "op": "line", "x1": 130, "y1": 20, "x2": 130, "y2": 120, "grosor": 1 },
+          { "op": "line", "x1": 205, "y1": 20, "x2": 205, "y2": 120, "grosor": 1 },
+          { "op": "text", "x": 75, "y": 41, "texto": "sexo", "tam": 8.5, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 167, "y": 41, "texto": "prefiere A", "tam": 8, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 242, "y": 41, "texto": "prefiere B", "tam": 8, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 75, "y": 74, "texto": "hombres", "tam": 8.5, "anclaje": "medio" },
+          { "op": "text", "x": 167, "y": 74, "texto": "12", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 242, "y": 74, "texto": "18", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 75, "y": 108, "texto": "mujeres", "tam": 8.5, "anclaje": "medio" },
+          { "op": "text", "x": 167, "y": 108, "texto": "4", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 242, "y": 108, "texto": "16", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La tabla muestra las preferencias de 50 estudiantes. Si se elige al azar a un hombre, ¿cuál es la probabilidad de que prefiera A?",
+      "alternativas": ["4/20", "12/30", "12/50", "12/16"],
+      "clave": "B",
+      "justificacion": "La condición restringe el grupo a los hombres, que son 12 + 18 = 30. Entre ellos, 12 prefieren A, así que la probabilidad es 12/30 = 2/5. La fracción 12/50 olvida la condición y usa el total del curso."
+    },
+    {
+      "codigo": "N2M-MAT-22",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "muestreo estratificado",
+      "enunciado": "Un colegio tiene 300 estudiantes, de los cuales 60 son de primero medio. Para una encuesta se eligen 50 estudiantes manteniendo la proporción de cada nivel. ¿Cuántos deben ser de primero medio?",
+      "alternativas": ["5", "10", "12", "20"],
+      "clave": "B",
+      "justificacion": "La proporción de primero medio es 60 ÷ 300 = 0,2, es decir, el 20% del colegio. En una muestra de 50, esa proporción corresponde a 50 × 0,2 = 10 estudiantes."
+    },
+    {
+      "codigo": "N2M-MAT-23",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "tamaño de la muestra",
+      "enunciado": "Dos estudios estiman la misma proporción. El primero usa 40 personas y el segundo 400. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Los dos son igual de confiables, porque usan el mismo método.",
+        "El segundo tiende a ser más confiable, porque una muestra mayor reduce el error de la estimación.",
+        "El primero es más confiable, porque hay menos personas que pueden equivocarse.",
+        "Ninguno sirve, porque las encuestas no miden proporciones."
+      ],
+      "clave": "B",
+      "justificacion": "El error de una estimación disminuye al aumentar el tamaño de la muestra. Con 400 personas la proporción estimada varía menos entre estudios repetidos que con 40, aunque el método sea el mismo."
+    },
+    {
+      "codigo": "N2M-MAT-24",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "conocimiento",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "tablas de contingencia",
+      "enunciado": "¿Para qué sirve una tabla de contingencia?",
+      "alternativas": [
+        "Para ordenar los datos de menor a mayor.",
+        "Para cruzar dos variables y ver cómo se distribuyen los casos en cada combinación.",
+        "Para calcular la media de un conjunto de datos.",
+        "Para representar la frecuencia de una sola variable."
+      ],
+      "clave": "B",
+      "justificacion": "Una tabla de contingencia cruza dos variables, por ejemplo sexo y preferencia, y muestra cuántos casos hay en cada combinación. Ordenar datos es otra tarea y la frecuencia de una sola variable se ve en una tabla simple."
+    },
+    {
+      "codigo": "N2M-MAT-25",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad de la unión",
+      "enunciado": "En un experimento, la probabilidad del suceso A es 0,3 y la del suceso B es 0,5. Si no pueden ocurrir los dos a la vez, ¿cuál es la probabilidad de que ocurra A o B?",
+      "alternativas": ["0,15", "0,2", "0,8", "1,0"],
+      "clave": "C",
+      "justificacion": "Cuando dos sucesos son mutuamente excluyentes, la probabilidad de la unión es la suma: 0,3 + 0,5 = 0,8. Multiplicar daría 0,15, que corresponde a la intersección si fueran independientes."
+    },
+    {
+      "codigo": "N2M-MAT-26",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "media de datos agrupados",
+      "enunciado": "En una tabla, 10 estudiantes obtuvieron nota 5 y 15 estudiantes obtuvieron nota 6. ¿Cuál es la nota media del grupo?",
+      "alternativas": ["5,4", "5,5", "5,6", "6,0"],
+      "clave": "C",
+      "justificacion": "Se multiplica cada nota por su frecuencia: 10 × 5 = 50 y 15 × 6 = 90, que suman 140. El total de estudiantes es 25, así que la media es 140 ÷ 25 = 5,6. El valor 5,5 es el promedio simple de 5 y 6, que ignora las frecuencias."
+    },
+    {
+      "codigo": "N2M-MAT-27",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "combinaciones",
+      "enunciado": "¿Cuántos saludos distintos se producen si 10 personas se saludan todas entre sí una sola vez?",
+      "alternativas": ["20", "45", "90", "100"],
+      "clave": "B",
+      "justificacion": "Cada saludo involucra a dos personas y el orden no importa. Se calcula C(10,2) = (10 × 9) ÷ 2 = 45. El valor 90 sale de contar dos veces cada saludo."
+    },
+    {
+      "codigo": "N2M-MAT-28",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "volumen de la pirámide",
+      "figura": {
+        "ancho": 250,
+        "alto": 200,
+        "elementos": [
+          { "op": "line", "x1": 60, "y1": 160, "x2": 190, "y2": 160, "grosor": 1.3 },
+          { "op": "line", "x1": 190, "y1": 160, "x2": 220, "y2": 130, "grosor": 1.3 },
+          { "op": "line", "x1": 220, "y1": 130, "x2": 90, "y2": 130, "grosor": 1.3 },
+          { "op": "line", "x1": 90, "y1": 130, "x2": 60, "y2": 160, "grosor": 1.1, "punteada": true },
+          { "op": "line", "x1": 140, "y1": 45, "x2": 60, "y2": 160, "grosor": 1.3 },
+          { "op": "line", "x1": 140, "y1": 45, "x2": 190, "y2": 160, "grosor": 1.3 },
+          { "op": "line", "x1": 140, "y1": 45, "x2": 220, "y2": 130, "grosor": 1.3 },
+          { "op": "line", "x1": 140, "y1": 45, "x2": 90, "y2": 130, "grosor": 1.3 },
+          { "op": "line", "x1": 140, "y1": 45, "x2": 140, "y2": 145, "grosor": 0.9, "punteada": true },
+          { "op": "text", "x": 125, "y": 176, "texto": "6 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 232, "y": 148, "texto": "6 cm", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 148, "y": 104, "texto": "9 cm", "tam": 9, "anclaje": "izquierda" }
+        ]
+      },
+      "enunciado": "Una pirámide tiene base cuadrada de 6 cm de lado y 9 cm de altura. ¿Cuál es su volumen?",
+      "alternativas": ["54 cm³", "108 cm³", "162 cm³", "324 cm³"],
+      "clave": "B",
+      "justificacion": "El volumen de la pirámide es un tercio del área de la base por la altura: (36 × 9) ÷ 3 = 324 ÷ 3 = 108 cm³. El valor 324 corresponde al prisma de la misma base y altura."
+    },
+    {
+      "codigo": "N2M-MAT-29",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "superficie del cubo",
+      "enunciado": "Un cubo tiene 5 cm de arista. ¿Cuál es su área total de superficie?",
+      "alternativas": ["25 cm²", "100 cm²", "125 cm²", "150 cm²"],
+      "clave": "D",
+      "justificacion": "Cada cara es un cuadrado de 5 × 5 = 25 cm². El cubo tiene 6 caras, así que la superficie total es 6 × 25 = 150 cm². El valor 125 es el volumen, no la superficie."
+    },
+    {
+      "codigo": "N2M-MAT-30",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "volumen del cono",
+      "figura": {
+        "ancho": 240,
+        "alto": 200,
+        "elementos": [
+          { "op": "path", "d": "M 60 160 A 60 16 0 0 0 180 160", "grosor": 1.3 },
+          { "op": "path", "d": "M 60 160 A 60 16 0 0 1 180 160", "grosor": 1.1, "punteada": true },
+          { "op": "line", "x1": 60, "y1": 160, "x2": 120, "y2": 40, "grosor": 1.3 },
+          { "op": "line", "x1": 180, "y1": 160, "x2": 120, "y2": 40, "grosor": 1.3 },
+          { "op": "line", "x1": 120, "y1": 160, "x2": 180, "y2": 160, "grosor": 1 },
+          { "op": "line", "x1": 120, "y1": 160, "x2": 120, "y2": 40, "grosor": 0.9, "punteada": true },
+          { "op": "text", "x": 150, "y": 176, "texto": "6 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 112, "y": 104, "texto": "8 cm", "tam": 9, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "Un cono tiene 6 cm de radio y 8 cm de altura. Si se usa π = 3,14, ¿cuál es su volumen?",
+      "alternativas": ["100,48 cm³", "301,44 cm³", "904,32 cm³", "1 205,76 cm³"],
+      "clave": "B",
+      "justificacion": "El volumen es (π × r² × h) ÷ 3 = (3,14 × 36 × 8) ÷ 3 = 904,32 ÷ 3 = 301,44 cm³. El valor 904,32 corresponde al cilindro de la misma base y altura."
+    },
+    {
+      "codigo": "N2M-MAT-31",
+      "eje": "geometria",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "elección de la fórmula de volumen",
+      "enunciado": "Para calcular cuánta agua cabe en un vaso con forma de cono, un estudiante propone usar π × r² × h. ¿Cuál es la objeción correcta?",
+      "alternativas": [
+        "Ninguna: esa es la fórmula del volumen del cono.",
+        "Que esa fórmula corresponde al cilindro; para el cono hay que dividir por 3.",
+        "Que el volumen no se puede calcular con el radio, sino solo con la altura.",
+        "Que el cono no tiene volumen porque termina en punta."
+      ],
+      "clave": "B",
+      "justificacion": "π × r² × h es el volumen del cilindro. El cono ocupa un tercio de ese volumen, así que la fórmula correcta es (π × r² × h) ÷ 3. La punta no elimina el volumen: el cono lo tiene."
+    },
+    {
+      "codigo": "N2M-MAT-32",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "elementos del cono",
+      "enunciado": "¿Qué es la generatriz de un cono?",
+      "alternativas": [
+        "El segmento que va del centro de la base al borde.",
+        "El segmento que va del vértice a un punto del borde de la base.",
+        "La altura del cono medida por el centro.",
+        "El diámetro de la base."
+      ],
+      "clave": "B",
+      "justificacion": "La generatriz es el segmento que une el vértice con un punto de la circunferencia de la base, y corresponde al lado inclinado del cono. El segmento del centro al borde es el radio y el del vértice al centro es la altura."
+    },
+    {
+      "codigo": "N2M-MAT-33",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "función exponencial",
+      "enunciado": "Si f(x) = 2^x, ¿cuál es el valor de f(5)?",
+      "alternativas": ["10", "25", "32", "64"],
+      "clave": "C",
+      "justificacion": "La función exponencial eleva la base al exponente: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. El valor 10 sale de multiplicar 2 por 5, que sería una función lineal."
+    },
+    {
+      "codigo": "N2M-MAT-34",
+      "eje": "algebra-y-funciones",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "crecimiento exponencial",
+      "enunciado": "Una población de bacterias se duplica cada 3 horas. Si al inicio hay 100 bacterias, ¿cuántas horas deben pasar para llegar a 800?",
+      "alternativas": ["6 horas", "9 horas", "12 horas", "24 horas"],
+      "clave": "B",
+      "justificacion": "Para pasar de 100 a 800 hay que duplicar tres veces: 100 → 200 → 400 → 800. Como cada duplicación toma 3 horas, el total es 3 × 3 = 9 horas."
+    },
+    {
+      "codigo": "N2M-MAT-35",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "inecuaciones",
+      "enunciado": "Resuelve la inecuación 3x − 5 > 10.",
+      "alternativas": ["x > 5", "x < 5", "x > 15", "x > 3"],
+      "clave": "A",
+      "justificacion": "Al sumar 5 en ambos lados queda 3x > 15, y al dividir por 3 resulta x > 5. El valor 15 es el de 3x, no el de x. El signo se mantiene porque se dividió por un número positivo."
+    },
+    {
+      "codigo": "N2M-MAT-36",
+      "eje": "algebra-y-funciones",
+      "bloom": "comprension",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "asíntota",
+      "enunciado": "La función f(x) = 1/x se acerca a cero cuando x crece mucho, pero nunca lo alcanza. ¿Cómo se llama esa recta a la que la gráfica se aproxima?",
+      "alternativas": ["Vértice", "Asíntota", "Raíz", "Pendiente"],
+      "clave": "B",
+      "justificacion": "Una asíntota es una recta a la que la gráfica se acerca indefinidamente sin llegar a tocarla. La raíz es el punto donde la función vale cero y la pendiente mide la inclinación."
+    },
+    {
+      "codigo": "N2M-MAT-37",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "intersección de funciones",
+      "enunciado": "¿En qué valores de x se cortan las gráficas de y = x² e y = 4?",
+      "alternativas": ["Solo x = 2", "Solo x = −2", "x = 2 y x = −2", "x = 4 y x = −4"],
+      "clave": "C",
+      "justificacion": "Se iguala x² = 4, y al extraer la raíz cuadrada quedan dos soluciones: x = 2 y x = −2, porque ambos números al cuadrado dan 4. Considerar solo la positiva es un error frecuente."
+    },
+    {
+      "codigo": "N2M-MAT-38",
+      "eje": "algebra-y-funciones",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "raíces de una ecuación cuadrática",
+      "enunciado": "Un estudiante resuelve x² = 16 y obtiene solo x = 4. ¿Cuál es la afirmación correcta?",
+      "alternativas": [
+        "Está bien, porque la raíz cuadrada de 16 es 4.",
+        "Falta la solución negativa: x = 4 y x = −4 cumplen la ecuación.",
+        "Está bien, porque las ecuaciones cuadráticas tienen una sola solución.",
+        "Falta una solución, porque x = 16 también cumple."
+      ],
+      "clave": "B",
+      "justificacion": "La ecuación x² = 16 tiene dos soluciones reales, 4 y −4, porque (−4)² también es 16. La raíz cuadrada como operación devuelve el valor positivo, pero la ecuación completa admite las dos."
+    },
+    {
+      "codigo": "N2M-MAT-39",
+      "eje": "numeros",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "simplificación de raíces",
+      "enunciado": "¿Cuál es el valor aproximado de √50, usando √2 ≈ 1,41?",
+      "alternativas": ["5,00", "7,05", "7,50", "25,00"],
+      "clave": "B",
+      "justificacion": "Se descompone 50 como 25 × 2, así que √50 = √25 × √2 = 5 × 1,41 = 7,05. El valor 25 es la mitad de 50, no su raíz."
+    },
+    {
+      "codigo": "N2M-MAT-40",
+      "eje": "numeros",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "intervalos",
+      "enunciado": "¿Cuántos números enteros pertenecen al intervalo [−2, 3)?",
+      "alternativas": ["4", "5", "6", "7"],
+      "clave": "B",
+      "justificacion": "El intervalo incluye el −2 y excluye el 3. Los enteros son −2, −1, 0, 1 y 2, que son cinco. Contar el 3 daría seis, pero el paréntesis indica que no pertenece."
+    }
+  ]
+}
