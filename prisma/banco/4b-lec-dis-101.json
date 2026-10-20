@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DIS-101",
+    "titulo": "Feria de trueque del barrio",
+    "tipo": "informativo-discontinuo",
+    "palabras": 168,
+    "cuerpo": "FERIA DE TRUEQUE DEL BARRIO\nSábado 8 de noviembre, de 10:00 a 15:00 horas\nPlaza de la junta de vecinos, frente a la sede\n\n¿QUÉ ES?\nUn espacio para intercambiar cosas que ya no usas por otras que necesitas. No se usa dinero: se cambia objeto por objeto.\n\n¿QUÉ PUEDES TRAER?\nLibros, ropa en buen estado, juguetes completos, herramientas, macetas y útiles escolares.\n\n¿QUÉ NO SE ACEPTA?\nPilas usadas, aparatos eléctricos que no funcionen, medicamentos, alimentos abiertos y ropa rota.\n\nCÓMO PARTICIPAR\n1. Llega entre las 10:00 y las 11:00 con tus objetos.\n2. Cada objeto recibe una tarjeta con puntaje: 1, 2 o 3 según su estado.\n3. Cambia tus tarjetas por objetos de igual puntaje en las mesas.\n\nREGLAS DE CONVIVENCIA\nCada persona puede llevar hasta 8 objetos.\nLas mesas se atienden por turno.\nLo que no se intercambie antes de las 15:00 se devuelve a su dueño.\n\nOrganiza: comité de vecinos. Consultas en la sede, de lunes a jueves."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DIS-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el aviso, ¿cómo se consiguen las cosas en la feria?",
+      "alternativas": [
+        "Comprándolas con dinero en las mesas.",
+        "Intercambiándolas por otros objetos, sin usar dinero.",
+        "Pidiéndolas en la sede de la junta de vecinos.",
+        "Pagando un puntaje con una tarjeta del banco."
+      ],
+      "clave": "B",
+      "justificacion": "El aviso dice que no se usa dinero: se cambia objeto por objeto. El puntaje de las tarjetas sirve para igualar el valor de los objetos, no para pagar."
+    },
+    {
+      "codigo": "4B-LEC-DIS-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita en avisos",
+      "enunciado": "¿Hasta qué hora se pueden llevar objetos a la feria?",
+      "alternativas": [
+        "Hasta las 10:00.",
+        "Hasta las 11:00.",
+        "Hasta las 15:00.",
+        "Hasta el cierre de la sede, a las 15:00 del domingo."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 1 de «Cómo participar» pide llegar entre las 10:00 y las 11:00 con los objetos. Las 15:00 son la hora en que termina la feria y se devuelve lo que no se intercambió."
+    },
+    {
+      "codigo": "4B-LEC-DIS-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "inferencia a partir de una regla",
+      "enunciado": "El aviso no acepta pilas usadas ni aparatos eléctricos que no funcionen. ¿Cuál es la razón más probable?",
+      "alternativas": [
+        "Porque esos objetos ocupan mucho espacio en las mesas.",
+        "Porque son objetos que no se pueden reutilizar tal como están y pueden contaminar.",
+        "Porque son objetos muy caros para una feria de trueque.",
+        "Porque los vecinos no saben usar aparatos eléctricos."
+      ],
+      "clave": "B",
+      "justificacion": "La feria sirve para dar un segundo uso a lo que todavía se puede usar. Una pila usada o un aparato que no funciona no se puede reutilizar y necesita un manejo especial, por eso quedan fuera."
+    },
+    {
+      "codigo": "4B-LEC-DIS-104",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una regla",
+      "enunciado": "¿Para qué sirve el puntaje de 1, 2 o 3 que recibe cada objeto?",
+      "alternativas": [
+        "Para cobrar una entrada a las personas que participan.",
+        "Para que los intercambios sean equivalentes según el estado de cada objeto.",
+        "Para ordenar las mesas de la feria por tamaño.",
+        "Para saber cuántos objetos trajo cada vecino."
+      ],
+      "clave": "B",
+      "justificacion": "Cada objeto recibe un puntaje y se cambia por objetos del mismo puntaje. Así una lámpara en buen estado no se cambia por un libro roto: el puntaje iguala el valor de lo que se intercambia."
+    },
+    {
+      "codigo": "4B-LEC-DIS-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una situación",
+      "enunciado": "Una vecina llega a las 14:30 con nueve objetos, entre ellos una radio que no enciende. Según el aviso, ¿qué corresponde?",
+      "alternativas": [
+        "Se le aceptan los nueve objetos, porque faltan pocas horas para el cierre.",
+        "Se le aceptan todos menos la radio, pero también se le permite pasar los nueve.",
+        "No puede traer nueve objetos y además la radio no se acepta.",
+        "Se le aceptan los nueve objetos solo si los intercambia por otros nueve."
+      ],
+      "clave": "C",
+      "justificacion": "El aviso fija un máximo de 8 objetos por persona y no acepta aparatos eléctricos que no funcionen. La vecina supera el máximo y trae un objeto no aceptado, así que incumple dos reglas."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DRA-101",
+    "titulo": "El ensayo del martes",
+    "tipo": "dramático",
+    "palabras": 274,
+    "cuerpo": "(Sala de clases, después del recreo. Dos sillas y una mesa con un cartel que dice «NO TOCAR». SOFÍA sostiene un cuaderno abierto. MATÍAS está de pie, junto a la puerta.)\n\nSOFÍA: Matías, no puedo decir esa parte. El personaje no diría «cállate» a su hermana.\n\nMATÍAS: Lo dice en el texto. Lo leí tres veces.\n\nSOFÍA: Ya sé que lo dice. Pero si lo dice así, el público va a creer que el personaje es malo, y después no se entiende por qué la ayuda.\n\nMATÍAS: Entonces cambiemos todo el final también.\n\nSOFÍA: No, el final no. Solo esa frase.\n\nMATÍAS: (Deja la mochila en el suelo.) Si cambiamos una frase porque a ti no te gusta, mañana cambiamos otra, y al final la obra no es de nadie.\n\n(Entra TOMÁS con una regla en la mano.)\n\nTOMÁS: ¿Pelean por la frase otra vez?\n\nSOFÍA: No peleo. Estoy diciendo que una frase puede arruinar el sentido de un personaje.\n\nTOMÁS: Y Matías dice que si la cambiamos, la obra deja de ser la que escribió el autor.\n\nMATÍAS: Eso mismo.\n\nTOMÁS: ¿Y si le preguntamos a la profesora cuál era la intención del autor antes de decidir?\n\nSOFÍA: (Cierra el cuaderno.) Eso sí me sirve.\n\nMATÍAS: A mí también. Pero si ella dice que la frase se queda, se queda.\n\nSOFÍA: De acuerdo. Y si dice que podemos cambiarla, la cambiamos entre los tres, no yo sola.\n\nTOMÁS: Entonces dejemos de discutir y busquemos la fotocopia del autor.\n\n(Los tres salen. La puerta queda abierta.)"
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DRA-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué discuten Sofía y Matías?",
+      "alternativas": [
+        "Porque Matías llegó tarde al ensayo.",
+        "Porque Sofía quiere cambiar una frase de la obra y Matías no.",
+        "Porque ninguno de los dos se aprendió su parte.",
+        "Porque Tomás tomó la regla que estaba sobre la mesa."
+      ],
+      "clave": "B",
+      "justificacion": "La discusión empieza cuando Sofía dice que no puede decir esa parte y propone cambiar la frase, y Matías responde que la frase está en el texto. El resto de la escena gira sobre lo mismo."
+    },
+    {
+      "codigo": "4B-LEC-DRA-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar formato",
+      "conocimiento": "estructura del texto dramático",
+      "enunciado": "En el texto aparecen frases entre paréntesis, como «Deja la mochila en el suelo». ¿Para qué están escritas?",
+      "alternativas": [
+        "Para indicar lo que los personajes dicen en voz alta.",
+        "Para indicar acciones o gestos que no se dicen en voz alta.",
+        "Para explicar al lector lo que piensa el autor de la obra.",
+        "Para señalar las partes que el público debe leer."
+      ],
+      "clave": "B",
+      "justificacion": "Los diálogos van sin paréntesis, porque son lo que los personajes dicen. Los paréntesis contienen lo que hacen o sienten en escena, como dejar la mochila o cerrar el cuaderno, y no se pronuncian."
+    },
+    {
+      "codigo": "4B-LEC-DRA-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivos de un personaje",
+      "enunciado": "¿Por qué a Sofía le preocupa esa frase en particular?",
+      "alternativas": [
+        "Porque le cuesta memorizar las frases largas.",
+        "Porque cree que si el personaje habla así, el público no entenderá por qué después ayuda a su hermana.",
+        "Porque la frase no aparece en el texto original del autor.",
+        "Porque Matías quiere decir esa parte en su lugar."
+      ],
+      "clave": "B",
+      "justificacion": "Sofía explica que, si el personaje lo dice así, el público va a creer que es malo y después no se entiende por qué la ayuda. Su preocupación es el sentido del personaje, no la memoria ni el reparto."
+    },
+    {
+      "codigo": "4B-LEC-DRA-104",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "función de un personaje",
+      "enunciado": "¿Qué logra Tomás cuando interviene en la discusión?",
+      "alternativas": [
+        "Decide que la frase se queda tal como está.",
+        "Propone una manera de resolver el desacuerdo sin que ninguno de los dos ceda de entrada.",
+        "Convence a Sofía de que cambie todo el final de la obra.",
+        "Le cuenta a la profesora lo que pasó en el ensayo."
+      ],
+      "clave": "B",
+      "justificacion": "Tomás propone preguntar cuál era la intención del autor antes de decidir, y los dos aceptan. No impone una solución: ofrece un camino para resolver el desacuerdo con información."
+    },
+    {
+      "codigo": "4B-LEC-DRA-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "Al final Sofía dice: «si dice que podemos cambiarla, la cambiamos entre los tres, no yo sola». ¿Qué muestra esa frase sobre ella?",
+      "alternativas": [
+        "Que ya no le importa cambiar la frase.",
+        "Que acepta que la decisión no sea solo suya, aunque gane su propuesta.",
+        "Que quiere que Tomás escriba la obra de nuevo.",
+        "Que prefiere que la profesora decida por el curso."
+      ],
+      "clave": "B",
+      "justificacion": "Sofía mantiene su idea, pero acepta dos condiciones: que decida la intención del autor y que el cambio se haga entre los tres. Eso muestra que respeta la decisión del grupo incluso cuando le dan la razón."
+    }
+  ]
+}
