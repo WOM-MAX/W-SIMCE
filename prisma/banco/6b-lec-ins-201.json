@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INS-201",
+    "titulo": "Cómo hacer un barómetro casero",
+    "tipo": "instructivo",
+    "palabras": 286,
+    "cuerpo": "MATERIALES\nUn frasco de vidrio transparente de boca ancha, un globo, una banda elástica, un palo de brocheta, un trozo de cartón, una regla y cinta adhesiva.\n\nPROCEDIMIENTO\n1. Corta el cuello del globo y estíralo sobre la boca del frasco, de modo que quede tenso como un tambor.\n2. Sujeta el globo con la banda elástica alrededor del borde.\n3. Pega un extremo del palo al centro del globo con un trozo pequeño de cinta. El palo debe quedar horizontal, sobresaliendo hacia un lado.\n4. Clava la brocheta en el cartón y pon el cartón de pie, junto al frasco, de manera que el otro extremo del palo quede frente a la regla.\n5. Marca en el cartón la posición del palo el primer día.\n\nCÓMO SE USA\nAnota la posición del palo cada mañana, a la misma hora, y compara con el día anterior.\n\nSi el palo sube, la presión del aire aumentó. Si baja, la presión disminuyó.\n\nPOR QUÉ FUNCIONA\nCuando la presión del aire fuera del frasco aumenta, empuja el globo hacia adentro y el palo sube. Cuando la presión baja, el aire de adentro empuja el globo hacia afuera y el palo baja. El movimiento es pequeño, y por eso conviene mirar la diferencia respecto de la marca anterior y no la posición absoluta.\n\nPARA TENER EN CUENTA\nEl calor también dilata el aire del frasco y mueve el palo, así que hay que mantener el barómetro lejos de una ventana con sol directo. Si el globo se afloja, se cambia por otro."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INS-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "secuencia de un procedimiento",
+      "enunciado": "¿Cuál es el primer paso del procedimiento?",
+      "alternativas": [
+        "Pegar el palo al centro del globo.",
+        "Estirar el globo sobre la boca del frasco.",
+        "Marcar la posición del palo en el cartón.",
+        "Clavar la brocheta en el cartón."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 1 indica cortar el cuello del globo y estirarlo sobre la boca del frasco. Pegar el palo es el paso 3 y clavar la brocheta en el cartón, el paso 4."
+    },
+    {
+      "codigo": "6B-LEC-INS-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "Según las instrucciones, ¿qué ocurre cuando la presión del aire aumenta?",
+      "alternativas": [
+        "El palo baja, porque el globo se abomba hacia afuera.",
+        "El palo sube, porque el globo se empuja hacia adentro del frasco.",
+        "El palo se queda quieto, porque el globo es elástico.",
+        "El globo se despega del frasco."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que al aumentar la presión exterior el globo se empuja hacia adentro y el palo sube. El caso contrario, la presión baja, hace que el palo baje."
+    },
+    {
+      "codigo": "6B-LEC-INS-203",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "precaución de un instrumento",
+      "enunciado": "¿Por qué hay que mantener el barómetro lejos del sol directo?",
+      "alternativas": [
+        "Porque el sol decolora el globo.",
+        "Porque el calor dilata el aire del frasco y mueve el palo, alterando la lectura.",
+        "Porque la cinta adhesiva se derrite con el sol.",
+        "Porque el cartón se dobla con el calor."
+      ],
+      "clave": "B",
+      "justificacion": "Las instrucciones señalan que el calor también dilata el aire del frasco y mueve el palo. Es decir, el instrumento registraría el efecto de la temperatura y no solo el de la presión."
+    },
+    {
+      "codigo": "6B-LEC-INS-204",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "uso correcto de un instrumento",
+      "enunciado": "¿Por qué las instrucciones piden comparar con la marca anterior y no con la posición absoluta?",
+      "alternativas": [
+        "Porque la regla cambia de lugar todos los días.",
+        "Porque el movimiento es pequeño y solo la diferencia entre días muestra si la presión subió o bajó.",
+        "Porque la posición absoluta del palo no significa nada sin la regla.",
+        "Porque el cartón no admite más de una marca."
+      ],
+      "clave": "B",
+      "justificacion": "El texto advierte que el movimiento es pequeño y que por eso conviene mirar la diferencia respecto de la marca anterior. Lo que interesa no es dónde está el palo, sino si subió o bajó."
+    },
+    {
+      "codigo": "6B-LEC-INS-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un procedimiento",
+      "enunciado": "Un estudiante arma el barómetro y lo deja en el antepecho de una ventana donde da el sol toda la tarde. ¿Qué problema tendrán sus registros?",
+      "alternativas": [
+        "Ninguno, porque la ventana no afecta la presión.",
+        "Registrarán sobre todo el efecto del calor sobre el aire del frasco, no solo el de la presión.",
+        "El globo se romperá en el primer día.",
+        "El palo dejará de moverse por completo."
+      ],
+      "clave": "B",
+      "justificacion": "Las instrucciones advierten que el calor dilata el aire del frasco y mueve el palo. Un lugar con sol directo todo el día mezcla ese efecto con el de la presión y altera la lectura."
+    }
+  ]
+}

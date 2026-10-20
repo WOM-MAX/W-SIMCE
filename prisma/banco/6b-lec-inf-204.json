@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-204",
+    "titulo": "Por qué los puentes no se caen",
+    "tipo": "informativo",
+    "palabras": 332,
+    "cuerpo": "Un puente tiene que sostener su propio peso, el de los vehículos que pasan y el empuje del viento. Para lograrlo, los ingenieros usan formas que reparten las cargas hacia los extremos, donde están los apoyos.\n\nEl puente de arco funciona por compresión. La forma curva del arco obliga a que el peso que baja por el centro se reparta hacia los dos extremos, que descansan en estribos de piedra o cemento. La piedra resiste muy bien ese tipo de esfuerzo, y por eso los puentes de arco más antiguos siguen en pie después de siglos.\n\nEl puente colgante hace lo contrario. Los cables principales se tensan y cuelgan de dos torres; de ellos bajan cables verticales que sostienen el tablero. Aquí el material trabaja a tracción: los cables son estirados. El acero resiste esa fuerza mucho mejor que la piedra, y por eso los cables son de acero.\n\nEl puente de vigas es el más simple: una o varias vigas horizontales apoyadas en dos pilares. Su desventaja es que la viga se flexiona en el centro, y cuanto más largo es el tramo, más se dobla. Para tramos largos se agregan pilares intermedios o se refuerza la viga con una estructura triangular.\n\nEl triángulo es la figura preferida en las estructuras. Un cuadrado puede deformarse y convertirse en rombo al empujarlo de lado; un triángulo, en cambio, no cambia de forma sin que se deformen sus lados. Por eso las torres de electricidad y muchas vigas de puente están llenas de triángulos.\n\nNinguna forma es mejor en todos los casos. La elección depende del largo del tramo, del material disponible, del terreno y del peso que debe soportar. Un puente angosto para peatones no necesita lo mismo que uno que cruza un río con camiones."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-216",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cómo trabaja el material en un puente colgante?",
+      "alternativas": [
+        "A compresión, como la piedra del arco.",
+        "A tracción, porque los cables son estirados.",
+        "A flexión, como las vigas.",
+        "No trabaja, porque los cables no reciben fuerza."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que en el puente colgante el material trabaja a tracción, porque los cables son estirados, y que el acero resiste esa fuerza mucho mejor que la piedra."
+    },
+    {
+      "codigo": "6B-LEC-INF-217",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "relación forma y esfuerzo",
+      "enunciado": "¿Por qué los puentes de arco más antiguos, hechos de piedra, siguen en pie?",
+      "alternativas": [
+        "Porque la piedra resiste muy bien la compresión que produce el arco.",
+        "Porque la piedra resiste muy bien la tracción de los cables.",
+        "Porque son más cortos que los demás puentes.",
+        "Porque no soportan ningún peso."
+      ],
+      "clave": "A",
+      "justificacion": "El texto explica que el arco obliga a que el peso se reparta hacia los extremos, y que la piedra resiste muy bien ese tipo de esfuerzo, que es la compresión."
+    },
+    {
+      "codigo": "6B-LEC-INF-218",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "ventaja de una figura",
+      "enunciado": "¿Por qué se usan triángulos en las estructuras y no cuadrados?",
+      "alternativas": [
+        "Porque el triángulo pesa menos que el cuadrado.",
+        "Porque un cuadrado puede deformarse en rombo, mientras que un triángulo no cambia de forma.",
+        "Porque el triángulo es más fácil de dibujar.",
+        "Porque los cuadrados no existen en la naturaleza."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que al empujar un cuadrado de lado puede deformarse y convertirse en rombo, mientras que un triángulo no cambia de forma sin que se deformen sus lados. Por eso aparece en torres y vigas."
+    },
+    {
+      "codigo": "6B-LEC-INF-219",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "desventaja de un tipo de puente",
+      "enunciado": "¿Cuál es la desventaja del puente de vigas y cómo se compensa?",
+      "alternativas": [
+        "Que la viga se flexiona en el centro; se compensa con pilares intermedios o refuerzo triangular.",
+        "Que los cables se estiran demasiado; se compensa con torres más altas.",
+        "Que la piedra no resiste el peso; se compensa con cemento.",
+        "Que el arco se aplasta; se compensa con estribos."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que la viga se flexiona en el centro y que cuanto más largo es el tramo, más se dobla. Para tramos largos se agregan pilares intermedios o se refuerza la viga con una estructura triangular."
+    },
+    {
+      "codigo": "6B-LEC-INF-220",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Un compañero dice que el puente colgante es el mejor porque usa acero. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el acero no sirve para puentes.",
+        "Que ninguna forma es mejor en todos los casos: depende del tramo, el material, el terreno y el peso.",
+        "Que los puentes colgantes no soportan vehículos.",
+        "Que la piedra también resiste la tracción."
+      ],
+      "clave": "B",
+      "justificacion": "El texto cierra señalando que ninguna forma es mejor en todos los casos y que la elección depende del largo del tramo, del material, del terreno y del peso a soportar."
+    }
+  ]
+}

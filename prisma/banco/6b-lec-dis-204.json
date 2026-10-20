@@ -1,0 +1,78 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DIS-204",
+    "titulo": "Recorrido del bus rural",
+    "tipo": "informativo-discontinuo",
+    "palabras": 158,
+    "cuerpo": "BUS RURAL SAN JOSÉ - EL MIRADOR\nRecorrido de lunes a sábado\n\nPARADA | HORA DE SALIDA | DISTANCIA AL PUEBLO\nSan José (inicio) | 06:30 | 0 km\nLa Quebrada | 06:55 | 12 km\nEl Mirador | 07:25 | 26 km\nLos Álamos | 07:50 | 38 km\nSan José (regreso) | 08:30 | 0 km\n\nTARIFAS\nTramo corto, hasta 15 km: $900\nTramo largo, más de 15 km: $1 600\nEstudiantes con credencial: 50% de descuento.\n\nOBSERVACIONES\nEl bus no sale los domingos ni los feriados.\nLas bicicletas se aceptan solo si hay espacio en la bodega.\nCada pasajero puede llevar una maleta; la segunda se paga como encomienda.\nEl bus espera 2 minutos como máximo en cada parada intermedia."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DIS-216",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de un recorrido",
+      "enunciado": "¿A qué hora sale el bus desde San José?",
+      "alternativas": ["06:30", "06:55", "07:25", "08:30"],
+      "clave": "A",
+      "justificacion": "La tabla indica que el recorrido comienza en San José con salida a las 06:30. Las 08:30 corresponden a la salida de regreso."
+    },
+    {
+      "codigo": "6B-LEC-DIS-217",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de tarifas",
+      "enunciado": "Una estudiante con credencial viaja de San José a Los Álamos. ¿Cuánto paga?",
+      "alternativas": ["$450", "$800", "$900", "$1 600"],
+      "clave": "B",
+      "justificacion": "San José a Los Álamos son 38 km, o sea tramo largo, con tarifa de $1 600. El descuento de estudiante es del 50%, así que paga $800."
+    },
+    {
+      "codigo": "6B-LEC-DIS-218",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos del recorrido",
+      "enunciado": "¿Cuánto demora el bus entre La Quebrada y El Mirador?",
+      "alternativas": ["20 minutos", "25 minutos", "30 minutos", "35 minutos"],
+      "clave": "C",
+      "justificacion": "La Quebrada sale a las 06:55 y El Mirador a las 07:25. Entre ambas hay 30 minutos. La distancia entre las dos paradas es de 14 km, pero la pregunta es por el tiempo."
+    },
+    {
+      "codigo": "6B-LEC-DIS-219",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "coherencia de la información",
+      "enunciado": "Un pasajero viaja de La Quebrada a Los Álamos. ¿Qué tarifa le corresponde y por qué?",
+      "alternativas": [
+        "Tramo corto, porque el viaje dura menos de una hora.",
+        "Tramo largo, porque la distancia entre ambas paradas es de 26 km.",
+        "Tramo corto, porque pasa por solo dos paradas.",
+        "No se puede saber con los datos de la tabla."
+      ],
+      "clave": "B",
+      "justificacion": "La Quebrada está en el kilómetro 12 y Los Álamos en el 38, así que la distancia entre ambas es 38 − 12 = 26 km, más de 15. Por eso corresponde la tarifa de tramo largo."
+    },
+    {
+      "codigo": "6B-LEC-DIS-220",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "evaluación de una situación",
+      "enunciado": "Un pasajero sube en San José un domingo con dos maletas y una bicicleta. ¿Qué corresponde según las observaciones?",
+      "alternativas": [
+        "Puede viajar sin problemas con todo.",
+        "No hay bus ese día, la segunda maleta se paga aparte y la bicicleta depende del espacio.",
+        "Puede viajar, pero debe dejar la bicicleta en la bodega sin costo.",
+        "Solo puede llevar una maleta y no puede subir bicicletas nunca."
+      ],
+      "clave": "B",
+      "justificacion": "Las observaciones indican que el bus no sale los domingos ni los feriados, que la segunda maleta se paga como encomienda y que las bicicletas se aceptan solo si hay espacio. La última alternativa es falsa: las bicicletas sí se aceptan."
+    }
+  ]
+}

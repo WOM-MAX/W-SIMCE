@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-204",
+    "titulo": "El perro de la calle Los Nogales",
+    "tipo": "narrativo",
+    "palabras": 318,
+    "cuerpo": "El perro apareció un martes, flaco y con una pata lastimada, en la esquina de Los Nogales con la pasarela. No tenía collar. Se quedó tres días debajo del kiosco de doña Mirta, que le puso un plato con agua y no le puso nombre para no encariñarse.\n\nLos vecinos empezaron a discutir. Unos decían que había que llamar a la perrera, porque el perro podía morder a un niño. Otros decían que la perrera se lo iba a llevar y que de ahí no vuelven.\n\nTomás, que tenía doce años, hizo algo distinto: anotó en una hoja los horarios. Descubrió que el perro salía a las siete de la mañana, cuando pasaban los niños al colegio, y volvía al kiosco a las diez. A la hora del recreo no estaba, y a las cinco de la tarde se iba hacia la plaza.\n\nCon esos datos, Tomás fue a la junta de vecinos.\n\n—El perro no está en la esquina cuando hay más gente —dijo—. A las siete camina con los niños hasta la esquina y se devuelve. No se acerca. Lo que pasa es que la pata le duele y camina raro.\n\nDoña Mirta agregó un dato: el perro comía de su mano desde el segundo día.\n\nLa junta decidió llevarlo al veterinario del barrio, que atendía gratis los sábados. Le curaron la pata y le pusieron una vacuna. Después abrieron una libreta en el almacén: cada vecino anotaba el día que le daba comida.\n\nEl perro se quedó en la esquina. Le pusieron Nogal, por la calle, y una placa con el nombre del almacén y un teléfono, por si se perdía.\n\nTomás guardó la hoja con los horarios en un cajón. Meses después, cuando hubo que decidir si el perro podía entrar al patio del colegio, la sacó otra vez y la leyó en voz alta: era la misma discusión, y los horarios seguían sirviendo."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-216",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué hizo Tomás para aportar a la discusión sobre el perro?",
+      "alternativas": [
+        "Llamó a la perrera sin avisar a los vecinos.",
+        "Anotó en una hoja los horarios en que el perro estaba en la esquina.",
+        "Se llevó al perro a su casa esa misma semana.",
+        "Le puso nombre y una placa al perro."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que Tomás anotó los horarios en una hoja y que con esos datos fue a la junta de vecinos. La placa se puso después, cuando el perro se quedó en la esquina."
+    },
+    {
+      "codigo": "6B-LEC-NAR-217",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Por qué doña Mirta le puso agua al perro pero no le puso nombre?",
+      "alternativas": [
+        "Porque no sabía cómo llamarlo.",
+        "Porque quería ayudarlo sin encariñarse, para no sufrir si se lo llevaban.",
+        "Porque ya tenía otro perro en el kiosco.",
+        "Porque esperaba que otro vecino le pusiera nombre."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice expresamente: le puso un plato con agua y no le puso nombre para no encariñarse. La razón se entiende junto con la discusión sobre la perrera."
+    },
+    {
+      "codigo": "6B-LEC-NAR-218",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "uso de datos en una discusión",
+      "enunciado": "¿Qué lograron los datos de Tomás en la junta de vecinos?",
+      "alternativas": [
+        "Demostrar que el perro era peligroso.",
+        "Mostrar que el perro no se acercaba a las personas y que caminaba raro por la pata lastimada.",
+        "Probar que el perro tenía dueño.",
+        "Decidir que había que llamar a la perrera."
+      ],
+      "clave": "B",
+      "justificacion": "Tomás explica que el perro no está en la esquina cuando hay más gente, que camina con los niños hasta la esquina y se devuelve sin acercarse, y que camina raro porque le duele la pata."
+    },
+    {
+      "codigo": "6B-LEC-NAR-219",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "función del desenlace",
+      "enunciado": "¿Por qué el texto cuenta que Tomás guardó la hoja y la volvió a usar meses después?",
+      "alternativas": [
+        "Para mostrar que la misma información sirve cuando vuelve a aparecer la misma discusión.",
+        "Para indicar que Tomás coleccionaba papeles.",
+        "Para señalar que la junta de vecinos perdió los datos.",
+        "Para explicar que el perro se perdió de nuevo."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que meses después hubo que decidir si el perro podía entrar al patio del colegio, que era la misma discusión, y que los horarios seguían sirviendo. El cierre muestra el valor duradero del registro."
+    },
+    {
+      "codigo": "6B-LEC-NAR-220",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué distingue la intervención de Tomás de la de los vecinos que discutían?",
+      "alternativas": [
+        "Que Tomás tenía más años que los demás vecinos.",
+        "Que Tomás observó y registró antes de opinar, y su aporte cambió la decisión.",
+        "Que Tomás era el dueño del kiosco.",
+        "Que Tomás quería quedarse con el perro."
+      ],
+      "clave": "B",
+      "justificacion": "Los vecinos opinan a favor y en contra de llamar a la perrera sin datos. Tomás observa los horarios y el comportamiento del perro, y ese registro lleva a la junta a tomar otra decisión: el veterinario y la libreta de comidas."
+    }
+  ]
+}
