@@ -20,7 +20,7 @@ const COLOR_BLOOM: Record<string, string> = {
 export default async function Banco({
   searchParams,
 }: {
-  searchParams: Promise<{ filtro?: string; pagina?: string; codigo?: string }>;
+  searchParams: Promise<{ filtro?: string; pagina?: string; codigo?: string; figura?: string }>;
 }) {
   const sesion = await sesionActual();
   if (!sesion) redirect('/login');
@@ -28,11 +28,13 @@ export default async function Banco({
 
   const params = await searchParams;
   const filtro = params.filtro === 'todos' ? 'todos' : 'generados';
+  const soloFiguras = params.figura === '1';
   const pagina = Math.max(0, Number.parseInt(params.pagina ?? '0', 10) || 0);
   const busqueda = (params.codigo ?? '').trim();
 
   const where = {
     ...(filtro === 'generados' ? { codigo: { startsWith: 'GEN' } } : {}),
+    ...(soloFiguras ? { figuraId: { not: null } } : {}),
     ...(busqueda ? { codigo: { contains: busqueda, mode: 'insensitive' as const } } : {}),
   };
 
@@ -67,17 +69,41 @@ export default async function Banco({
           </div>
           <div className="flex flex-wrap gap-2">
             <a
-              href="/banco?filtro=generados"
+              href="/banco"
               className={`rounded-lg border px-3 py-1.5 text-xs ${
-                filtro === 'generados' ? 'border-acento bg-acento-suave text-marca' : 'border-borde text-slate-700'
+                filtro === 'generados' && !soloFiguras
+                  ? 'border-acento bg-acento-suave text-marca'
+                  : 'border-borde text-slate-700'
               }`}
             >
               Generados
             </a>
             <a
+              href="/banco?figura=1"
+              className={`rounded-lg border px-3 py-1.5 text-xs ${
+                filtro === 'generados' && soloFiguras
+                  ? 'border-acento bg-acento-suave text-marca'
+                  : 'border-borde text-slate-700'
+              }`}
+            >
+              Generados con figura
+            </a>
+            <a
+              href="/banco?filtro=todos&figura=1"
+              className={`rounded-lg border px-3 py-1.5 text-xs ${
+                filtro === 'todos' && soloFiguras
+                  ? 'border-acento bg-acento-suave text-marca'
+                  : 'border-borde text-slate-700'
+              }`}
+            >
+              Todos con figura
+            </a>
+            <a
               href="/banco?filtro=todos"
               className={`rounded-lg border px-3 py-1.5 text-xs ${
-                filtro === 'todos' ? 'border-acento bg-acento-suave text-marca' : 'border-borde text-slate-700'
+                filtro === 'todos' && !soloFiguras
+                  ? 'border-acento bg-acento-suave text-marca'
+                  : 'border-borde text-slate-700'
               }`}
             >
               Todos
@@ -86,7 +112,7 @@ export default async function Banco({
         </div>
 
         <form action="/banco" method="get" className="flex flex-wrap items-end gap-2">
-          <input type="hidden" name="filtro" value={filtro} />
+          <input type="hidden" name="filtro" value={filtro} />`n          {soloFiguras ? <input type="hidden" name="figura" value="1" /> : null}
           <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
             Buscar por código
             <input
@@ -158,7 +184,7 @@ export default async function Banco({
         {paginas > 1 ? (
           <div className="flex items-center justify-between text-xs text-tenue">
             <a
-              href={`/banco?filtro=${filtro}&pagina=${Math.max(0, pagina - 1)}`}
+              href={`/banco?filtro=${filtro}&pagina=${Math.max(0, pagina - 1)}${soloFiguras ? "&figura=1" : ""}`}
               className={`rounded-lg border border-borde px-3 py-1.5 ${
                 pagina === 0 ? 'pointer-events-none opacity-40' : 'hover:bg-fondo'
               }`}
@@ -169,7 +195,7 @@ export default async function Banco({
               Página {pagina + 1} de {paginas}
             </span>
             <a
-              href={`/banco?filtro=${filtro}&pagina=${Math.min(paginas - 1, pagina + 1)}`}
+              href={`/banco?filtro=${filtro}&pagina=${Math.min(paginas - 1, pagina + 1)}${soloFiguras ? "&figura=1" : ""}`}
               className={`rounded-lg border border-borde px-3 py-1.5 ${
                 pagina >= paginas - 1 ? 'pointer-events-none opacity-40' : 'hover:bg-fondo'
               }`}
