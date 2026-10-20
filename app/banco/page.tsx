@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
 import { Figura } from '@/components/figura';
+import { TextoPotencia } from '@/components/texto-potencia';
 
 export const dynamic = 'force-dynamic';
 
@@ -147,7 +148,7 @@ export default async function Banco({
                   ) : null}
                 </div>
 
-                <p className="whitespace-pre-line text-sm text-slate-800">{v?.enunciado}</p>
+                <TextoPotencia className="block whitespace-pre-line text-sm text-slate-800" texto={v?.enunciado ?? ``} />
 
                 {item.figura ? (
                   <div className="my-3 max-w-sm border border-borde p-2 text-slate-900">
@@ -164,7 +165,7 @@ export default async function Banco({
                       }`}
                     >
                       <span className="w-4 shrink-0 font-semibold">{a.letra}</span>
-                      <span>{a.texto}</span>
+                      <span><TextoPotencia texto={a.texto ?? ``} /></span>
                       {a.letra === v?.clave ? (
                         <span className="ml-auto text-xs uppercase tracking-wide">clave</span>
                       ) : null}

@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { estudianteActual, cerrarSiVencido, intentoDelEstudiante } from '@/lib/rendicion';
 import { Marca } from '@/components/marca';
 import { Figura } from '@/components/figura';
+import { TextoPotencia } from '@/components/texto-potencia';
 import { Reloj } from '@/components/reloj';
 
 export const dynamic = 'force-dynamic';
@@ -76,7 +77,7 @@ export default async function Pregunta({
 
         <section className="rounded-2xl border border-borde bg-white p-6">
           <p className="mb-4 whitespace-pre-line text-base leading-relaxed text-marca">
-            {version.enunciado}
+            <TextoPotencia texto={version.enunciado} />
           </p>
 
           {figura ? (
@@ -103,7 +104,7 @@ export default async function Pregunta({
                     className="mt-0.5 h-4 w-4 accent-acento"
                   />
                   <span className="font-mono text-xs text-tenue">{alt.letra}</span>
-                  <span className="flex-1 text-slate-800">{alt.texto ?? ''}</span>
+                  <span className="flex-1 text-slate-800"><TextoPotencia texto={alt.texto ?? ''} /></span>
                 </label>
               ))}
             </div>

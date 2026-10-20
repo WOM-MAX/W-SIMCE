@@ -1,6 +1,8 @@
 // Dibuja las primitivas de Figura.primitivas como SVG, sin dependencias.
 // Operaciones observadas en el banco: rect, line, text, circle, poly y path.
 
+import { partirConPotencia } from '@/lib/texto';
+
 type Elemento = Record<string, unknown>;
 
 function numero(valor: unknown, defecto = 0): number {
@@ -158,11 +160,19 @@ function dibujar(e: Elemento, clave: number) {
         stroke={trazo ? 'currentColor' : undefined}
         strokeWidth={trazo ? grosor : undefined}
       >
-        {lineas.map((linea, i) => (
-          <tspan key={i} x={x} dy={i === 0 ? 0 : tam * 1.25}>
-            {linea}
-          </tspan>
-        ))}
+        {lineas.flatMap((linea, i) =>
+          partirConPotencia(linea).map((tramo, k) => (
+            <tspan
+              key={`${i}-${k}`}
+              x={k === 0 ? x : undefined}
+              dy={k === 0 ? (i === 0 ? 0 : tam * 1.25) : 0}
+              fontSize={tramo.supra ? tam * 0.72 : tam}
+              baselineShift={tramo.supra ? 'super' : undefined}
+            >
+              {tramo.texto}
+            </tspan>
+          ))
+        )}
       </text>
     );
   }

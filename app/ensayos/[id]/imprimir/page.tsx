@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { Figura } from '@/components/figura';
+import { TextoPotencia } from '@/components/texto-potencia';
 
 export const dynamic = 'force-dynamic';
 
@@ -121,7 +122,7 @@ export default async function Imprimir({
               <div className="flex gap-3">
                 <span className="w-6 shrink-0 text-right text-sm font-semibold">{indice + 1}.</span>
                 <div className="min-w-0 flex-1">
-                  <p className="whitespace-pre-line text-sm leading-relaxed">{v.enunciado}</p>
+                  <TextoPotencia className="block whitespace-pre-line text-sm leading-relaxed" texto={v.enunciado} />
 
                   {figura ? (
                     <div className="my-3 max-w-md border border-slate-200 p-2 text-slate-900 print:border-slate-400">
