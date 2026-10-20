@@ -1,0 +1,220 @@
+{
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "eje": "datos-y-probabilidades",
+  "lote": "GEN-4B-DYP-1",
+  "items": [
+    {
+      "codigo": "GEN4B-DYP-001",
+      "bloom": "conocimiento",
+      "habilidad": "interpretar",
+      "dificultad": "facil",
+      "conocimiento": "conteo de datos",
+      "enunciado": "Observa la lista de datos: 4, 7, 7, 9, 12. ¿Cuántos datos hay en total?",
+      "clave": "B",
+      "justificacion": "Se cuentan los valores de la lista, que son cinco.",
+      "alternativas": ["4", "5", "7", "9"]
+    },
+    {
+      "codigo": "GEN4B-DYP-002",
+      "bloom": "conocimiento",
+      "habilidad": "interpretar",
+      "dificultad": "facil",
+      "conocimiento": "medidas de tendencia central",
+      "enunciado": "¿Qué representa la moda de un conjunto de datos?",
+      "clave": "B",
+      "justificacion": "La moda es el valor que aparece más veces.",
+      "alternativas": [
+        "El valor que queda al centro al ordenar los datos.",
+        "El valor que más se repite.",
+        "La suma de los datos dividida por la cantidad de datos.",
+        "La diferencia entre el dato mayor y el menor."
+      ]
+    },
+    {
+      "codigo": "GEN4B-DYP-003",
+      "bloom": "conocimiento",
+      "habilidad": "representar",
+      "dificultad": "facil",
+      "conocimiento": "lectura de graficos de barras",
+      "enunciado": "En un gráfico de barras, ¿qué representa la altura de cada barra?",
+      "clave": "B",
+      "justificacion": "La altura indica cuántas veces aparece cada categoría.",
+      "alternativas": [
+        "El nombre de la categoría.",
+        "La cantidad de datos de esa categoría.",
+        "El total de datos del gráfico.",
+        "El promedio de todos los datos."
+      ]
+    },
+    {
+      "codigo": "GEN4B-DYP-004",
+      "bloom": "conocimiento",
+      "habilidad": "interpretar",
+      "dificultad": "facil",
+      "conocimiento": "rango de probabilidad",
+      "enunciado": "¿Cuál de estos valores NO puede ser la probabilidad de un evento?",
+      "clave": "D",
+      "justificacion": "La probabilidad va de 0 a 1, y 1,5 está fuera de ese rango.",
+      "alternativas": ["0", "0,5", "1", "1,5"]
+    },
+    {
+      "codigo": "GEN4B-DYP-005",
+      "bloom": "conocimiento",
+      "habilidad": "interpretar",
+      "dificultad": "facil",
+      "conocimiento": "rango",
+      "enunciado": "¿Cómo se llama la diferencia entre el dato mayor y el dato menor de un conjunto?",
+      "clave": "C",
+      "justificacion": "Esa diferencia se llama rango.",
+      "alternativas": ["Media", "Mediana", "Rango", "Moda"]
+    },
+    {
+      "codigo": "GEN4B-DYP-006",
+      "bloom": "comprension",
+      "habilidad": "representar",
+      "dificultad": "media",
+      "conocimiento": "fraccion como parte del total",
+      "enunciado": "En un curso de 20 estudiantes, 8 prefieren fútbol. ¿Qué fracción del curso prefiere fútbol?",
+      "clave": "B",
+      "justificacion": "8 de 20 se simplifica dividiendo ambos por 4, y queda 2/5.",
+      "alternativas": ["8/12", "2/5", "5/8", "1/2"]
+    },
+    {
+      "codigo": "GEN4B-DYP-007",
+      "bloom": "comprension",
+      "habilidad": "interpretar",
+      "dificultad": "media",
+      "conocimiento": "moda",
+      "enunciado": "Las cantidades de mascotas por estudiante son 3, 8, 3, 6, 3. ¿Cuál es la moda?",
+      "clave": "A",
+      "justificacion": "El 3 aparece tres veces, más que cualquier otro valor.",
+      "alternativas": ["3", "5", "6", "8"]
+    },
+    {
+      "codigo": "GEN4B-DYP-008",
+      "bloom": "comprension",
+      "habilidad": "interpretar",
+      "dificultad": "media",
+      "conocimiento": "mediana",
+      "enunciado": "Las notas de cinco estudiantes son 5, 6, 7, 4, 6. ¿Cuál es la mediana?",
+      "clave": "C",
+      "justificacion": "Al ordenar 4, 5, 6, 6, 7 el valor central es 6.",
+      "alternativas": ["4", "5", "6", "7"]
+    },
+    {
+      "codigo": "GEN4B-DYP-009",
+      "bloom": "comprension",
+      "habilidad": "interpretar",
+      "dificultad": "media",
+      "conocimiento": "media aritmetica",
+      "enunciado": "La media de cuatro datos es 10. ¿Cuánto suman esos cuatro datos?",
+      "clave": "D",
+      "justificacion": "Si la media es 10 y son cuatro datos, la suma es 40.",
+      "alternativas": ["4", "10", "14", "40"]
+    },
+    {
+      "codigo": "GEN4B-DYP-010",
+      "bloom": "comprension",
+      "habilidad": "argumentar",
+      "dificultad": "media",
+      "conocimiento": "comparacion de probabilidades",
+      "enunciado": "Un estudiante dice: \"Es más probable sacar un número par que un impar con un dado de seis caras\". ¿Qué corresponde responder?",
+      "clave": "C",
+      "justificacion": "Hay tres pares y tres impares, así que las dos probabilidades son iguales.",
+      "alternativas": [
+        "Es verdadero, porque los pares son más frecuentes.",
+        "Es falso, porque hay menos números pares que impares.",
+        "Es falso, porque hay tres pares y tres impares, así que la probabilidad es la misma.",
+        "No se puede saber sin lanzar el dado muchas veces."
+      ]
+    },
+    {
+      "codigo": "GEN4B-DYP-011",
+      "bloom": "aplicacion",
+      "habilidad": "resolver problemas",
+      "dificultad": "media",
+      "conocimiento": "calculo de la media",
+      "enunciado": "Las temperaturas de cinco días fueron 12, 15, 18, 20 y 25 grados. ¿Cuál fue la temperatura media?",
+      "clave": "B",
+      "justificacion": "La suma es 90 y al dividir por 5 se obtiene 18.",
+      "alternativas": ["16", "18", "19", "20"]
+    },
+    {
+      "codigo": "GEN4B-DYP-012",
+      "bloom": "aplicacion",
+      "habilidad": "resolver problemas",
+      "dificultad": "media",
+      "conocimiento": "probabilidad esperada",
+      "enunciado": "Un dado cargado tiene probabilidad 1/4 de mostrar un 6. Si se lanza 40 veces, ¿cuántas veces se espera obtener un 6?",
+      "clave": "C",
+      "justificacion": "Un cuarto de 40 es 10.",
+      "alternativas": ["4", "6", "10", "24"]
+    },
+    {
+      "codigo": "GEN4B-DYP-013",
+      "bloom": "aplicacion",
+      "habilidad": "resolver problemas",
+      "dificultad": "media",
+      "conocimiento": "rango",
+      "enunciado": "Las temperaturas registradas en una semana fueron 8, 11, 9, 12 y 10 grados. ¿Cuál es el rango?",
+      "clave": "B",
+      "justificacion": "El mayor es 12 y el menor es 8, y la diferencia es 4.",
+      "alternativas": ["2", "4", "10", "12"]
+    },
+    {
+      "codigo": "GEN4B-DYP-014",
+      "bloom": "aplicacion",
+      "habilidad": "resolver problemas",
+      "dificultad": "media",
+      "conocimiento": "probabilidad simple",
+      "enunciado": "En una caja hay 3 bolitas rojas y 5 azules. Si se saca una sin mirar, ¿cuál es la probabilidad de que sea roja?",
+      "clave": "A",
+      "justificacion": "Hay 3 rojas de 8 bolitas en total, es decir 3/8.",
+      "alternativas": ["3/8", "3/5", "5/8", "1/2"]
+    },
+    {
+      "codigo": "GEN4B-DYP-015",
+      "bloom": "aplicacion",
+      "habilidad": "resolver problemas",
+      "dificultad": "dificil",
+      "conocimiento": "media y suma",
+      "enunciado": "La media de cinco datos es 12. La suma de cuatro de ellos es 40. ¿Cuál es el quinto dato?",
+      "clave": "C",
+      "justificacion": "Los cinco datos suman 60, y 60 menos 40 es 20.",
+      "alternativas": ["8", "12", "20", "60"]
+    },
+    {
+      "codigo": "GEN4B-DYP-016",
+      "bloom": "sintesis",
+      "habilidad": "argumentar",
+      "dificultad": "dificil",
+      "conocimiento": "comparacion de distribuciones",
+      "enunciado": "El grupo A tiene los datos 5, 5, 5, 5. El grupo B tiene 1, 5, 9, 5. ¿Qué afirmación es verdadera?",
+      "clave": "B",
+      "justificacion": "Los dos grupos tienen media 5, pero el rango del grupo A es 0 y el del grupo B es 8.",
+      "alternativas": [
+        "Tienen la misma media y el mismo rango.",
+        "Tienen la misma media, pero distinto rango.",
+        "Tienen distinta media y el mismo rango.",
+        "Tienen distinta media y distinto rango."
+      ]
+    },
+    {
+      "codigo": "GEN4B-DYP-017",
+      "bloom": "sintesis",
+      "habilidad": "argumentar",
+      "dificultad": "dificil",
+      "conocimiento": "invariantes de la media",
+      "enunciado": "La media de diez datos es 6,5. Si se agrega un dato más, que también vale 6,5, ¿qué ocurre con la media?",
+      "clave": "C",
+      "justificacion": "Agregar un valor igual a la media no la modifica.",
+      "alternativas": [
+        "Aumenta, porque hay más datos.",
+        "Disminuye, porque se reparte entre más datos.",
+        "Se mantiene igual.",
+        "Se duplica."
+      ]
+    }
+  ]
+}
