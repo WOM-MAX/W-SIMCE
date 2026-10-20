@@ -578,3 +578,51 @@ aproximación, y conviene decidir si se compran hechos o se construyen.
 Para igualar el producto completo: entre 120 y 165 horas, con la salvedad de E7.
 Para cerrar el uso interno del colegio con comodidad (E1, E2, E3 y E9): entre 25
 y 35 horas.
+
+---
+
+## 16. Revisión y corrección de figuras (20 de octubre de 2026)
+
+**Motivo:** el banco tiene 380 ítems con figura y las figuras se generaron sin un
+sistema de coordenadas común. Al revisarlas se encontraron textos cortados,
+elementos flotando fuera de la cuadrícula, curvas mal orientadas y figuras que
+contradecían su propio enunciado.
+
+**Método, que es lo que faltaba desde el principio:**
+
+1. `scripts/render-figuras.mjs` rasteriza una figura a PNG con resvg, para poder
+   mirarla con la herramienta de imagen.
+2. `scripts/contacto.mjs` arma una hoja con doce figuras para revisarlas de un
+   golpe.
+3. `scripts/pizarra.mjs` construye figuras con una sola transformación de
+   coordenadas matemáticas a píxeles: ejes, rectas, puntos rotulados, curvas por
+   muestreo y triángulos.
+4. `scripts/dibujo.mjs` traduce las primitivas a SVG igual que el componente de
+   la aplicación.
+
+**Hallazgo técnico:** resvg no pinta texto dentro de un elemento `<g>`. Las
+figuras sí se veían en el navegador, pero el rasterizador las mostraba sin texto.
+La salida se cambió a una etiqueta `<text>` por línea.
+
+**Resultado:** 101 figuras con estructura de ejes o curvas revisadas. 24
+corregidas y 77 verificadas sin cambios. Las 279 restantes son tablas, cuadros de
+texto y formas simples que pasaron la revisión de anclaje.
+
+Figuras corregidas, por tipo de defecto:
+
+| Defecto | Figuras | Ejemplo |
+| --- | --- | --- |
+| Texto anclado al centro con coordenada de borde | 482 textos en total | Afiche del barrio, tabla de la feria |
+| Curva con orientación equivocada | 2 | Parábolas que abrían hacia los lados |
+| Vértice o punto fuera de su curva | 1 | Parábola con vértice en x = 1,5 en vez de 3 |
+| Original dibujado fuera de la cuadrícula | 7 | Todas las transformaciones isométricas |
+| Figura que contradice su enunciado | 1 | Inecuación con recta y = 2x + 1 y sombreado al revés |
+| Elementos flotando sin relación | 8 | Esferas, semiesferas, ángulos |
+| Cuadrícula con menos divisiones que las declaradas | 1 | Cubo de 4 cm dibujado con 3 por lado |
+| Escala inconsistente entre ejes | 1 | Triángulo 6-8-10 dibujado con dos escalas |
+
+**Pendiente anotado:** en `8B-MAT-PRO-F3-007` las dos series se superponen porque
+las escalas hacen que coincidan. Se lee, pero la comparación se pierde. Es una
+debilidad de diseño, no un dato erróneo.
+
+**Regla nueva:** ninguna figura entra al banco sin haberse renderizado y mirado.
