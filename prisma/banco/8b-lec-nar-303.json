@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-303",
+    "titulo": "El precio del queso",
+    "tipo": "narrativo",
+    "palabras": 336,
+    "cuerpo": "La quesería de doña Ester vendía a un solo cliente desde hacía ocho años: un distribuidor que compraba doscientos kilos al mes y pagaba a treinta días. Cuando el distribuidor le avisó que bajaría el pedido a la mitad y que pagaría a sesenta días, doña Ester hizo cuentas en una hoja.\n\nCon doscientos kilos al mes y pago a treinta días, la quesería cubría los sueldos, la leche y el arriendo. Con cien kilos y pago a sesenta, no alcanzaba.\n\nSu hijo le propuso buscar más clientes.\n\n—¿A quién le vendo? —preguntó ella—. Aquí todos compran en el almacén.\n\n—A los almacenes, entonces, pero de a veinte kilos y pagando al día.\n\nDoña Ester no estaba convencida. Vender a diez almacenes significaba diez viajes, diez conversaciones y diez cobros. Con un solo cliente, en cambio, cargaba el camión una vez al mes.\n\nHizo una prueba en marzo. Vendió a cuatro almacenes del barrio, veinte kilos a cada uno, con pago contra entrega. Al mes siguiente fueron seis. En junio eran once, y el distribuidor seguía comprando cien kilos.\n\nEn julio doña Ester puso los números en la misma hoja de marzo.\n\n—Mira —le dijo a su hijo—. Con el distribuidor solo, cien kilos a sesenta días. Con los almacenes, doscientos veinte kilos a pago inmediato. Y no dependo de una llamada.\n\n—Pero trabajas el doble.\n\n—Trabajo distinto. Antes esperaba un camión. Ahora salgo a las ocho.\n\nEn octubre el distribuidor le ofreció volver a los doscientos kilos con pago a treinta días, si dejaba de vender a los almacenes.\n\nDoña Ester le respondió por escrito, con una frase que su hijo copió en un cuaderno:\n\n—Gracias. Prefiero venderle cien kilos a usted y el resto a once vecinos que me pagan el mismo día."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-311",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué cambio propuso el distribuidor que obligó a doña Ester a hacer cuentas?",
+      "alternativas": [
+        "Comprar el doble de queso y pagar al contado.",
+        "Bajar el pedido a la mitad y pagar a sesenta días.",
+        "Cambiar el tipo de queso que compraba.",
+        "Dejar de comprarle definitivamente."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el distribuidor le avisó que bajaría el pedido a la mitad y que pagaría a sesenta días. Con esas condiciones, la quesería no cubría sus costos."
+    },
+    {
+      "codigo": "8B-LEC-NAR-312",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una objeción",
+      "enunciado": "¿Por qué doña Ester no estaba convencida de vender a los almacenes?",
+      "alternativas": [
+        "Porque los almacenes pagaban menos por kilo.",
+        "Porque diez clientes significaban diez viajes, diez conversaciones y diez cobros, frente a un solo camión al mes.",
+        "Porque no tenía queso suficiente para todos.",
+        "Porque los almacenes del barrio no vendían queso."
+      ],
+      "clave": "B",
+      "justificacion": "El texto enumera sus reparos: diez viajes, diez conversaciones y diez cobros, comparado con cargar el camión una vez al mes para un solo cliente."
+    },
+    {
+      "codigo": "8B-LEC-NAR-313",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de situaciones",
+      "enunciado": "En julio, ¿qué ventaja tenía la situación con los almacenes frente al distribuidor solo?",
+      "alternativas": [
+        "Se vendía menos queso en total.",
+        "Se vendían 220 kilos con pago inmediato en lugar de 100 kilos a sesenta días.",
+        "Se trabajaba menos horas al día.",
+        "Se tenía un solo cliente al que cobrar."
+      ],
+      "clave": "B",
+      "justificacion": "Doña Ester compara en la misma hoja: con los almacenes vendía 220 kilos con pago inmediato, mientras que con el distribuidor solo eran 100 kilos a sesenta días. El texto también aclara que trabaja el doble, aunque de otra forma."
+    },
+    {
+      "codigo": "8B-LEC-NAR-314",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "motivo de una decisión",
+      "enunciado": "¿Por qué doña Ester rechaza la oferta de octubre, aunque significaba volver a los doscientos kilos?",
+      "alternativas": [
+        "Porque ya no tenía capacidad para producir esa cantidad.",
+        "Porque la oferta exigía dejar a los almacenes y volver a depender de un solo cliente.",
+        "Porque el distribuidor le pagaba menos por kilo que los almacenes.",
+        "Porque su hijo le pidió que rechazara la oferta."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que la oferta era volver a los doscientos kilos con pago a treinta días «si dejaba de vender a los almacenes». Su respuesta escrita confirma que prefiere repartir la venta entre varios clientes que le pagan el mismo día."
+    },
+    {
+      "codigo": "8B-LEC-NAR-315",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué idea sobre el riesgo expresa mejor la decisión final de doña Ester?",
+      "alternativas": [
+        "Que conviene aceptar el pedido más grande aunque las condiciones empeoren.",
+        "Que depender de un solo cliente concentra el riesgo, y repartir las ventas lo reduce.",
+        "Que los clientes pequeños nunca son rentables.",
+        "Que el trabajo artesanal no puede crecer."
+      ],
+      "clave": "B",
+      "justificacion": "La decisión se apoya en dos datos: con un solo cliente, una llamada podía dejarla sin la mitad de las ventas; con once almacenes, la venta está repartida y el pago es inmediato. La frase final lo resume."
+    }
+  ]
+}

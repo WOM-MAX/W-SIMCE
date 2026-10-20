@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INF-302",
+    "titulo": "Cómo actúa una vacuna",
+    "tipo": "informativo",
+    "palabras": 348,
+    "cuerpo": "El cuerpo tiene un sistema de defensa que reconoce lo que no le pertenece. Cuando un microorganismo entra, ese sistema produce anticuerpos y células capaces de atacarlo. El problema es la velocidad: la primera vez, la respuesta tarda días, y en esos días la enfermedad avanza.\n\nLa vacuna aprovecha ese mecanismo sin provocar la enfermedad. Introduce en el cuerpo una versión inofensiva del microorganismo o solo un fragmento suyo, suficiente para que el sistema de defensa lo reconozca y aprenda a responder.\n\nLo que se forma después es lo importante: células de memoria. Esas células quedan en el organismo y, si el microorganismo real aparece años más tarde, la respuesta es mucho más rápida y más intensa que la primera vez. Por eso una persona vacunada puede no enfermar o enfermar de forma leve.\n\nHay varias formas de preparar una vacuna. Algunas usan microorganismos debilitados; otras, microorganismos inactivados; otras, solo una proteína de su superficie. Las hay también que usan el material genético que instruye a las células para producir esa proteína. En todos los casos el objetivo es el mismo: mostrarle al sistema de defensa algo que reconozca, sin que la persona pase por la enfermedad.\n\nDe ahí que no todas las vacunas se apliquen igual. Algunas requieren varias dosis, porque la respuesta se refuerza con cada contacto, y otras necesitan refuerzos cada cierto número de años porque las células de memoria disminuyen con el tiempo.\n\nUn punto que suele generar dudas: la vacuna no debilita las defensas. Al contrario, las entrena. Y otra aclaración importante: cuando varias personas de una comunidad están vacunadas, el microorganismo encuentra menos lugares donde instalarse, lo que protege también a quienes no pueden vacunarse por razones médicas."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INF-306",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es el problema del sistema de defensa la primera vez que enfrenta un microorganismo?",
+      "alternativas": [
+        "Que no puede producir anticuerpos.",
+        "Que la respuesta tarda días y en ese tiempo la enfermedad avanza.",
+        "Que confunde el microorganismo con células propias.",
+        "Que necesita una vacuna para funcionar."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el problema es la velocidad: la primera vez la respuesta tarda días, y en esos días la enfermedad avanza."
+    },
+    {
+      "codigo": "8B-LEC-INF-307",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de las células de memoria",
+      "enunciado": "¿Qué papel cumplen las células de memoria?",
+      "alternativas": [
+        "Impiden que el microorganismo entre al cuerpo.",
+        "Quedan en el organismo y hacen que la respuesta sea más rápida e intensa ante un contacto posterior.",
+        "Sustituyen a los anticuerpos después de unos años.",
+        "Eliminan la vacuna del cuerpo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que las células de memoria quedan en el organismo y que, si el microorganismo real aparece años después, la respuesta es mucho más rápida y más intensa que la primera vez."
+    },
+    {
+      "codigo": "8B-LEC-INF-308",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "comparación de tipos de vacunas",
+      "enunciado": "El texto describe varias formas de preparar una vacuna. ¿Qué tienen en común?",
+      "alternativas": [
+        "Que todas usan microorganismos debilitados.",
+        "Que todas buscan que el sistema de defensa reconozca algo sin que la persona pase por la enfermedad.",
+        "Que todas usan material genético.",
+        "Que todas requieren refuerzos cada año."
+      ],
+      "clave": "B",
+      "justificacion": "El texto enumera microorganismos debilitados, inactivados, proteínas de superficie y material genético, y aclara que en todos los casos el objetivo es el mismo: mostrarle al sistema de defensa algo que reconozca sin que la persona enferme."
+    },
+    {
+      "codigo": "8B-LEC-INF-309",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre dosis y respuesta",
+      "enunciado": "¿Por qué algunas vacunas requieren varias dosis o refuerzos periódicos?",
+      "alternativas": [
+        "Porque la primera dosis suele aplicarse mal.",
+        "Porque la respuesta se refuerza con cada contacto y las células de memoria disminuyen con el tiempo.",
+        "Porque el microorganismo cambia de forma cada mes.",
+        "Porque el cuerpo elimina la vacuna en una semana."
+      ],
+      "clave": "B",
+      "justificacion": "El texto da las dos razones: la respuesta se refuerza con cada contacto, y las células de memoria disminuyen con el tiempo, lo que explica los refuerzos cada cierto número de años."
+    },
+    {
+      "codigo": "8B-LEC-INF-310",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una creencia",
+      "enunciado": "Una persona afirma que vacunarse debilita las defensas porque introduce algo extraño en el cuerpo. Según el texto, ¿cuál es la respuesta correcta?",
+      "alternativas": [
+        "Que tiene razón, porque el cuerpo debe defenderse de la vacuna.",
+        "Que la vacuna no debilita las defensas: las entrena al mostrarles algo que reconocer.",
+        "Que las defensas no intervienen en la vacunación.",
+        "Que solo las vacunas de refuerzo debilitan las defensas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice de forma directa: la vacuna no debilita las defensas, las entrena. Además explica que introduce una versión inofensiva o un fragmento, justamente para que el sistema aprenda sin enfermar."
+    }
+  ]
+}

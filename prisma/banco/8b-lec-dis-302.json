@@ -1,0 +1,78 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DIS-302",
+    "titulo": "Cuánto cuesta trasladarse",
+    "tipo": "informativo-discontinuo",
+    "palabras": 182,
+    "cuerpo": "TRANSPORTE AL COLEGIO\nEncuesta a 200 estudiantes de segundo medio\n\nMEDIO | ESTUDIANTES | TIEMPO PROMEDIO | GASTO MENSUAL\nCaminando | 54 | 15 min | $0\nBicicleta | 18 | 12 min | $2 000 (mantención)\nMicro | 86 | 35 min | $24 000\nAuto familiar | 32 | 20 min | $18 000 (combustible compartido)\nBus escolar | 10 | 40 min | $30 000\n\nOBSERVACIONES\nEl gasto del auto se calcula dividiendo el combustible del mes por la cantidad de personas que viajan.\nLa bicicleta considera dos mantenciones al año.\n\nDATOS COMPLEMENTARIOS\nEl 27% de los estudiantes vive a menos de dos kilómetros del colegio.\nQuienes van caminando demoran en promedio 15 minutos, el mismo tiempo que algunos esperan la micro.\nEl bus escolar es el medio más caro y el más lento de la tabla."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DIS-306",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tabla",
+      "enunciado": "¿Cuál es el medio de transporte más usado por los estudiantes encuestados?",
+      "alternativas": ["Caminando", "Bicicleta", "Micro", "Auto familiar"],
+      "clave": "C",
+      "justificacion": "La tabla muestra 86 estudiantes que usan micro, el valor más alto de la columna. Caminando son 54 y en auto familiar, 32."
+    },
+    {
+      "codigo": "8B-LEC-DIS-307",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de una tabla",
+      "enunciado": "¿Qué porcentaje de los encuestados va caminando al colegio?",
+      "alternativas": ["18%", "27%", "43%", "54%"],
+      "clave": "B",
+      "justificacion": "Son 54 estudiantes de un total de 200. Entonces 54 ÷ 200 = 0,27, es decir, 27%. El valor 27% aparece además en los datos complementarios, pero referido a quienes viven a menos de dos kilómetros."
+    },
+    {
+      "codigo": "8B-LEC-DIS-308",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de costos y tiempos",
+      "enunciado": "¿Qué medio resulta más caro y más lento a la vez, según la tabla?",
+      "alternativas": ["La micro", "El auto familiar", "El bus escolar", "La bicicleta"],
+      "clave": "C",
+      "justificacion": "El bus escolar tiene el gasto mensual más alto, $30 000, y el tiempo promedio más alto, 40 minutos. La micro es más barata y más rápida, y el auto familiar cuesta menos."
+    },
+    {
+      "codigo": "8B-LEC-DIS-309",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "interpretación de un dato",
+      "enunciado": "La tabla indica que ir caminando demora 15 minutos y que algunos esperan ese mismo tiempo la micro. ¿Qué se deduce de ese dato?",
+      "alternativas": [
+        "Que la micro siempre demora más que caminar.",
+        "Que para parte de los estudiantes caminar es tan rápido como esperar el transporte.",
+        "Que nadie debería usar la micro.",
+        "Que el tiempo de espera no está incluido en la tabla."
+      ],
+      "clave": "B",
+      "justificacion": "El dato compara el tiempo total de caminar con el tiempo de espera de la micro. Para quienes viven cerca, caminar puede ser igual de rápido que esperar, aunque el tiempo promedio total de la micro sea de 35 minutos."
+    },
+    {
+      "codigo": "8B-LEC-DIS-310",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Un estudiante lee la tabla y concluye que el bus escolar debería eliminarse porque todos podrían usar la micro. ¿Qué objeción corresponde según los datos?",
+      "alternativas": [
+        "Que la micro es el medio más caro de la tabla.",
+        "Que el bus escolar lo usan 10 estudiantes y la tabla no informa por qué lo eligen, así que la conclusión excede los datos.",
+        "Que el bus escolar es más rápido que la micro.",
+        "Que la encuesta no incluyó a los usuarios del bus escolar."
+      ],
+      "clave": "B",
+      "justificacion": "La tabla informa cantidad, tiempo y gasto, pero no las razones de cada elección ni la disponibilidad de micro en cada sector. Concluir que todos podrían cambiarse de medio no se sostiene con esos datos, y la encuesta sí incluyó a los 10 usuarios del bus."
+    }
+  ]
+}

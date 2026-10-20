@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-POE-302",
+    "titulo": "Puerto viejo",
+    "tipo": "poético",
+    "palabras": 110,
+    "cuerpo": "El puerto tiene dos caras:\nla que llega y la que espera.\nLa que llega trae cajas,\nla que espera trae paciencia.\n\nA las cinco hay humo en las grúas\ny un rumor de cadenas.\nA las nueve hay unos perros\ny un guardia que se pasea.\n\nMi padre trabajó aquí\ntreinta años, en la misma puerta,\ny nunca trajo a la casa\nnada que diera una respuesta.\n\nCuando le pregunté qué hacía,\nme dijo: «Cuidar que salga y entre\nlo que no es mío, y anotarlo,\nporque todo lo que entra vuelve».\n\nAhora paso por el puerto\ny las grúas siguen subiendo.\nNo sé qué se llevan, pero\nreconozco el sonido del peso."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-POE-306",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuántos años y dónde trabajó el padre del hablante?",
+      "alternativas": [
+        "Diez años, en las grúas del puerto.",
+        "Treinta años, en la misma puerta del puerto.",
+        "Veinte años, en la casa de la familia.",
+        "Toda su vida, en el mar."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que el padre trabajó aquí treinta años, en la misma puerta. No se indica que se dedicara al mar ni a las grúas."
+    },
+    {
+      "codigo": "8B-LEC-POE-307",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "sentido de una imagen",
+      "enunciado": "¿Qué quiere decir que el puerto tiene «dos caras: la que llega y la que espera»?",
+      "alternativas": [
+        "Que el puerto tiene dos edificios distintos.",
+        "Que en el puerto coinciden el movimiento de lo que llega y la espera de quienes aguardan.",
+        "Que el puerto funciona de día y de noche.",
+        "Que el puerto es de dos personas diferentes."
+      ],
+      "clave": "B",
+      "justificacion": "Los versos siguientes lo explicitan: la que llega trae cajas y la que espera trae paciencia. La imagen describe las dos funciones que conviven en el lugar, no dos edificios ni dos jornadas."
+    },
+    {
+      "codigo": "8B-LEC-POE-308",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una frase",
+      "enunciado": "El padre dice que anotaba todo «porque todo lo que entra vuelve». ¿Qué explica esa frase sobre su trabajo?",
+      "alternativas": [
+        "Que su trabajo consistía en anotar el movimiento de la carga para poder rastrearlo.",
+        "Que el puerto devolvía las cajas a su lugar de origen.",
+        "Que anotaba solo lo que salía del puerto.",
+        "Que los objetos del puerto le pertenecían."
+      ],
+      "clave": "A",
+      "justificacion": "La frase aparece junto a la indicación de cuidar que lo que no es suyo entre y salga, y anotarlo. El sentido es que el registro permite seguir el rastro de la carga, y el verso final insiste en que todo vuelve."
+    },
+    {
+      "codigo": "8B-LEC-POE-309",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del desenlace",
+      "enunciado": "Al final el hablante dice que no sabe qué se llevan las grúas, pero «reconozco el sonido del peso». ¿Qué muestra esa frase?",
+      "alternativas": [
+        "Que el hablante no conoce el puerto.",
+        "Que aunque no conoce el destino de la carga, reconoce el trabajo de su padre en ese sonido.",
+        "Que las grúas hacen demasiado ruido para trabajar.",
+        "Que el padre le enseñó el contenido exacto de cada caja."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante admite que no sabe qué transportan las grúas. Lo que reconoce es el sonido asociado al peso, que conecta con los treinta años de trabajo de su padre y con la frase sobre anotar lo que entra."
+    },
+    {
+      "codigo": "8B-LEC-POE-310",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué idea sobre el trabajo del padre construye el poema?",
+      "alternativas": [
+        "Que era un trabajo sin importancia por no dejar riqueza.",
+        "Que era una tarea de cuidado y registro, cuya continuidad el hijo reconoce.",
+        "Que el padre prefería el puerto a su familia.",
+        "Que el trabajo en el puerto terminó con las grúas nuevas."
+      ],
+      "clave": "B",
+      "justificacion": "El padre describe su tarea como cuidar y anotar lo que no es suyo. El hijo, años después, sigue pasando por el puerto y reconoce en el sonido del peso la huella de ese trabajo."
+    }
+  ]
+}
