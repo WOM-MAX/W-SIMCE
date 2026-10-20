@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INF-304",
+    "titulo": "Por qué el mar es salado",
+    "tipo": "informativo",
+    "palabras": 336,
+    "cuerpo": "El agua de mar contiene alrededor de 35 gramos de sal por litro. La pregunta es de dónde salió esa sal, si el agua de los ríos que llegan al mar es dulce.\n\nLa respuesta empieza en la lluvia. El agua de lluvia es en realidad agua dulce, pero al caer atraviesa el aire y luego corre sobre las rocas. En ese recorrido disuelve pequeñas cantidades de minerales, entre ellos sales, y los arrastra. Por eso el agua de los ríos no es químicamente pura, aunque la percibamos como dulce: contiene sales disueltas en cantidad pequeña.\n\nLos ríos llevan esas sales al mar desde hace cientos de millones de años. Al llegar, el agua se evapora por efecto del sol y vuelve a la atmósfera como vapor, que no arrastra sales. Las sales, en cambio, quedan. Ese es el mecanismo central: la evaporación retira agua y deja los minerales atrás, y el proceso se repite sin detenerse.\n\nDurante mucho tiempo se pensó que el mar se estaba volviendo cada vez más salado. Hoy se sabe que la concentración se mantiene más o menos estable, porque existen procesos que retiran sal. Algunas sales precipitan y forman depósitos en el fondo. Otras quedan atrapadas en lagunas costeras que se secan. Y una parte vuelve a la tierra en forma de aerosoles marinos, arrastrados por el viento y depositados por la lluvia.\n\nEl resultado es un equilibrio dinámico: entra sal y sale sal, y la concentración se mantiene dentro de un rango.\n\nNo todos los mares son igual de salados. El mar Báltico, que recibe muchos ríos y tiene poca evaporación, es mucho menos salado. El mar Muerto, en cambio, no tiene salida al océano y pierde agua solo por evaporación, de modo que su concentración es varias veces mayor."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INF-316",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿De dónde proviene la sal que llega al mar, según el texto?",
+      "alternativas": [
+        "De la lluvia, que cae ya salada.",
+        "De los minerales que el agua disuelve al correr sobre las rocas y que los ríos arrastran.",
+        "De los animales marinos que viven en el fondo.",
+        "Del vapor de agua que se condensa sobre el océano."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que el agua de lluvia es dulce, pero al correr sobre las rocas disuelve pequeñas cantidades de minerales, entre ellos sales, y los arrastra hasta el mar."
+    },
+    {
+      "codigo": "8B-LEC-INF-317",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "explicación causal",
+      "enunciado": "¿Por qué la evaporación aumenta la concentración de sal del mar?",
+      "alternativas": [
+        "Porque el vapor de agua contiene más sal que el agua líquida.",
+        "Porque al evaporarse el agua, las sales que estaban disueltas quedan en el mar.",
+        "Porque el sol produce sal al calentar el agua.",
+        "Porque la evaporación solo ocurre en los mares cerrados."
+      ],
+      "clave": "B",
+      "justificacion": "El texto indica que el vapor no arrastra sales y que la evaporación retira agua dejando los minerales atrás. Ese es el mecanismo central que explica la salinidad."
+    },
+    {
+      "codigo": "8B-LEC-INF-318",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "equilibrio dinámico",
+      "enunciado": "¿Cómo se mantiene estable la concentración de sal del mar, si los ríos siguen aportando sales?",
+      "alternativas": [
+        "Porque los ríos dejaron de aportar sal hace millones de años.",
+        "Porque existen procesos que retiran sal, como la precipitación, las lagunas costeras y los aerosoles marinos.",
+        "Porque la sal se transforma en agua dentro del mar.",
+        "Porque la lluvia devuelve la sal a los ríos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto describe el equilibrio: entra sal y sale sal. Los procesos de salida son la precipitación de sales en el fondo, el atrapamiento en lagunas costeras que se secan y el arrastre por aerosoles marinos."
+    },
+    {
+      "codigo": "8B-LEC-INF-319",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "comparación entre mares",
+      "enunciado": "¿Por qué el mar Muerto es mucho más salado que el Báltico?",
+      "alternativas": [
+        "Porque recibe más ríos que el Báltico.",
+        "Porque no tiene salida al océano y pierde agua solo por evaporación, mientras el Báltico recibe muchos ríos.",
+        "Porque está más cerca del ecuador.",
+        "Porque en el mar Muerto no existe vida."
+      ],
+      "clave": "B",
+      "justificacion": "El texto contrasta los dos casos: el Báltico recibe muchos ríos y tiene poca evaporación, mientras el mar Muerto no tiene salida al océano y pierde agua solo por evaporación, lo que concentra sus sales."
+    },
+    {
+      "codigo": "8B-LEC-INF-320",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una creencia",
+      "enunciado": "Una persona afirma que el mar se vuelve cada año más salado porque los ríos siguen aportando sal. Según el texto, ¿cuál es la corrección?",
+      "alternativas": [
+        "Que tiene razón: el proceso no se detiene nunca.",
+        "Que la concentración se mantiene estable porque también existen procesos que retiran sal.",
+        "Que los ríos ya no aportan sal al mar.",
+        "Que la sal del mar proviene solo de los volcanes submarinos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que durante mucho tiempo se pensó eso mismo, pero que hoy se sabe que la concentración se mantiene más o menos estable por los procesos que retiran sal, en un equilibrio dinámico."
+    }
+  ]
+}

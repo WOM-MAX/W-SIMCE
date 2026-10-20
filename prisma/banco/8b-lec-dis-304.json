@@ -1,0 +1,83 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DIS-304",
+    "titulo": "Cuánta comida se pierde",
+    "tipo": "informativo-discontinuo",
+    "palabras": 186,
+    "cuerpo": "PÉRDIDA DE ALIMENTOS EN LA CADENA\nDatos de una región, un año\n\nETAPA | PORCENTAJE DEL TOTAL | PRINCIPAL CAUSA\nCosecha | 18% | Falta de mano de obra y de almacenamiento\nTransporte | 12% | Caminos en mal estado y cámaras insuficientes\nComercio mayorista | 9% | Exigencias estéticas del comprador\nComercio minorista | 14% | Sobrestock y fechas cortas\nHogares | 32% | Compras excesivas y mala conservación\nRestaurantes | 15% | Porciones grandes y descarte por horario\n\nLECTURA DE LOS DATOS\nCasi un tercio de la pérdida ocurre en los hogares.\nEntre la cosecha, el transporte y el comercio mayorista se pierde 39% del total, o sea 18 + 12 + 9.\nLa causa más repetida es la falta de infraestructura, no la falta de alimento.\n\nQUÉ HACEN OTRAS CIUDADES\nVenta de productos con forma irregular a menor precio.\nRecolección de excedentes de restaurantes para comedores.\nCapacitación en compras y conservación para hogares."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DIS-316",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tabla",
+      "enunciado": "¿En qué etapa se pierde el mayor porcentaje de alimentos?",
+      "alternativas": ["Cosecha", "Transporte", "Hogares", "Restaurantes"],
+      "clave": "C",
+      "justificacion": "La tabla asigna 32% a los hogares, el porcentaje más alto. Le siguen la cosecha con 18% y los restaurantes con 15%."
+    },
+    {
+      "codigo": "8B-LEC-DIS-317",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "suma de datos de una tabla",
+      "enunciado": "¿Qué porcentaje del total se pierde entre la cosecha, el transporte y el comercio mayorista?",
+      "alternativas": ["18%", "30%", "39%", "53%"],
+      "clave": "C",
+      "justificacion": "La lectura de los datos lo indica y se comprueba sumando esas tres etapas: 18 + 12 + 9 = 39%. El valor 53% resulta de incluir también el comercio minorista, que es otra etapa."
+    },
+    {
+      "codigo": "8B-LEC-DIS-318",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "interpretación de causas",
+      "enunciado": "¿Qué tienen en común las causas de las etapas de cosecha y transporte?",
+      "alternativas": [
+        "Que dependen del comportamiento de los consumidores.",
+        "Que se relacionan con falta de infraestructura y de condiciones adecuadas de manejo.",
+        "Que se deben a las exigencias estéticas del comprador.",
+        "Que ocurren solo en restaurantes."
+      ],
+      "clave": "B",
+      "justificacion": "La cosecha se asocia a falta de mano de obra y almacenamiento, y el transporte a caminos en mal estado y cámaras insuficientes. El texto además señala que la causa más repetida es la falta de infraestructura."
+    },
+    {
+      "codigo": "8B-LEC-DIS-319",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre medidas y causas",
+      "enunciado": "La medida de vender productos con forma irregular a menor precio, ¿qué causa de la tabla ataca?",
+      "alternativas": [
+        "La falta de cámaras en el transporte.",
+        "Las exigencias estéticas del comercio mayorista.",
+        "El sobrestock del comercio minorista.",
+        "Las compras excesivas de los hogares."
+      ],
+      "clave": "B",
+      "justificacion": "La tabla atribuye al comercio mayorista la causa «exigencias estéticas del comprador», y esa etapa pierde 9%. Vender a menor precio los productos de forma irregular reduce el descarte por apariencia."
+    },
+    {
+      "codigo": "8B-LEC-DIS-320",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una política",
+      "enunciado": "Un municipio quiere reducir la pérdida de alimentos y solo tiene presupuesto para una medida. Según los datos, ¿cuál tendría más efecto?",
+      "alternativas": [
+        "Capacitar a los hogares en compras y conservación, porque ahí ocurre el 32% de la pérdida.",
+        "Mejorar las cámaras del transporte, porque es la causa más repetida.",
+        "Regular las porciones de los restaurantes, porque es la etapa más visible.",
+        "Exigir fechas más largas en el comercio minorista, porque es la causa más simple de corregir."
+      ],
+      "clave": "A",
+      "justificacion": "Los hogares concentran el porcentaje mayor, 32%, casi un tercio del total. Una medida única con más efecto potencial debe apuntar a la etapa que más pierde. Las otras etapas tienen porcentajes menores: transporte 12%, restaurantes 15% y minorista 14%."
+    }
+  ]
+}

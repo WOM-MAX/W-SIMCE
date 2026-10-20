@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-305",
+    "titulo": "Las llaves del kiosco",
+    "tipo": "narrativo",
+    "palabras": 330,
+    "cuerpo": "Doña Carmen tenía el kiosco en la esquina del colegio desde 1994. Vendía cuadernos, lápices, pan y, cuando hacía frío, sopaipillas. Conocía el nombre de casi todos los estudiantes y sabía qué curso salía a qué hora.\n\nEn marzo llegó el correo del municipio: el kiosco ocupaba parte de la vereda y debía cerrar en treinta días. La resolución citaba una ordenanza de 2018 sobre uso del espacio público.\n\nDoña Carmen leyó el papel dos veces.\n\n—En 2018 nadie me dijo nada —le contó a su sobrino—. Ese año arreglé el techo con plata prestada.\n\nEl sobrino, que era abogado, le propuso reclamar.\n\n—Por el permiso —dijo—. Usted tiene una patente municipal que se renovó todos los años. Si la patente se renovó, la municipalidad sabía que el kiosco existía.\n\nDoña Carmen buscó los papeles en una caja de zapatos. Estaban las doce patentes de los últimos años, los recibos de aseo y una carta de 2006 donde se le autorizaba a ocupar dos metros de vereda.\n\nEl reclamo se presentó en abril. La municipalidad respondió que la patente no implicaba autorización para ocupar la vereda.\n\n—Ese es el punto —dijo el sobrino—. Si la patente no autorizaba, entonces durante veinticuatro años cobraron impuesto por algo que no estaba permitido.\n\nEl caso se resolvió en julio. El kiosco no se cerró, pero doña Carmen tuvo que moverlo un metro y medio hacia adentro y pagar una nueva autorización de uso.\n\nCuando firmó el documento, preguntó si podía quedarse con una copia.\n\n—Para la caja —dijo.\n\nAhí está ahora, junto a las patentes, la carta de 2006 y los recibos de aseo. Doña Carmen dice que la caja de zapatos no es un archivo, que es una costumbre. Pero cuando le preguntaron cómo había probado veinticuatro años de historia, la respuesta fue la caja."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-321",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué exigía el correo del municipio?",
+      "alternativas": [
+        "Que doña Carmen pagara una multa por no tener patente.",
+        "Que el kiosco cerrara en treinta días porque ocupaba parte de la vereda.",
+        "Que doña Carmen cambiara el tipo de productos que vendía.",
+        "Que se demoliera el edificio de la esquina."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que la resolución citaba una ordenanza de 2018 sobre uso del espacio público y que el kiosco debía cerrar en treinta días. Doña Carmen sí tenía patente."
+    },
+    {
+      "codigo": "8B-LEC-NAR-322",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de un argumento",
+      "enunciado": "¿Cuál fue el argumento principal del sobrino?",
+      "alternativas": [
+        "Que la ordenanza de 2018 no existía.",
+        "Que si la municipalidad renovó la patente durante años, sabía que el kiosco existía.",
+        "Que doña Carmen era una vecina conocida por todos.",
+        "Que la carta de 2006 había expirado."
+      ],
+      "clave": "B",
+      "justificacion": "El sobrino sostiene que la patente se renovó todos los años, y que renovarla significa que la municipalidad sabía del kiosco. Luego lleva el razonamiento más lejos: si la patente no autorizaba la ocupación, cobraron impuesto por algo no permitido."
+    },
+    {
+      "codigo": "8B-LEC-NAR-323",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un documento",
+      "enunciado": "¿Qué aportó la carta de 2006 encontrada en la caja de zapatos?",
+      "alternativas": [
+        "Un permiso que autorizaba ocupar dos metros de vereda.",
+        "El comprobante de pago de la última patente.",
+        "La dirección anterior del kiosco.",
+        "El nombre del funcionario que firmó la resolución."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que en la caja estaban las doce patentes, los recibos de aseo y una carta de 2006 donde se le autorizaba a ocupar dos metros de vereda."
+    },
+    {
+      "codigo": "8B-LEC-NAR-324",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del desenlace",
+      "enunciado": "El caso no terminó con el cierre del kiosco, pero tampoco con una victoria completa. ¿Qué muestra ese resultado?",
+      "alternativas": [
+        "Que el reclamo sirvió para que la municipalidad reconociera la situación y regularizara el uso del espacio.",
+        "Que doña Carmen perdió todo lo que había construido.",
+        "Que la ordenanza de 2018 fue derogada.",
+        "Que la municipalidad nunca respondió al reclamo."
+      ],
+      "clave": "A",
+      "justificacion": "Doña Carmen conserva el kiosco, aunque debe moverlo un metro y medio y pagar una autorización nueva. El resultado es una regularización, no un cierre ni una anulación total de la norma."
+    },
+    {
+      "codigo": "8B-LEC-NAR-325",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué valor tienen los papeles guardados en la caja, según el cuento?",
+      "alternativas": [
+        "Ninguno, porque solo sirven como recuerdo.",
+        "Permiten probar hechos del pasado cuando alguien los pone en duda.",
+        "Sirven solo para pagar menos impuestos.",
+        "Solo tienen valor si un abogado los revisa."
+      ],
+      "clave": "B",
+      "justificacion": "El cuento muestra que los papeles guardados por costumbre permitieron acreditar veinticuatro años de historia y sostener el reclamo. Doña Carmen no los guardaba como archivo, y fueron justamente lo que respondió cuando le preguntaron cómo había probado esos años."
+    }
+  ]
+}

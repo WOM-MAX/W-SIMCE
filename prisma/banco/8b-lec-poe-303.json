@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-POE-303",
+    "titulo": "La casa que se cae",
+    "tipo": "poético",
+    "palabras": 116,
+    "cuerpo": "La casa de mi infancia\ntiene una grieta en el living\nque empezó siendo una línea\ny hoy parece un río seco.\n\nMi madre la tapa con un cuadro\ny dice que no es nada.\nMi padre mide la grieta cada año\ncon una regla de metal\ny anota el número en un papel.\n\nLos dos saben lo mismo.\nSolo que uno reza\ncon un cuadro en la pared\ny el otro con una regla.\n\nYo miré la grieta de cerca:\nno es un río, no es una herida.\nEs la casa diciendo,\ncon mucha calma, que se mueve."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-POE-311",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué hacen la madre y el padre con la grieta?",
+      "alternativas": [
+        "Los dos la tapan con un cuadro.",
+        "La madre la tapa con un cuadro y el padre la mide cada año con una regla.",
+        "Los dos llaman a un maestro para repararla.",
+        "El padre la repara y la madre la pinta."
+      ],
+      "clave": "B",
+      "justificacion": "El poema muestra dos reacciones distintas: la madre tapa la grieta con un cuadro y el padre la mide cada año con una regla de metal y anota el número en un papel."
+    },
+    {
+      "codigo": "8B-LEC-POE-312",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "sentido de una comparación",
+      "enunciado": "El poema dice que la grieta «hoy parece un río seco». ¿Qué sugiere esa imagen?",
+      "alternativas": [
+        "Que la grieta se llena de agua cuando llueve.",
+        "Que la grieta se ha extendido y tiene un recorrido largo y ramificado.",
+        "Que la grieta está en el piso del living.",
+        "Que la casa fue construida cerca de un río."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación aparece junto al dato de que empezó siendo una línea. Un río seco conserva la forma de su cauce, lo que sugiere que la grieta creció y se ramificó."
+    },
+    {
+      "codigo": "8B-LEC-POE-313",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una estrofa",
+      "enunciado": "¿Qué quiere decir que los dos «saben lo mismo», pero uno reza con un cuadro y el otro con una regla?",
+      "alternativas": [
+        "Que los dos tienen creencias religiosas distintas.",
+        "Que los dos conocen el problema y lo enfrentan de maneras opuestas: ocultarlo o medirlo.",
+        "Que los dos creen que la grieta no tiene importancia.",
+        "Que los dos esperan que la casa se arregle sola."
+      ],
+      "clave": "B",
+      "justificacion": "La estrofa plantea que ambos comprenden la situación. La diferencia está en el modo de responder: la madre oculta la grieta con un cuadro y el padre la registra con una regla."
+    },
+    {
+      "codigo": "8B-LEC-POE-314",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del desenlace",
+      "enunciado": "Al final el hablante dice que la grieta «es la casa diciendo, con mucha calma, que se mueve». ¿Qué posición toma frente a sus padres?",
+      "alternativas": [
+        "Coincide con su madre: no hay que darle importancia.",
+        "Coincide con su padre: hay que medir el problema todos los años.",
+        "Interpreta la grieta como una señal real, sin ocultarla ni reducirla solo a una medida.",
+        "Cree que la casa está a punto de derrumbarse."
+      ],
+      "clave": "C",
+      "justificacion": "El hablante rechaza las dos metáforas de sus padres, el río y la herida, y propone otra: la casa comunica algo con calma. Reconoce el movimiento real sin el dramatismo del derrumbe ni la evasión del cuadro."
+    },
+    {
+      "codigo": "8B-LEC-POE-315",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué tema construye el poema a partir de la grieta?",
+      "alternativas": [
+        "La necesidad de reparar las casas antiguas.",
+        "Las distintas maneras de responder ante un problema que todos conocen.",
+        "El paso del tiempo en una familia numerosa.",
+        "La importancia de la ingeniería en la construcción."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dedica sus estrofas centrales a contraponer dos formas de enfrentar el mismo hecho: ocultarlo o medirlo. La grieta es el objeto que revela esas dos posturas y la del propio hablante."
+    }
+  ]
+}
