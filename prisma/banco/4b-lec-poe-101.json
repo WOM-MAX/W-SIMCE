@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-POE-101",
+    "titulo": "La casa de la lluvia",
+    "tipo": "poético",
+    "palabras": 96,
+    "cuerpo": "La lluvia golpea la teja,\nla teja se ríe bajito,\nel canal corre al jardín\ny el jardín se pone fresquito.\n\nLas hormigas hacen fila\ndebajo de la maceta,\ny el caracol de la esquina\nse pone su casa a cuestas.\n\nCuando la lluvia se va,\nel patio queda brillante:\nun espejo desarmado\nque se rompe si lo pisas.\n\nY en el charco de la esquina\nse hunde un pedazo de cielo,\ncon una nube pequeña\nque se va cuando la llamo."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-POE-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el poema, ¿qué hace el caracol cuando llueve?",
+      "alternativas": [
+        "Se esconde debajo de la maceta.",
+        "Se pone su casa a cuestas.",
+        "Hace fila con las hormigas.",
+        "Se hunde en el charco de la esquina."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice: «el caracol de la esquina se pone su casa a cuestas». Los que se esconden debajo de la maceta son las hormigas, y el charco aparece en la última estrofa."
+    },
+    {
+      "codigo": "4B-LEC-POE-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "lenguaje figurado",
+      "enunciado": "El poema dice que «la teja se ríe bajito». ¿A qué se refiere esa expresión?",
+      "alternativas": [
+        "A que la teja tiene una grieta por donde entra luz.",
+        "Al sonido suave que hace el agua al golpear la teja.",
+        "A que la casa está habitada por alguien que ríe.",
+        "Al ruido fuerte del trueno durante la lluvia."
+      ],
+      "clave": "B",
+      "justificacion": "La risa bajita es una forma de describir un sonido: el golpe suave y repetido del agua en la teja. El poema no habla de truenos ni de personas dentro de la casa."
+    },
+    {
+      "codigo": "4B-LEC-POE-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "imágenes del poema",
+      "enunciado": "¿Por qué el poema llama al patio mojado «un espejo desarmado»?",
+      "alternativas": [
+        "Porque el agua refleja lo que hay arriba y se rompe cuando alguien la pisa.",
+        "Porque el patio está hecho de vidrios pequeños.",
+        "Porque la lluvia deja el piso muy resbaladizo.",
+        "Porque en el patio se ve el reflejo del sol solamente."
+      ],
+      "clave": "A",
+      "justificacion": "Un espejo refleja, y el agua del patio hace lo mismo con el cielo y las nubes. Se dice desarmado porque al pisarlo se rompe en ondas, igual que un espejo que se quiebra."
+    },
+    {
+      "codigo": "4B-LEC-POE-104",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "lenguaje figurado",
+      "enunciado": "En la última estrofa, «se hunde un pedazo de cielo» en el charco. ¿Qué se ve realmente en el charco?",
+      "alternativas": [
+        "Un trozo de cielo que cayó con la lluvia.",
+        "El reflejo del cielo y de una nube sobre el agua.",
+        "Una nube pequeña que se metió en el agua.",
+        "El fondo de la tierra que se asoma por el charco."
+      ],
+      "clave": "B",
+      "justificacion": "El charco no contiene cielo: lo refleja. El poema usa la imagen del cielo hundido para describir ese reflejo, y la nube que se va cuando la llaman confirma que se trata de lo que se ve en el agua."
+    },
+    {
+      "codigo": "4B-LEC-POE-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "efecto del lenguaje poético",
+      "enunciado": "¿Cuál de estos versos le da características de persona a algo que no lo es?",
+      "alternativas": [
+        "«el canal corre al jardín»",
+        "«las hormigas hacen fila»",
+        "«la teja se ríe bajito»",
+        "«el patio queda brillante»"
+      ],
+      "clave": "C",
+      "justificacion": "Reír es una acción de personas o de seres vivos, y la teja no ríe: solo produce un sonido. Las hormigas sí hacen fila en la realidad y el canal corre porque el agua corre, así que esos versos describen hechos, no dan vida a un objeto."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INS-101",
+    "titulo": "Germinador de porotos en tres días",
+    "tipo": "instructivo",
+    "palabras": 268,
+    "cuerpo": "Materiales: un frasco de vidrio limpio y transparente, algodón, cuatro porotos, agua y un lugar con luz.\n\n1. Humedece el algodón con un poco de agua y apriétalo con la mano para sacar el exceso. Debe quedar húmedo, no chorreando.\n\n2. Forra el interior del frasco con el algodón, dejando una capa de dos dedos de grosor.\n\n3. Coloca los cuatro porotos entre el algodón y el vidrio, separados unos de otros. No los entierres en el centro del algodón.\n\n4. Pon el frasco cerca de una ventana, donde llegue luz, pero sin sol directo.\n\n5. Revisa el frasco cada mañana. Si el algodón se siente seco, agrega dos cucharadas de agua.\n\n6. A los tres días verás salir una raíz blanca y delgada. A los cinco días aparecerá un tallo verde que busca la luz.\n\nDos advertencias. Si el algodón se seca por completo, la raíz deja de crecer y ya no se recupera. Si el algodón queda inundado, el poroto se pudre y se pone blando, porque necesita aire además de agua.\n\nLos porotos se dejan entre el algodón y el vidrio para poder ver lo que pasa adentro. Si se entierran en el centro, el algodón tapa todo y no se ve nada hasta que la planta es grande."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INS-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según las instrucciones, ¿dónde se ponen los porotos?",
+      "alternativas": [
+        "Enterrados en el centro del algodón.",
+        "Entre el algodón y el vidrio, separados unos de otros.",
+        "Directamente en el agua del frasco.",
+        "Sobre la tierra de una maceta."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 3 indica colocarlos entre el algodón y el vidrio, separados, y el último párrafo explica que no se entierran en el centro para poder ver lo que pasa adentro."
+    },
+    {
+      "codigo": "4B-LEC-INS-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "función de una instrucción",
+      "enunciado": "¿Por qué el frasco debe quedar cerca de una ventana, pero sin sol directo?",
+      "alternativas": [
+        "Porque el sol directo seca el algodón antes de que el poroto crezca.",
+        "Porque el vidrio se rompe con el calor del sol.",
+        "Porque necesita luz para crecer, pero el sol fuerte puede dañarlo.",
+        "Porque en la ventana hay más aire que en el resto de la casa."
+      ],
+      "clave": "C",
+      "justificacion": "El paso 6 dice que el tallo busca la luz, así que la luz es necesaria. La indicación de evitar el sol directo apunta a que la planta reciba luz sin el calor fuerte. El texto no menciona que el vidrio se rompa."
+    },
+    {
+      "codigo": "4B-LEC-INS-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Qué ocurre si el algodón queda inundado?",
+      "alternativas": [
+        "El poroto crece más rápido porque tiene más agua.",
+        "El poroto se pudre, porque necesita aire además de agua.",
+        "La raíz blanca aparece en un solo día.",
+        "El algodón se seca y hay que cambiarlo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo advierte: si el algodón queda inundado, el poroto se pudre porque necesita aire además de agua. Más agua no significa más crecimiento."
+    },
+    {
+      "codigo": "4B-LEC-INS-104",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "aplicar información",
+      "conocimiento": "uso de instrucciones",
+      "enunciado": "Un estudiante armó el germinador, humedeció el algodón y dejó el frasco dentro de un armario cerrado, sin luz. ¿Qué parte de las instrucciones no cumplió?",
+      "alternativas": [
+        "No cumplió el paso de colocar los porotos entre el algodón y el vidrio.",
+        "No cumplió la indicación de poner el frasco en un lugar con luz.",
+        "No cumplió la advertencia de no mojar el algodón.",
+        "No cumplió el paso de separar los porotos unos de otros."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 4 pide un lugar con luz, cerca de una ventana. Un armario cerrado no tiene luz, y el texto dice que el tallo verde busca la luz para crecer."
+    },
+    {
+      "codigo": "4B-LEC-INS-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de un procedimiento",
+      "enunciado": "Un compañero dice que basta con regar una vez, el primer día, para que el poroto crezca toda la semana. ¿Cuál es la objeción correcta según el texto?",
+      "alternativas": [
+        "Ninguna: el poroto guarda el agua que necesita para toda la semana.",
+        "Que si el algodón se seca por completo la raíz deja de crecer y ya no se recupera.",
+        "Que hay que cambiar el algodón todos los días.",
+        "Que el poroto necesita estar bajo el sol directo para aprovechar el agua."
+      ],
+      "clave": "B",
+      "justificacion": "El texto pide revisar el frasco cada mañana y reponer dos cucharadas si el algodón se siente seco. Además advierte que, si se seca por completo, la raíz deja de crecer y no se recupera, así que un solo riego no alcanza."
+    }
+  ]
+}
