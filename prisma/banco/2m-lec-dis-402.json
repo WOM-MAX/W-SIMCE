@@ -1,0 +1,83 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DIS-402",
+    "titulo": "De dónde viene la electricidad",
+    "tipo": "informativo-discontinuo",
+    "palabras": 196,
+    "cuerpo": "MATRIZ ELÉCTRICA DE UN PAÍS\nGeneración por fuente, un año\n\nFUENTE | PARTICIPACIÓN | EMISIONES POR KWH | DISPONIBILIDAD\nHidroeléctrica | 28% | Muy bajas | Varía con la lluvia\nSolar | 14% | Muy bajas | Solo de día\nEólica | 11% | Muy bajas | Varía con el viento\nCarbón | 26% | Muy altas | Constante\nGas natural | 19% | Medias | Constante\nOtros | 2% | Variables | Variable\n\nDATOS COMPLEMENTARIOS\nLa demanda máxima ocurre entre las 19:00 y las 22:00.\nLa fuente solar aporta el 14% del total anual, pero no genera en el horario de máxima demanda.\nEl carbón y el gas suman 45% y pueden regularse según la necesidad.\nEl almacenamiento en baterías cubre hoy el 1,5% de la demanda nocturna.\n\nLECTURA DE LOS DATOS\nLas fuentes variables suman 53% del total y las regulables 45%.\nSin almacenamiento suficiente, la participación de las fuentes variables está limitada por el horario en que producen."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DIS-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tabla",
+      "enunciado": "¿Cuál es la fuente que aporta el mayor porcentaje de electricidad?",
+      "alternativas": ["Hidroeléctrica", "Solar", "Carbón", "Gas natural"],
+      "clave": "A",
+      "justificacion": "La tabla asigna 28% a la hidroeléctrica, el valor más alto, seguida por el carbón con 26% y el gas natural con 19%."
+    },
+    {
+      "codigo": "2M-LEC-DIS-407",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de la tabla",
+      "enunciado": "¿Qué porcentaje suman las fuentes que emiten muy bajas cantidades por kilovatio hora?",
+      "alternativas": ["14%", "28%", "42%", "53%"],
+      "clave": "D",
+      "justificacion": "Las fuentes con emisiones muy bajas son la hidroeléctrica, la solar y la eólica: 28 + 14 + 11 = 53%. El valor 42% resulta de sumar solo solar y eólica."
+    },
+    {
+      "codigo": "2M-LEC-DIS-408",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre disponibilidad y demanda",
+      "enunciado": "¿Por qué la fuente solar no cubre la demanda máxima, aunque aporte el 14% del total anual?",
+      "alternativas": [
+        "Porque su participación es demasiado baja.",
+        "Porque no genera en el horario de máxima demanda, que ocurre entre las 19:00 y las 22:00.",
+        "Porque las emisiones de la solar son altas.",
+        "Porque la solar solo funciona en invierno."
+      ],
+      "clave": "B",
+      "justificacion": "Los datos complementarios indican que la demanda máxima ocurre entre las 19:00 y las 22:00, y que la solar no genera en ese horario. Su disponibilidad es «solo de día»."
+    },
+    {
+      "codigo": "2M-LEC-DIS-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "¿Qué muestra la lectura de los datos sobre el límite de las fuentes variables?",
+      "alternativas": [
+        "Que las fuentes variables no pueden superar el 20% de la matriz.",
+        "Que sin almacenamiento suficiente su participación está limitada por el horario en que producen.",
+        "Que las fuentes variables son más caras que el carbón.",
+        "Que el almacenamiento en baterías ya cubre toda la demanda nocturna."
+      ],
+      "clave": "B",
+      "justificacion": "La lectura de los datos lo señala expresamente, y los datos complementarios muestran que el almacenamiento cubre hoy solo el 1,5% de la demanda nocturna. La tabla no informa costos."
+    },
+    {
+      "codigo": "2M-LEC-DIS-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una política",
+      "enunciado": "Un país quiere reducir emisiones sin perder respaldo en el horario de máxima demanda. ¿Qué medida se desprende de los datos?",
+      "alternativas": [
+        "Sustituir todo el carbón por solar de inmediato.",
+        "Aumentar el almacenamiento y la participación de fuentes de bajas emisiones que puedan regularse.",
+        "Eliminar la hidroeléctrica, porque depende de la lluvia.",
+        "Aumentar el gas natural, que tiene emisiones medias."
+      ],
+      "clave": "B",
+      "justificacion": "El problema planteado tiene dos partes: emisiones y respaldo. La solar no genera en la demanda máxima y el almacenamiento cubre solo 1,5%, así que aumentar almacenamiento y fuentes regulables de bajas emisiones atiende ambas condiciones. Sustituir todo el carbón por solar dejaría sin respaldo nocturno."
+    }
+  ]
+}

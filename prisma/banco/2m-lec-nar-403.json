@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-NAR-403",
+    "titulo": "La última palabra del jurado",
+    "tipo": "narrativo",
+    "palabras": 344,
+    "cuerpo": "El concurso de cuentos del liceo tenía un jurado de tres personas y un premio único: la publicación del texto en la revista de fin de año. En la final quedaron dos cuentos, y la discusión duró dos horas.\n\nEl cuento de Teresa contaba la historia de una mujer que esperaba un tren que ya no pasaba por ese pueblo. Estaba bien escrito, con frases cortas y un final abierto.\n\nEl cuento de Bruno era sobre un niño que aprendía a nadar en un río contaminado. Tenía errores de puntuación y un párrafo que no cerraba, pero la escena central era la mejor de todo el concurso.\n\nLos tres jurados votaron distinto. La profesora de lenguaje prefería a Teresa. El profesor de historia prefería a Bruno. La tercera, una escritora invitada, no había votado todavía.\n\n—Podemos premiar el texto más limpio o el más necesario —dijo—. Pero antes quiero preguntar algo. ¿Alguno de los dos autores puede corregir su cuento esta semana?\n\n—Teresa puede —dijo la profesora—. Lo escribió hace un mes.\n\n—¿Y Bruno?\n\n—Lo entregó el viernes —dijo el profesor de historia—. Lo hizo en tres días.\n\nLa escritora pidió ver la libreta de Bruno. Tenía dos versiones del mismo párrafo y una tercera tachada, con una nota al lado: «mejor no explicar tanto».\n\n—Este chico sabe corregir —dijo—. Lo que le falta es tiempo y un lector que le marque las comas. El cuento de Teresa ya está corregido, está terminado. El de Bruno está en el medio, y eso es exactamente lo que un concurso escolar debería premiar: el trabajo, no el resultado alcanzado.\n\nVotaron. Ganó Bruno por dos votos contra uno.\n\nEl día de la premiación, Bruno leyó su cuento en voz alta con las correcciones que la escritora le había marcado en el margen. El párrafo que no cerraba ya cerraba.\n\nTeresa, en la segunda fila, aplaudió primero."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-NAR-411",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál era el premio del concurso?",
+      "alternativas": [
+        "Un dinero en efectivo para el ganador.",
+        "La publicación del cuento en la revista de fin de año.",
+        "Una beca para estudiar escritura.",
+        "Un libro firmado por la escritora invitada."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el premio era único: la publicación del texto en la revista de fin de año."
+    },
+    {
+      "codigo": "2M-LEC-NAR-412",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una pregunta",
+      "enunciado": "¿Qué buscaba la escritora con la pregunta sobre si los autores podían corregir su cuento?",
+      "alternativas": [
+        "Saber cuánto tiempo habían tenido para escribir, y con eso evaluar el trabajo y no solo el resultado.",
+        "Comprobar que Bruno había copiado a Teresa.",
+        "Decidir si el premio se entregaba esa misma semana.",
+        "Conocer el método de enseñanza de los otros jurados."
+      ],
+      "clave": "A",
+      "justificacion": "La pregunta conduce a los datos de plazo y de versión: Teresa escribió hace un mes y Bruno en tres días. Con esa información la escritora argumenta que el de Bruno está en proceso y que el concurso debería premiar el trabajo."
+    },
+    {
+      "codigo": "2M-LEC-NAR-413",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "uso de una evidencia",
+      "enunciado": "¿Qué muestra la libreta de Bruno con las tres versiones del párrafo?",
+      "alternativas": [
+        "Que no sabía qué escribir y copió de otros textos.",
+        "Que ya estaba corrigiendo por su cuenta, con criterio propio.",
+        "Que escribía siempre el mismo párrafo.",
+        "Que había recibido ayuda de la profesora de lenguaje."
+      ],
+      "clave": "B",
+      "justificacion": "La libreta tenía dos versiones y una tercera tachada con la nota «mejor no explicar tanto». La escritora concluye que el chico sabe corregir, y lo que le falta es tiempo y un lector."
+    },
+    {
+      "codigo": "2M-LEC-NAR-414",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un criterio",
+      "enunciado": "¿Cuál es el argumento central de la escritora para votar por Bruno?",
+      "alternativas": [
+        "Que el cuento de Bruno es más divertido que el de Teresa.",
+        "Que el cuento de Teresa ya está terminado y el de Bruno está en proceso, y un concurso escolar debe premiar el trabajo.",
+        "Que el cuento de Bruno trata un tema más importante.",
+        "Que Teresa ya había ganado otros concursos."
+      ],
+      "clave": "B",
+      "justificacion": "La escritora contrapone los dos estados de los textos: el de Teresa ya está corregido y terminado, y el de Bruno está en el medio. De ahí concluye que el concurso debería premiar el trabajo y no el resultado alcanzado."
+    },
+    {
+      "codigo": "2M-LEC-NAR-415",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "El texto termina con que Teresa aplaude primero. ¿Qué muestra ese detalle?",
+      "alternativas": [
+        "Que acepta el resultado sin resquemor, aunque ella haya perdido el premio.",
+        "Que no entendió la decisión del jurado.",
+        "Que esperaba perder desde el comienzo.",
+        "Que quería que Bruno le devolviera el favor."
+      ],
+      "clave": "A",
+      "justificacion": "Teresa pierde por un voto y, en la premiación, aplaude antes que nadie. El detalle cierra el relato mostrando su reacción ante una decisión que la desfavorece, sin indicar que la comparta en todos sus términos."
+    }
+  ]
+}

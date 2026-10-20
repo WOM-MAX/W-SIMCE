@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-ARG-402",
+    "titulo": "La tarea que nadie lee",
+    "tipo": "argumentativo",
+    "palabras": 356,
+    "cuerpo": "[Columna de opinión en la revista del liceo. La firma un estudiante de cuarto medio.]\n\nCada semana entrego entre cuatro y seis trabajos escritos. La mayoría vuelve con una nota y una marca en el margen. Casi ninguno vuelve con un comentario sobre lo que escribí: si el argumento se sostenía, si la evidencia alcanzaba, si la conclusión se seguía de las premisas.\n\nNo escribo esto para quejarme de mis profesores. Escribo porque un trabajo escrito sin comentarios enseña muy poco. La nota indica cuánto me acerqué a lo esperado, pero no me dice qué hacer distinto la próxima vez. Es como corregir un tiro al arco diciéndole al jugador el marcador final.\n\nHay una objeción razonable: corregir con comentarios toma mucho más tiempo que poner una nota, y los profesores tienen decenas de estudiantes. La reconozco y no la descarto. Sin embargo, la objeción habla de costo, no de valor pedagógico. Si el objetivo de la tarea es que yo aprenda a escribir, el comentario no es un lujo: es el instrumento principal.\n\nExiste una solución intermedia que no requiere comentar todo. Se puede comentar en profundidad un trabajo por unidad y usar el resto para práctica con revisión rápida. También sirve pedir una reescritura de un párrafo, en lugar de una corrección completa. Incluso un comentario de dos líneas sobre el argumento central cambia la utilidad de la entrega.\n\nHay un punto que suele quedar fuera de la discusión: la cantidad de trabajos. Si entrego seis textos por semana, ninguno de los dos lados puede leerlos con atención. Reducir la cantidad y exigir profundidad no es bajar el nivel. Es hacer posible el trabajo que hoy se simula.\n\nMi conclusión es modesta y concreta: menos entregas, un comentario escrito por unidad y una reescritura obligatoria por semestre. No sé si eso mejora las notas. Creo que mejora la escritura, que es lo que la asignatura dice que quiere lograr."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-ARG-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es la queja central del autor?",
+      "alternativas": [
+        "Que las notas son demasiado bajas.",
+        "Que los trabajos vuelven con nota y sin comentarios sobre lo escrito.",
+        "Que los profesores no preparan las clases.",
+        "Que hay demasiadas evaluaciones orales."
+      ],
+      "clave": "B",
+      "justificacion": "El autor dice que la mayoría de los trabajos vuelve con una nota y una marca en el margen, y casi ninguno con un comentario sobre si el argumento se sostenía o si la evidencia alcanzaba."
+    },
+    {
+      "codigo": "2M-LEC-ARG-407",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una analogía",
+      "enunciado": "¿Para qué el autor compara la corrección con «decirle al jugador el marcador final»?",
+      "alternativas": [
+        "Para señalar que el deporte y la escritura se parecen.",
+        "Para mostrar que informar el resultado sin explicar cómo mejorar enseña poco.",
+        "Para indicar que las notas deberían eliminarse.",
+        "Para criticar el tiempo que los profesores dedican al deporte."
+      ],
+      "clave": "B",
+      "justificacion": "La analogía aparece después de decir que la nota no indica qué hacer distinto. El marcador informa el resultado, igual que la nota, sin entregar la información necesaria para mejorar la ejecución."
+    },
+    {
+      "codigo": "2M-LEC-ARG-408",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "refutación de una objeción",
+      "enunciado": "¿Cómo responde el autor a la objeción de que comentar toma demasiado tiempo?",
+      "alternativas": [
+        "Niega que corregir con comentarios tome tiempo.",
+        "Reconoce la objeción, pero señala que habla de costo y no de valor pedagógico.",
+        "Sostiene que los profesores deberían trabajar más horas.",
+        "Afirma que la objeción es falsa porque los profesores tienen tiempo."
+      ],
+      "clave": "B",
+      "justificacion": "El autor dice expresamente que reconoce la objeción y no la descarta, y luego precisa que la objeción habla de costo, no de valor pedagógico. El argumento no niega el hecho, desplaza el eje de la discusión."
+    },
+    {
+      "codigo": "2M-LEC-ARG-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre cantidad y calidad",
+      "enunciado": "¿Qué argumento agrega el autor sobre la cantidad de trabajos?",
+      "alternativas": [
+        "Que seis textos por semana son pocos para aprender a escribir.",
+        "Que con tantas entregas ninguno de los dos lados puede leer con atención, así que reducir la cantidad hace posible el trabajo real.",
+        "Que los trabajos semanales deberían eliminarse por completo.",
+        "Que la cantidad no influye en el aprendizaje."
+      ],
+      "clave": "B",
+      "justificacion": "El autor sostiene que si entrega seis textos por semana, ninguno de los dos lados puede leerlos con atención, y que reducir la cantidad no es bajar el nivel sino hacer posible el trabajo que hoy se simula."
+    },
+    {
+      "codigo": "2M-LEC-ARG-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una propuesta",
+      "enunciado": "¿Qué caracteriza la propuesta final del autor?",
+      "alternativas": [
+        "Es amplia y exige una reforma completa del sistema de evaluación.",
+        "Es acotada y concreta: menos entregas, un comentario por unidad y una reescritura por semestre.",
+        "Consiste en eliminar las notas de todas las asignaturas.",
+        "Depende de que los profesores trabajen sin remuneración adicional."
+      ],
+      "clave": "B",
+      "justificacion": "El autor califica su conclusión como modesta y concreta, y enumera tres medidas específicas. Además aclara que no sabe si mejorará las notas, pero cree que mejora la escritura, que es el objetivo declarado de la asignatura."
+    }
+  ]
+}
