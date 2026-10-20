@@ -1,0 +1,78 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DIS-203",
+    "titulo": "Cuánta agua gastamos en casa",
+    "tipo": "informativo-discontinuo",
+    "palabras": 168,
+    "cuerpo": "CONSUMO DE AGUA EN UNA CASA DE CUATRO PERSONAS\nPromedio mensual: 24 000 litros\n\nUSO | LITROS AL MES | PORCENTAJE\nDucha | 8 400 | 35%\nInodoro | 6 000 | 25%\nLavado de ropa | 4 800 | 20%\nCocina y beber | 2 400 | 10%\nLavado de loza | 1 680 | 7%\nOtros | 720 | 3%\n\nCOMPARACIÓN\nUna ducha de 5 minutos gasta unos 50 litros.\nUna ducha de 15 minutos gasta unos 150 litros.\nCerrar la llave mientras se lavan los dientes ahorra 6 litros cada vez.\n\nRECOMENDACIONES\nReparar las llaves que gotean: una gota por segundo pierde 30 litros al día.\nUsar la lavadora con carga completa.\nRegar el jardín temprano o al atardecer, cuando se evapora menos."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DIS-211",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tabla",
+      "enunciado": "¿Qué uso consume más agua en la casa del estudio?",
+      "alternativas": ["El inodoro", "La ducha", "El lavado de ropa", "La cocina y el beber"],
+      "clave": "B",
+      "justificacion": "La tabla muestra que la ducha consume 8 400 litros al mes, el porcentaje más alto con 35%. El inodoro es el segundo, con 6 000 litros y 25%."
+    },
+    {
+      "codigo": "6B-LEC-DIS-212",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de una tabla",
+      "enunciado": "Una persona pasa de ducharse 15 minutos a ducharse 5 minutos. ¿Cuántos litros ahorra en cada ducha?",
+      "alternativas": ["50 litros", "100 litros", "150 litros", "200 litros"],
+      "clave": "B",
+      "justificacion": "Según la comparación, una ducha de 15 minutos gasta 150 litros y una de 5 minutos gasta 50 litros. El ahorro es 150 − 50 = 100 litros por ducha."
+    },
+    {
+      "codigo": "6B-LEC-DIS-213",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre datos",
+      "enunciado": "Una llave gotea una gota por segundo. ¿Cuánta agua se pierde en una semana, según las recomendaciones?",
+      "alternativas": ["30 litros", "210 litros", "600 litros", "900 litros"],
+      "clave": "B",
+      "justificacion": "El dato indica 30 litros al día. En una semana, 30 × 7 = 210 litros. El valor 30 corresponde a un solo día."
+    },
+    {
+      "codigo": "6B-LEC-DIS-214",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de consumos",
+      "enunciado": "El lavado de ropa consume 4 800 litros y la cocina 2 400. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "El lavado de ropa consume el doble que la cocina.",
+        "El lavado de ropa consume la mitad que la cocina.",
+        "Los dos consumen lo mismo.",
+        "La cocina consume el triple que el lavado de ropa."
+      ],
+      "clave": "A",
+      "justificacion": "Al comparar 4 800 con 2 400 se ve que el primero es exactamente el doble: 2 400 × 2 = 4 800. Los porcentajes de la tabla, 20% y 10%, confirman esa proporción."
+    },
+    {
+      "codigo": "6B-LEC-DIS-215",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una medida",
+      "enunciado": "Una familia quiere reducir su consumo y solo puede cambiar un hábito. Según la tabla, ¿qué medida tiene más efecto?",
+      "alternativas": [
+        "Cerrar la llave al lavarse los dientes.",
+        "Reducir el tiempo de ducha, porque es el uso que más litros consume.",
+        "Regar el jardín al atardecer.",
+        "Lavar la loza con menos agua."
+      ],
+      "clave": "B",
+      "justificacion": "La ducha es el consumo mayor, con 8 400 litros al mes. Reducirla de 15 a 5 minutos ahorra 100 litros por ducha, un efecto mucho mayor que los 6 litros de cerrar la llave al lavarse los dientes. Regar al atardecer reduce la evaporación, pero no aparece como un uso de peso en la tabla."
+    }
+  ]
+}

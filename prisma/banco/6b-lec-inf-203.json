@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-203",
+    "titulo": "Cómo se forma un fósil",
+    "tipo": "informativo",
+    "palabras": 326,
+    "cuerpo": "Un fósil es la huella o el resto de un ser vivo que se conservó durante miles o millones de años. No todos los animales llegan a fosilizarse: la mayoría desaparece por completo, y por eso cada fósil es un hallazgo poco frecuente.\n\nEl proceso más común empieza cuando un animal muere en un lugar donde puede quedar cubierto rápido, por ejemplo en el fondo de un lago o en una zona de arena y barro. Si queda expuesto al aire, los carroñeros y los microorganismos lo descomponen en poco tiempo.\n\nUna vez enterrado, el cuerpo se cubre de sedimento. Con los siglos, capas nuevas se acumulan encima y el peso de esas capas comprime el sedimento hasta convertirlo en roca.\n\nMientras eso ocurre, el agua que circula entre los granos de roca arrastra minerales. Esos minerales se depositan en los huesos y ocupan el lugar de las sustancias originales. El hueso se transforma en piedra, pero conserva su forma. Ese es el paso que se llama mineralización.\n\nAlgunos fósiles no son huesos, sino impresiones. Una hoja que cae en el barro blando deja su forma marcada; el barro se endurece y la huella queda impresa en la roca, aunque la hoja haya desaparecido. Lo mismo ocurre con las pisadas.\n\nEncontrar un fósil requiere que la roca vuelva a quedar expuesta. La erosión del viento y del agua desgasta las capas y deja asomar los restos. Por eso muchos hallazgos ocurren en zonas áridas, donde la roca está descubierta y la vegetación no cubre el terreno.\n\nPor eso un fósil no informa solo sobre el animal: también informa sobre el lugar. Un pez fosilizado en la montaña indica que ese terreno estuvo bajo el agua en algún momento del pasado."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-211",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué ocurre en la mineralización?",
+      "alternativas": [
+        "Los huesos se descomponen por completo.",
+        "Los minerales del agua se depositan en los huesos y ocupan el lugar de las sustancias originales.",
+        "El sedimento se convierte en hueso.",
+        "El animal se congela bajo la tierra."
+      ],
+      "clave": "B",
+      "justificacion": "El texto describe la mineralización como el paso en que el agua arrastra minerales, estos se depositan en los huesos y ocupan el lugar de las sustancias originales, conservando la forma."
+    },
+    {
+      "codigo": "6B-LEC-INF-212",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "condición de un proceso",
+      "enunciado": "¿Por qué el texto dice que el animal debe quedar cubierto rápido?",
+      "alternativas": [
+        "Porque así el fósil es más grande.",
+        "Porque si queda expuesto al aire, los carroñeros y los microorganismos lo descomponen en poco tiempo.",
+        "Porque el sedimento necesita oxígeno para endurecerse.",
+        "Porque de lo contrario el animal se convierte en roca antes de morir."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala expresamente que si el cuerpo queda expuesto al aire se descompone en poco tiempo. El entierro rápido lo protege de ese proceso y permite que empiece la fosilización."
+    },
+    {
+      "codigo": "6B-LEC-INF-213",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre tipos de fósiles",
+      "enunciado": "¿Qué diferencia hay entre un fósil de hueso y una impresión de hoja?",
+      "alternativas": [
+        "La impresión se forma solo bajo el agua y el hueso solo en tierra.",
+        "En el hueso queda el material transformado en piedra; en la impresión queda marcada la forma, aunque la hoja desapareció.",
+        "La impresión tarda menos de un año en formarse.",
+        "El fósil de hueso no necesita minerales."
+      ],
+      "clave": "B",
+      "justificacion": "El texto distingue los dos casos: en el hueso los minerales ocupan el lugar de las sustancias originales, mientras que en la impresión la hoja deja su forma marcada en el barro y después desaparece."
+    },
+    {
+      "codigo": "6B-LEC-INF-214",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "inferencia a partir de un dato",
+      "enunciado": "¿Por qué muchos fósiles se encuentran en zonas áridas?",
+      "alternativas": [
+        "Porque en esas zonas los animales mueren con más frecuencia.",
+        "Porque la erosión deja la roca descubierta y la falta de vegetación permite verla.",
+        "Porque el calor acelera la mineralización.",
+        "Porque en las zonas húmedas no existen fósiles."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que la erosión del viento y del agua desgasta las capas y deja asomar los restos, y que en zonas áridas la roca está descubierta y sin vegetación que cubra el terreno."
+    },
+    {
+      "codigo": "6B-LEC-INF-215",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "uso de un fósil como evidencia",
+      "enunciado": "Se encuentra un pez fosilizado en una montaña. ¿Qué conclusión permite sacar, según el texto?",
+      "alternativas": [
+        "Que los peces pueden subir a las montañas.",
+        "Que ese terreno estuvo bajo el agua en algún momento del pasado.",
+        "Que el fósil fue llevado allí por personas.",
+        "Que la montaña se formó después de que el pez muriera en tierra."
+      ],
+      "clave": "B",
+      "justificacion": "El último párrafo es explícito: un pez fosilizado en la montaña indica que ese terreno estuvo bajo el agua en algún momento del pasado. El fósil informa también sobre el lugar, no solo sobre el animal."
+    }
+  ]
+}

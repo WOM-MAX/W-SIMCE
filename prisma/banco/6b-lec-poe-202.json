@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-POE-202",
+    "titulo": "El río de mi abuela",
+    "tipo": "poético",
+    "palabras": 112,
+    "cuerpo": "Mi abuela dice que el río\nera más ancho antes,\nque cruzaba cuatro potreros\ncon el agua hasta el costado.\n\nYo lo miro desde el puente:\nes una línea delgada,\nun hilo que se equivoca\nentre las piedras gastadas.\n\nElla habla de peces grandes,\nde botes, de un sauce blanco.\nYo veo latas oxidadas\ny un plástico enganchado.\n\nPero cuando cae la tarde\ny el cielo se pone rojo,\nel río copia ese fuego\ny hay un instante en que es ancho.\n\nEntonces mi abuela calla.\nLos dos miramos lo mismo:\nellos ven lo que recuerdan,\nyo veo lo que imagino."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-POE-206",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según la abuela, ¿cómo era el río antes?",
+      "alternativas": [
+        "Más angosto y con menos piedras.",
+        "Más ancho, y cruzaba cuatro potreros.",
+        "Sin peces y con botes oxidados.",
+        "Igual que ahora, pero más limpio."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que la abuela afirma que el río era más ancho antes y que cruzaba cuatro potreros con el agua hasta el costado."
+    },
+    {
+      "codigo": "6B-LEC-POE-207",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "lenguaje figurado",
+      "enunciado": "El hablante describe el río como «un hilo que se equivoca entre las piedras gastadas». ¿Qué imagen entrega?",
+      "alternativas": [
+        "Un río caudaloso que arrastra piedras.",
+        "Un curso de agua delgado que se pierde entre las piedras.",
+        "Un río que cambia de dirección por las piedras.",
+        "Un río seco, sin ninguna agua."
+      ],
+      "clave": "B",
+      "justificacion": "La imagen del hilo sugiere algo muy delgado, y el verbo equivocarse entre las piedras muestra que el agua se pierde en ese recorrido. El hablante acaba de decir que el río es una línea delgada."
+    },
+    {
+      "codigo": "6B-LEC-POE-208",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "contraste de miradas",
+      "enunciado": "¿Qué contraste establece el poema entre lo que ve la abuela y lo que ve el hablante?",
+      "alternativas": [
+        "La abuela recuerda peces y botes; el hablante ve latas oxidadas y plástico.",
+        "La abuela ve basura; el hablante ve peces.",
+        "Los dos ven exactamente lo mismo.",
+        "La abuela ve el río de noche y el hablante de día."
+      ],
+      "clave": "A",
+      "justificacion": "El poema contrapone las dos miradas en estrofas consecutivas: la abuela habla de peces grandes, botes y un sauce blanco, mientras el hablante ve latas oxidadas y un plástico enganchado."
+    },
+    {
+      "codigo": "6B-LEC-POE-209",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de un momento del poema",
+      "enunciado": "¿Por qué el río «es ancho» cuando el cielo se pone rojo?",
+      "alternativas": [
+        "Porque el río crece con la lluvia de la tarde.",
+        "Porque el reflejo del cielo ocupa toda la superficie del agua.",
+        "Porque la abuela vuelve a ver el agua de antes.",
+        "Porque al atardecer el río cambia de cauce."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que el río copia ese fuego del cielo. El agua no aumenta: la superficie reflejada se llena de color, y esa imagen hace que en ese instante parezca ancha."
+    },
+    {
+      "codigo": "6B-LEC-POE-210",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "efecto del cierre",
+      "enunciado": "El poema termina: «ellos ven lo que recuerdan, yo veo lo que imagino». ¿Qué logra ese cierre?",
+      "alternativas": [
+        "Resuelve el desacuerdo: la abuela tiene razón y el hablante se equivoca.",
+        "Reconoce dos formas de mirar el mismo río, sin declarar que una sea falsa.",
+        "Indica que el hablante no conoce el río.",
+        "Confirma que el río se secó definitivamente."
+      ],
+      "clave": "B",
+      "justificacion": "El cierre opone memoria e imaginación sin descalificar ninguna. La abuela ve el río que recuerda y el hablante el que imagina, y ninguno de los dos declara falsa la mirada del otro."
+    }
+  ]
+}

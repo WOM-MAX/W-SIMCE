@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-203",
+    "titulo": "Tres minutos al aire",
+    "tipo": "narrativo",
+    "palabras": 316,
+    "cuerpo": "La radio del colegio transmitía los viernes a la hora del recreo. Los estudiantes se turnaban para leer las noticias de la semana, y ese viernes le tocaba a Emilia.\n\nHabía preparado el texto durante tres días. Lo había leído en voz alta en su pieza, frente al espejo, con un cronómetro. Tres minutos exactos. Se lo sabía de memoria.\n\nA las once y media entró a la cabina con la hoja en la mano. El micrófono estaba sobre la mesa, negro y redondo, con una luz roja que se encendía al abrir la señal. Cuando la luz se encendió, Emilia miró la hoja y no pudo leer una sola palabra.\n\nLas letras estaban ahí, pero le parecían dibujos. Sintió la boca seca. Del otro lado del vidrio, el profesor de música la miraba y levantaba los pulgares.\n\nPasaron tres segundos. A Emilia le parecieron tres minutos.\n\nEntonces hizo algo que no había planeado. Dejó la hoja sobre la mesa y dijo:\n\n—Buenos días. Esta semana pasó algo que no está en mi papel, y quiero contarlo.\n\nY contó lo que había visto el lunes: el curso de primero plantando seis árboles en el patio chico, con palas prestadas de la bodega y un balde que se les volcó dos veces. Contó el nombre del encargado de la bodega, que había abierto a las siete de la mañana, y contó que faltaba una pala.\n\nCuando terminó, el profesor de música le hizo una seña con la mano: había hablado cuatro minutos y medio.\n\n—Te pasaste —le dijo después, riéndose—. Pero escucharon todos.\n\nEmilia guardó la hoja en la mochila, sin arrugarla. Al viernes siguiente volvió a la cabina con el texto preparado y con la hoja nueva: esta vez, además de las noticias, llevaba dos cosas sueltas por si acaso."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-211",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué le ocurrió a Emilia cuando se encendió la luz roja del micrófono?",
+      "alternativas": [
+        "Se le cayó la hoja al suelo.",
+        "Miró la hoja y no pudo leer ninguna palabra.",
+        "Se quedó sin voz por completo.",
+        "El profesor le pidió que saliera de la cabina."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que las letras estaban ahí, pero le parecían dibujos, y que sintió la boca seca. La hoja no se cayó y el profesor, al contrario, la animaba desde el otro lado del vidrio."
+    },
+    {
+      "codigo": "6B-LEC-NAR-212",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "contraste de tiempos",
+      "enunciado": "El texto dice que pasaron tres segundos y a Emilia le parecieron tres minutos. ¿Qué muestra esa comparación?",
+      "alternativas": [
+        "Que el reloj de la cabina estaba malo.",
+        "Que la tensión del momento hizo que el tiempo se sintiera más largo.",
+        "Que Emilia habló muy despacio al comenzar.",
+        "Que el profesor tardó en hacerle señas."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación describe una sensación, no un hecho del reloj: en una situación de nervios, una pausa breve se percibe como larga. El resto del texto confirma que Emilia estaba nerviosa y con la boca seca."
+    },
+    {
+      "codigo": "6B-LEC-NAR-213",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivo de una decisión",
+      "enunciado": "¿Por qué Emilia deja la hoja sobre la mesa y empieza a hablar de otro tema?",
+      "alternativas": [
+        "Porque el texto preparado le pareció aburrido.",
+        "Porque al no poder leer, recurre a algo que sí recuerda bien y puede contar con sus palabras.",
+        "Porque quería hablar más tiempo que los demás.",
+        "Porque el profesor le pidió cambiar el tema."
+      ],
+      "clave": "B",
+      "justificacion": "Emilia no puede leer el texto que había memorizado, pero sí recuerda con detalle lo que vio el lunes. Al dejar la hoja recurre a ese recuerdo, que puede contar sin leer."
+    },
+    {
+      "codigo": "6B-LEC-NAR-214",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido del desenlace",
+      "enunciado": "Al final, Emilia vuelve con el texto preparado y además «dos cosas sueltas por si acaso». ¿Qué aprendizaje muestra esa decisión?",
+      "alternativas": [
+        "Que decidió no volver a preparar textos.",
+        "Que mantiene la preparación y agrega un respaldo para no quedar sin recursos otra vez.",
+        "Que ya no confía en el profesor de música.",
+        "Que prefiere improvisar siempre en vez de leer."
+      ],
+      "clave": "B",
+      "justificacion": "Emilia no abandona la preparación: vuelve con el texto. Lo que agrega es un plan alternativo, después de comprobar que ante el bloqueo necesitaba otro recurso disponible."
+    },
+    {
+      "codigo": "6B-LEC-NAR-215",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "El profesor le dice «te pasaste, pero escucharon todos». ¿Qué valora con esa frase?",
+      "alternativas": [
+        "Que respetar el tiempo es lo único que importa en la radio.",
+        "Que se excedió en el tiempo, pero logró que la audiencia se interesara.",
+        "Que el texto preparado era mejor que lo que improvisó.",
+        "Que la radio del colegio necesita más tiempo al aire."
+      ],
+      "clave": "B",
+      "justificacion": "La frase tiene dos partes: el reproche por el tiempo y el reconocimiento del efecto. El profesor no dice que el texto preparado fuera mejor, y el texto completo muestra que la audiencia respondió a lo que Emilia contó sin leer."
+    }
+  ]
+}
