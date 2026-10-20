@@ -133,3 +133,23 @@ con IA, que no se veían en las capturas.
   abierta en el Chrome depurado.
 - Redactar el plano de comportamiento pantalla por pantalla.
 - Decidir qué funciones del original no se replican, con el coste a la vista.
+
+## 8. Autenticación y navegación observadas (sesión real)
+
+Observado con REA sobre una sesión autenticada en `/panel`.
+
+**Autenticación:** el token JWT viaja en la propia URL (`/panel?access_token=...`) y
+además queda en `localStorage` bajo `token` y `base44_access_token`. Los demás
+nombres de almacenamiento son de la plataforma (`base44_app_id`,
+`base44_functions_version`, `base44_analytics_session_id`, `base44_from_url`).
+
+Consecuencia de seguridad del original: un enlace con `access_token` en la barra de
+direcciones se filtra por historial, marcadores, registros de proxy y capturas de
+pantalla. Nuestro diseño usa cookie `httpOnly` firmada, que no aparece en la URL ni
+es legible por JavaScript.
+
+**Navegación lateral observada en el panel:** `/panel`, `/progreso`, `/amigos`,
+`/mi-plan`, `/perfil`, `/chat`, además de las entradas ya conocidas del menú.
+
+**Recursos:** un CSS de 146 KB y un JS de 1.946 KB, más tres scripts en línea, uno
+de ellos con el token.
