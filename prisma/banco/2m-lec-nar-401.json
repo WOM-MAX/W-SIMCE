@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-NAR-401",
+    "titulo": "La traducción",
+    "tipo": "narrativo",
+    "palabras": 356,
+    "cuerpo": "A los sesenta y ocho años, Elisa aprendió a leer en otro alfabeto. No era una lengua extranjera exactamente: era el idioma de sus padres, que había escuchado toda la infancia y nunca había escrito.\n\nEmpezó por curiosidad y siguió por otra razón. En el cajón del comedor había un cuaderno con tapas de hule, escrito por su madre en los años sesenta. Elisa lo había guardado sin abrirlo durante veinte años, porque no podía leerlo.\n\nLa profesora del taller de la biblioteca se llamaba Nadia y tenía veintitrés años. En la tercera clase le preguntó a Elisa qué quería leer.\n\n—Un cuaderno —contestó—. Es de mi mamá.\n\n—Traigalo.\n\nElisa lo trajo la semana siguiente. Nadia lo abrió con cuidado, pasó las primeras páginas y se quedó callada un momento.\n\n—No son recetas —dijo—. Son cartas.\n\nEran cartas que la madre había escrito a una hermana que se había quedado en el país de origen. Nunca las envió. Estaban fechadas a lo largo de siete años, y en cada una había una frase que se repetía con variaciones: «cuando vengan los papeles», «cuando arreglen esto», «el año que viene, si Dios quiere».\n\nElisa tardó tres meses en leer el cuaderno completo. No lo leyó en orden: empezó por la última página y volvió hacia atrás. Dijo que así era más fácil, porque sabía cómo terminaba.\n\nCuando llegó a la primera carta, encontró una frase que no esperaba. Su madre escribía que tenía miedo de que los hijos crecieran sin saber de dónde venían.\n\nElisa cerró el cuaderno y lo dejó sobre la mesa un buen rato. Después llamó a Nadia y le preguntó si podía seguir yendo al taller aunque ya hubiera terminado de leer.\n\n—Claro —dijo Nadia—. ¿Qué quiere leer ahora?\n\n—Lo que escriba yo —contestó Elisa—. Pero eso va a demorar más."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-NAR-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué contenía el cuaderno que Elisa guardó durante veinte años?",
+      "alternativas": [
+        "Recetas de cocina de su madre.",
+        "Cartas que su madre escribió a una hermana y nunca envió.",
+        "El registro de los trámites de la familia.",
+        "Las clases del taller de la biblioteca."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que en el cuaderno había cartas que la madre había escrito a una hermana que se quedó en el país de origen, y que nunca las envió."
+    },
+    {
+      "codigo": "2M-LEC-NAR-402",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una frase repetida",
+      "enunciado": "¿Qué revela la frase que se repite en las cartas: «cuando vengan los papeles», «cuando arreglen esto», «el año que viene»?",
+      "alternativas": [
+        "Que la madre escribía siempre lo mismo por falta de temas.",
+        "Que la familia vivía en una espera prolongada, postergando un futuro que no llegaba.",
+        "Que la madre no sabía fechar sus cartas.",
+        "Que las cartas eran borradores que pensaba corregir."
+      ],
+      "clave": "B",
+      "justificacion": "Las tres variantes comparten la estructura de una espera que se aplaza. El texto indica que las cartas abarcan siete años, lo que refuerza la idea de una postergación continua."
+    },
+    {
+      "codigo": "2M-LEC-NAR-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una decisión",
+      "enunciado": "¿Por qué Elisa lee el cuaderno empezando por la última página?",
+      "alternativas": [
+        "Porque las primeras páginas estaban deterioradas.",
+        "Porque así sabía cómo terminaba, y eso le facilitaba la lectura.",
+        "Porque Nadia le indicó ese orden.",
+        "Porque las cartas estaban escritas en desorden."
+      ],
+      "clave": "B",
+      "justificacion": "El propio texto lo explica: dijo que así era más fácil, porque sabía cómo terminaba. No hay indicios de deterioro ni de una indicación de la profesora."
+    },
+    {
+      "codigo": "2M-LEC-NAR-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de un hallazgo",
+      "enunciado": "En la primera carta Elisa encuentra que su madre tenía miedo de que los hijos crecieran «sin saber de dónde venían». ¿Qué relación tiene ese miedo con la historia?",
+      "alternativas": [
+        "Se cumple del todo, porque Elisa nunca conoció el país de origen.",
+        "Explica por qué Elisa aprendió el alfabeto de sus padres y por qué decide empezar a escribir.",
+        "Contradice lo que Elisa había supuesto sobre su madre.",
+        "Muestra que la madre no quería que sus hijos aprendieran el idioma."
+      ],
+      "clave": "B",
+      "justificacion": "Elisa aprendió a leer el alfabeto de sus padres para acceder al cuaderno, y al cerrarlo decide escribir lo propio. El miedo de la madre queda conectado con esa decisión final, que responde a la preocupación expresada en la carta."
+    },
+    {
+      "codigo": "2M-LEC-NAR-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "Cuando Nadia le pregunta qué quiere leer ahora, Elisa responde: «Lo que escriba yo. Pero eso va a demorar más». ¿Qué muestra esa respuesta?",
+      "alternativas": [
+        "Que Elisa considera que escribir es más difícil que leer y no se siente capaz.",
+        "Que Elisa asume su propia historia como tarea, reconociendo que llevará tiempo.",
+        "Que Elisa quiere dejar el taller de la biblioteca.",
+        "Que Elisa prefiere seguir leyendo los textos de otras personas."
+      ],
+      "clave": "B",
+      "justificacion": "Elisa acaba de terminar el cuaderno de su madre y pide seguir yendo al taller, pero para escribir lo propio. La demora que anticipa no es una negativa: es el reconocimiento del trabajo que implica."
+    }
+  ]
+}

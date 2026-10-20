@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-POE-401",
+    "titulo": "Inventario",
+    "tipo": "poético",
+    "palabras": 118,
+    "cuerpo": "Dejo dos sillas cojas,\nuna mesa que se tambalea,\nun espejo con la esquina rota\ny un reloj que se adelanta.\n\nDejo los libros que no leí,\nordenados por el lomo,\ncomo si alguien fuera a venir\nsiglos después a preguntar.\n\nDejo una puerta que no cierra\ny una llave que no sé de qué es.\nDejo el ruido del pasillo\ny la costumbre de esperar ese ruido.\n\nNo dejo nada que valga dinero.\nDejo un inventario de lo que fui\nsin firmar, sin fecha,\npara que nadie tenga que devolverlo."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-POE-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué objetos menciona el hablante en la primera estrofa?",
+      "alternativas": [
+        "Dos sillas cojas, una mesa que se tambalea, un espejo roto y un reloj que se adelanta.",
+        "Un cuaderno, una lámpara y una cama.",
+        "Los libros que no leyó y una llave.",
+        "Una puerta y el ruido del pasillo."
+      ],
+      "clave": "A",
+      "justificacion": "La primera estrofa enumera dos sillas cojas, una mesa que se tambalea, un espejo con la esquina rota y un reloj que se adelanta. Los otros elementos aparecen en estrofas siguientes."
+    },
+    {
+      "codigo": "2M-LEC-POE-402",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "efecto de una comparación",
+      "enunciado": "Los libros están ordenados «como si alguien fuera a venir siglos después a preguntar». ¿Qué sugiere esa imagen?",
+      "alternativas": [
+        "Que los libros son muy antiguos.",
+        "Que quien se va deja las cosas preparadas para ser explicadas, aunque nadie vaya a preguntar.",
+        "Que alguien llegará efectivamente a buscar los libros.",
+        "Que los libros no tienen ningún valor."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación describe una preparación anticipada: ordenar por si alguien pregunta. El poema no afirma que esa visita ocurrirá, y el cierre insiste en dejar el inventario «para que nadie tenga que devolverlo»."
+    },
+    {
+      "codigo": "2M-LEC-POE-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "selección de lo inventariado",
+      "enunciado": "¿Qué clase de cosas incluye el inventario del hablante?",
+      "alternativas": [
+        "Objetos de valor económico.",
+        "Objetos deteriorados y costumbres, es decir, lo que no tiene precio de venta.",
+        "Solo recuerdos de otras personas.",
+        "Documentos y papeles importantes."
+      ],
+      "clave": "B",
+      "justificacion": "El poema enumera sillas cojas, una mesa que se tambalea, un espejo roto, un reloj que se adelanta y la costumbre de esperar el ruido del pasillo, y luego declara que no deja nada que valga dinero."
+    },
+    {
+      "codigo": "2M-LEC-POE-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "¿Por qué el inventario queda «sin firmar, sin fecha»?",
+      "alternativas": [
+        "Porque el hablante olvidó firmarlo.",
+        "Porque no busca reclamar autoría ni que alguien le rinda cuentas por lo dejado.",
+        "Porque el poema fue escrito por otra persona.",
+        "Porque el inventario es un documento oficial incompleto."
+      ],
+      "clave": "B",
+      "justificacion": "La última línea explica la intención: «para que nadie tenga que devolverlo». Sin firma ni fecha, el inventario no exige nada a quien lo encuentre, y el hablante evita que lo dejado se convierta en una deuda."
+    },
+    {
+      "codigo": "2M-LEC-POE-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué tono predomina en el poema?",
+      "alternativas": [
+        "La queja por la pérdida de bienes materiales.",
+        "La despedida serena, sin dramatismo ni reclamo.",
+        "La celebración de lo que se conserva.",
+        "La burla hacia quien queda en el lugar."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante enumera lo que deja sin lamentarse, reconoce que nada vale dinero y cierra liberando a los demás de cualquier devolución. No hay queja, celebración ni burla en el tono."
+    }
+  ]
+}

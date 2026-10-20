@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-ARG-401",
+    "titulo": "El voto a los dieciséis",
+    "tipo": "argumentativo",
+    "palabras": 372,
+    "cuerpo": "[Texto de opinión publicado en el diario del colegio. La autora es estudiante de segundo medio.]\n\nCuando se discute si los jóvenes de dieciséis años deberían votar, suele aparecer el mismo argumento: no están preparados. Quien lo sostiene rara vez explica en qué consiste esa preparación ni por qué se exige a esa edad y no a los dieciocho.\n\nConviene revisar el argumento con cuidado. A los dieciséis años una persona puede trabajar y pagar impuestos, decide sobre su propia atención médica en varios países y responde penalmente por sus actos. Si se le reconocen esas responsabilidades, resulta difícil sostener que la única capacidad que le falta es justamente la de elegir representantes.\n\nEl segundo argumento es la supuesta falta de información. Es cierto que muchos jóvenes no siguen el detalle de los programas. Sin embargo, la misma objeción podría aplicarse a una parte de la población adulta que vota, y a nadie se le ocurre excluirla. Si el criterio fuera el nivel de información, habría que evaluarlo en todos, no solo en los más jóvenes.\n\nHay razones a favor que no dependen de la capacidad individual. Una persona que empieza a votar a los dieciséis tiene más probabilidad de consolidar el hábito antes de mudarse, cambiar de trabajo o dejar la casa familiar. Los estudios sobre participación muestran que quien vota en las primeras elecciones en que puede hacerlo tiende a seguir votando después.\n\nDebo reconocer el argumento más fuerte en contra. Los dieciséis años son también la edad en que la influencia del entorno cercano pesa más, y una parte de los votos jóvenes podría reproducir la preferencia familiar más que una decisión propia. La objeción es seria y no la descarto.\n\nAun así, la conclusión que propongo es modesta: no se trata de exigir el voto a los dieciséis, sino de permitirlo. Quien se sienta preparado podrá ejercer ese derecho; quien no, podrá esperar. Negar la posibilidad a todos por precaución parece una respuesta desproporcionada frente a un problema que se corrige con educación cívica y con información accesible, no con la prohibición."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-ARG-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es la tesis que sostiene la autora?",
+      "alternativas": [
+        "Que el voto debería ser obligatorio a los dieciséis años.",
+        "Que se debería permitir votar a los dieciséis, sin obligar a hacerlo.",
+        "Que la edad para votar debería subir a los veintiún años.",
+        "Que los jóvenes de dieciséis no están preparados para votar."
+      ],
+      "clave": "B",
+      "justificacion": "La autora lo aclara en el penúltimo párrafo: no se trata de exigir el voto a los dieciséis, sino de permitirlo. Quien se sienta preparado podrá ejercer ese derecho."
+    },
+    {
+      "codigo": "2M-LEC-ARG-402",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "estructura del texto argumentativo",
+      "enunciado": "¿Qué hace la autora en el quinto párrafo, que empieza con «Debo reconocer el argumento más fuerte en contra»?",
+      "alternativas": [
+        "Abandona su tesis y adopta la posición contraria.",
+        "Reconoce una objeción seria a su propia tesis y la incorpora a la discusión.",
+        "Repite el argumento que refutó al comienzo.",
+        "Cambia de tema para cerrar el texto."
+      ],
+      "clave": "B",
+      "justificacion": "La autora presenta la objeción y dice que no la descarta. Ese movimiento refuerza la argumentación porque muestra que consideró la posición contraria antes de mantener su tesis con una formulación más acotada."
+    },
+    {
+      "codigo": "2M-LEC-ARG-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "refutación por analogía",
+      "enunciado": "¿Cómo responde la autora al argumento de la falta de información de los jóvenes?",
+      "alternativas": [
+        "Acepta que los jóvenes están menos informados y propone esperar.",
+        "Señala que la misma objeción podría aplicarse a parte de la población adulta que vota.",
+        "Afirma que los jóvenes se informan más que los adultos.",
+        "Sostiene que la información no es necesaria para votar."
+      ],
+      "clave": "B",
+      "justificacion": "La autora reconoce que muchos jóvenes no siguen el detalle de los programas, y responde que la objeción también alcanzaría a una parte de los adultos que votan. Si el criterio fuera el nivel de información, habría que evaluarlo en todos."
+    },
+    {
+      "codigo": "2M-LEC-ARG-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un argumento",
+      "enunciado": "El primer argumento que la autora refuta es que los jóvenes «no están preparados». ¿Qué debilidad le atribuye?",
+      "alternativas": [
+        "Que es falso que los jóvenes tengan responsabilidades.",
+        "Que rara vez se explica en qué consiste esa preparación ni por qué se exige a esa edad.",
+        "Que solo lo sostienen personas mayores de dieciocho años.",
+        "Que contradice los estudios sobre participación electoral."
+      ],
+      "clave": "B",
+      "justificacion": "La autora señala que quien sostiene ese argumento rara vez explica en qué consiste la preparación ni por qué se exige a los dieciséis y no a los dieciocho. Luego agrega que esa edad ya conlleva otras responsabilidades."
+    },
+    {
+      "codigo": "2M-LEC-ARG-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de la estrategia argumentativa",
+      "enunciado": "¿Por qué la autora califica su propia conclusión como «modesta»?",
+      "alternativas": [
+        "Porque considera que su propuesta tiene poca importancia.",
+        "Porque propone habilitar un derecho y no imponer una obligación, lo que la hace más acotada y defendible.",
+        "Porque no está segura de lo que afirma.",
+        "Porque reconoce que la objeción contraria es más fuerte que su tesis."
+      ],
+      "clave": "B",
+      "justificacion": "La modestia se refiere al alcance de la propuesta: permitir en lugar de exigir. Esa formulación responde a la objeción sobre la influencia del entorno sin abandonar la tesis principal, y la autora la presenta como una conclusión acotada, no como duda."
+    }
+  ]
+}

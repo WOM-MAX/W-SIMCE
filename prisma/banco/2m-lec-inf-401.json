@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-401",
+    "titulo": "Por qué las encuestas se equivocan",
+    "tipo": "informativo",
+    "palabras": 368,
+    "cuerpo": "Una encuesta puede anunciar un resultado y, semanas después, el resultado real ser distinto. Cuando eso ocurre no siempre hay un error de cálculo: muchas veces el problema está en cómo se eligió a quienes respondieron o en cómo se formuló la pregunta.\n\nEl primer problema es la muestra. Para que una encuesta represente a una población, los encuestados deben haber sido elegidos de modo que todos tengan probabilidad conocida de ser seleccionados. Si se encuesta solo a quienes pasan por una calle céntrica, quedan fuera quienes no circulan por ahí; si se hace por teléfono fijo, quedan fuera los hogares que solo tienen celular. En ambos casos la muestra es sesgada, y el sesgo no se corrige aumentando la cantidad de encuestados: una muestra grande y mal elegida sigue siendo mala.\n\nEl segundo problema es la formulación. La misma pregunta con dos redacciones distintas produce respuestas distintas. Una encuesta que pregunta si se está «a favor de permitir» algo suele obtener más apoyo que otra que pregunta si se está «en contra de prohibir» lo mismo, aunque el contenido sea idéntico. También influye el orden de las alternativas y el hecho de ofrecer o no una opción intermedia.\n\nEl tercer problema es la falta de respuesta. Algunos grupos son más difíciles de contactar o más reacios a contestar. Si ese grupo tiene opiniones distintas al resto, el resultado se inclina sin que nadie lo note.\n\nHay un cuarto problema, más sutil: la diferencia entre lo que la gente dice y lo que hace. Un estudio puede mostrar que la mayoría declara estar dispuesta a pagar más por un producto sostenible, y las ventas de ese producto no acompañar esa declaración.\n\nNada de esto significa que las encuestas no sirvan. Significa que un porcentaje aislado informa poco. Para interpretarlo hay que saber a quién se preguntó, cómo se preguntó, cuántos no respondieron y qué margen de error tiene la estimación."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué caracteriza a una muestra sesgada?",
+      "alternativas": [
+        "Que tiene pocos encuestados.",
+        "Que algunos grupos de la población quedan excluidos de la selección.",
+        "Que los encuestados mienten al responder.",
+        "Que el margen de error no se informa."
+      ],
+      "clave": "B",
+      "justificacion": "El texto da dos ejemplos de exclusión: encuestar solo en una calle céntrica deja fuera a quienes no circulan por ahí, y hacerlo por teléfono fijo deja fuera a los hogares que solo tienen celular."
+    },
+    {
+      "codigo": "2M-LEC-INF-402",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "relación entre tamaño y sesgo",
+      "enunciado": "El texto afirma que el sesgo no se corrige aumentando la cantidad de encuestados. ¿Qué implica esa afirmación?",
+      "alternativas": [
+        "Que las encuestas con muchos participantes siempre son mejores.",
+        "Que una muestra grande pero mal elegida sigue siendo una mala muestra.",
+        "Que la cantidad de encuestados no influye en ningún caso.",
+        "Que conviene encuestar a menos personas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice literalmente: una muestra grande y mal elegida sigue siendo mala. El problema es el modo de selección, no el volumen."
+    },
+    {
+      "codigo": "2M-LEC-INF-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "efecto de la formulación",
+      "enunciado": "¿Por qué preguntar si se está «a favor de permitir» algo puede dar más apoyo que preguntar si se está «en contra de prohibir» lo mismo?",
+      "alternativas": [
+        "Porque la segunda pregunta es más larga.",
+        "Porque la redacción orienta la respuesta, aunque el contenido sea idéntico.",
+        "Porque la gente no entiende la palabra prohibir.",
+        "Porque las dos preguntas no significan lo mismo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto presenta ese ejemplo como prueba de que la formulación influye, y aclara que el contenido de las dos preguntas es el mismo. El efecto proviene de la redacción, no de la longitud ni del significado."
+    },
+    {
+      "codigo": "2M-LEC-INF-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "falta de respuesta",
+      "enunciado": "¿Por qué la falta de respuesta puede inclinar un resultado, incluso sin mala intención de nadie?",
+      "alternativas": [
+        "Porque algunos grupos son más difíciles de contactar o más reacios a contestar, y si opinan distinto el resultado se inclina.",
+        "Porque los que no responden cuentan como respuestas negativas.",
+        "Porque la encuesta pierde validez estadística al tener menos casos.",
+        "Porque quien no responde suele equivocarse al leer."
+      ],
+      "clave": "A",
+      "justificacion": "El texto explica que ciertos grupos son más difíciles de contactar o más reacios, y que si ese grupo tiene opiniones distintas al resto el resultado se inclina sin que nadie lo note."
+    },
+    {
+      "codigo": "2M-LEC-INF-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Una noticia informa que «el 70% apoya la medida» sin ningún otro dato. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el porcentaje es falso porque las encuestas nunca aciertan.",
+        "Que un porcentaje aislado informa poco: falta saber a quién se preguntó, cómo y cuántos no respondieron.",
+        "Que el 70% es una cifra demasiado alta para ser real.",
+        "Que las encuestas solo sirven si las hace el gobierno."
+      ],
+      "clave": "B",
+      "justificacion": "El cierre del texto sostiene que un porcentaje aislado informa poco y enumera lo que hace falta para interpretarlo: a quién se preguntó, cómo, cuántos no respondieron y qué margen de error tiene. El texto no afirma que las encuestas no sirvan."
+    }
+  ]
+}
