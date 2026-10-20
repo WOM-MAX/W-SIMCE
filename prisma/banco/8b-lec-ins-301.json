@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INS-301",
+    "titulo": "Cómo preparar un herbario escolar",
+    "tipo": "instructivo",
+    "palabras": 306,
+    "cuerpo": "Un herbario es una colección de plantas secas y prensadas, ordenadas y rotuladas. Sirve para estudiar las especies de un lugar y para comparar ejemplares recolectados en distintas fechas.\n\nMATERIALES\nDos tablas de madera del mismo tamaño, papel de diario, cartón corrugado, cordel o prensa, hojas de papel blanco grueso, etiquetas y lápiz.\n\nRECOLECCIÓN\n1. Elige plantas completas y en buen estado. Si la planta es grande, toma una rama con hojas, flores y frutos.\n2. Recolecta en lo posible dos ejemplares de la misma planta: uno se guarda como respaldo.\n3. Anota en el momento y en el lugar el nombre del sitio, la fecha y el tipo de suelo. Si no lo anotas ahí, después no lo recuerdas.\n4. No recolectes en parques nacionales ni en terrenos privados sin autorización.\n\nPRENSADO\n5. Extiende el ejemplar sobre una hoja de diario, con las hojas planas y al menos una flor visible.\n6. Cubre con otra hoja de diario y coloca cartón corrugado entre un ejemplar y otro.\n7. Cierra las tablas y aprieta con el cordel. El secado demora entre una y tres semanas según la humedad.\n8. Cambia el diario cada dos días los primeros días. Si el papel queda húmedo, la planta se enmohece.\n\nMONTAJE\n9. Pega el ejemplar seco en una hoja blanca con tiras de papel engomado, no con cinta sobre la planta.\n10. Rótula en la esquina inferior: nombre de la planta si lo conoces, lugar, fecha y nombre de quien la recolectó.\n11. Guarda las hojas en una carpeta, en un lugar seco y sin sol directo.\n\nPOR QUÉ SE HACE ASÍ\nUn ejemplar mal prensado pierde las flores y no se puede identificar. Un ejemplar sin fecha ni lugar pierde casi todo su valor para el estudio, porque no se puede comparar con otros."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INS-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué el instructivo pide anotar el lugar, la fecha y el tipo de suelo en el momento de recolectar?",
+      "alternativas": [
+        "Porque las etiquetas se pierden en el camino.",
+        "Porque después no se recuerda esa información.",
+        "Porque el papel de diario la necesita para secar.",
+        "Porque la planta cambia de nombre con el tiempo."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 3 dice: «Si no lo anotas ahí, después no lo recuerdas». El resto del instructivo insiste en que un ejemplar sin fecha ni lugar pierde su valor para el estudio."
+    },
+    {
+      "codigo": "8B-LEC-INS-302",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una precaución",
+      "enunciado": "¿Para qué se cambia el diario cada dos días al comienzo del secado?",
+      "alternativas": [
+        "Para que la planta conserve el color.",
+        "Para evitar que el papel húmedo haga que la planta se enmohezca.",
+        "Para que el ejemplar se seque más rápido al sol.",
+        "Para que las hojas no se peguen entre sí."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 8 explica que si el papel queda húmedo la planta se enmohece. El cambio de diario cumple esa función y no se relaciona con el color ni con el sol, que además el instructivo pide evitar."
+    },
+    {
+      "codigo": "8B-LEC-INS-303",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre pasos y finalidad",
+      "enunciado": "¿Por qué se pide tomar dos ejemplares de la misma planta?",
+      "alternativas": [
+        "Porque uno se usa para prensar y otro para estudiar en el momento.",
+        "Porque uno queda como respaldo en caso de que el otro se deteriore.",
+        "Porque cada ejemplar se pega en una hoja distinta y ocupa más espacio.",
+        "Porque las plantas pequeñas se recolectan de a dos."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 2 señala que uno se guarda como respaldo. El instructivo no menciona estudiar la planta en el momento ni exige dos ejemplares por razones de tamaño."
+    },
+    {
+      "codigo": "8B-LEC-INS-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "consecuencia de un error",
+      "enunciado": "Un estudiante pega el ejemplar con cinta adhesiva sobre la planta y no anota la fecha. ¿Qué problema tendrá su herbario, según el cierre del texto?",
+      "alternativas": [
+        "Ninguno, porque lo importante es que la planta esté pegada.",
+        "Perderá la posibilidad de identificar el ejemplar y de compararlo con otros.",
+        "La planta se secará demasiado rápido.",
+        "Las hojas se romperán al abrir la carpeta."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 9 pide tiras de papel engomado y no cinta sobre la planta, y el cierre advierte que un ejemplar mal prensado pierde las flores y no se puede identificar, y que sin fecha ni lugar no se puede comparar con otros."
+    },
+    {
+      "codigo": "8B-LEC-INS-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un procedimiento",
+      "enunciado": "Un curso quiere recolectar plantas en un parque nacional para su herbario. ¿Qué corresponde según el instructivo?",
+      "alternativas": [
+        "Recolectar solo dos ejemplares de cada especie.",
+        "No recolectar, porque se requiere autorización que el curso no tiene.",
+        "Recolectar solo plantas pequeñas.",
+        "Recolectar y anotar el sitio, porque así queda registrado."
+      ],
+      "clave": "B",
+      "justificacion": "El paso 4 prohíbe recolectar en parques nacionales o terrenos privados sin autorización. Anotar el sitio no reemplaza la autorización, y la cantidad de ejemplares es un criterio distinto."
+    }
+  ]
+}

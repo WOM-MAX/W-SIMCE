@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-POE-301",
+    "titulo": "El taller de las seis",
+    "tipo": "poético",
+    "palabras": 118,
+    "cuerpo": "A las seis de la mañana\nse abre el taller de la esquina.\nNo hay letrero, hay una puerta\ny un banco en la vereda.\n\nAdentro huele a madera\nrecién cortada y a lija.\nEl hombre que trabaja ahí\nno habla mientras mide y corta.\n\nLe he visto hacer una silla\nen tres días, sin apuro,\ncon las manos que parecen\ntener memoria del oficio.\n\nYo paso por la vereda\ntodos los días, de ida,\ny nunca entro. Pero miro,\ny a veces me quedo un rato.\n\nUn día me dijo: «Pase».\nNo dije nada. Entré.\nY desde entonces sé\nque una silla pesa menos\ncuando uno sabe cómo está hecha."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-POE-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cómo se reconoce el taller en la calle, según el poema?",
+      "alternativas": [
+        "Por un letrero grande con el nombre del dueño.",
+        "Por una puerta y un banco en la vereda, sin letrero.",
+        "Por el olor a madera que llega hasta la esquina.",
+        "Por las sillas que se exhiben afuera."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice expresamente que no hay letrero, sino una puerta y un banco en la vereda. El olor a madera aparece adentro, no como señal desde la calle."
+    },
+    {
+      "codigo": "8B-LEC-POE-302",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "sentido de una imagen",
+      "enunciado": "¿Qué sugiere la imagen de las manos que «parecen tener memoria del oficio»?",
+      "alternativas": [
+        "Que el carpintero es una persona mayor.",
+        "Que sus manos repiten los movimientos aprendidos durante años, casi sin pensarlos.",
+        "Que recuerda a alguien que le enseñó el trabajo.",
+        "Que trabaja siempre con las mismas herramientas."
+      ],
+      "clave": "B",
+      "justificacion": "La imagen atribuye memoria a las manos, no a la cabeza. Eso describe un saber incorporado por la práctica repetida, que se ejecuta con seguridad. El poema no menciona la edad del hombre."
+    },
+    {
+      "codigo": "8B-LEC-POE-303",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de un detalle",
+      "enunciado": "¿Para qué el poema aclara que el carpintero hace una silla «en tres días, sin apuro»?",
+      "alternativas": [
+        "Para mostrar que es un trabajador lento.",
+        "Para destacar un modo de trabajar que no se rige por la prisa.",
+        "Para indicar que tiene pocos pedidos.",
+        "Para explicar por qué las sillas son caras."
+      ],
+      "clave": "B",
+      "justificacion": "La expresión «sin apuro» acompaña la descripción de las manos con memoria del oficio. El poema presenta ese ritmo como parte del trabajo bien hecho, no como una falla ni como falta de clientes."
+    },
+    {
+      "codigo": "8B-LEC-POE-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del desenlace",
+      "enunciado": "El hablante dice que ahora sabe que «una silla pesa menos cuando uno sabe cómo está hecha». ¿Qué cambió con su entrada al taller?",
+      "alternativas": [
+        "Aprendió a construir muebles por su cuenta.",
+        "Dejó de ver la silla solo como un objeto y empezó a ver el trabajo que contiene.",
+        "Compró una silla del taller.",
+        "Se hizo amigo del carpintero y dejó de pasar por la vereda."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante pasaba y miraba sin entrar. Al entrar y ver el proceso, el objeto deja de ser solo un mueble: pesa menos porque conoce el trabajo que lo hace posible. La expresión es figurada, no se refiere al peso real."
+    },
+    {
+      "codigo": "8B-LEC-POE-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué valor destaca el poema en el trabajo del carpintero?",
+      "alternativas": [
+        "La rapidez para satisfacer a los clientes.",
+        "El dominio del oficio y el ritmo propio con que se realiza.",
+        "La ausencia de normas en el taller.",
+        "La importancia de la publicidad para conseguir trabajo."
+      ],
+      "clave": "B",
+      "justificacion": "El poema insiste en el silencio al medir y cortar, en las manos con memoria y en los tres días sin apuro. Además el taller no tiene letrero, así que la publicidad no aparece como un valor."
+    }
+  ]
+}

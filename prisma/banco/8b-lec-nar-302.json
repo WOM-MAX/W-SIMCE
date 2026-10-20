@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-302",
+    "titulo": "La fotografía del club",
+    "tipo": "narrativo",
+    "palabras": 344,
+    "cuerpo": "En la sede del club había una fotografía grande, en blanco y negro, de 1958. Mostraba a once hombres con camisetas rayadas frente a un arco de madera. Debajo, una placa de bronce decía: «Primer campeonato». El equipo se llamaba Los Tigres del Sur.\n\nLa sede se vendió en 2019. Antes de entregar las llaves, los socios se repartieron lo que había. La fotografía quedó sin dueño porque nadie tenía espacio en la pared.\n\nRocío, que tenía veinticuatro años y era hija de un socio, la guardó en el maletero del auto y la olvidó ahí durante un año.\n\nUn domingo la encontró y la llevó a su departamento. Al limpiarla notó que el marco tenía un cartón detrás. Lo abrió con cuidado. Había una hoja escrita a máquina, con fecha de 1974, firmada por uno de los once.\n\nLa hoja decía que el primer campeonato se había ganado con dos jugadores que no aparecían en la foto: uno porque llegó tarde y no alcanzó a cambiarse, y otro porque había estado enfermo y entró solo el segundo tiempo de la final. El autor de la hoja pedía que se agregaran los nombres «cuando se pueda», porque los dos habían jugado igual que los demás.\n\nRocío buscó los nombres. Uno había muerto en 1990. El otro vivía en una casa de ancianos a cuarenta minutos de la ciudad.\n\nFue a verlo. El hombre, que tenía noventa y un años, miró la fotografía un largo rato y después dijo:\n\n—Nunca salí en la foto. Pero la final la jugué entera del segundo tiempo.\n\nRocío le preguntó qué quería hacer con la fotografía. Él dijo que la guardara ella.\n\nLa colgó en el living, en la pared donde se ve desde el pasillo. Debajo del marco mandó poner una placa nueva, más chica, con los once nombres de la foto y dos más:\n\n«Y dos que jugaron»."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-306",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué encontró Rocío detrás del marco de la fotografía?",
+      "alternativas": [
+        "Una placa de bronce antigua.",
+        "Una hoja escrita a máquina, fechada en 1974 y firmada por uno de los once jugadores.",
+        "Las camisetas del equipo de 1958.",
+        "Una carta de la directiva del club."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que al abrir el cartón del marco encontró una hoja escrita a máquina, con fecha de 1974, firmada por uno de los once. La placa de bronce estaba a la vista, debajo de la fotografía."
+    },
+    {
+      "codigo": "8B-LEC-NAR-307",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una petición",
+      "enunciado": "¿Qué pedía el autor de la hoja?",
+      "alternativas": [
+        "Que se volviera a tomar la fotografía con el equipo completo.",
+        "Que se agregaran los nombres de dos jugadores que no aparecían en la foto.",
+        "Que se cambiara el nombre del equipo.",
+        "Que se devolviera la fotografía a la sede del club."
+      ],
+      "clave": "B",
+      "justificacion": "La hoja pedía que se agregaran los nombres de los dos jugadores ausentes «cuando se pueda», porque habían jugado igual que los demás. Uno llegó tarde y el otro entró en el segundo tiempo."
+    },
+    {
+      "codigo": "8B-LEC-NAR-308",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un detalle",
+      "enunciado": "¿Por qué el anciano dice «nunca salí en la foto, pero la final la jugué entera del segundo tiempo»?",
+      "alternativas": [
+        "Porque quiere corregir la historia que cuenta la fotografía.",
+        "Porque se queja de que lo expulsaron del equipo.",
+        "Porque no recuerda bien el partido.",
+        "Porque cree que la fotografía es falsa."
+      ],
+      "clave": "A",
+      "justificacion": "La frase junta las dos cosas: su ausencia en la imagen y su participación real en el partido. El énfasis en que la jugó entera reafirma que su aporte existió, aunque la fotografía no lo registre."
+    },
+    {
+      "codigo": "8B-LEC-NAR-309",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una decisión final",
+      "enunciado": "¿Qué significa la placa nueva que manda poner Rocío, con la frase «Y dos que jugaron»?",
+      "alternativas": [
+        "Que la fotografía estaba incompleta y se decidió reemplazarla.",
+        "Que el reconocimiento se amplía a quienes participaron sin aparecer en la imagen.",
+        "Que se agregaron dos jugadores al equipo de 1958.",
+        "Que la placa de bronce original estaba mal escrita."
+      ],
+      "clave": "B",
+      "justificacion": "Rocío conserva los once nombres de la foto y agrega dos más con esa frase. La placa reconoce el aporte de los ausentes sin modificar la fotografía ni la historia del equipo."
+    },
+    {
+      "codigo": "8B-LEC-NAR-310",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué plantea el cuento sobre las fotografías como registro del pasado?",
+      "alternativas": [
+        "Que son la prueba más confiable de lo que ocurrió.",
+        "Que muestran solo lo que estaba frente a la cámara y pueden dejar fuera a quienes participaron.",
+        "Que pierden valor cuando cambian de dueño.",
+        "Que no deberían tener placas con nombres."
+      ],
+      "clave": "B",
+      "justificacion": "El cuento gira sobre dos jugadores que participaron y no aparecen en la imagen. La hoja escondida y la placa final corrigen lo que la fotografía, por sí sola, dejaba fuera."
+    }
+  ]
+}

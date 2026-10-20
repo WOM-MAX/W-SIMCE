@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DRA-301",
+    "titulo": "La apelación",
+    "tipo": "dramático",
+    "palabras": 320,
+    "cuerpo": "(Sala de profesores. Una mesa con tres sillas. La profesora NAVARRETE revisa una prueba. Entran RODRIGO y PAULA, con la misma prueba en la mano.)\n\nNAVARRETE: Siéntense. Me dijeron que vienen por la nota de la pregunta cuatro.\n\nRODRIGO: Sí. La respuesta correcta era la B y yo puse B. Me la marcó mala.\n\nNAVARRETE: (Revisa.) La pauta dice B. Tienes razón.\n\nPAULA: Entonces se la cambia.\n\nNAVARRETE: Se la voy a cambiar. Pero antes quiero mostrarles algo.\n\n(Voltea la prueba y muestra otra pregunta.)\n\nNAVARRETE: Aquí, en la pregunta cinco, tienes la misma respuesta correcta que en la pauta. Y en la siete también. La prueba tiene veinte preguntas.\n\nRODRIGO: ¿Y eso qué tiene que ver?\n\nNAVARRETE: Que voy a corregir la cuatro, porque el error es mío. Y que el resto de la corrección queda igual, porque también es mía y la revisé dos veces.\n\nPAULA: O sea que si le hubiera ido mal en todo, igual le cambia solo esa.\n\nNAVARRETE: Sí. Corrijo el error que cometí, no el resultado que a usted le gustaría.\n\nRODRIGO: (Se queda callado un momento.) Está bien.\n\nPAULA: No está bien. Si se equivocó una vez, pudo equivocarse en otras.\n\nNAVARRETE: Es posible. Por eso la prueba queda a la vista de ustedes durante una semana, con la pauta al lado. Si encuentran otro error, vienen con el número de la pregunta y lo revisamos igual que este.\n\nPAULA: ¿Y si encontramos cinco?\n\nNAVARRETE: Se corrigen los cinco. Uno por uno y con la pauta en la mano.\n\n(Silencio. Rodrigo toma la prueba.)\n\nRODRIGO: Profesora, ¿y la uno? La uno la puse al azar.\n\nNAVARRETE: La uno está bien. No la cambiamos por cómo la respondiste, sino por si la respuesta es correcta.\n\nRODRIGO: (Sonríe.) Entonces volvemos mañana con la pauta.\n\nNAVARRETE: Los espero."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DRA-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué Rodrigo viene a hablar con la profesora Navarrete?",
+      "alternativas": [
+        "Porque la prueba completa le pareció injusta.",
+        "Porque en la pregunta cuatro marcó la respuesta que dice la pauta y se la corrigió como mala.",
+        "Porque quiere que le suban la nota general del curso.",
+        "Porque la profesora le pidió revisar la pauta."
+      ],
+      "clave": "B",
+      "justificacion": "Rodrigo explica que la respuesta correcta era la B, que él puso B y que se la marcó mala. La profesora revisa la pauta y reconoce el error."
+    },
+    {
+      "codigo": "8B-LEC-DRA-302",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una distinción",
+      "enunciado": "Navarrete dice: «Corrijo el error que cometí, no el resultado que a usted le gustaría». ¿Qué distingue con esa frase?",
+      "alternativas": [
+        "Que solo corregirá las preguntas que Rodrigo respondió al azar.",
+        "Que corregirá los errores comprobados y no cambiará una nota porque el estudiante la considere injusta.",
+        "Que no piensa corregir nada sin autorización del director.",
+        "Que la pauta estaba bien y el estudiante se equivocó."
+      ],
+      "clave": "B",
+      "justificacion": "La frase responde a la discusión sobre la extensión de la corrección: se corrige el error puntual reconocido, con la pauta a la vista, y no una nota global. La profesora ya admitió que el error era suyo."
+    },
+    {
+      "codigo": "8B-LEC-DRA-303",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un argumento",
+      "enunciado": "Paula sostiene que si la profesora se equivocó una vez, pudo equivocarse en otras. ¿Qué le responde Navarrete?",
+      "alternativas": [
+        "Que eso es imposible porque revisó dos veces.",
+        "Que es posible, y por eso deja la prueba y la pauta a la vista para que revisen pregunta por pregunta.",
+        "Que las otras preguntas ya fueron revisadas por otro profesor.",
+        "Que Paula no tiene derecho a revisar la prueba."
+      ],
+      "clave": "B",
+      "justificacion": "Navarrete acepta la posibilidad: «es posible». Su respuesta es procedimental, no defensiva: deja la prueba con la pauta durante una semana y se compromete a revisar cada error que encuentren."
+    },
+    {
+      "codigo": "8B-LEC-DRA-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "función de una réplica final",
+      "enunciado": "Rodrigo pregunta por la pregunta uno, que respondió al azar, y la profesora dice que está bien. ¿Qué muestra ese intercambio?",
+      "alternativas": [
+        "Que la corrección depende de cómo se obtuvo la respuesta.",
+        "Que lo que se evalúa es si la respuesta es correcta, más allá de cómo llegó el estudiante a ella.",
+        "Que conviene responder al azar en las pruebas.",
+        "Que la profesora quiere compensar a Rodrigo por el error."
+      ],
+      "clave": "B",
+      "justificacion": "Navarrete lo dice expresamente: no la cambian por cómo la respondiste, sino por si la respuesta es correcta. Además, la pregunta está bien, así que no hay nada que corregir."
+    },
+    {
+      "codigo": "8B-LEC-DRA-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de la escena",
+      "enunciado": "¿Qué caracteriza la forma en que la profesora enfrenta el error?",
+      "alternativas": [
+        "Evita reconocerlo para no perder autoridad.",
+        "Lo reconoce, lo corrige y establece un procedimiento verificable para revisar el resto.",
+        "Cambia la nota completa para evitar conflictos.",
+        "Deriva el problema a otra instancia."
+      ],
+      "clave": "B",
+      "justificacion": "Navarrete admite el error en cuanto revisa la pauta, se compromete a corregirlo y ofrece un procedimiento abierto: prueba y pauta disponibles, revisión pregunta por pregunta. No cambia la nota completa ni evita el tema."
+    }
+  ]
+}
