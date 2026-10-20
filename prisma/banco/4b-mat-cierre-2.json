@@ -1,0 +1,272 @@
+{
+  "lote": "4B matemática, cierre de brecha 2",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N4B-MAT-21",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "perímetro y reparto de figuras",
+      "enunciado": "Un rectángulo mide 10 cm de largo y 4 cm de ancho. Se corta en dos rectángulos iguales con un corte paralelo al lado de 4 cm. ¿Cuál es el perímetro de cada uno de los dos rectángulos que resultan?",
+      "alternativas": ["14 cm", "18 cm", "20 cm", "28 cm"],
+      "clave": "B",
+      "justificacion": "Al cortar por la mitad del largo, cada rectángulo mide 5 cm de largo y 4 cm de ancho. Su perímetro es 5 + 4 + 5 + 4 = 18 cm."
+    },
+    {
+      "codigo": "N4B-MAT-22",
+      "eje": "geometria",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "área del triángulo",
+      "enunciado": "Dos triángulos tienen la misma base y la misma altura, pero sus lados son distintos. ¿Qué se puede afirmar sobre sus áreas?",
+      "alternativas": [
+        "Tienen la misma área, porque el área depende solo de la base y de la altura.",
+        "Tienen distinta área, porque sus lados miden distinto.",
+        "Tienen la misma área solo si además son semejantes.",
+        "No se puede saber sin conocer el largo de los otros dos lados."
+      ],
+      "clave": "A",
+      "justificacion": "El área de un triángulo es base por altura dividido en 2. Si la base y la altura coinciden, el resultado es el mismo, sin importar cómo sean los otros lados."
+    },
+    {
+      "codigo": "N4B-MAT-23",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "simetría",
+      "enunciado": "¿Cuántos ejes de simetría tiene un cuadrado?",
+      "alternativas": ["1", "2", "3", "4"],
+      "clave": "D",
+      "justificacion": "El cuadrado se puede doblar por sus dos diagonales y por las dos rectas que pasan por los puntos medios de lados opuestos. Son cuatro ejes de simetría."
+    },
+    {
+      "codigo": "N4B-MAT-24",
+      "eje": "geometria",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "área del rectángulo",
+      "enunciado": "¿Cuál es el área de un rectángulo de 8 cm de largo y 5 cm de ancho?",
+      "alternativas": ["13 cm²", "26 cm²", "40 cm²", "80 cm²"],
+      "clave": "C",
+      "justificacion": "El área de un rectángulo es largo por ancho: 8 × 5 = 40 cm²."
+    },
+    {
+      "codigo": "N4B-MAT-25",
+      "eje": "geometria",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "cuerpos geométricos",
+      "enunciado": "¿Qué cuerpo geométrico tiene 6 caras rectangulares, iguales de dos en dos?",
+      "alternativas": ["El cubo", "El prisma de base rectangular", "La pirámide de base cuadrada", "El cilindro"],
+      "clave": "B",
+      "justificacion": "El prisma de base rectangular tiene tres pares de caras rectangulares iguales. El cubo tiene las seis caras iguales, así que no es iguales de dos en dos."
+    },
+    {
+      "codigo": "N4B-MAT-26",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "volumen con cubos unitarios",
+      "enunciado": "Un prisma se armó con 18 cubos de 1 cm³ y mide 3 cm de largo, 3 cm de ancho y 2 cm de alto. ¿Cuántos cubos de 1 cm³ faltan para completar un cubo de 3 cm de arista?",
+      "alternativas": ["6", "9", "11", "18"],
+      "clave": "B",
+      "justificacion": "Un cubo de 3 cm de arista tiene 3 × 3 × 3 = 27 cubos. Como ya hay 18, faltan 27 − 18 = 9 cubos."
+    },
+    {
+      "codigo": "N4B-MAT-27",
+      "eje": "geometria",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "comparación de áreas",
+      "enunciado": "Un cuadrado de 8 cm de lado y un rectángulo de 12 cm por 5 cm. Un estudiante dice que el rectángulo tiene mayor área porque es más largo. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Es correcto, porque 12 es mayor que 8.",
+        "Es incorrecto: el cuadrado tiene 64 cm² y el rectángulo 60 cm².",
+        "Es correcto, porque el rectángulo tiene más lados distintos.",
+        "Es incorrecto: los dos tienen exactamente la misma área."
+      ],
+      "clave": "B",
+      "justificacion": "El cuadrado tiene 8 × 8 = 64 cm². El rectángulo tiene 12 × 5 = 60 cm². El cuadrado tiene mayor área, aunque su lado sea más corto que el largo del rectángulo."
+    },
+    {
+      "codigo": "N4B-MAT-28",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "secuencias con diferencias variables",
+      "enunciado": "Observa la secuencia: 100, 90, 81, 73. ¿Qué número sigue?",
+      "alternativas": ["63", "65", "66", "68"],
+      "clave": "C",
+      "justificacion": "Las diferencias entre términos son 10, 9 y 8. La siguiente diferencia debe ser 7, así que el término que sigue es 73 − 7 = 66."
+    },
+    {
+      "codigo": "N4B-MAT-29",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "modelar",
+      "conocimiento": "patrones y generalización",
+      "enunciado": "Para una feria se colocan mesas cuadradas en fila. Una mesa sola lleva 4 sillas y cada mesa que se agrega a la fila suma 2 sillas más. ¿Cuántas sillas se necesitan para 8 mesas en fila?",
+      "alternativas": ["16", "18", "20", "32"],
+      "clave": "B",
+      "justificacion": "La primera mesa usa 4 sillas y las 7 mesas siguientes suman 2 cada una: 4 + 7 × 2 = 18 sillas. También se obtiene con la regla 2n + 2 para n = 8."
+    },
+    {
+      "codigo": "N4B-MAT-30",
+      "eje": "patrones-y-algebra",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "uso de una regla algebraica",
+      "enunciado": "La regla de una secuencia es 3n + 2, donde n es la posición. Un estudiante calcula el término de la posición 4 sumando 3 + 4 + 2 y obtiene 9. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "El estudiante tiene razón, porque sumó los tres números de la regla.",
+        "El estudiante se equivocó: el término es 14, porque 3 × 4 + 2 = 14.",
+        "El estudiante se equivocó: el término es 12, porque 3 × 4 = 12.",
+        "El estudiante tiene razón, porque el resultado siempre es 9."
+      ],
+      "clave": "B",
+      "justificacion": "En la regla 3n + 2 el número 3 multiplica a la posición, no se suma. Al reemplazar n por 4 queda 3 × 4 + 2 = 12 + 2 = 14."
+    },
+    {
+      "codigo": "N4B-MAT-31",
+      "eje": "patrones-y-algebra",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "reglas de transformación",
+      "enunciado": "Una regla consiste en sumar 5 y luego multiplicar por 2. ¿Qué número se obtiene a partir de 3?",
+      "alternativas": ["11", "13", "16", "19"],
+      "clave": "C",
+      "justificacion": "Primero se suma: 3 + 5 = 8. Después se multiplica: 8 × 2 = 16."
+    },
+    {
+      "codigo": "N4B-MAT-32",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "patrones y generalización",
+      "enunciado": "Con palitos se arman cuadrados en fila. La cantidad de palitos sigue la regla 3n + 1, donde n es la cantidad de cuadrados. Si se usaron 19 palitos, ¿cuántos cuadrados se armaron?",
+      "alternativas": ["5", "6", "7", "9"],
+      "clave": "B",
+      "justificacion": "Hay que encontrar el valor de n que cumple 3n + 1 = 19. Al restar 1 queda 3n = 18, así que n = 6 cuadrados."
+    },
+    {
+      "codigo": "N4B-MAT-33",
+      "eje": "patrones-y-algebra",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "reglas de formación",
+      "enunciado": "En la secuencia 5, 10, 20, 40, ¿cuál es la regla que se cumple en todos los pasos?",
+      "alternativas": ["Sumar 5 cada vez", "Sumar 10 cada vez", "Multiplicar por 2 cada vez", "Multiplicar por 5 cada vez"],
+      "clave": "C",
+      "justificacion": "Cada término es el doble del anterior: 5 × 2 = 10, 10 × 2 = 20 y 20 × 2 = 40."
+    },
+    {
+      "codigo": "N4B-MAT-34",
+      "eje": "medicion",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "unidades de masa",
+      "enunciado": "En una balanza se pesan 2 kilogramos 500 gramos de harina y 1 kilogramo 750 gramos de azúcar. ¿Cuánto pesan juntos?",
+      "alternativas": ["3 kilogramos 250 gramos", "3 kilogramos 750 gramos", "4 kilogramos 250 gramos", "4 kilogramos 750 gramos"],
+      "clave": "C",
+      "justificacion": "Se suman los kilogramos y los gramos por separado: 500 + 750 = 1250 gramos, que es 1 kilogramo y 250 gramos. Entonces 2 + 1 + 1 = 4 kilogramos, y quedan 250 gramos."
+    },
+    {
+      "codigo": "N4B-MAT-35",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "fracciones y capacidad",
+      "enunciado": "Un envase tiene tres cuartos de litro de jugo y otro tiene medio litro. Si se juntan los dos, ¿cuánta bebida hay en total?",
+      "alternativas": ["Un litro y cuarto", "Un litro y medio", "Dos litros", "Medio litro"],
+      "clave": "A",
+      "justificacion": "Tres cuartos de litro son 750 mililitros y medio litro son 500 mililitros. Juntos suman 1250 mililitros, que es un litro y un cuarto."
+    },
+    {
+      "codigo": "N4B-MAT-36",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área y fracciones",
+      "enunciado": "Una parcela rectangular mide 20 metros de largo y 15 metros de ancho. Se siembra la mitad de su superficie. ¿Cuántos metros cuadrados se sembraron?",
+      "alternativas": ["75 m²", "150 m²", "300 m²", "350 m²"],
+      "clave": "B",
+      "justificacion": "La superficie total es 20 × 15 = 300 m². La mitad es 300 ÷ 2 = 150 m² sembrados."
+    },
+    {
+      "codigo": "N4B-MAT-37",
+      "eje": "medicion",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "equivalencia entre unidades",
+      "enunciado": "Un estudiante mide una tela y anota 250 centímetros. Otro estudiante anota 2,5 metros para la misma tela. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Las dos medidas son iguales, porque 2,5 metros equivale a 250 centímetros.",
+        "La primera es mayor, porque 250 es mayor que 2,5.",
+        "La segunda es mayor, porque los metros son más grandes que los centímetros.",
+        "No se pueden comparar porque usan unidades distintas."
+      ],
+      "clave": "A",
+      "justificacion": "Un metro tiene 100 centímetros, así que 2,5 metros son 2,5 × 100 = 250 centímetros. Las dos medidas describen el mismo largo."
+    },
+    {
+      "codigo": "N4B-MAT-38",
+      "eje": "datos-y-probabilidades",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "moda",
+      "enunciado": "Las notas de un grupo de estudiantes fueron 3, 5, 5, 7 y 5. ¿Cuál es la nota que más se repite?",
+      "alternativas": ["3", "5", "6", "7"],
+      "clave": "B",
+      "justificacion": "El valor 5 aparece tres veces, mientras que el 3 y el 7 aparecen una vez cada uno. La nota que más se repite es 5."
+    },
+    {
+      "codigo": "N4B-MAT-39",
+      "eje": "datos-y-probabilidades",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "interpretación de tablas de frecuencia",
+      "enunciado": "Una tabla muestra las preferencias de un curso: fútbol 8, básquetbol 6 y tenis 6. Un estudiante dice que el básquetbol y el tenis juntos superan al fútbol. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Es correcto, porque 6 + 6 = 12 y 12 es mayor que 8.",
+        "Es incorrecto, porque el fútbol siempre es el preferido.",
+        "Es correcto, porque el básquetbol y el tenis ocupan dos filas de la tabla.",
+        "Es incorrecto, porque 6 es menor que 8."
+      ],
+      "clave": "A",
+      "justificacion": "Entre básquetbol y tenis suman 6 + 6 = 12 estudiantes, y el fútbol tiene 8. Por lo tanto, los dos deportes juntos superan al fútbol. Que el fútbol sea el más elegido por separado no cambia la suma."
+    },
+    {
+      "codigo": "N4B-MAT-40",
+      "eje": "datos-y-probabilidades",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "interpretar",
+      "conocimiento": "pictogramas",
+      "enunciado": "En un pictograma, cada símbolo representa 4 estudiantes. Si en la fila de natación hay 5 símbolos, ¿cuántos estudiantes eligieron natación?",
+      "alternativas": ["9", "16", "20", "24"],
+      "clave": "C",
+      "justificacion": "Cada símbolo vale 4 estudiantes, así que 5 símbolos representan 5 × 4 = 20 estudiantes."
+    }
+  ]
+}
