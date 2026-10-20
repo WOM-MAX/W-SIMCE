@@ -13,9 +13,9 @@ const prisma = new PrismaClient();
 const desde = Number.parseInt(process.argv[2] ?? '0', 10) || 0;
 const cantidad = Number.parseInt(process.argv[3] ?? '8', 10) || 8;
 
-const CELDA_ANCHO = 300;
-const CELDA_ALTO = 250;
-const COLUMNAS = 2;
+const CELDA_ANCHO = 286;
+const CELDA_ALTO = 236;
+const COLUMNAS = Number.parseInt(process.argv[4] ?? '3', 10) || 3;
 const MARGEN = 10;
 
 const items = await prisma.item.findMany({
