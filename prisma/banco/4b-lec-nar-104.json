@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-104",
+    "titulo": "La caja de las vacaciones",
+    "tipo": "narrativo",
+    "palabras": 296,
+    "cuerpo": "Antes de irse de vacaciones, la abuela le dejó a Amparo una caja de zapatos cerrada con cinta y una nota: «Ábrela el primer día de lluvia».\n\nAmparo miró la caja durante dos semanas. La pesó, la sacudió, la puso sobre su escritorio. El verano seguía seco y no había ni una nube.\n\nEl 4 de febrero, por fin, el cielo se puso gris y empezó a llover. Amparo abrió la caja en el suelo de su pieza. Adentro había un cuaderno viejo, un lápiz sin punta, tres botones y una foto en blanco y negro de una niña con trenzas, parada frente a una casa de adobe.\n\nEn la primera página del cuaderno, la abuela había escrito: «Esta es la casa donde crecí. Tenía un durazno en la puerta. Cada vez que llovía, el barro se llevaba las sandalias».\n\nAmparo siguió leyendo. Las páginas contaban cosas pequeñas: el nombre del perro, la vez que se perdió el pan, el ruido del techo de zinc. Nada de eso había aparecido nunca en las historias que la abuela contaba en la mesa, donde siempre era ella la que salvaba a todos.\n\nAl final del cuaderno había una hoja en blanco con otra nota: «Ahora te toca a ti. Escribe lo que se te ocurra el día que llueva, sin revisar. Después guárdalo aquí».\n\nAmparo se quedó sentada en el suelo un rato largo, con el lápiz sin punta en la mano. Después se levantó, lo sacó punta con un cuchillo de cocina y volvió a sentarse.\n\nEscribió una sola línea, la que se le ocurrió primero: «Hoy llovió y abrí la caja»."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-116",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué había dentro de la caja que dejó la abuela?",
+      "alternativas": [
+        "Un cuaderno, un lápiz sin punta, tres botones y una foto.",
+        "Un durazno seco y una foto de la casa de adobe.",
+        "Las sandalias de barro y un pan viejo.",
+        "Una carta larga y un cuchillo de cocina."
+      ],
+      "clave": "A",
+      "justificacion": "El texto enumera el contenido: un cuaderno viejo, un lápiz sin punta, tres botones y una foto en blanco y negro. El durazno, el barro y el pan aparecen en las historias del cuaderno, no dentro de la caja."
+    },
+    {
+      "codigo": "4B-LEC-NAR-117",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una instrucción",
+      "enunciado": "¿Por qué la abuela pidió abrir la caja el primer día de lluvia?",
+      "alternativas": [
+        "Porque el cuaderno se mojaba si se abría en verano.",
+        "Porque las historias del cuaderno ocurren en días de lluvia, y la lluvia es el motivo que las conecta.",
+        "Porque quería que Amparo esperara para comprobar si era obediente.",
+        "Porque en febrero la lluvia dura poco y así la caja no se arruinaba."
+      ],
+      "clave": "B",
+      "justificacion": "El cuaderno cuenta que el barro se llevaba las sandalias cada vez que llovía, y la hoja final pide escribir «el día que llueva». La lluvia es el hilo que une la carta de la abuela con la tarea de Amparo. El texto no dice que la caja se moje."
+    },
+    {
+      "codigo": "4B-LEC-NAR-118",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "contraste de versiones",
+      "enunciado": "El texto dice que en el cuaderno no estaba la abuela que «salvaba a todos» en las historias de la mesa. ¿Qué muestra el cuaderno en cambio?",
+      "alternativas": [
+        "Que la abuela había tenido una vida muy difícil y no quería contarla.",
+        "Que la abuela escribía sobre cosas pequeñas de su infancia, no sobre grandes hazañas.",
+        "Que las historias de la mesa eran inventadas por completo.",
+        "Que la abuela prefería escribir antes que conversar con su familia."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que las páginas contaban cosas pequeñas: el nombre del perro, la vez que se perdió el pan, el ruido del techo de zinc. No niega las historias de la mesa ni afirma que fueran inventadas."
+    },
+    {
+      "codigo": "4B-LEC-NAR-119",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar detalle",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Por qué Amparo saca punta al lápiz con un cuchillo de cocina antes de escribir?",
+      "alternativas": [
+        "Porque no encontraba el sacapuntas y no quería dejar la tarea para después.",
+        "Porque el cuchillo era de la abuela y quería usarlo como recuerdo.",
+        "Porque el cuaderno pedía escribir con letra gruesa.",
+        "Porque el lápiz tenía la punta rota por la humedad."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que el lápiz estaba sin punta y que Amparo se quedó un rato con él en la mano antes de levantarse a sacarle punta. La acción muestra que decidió cumplir la tarea en ese mismo momento."
+    },
+    {
+      "codigo": "4B-LEC-NAR-120",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "La nota de la abuela dice «escribe lo que se te ocurra, sin revisar». ¿Para qué le pide eso?",
+      "alternativas": [
+        "Para que Amparo escriba rápido y termine la tarea antes de la noche.",
+        "Para que escriba lo primero que piensa, sin corregirlo, como las cosas pequeñas del cuaderno.",
+        "Para que no muestre lo que escribe a nadie de su familia.",
+        "Para que aprenda a escribir sin faltas de ortografía."
+      ],
+      "clave": "B",
+      "justificacion": "El pedido se entiende con lo que Amparo acaba de leer: un cuaderno de cosas pequeñas, escritas sin pretensión. Amparo cumple eso al escribir una sola línea, la primera que se le ocurrió."
+    }
+  ]
+}

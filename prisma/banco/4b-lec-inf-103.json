@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-103",
+    "titulo": "De dónde sale la lluvia",
+    "tipo": "informativo",
+    "palabras": 258,
+    "cuerpo": "El agua de los ríos, los lagos y el mar se calienta con el sol. Al calentarse, una parte se convierte en vapor y sube, aunque no la veamos. Ese proceso se llama evaporación.\n\nEl vapor sube y se encuentra con aire más frío. Cuando se enfría, vuelve a ser agua líquida en gotas pequeñísimas. Para formarse, cada gota necesita una partícula diminuta donde apoyarse: un grano de polvo, una sal del mar o una mota de ceniza. Ese paso se llama condensación.\n\nMillones de esas gotas se juntan y forman una nube. Las gotas son tan livianas que el aire las sostiene, y por eso la nube no cae. Dentro de la nube las gotas chocan entre sí y se unen. Cuando una gota crece lo suficiente, pesa demasiado y cae: eso es la lluvia.\n\nNo toda nube produce lluvia. Si las gotas son muy pequeñas o el aire que las rodea es muy seco, las gotas se evaporan antes de crecer y la nube se deshace sin dejar agua en el suelo.\n\nEl camino completo se llama ciclo del agua: el agua se evapora, forma nubes, cae como lluvia y vuelve a los ríos y al mar, donde el proceso empieza otra vez."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-111",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué hace que el agua de los ríos y del mar suba como vapor?",
+      "alternativas": [
+        "El viento que sopla sobre la superficie.",
+        "El calor del sol al calentar el agua.",
+        "La fuerza de las olas del mar.",
+        "El frío del aire de las alturas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el agua se calienta con el sol y, al calentarse, una parte se convierte en vapor y sube. Ese proceso se llama evaporación."
+    },
+    {
+      "codigo": "4B-LEC-INF-112",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario científico",
+      "enunciado": "El texto dice que en la condensación cada gota necesita una partícula donde apoyarse. ¿Qué significa eso?",
+      "alternativas": [
+        "Que las gotas se forman sobre trozos de hielo que flotan en el aire.",
+        "Que el vapor se convierte en gota alrededor de una partícula muy pequeña, como polvo o sal.",
+        "Que las gotas necesitan chocar con otras gotas para poder existir.",
+        "Que las nubes se sostienen en el aire gracias al polvo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto enumera esas partículas: un grano de polvo, una sal del mar o una mota de ceniza. La gota se forma alrededor de ellas cuando el vapor se enfría."
+    },
+    {
+      "codigo": "4B-LEC-INF-113",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué una nube no cae aunque esté formada por agua?",
+      "alternativas": [
+        "Porque las gotas son tan livianas que el aire las sostiene.",
+        "Porque las gotas están congeladas y el hielo flota.",
+        "Porque la nube está pegada a la montaña.",
+        "Porque el sol la empuja hacia arriba todo el tiempo."
+      ],
+      "clave": "A",
+      "justificacion": "El texto lo explica: las gotas son tan livianas que el aire las sostiene. La nube solo deja caer agua cuando las gotas crecen y pesan demasiado."
+    },
+    {
+      "codigo": "4B-LEC-INF-114",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "ordenar información",
+      "conocimiento": "secuencia de un proceso",
+      "enunciado": "¿Cuál es el orden correcto de los pasos del ciclo del agua, según el texto?",
+      "alternativas": [
+        "Lluvia, evaporación, condensación y vuelta al mar.",
+        "Evaporación, condensación, lluvia y vuelta a los ríos y al mar.",
+        "Condensación, evaporación, lluvia y vuelta al mar.",
+        "Evaporación, lluvia, condensación y vuelta a los ríos."
+      ],
+      "clave": "B",
+      "justificacion": "El último párrafo lo dice en orden: el agua se evapora, forma nubes por condensación, cae como lluvia y vuelve a los ríos y al mar, donde el proceso empieza otra vez."
+    },
+    {
+      "codigo": "4B-LEC-INF-115",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Un estudiante ve una nube y dice que seguro va a llover. Según el texto, ¿qué le falta considerar?",
+      "alternativas": [
+        "Que las nubes solo producen lluvia en invierno.",
+        "Que no toda nube produce lluvia, porque las gotas pueden evaporarse antes de crecer.",
+        "Que la lluvia solo cae de noche, cuando el aire está más frío.",
+        "Que las nubes que no llueven son las que están más bajas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dedica un párrafo a ese punto: si las gotas son muy pequeñas o el aire es muy seco, se evaporan antes de crecer y la nube se deshace sin dejar agua."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DIS-102",
+    "titulo": "Talleres del segundo semestre",
+    "tipo": "informativo-discontinuo",
+    "palabras": 132,
+    "cuerpo": "TALLERES DEL SEGUNDO SEMESTRE\nInscripciones en secretaría hasta el viernes 4 de julio\n\nTALLER | DÍA | HORA | LUGAR | CUPOS\nAjedrez | martes | 15:00 a 16:30 | biblioteca | 12\nHuerto | miércoles | 15:00 a 17:00 | patio trasero | 8\nTeatro | jueves | 15:00 a 16:00 | sala de música | 15\nRobótica | jueves | 16:00 a 17:30 | sala de computación | 0\nDanzas | viernes | 15:00 a 17:00 | gimnasio | 10\n\nOBSERVACIONES\nCada estudiante puede inscribirse en un máximo de dos talleres, siempre que no coincidan en el mismo día.\nLos talleres que no completan al menos 6 inscritos se suspenden.\nRobótica no abre este semestre porque falta el equipo nuevo."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DIS-106",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tablas",
+      "enunciado": "¿Qué taller se realiza en el gimnasio?",
+      "alternativas": [
+        "Teatro.",
+        "Huerto.",
+        "Danzas.",
+        "Ajedrez."
+      ],
+      "clave": "C",
+      "justificacion": "En la tabla, la fila de Danzas indica viernes, de 15:00 a 17:00, en el gimnasio. Teatro ocupa la sala de música y Huerto el patio trasero."
+    },
+    {
+      "codigo": "4B-LEC-DIS-107",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "lectura de datos",
+      "enunciado": "¿Por qué el taller de Robótica tiene cero cupos?",
+      "alternativas": [
+        "Porque se llenaron todos los cupos antes de la fecha de inscripción.",
+        "Porque falta el equipo nuevo y no abre este semestre.",
+        "Porque coincide en horario con el taller de Teatro.",
+        "Porque no alcanzó los seis inscritos mínimos."
+      ],
+      "clave": "B",
+      "justificacion": "La observación final lo aclara: Robótica no abre este semestre porque falta el equipo nuevo. La regla de los seis inscritos se aplica a los talleres que sí abren."
+    },
+    {
+      "codigo": "4B-LEC-DIS-108",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de datos",
+      "enunciado": "¿Cuál es el taller que dura más horas seguidas, entre los que abren este semestre?",
+      "alternativas": [
+        "Ajedrez.",
+        "Teatro.",
+        "Huerto y Danzas duran lo mismo.",
+        "Robótica."
+      ],
+      "clave": "C",
+      "justificacion": "Huerto va de 15:00 a 17:00 y Danzas también, así que los dos duran dos horas. Teatro dura una hora y Ajedrez una hora y media. Robótica no abre."
+    },
+    {
+      "codigo": "4B-LEC-DIS-109",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de restricciones",
+      "enunciado": "Una estudiante quiere inscribirse en Teatro y en Robótica. Según las observaciones, ¿qué corresponde?",
+      "alternativas": [
+        "Puede inscribirse en los dos, porque son de días distintos.",
+        "No puede inscribirse en Robótica, porque ese taller no abre este semestre.",
+        "Puede inscribirse en los dos, pero solo si queda en lista de espera.",
+        "No puede inscribirse en Teatro, porque tiene más cupos que Robótica."
+      ],
+      "clave": "B",
+      "justificacion": "Los dos talleres son el jueves, así que ya no cumplirían la regla de no coincidir en el mismo día. Además, Robótica no abre por falta de equipo, de modo que la inscripción en ese taller no es posible este semestre."
+    },
+    {
+      "codigo": "4B-LEC-DIS-110",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una decisión",
+      "enunciado": "Un taller tiene 5 inscritos el último día de inscripción. ¿Qué ocurre con ese taller y por qué?",
+      "alternativas": [
+        "Se realiza igual, porque cinco es suficiente para abrir.",
+        "Se suspende, porque no alcanza el mínimo de 6 inscritos.",
+        "Se realiza con la mitad de las horas, porque hay menos estudiantes.",
+        "Se une con otro taller del mismo día para completar el cupo."
+      ],
+      "clave": "B",
+      "justificacion": "Las observaciones fijan que los talleres con menos de 6 inscritos se suspenden. Con 5 inscritos, el taller queda por debajo del mínimo y no se realiza."
+    }
+  ]
+}
