@@ -626,3 +626,32 @@ las escalas hacen que coincidan. Se lee, pero la comparación se pierde. Es una
 debilidad de diseño, no un dato erróneo.
 
 **Regla nueva:** ninguna figura entra al banco sin haberse renderizado y mirado.
+
+---
+
+## 17. Generador sin repetición (20 de octubre de 2026)
+
+El generador de ensayos evita las preguntas que ya aparecieron en las últimas
+evaluaciones del mismo nivel y asignatura. La ventana se elige en la pantalla:
+no evitar, últimas 3, últimas 6 o todas.
+
+Si las preguntas libres no alcanzan, el ensayo se completa igual con las ya
+vistas y la pantalla lo avisa diciendo cuántas se repitieron. El ensayo nunca
+sale incompleto.
+
+**Comprobación con 4° básico Matemática, 191 ítems aprobados y 86 ya usados en
+las tres evaluaciones existentes:**
+
+| Ensayo generado | Preguntas repetidas |
+| --- | --- |
+| 1 | 0 |
+| 2 | 0 |
+| 3 | 0 |
+| 4 | 15 |
+| 5 | 30 |
+| 6 | 30 |
+
+Es decir: un curso con 180 ítems aprobados alcanza para seis ensayos de 30
+preguntas sin repetir ninguna. Lectura tiene 120 por nivel, así que alcanza para
+cuatro. Los 60 ítems que faltan por nivel de lectura son exactamente lo que
+convierte cuatro ensayos en seis.

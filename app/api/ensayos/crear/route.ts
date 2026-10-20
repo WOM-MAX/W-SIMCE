@@ -19,6 +19,9 @@ export async function POST(request: Request) {
   const tiempoPreset = Number.parseInt(texto(form, 'tiempoMin'), 10);
   const tiempoMin = Number.isFinite(tiempoPersonalizado) ? tiempoPersonalizado : tiempoPreset;
 
+  const evitar = Number.parseInt(texto(form, 'evitar'), 10);
+  const evitarValido = [0, 3, 6, 999].includes(evitar) ? evitar : 3;
+
   if (!nivelId || !asignaturaId) return volver(request, '/ensayos/nuevo?error=datos');
   if (!Number.isFinite(preguntas) || preguntas < 1 || preguntas > 100) {
     return volver(request, '/ensayos/nuevo?error=preguntas');
@@ -34,8 +37,12 @@ export async function POST(request: Request) {
       ejeId,
       preguntas,
       tiempoMin,
+      evitar: evitarValido,
     });
-    return volver(request, `/ensayos/nuevo?ok=creado&n=${ensayo.items}&id=${ensayo.id}`);
+    return volver(
+      request,
+      `/ensayos/nuevo?ok=creado&n=${ensayo.items}&rep=${ensayo.repetidas}&id=${ensayo.id}`
+    );
   } catch (error) {
     const mensaje = error instanceof Error ? error.message : '';
     if (mensaje === 'SIN_ITEMS') return volver(request, '/ensayos/nuevo?error=sinitems');

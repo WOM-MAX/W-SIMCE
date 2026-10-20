@@ -26,6 +26,7 @@ export default async function NuevoEnsayo({
     asignatura?: string;
     ok?: string;
     n?: string;
+    rep?: string;
     id?: string;
     error?: string;
   }>;
@@ -80,6 +81,9 @@ export default async function NuevoEnsayo({
         {params.ok === 'creado' ? (
           <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-marca">
             Ensayo creado con {params.n ?? '0'} preguntas.{' '}
+            {Number(params.rep ?? 0) > 0
+              ? `De ellas, ${params.rep} ya se habían usado en evaluaciones anteriores porque no quedaban suficientes sin repetir. `
+              : 'Todas son nuevas respecto de las últimas evaluaciones. '}
             <a href="/ensayos" className="underline">
               Ver mis ensayos
             </a>
@@ -247,6 +251,27 @@ export default async function NuevoEnsayo({
               />
               minutos (máx. 180)
             </label>
+          </section>
+
+          <section>
+            <h2 className="mb-3 text-base font-semibold text-marca">Repetición</h2>
+            <label className="flex flex-wrap items-center gap-2 text-sm text-marca">
+              Evitar preguntas usadas en las últimas
+              <select
+                name="evitar"
+                defaultValue="3"
+                className="rounded-lg border border-borde px-2 py-1.5 text-sm text-marca"
+              >
+                <option value="0">No evitar</option>
+                <option value="3">3 evaluaciones</option>
+                <option value="6">6 evaluaciones</option>
+                <option value="999">Todas las anteriores</option>
+              </select>
+            </label>
+            <p className="mt-2 text-xs text-tenue">
+              Se refiere a las evaluaciones del mismo nivel y asignatura. Si no alcanzan las
+              preguntas sin usar, se completan con las ya vistas y el aviso lo indica.
+            </p>
           </section>
 
           <button className="w-full rounded-xl bg-marca px-4 py-3 text-sm font-medium text-white hover:bg-marca-oscuro">

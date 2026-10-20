@@ -6,6 +6,7 @@ export type OpcionesGeneracion = {
   ejeId: string | null;
   preguntas: number;
   tiempoMin: number;
+  evitar?: number;
 };
 
 function mezclar<T>(entrada: T[]): T[] {
@@ -20,7 +21,7 @@ function mezclar<T>(entrada: T[]): T[] {
 export async function crearEnsayoBorrador(
   colegioId: string,
   opciones: OpcionesGeneracion
-): Promise<{ id: string; titulo: string; items: number }> {
+): Promise<{ id: string; titulo: string; items: number; repetidas: number }> {
   const [nivel, asignatura, eje] = await Promise.all([
     prisma.nivel.findUnique({ where: { id: opciones.nivelId } }),
     prisma.asignatura.findUnique({ where: { id: opciones.asignaturaId } }),
@@ -46,7 +47,33 @@ export async function crearEnsayoBorrador(
 
   if (candidatos.length === 0) throw new Error('SIN_ITEMS');
 
-  const elegidos = mezclar(candidatos.map((c) => c.id)).slice(0, opciones.preguntas);
+  // Preguntas que ya aparecieron en las ultimas evaluaciones de este nivel y
+  // asignatura. Se evitan salvo que no alcancen los items disponibles.
+  const usadas = new Set<string>();
+  if (opciones.evitar && opciones.evitar > 0) {
+    const anteriores = await prisma.ensayo.findMany({
+      where: { nivelId: nivel.id, asignaturaId: asignatura.id },
+      orderBy: { creadoEn: 'desc' },
+      ...(opciones.evitar < 999 ? { take: opciones.evitar } : {}),
+      select: { items: { select: { itemVersionId: true } } },
+    });
+    for (const anterior of anteriores) {
+      for (const fila of anterior.items) usadas.add(fila.itemVersionId);
+    }
+  }
+
+  const libres = candidatos.filter((c) => !usadas.has(c.id));
+  let elegidos = mezclar(libres.map((c) => c.id)).slice(0, opciones.preguntas);
+  let repetidas = 0;
+
+  if (elegidos.length < opciones.preguntas) {
+    const repetibles = candidatos.filter((c) => usadas.has(c.id));
+    const relleno = mezclar(repetibles.map((c) => c.id)).slice(0, opciones.preguntas - elegidos.length);
+    elegidos = [...elegidos, ...relleno];
+    repetidas = relleno.length;
+  }
+
+  if (elegidos.length === 0) throw new Error('SIN_ITEMS');
 
   const fecha = new Date().toLocaleDateString('es-CL', {
     day: '2-digit',
@@ -76,7 +103,7 @@ export async function crearEnsayoBorrador(
     select: { id: true, titulo: true },
   });
 
-  return { id: ensayo.id, titulo: ensayo.titulo, items: elegidos.length };
+  return { id: ensayo.id, titulo: ensayo.titulo, items: elegidos.length, repetidas };
 }
 
 export async function ensayosDelColegio(colegioId: string) {
