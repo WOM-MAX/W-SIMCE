@@ -1,0 +1,152 @@
+{
+  "lote": "4B matemática, cierre final",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N4B-MAT-41",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "polígonos",
+      "enunciado": "¿Cuántos lados tiene un hexágono?",
+      "alternativas": ["5 lados", "6 lados", "7 lados", "8 lados"],
+      "clave": "B",
+      "justificacion": "El prefijo hexa significa seis. Un hexágono es un polígono de 6 lados y 6 vértices."
+    },
+    {
+      "codigo": "N4B-MAT-42",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "tipos de ángulos",
+      "enunciado": "¿Cuánto mide un ángulo recto?",
+      "alternativas": ["45°", "60°", "90°", "180°"],
+      "clave": "C",
+      "justificacion": "Un ángulo recto mide 90°, que es la cuarta parte de un giro completo. Se marca con un cuadrado pequeño en el vértice."
+    },
+    {
+      "codigo": "N4B-MAT-43",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "perímetro de figuras compuestas",
+      "figura": {
+        "ancho": 240,
+        "alto": 150,
+        "elementos": [
+          { "op": "poly", "puntos": "30,30 150,30 150,110 90,110 90,70 30,70", "grosor": 1.4 },
+          { "op": "text", "x": 90, "y": 22, "texto": "6 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 158, "y": 74, "texto": "4 cm", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 120, "y": 128, "texto": "3 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 98, "y": 96, "texto": "2 cm", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 58, "y": 62, "texto": "3 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 22, "y": 54, "texto": "2 cm", "tam": 9, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "La figura muestra un terreno en forma de L. ¿Cuál es su perímetro?",
+      "alternativas": ["16 cm", "20 cm", "22 cm", "24 cm"],
+      "clave": "B",
+      "justificacion": "Se suman los seis lados del contorno: 6 + 4 + 3 + 2 + 3 + 2 = 20 cm. No se suman las líneas interiores porque no forman parte del borde."
+    },
+    {
+      "codigo": "N4B-MAT-44",
+      "eje": "medicion",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "unidades de longitud",
+      "enunciado": "¿A cuántos centímetros equivale un metro?",
+      "alternativas": ["100 centímetros", "10 centímetros", "1000 centímetros", "10000 centímetros"],
+      "clave": "A",
+      "justificacion": "Un metro equivale a 100 centímetros. El prefijo centi indica la centésima parte de la unidad."
+    },
+    {
+      "codigo": "N4B-MAT-45",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "unidades y reparto",
+      "enunciado": "Una cinta mide 2 metros de largo y se corta en trozos de 25 centímetros. ¿Cuántos trozos se obtienen?",
+      "alternativas": ["4 trozos", "6 trozos", "8 trozos", "10 trozos"],
+      "clave": "C",
+      "justificacion": "Dos metros son 200 centímetros. Al dividir 200 entre 25 se obtienen 8 trozos."
+    },
+    {
+      "codigo": "N4B-MAT-46",
+      "eje": "patrones-y-algebra",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "secuencias numéricas",
+      "enunciado": "En la secuencia 3, 6, 9, 12, ¿qué número sigue?",
+      "alternativas": ["15", "14", "13", "16"],
+      "clave": "A",
+      "justificacion": "Cada término se obtiene sumando 3 al anterior. Después de 12 sigue 12 + 3 = 15."
+    },
+    {
+      "codigo": "N4B-MAT-47",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "modelar",
+      "conocimiento": "ecuaciones con una incógnita",
+      "enunciado": "Piensa un número. Si lo multiplicas por 3 y al resultado le sumas 4, obtienes 19. ¿Cuál es el número?",
+      "alternativas": ["3", "4", "5", "6"],
+      "clave": "C",
+      "justificacion": "Si el número es n, entonces 3n + 4 = 19. Al restar 4 queda 3n = 15, y al dividir por 3 resulta n = 5."
+    },
+    {
+      "codigo": "N4B-MAT-48",
+      "eje": "datos-y-probabilidades",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "gráficos de barras",
+      "enunciado": "En un gráfico de barras, ¿qué representa la altura de cada barra?",
+      "alternativas": [
+        "El nombre del dato que se muestra.",
+        "La cantidad que corresponde a ese dato.",
+        "El color elegido para dibujar la barra.",
+        "El lugar que ocupa la barra en el gráfico."
+      ],
+      "clave": "B",
+      "justificacion": "En un gráfico de barras la altura es la cantidad. Por eso se compara la altura de las barras para saber qué dato es mayor."
+    },
+    {
+      "codigo": "N4B-MAT-49",
+      "eje": "datos-y-probabilidades",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "lectura de tablas",
+      "figura": {
+        "ancho": 260,
+        "alto": 110,
+        "elementos": [
+          { "op": "line", "x1": 20, "y1": 14, "x2": 240, "y2": 14, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 44, "x2": 240, "y2": 44, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 74, "x2": 240, "y2": 74, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 104, "x2": 240, "y2": 104, "grosor": 1 },
+          { "op": "line", "x1": 20, "y1": 14, "x2": 20, "y2": 104, "grosor": 1 },
+          { "op": "line", "x1": 150, "y1": 14, "x2": 150, "y2": 104, "grosor": 1 },
+          { "op": "line", "x1": 240, "y1": 14, "x2": 240, "y2": 104, "grosor": 1 },
+          { "op": "text", "x": 85, "y": 34, "texto": "Prefieren leer en", "tam": 8.5, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 195, "y": 34, "texto": "Estudiantes", "tam": 8.5, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 85, "y": 64, "texto": "Papel", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 195, "y": 64, "texto": "12", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 85, "y": 94, "texto": "Pantalla", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 195, "y": 94, "texto": "9", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La tabla muestra cómo prefieren leer los estudiantes de un curso. ¿Cuántos estudiantes más prefieren leer en papel que en pantalla?",
+      "alternativas": ["3 estudiantes", "12 estudiantes", "21 estudiantes", "9 estudiantes"],
+      "clave": "A",
+      "justificacion": "En papel hay 12 estudiantes y en pantalla 9. La diferencia es 12 − 9 = 3 estudiantes más."
+    }
+  ]
+}
