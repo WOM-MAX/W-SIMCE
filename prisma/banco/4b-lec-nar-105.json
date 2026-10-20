@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-105",
+    "titulo": "Los cien metros",
+    "tipo": "narrativo",
+    "palabras": 300,
+    "cuerpo": "La prueba de los cien metros era la última del campeonato. En la partida estaban los ocho mejores del colegio, y entre ellos Nicolás, que había entrenado todo el semestre para ganar esa carrera.\n\nAl sonar la señal, Nicolás salió bien. A los cincuenta metros iba segundo, pegado al hombro de Benjamín, el más rápido del curso vecino. Faltaban veinte metros cuando escuchó algo detrás: un golpe, un grito corto, el ruido de la arena al frenar.\n\nSe dio vuelta un instante. Benjamín estaba en el suelo, con la rodilla raspada y la cara apretada. Los otros corredores seguían, ya casi en la meta.\n\nNicolás se detuvo.\n\n—Sigue —le dijo Benjamín, sin aire—. Sigue, tú ibas a ganar.\n\nNicolás se agachó, lo tomó del brazo y lo levantó. Caminaron juntos los últimos veinte metros, mientras el público, que primero había gritado por la carrera, se quedó callado y después empezó a aplaudir.\n\nLa carrera la ganó otro compañero. Nicolás llegó último, con la mano de Benjamín sobre su hombro.\n\nEn el camarín, el entrenador lo esperaba con los brazos cruzados.\n\n—Perdiste la carrera —dijo.\n\n—Sí —contestó Nicolás.\n\nEl entrenador lo miró un rato y agregó:\n\n—El próximo año vas a correr los cien metros otra vez. Y cuando mires la foto de este campeonato, no vas a acordarte del tiempo. Vas a acordarte de esto.\n\nNicolás guardó la medalla que le dieron por participar. La puso en el cajón, debajo de las zapatillas, y esa noche durmió mejor que las otras veces."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-121",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué le ocurrió a Benjamín durante la carrera?",
+      "alternativas": [
+        "Se adelantó antes de la señal de partida.",
+        "Se cayó y quedó con la rodilla raspada.",
+        "Se detuvo a ayudar a Nicolás.",
+        "Llegó último porque se quedó sin aire."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que a veinte metros de la meta Nicolás escuchó un golpe y vio a Benjamín en el suelo, con la rodilla raspada. Quien se detuvo a ayudar fue Nicolás."
+    },
+    {
+      "codigo": "4B-LEC-NAR-122",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Qué hizo Nicolás cuando vio a Benjamín en el suelo?",
+      "alternativas": [
+        "Siguió corriendo para no perder su lugar.",
+        "Se detuvo, lo levantó del brazo y caminó con él hasta la meta.",
+        "Fue a buscar al entrenador para que lo atendiera.",
+        "Se devolvió a la partida para empezar de nuevo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que se detuvo, se agachó, lo tomó del brazo, lo levantó y caminaron juntos los últimos veinte metros, con la mano de Benjamín sobre su hombro."
+    },
+    {
+      "codigo": "4B-LEC-NAR-123",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivos de un personaje",
+      "enunciado": "Benjamín le dice a Nicolás «sigue, tú ibas a ganar». ¿Qué muestra esa frase sobre Benjamín?",
+      "alternativas": [
+        "Que quería que Nicolás perdiera por su culpa.",
+        "Que reconoce que Nicolás estaba corriendo mejor y no le pide quedarse.",
+        "Que no le importaba la carrera en ese momento.",
+        "Que estaba seguro de poder levantarse solo."
+      ],
+      "clave": "B",
+      "justificacion": "Benjamín, desde el suelo, le pide que siga y reconoce que iba a ganar. No le exige compañía: es Nicolás quien decide detenerse."
+    },
+    {
+      "codigo": "4B-LEC-NAR-124",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "sentido de una escena",
+      "enunciado": "¿Para qué el texto cuenta que el público se quedó callado y después aplaudió?",
+      "alternativas": [
+        "Para mostrar que el público entendió que había pasado algo más importante que la carrera.",
+        "Para mostrar que el público no había visto la caída de Benjamín.",
+        "Para mostrar que el público esperaba que Nicolás ganara.",
+        "Para mostrar que el campeonato se suspendió por la caída."
+      ],
+      "clave": "A",
+      "justificacion": "El público primero gritaba por la carrera y luego se calla ante la escena de los dos caminando juntos, para después aplaudir. Ese cambio marca que valoró el gesto por encima del resultado."
+    },
+    {
+      "codigo": "4B-LEC-NAR-125",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "El entrenador le dice a Nicolás que en la foto del campeonato no se va a acordar del tiempo. ¿Qué quiere decir?",
+      "alternativas": [
+        "Que Nicolás va a olvidar su marca porque el entrenador no la anotó.",
+        "Que lo que va a recordar es lo que hizo por Benjamín, no el resultado de la carrera.",
+        "Que las fotos de las carreras salen siempre borrosas.",
+        "Que el próximo año va a ganar y por eso no importa este."
+      ],
+      "clave": "B",
+      "justificacion": "El entrenador contrapone el tiempo de la carrera, que se olvida, con lo ocurrido, que se recuerda. Nicolás lo confirma al guardar la medalla de participar y dormir mejor que otras noches."
+    }
+  ]
+}

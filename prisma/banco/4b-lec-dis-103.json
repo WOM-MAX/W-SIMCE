@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DIS-103",
+    "titulo": "La boleta del almacén",
+    "tipo": "informativo-discontinuo",
+    "palabras": 88,
+    "cuerpo": "ALMACÉN LOS ÁLAMOS\nBoleta 00412\n\nPRODUCTO | CANTIDAD | PRECIO UNITARIO | SUBTOTAL\nPan corriente | 2 kg | $1.800 el kg | $3.600\nLeche entera | 1 L | $1.150 | $1.150\nHuevos | 12 | $3.200 la docena | $3.200\n\nTOTAL: $7.950\nEFECTIVO: $10.000\nVUELTO: $2.050\n\nGracias por su compra."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DIS-111",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de una boleta",
+      "enunciado": "¿Cuánto se pagó en total en esta compra?",
+      "alternativas": [
+        "$7.950",
+        "$10.000",
+        "$2.050",
+        "$5.950"
+      ],
+      "clave": "A",
+      "justificacion": "La boleta tiene una línea que dice TOTAL: $7.950. Los $10.000 corresponden al efectivo entregado y los $2.050 al vuelto."
+    },
+    {
+      "codigo": "4B-LEC-DIS-112",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de la boleta",
+      "enunciado": "El pan corriente cuesta $1.800 el kilogramo. ¿Cómo se obtuvo el subtotal de $3.600?",
+      "alternativas": [
+        "Sumando $1.800 más $1.800, porque se compraron 2 kilogramos.",
+        "Dividiendo $1.800 en dos partes iguales.",
+        "Sumando $1.800 más el precio de la leche.",
+        "Multiplicando $1.800 por el precio de los huevos."
+      ],
+      "clave": "A",
+      "justificacion": "Se compraron 2 kilogramos a $1.800 cada uno, y el subtotal es la suma de esos dos valores: $1.800 + $1.800 = $3.600."
+    },
+    {
+      "codigo": "4B-LEC-DIS-113",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de subtotales",
+      "enunciado": "¿Cuál de los tres productos tuvo el subtotal más alto?",
+      "alternativas": [
+        "El pan corriente.",
+        "La leche entera.",
+        "Los huevos.",
+        "Los tres tuvieron el mismo subtotal."
+      ],
+      "clave": "A",
+      "justificacion": "Los subtotales son $3.600 por el pan, $1.150 por la leche y $3.200 por los huevos. El más alto es el del pan, con $3.600."
+    },
+    {
+      "codigo": "4B-LEC-DIS-114",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de la boleta",
+      "enunciado": "Si la persona hubiera devuelto la leche, ¿cuánto habría tenido que pagar?",
+      "alternativas": [
+        "$6.800",
+        "$6.950",
+        "$7.800",
+        "$5.950"
+      ],
+      "clave": "A",
+      "justificacion": "El total era $7.950 y la leche costaba $1.150. Al devolverla se resta su valor: $7.950 − $1.150 = $6.800."
+    },
+    {
+      "codigo": "4B-LEC-DIS-115",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de un error de lectura",
+      "enunciado": "Una persona lee la boleta y dice que el vuelto fue de $2.050 porque pagó $10.000. ¿Qué dato de la boleta confirma su cálculo?",
+      "alternativas": [
+        "Que el total es $7.950 y $10.000 − $7.950 = $2.050.",
+        "Que la boleta dice VUELTO: $2.050 sin necesidad de calcularlo.",
+        "Que el precio unitario de la leche es $1.150.",
+        "Que el número de boleta es 00412."
+      ],
+      "clave": "A",
+      "justificacion": "El vuelto se obtiene de la diferencia entre lo pagado y el total: $10.000 − $7.950 = $2.050. La boleta además lo escribe, pero lo que confirma el cálculo es esa resta, que coinciden."
+    }
+  ]
+}

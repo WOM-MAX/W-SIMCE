@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-104",
+    "titulo": "La noche de la panadería",
+    "tipo": "informativo",
+    "palabras": 274,
+    "cuerpo": "Mientras casi todo el barrio duerme, la panadería de la esquina ya está trabajando. El turno empieza a las once de la noche y termina a las siete de la mañana, cuando llegan los primeros clientes.\n\nLo primero es mezclar la harina con agua, sal y levadura. La masa queda pegajosa y se deja reposar en un recipiente grande, tapada con un paño. Ese tiempo de espera se llama fermentación.\n\nDurante la fermentación pasa algo que no se ve: la levadura se alimenta de los azúcares de la harina y produce gas. El gas queda atrapado dentro de la masa y la hace crecer. Si la masa se deja poco tiempo, el pan sale duro y bajo. Si se deja demasiado, la masa se pasa de gas y se cae en el horno.\n\nA las tres de la mañana se divide la masa en porciones, se les da forma y se dejan reposar otra vez, ahora ya como panes. El horno se enciende antes: necesita estar a más de doscientos grados cuando entra la primera bandeja.\n\nEl hornero revisa sin abrir la puerta. Si la abre, el aire frío entra y el pan se baja. Mira por el vidrio y calcula por el color. Cuando la corteza está dorada y el pan suena hueco al golpearlo, ya está listo.\n\nA las seis y media, el olor llega a la calle. Doña Rosa, la dueña, dice que ese olor es la única publicidad que necesita la panadería."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-116",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué hace crecer a la masa?",
+      "alternativas": [
+        "El calor del horno encendido desde la noche anterior.",
+        "El gas que produce la levadura al alimentarse de los azúcares de la harina.",
+        "El agua que se agrega durante la fermentación.",
+        "La sal que se mezcla con la harina."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que la levadura se alimenta de los azúcares de la harina y produce gas, y que ese gas queda atrapado y hace crecer la masa."
+    },
+    {
+      "codigo": "4B-LEC-INF-117",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario en contexto",
+      "enunciado": "El texto dice que el hornero sabe que el pan está listo cuando «suena hueco al golpearlo». ¿Qué indica ese sonido?",
+      "alternativas": [
+        "Que el pan quedó crudo por dentro.",
+        "Que el pan está cocido y el interior tiene aire.",
+        "Que el pan se enfrió demasiado.",
+        "Que la masa tenía poca levadura."
+      ],
+      "clave": "B",
+      "justificacion": "El sonido hueco aparece cuando la corteza está dorada y firme y el interior ya no está compacto. El texto lo usa como señal de que el pan ya está listo y no necesita más horno."
+    },
+    {
+      "codigo": "4B-LEC-INF-118",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué el hornero evita abrir la puerta del horno mientras se hornea el pan?",
+      "alternativas": [
+        "Porque el horno se apaga cada vez que se abre la puerta.",
+        "Porque el aire frío entra y el pan se baja.",
+        "Porque el pan necesita oscuridad para dorarse.",
+        "Porque el vidrio de la puerta se empaña y no deja ver nada."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que si abre la puerta entra aire frío y el pan se baja. Por eso revisa por el vidrio y calcula por el color."
+    },
+    {
+      "codigo": "4B-LEC-INF-119",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "consecuencias de un error",
+      "enunciado": "Si la masa se deja fermentar menos tiempo del necesario, ¿qué ocurre según el texto?",
+      "alternativas": [
+        "El pan sale duro y bajo.",
+        "El pan se cae dentro del horno.",
+        "El pan queda con sabor a levadura.",
+        "El pan se dora demasiado rápido."
+      ],
+      "clave": "A",
+      "justificacion": "El texto opone los dos errores: con poco tiempo de fermentación el pan sale duro y bajo; con demasiado tiempo la masa se pasa de gas y se cae en el horno."
+    },
+    {
+      "codigo": "4B-LEC-INF-120",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "Doña Rosa dice que el olor es la única publicidad que necesita la panadería. ¿Qué quiere decir?",
+      "alternativas": [
+        "Que la panadería no puede pagar avisos en el diario.",
+        "Que el olor del pan recién hecho atrae a los clientes sin necesidad de avisos.",
+        "Que la panadería vende solo por la mañana, cuando hay olor.",
+        "Que los vecinos se quejan del olor y ella lo considera publicidad."
+      ],
+      "clave": "B",
+      "justificacion": "El olor llega a la calle a las seis y media, justo cuando abren, y el texto lo presenta como el motivo por el que la gente llega. Doña Rosa no habla de dinero ni de quejas."
+    }
+  ]
+}
