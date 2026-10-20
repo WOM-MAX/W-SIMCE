@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-301",
+    "titulo": "El registro de la bodega",
+    "tipo": "narrativo",
+    "palabras": 372,
+    "cuerpo": "Cuando la empresa cerró la bodega del puerto, dejó a los trabajadores con una indemnización y con la promesa de reubicarlos. Cuarenta y dos personas esperaron seis meses sin noticias.\n\nAlí había trabajado allí once años como estibador. Conocía el peso de cada caja, el nombre de los proveedores, los turnos de los camiones. Cuando el delegado del sindicato le preguntó qué podían presentar, Alí no dijo nada. Al día siguiente llegó con un cuaderno.\n\nEran once años de registros. No los había llevado por orden de nadie: empezó a anotar el primer mes porque se aburría en el turno de noche, y después siguió por costumbre. Había fechas, números de guía, horarios de llegada, quién firmaba y quién no. En el margen había notas pequeñas: «camión sin sello del cliente», «caja 44 rota, se informó».\n\nEl abogado que tomó el caso leyó las primeras páginas y pidió una copia completa.\n\n—Esto no es un reclamo —dijo—. Esto es una prueba.\n\nLa empresa, según el abogado, había movido cargas fuera del horario declarado en los meses previos al cierre, mientras sostenía que la bodega no tenía movimiento suficiente para seguir funcionando.\n\nEn la audiencia, el abogado de la empresa afirmó que los cuadernos eran un escrito privado de un trabajador y que no tenían valor. El abogado de los trabajadores respondió con los propios papeles de la empresa: las guías existían, estaban archivadas y coincidían una por una con las fechas del cuaderno.\n\nLa reubicación se aprobó en marzo. Alí no fue el que habló más en la audiencia, ni el que dio la mejor entrevista después. Pero cuando le preguntaron por qué había anotado todo eso, contestó con una frase que el periodista no incluyó:\n\n—No era por si acaso. Era porque si nadie anotaba, después nadie sabía."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué contenían los cuadernos de Alí?",
+      "alternativas": [
+        "Sus reclamos escritos al sindicato.",
+        "Registros de once años: fechas, números de guía, horarios y observaciones.",
+        "Las cartas de la empresa a los trabajadores.",
+        "Los turnos de sus compañeros de la bodega."
+      ],
+      "clave": "B",
+      "justificacion": "El texto enumera el contenido: fechas, números de guía, horarios de llegada, quién firmaba y quién no, más notas al margen sobre incidentes. Alí empezó a anotar por aburrimiento en el turno de noche."
+    },
+    {
+      "codigo": "8B-LEC-NAR-302",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una frase",
+      "enunciado": "El abogado dice: «Esto no es un reclamo. Esto es una prueba». ¿Qué diferencia establece?",
+      "alternativas": [
+        "Que el cuaderno sirve para quejarse, no para exigir.",
+        "Que el cuaderno no es una opinión del trabajador, sino un registro que puede contrastarse con documentos de la empresa.",
+        "Que el reclamo era innecesario porque la empresa ya había aceptado.",
+        "Que hacían falta más cuadernos como ese."
+      ],
+      "clave": "B",
+      "justificacion": "El abogado distingue el cuaderno de un escrito de queja personal. Lo valioso es que contiene datos verificables, y efecto de eso es que se contrastan con las guías archivadas de la propia empresa."
+    },
+    {
+      "codigo": "8B-LEC-NAR-303",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un contraste",
+      "enunciado": "¿Qué muestra el dato de que la empresa moviera cargas fuera del horario declarado?",
+      "alternativas": [
+        "Que la bodega tenía más trabajo del que la empresa sostenía.",
+        "Que los trabajadores cometieron un error en los registros.",
+        "Que el abogado inventó el argumento.",
+        "Que las guías no coincidían con el cuaderno."
+      ],
+      "clave": "A",
+      "justificacion": "La empresa sostenía que la bodega no tenía movimiento suficiente para seguir funcionando. Los registros muestran movimiento real en fechas concretas, y además coinciden con las guías de la propia empresa."
+    },
+    {
+      "codigo": "8B-LEC-NAR-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una objeción",
+      "enunciado": "El abogado de la empresa afirma que los cuadernos son un escrito privado sin valor. ¿Qué debilita esa objeción según el texto?",
+      "alternativas": [
+        "Que Alí escribió los cuadernos durante su jornada de trabajo.",
+        "Que las guías de la propia empresa coinciden una por una con las fechas anotadas.",
+        "Que el delegado del sindicato conocía los cuadernos.",
+        "Que el periodista publicó el caso."
+      ],
+      "clave": "B",
+      "justificacion": "La objeción apunta a que se trata de la palabra de un trabajador. El texto la neutraliza al mostrar que las guías archivadas de la empresa coinciden con las fechas del cuaderno, de modo que el registro no depende solo de Alí."
+    },
+    {
+      "codigo": "8B-LEC-NAR-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "El texto dice que el periodista no incluyó la frase final de Alí. ¿Por qué el narrador sí la incluye?",
+      "alternativas": [
+        "Porque es la idea que da sentido a once años de anotaciones.",
+        "Porque el periodista no escuchó la respuesta.",
+        "Porque Alí pidió que no la publicaran.",
+        "Porque la frase era demasiado larga para el diario."
+      ],
+      "clave": "A",
+      "justificacion": "Alí anotó durante once años por costumbre y sin un propósito práctico. Su explicación, que si nadie anota después nadie sabe, resume el valor de ese registro y explica por qué el cuaderno resultó decisivo."
+    }
+  ]
+}

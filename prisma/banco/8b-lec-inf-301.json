@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INF-301",
+    "titulo": "Por qué las ciudades son más calurosas",
+    "tipo": "informativo",
+    "palabras": 358,
+    "cuerpo": "En verano, el centro de una ciudad puede registrar varios grados más que una zona rural cercana. El fenómeno se conoce como isla de calor urbana y tiene causas identificables.\n\nLa primera es el material de las superficies. El asfalto y el hormigón absorben calor durante el día y lo liberan lentamente durante la noche. Un suelo con vegetación hace algo distinto: parte de la energía que recibe se usa en evaporar el agua de las plantas, en lugar de calentar el aire. Ese proceso se llama evapotranspiración, y es la razón por la que un parque se siente fresco al mediodía.\n\nLa segunda causa es la geometría de las calles. Los edificios altos y las calles angostas forman una especie de cañón: el calor que irradian las paredes rebota de un muro a otro y sale con dificultad. En una calle abierta, en cambio, el calor se disipa hacia la atmósfera con menos obstáculos.\n\nLa tercera causa es el calor que produce la propia ciudad. Los vehículos, la climatización de los edificios y la actividad industrial liberan energía. En zonas densas, esa energía se suma a la que llega del sol.\n\nHay una cuarta causa que se suele pasar por alto: el agua de lluvia. En una ciudad pavimentada el agua escurre rápido hacia el alcantarillado y no queda disponible para evaporarse. En un terreno natural, una parte del agua se infiltra y otra se evapora, y ese proceso enfría. La ciudad, al impermeabilizar el suelo, pierde ese enfriamiento.\n\nLas medidas que se aplican van en la dirección de recuperar esas funciones. Se instalan techos verdes, se pintan las superficies con colores claros para que reflejen más luz, se plantan árboles en las veredas y se abren espacios de tierra que permitan infiltrar agua.\n\nNinguna medida resuelve el problema por sí sola. Un árbol aislado no enfría una avenida, y pintar un techo no compensa la falta de vegetación en toda una manzana. Los estudios coinciden en que el efecto conjunto es lo que se nota."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INF-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué es la evapotranspiración según el texto?",
+      "alternativas": [
+        "El calor que liberan el asfalto y el hormigón de noche.",
+        "El proceso en que la energía se usa en evaporar el agua de las plantas en lugar de calentar el aire.",
+        "La acumulación de calor entre edificios altos.",
+        "El escurrimiento del agua de lluvia hacia el alcantarillado."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que en un suelo con vegetación parte de la energía se usa en evaporar el agua de las plantas en lugar de calentar el aire, y que ese proceso se llama evapotranspiración."
+    },
+    {
+      "codigo": "8B-LEC-INF-302",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una comparación",
+      "enunciado": "El texto compara las calles estrechas entre edificios altos con un cañón. ¿Qué explica esa imagen?",
+      "alternativas": [
+        "Que las calles de la ciudad son profundas.",
+        "Que el calor rebota entre los muros y sale con dificultad.",
+        "Que las calles antiguas están construidas con piedra.",
+        "Que en esas calles circula menos viento de noche."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación aparece justo después de explicar que el calor que irradian las paredes rebota de un muro a otro y sale con dificultad. La imagen del cañón describe esa dificultad para disipar el calor."
+    },
+    {
+      "codigo": "8B-LEC-INF-303",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "cuarta causa",
+      "enunciado": "¿Por qué el pavimentado del suelo aumenta el calor urbano, según el texto?",
+      "alternativas": [
+        "Porque el pavimento es de color oscuro y atrae el sol.",
+        "Porque el agua escurre rápido y no queda disponible para evaporarse y enfriar.",
+        "Porque el pavimento pesa más que la tierra.",
+        "Porque el agua del alcantarillado se calienta y sube."
+      ],
+      "clave": "B",
+      "justificacion": "El texto presenta esta causa como la que se suele pasar por alto: al impermeabilizar el suelo, el agua escurre hacia el alcantarillado y la ciudad pierde el enfriamiento que produce la evaporación."
+    },
+    {
+      "codigo": "8B-LEC-INF-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre causas y medidas",
+      "enunciado": "¿Qué relación hay entre las medidas que se aplican y las causas descritas?",
+      "alternativas": [
+        "Cada medida elimina una causa distinta y por eso basta una sola.",
+        "Cada medida tiende a recuperar una función que la ciudad había perdido.",
+        "Las medidas no tienen relación con las causas identificadas.",
+        "Las medidas sirven solo para el invierno."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que las medidas van en la dirección de recuperar esas funciones: techos verdes y árboles recuperan la vegetación, los colores claros reflejan luz, y los espacios de tierra permiten infiltrar agua."
+    },
+    {
+      "codigo": "8B-LEC-INF-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una medida aislada",
+      "enunciado": "Un municipio planta diez árboles en una avenida de ocho cuadras y anuncia que resolvió el problema del calor. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que los árboles no reducen la temperatura en ningún caso.",
+        "Que ninguna medida resuelve el problema por sí sola y el efecto se nota con el conjunto.",
+        "Que deberían haber pintado los techos en vez de plantar.",
+        "Que el problema del calor no existe en las ciudades."
+      ],
+      "clave": "B",
+      "justificacion": "El texto advierte que un árbol aislado no enfría una avenida y que ningún medida resuelve el problema sola: lo que se nota es el efecto conjunto de varias medidas."
+    }
+  ]
+}

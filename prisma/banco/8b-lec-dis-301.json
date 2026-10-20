@@ -1,0 +1,78 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DIS-301",
+    "titulo": "Tarifas del agua por tramo",
+    "tipo": "informativo-discontinuo",
+    "palabras": 190,
+    "cuerpo": "TARIFAS DE AGUA POTABLE\nEmpresa regional. Valores por vivienda y por mes.\n\nTRAMO | CONSUMO MENSUAL | VALOR POR METRO CÚBICO\nBásico | hasta 10 m³ | $800\nMedio | de 11 a 20 m³ | $1 400\nAlto | de 21 a 30 m³ | $2 600\nExcedente | más de 30 m³ | $4 500\n\nCARGO FIJO\nTodas las viviendas pagan $2 500 al mes, cualquiera sea su consumo.\n\nEJEMPLO DE CÁLCULO\nUna vivienda que consume 15 m³ paga:\n10 m³ del tramo básico = $8 000\n5 m³ del tramo medio = $7 000\nCargo fijo = $2 500\nTotal = $17 500\n\nNOTA DEL REGLAMENTO\nLos tramos se aplican por separado: los primeros 10 m³ siempre se cobran a $800, aunque el consumo total sea alto. El objetivo es que el agua para necesidades básicas mantenga un precio menor."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DIS-301",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tarifas",
+      "enunciado": "¿Cuánto paga una vivienda por el cargo fijo?",
+      "alternativas": ["$800", "$1 400", "$2 500", "$4 500"],
+      "clave": "C",
+      "justificacion": "El cargo fijo es de $2 500 al mes para todas las viviendas, cualquiera sea su consumo. Los otros valores corresponden a tramos de consumo."
+    },
+    {
+      "codigo": "8B-LEC-DIS-302",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "aplicación de tarifas por tramo",
+      "enunciado": "¿Cuánto paga una vivienda que consume 8 m³ en el mes?",
+      "alternativas": ["$6 400", "$8 900", "$11 200", "$20 000"],
+      "clave": "B",
+      "justificacion": "Los 8 m³ están en el tramo básico, a $800 cada uno: 8 × 800 = $6 400. Al sumar el cargo fijo de $2 500, el total es $8 900."
+    },
+    {
+      "codigo": "8B-LEC-DIS-303",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "cálculo con tramos",
+      "enunciado": "¿Cuánto paga una vivienda que consume 25 m³ en el mes?",
+      "alternativas": ["$30 000", "$35 000", "$37 500", "$48 500"],
+      "clave": "C",
+      "justificacion": "Se aplican los tramos por separado: 10 m³ a $800 son $8 000; 10 m³ a $1 400 son $14 000; 5 m³ a $2 600 son $13 000. La suma de consumo es $35 000 y al agregar el cargo fijo de $2 500 el total es $37 500. El valor $35 000 corresponde a olvidar el cargo fijo."
+    },
+    {
+      "codigo": "8B-LEC-DIS-304",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "estructura progresiva de tarifas",
+      "enunciado": "¿Por qué el reglamento cobra siempre los primeros 10 m³ a $800, aunque el consumo total sea alto?",
+      "alternativas": [
+        "Para que las viviendas con consumo alto paguen menos en total.",
+        "Para que el agua destinada a necesidades básicas mantenga un precio menor.",
+        "Para simplificar el cálculo de la boleta.",
+        "Porque el tramo básico tiene pérdidas para la empresa."
+      ],
+      "clave": "B",
+      "justificacion": "La nota del reglamento lo dice expresamente: el objetivo es que el agua para necesidades básicas mantenga un precio menor. Las viviendas de consumo alto pagan más en total, porque los tramos siguientes son más caros."
+    },
+    {
+      "codigo": "8B-LEC-DIS-305",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Un usuario dice que si gasta el doble de agua, paga exactamente el doble. ¿Qué muestra la tabla sobre esa afirmación?",
+      "alternativas": [
+        "Que es correcta en todos los tramos.",
+        "Que es falsa: al pasar de tramo el precio por metro cúbico sube, así que el costo crece más que proporcionalmente.",
+        "Que es correcta solo para el tramo básico.",
+        "Que el cargo fijo hace que el costo no cambie."
+      ],
+      "clave": "B",
+      "justificacion": "El precio por metro cúbico aumenta con cada tramo, de $800 a $1 400, luego a $2 600 y a $4 500. Por eso duplicar el consumo más que duplica la cuenta, y el cargo fijo se suma aparte."
+    }
+  ]
+}
