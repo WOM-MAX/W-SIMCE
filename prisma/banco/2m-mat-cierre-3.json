@@ -1,0 +1,315 @@
+{
+  "lote": "2M matemática, cierre final",
+  "nivel": "2M",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N2M-MAT-41",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "raíces de una ecuación cuadrática",
+      "figura": {
+        "ancho": 250,
+        "alto": 190,
+        "elementos": [
+          { "op": "line", "x1": 20, "y1": 110, "x2": 230, "y2": 110, "grosor": 1.2 },
+          { "op": "line", "x1": 125, "y1": 20, "x2": 125, "y2": 180, "grosor": 1.2 },
+          { "op": "poly", "puntos": "60,20 75,60 90,88 100,110 110,118 125,120 140,118 150,110 160,88 175,60 190,20", "grosor": 1.4 },
+          { "op": "circle", "cx": 100, "cy": 110, "r": 3, "grosor": 1, "relleno": "gris" },
+          { "op": "circle", "cx": 150, "cy": 110, "r": 3, "grosor": 1, "relleno": "gris" },
+          { "op": "text", "x": 96, "y": 126, "texto": "2", "tam": 8.5, "anclaje": "medio" },
+          { "op": "text", "x": 154, "y": 126, "texto": "3", "tam": 8.5, "anclaje": "medio" },
+          { "op": "text", "x": 234, "y": 112, "texto": "x", "tam": 9, "anclaje": "izquierda" }
+        ]
+      },
+      "enunciado": "¿Cuáles son las soluciones de la ecuación x² − 5x + 6 = 0?",
+      "alternativas": ["x = 1 y x = 6", "x = 2 y x = 3", "x = −2 y x = −3", "x = 5 y x = 6"],
+      "clave": "B",
+      "justificacion": "Se buscan dos números que multiplicados den 6 y sumados den 5: son 2 y 3. La ecuación se factoriza como (x − 2)(x − 3) = 0, así que las soluciones son 2 y 3. Esos son los puntos donde la parábola corta al eje x."
+    },
+    {
+      "codigo": "N2M-MAT-42",
+      "eje": "algebra-y-funciones",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "concavidad de la parábola",
+      "enunciado": "En la función cuadrática y = ax² + bx + c, ¿qué indica que el coeficiente a sea positivo?",
+      "alternativas": [
+        "Que la parábola se abre hacia arriba y su vértice es un mínimo.",
+        "Que la parábola se abre hacia abajo y su vértice es un máximo.",
+        "Que la parábola corta al eje x en dos puntos.",
+        "Que la parábola no tiene vértice."
+      ],
+      "clave": "A",
+      "justificacion": "El signo de a determina la concavidad. Si a es positivo, la parábola abre hacia arriba y el vértice es el punto más bajo. El número de cortes con el eje x lo determina el discriminante, no el signo de a."
+    },
+    {
+      "codigo": "N2M-MAT-43",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "sistema con producto",
+      "enunciado": "Dos números suman 7 y su producto es 12. ¿Cuáles son?",
+      "alternativas": ["1 y 6", "2 y 5", "3 y 4", "4 y 4"],
+      "clave": "C",
+      "justificacion": "Se buscan dos números que sumados den 7 y multiplicados den 12: son 3 y 4. La opción 1 y 6 suman 7 pero su producto es 6, y la opción 4 y 4 no suma 7."
+    },
+    {
+      "codigo": "N2M-MAT-44",
+      "eje": "algebra-y-funciones",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "crecimiento de una función",
+      "enunciado": "¿Qué significa que una función sea creciente en un intervalo?",
+      "alternativas": [
+        "Que sus valores aumentan a medida que la variable independiente aumenta.",
+        "Que sus valores son siempre positivos.",
+        "Que su gráfica es una recta.",
+        "Que su gráfica pasa por el origen."
+      ],
+      "clave": "A",
+      "justificacion": "Una función es creciente cuando al aumentar x también aumenta el valor de la función. Ser positiva, ser una recta o pasar por el origen son características distintas y no definen el crecimiento."
+    },
+    {
+      "codigo": "N2M-MAT-45",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "logaritmos",
+      "enunciado": "¿Cuál es el valor de log₃(81)?",
+      "alternativas": ["3", "4", "9", "27"],
+      "clave": "B",
+      "justificacion": "Se pregunta a qué exponente hay que elevar 3 para obtener 81. Como 3⁴ = 81, el valor es 4. El valor 27 es un tercio de 81 y no corresponde al exponente."
+    },
+    {
+      "codigo": "N2M-MAT-46",
+      "eje": "algebra-y-funciones",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "propiedades de los logaritmos",
+      "enunciado": "Una estudiante afirma que log₂(4) + log₂(8) = log₂(32). ¿Qué se puede decir de esa afirmación?",
+      "alternativas": [
+        "Es correcta: 2 + 3 = 5, y log₂(32) también vale 5.",
+        "Es incorrecta: los logaritmos no se pueden sumar.",
+        "Es incorrecta: el resultado debería ser log₂(12).",
+        "Es correcta solo si las bases son distintas."
+      ],
+      "clave": "A",
+      "justificacion": "log₂(4) = 2 y log₂(8) = 3, así que la suma es 5. Por otro lado, 2⁵ = 32, de modo que log₂(32) = 5. La igualdad se cumple porque la suma de logaritmos de igual base equivale al logaritmo del producto: 4 × 8 = 32."
+    },
+    {
+      "codigo": "N2M-MAT-47",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "área del rombo",
+      "enunciado": "Un rombo tiene diagonales de 10 cm y 12 cm. ¿Cuál es su área?",
+      "alternativas": ["22 cm²", "30 cm²", "60 cm²", "120 cm²"],
+      "clave": "C",
+      "justificacion": "El área del rombo es el producto de las diagonales dividido en 2: (10 × 12) ÷ 2 = 60 cm². El valor 120 corresponde al producto sin dividir."
+    },
+    {
+      "codigo": "N2M-MAT-48",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "teorema de Pitágoras",
+      "enunciado": "Un triángulo rectángulo tiene catetos de 5 cm y 5 cm. ¿Cuánto mide su hipotenusa, aproximadamente?",
+      "alternativas": ["5,0 cm", "7,07 cm", "10,0 cm", "25,0 cm"],
+      "clave": "B",
+      "justificacion": "La hipotenusa al cuadrado es 5² + 5² = 25 + 25 = 50, así que mide √50 ≈ 7,07 cm. El valor 10 resulta de sumar los catetos y el 25 de olvidar la raíz."
+    },
+    {
+      "codigo": "N2M-MAT-49",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "superficie del cilindro",
+      "enunciado": "Un cilindro tiene 3 cm de radio y 10 cm de altura. Si se usa π = 3,14, ¿cuál es su superficie total, contando las dos bases?",
+      "alternativas": ["188,4 cm²", "244,92 cm²", "282,6 cm²", "301,44 cm²"],
+      "clave": "B",
+      "justificacion": "La superficie lateral es 2 × π × r × h = 2 × 3,14 × 3 × 10 = 188,4 cm². Las dos bases suman 2 × π × r² = 2 × 3,14 × 9 = 56,52 cm². El total es 188,4 + 56,52 = 244,92 cm². El valor 188,4 es solo el lateral."
+    },
+    {
+      "codigo": "N2M-MAT-50",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "ángulos en la circunferencia",
+      "enunciado": "¿Qué es un ángulo inscrito en una circunferencia?",
+      "alternativas": [
+        "El que tiene su vértice en el centro y sus lados son radios.",
+        "El que tiene su vértice sobre la circunferencia y sus lados son cuerdas.",
+        "El que tiene su vértice fuera de la circunferencia.",
+        "El que forman dos radios perpendiculares."
+      ],
+      "clave": "B",
+      "justificacion": "Un ángulo inscrito tiene el vértice en un punto de la circunferencia y sus lados son cuerdas. El que tiene el vértice en el centro se llama ángulo central."
+    },
+    {
+      "codigo": "N2M-MAT-51",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "relación entre ángulo central e inscrito",
+      "figura": {
+        "ancho": 200,
+        "alto": 200,
+        "elementos": [
+          { "op": "circle", "cx": 100, "cy": 100, "r": 70, "grosor": 1.3 },
+          { "op": "line", "x1": 100, "y1": 100, "x2": 30, "y2": 100, "grosor": 1.2 },
+          { "op": "line", "x1": 100, "y1": 100, "x2": 149, "y2": 40, "grosor": 1.2 },
+          { "op": "line", "x1": 30, "y1": 100, "x2": 149, "y2": 40, "grosor": 1.2 },
+          { "op": "circle", "cx": 100, "cy": 100, "r": 2.5, "grosor": 1, "relleno": "gris" },
+          { "op": "text", "x": 106, "y": 96, "texto": "80°", "tam": 9, "anclaje": "izquierda", "negrita": true },
+          { "op": "text", "x": 30, "y": 116, "texto": "?", "tam": 10, "anclaje": "medio", "negrita": true }
+        ]
+      },
+      "enunciado": "En la circunferencia de la figura, el ángulo central mide 80° y ambos ángulos comparten los mismos dos puntos de la circunferencia. ¿Cuánto mide el ángulo inscrito?",
+      "alternativas": ["40°", "80°", "160°", "20°"],
+      "clave": "A",
+      "justificacion": "El ángulo inscrito mide la mitad del ángulo central que abarca el mismo arco. Entonces el inscrito es 80 ÷ 2 = 40°. El valor 160° duplica en lugar de dividir."
+    },
+    {
+      "codigo": "N2M-MAT-52",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad complementaria",
+      "enunciado": "Se lanzan dos dados. ¿Cuál es la probabilidad de obtener dos números distintos?",
+      "alternativas": ["1/6", "5/6", "1/2", "30/12"],
+      "clave": "B",
+      "justificacion": "La probabilidad de obtener el mismo número en los dos dados es 6/36 = 1/6. Por el complemento, la de obtener números distintos es 1 − 1/6 = 5/6, que corresponde a 30 de los 36 resultados posibles."
+    },
+    {
+      "codigo": "N2M-MAT-53",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "media aritmética",
+      "enunciado": "Tres datos tienen media 8. Si se agrega un cuarto dato, la media del grupo baja a 7. ¿Cuál es el cuarto dato?",
+      "alternativas": ["1", "2", "4", "6"],
+      "clave": "C",
+      "justificacion": "Los tres primeros datos suman 3 × 8 = 24. Con cuatro datos y media 7, la suma debe ser 4 × 7 = 28. El cuarto dato es 28 − 24 = 4. El valor 6 no cumple: (24 + 6) ÷ 4 = 7,5."
+    },
+    {
+      "codigo": "N2M-MAT-54",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "combinaciones",
+      "enunciado": "¿Cuántos grupos de 3 personas se pueden formar con 7 personas?",
+      "alternativas": ["21", "35", "42", "210"],
+      "clave": "B",
+      "justificacion": "El orden no importa, así que se usa C(7,3) = (7 × 6 × 5) ÷ (3 × 2 × 1) = 210 ÷ 6 = 35. El valor 210 corresponde a las permutaciones P(7,3)."
+    },
+    {
+      "codigo": "N2M-MAT-55",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "medidas de dispersión",
+      "enunciado": "¿Qué informa una medida de dispersión en un conjunto de datos?",
+      "alternativas": [
+        "El valor central de los datos.",
+        "Cuánto se alejan los datos entre sí o respecto de la media.",
+        "El dato que más se repite.",
+        "La cantidad de datos recogidos."
+      ],
+      "clave": "B",
+      "justificacion": "Las medidas de dispersión describen qué tan repartidos están los datos. El valor central lo informan la media y la mediana, y el dato más repetido es la moda."
+    },
+    {
+      "codigo": "N2M-MAT-56",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "interpretación crítica de gráficos",
+      "figura": {
+        "ancho": 250,
+        "alto": 170,
+        "elementos": [
+          { "op": "line", "x1": 40, "y1": 30, "x2": 40, "y2": 130, "grosor": 1.2 },
+          { "op": "line", "x1": 40, "y1": 130, "x2": 220, "y2": 130, "grosor": 1.2 },
+          { "op": "rect", "x": 70, "y": 110, "w": 34, "h": 20, "grosor": 1, "relleno": "gris" },
+          { "op": "rect", "x": 120, "y": 96, "w": 34, "h": 34, "grosor": 1, "relleno": "gris" },
+          { "op": "rect", "x": 170, "y": 84, "w": 34, "h": 46, "grosor": 1, "relleno": "gris" },
+          { "op": "text", "x": 87, "y": 146, "texto": "2022", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 137, "y": 146, "texto": "2023", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 187, "y": 146, "texto": "2024", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 34, "y": 118, "texto": "80", "tam": 7.5, "anclaje": "fin" },
+          { "op": "text", "x": 34, "y": 96, "texto": "90", "tam": 7.5, "anclaje": "fin" },
+          { "op": "text", "x": 34, "y": 84, "texto": "100", "tam": 7.5, "anclaje": "fin" },
+          { "op": "text", "x": 125, "y": 164, "texto": "el eje vertical no parte de cero", "tam": 7.5, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "En el gráfico, las barras muestran 80, 90 y 100, pero el eje vertical comienza en 80 y no en cero. ¿Qué efecto tiene esa decisión?",
+      "alternativas": [
+        "Ninguno: las alturas de las barras son proporcionales a los valores.",
+        "Exagera las diferencias: un aumento de 25 por ciento parece mucho mayor.",
+        "Reduce las diferencias y hace que las barras parezcan iguales.",
+        "Impide conocer los valores representados."
+      ],
+      "clave": "B",
+      "justificacion": "Al recortar el eje, la diferencia real entre 80 y 100 se ve como una barra casi el doble de alta. El gráfico no miente sobre los valores, pero exagera visualmente la variación, y por eso conviene revisar dónde parte el eje."
+    },
+    {
+      "codigo": "N2M-MAT-57",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad complementaria",
+      "enunciado": "Se lanza un dado dos veces. ¿Cuál es la probabilidad de obtener al menos un 6?",
+      "alternativas": ["1/36", "1/6", "11/36", "1/3"],
+      "clave": "C",
+      "justificacion": "El caso contrario es no obtener ningún 6 en los dos lanzamientos, cuya probabilidad es (5/6)² = 25/36. Entonces la de obtener al menos un 6 es 1 − 25/36 = 11/36. Sumar 1/6 + 1/6 contaría dos veces el caso de dos seises."
+    },
+    {
+      "codigo": "N2M-MAT-58",
+      "eje": "numeros",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "potencias con exponente negativo",
+      "enunciado": "¿Cuál es el valor de 2³ × 2⁻¹?",
+      "alternativas": ["2", "4", "8", "16"],
+      "clave": "B",
+      "justificacion": "Al multiplicar potencias de igual base se suman los exponentes: 3 + (−1) = 2, así que el resultado es 2² = 4. El valor 8 corresponde a 2³ sin aplicar el exponente negativo."
+    },
+    {
+      "codigo": "N2M-MAT-59",
+      "eje": "numeros",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de irracionales",
+      "enunciado": "¿Cuál de estas afirmaciones es verdadera?",
+      "alternativas": [
+        "√8 es menor que 2,8.",
+        "√8 es mayor que 2,8 y menor que 2,9.",
+        "√8 es mayor que 3.",
+        "√8 es exactamente 2,8."
+      ],
+      "clave": "B",
+      "justificacion": "Como 2,8² = 7,84 y 2,9² = 8,41, el valor de √8 queda entre 2,8 y 2,9; de hecho es aproximadamente 2,828. Por eso no es menor que 2,8 ni mayor que 3, y tampoco es exactamente 2,8."
+    }
+  ]
+}
