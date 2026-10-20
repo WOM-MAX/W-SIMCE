@@ -1,0 +1,323 @@
+{
+  "lote": "8B matemática, cierre final",
+  "nivel": "8B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N8B-MAT-41",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad sin reposición",
+      "figura": {
+        "ancho": 280,
+        "alto": 120,
+        "elementos": [
+          { "op": "rect", "x": 20, "y": 20, "w": 240, "h": 80, "grosor": 1.4 },
+          { "op": "circle", "cx": 54, "cy": 48, "r": 11, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 86, "cy": 48, "r": 11, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 118, "cy": 48, "r": 11, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 150, "cy": 48, "r": 11, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 86, "cy": 78, "r": 11, "grosor": 1.2 },
+          { "op": "circle", "cx": 118, "cy": 78, "r": 11, "grosor": 1.2 },
+          { "op": "text", "x": 200, "y": 52, "texto": "4 grises", "tam": 8, "anclaje": "izquierda" },
+          { "op": "text", "x": 200, "y": 82, "texto": "2 blancas", "tam": 8, "anclaje": "izquierda" }
+        ]
+      },
+      "enunciado": "En una bolsa hay 4 bolitas grises y 2 blancas. Se sacan dos bolitas seguidas sin devolver la primera. ¿Cuál es la probabilidad de que las dos sean grises?",
+      "alternativas": ["1/3", "2/5", "4/9", "2/3"],
+      "clave": "B",
+      "justificacion": "La primera bolita tiene probabilidad 4/6 de ser gris. Como no se devuelve, quedan 5 bolitas y 3 grises, así que la segunda tiene probabilidad 3/5. El producto es (4/6) × (3/5) = 12/30 = 2/5. Con reposición habría dado 4/9."
+    },
+    {
+      "codigo": "N8B-MAT-42",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "suceso complementario",
+      "enunciado": "Se lanza un dado. ¿Cuál es la probabilidad de no obtener un 6?",
+      "alternativas": ["1/6", "1/3", "2/3", "5/6"],
+      "clave": "D",
+      "justificacion": "La probabilidad de obtener 6 es 1/6. Por el complemento, la de no obtenerlo es 1 − 1/6 = 5/6, que corresponde a los cinco resultados restantes."
+    },
+    {
+      "codigo": "N8B-MAT-43",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "conocimiento",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "medidas de tendencia central",
+      "enunciado": "¿Cuál es la diferencia entre la media y la mediana?",
+      "alternativas": [
+        "La media es el valor central y la mediana es el promedio.",
+        "La media es el promedio de los datos y la mediana es el valor central al ordenarlos.",
+        "La media es el valor que más se repite y la mediana es el promedio.",
+        "Las dos son siempre iguales en cualquier conjunto de datos."
+      ],
+      "clave": "B",
+      "justificacion": "La media se calcula sumando todos los datos y dividiendo por la cantidad. La mediana se obtiene ordenando los datos y tomando el valor central. Coinciden en algunos conjuntos simétricos, pero no en todos."
+    },
+    {
+      "codigo": "N8B-MAT-44",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "media y rango",
+      "enunciado": "Dos grupos tienen la misma media de nota, 5,5. En el grupo A las notas van de 3,0 a 7,0 y en el grupo B van de 5,0 a 6,0. ¿Qué se puede afirmar?",
+      "alternativas": [
+        "Los dos grupos son idénticos porque tienen la misma media.",
+        "El grupo A tiene mayor dispersión, porque su rango es más amplio.",
+        "El grupo B tiene mayor dispersión, porque sus notas son más altas.",
+        "No se puede comparar sin conocer la mediana."
+      ],
+      "clave": "B",
+      "justificacion": "El rango del grupo A es 4,0 y el del grupo B es 1,0. La media puede ser igual y la dispersión muy distinta, y eso se ve en el rango: en A las notas están más repartidas."
+    },
+    {
+      "codigo": "N8B-MAT-45",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "media aritmética",
+      "enunciado": "La media de cinco datos es 12. ¿Cuánto suman los cinco datos?",
+      "alternativas": ["17", "24", "60", "72"],
+      "clave": "C",
+      "justificacion": "La media es la suma dividida por la cantidad de datos. Entonces la suma es la media multiplicada por la cantidad: 12 × 5 = 60."
+    },
+    {
+      "codigo": "N8B-MAT-46",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "gráficos circulares",
+      "figura": {
+        "ancho": 200,
+        "alto": 200,
+        "elementos": [
+          { "op": "circle", "cx": 100, "cy": 100, "r": 70, "grosor": 1.4 },
+          { "op": "line", "x1": 100, "y1": 100, "x2": 100, "y2": 30, "grosor": 1.2 },
+          { "op": "line", "x1": 100, "y1": 100, "x2": 170, "y2": 100, "grosor": 1.2 },
+          { "op": "text", "x": 128, "y": 72, "texto": "25%", "tam": 10, "anclaje": "medio", "negrita": true },
+          { "op": "text", "x": 100, "y": 192, "texto": "preferencia por un deporte", "tam": 7.5, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "En un gráfico circular, un sector representa el 25% del total. ¿Qué ángulo le corresponde en el centro del círculo?",
+      "alternativas": ["25°", "45°", "90°", "180°"],
+      "clave": "C",
+      "justificacion": "El círculo completo son 360°. El 25% es la cuarta parte, así que el ángulo es 360 ÷ 4 = 90°. El valor 25° confunde el porcentaje con los grados."
+    },
+    {
+      "codigo": "N8B-MAT-47",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad de dos dados",
+      "enunciado": "Se lanzan dos dados y se suman sus resultados. ¿Cuál es la probabilidad de obtener suma 12?",
+      "alternativas": ["1/36", "1/18", "1/12", "1/6"],
+      "clave": "A",
+      "justificacion": "La suma 12 solo se logra con 6 y 6, un único resultado entre los 36 posibles. La probabilidad es 1/36. La suma 7, en cambio, tiene seis resultados posibles."
+    },
+    {
+      "codigo": "N8B-MAT-48",
+      "eje": "probabilidad-y-estadistica",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "alcance de una muestra",
+      "enunciado": "Un estudio encuesta a 10 personas de una ciudad de 500 000 habitantes y concluye que el 70% prefiere una marca. ¿Cuál es la objeción correcta?",
+      "alternativas": [
+        "Ninguna: el porcentaje es un dato exacto.",
+        "Que 10 personas es una muestra muy pequeña para representar a 500 000.",
+        "Que el estudio debería haber usado la mediana en vez del porcentaje.",
+        "Que las encuestas nunca sirven para conocer preferencias."
+      ],
+      "clave": "B",
+      "justificacion": "Una muestra de 10 personas no representa a una ciudad de 500 000: el margen de error sería enorme y cualquier variación cambiaría el resultado. Las encuestas sí sirven, pero con muestras adecuadas."
+    },
+    {
+      "codigo": "N8B-MAT-49",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "ecuaciones con variable en ambos lados",
+      "enunciado": "Resuelve la ecuación 3(x − 1) = 2(x + 4). ¿Cuál es el valor de x?",
+      "alternativas": ["5", "7", "11", "13"],
+      "clave": "C",
+      "justificacion": "Al distribuir queda 3x − 3 = 2x + 8. Al restar 2x en ambos lados: x − 3 = 8, y al sumar 3 resulta x = 11. Comprobación: 3 × 10 = 30 y 2 × 15 = 30."
+    },
+    {
+      "codigo": "N8B-MAT-50",
+      "eje": "algebra-y-funciones",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "aplicar",
+      "conocimiento": "evaluación de una función",
+      "enunciado": "Si f(x) = −2x + 7, ¿cuánto valen f(0) y f(3)?",
+      "alternativas": ["f(0) = 7 y f(3) = 1", "f(0) = 0 y f(3) = 1", "f(0) = 7 y f(3) = 13", "f(0) = −2 y f(3) = −1"],
+      "clave": "A",
+      "justificacion": "Con x = 0: f(0) = −2 × 0 + 7 = 7. Con x = 3: f(3) = −2 × 3 + 7 = −6 + 7 = 1. El valor 13 sale de ignorar el signo negativo de la pendiente."
+    },
+    {
+      "codigo": "N8B-MAT-51",
+      "eje": "algebra-y-funciones",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "sistemas de dos ecuaciones",
+      "enunciado": "En un sistema se sabe que 2x + y = 11 y que y = x + 2. ¿Cuáles son los valores de x e y?",
+      "alternativas": ["x = 2, y = 4", "x = 3, y = 5", "x = 4, y = 6", "x = 5, y = 7"],
+      "clave": "B",
+      "justificacion": "Al reemplazar la segunda expresión en la primera queda 2x + (x + 2) = 11, o sea 3x + 2 = 11. Entonces 3x = 9 y x = 3, con lo que y = 3 + 2 = 5. Comprobación: 2 × 3 + 5 = 11."
+    },
+    {
+      "codigo": "N8B-MAT-52",
+      "eje": "algebra-y-funciones",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "interpretación de la pendiente",
+      "enunciado": "La función C(t) = 3000 − 200t describe el saldo de una cuenta, en pesos, después de t semanas. ¿Qué significa el −200?",
+      "alternativas": [
+        "Que el saldo inicial es 200 pesos.",
+        "Que cada semana el saldo disminuye en 200 pesos.",
+        "Que en 200 semanas la cuenta se cierra.",
+        "Que el saldo aumenta 200 pesos por semana."
+      ],
+      "clave": "B",
+      "justificacion": "La pendiente es negativa, así que el saldo baja con el tiempo: 200 pesos por cada semana. El saldo inicial es 3000, que corresponde al término independiente."
+    },
+    {
+      "codigo": "N8B-MAT-53",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "área del círculo",
+      "figura": {
+        "ancho": 200,
+        "alto": 190,
+        "elementos": [
+          { "op": "circle", "cx": 100, "cy": 85, "r": 65, "grosor": 1.4 },
+          { "op": "line", "x1": 35, "y1": 85, "x2": 165, "y2": 85, "grosor": 1 },
+          { "op": "text", "x": 100, "y": 78, "texto": "14 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 100, "y": 176, "texto": "diámetro de la circunferencia", "tam": 7.5, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "Una circunferencia tiene 14 cm de diámetro. Si se usa π = 3,14, ¿cuál es el área del círculo que encierra?",
+      "alternativas": ["43,96 cm²", "153,86 cm²", "615,44 cm²", "87,92 cm²"],
+      "clave": "B",
+      "justificacion": "El diámetro es 14 cm, así que el radio es 7 cm. El área es π × 7² = 3,14 × 49 = 153,86 cm². El valor 615,44 resulta de usar el diámetro como radio."
+    },
+    {
+      "codigo": "N8B-MAT-54",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "perímetro de la circunferencia",
+      "enunciado": "Un círculo tiene 10 cm de diámetro. Si se usa π = 3,14, ¿cuál es el perímetro de su circunferencia?",
+      "alternativas": ["15,7 cm", "31,4 cm", "62,8 cm", "78,5 cm"],
+      "clave": "B",
+      "justificacion": "El perímetro es π × diámetro = 3,14 × 10 = 31,4 cm. El valor 78,5 corresponde al área del círculo (π × 25) y el 15,7 a usar el radio en lugar del diámetro."
+    },
+    {
+      "codigo": "N8B-MAT-55",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "teorema de Pitágoras",
+      "enunciado": "Una escalera se apoya en una pared. Su base está a 6 metros de la pared y la escalera mide 10 metros. ¿A qué altura de la pared llega?",
+      "alternativas": ["4 metros", "6 metros", "8 metros", "16 metros"],
+      "clave": "C",
+      "justificacion": "La escalera es la hipotenusa y la distancia a la pared es un cateto. Entonces la altura al cuadrado es 10² − 6² = 100 − 36 = 64, y la raíz de 64 es 8 metros. El valor 4 sale de restar 10 − 6."
+    },
+    {
+      "codigo": "N8B-MAT-56",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "cuerpos redondos",
+      "enunciado": "¿Cuál de estos cuerpos es un cuerpo redondo?",
+      "alternativas": ["El cubo", "El prisma de base triangular", "El cilindro", "La pirámide de base cuadrada"],
+      "clave": "C",
+      "justificacion": "Los cuerpos redondos tienen superficies curvas: cilindro, cono y esfera. El cubo, el prisma y la pirámide tienen solo caras planas."
+    },
+    {
+      "codigo": "N8B-MAT-57",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "volumen del cilindro",
+      "figura": {
+        "ancho": 240,
+        "alto": 200,
+        "elementos": [
+          { "op": "path", "d": "M 70 50 A 50 14 0 0 0 170 50", "grosor": 1.3 },
+          { "op": "path", "d": "M 70 50 A 50 14 0 0 1 170 50", "grosor": 1.3 },
+          { "op": "line", "x1": 70, "y1": 50, "x2": 70, "y2": 150, "grosor": 1.3 },
+          { "op": "line", "x1": 170, "y1": 50, "x2": 170, "y2": 150, "grosor": 1.3 },
+          { "op": "path", "d": "M 70 150 A 50 14 0 0 1 170 150", "grosor": 1.3 },
+          { "op": "path", "d": "M 70 150 A 50 14 0 0 0 170 150", "grosor": 1.1, "punteada": true },
+          { "op": "line", "x1": 120, "y1": 50, "x2": 170, "y2": 50, "grosor": 1 },
+          { "op": "text", "x": 145, "y": 42, "texto": "2,5 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 180, "y": 104, "texto": "8 cm", "tam": 9, "anclaje": "izquierda" }
+        ]
+      },
+      "enunciado": "Un cilindro tiene 2,5 cm de radio y 8 cm de altura. Si se usa π = 3,14, ¿cuál es su volumen?",
+      "alternativas": ["62,8 cm³", "125,6 cm³", "157 cm³", "314 cm³"],
+      "clave": "C",
+      "justificacion": "El volumen es π × r² × h = 3,14 × 6,25 × 8 = 157 cm³. El valor 314 resulta de usar 5 cm como radio, que es el diámetro."
+    },
+    {
+      "codigo": "N8B-MAT-58",
+      "eje": "numeros",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "raíces y potencias",
+      "enunciado": "¿Cuál es el valor de √81 × 2³?",
+      "alternativas": ["17", "24", "72", "144"],
+      "clave": "C",
+      "justificacion": "La raíz de 81 es 9 y 2³ es 8. El producto es 9 × 8 = 72. El valor 17 sale de sumar 9 y 8 en lugar de multiplicar."
+    },
+    {
+      "codigo": "N8B-MAT-59",
+      "eje": "numeros",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "porcentajes",
+      "enunciado": "Un artículo cuesta $25 000 y tiene un descuento del 20%. ¿Cuánto se paga?",
+      "alternativas": ["$5 000", "$20 000", "$23 000", "$30 000"],
+      "clave": "B",
+      "justificacion": "El 20% de 25 000 es 5 000, que es el descuento. El precio final es 25 000 − 5 000 = $20 000. El valor $5 000 corresponde solo al descuento y $30 000 a sumarlo por error."
+    },
+    {
+      "codigo": "N8B-MAT-60",
+      "eje": "numeros",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "orden de operaciones",
+      "enunciado": "Un estudiante calcula 2 + 3 × 4 y obtiene 20. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Está bien, porque se resuelve de izquierda a derecha.",
+        "Está mal: primero se multiplica, así que el resultado es 14.",
+        "Está bien, porque la suma va antes que la multiplicación.",
+        "Está mal: el resultado correcto es 9."
+      ],
+      "clave": "B",
+      "justificacion": "En el orden de operaciones la multiplicación se resuelve antes que la suma: 3 × 4 = 12 y luego 2 + 12 = 14. El valor 20 sale de sumar primero 2 + 3 y multiplicar después por 4."
+    }
+  ]
+}
