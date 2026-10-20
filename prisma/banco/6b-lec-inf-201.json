@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-201",
+    "titulo": "Por qué el cielo cambia de color",
+    "tipo": "informativo",
+    "palabras": 344,
+    "cuerpo": "Al mediodía, el cielo se ve azul; al atardecer, rojo o naranja. La explicación está en cómo la luz del sol atraviesa el aire.\n\nLa luz del sol parece blanca, pero en realidad contiene todos los colores. Cuando entra en la atmósfera, choca con las moléculas de los gases que la forman. Esos choques desvían la luz en distintas direcciones, y no todos los colores se desvían igual.\n\nEl azul y el violeta, que tienen ondas cortas, se dispersan mucho más que el rojo y el amarillo. Por eso, al mirar el cielo en cualquier dirección durante el día, lo que llega a nuestros ojos es luz azul desviada. El violeta también se dispersa, pero nuestros ojos son menos sensibles a ese color, y por eso vemos azul y no violeta.\n\nAl atardecer pasa otra cosa. El sol está bajo y su luz debe atravesar una capa de atmósfera mucho más gruesa que al mediodía. En ese recorrido largo, los colores de onda corta se dispersan tanto que terminan desviándose fuera de nuestra línea de visión. Lo que queda para llegar directo a nuestros ojos es la luz de ondas largas: el rojo y el naranja.\n\nEse mismo efecto explica que las nubes se vean blancas de día y rosadas al atardecer. Las gotas de agua de las nubes dispersan todos los colores por igual, y por eso la luz que reflejan parece blanca. Al atardecer, en cambio, solo les llega luz rojiza, y eso es lo que reflejan.\n\nEl fenómeno se llama dispersión de la luz. Un experimento sencillo permite verlo: si se ilumina un vaso de agua con unas gotas de leche, el líquido se ve azulado de frente y anaranjado por detrás, porque las partículas dispersan el azul en todas las direcciones y dejan pasar el rojo."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué colores se dispersan más en la atmósfera?",
+      "alternativas": [
+        "El rojo y el amarillo.",
+        "El azul y el violeta.",
+        "El blanco y el gris.",
+        "El naranja y el rojo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el azul y el violeta tienen ondas cortas y se dispersan mucho más que el rojo y el amarillo, que tienen ondas largas."
+    },
+    {
+      "codigo": "6B-LEC-INF-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "explicación causal",
+      "enunciado": "¿Por qué el cielo se ve azul y no violeta, si el violeta también se dispersa?",
+      "alternativas": [
+        "Porque el violeta no llega a la atmósfera.",
+        "Porque nuestros ojos son menos sensibles al violeta que al azul.",
+        "Porque el violeta se convierte en azul al chocar con el aire.",
+        "Porque las nubes absorben todo el violeta."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que el violeta también se dispersa, pero que nuestros ojos son menos sensibles a ese color. No hay conversión de colores ni ausencia de violeta en la luz solar."
+    },
+    {
+      "codigo": "6B-LEC-INF-203",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué al atardecer llega a nuestros ojos sobre todo luz roja y naranja?",
+      "alternativas": [
+        "Porque el sol produce más luz roja cuando está bajo.",
+        "Porque la luz recorre más atmósfera y los colores de onda corta se desvían fuera de nuestra línea de visión.",
+        "Porque la atmósfera se calienta y cambia de color.",
+        "Porque las nubes filtran el azul al final del día."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que con el sol bajo la luz atraviesa una capa de atmósfera mucho más gruesa, y en ese recorrido los colores de onda corta se dispersan hasta salir de la línea de visión, quedando el rojo y el naranja."
+    },
+    {
+      "codigo": "6B-LEC-INF-204",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "aplicar",
+      "conocimiento": "uso de la explicación en un caso nuevo",
+      "enunciado": "En el experimento del vaso con agua y gotas de leche, el líquido se ve anaranjado por detrás. ¿Cómo se explica con lo leído?",
+      "alternativas": [
+        "Porque la leche cambia de color al mezclarse con el agua.",
+        "Porque las partículas dispersan el azul hacia los lados y dejan pasar el rojo en línea recta.",
+        "Porque la luz que atraviesa el vaso se calienta y se vuelve roja.",
+        "Porque el agua tiene color propio."
+      ],
+      "clave": "B",
+      "justificacion": "El texto cierra con ese experimento y da la explicación: las partículas dispersan el azul en todas las direcciones y dejan pasar el rojo, que es lo que se ve al mirar por detrás del vaso."
+    },
+    {
+      "codigo": "6B-LEC-INF-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Un compañero dice que el cielo es azul porque refleja el color del mar. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el mar también es azul por el mismo fenómeno, no al revés.",
+        "Que el cielo se ve azul por la dispersión de la luz en la atmósfera, sin relación con el mar.",
+        "Que el cielo no es azul, sino violeta.",
+        "Que solo hay mar en algunas regiones y el cielo es azul en todas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica el color del cielo por la dispersión de la luz solar en las moléculas de la atmósfera. La comparación con el mar no aparece como causa; de hecho, el agua del mar también se ve azul por efectos de la luz, no por teñir el cielo."
+    }
+  ]
+}

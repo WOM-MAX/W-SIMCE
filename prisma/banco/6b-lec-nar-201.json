@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-201",
+    "titulo": "El mapa que ya no servía",
+    "tipo": "narrativo",
+    "palabras": 356,
+    "cuerpo": "En el cajón del velador de la abuela había un mapa dibujado a mano. Lo había hecho el abuelo cuando llegaron al pueblo, cuarenta años antes. Estaban marcadas la plaza, la escuela, la panadería y un camino de tierra que llegaba hasta el río.\n\nCuando la abuela murió, el mapa quedó en manos de su nieta Antonia, que tenía once años y nunca había vivido en ese pueblo. Lo miró con cuidado: el abuelo había escrito los nombres con letra pequeña y había dibujado un almacén con un techo rojo.\n\nEn vacaciones, Antonia viajó al pueblo con su padre. Llevó el mapa doblado en la mochila y lo abrió en la plaza.\n\n—Esto no está igual —dijo.\n\nDonde el abuelo había dibujado el camino de tierra había una calle pavimentada con dos hileras de árboles. El almacén del techo rojo ya no existía: en su lugar había un edificio de tres pisos y una farmacia. La panadería seguía en el mismo sitio, pero ahora tenía un cartel nuevo.\n\n—Tu abuelo dibujó el pueblo de cuando llegó —dijo el padre—. Los mapas se hacen para el día en que se dibujan.\n\nAntonia caminó hasta el río. El camino ya no era de tierra, pero el río seguía ahí, ancho y lento, con las mismas piedras. Se sentó en la orilla con el mapa sobre las rodillas y notó algo: el abuelo había dibujado un puente pequeño, de madera, que ahora era de cemento.\n\nEsa tarde no tiró el mapa. Compró un lápiz en la farmacia y empezó a corregirlo. Tachó el almacén y escribió «farmacia». Dibujó la calle nueva al lado del camino viejo, con una flecha. En una esquina del papel anotó la fecha.\n\n—¿Para qué lo arreglas, si ya nadie va a usarlo? —le preguntó su padre.\n\n—Para que se entienda el cambio —contestó ella—. Si borro lo de antes, parece que el pueblo siempre fue así."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Quién había dibujado el mapa y cuándo?",
+      "alternativas": [
+        "La abuela, cuando se mudó al pueblo.",
+        "El abuelo, cuarenta años antes, cuando llegaron al pueblo.",
+        "El padre de Antonia, en su infancia.",
+        "Antonia, durante las vacaciones."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el mapa lo había hecho el abuelo cuando llegaron al pueblo, cuarenta años antes. Antonia lo recibió después y lo corrigió, pero no lo dibujó."
+    },
+    {
+      "codigo": "6B-LEC-NAR-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "sentido de una frase",
+      "enunciado": "El padre dice: «Los mapas se hacen para el día en que se dibujan». ¿Qué quiere decir?",
+      "alternativas": [
+        "Que los mapas antiguos no sirven para nada.",
+        "Que un mapa muestra el lugar tal como era cuando se dibujó, y los lugares cambian.",
+        "Que los mapas deben dibujarse siempre a lápiz.",
+        "Que su abuelo dibujaba mal los caminos."
+      ],
+      "clave": "B",
+      "justificacion": "El padre intenta explicar por qué el mapa no coincide con lo que ven. No descalifica el mapa ni al abuelo: señala que refleja el pueblo en un momento del pasado y que el pueblo cambió."
+    },
+    {
+      "codigo": "6B-LEC-NAR-203",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "coherencia de la información",
+      "enunciado": "¿Qué elementos del mapa seguían coincidiendo con el pueblo?",
+      "alternativas": [
+        "El almacén y el camino de tierra.",
+        "La panadería y el río con sus piedras.",
+        "La calle nueva y la farmacia.",
+        "El puente de madera y el edificio de tres pisos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto indica que la panadería seguía en el mismo sitio, aunque con cartel nuevo, y que el río seguía ancho y lento con las mismas piedras. El almacén, el camino, el puente y la calle sí habían cambiado."
+    },
+    {
+      "codigo": "6B-LEC-NAR-204",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "motivo de una acción",
+      "enunciado": "¿Por qué Antonia decide corregir el mapa en lugar de botarlo?",
+      "alternativas": [
+        "Porque quiere venderlo como objeto antiguo.",
+        "Porque si borra lo anterior parecería que el pueblo siempre fue como es ahora.",
+        "Porque su padre le pidió que lo hiciera.",
+        "Porque necesita practicar la letra pequeña."
+      ],
+      "clave": "B",
+      "justificacion": "Antonia lo explica en la última línea: corrige el mapa conservando lo anterior «para que se entienda el cambio», porque borrarlo daría la impresión falsa de que el pueblo no cambió. El padre, de hecho, le pregunta por qué lo arregla."
+    },
+    {
+      "codigo": "6B-LEC-NAR-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué idea sobre el paso del tiempo expresa mejor el cuento?",
+      "alternativas": [
+        "Que todo cambio es una pérdida que conviene lamentar.",
+        "Que los cambios del lugar se entienden mejor cuando se conserva el registro de cómo era antes.",
+        "Que los mapas son el único modo de conocer un lugar.",
+        "Que los pueblos chicos nunca cambian."
+      ],
+      "clave": "B",
+      "justificacion": "Antonia conserva el mapa y le agrega lo nuevo, en vez de reemplazarlo o botarlo. El cuento no plantea el cambio como pérdida: muestra que al superponer las dos versiones del pueblo se entiende mejor lo que ocurrió."
+    }
+  ]
+}

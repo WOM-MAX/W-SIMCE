@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-POE-201",
+    "titulo": "Oficio de la madrugada",
+    "tipo": "poético",
+    "palabras": 108,
+    "cuerpo": "A las cuatro de la mañana\nla ciudad tiene otro dueño:\nel que barre la vereda\ncon un escobón de fierro.\n\nSu sombra va por delante,\nmás larga que el mismo suelo,\ny el ruido del agua sucia\ndespierta a los que durmieron.\n\nCuando el sol sale de arriba\nya no está. Se fue temprano.\nLa calle quedó barrida\ny nadie sabe por quién.\n\nPor eso escribo este verso\na la hora en que nadie mira:\nla ciudad se ve distinta\ncuando la limpia el que limpia."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-POE-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué hace el personaje del poema a las cuatro de la mañana?",
+      "alternativas": [
+        "Duerme en la vereda con un escobón.",
+        "Barre la vereda con un escobón de fierro.",
+        "Riega la calle con agua limpia.",
+        "Espera a que salga el sol."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que a las cuatro de la mañana la ciudad tiene otro dueño, el que barre la vereda con un escobón de fierro."
+    },
+    {
+      "codigo": "6B-LEC-POE-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "lenguaje figurado",
+      "enunciado": "¿Qué quiere decir que «la ciudad tiene otro dueño» a esa hora?",
+      "alternativas": [
+        "Que la ciudad cambió de autoridades.",
+        "Que a esa hora la ciudad está en manos de quien trabaja mientras los demás duermen.",
+        "Que el dueño de la ciudad vive en la vereda.",
+        "Que la ciudad está abandonada de noche."
+      ],
+      "clave": "B",
+      "justificacion": "La expresión es figurada: no habla de propiedad ni de autoridades, sino de que en la madrugada la ciudad pertenece a quien la recorre y la limpia, cuando no hay nadie más en la calle."
+    },
+    {
+      "codigo": "6B-LEC-POE-203",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una estrofa",
+      "enunciado": "¿Qué indica la estrofa que dice «cuando el sol sale de arriba ya no está. Se fue temprano»?",
+      "alternativas": [
+        "Que el personaje se va antes de que amanezca y casi nadie lo ve.",
+        "Que el personaje se esconde del sol porque le hace daño.",
+        "Que el sol sale antes de las cuatro de la mañana.",
+        "Que el personaje se muda a otra ciudad."
+      ],
+      "clave": "A",
+      "justificacion": "La estrofa cierra con que la calle quedó barrida y nadie sabe por quién. Eso indica que el trabajo se hizo antes de que la ciudad despertara, y que el personaje se retira sin ser visto."
+    },
+    {
+      "codigo": "6B-LEC-POE-204",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "intención del hablante",
+      "enunciado": "¿Por qué el hablante dice que escribe el verso «a la hora en que nadie mira»?",
+      "alternativas": [
+        "Porque no tiene otro momento del día para escribir.",
+        "Porque quiere dar a conocer un trabajo que normalmente no se ve.",
+        "Porque de noche se ve mejor el papel.",
+        "Porque así lo exige la estructura del poema."
+      ],
+      "clave": "B",
+      "justificacion": "El poema contrapone la hora en que nadie mira con el trabajo que se hace justamente a esa hora. El hablante hace visible lo que pasa mientras la ciudad duerme y nadie lo nota."
+    },
+    {
+      "codigo": "6B-LEC-POE-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "efecto del cierre",
+      "enunciado": "El último verso dice que la ciudad se ve distinta «cuando la limpia el que limpia». ¿Qué efecto produce esa repetición?",
+      "alternativas": [
+        "Enfatiza que el resultado depende del trabajo de esa persona concreta, que suele pasar inadvertida.",
+        "Indica que hay varias personas encargadas de limpiar la ciudad.",
+        "Muestra que la ciudad se ve igual a cualquier hora.",
+        "Señala que el hablante no sabe quién limpia la calle."
+      ],
+      "clave": "A",
+      "justificacion": "La repetición del verbo en el mismo verso junta la acción con quien la hace. El poema completo insiste en que ese trabajo ocurre sin testigos, y el cierre devuelve la atención a la persona que lo realiza."
+    }
+  ]
+}

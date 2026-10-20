@@ -1,0 +1,88 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DIS-201",
+    "titulo": "Torneo interescolar de debate",
+    "tipo": "informativo-discontinuo",
+    "palabras": 176,
+    "cuerpo": "TORNEO INTERESCOLAR DE DEBATE\nBases de participación\n\nCATEGORÍAS\nSéptimo y octavo: categoría intermedia, equipos de 3 estudiantes.\nPrimero y segundo medio: categoría superior, equipos de 4 estudiantes.\n\nETAPAS\n1. Inscripción: hasta el 12 de mayo, en la coordinación de cada colegio.\n2. Ronda clasificatoria: 26 de mayo, en el colegio sede.\n3. Semifinal: 2 de junio.\n4. Final: 9 de junio, en el auditorio municipal.\n\nREGLAS\nCada equipo presenta su postura en 5 minutos y luego responde 3 preguntas del jurado.\nNo se permite leer el discurso completo: solo se admiten apuntes con ideas principales.\nEl jurado evalúa claridad, uso de fuentes y capacidad de responder.\n\nSANCIONES\nLlegar más de 10 minutos tarde implica la pérdida del turno de palabra.\nUsar argumentos que ataquen a una persona y no a una idea resta puntaje.\n\nPREMIOS\nEl equipo ganador recibe un set de libros para su colegio y la sede de la final del año siguiente."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DIS-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de bases",
+      "enunciado": "¿Cuántos estudiantes forman un equipo de la categoría superior?",
+      "alternativas": ["3", "4", "5", "6"],
+      "clave": "B",
+      "justificacion": "Las bases indican que la categoría superior, de primero y segundo medio, forma equipos de 4 estudiantes. Los equipos de 3 corresponden a la categoría intermedia."
+    },
+    {
+      "codigo": "6B-LEC-DIS-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "extraer información",
+      "conocimiento": "secuencia de etapas",
+      "enunciado": "¿Qué etapa se realiza en el auditorio municipal?",
+      "alternativas": [
+        "La ronda clasificatoria.",
+        "La semifinal.",
+        "La final.",
+        "La inscripción."
+      ],
+      "clave": "C",
+      "justificacion": "La etapa 4, la final del 9 de junio, se realiza en el auditorio municipal. La clasificatoria es en el colegio sede y de la semifinal no se indica lugar."
+    },
+    {
+      "codigo": "6B-LEC-DIS-203",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "propósito de una regla",
+      "enunciado": "¿Para qué se prohíbe leer el discurso completo?",
+      "alternativas": [
+        "Para que los debates duren menos tiempo.",
+        "Para que el equipo argumente con sus propias palabras y no solo lea un texto escrito.",
+        "Para que el jurado no tenga que leer los discursos.",
+        "Para evitar que los equipos usen fuentes."
+      ],
+      "clave": "B",
+      "justificacion": "Las bases permiten apuntes con ideas principales pero no leer el discurso completo. La regla apunta a que la presentación sea una exposición oral propia, y además el jurado evalúa la capacidad de responder."
+    },
+    {
+      "codigo": "6B-LEC-DIS-204",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de las bases",
+      "enunciado": "Un equipo de segundo medio llega 15 minutos tarde a la semifinal. ¿Qué consecuencia corresponde según las bases?",
+      "alternativas": [
+        "Queda eliminado del torneo.",
+        "Pierde el turno de palabra.",
+        "Debe pagar una multa al colegio sede.",
+        "Puede participar, pero sin derecho a premio."
+      ],
+      "clave": "B",
+      "justificacion": "Las sanciones indican que llegar más de 10 minutos tarde implica la pérdida del turno de palabra. Quince minutos superan ese límite. Las bases no mencionan eliminación ni multas por atraso."
+    },
+    {
+      "codigo": "6B-LEC-DIS-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de criterios",
+      "enunciado": "Un equipo responde todas las preguntas del jurado, pero ataca la personalidad del equipo contrario y no sus ideas. ¿Cómo se evalúa su desempeño según las bases?",
+      "alternativas": [
+        "Recibe el puntaje completo, porque respondió todo.",
+        "Pierde puntaje, porque atacar a una persona en lugar de una idea está sancionado.",
+        "Es descalificado automáticamente del torneo.",
+        "No se evalúa, porque las sanciones no afectan el puntaje."
+      ],
+      "clave": "B",
+      "justificacion": "Las bases señalan que usar argumentos que atacan a una persona y no a una idea resta puntaje. Se trata de una pérdida de puntos, no de una descalificación, y por eso afecta la evaluación del jurado."
+    }
+  ]
+}
