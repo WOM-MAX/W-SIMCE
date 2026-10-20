@@ -26,10 +26,18 @@ if (!nivel || !asignatura) {
   process.exit(1);
 }
 
-const eje = await prisma.eje.findFirst({
-  where: { nivelId: nivel.id, asignaturaId: asignatura.id, clave: datos.eje },
+const ejesDelNivel = await prisma.eje.findMany({
+  where: { nivelId: nivel.id, asignaturaId: asignatura.id },
+  select: { id: true, clave: true, nombre: true },
 });
-if (!eje) {
+
+const buscarEje = (clave) => ejesDelNivel.find((e) => e.clave === clave);
+
+if (!datos.eje && !datos.items.every((i) => i.eje)) {
+  console.error('Falta el eje, en el archivo o en cada item.');
+  process.exit(1);
+}
+if (datos.eje && !buscarEje(datos.eje)) {
   console.error(`Eje inexistente para esa combinacion: ${datos.eje}`);
   process.exit(1);
 }
@@ -40,6 +48,12 @@ const omitidos = [];
 
 for (const it of datos.items) {
   const etiqueta = it.codigo ?? '(sin codigo)';
+  const claveEje = it.eje ?? datos.eje;
+  const eje = buscarEje(claveEje);
+  if (!eje) {
+    problemas.push(`${etiqueta}: eje inexistente (${claveEje}).`);
+    continue;
+  }
 
   if (!it.enunciado || !it.clave) {
     problemas.push(`${etiqueta}: falta enunciado o clave.`);
@@ -111,7 +125,7 @@ for (const it of datos.items) {
 }
 
 console.log('LOTE:', datos.lote ?? ruta);
-console.log('EJE:', eje.nombre);
+console.log('EJE:', datos.eje ?? 'varios');
 console.log('CREADOS:', creados.length);
 for (const c of creados) console.log('  ' + c);
 if (omitidos.length) {
