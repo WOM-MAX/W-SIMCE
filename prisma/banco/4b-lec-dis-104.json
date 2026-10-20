@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DIS-104",
+    "titulo": "Cartelera del cine del barrio",
+    "tipo": "informativo-discontinuo",
+    "palabras": 96,
+    "cuerpo": "CINE DEL BARRIO\nProgramación del sábado 22 de noviembre\n\nPELÍCULA | SALA | HORARIO | DURACIÓN\nEl faro de los pájaros | 1 | 15:00 | 1 h 40 min\nLa máquina del abuelo | 2 | 16:30 | 1 h 25 min\nEl faro de los pájaros | 1 | 18:00 | 1 h 40 min\nLa máquina del abuelo | 2 | 19:15 | 1 h 25 min\nViaje al fondo del mar | 3 | 20:00 | 2 h 05 min\n\nENTRADAS\nGeneral: $4.500\nNiños hasta 12 años: $3.000\nMiércoles: dos entradas generales por el precio de una."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DIS-116",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de cartelera",
+      "enunciado": "¿A qué hora comienza la función de Viaje al fondo del mar?",
+      "alternativas": [
+        "A las 18:00.",
+        "A las 19:15.",
+        "A las 20:00.",
+        "A las 16:30."
+      ],
+      "clave": "C",
+      "justificacion": "En la cartelera, la fila de Viaje al fondo del mar indica sala 3 y horario 20:00. Las otras horas corresponden a las demás películas."
+    },
+    {
+      "codigo": "4B-LEC-DIS-117",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de precios",
+      "enunciado": "Un adulto y un niño de 9 años quieren ver la función de las 15:00. ¿Cuánto pagan entre los dos?",
+      "alternativas": [
+        "$4.500",
+        "$7.500",
+        "$9.000",
+        "$3.000"
+      ],
+      "clave": "B",
+      "justificacion": "El adulto paga la entrada general de $4.500 y el niño, por tener menos de 12 años, paga $3.000. Entre los dos son $4.500 + $3.000 = $7.500."
+    },
+    {
+      "codigo": "4B-LEC-DIS-118",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de datos",
+      "enunciado": "¿Cuál es la película más larga de la cartelera?",
+      "alternativas": [
+        "El faro de los pájaros.",
+        "La máquina del abuelo.",
+        "Viaje al fondo del mar.",
+        "Las tres duran lo mismo."
+      ],
+      "clave": "C",
+      "justificacion": "Las duraciones son 1 h 40 min, 1 h 25 min y 2 h 05 min. La más larga es Viaje al fondo del mar, con dos horas y cinco minutos."
+    },
+    {
+      "codigo": "4B-LEC-DIS-119",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "uso de promociones",
+      "enunciado": "Dos adultos quieren ver El faro de los pájaros un miércoles. ¿Cuánto pagan por las dos entradas?",
+      "alternativas": [
+        "$4.500",
+        "$6.000",
+        "$9.000",
+        "$3.000"
+      ],
+      "clave": "A",
+      "justificacion": "La promoción del miércoles ofrece dos entradas generales por el precio de una. Entonces los dos adultos pagan $4.500 en total, el valor de una entrada general."
+    },
+    {
+      "codigo": "4B-LEC-DIS-120",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una decisión",
+      "enunciado": "Una familia llega a las 17:40 con dos niños y quiere ver una película que empiece después de las 18:00 y dure menos de dos horas. ¿Qué función les conviene?",
+      "alternativas": [
+        "La de El faro de los pájaros a las 18:00.",
+        "La de La máquina del abuelo a las 19:15.",
+        "La de Viaje al fondo del mar a las 20:00.",
+        "Ninguna, porque todas empiezan antes de las 18:00."
+      ],
+      "clave": "B",
+      "justificacion": "La de las 18:00 no sirve porque empieza antes de las 17:40 más el tiempo de llegada, y la de las 20:00 dura 2 h 05 min, más de dos horas. La de las 19:15 empieza después de las 18:00 y dura 1 h 25 min."
+    }
+  ]
+}

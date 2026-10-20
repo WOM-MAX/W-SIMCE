@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-106",
+    "titulo": "El cuaderno de las palabras raras",
+    "tipo": "narrativo",
+    "palabras": 292,
+    "cuerpo": "Ramiro tenía un cuaderno chico, de tapas azules, que nadie podía mirar. En la primera página había escrito: «Palabras que no entiendo».\n\nCada vez que escuchaba una palabra que no conocía, la anotaba. Después, con paciencia, buscaba qué significaba y escribía una frase con ella. El cuaderno ya iba por la página veinte.\n\nUn martes, la profesora preguntó qué significaba «efímero» en el poema que estaban leyendo. Nadie levantó la mano. Ramiro miró su cuaderno de reojo, dudó y no dijo nada.\n\nMás tarde, en el recreo, la profesora se le acercó.\n\n—Vi que mirabas el cuaderno —dijo—. ¿La tenías?\n\n—Sí —contestó Ramiro—. Pero me dio vergüenza que se rieran.\n\n—¿De qué se iban a reír?\n\n—De que tengo un cuaderno de palabras.\n\nLa profesora no dijo nada entonces. Al viernes siguiente llegó con una caja de cuadernos del mismo tamaño y tapas de colores.\n\n—Vamos a hacer algo —dijo al curso—. Cada uno va a anotar las palabras que no entiende, y los viernes compartimos tres. Las que nadie sepa, las buscamos entre todos.\n\nRamiro fue el primero en leer la suya. Leyó «efímero» y explicó que significaba algo que dura muy poco, como la espuma del mar o un charco al sol.\n\nDespués de eso, el cuaderno azul dejó de ser secreto. En marzo ya no era el único: en el curso había treinta y dos cuadernos, cada uno con su letra y su lista.\n\nEl último viernes, la profesora anotó algo en la pizarra. Era una palabra que Ramiro había buscado en octubre, en la página cuatro: «compartir», y al lado escribió su definición."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-126",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Para qué usaba Ramiro el cuaderno azul?",
+      "alternativas": [
+        "Para anotar las tareas del colegio.",
+        "Para anotar las palabras que no entendía y escribir una frase con cada una.",
+        "Para dibujar durante el recreo.",
+        "Para prestárselo a sus compañeros."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que en la primera página escribió «Palabras que no entiendo» y que cada vez que escuchaba una palabra desconocida la anotaba, buscaba su significado y escribía una frase con ella."
+    },
+    {
+      "codigo": "4B-LEC-NAR-127",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Qué hizo la profesora el viernes después de saber que Ramiro tenía el cuaderno?",
+      "alternativas": [
+        "Le pidió el cuaderno para revisarlo delante del curso.",
+        "Trajo cuadernos para todos e hizo que cada uno anotara sus palabras y compartieran tres cada viernes.",
+        "Le dijo que contara frente al curso qué le daba vergüenza.",
+        "Le preguntó si quería leer en voz alta su palabra al día siguiente."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el viernes siguiente llegó con una caja de cuadernos del mismo tamaño y propuso al curso anotar las palabras que no entiende y compartir tres los viernes."
+    },
+    {
+      "codigo": "4B-LEC-NAR-128",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivos de un personaje",
+      "enunciado": "¿Por qué Ramiro no contestó en clase aunque sabía el significado de «efímero»?",
+      "alternativas": [
+        "Porque no estaba seguro de que su respuesta fuera correcta.",
+        "Porque tenía miedo de que se rieran de él por tener un cuaderno de palabras.",
+        "Porque no había escuchado la pregunta de la profesora.",
+        "Porque el cuaderno estaba en su casa ese día."
+      ],
+      "clave": "B",
+      "justificacion": "En el recreo Ramiro lo explica: le dio vergüenza que se rieran de que tenia un cuaderno de palabras. Sí sabía el significado, y el cuaderno lo tenía con él."
+    },
+    {
+      "codigo": "4B-LEC-NAR-129",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Por qué la profesora eligió justamente la palabra «compartir» para escribirla en la pizarra el último viernes?",
+      "alternativas": [
+        "Porque era la palabra más difícil del cuaderno de Ramiro.",
+        "Porque era una de las palabras que Ramiro había buscado y resume lo que ocurrió con los cuadernos del curso.",
+        "Porque la palabra aparecía en el poema que leyeron en octubre.",
+        "Porque era la única palabra que el curso no había podido definir."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que era una palabra que Ramiro había buscado en octubre, en la página cuatro. Al escribirla, la profesora devuelve el gesto: lo que empezó como un secreto terminó siendo algo común a los treinta y dos cuadernos."
+    },
+    {
+      "codigo": "4B-LEC-NAR-130",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Cuál es el cambio más importante que ocurre en el curso?",
+      "alternativas": [
+        "Que Ramiro aprende más palabras que sus compañeros.",
+        "Que anotar las palabras que no se entienden deja de ser un secreto y pasa a ser algo que todos hacen.",
+        "Que la profesora cambia el poema que estaban leyendo.",
+        "Que Ramiro deja de tener vergüenza de leer en voz alta para siempre."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el cuaderno azul dejó de ser secreto y que en marzo había treinta y dos cuadernos. El cambio está en el grupo, no solo en Ramiro."
+    }
+  ]
+}

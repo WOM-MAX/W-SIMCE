@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-105",
+    "titulo": "Qué pasa con el vidrio que reciclamos",
+    "tipo": "informativo",
+    "palabras": 286,
+    "cuerpo": "Una botella de vidrio puede reciclarse muchas veces sin perder calidad. Ese es uno de los pocos materiales que se puede fundir y volver a usar una y otra vez, casi sin límite.\n\nEl camino empieza en el contenedor. El vidrio que dejamos ahí se junta con el de otros barrios y llega a una planta. Lo primero es separarlo por color, porque el verde, el ámbar y el transparente no se mezclan: cada uno se funde por separado para no arruinar el color final.\n\nDespués se lava para quitar tapas, etiquetas y restos de líquido. Luego se tritura hasta quedar como arena gruesa. Esa arena de vidrio se llama calcín.\n\nEl calcín entra a un horno a más de mil cuatrocientos grados. Ahí se derrite y se convierte en una masa líquida que se sopla o se moldea en botellas nuevas. El proceso completo puede demorar menos de un mes.\n\nUsar calcín tiene una ventaja: se funde a menor temperatura que la arena y los minerales con que se fabrica el vidrio nuevo. Por eso se gasta menos energía.\n\nLo que no sirve es el vidrio de las ventanas, los espejos y las ampolletas, porque tienen mezclas distintas y se rompen de otra manera. Si ese vidrio entra al contenedor, puede dañar el lote completo: una sola pieza del tipo equivocado obliga a separar todo de nuevo."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-121",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué el vidrio se separa por color antes de reciclarlo?",
+      "alternativas": [
+        "Porque cada color se vende a un precio distinto.",
+        "Porque los colores no se mezclan: cada uno se funde por separado para no arruinar el color final.",
+        "Porque el vidrio transparente se rompe más fácil que el verde.",
+        "Porque el horno no alcanza la temperatura para todos los colores juntos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el verde, el ámbar y el transparente no se mezclan, y que cada uno se funde por separado para no arruinar el color final."
+    },
+    {
+      "codigo": "4B-LEC-INF-122",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario técnico",
+      "enunciado": "El texto llama calcín a un material. ¿Qué es el calcín?",
+      "alternativas": [
+        "El vidrio triturado hasta quedar como arena gruesa.",
+        "La masa líquida que sale del horno.",
+        "El polvo que queda después de lavar las botellas.",
+        "El contenedor donde se deja el vidrio."
+      ],
+      "clave": "A",
+      "justificacion": "El texto explica que el vidrio se tritura hasta quedar como arena gruesa y que esa arena de vidrio se llama calcín, la que después entra al horno."
+    },
+    {
+      "codigo": "4B-LEC-INF-123",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Cuál es la ventaja de usar calcín en lugar de arena y minerales nuevos?",
+      "alternativas": [
+        "Que se funde a menor temperatura y se gasta menos energía.",
+        "Que se puede fundir sin horno.",
+        "Que no necesita lavarse antes de usarse.",
+        "Que permite mezclar los tres colores a la vez."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que el calcín se funde a menor temperatura que la arena y los minerales del vidrio nuevo, y por eso se gasta menos energía."
+    },
+    {
+      "codigo": "4B-LEC-INF-124",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "consecuencias de una acción",
+      "enunciado": "¿Por qué una sola pieza de vidrio de ventana puede dañar todo un lote?",
+      "alternativas": [
+        "Porque el vidrio de ventana pesa más y rompe el contenedor.",
+        "Porque tiene una mezcla distinta, y al fundirse junto al resto arruina el material.",
+        "Porque ocupa el lugar de muchas botellas dentro del horno.",
+        "Porque el vidrio de ventana no se puede lavar."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que las ventanas, los espejos y las ampolletas tienen mezclas distintas. Al entrar al contenedor obligan a separar todo de nuevo, porque no se funden igual que las botellas."
+    },
+    {
+      "codigo": "4B-LEC-INF-125",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Un compañero dice que el vidrio reciclado sirve una sola vez porque pierde calidad. Según el texto, ¿qué respuesta es correcta?",
+      "alternativas": [
+        "Tiene razón: cada reciclaje deja el vidrio más delgado.",
+        "Se equivoca: el vidrio se puede fundir y volver a usar muchas veces casi sin límite.",
+        "Tiene razón, salvo el vidrio transparente, que sí se puede reusar siempre.",
+        "Se equivoca, pero solo para el vidrio verde y ámbar."
+      ],
+      "clave": "B",
+      "justificacion": "El primer párrafo dice que la botella puede reciclarse muchas veces sin perder calidad y que es uno de los pocos materiales que se puede fundir y volver a usar casi sin límite."
+    }
+  ]
+}
