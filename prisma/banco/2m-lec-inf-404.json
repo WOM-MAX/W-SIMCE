@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-404",
+    "titulo": "La memoria de los testigos",
+    "tipo": "informativo",
+    "palabras": 358,
+    "cuerpo": "Cuando una persona presencia un delito y declara lo que vio, suele suponerse que su relato es confiable porque estuvo ahí. La investigación sobre memoria muestra que esa suposición necesita matices.\n\nRecordar no funciona como reproducir una grabación. Cuando se recupera un recuerdo, este se reconstruye con la información disponible en ese momento, y en esa reconstrucción influyen las preguntas que se hicieron, las conversaciones con otros testigos y lo que la persona leyó o escuchó después.\n\nUn efecto estudiado es el de la información engañosa. Si a un testigo se le pregunta por el color de un auto que no aparecía en la escena, una parte de las personas responde con un color, como si el auto hubiera estado ahí. La pregunta introduce un elemento y el recuerdo lo incorpora.\n\nLa forma de preguntar también altera la respuesta. Preguntar a qué velocidad iban los autos «cuando chocaron» produce estimaciones más altas que preguntar «cuando se tocaron», con la misma escena. El cambio de una palabra modifica el recuerdo que se reporta.\n\nEl reconocimiento visual tiene límites parecidos. En estudios donde se muestra una fila de personas, los testigos pueden señalar a alguien que no era, sobre todo cuando el culpable verdadero no está en la fila. La seguridad que la persona declara sentir no siempre acompaña la precisión de su elección.\n\nEstos hallazgos no implican que los testigos mientan ni que sus relatos carezcan de valor. Implican que el testimonio debe recogerse con procedimientos que reduzcan la contaminación: preguntas abiertas primero, entrevistas separadas, instrucciones claras de que el culpable puede no estar en la fila y registro de la confianza antes de cualquier retroalimentación.\n\nLa memoria no es una fotografía. Es un proceso que funciona bien para recordar el sentido general de lo vivido y mucho peor para detalles precisos bajo presión."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-416",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿cómo funciona el recuerdo?",
+      "alternativas": [
+        "Como una grabación que se reproduce igual cada vez.",
+        "Se reconstruye con la información disponible en el momento, influida por lo ocurrido después.",
+        "Se conserva intacto mientras la persona no hable del tema.",
+        "Se pierde por completo después de un año."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que recordar no funciona como reproducir una grabación y que, al recuperar un recuerdo, este se reconstruye con la información disponible, en lo que influyen preguntas, conversaciones y lo leído después."
+    },
+    {
+      "codigo": "2M-LEC-INF-417",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "efecto de la formulación",
+      "enunciado": "¿Qué muestra el ejemplo de «cuando chocaron» frente a «cuando se tocaron»?",
+      "alternativas": [
+        "Que los testigos recuerdan mejor las palabras técnicas.",
+        "Que cambiar una palabra en la pregunta modifica el recuerdo que se reporta.",
+        "Que las estimaciones de velocidad siempre son exactas.",
+        "Que la escena cambió entre las dos preguntas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que con la misma escena la primera formulación produce estimaciones de velocidad más altas, y concluye que el cambio de una palabra modifica el recuerdo reportado."
+    },
+    {
+      "codigo": "2M-LEC-INF-418",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "información engañosa",
+      "enunciado": "¿Qué ocurre cuando se pregunta por un auto que no estaba en la escena?",
+      "alternativas": [
+        "Todos los testigos responden que no había ningún auto.",
+        "Una parte de las personas responde con un color, como si el auto hubiera estado ahí.",
+        "La pregunta se anula por ser inválida.",
+        "Los testigos recuerdan mejor otros detalles de la escena."
+      ],
+      "clave": "B",
+      "justificacion": "El texto describe ese efecto: la pregunta introduce un elemento y el recuerdo lo incorpora, de modo que una parte de las personas responde con un color."
+    },
+    {
+      "codigo": "2M-LEC-INF-419",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "relación entre confianza y precisión",
+      "enunciado": "¿Qué dice el texto sobre la seguridad que declara un testigo al reconocer a alguien?",
+      "alternativas": [
+        "Que la seguridad garantiza la precisión de la elección.",
+        "Que la seguridad declarada no siempre acompaña la precisión de la elección.",
+        "Que la seguridad es irrelevante y no debe registrarse.",
+        "Que los testigos seguros nunca se equivocan."
+      ],
+      "clave": "B",
+      "justificacion": "El texto advierte que la seguridad que la persona declara sentir no siempre acompaña la precisión de su elección, y por eso entre las medidas propone registrar la confianza antes de cualquier retroalimentación."
+    },
+    {
+      "codigo": "2M-LEC-INF-420",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Un fiscal sostiene que un testigo seguro es prueba suficiente. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que los testigos siempre mienten.",
+        "Que el testimonio debe recogerse con procedimientos que reduzcan la contaminación, porque la seguridad no equivale a precisión.",
+        "Que ningún testimonio tiene valor en un juicio.",
+        "Que la memoria es una grabación y no se contamina."
+      ],
+      "clave": "B",
+      "justificacion": "El texto aclara que los hallazgos no implican que los testigos mientan ni que sus relatos carezcan de valor, y propone procedimientos concretos para reducir la contaminación, entre ellos el registro de la confianza."
+    }
+  ]
+}

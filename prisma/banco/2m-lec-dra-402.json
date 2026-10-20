@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DRA-402",
+    "titulo": "El proyecto del humedal",
+    "tipo": "dramático",
+    "palabras": 330,
+    "cuerpo": "(Sala de reuniones de la junta de vecinos. Cuatro personas. En la pared, un plano del sector con una zona marcada en verde. ANDREA, del comité ambiental, señala el plano. FREDES, el presidente, toma notas. LUZ, dueña de un terreno colindante, tiene una carpeta. El ingeniero SOTO revisa una tablet.)\n\nANDREA: El humedal filtra el agua del sector. Si se rellena, el agua no tiene dónde ir.\n\nSOTO: Con el proyecto de la inmobiliaria también hay una solución. Se instala un sistema de drenaje.\n\nANDREA: Un drenaje saca el agua. No la filtra.\n\nSOTO: No es el mismo humedal, es cierto. Pero el terreno queda utilizable.\n\nFREDES: ¿Cuánto cuesta el drenaje?\n\nSOTO: Está en el estudio, con cargo a la inmobiliaria.\n\nLUZ: (Abre la carpeta.) Yo tengo el terreno al lado. Si el agua se desvía, sale por mi propiedad.\n\nSOTO: Eso se resuelve con un colector.\n\nLUZ: ¿Y quién paga el colector?\n\nSOTO: Eso no está definido en esta etapa.\n\nFREDES: (Deja el lápiz.) Tenemos un problema y dos propuestas. Una mantiene el humedal y la otra lo reemplaza con una obra cuyo costo no está calculado.\n\nANDREA: Y una tercera opción, que nadie ha puesto sobre la mesa: construir en la parte alta del terreno y dejar el humedal intacto.\n\nSOTO: Eso reduce la cantidad de sitios del proyecto.\n\nANDREA: Reduce la cantidad de sitios. No inunda a nadie.\n\nFREDES: Ingeniero, ¿esa opción es técnicamente posible?\n\nSOTO: (Pausa.) Es posible. Es menos rentable.\n\nLUZ: Entonces la pregunta es otra.\n\nFREDES: (Escribe.) Anótenlo así. No es un problema técnico. Es una decisión sobre qué se prefiere.\n\nANDREA: Y esa decisión la tomamos entre todos, no la inmobiliaria.\n\n(SOTO deja la tablet sobre la mesa.)"
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DRA-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es la función del humedal, según Andrea?",
+      "alternativas": [
+        "Servir de espacio recreativo para el sector.",
+        "Filtrar el agua del sector.",
+        "Aumentar el valor de los terrenos colindantes.",
+        "Almacenar agua para el riego agrícola."
+      ],
+      "clave": "B",
+      "justificacion": "Andrea lo dice al comienzo: el humedal filtra el agua del sector, y si se rellena el agua no tiene dónde ir. Después contrasta esa función con la de un drenaje, que saca el agua."
+    },
+    {
+      "codigo": "2M-LEC-DRA-407",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "distinción entre propuestas",
+      "enunciado": "¿En qué se diferencian las dos propuestas iniciales?",
+      "alternativas": [
+        "Una mantiene el humedal y la otra lo reemplaza por una obra de drenaje.",
+        "Una cuesta más y la otra menos, sin otros cambios.",
+        "Una es municipal y la otra privada.",
+        "Una se aplica al agua y la otra al terreno."
+      ],
+      "clave": "A",
+      "justificacion": "Fredes resume las dos propuestas: una mantiene el humedal y la otra lo reemplaza con una obra cuyo costo no está calculado. La diferencia es la función que se conserva o se pierde."
+    },
+    {
+      "codigo": "2M-LEC-DRA-408",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "interés de un personaje",
+      "enunciado": "¿Qué aporta la intervención de Luz?",
+      "alternativas": [
+        "Un dato sobre un efecto que no estaba considerado: el agua desviada saldría por su terreno.",
+        "Una oferta para comprar el humedal.",
+        "Un estudio técnico sobre el colector.",
+        "Una propuesta para ampliar el proyecto inmobiliario."
+      ],
+      "clave": "A",
+      "justificacion": "Luz informa que tiene el terreno al lado y que si el agua se desvía saldría por su propiedad. Además pregunta quién pagaría el colector, un punto que el ingeniero reconoce no estar definido."
+    },
+    {
+      "codigo": "2M-LEC-DRA-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "distinción entre lo técnico y lo decisional",
+      "enunciado": "Cuando se plantea la tercera opción, el ingeniero responde que es posible pero menos rentable. ¿Qué revela esa respuesta?",
+      "alternativas": [
+        "Que la opción no es viable técnicamente.",
+        "Que el obstáculo no es técnico sino de rentabilidad, es decir, una decisión sobre qué se prefiere.",
+        "Que el humedal no cumple ninguna función.",
+        "Que la inmobiliaria ya decidió no construir."
+      ],
+      "clave": "B",
+      "justificacion": "Soto admite que la opción es posible y agrega que es menos rentable. Fredes reformula el asunto como una decisión sobre qué se prefiere, y no como un problema técnico, y así queda escrito."
+    },
+    {
+      "codigo": "2M-LEC-DRA-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido de la escena",
+      "enunciado": "¿Qué muestra la escena sobre el modo de tomar una decisión pública?",
+      "alternativas": [
+        "Que basta con la opinión del especialista porque domina los datos.",
+        "Que es necesario separar los hechos técnicos de la elección sobre prioridades, y decidir entre todos.",
+        "Que los vecinos no deberían intervenir en asuntos de construcción.",
+        "Que la rentabilidad debe ser el criterio principal."
+      ],
+      "clave": "B",
+      "justificacion": "La escena separa explícitamente los dos planos: el ingeniero aporta la viabilidad técnica y los vecinos establecen que la preferencia se decide colectivamente. La última acotación, con Soto dejando la tablet, cierra ese desplazamiento."
+    }
+  ]
+}

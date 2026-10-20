@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-POE-403",
+    "titulo": "El idioma de mi madre",
+    "tipo": "poético",
+    "palabras": 122,
+    "cuerpo": "Mi madre dice «agarrar»\ndonde el diccionario dice «tomar».\nDice «haiga» y la maestra\nle corrigió una vez, delante de todos.\n\nDesde entonces habla poco\nen las reuniones del colegio.\nResponde con la cabeza,\nfirma donde hay que firmar.\n\nPero en la cocina, sola,\ncanta en su idioma entero,\ncon las palabras que la maestra\ntachó de su cuaderno.\n\nYo aprendí a hablar en la calle\ny a callarme en la sala de clases.\nElla aprendió lo contrario:\nhabla en la cocina, calla en la mesa.\n\nUn día le pregunté por qué.\nMe dijo: «Porque las palabras\nque a uno le corrigieron de niño\nse le quedan en la boca, como piedras»."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-POE-411",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué le ocurrió a la madre en una reunión de colegio?",
+      "alternativas": [
+        "Se quedó sin voz al cantar.",
+        "La maestra la corrigió delante de todos por decir «haiga».",
+        "Se negó a firmar un documento.",
+        "Le pidieron que cantara en su idioma."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que la madre dice «haiga» y que la maestra le corrigió una vez, delante de todos. Desde entonces habla poco en las reuniones."
+    },
+    {
+      "codigo": "2M-LEC-POE-412",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "contraste de espacios",
+      "enunciado": "¿Qué contraste establece el poema entre la cocina y la sala de clases?",
+      "alternativas": [
+        "En la cocina la madre canta con todas sus palabras; en la sala de clases calla.",
+        "En la cocina trabaja y en la sala de clases enseña.",
+        "En la cocina habla en otro idioma y en la sala en el suyo.",
+        "En la cocina no habla y en la sala sí."
+      ],
+      "clave": "A",
+      "justificacion": "El poema muestra que en la cocina, sola, la madre canta en su idioma entero con las palabras que la maestra tachó, mientras en las reuniones del colegio responde solo con la cabeza."
+    },
+    {
+      "codigo": "2M-LEC-POE-413",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "efecto de una imagen",
+      "enunciado": "La madre dice que las palabras corregidas en la infancia «se le quedan en la boca, como piedras». ¿Qué sugiere esa imagen?",
+      "alternativas": [
+        "Que las palabras son difíciles de pronunciar.",
+        "Que esas correcciones dejan una marca que dificulta hablar después.",
+        "Que la madre tiene problemas de salud.",
+        "Que las palabras del idioma materno son más pesadas."
+      ],
+      "clave": "B",
+      "justificacion": "La imagen de las piedras en la boca asocia las palabras corregidas con un obstáculo para hablar. El poema lo confirma al mostrar que la madre dejó de hablar en las reuniones después de la corrección."
+    },
+    {
+      "codigo": "2M-LEC-POE-414",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una simetría",
+      "enunciado": "El hablante dice que aprendió «a hablar en la calle y a callarme en la sala de clases», y que ella aprendió lo contrario. ¿Qué muestra esa simetría?",
+      "alternativas": [
+        "Que los dos tienen el mismo problema para expresarse.",
+        "Que los dos aprendieron a callar en un espacio distinto, según dónde su forma de hablar fue aceptada.",
+        "Que el hablante habla mejor que su madre.",
+        "Que la madre nunca aprendió el idioma de la escuela."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante calla en la sala de clases y habla en la calle; la madre habla en la cocina y calla en la mesa. En ambos casos hay un espacio donde la forma de hablar propia fue aceptada y otro donde no."
+    },
+    {
+      "codigo": "2M-LEC-POE-415",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué critica el poema, a partir de la corrección de una palabra?",
+      "alternativas": [
+        "El uso incorrecto del idioma en la escuela.",
+        "El efecto de corregir la forma de hablar de alguien delante de otros.",
+        "La falta de diccionarios en las escuelas.",
+        "El exceso de reuniones de apoderados."
+      ],
+      "clave": "B",
+      "justificacion": "El poema no defiende el uso de «haiga» ni la norma escolar: muestra la consecuencia de una corrección pública, que llevó a la madre a callar en ese espacio durante años y a dejar esas palabras para la cocina."
+    }
+  ]
+}
