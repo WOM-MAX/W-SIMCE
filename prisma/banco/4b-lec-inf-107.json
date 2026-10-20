@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-107",
+    "titulo": "Cómo llega el agua a la llave",
+    "tipo": "informativo",
+    "palabras": 262,
+    "cuerpo": "El agua que sale de la llave no siempre fue potable. Antes de llegar a la casa pasa por una planta donde se limpia en varias etapas.\n\nPrimero se saca de un río o de una vertiente y entra a la planta por unas rejas gruesas que atrapan ramas, hojas y basura. Después pasa a unos estanques grandes donde se deja reposar. Ahí la arena y el barro se van al fondo por su propio peso.\n\nLas partículas más finas no caen solas. Para eso se agrega un producto que las junta en grupos más grandes y pesados, que también terminan en el fondo.\n\nEn la siguiente etapa el agua atraviesa capas de arena y piedra. Esa filtración retiene lo que quedó flotando.\n\nFalta lo que no se ve. Al agua filtrada se le agrega una pequeña cantidad de cloro, que elimina los microorganismos que pueden causar enfermedades. Esa es la etapa más importante para que el agua se pueda beber.\n\nPor último, el agua limpia se guarda en estanques cerrados y se bombea por las cañerías de la ciudad.\n\nEn la casa todavía hay que cuidarla. Si una cañería vieja tiene una fisura, puede entrar tierra y el agua se contamina en el último tramo. Por eso el agua se revisa también en distintos puntos de la red y no solo al salir de la planta."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-131",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Para qué se agrega cloro al agua?",
+      "alternativas": [
+        "Para que el agua se vea más transparente.",
+        "Para eliminar los microorganismos que pueden causar enfermedades.",
+        "Para que las partículas finas se vayan al fondo.",
+        "Para darle un sabor más agradable."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que al agua filtrada se le agrega una pequeña cantidad de cloro para eliminar los microorganismos que pueden causar enfermedades, y que es la etapa más importante para que se pueda beber."
+    },
+    {
+      "codigo": "4B-LEC-INF-132",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "secuencia de un proceso",
+      "enunciado": "¿Qué etapa del proceso retiene las partículas que quedaron flotando?",
+      "alternativas": [
+        "Las rejas gruesas de la entrada.",
+        "Los estanques donde el agua se deja reposar.",
+        "Las capas de arena y piedra por donde el agua atraviesa.",
+        "Los estanques cerrados donde se guarda el agua limpia."
+      ],
+      "clave": "C",
+      "justificacion": "El texto dice que en esa etapa el agua atraviesa capas de arena y piedra, y que esa filtración retiene lo que quedó flotando. Las rejas atrapan ramas y basura, y el reposo hace caer arena y barro."
+    },
+    {
+      "codigo": "4B-LEC-INF-133",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué se agrega un producto que junta las partículas finas en grupos?",
+      "alternativas": [
+        "Porque las partículas finas no caen solas al fondo por su propio peso.",
+        "Porque así el agua queda con más minerales.",
+        "Porque ese producto elimina los microorganismos.",
+        "Porque las partículas finas tapan las rejas de la entrada."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice expresamente que las partículas más finas no caen solas y que, al juntarlas en grupos más grandes y pesados, también terminan en el fondo. Eliminar microorganismos es la tarea del cloro."
+    },
+    {
+      "codigo": "4B-LEC-INF-134",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "consecuencias de un problema",
+      "enunciado": "Según el texto, ¿cómo puede contaminarse el agua después de salir limpia de la planta?",
+      "alternativas": [
+        "Si se guarda demasiado tiempo en el estanque cerrado.",
+        "Si entra tierra por una fisura de una cañería vieja.",
+        "Si se le agrega cloro en exceso.",
+        "Si el agua pasa por las capas de arena demasiado rápido."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que si una cañería vieja tiene una fisura puede entrar tierra y el agua se contamina en el último tramo. Por eso se revisa también en distintos puntos de la red."
+    },
+    {
+      "codigo": "4B-LEC-INF-135",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Un estudiante dice que, como el agua sale limpia de la planta, no hace falta revisarla después. Según el texto, ¿qué le falta considerar?",
+      "alternativas": [
+        "Que el agua puede contaminarse en el recorrido por las cañerías.",
+        "Que la planta no siempre funciona bien.",
+        "Que el cloro desaparece con el tiempo.",
+        "Que el agua de la llave no es potable en ninguna ciudad."
+      ],
+      "clave": "A",
+      "justificacion": "El último párrafo señala que una fisura en una cañería vieja puede dejar entrar tierra, y que por eso el agua se revisa también en distintos puntos de la red y no solo al salir de la planta."
+    }
+  ]
+}

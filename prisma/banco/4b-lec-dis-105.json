@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-DIS-105",
+    "titulo": "Reglamento de la biblioteca escolar",
+    "tipo": "informativo-discontinuo",
+    "palabras": 118,
+    "cuerpo": "REGLAMENTO DE LA BIBLIOTECA ESCOLAR\n\nHORARIO\nLunes a viernes, de 8:30 a 13:00 y de 14:00 a 17:00.\n\nPRÉSTAMO\nSe pueden llevar hasta 2 libros a la vez, por 7 días.\nEl préstamo se puede renovar una sola vez, si el libro no está pedido por otra persona.\n\nDEVOLUCIÓN\nSi un libro se devuelve con atraso, el estudiante no puede pedir otro hasta regularizar la situación.\nSi un libro se pierde, se debe reponer un título igual o de valor equivalente.\n\nUSO DE LA SALA\nSe puede estudiar y leer en la sala.\nNo se permite comer ni beber.\nLos libros que se consultan en la sala se dejan en el carro al salir."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-DIS-121",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de un reglamento",
+      "enunciado": "¿Cuántos libros se pueden llevar a la vez y por cuántos días?",
+      "alternativas": [
+        "Un libro por 7 días.",
+        "Dos libros por 7 días.",
+        "Dos libros por 14 días.",
+        "Tres libros por 7 días."
+      ],
+      "clave": "B",
+      "justificacion": "El reglamento dice que se pueden llevar hasta 2 libros a la vez, por 7 días. La renovación permite quedarse más tiempo, pero el préstamo inicial es de 7 días."
+    },
+    {
+      "codigo": "4B-LEC-DIS-122",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de restricciones",
+      "enunciado": "Un estudiante quiere renovar el préstamo de un libro, pero otro compañero lo tiene pedido. ¿Qué ocurre?",
+      "alternativas": [
+        "Puede renovarlo igual, porque tiene derecho a una renovación.",
+        "No puede renovarlo, porque el libro está pedido por otra persona.",
+        "Puede renovarlo, pero solo por tres días.",
+        "Debe devolverlo y esperar una semana para pedirlo otra vez."
+      ],
+      "clave": "B",
+      "justificacion": "El reglamento permite renovar una sola vez «si el libro no está pedido por otra persona». Como en este caso sí está pedido, la renovación no corresponde."
+    },
+    {
+      "codigo": "4B-LEC-DIS-123",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "propósito de una regla",
+      "enunciado": "¿Para qué existe la regla de no pedir otro libro si se devolvió uno con atraso?",
+      "alternativas": [
+        "Para cobrar una multa en dinero por cada día de atraso.",
+        "Para que los estudiantes devuelvan a tiempo y los libros estén disponibles para todos.",
+        "Para que nadie pueda sacar libros durante el año.",
+        "Para que los libros se queden siempre en la sala."
+      ],
+      "clave": "B",
+      "justificacion": "La regla no habla de dinero. Su efecto es que el atraso tiene una consecuencia y el estudiante regulariza la situación, lo que ayuda a que los libros circulen y los demás puedan pedirlos."
+    },
+    {
+      "codigo": "4B-LEC-DIS-124",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de un reglamento",
+      "enunciado": "Un estudiante llega a las 13:30 a devolver un libro. ¿Qué corresponde según el horario?",
+      "alternativas": [
+        "Puede entrar, porque la biblioteca abre hasta las 17:00.",
+        "No puede entrar, porque a esa hora la biblioteca está cerrada.",
+        "Puede entrar, pero solo para dejar el libro en el carro.",
+        "Debe esperar hasta el día siguiente a las 8:30, porque no hay atención en la tarde."
+      ],
+      "clave": "B",
+      "justificacion": "El horario es de 8:30 a 13:00 y de 14:00 a 17:00. A las 13:30 la biblioteca está cerrada, y la atención de la tarde empieza a las 14:00."
+    },
+    {
+      "codigo": "4B-LEC-DIS-125",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una situación",
+      "enunciado": "Un estudiante ya tiene dos libros prestados, devolvió uno con tres días de atraso y ahora quiere llevarse otro. ¿Qué corresponde?",
+      "alternativas": [
+        "Puede llevarse otro, porque ya devolvió el que tenía atrasado.",
+        "No puede llevarse otro hasta regularizar el atraso, y además ya tenía dos libros.",
+        "Puede llevarse otro, pero solo por tres días.",
+        "No puede volver a pedir libros en todo el semestre."
+      ],
+      "clave": "B",
+      "justificacion": "El reglamento dice que con un atraso el estudiante no puede pedir otro libro hasta regularizar la situación. A eso se suma que el préstamo máximo es de dos libros a la vez, y el estudiante ya tenía dos."
+    }
+  ]
+}

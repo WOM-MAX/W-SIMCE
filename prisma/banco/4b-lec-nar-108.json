@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-108",
+    "titulo": "El primo del sur",
+    "tipo": "narrativo",
+    "palabras": 294,
+    "cuerpo": "Mi primo Joaquín llegó en julio con una mochila y una bolsa de plástico. Venía del sur, donde vivía con su mamá, y se iba a quedar unos meses en casa porque su familia estaba arreglando unos papeles.\n\nLos primeros días casi no hablaba. Contestaba con dos palabras y se quedaba mirando la ventana. Mi mamá decía que era la edad, que los niños de once años son callados. Yo no estaba tan seguro.\n\nUna noche me desperté porque había olor a humo. No venía de la cocina: venía de la calle. Me asomé y vi que en la esquina estaban quemando ramas. Volví a la cama y me di cuenta de que Joaquín estaba sentado en el pasillo, con la espalda contra la pared, despierto.\n\n—¿Te asustó el humo? —le pregunté.\n\n—En el sur —dijo, muy despacio— se quemó la casa de al lado. Nosotros vivíamos pegados. Yo me desperté con el mismo olor.\n\nNo supe qué decir. Me senté en el piso al lado de él.\n\nDespués de eso empezó a hablar más. Me contó que en su casa había un perro que se llamaba Cobre y que el perro se había quedado con un vecino. Me contó que en el sur llueve tanto que las calles se ponen como ríos.\n\nEn agosto llegó una caja con papeles y una carta. Su mamá conseguía un trabajo y venía en septiembre.\n\nEl último día, Joaquín dejó sobre mi cama la bolsa de plástico. Adentro había una piedra gris, lisa, redonda.\n\n—Es del río —dijo—. Es lo único que traje.\n\nY esa piedra quedó en mi escritorio, y a veces la tomo y me parece que el río corre por ahí adentro."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-136",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué Joaquín se quedó unos meses en la casa del narrador?",
+      "alternativas": [
+        "Porque sus padres se fueron a vivir al sur.",
+        "Porque su familia estaba arreglando unos papeles y su mamá iba a conseguir trabajo.",
+        "Porque quería terminar el año escolar en otra ciudad.",
+        "Porque su casa nueva todavía no estaba construida."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que se iba a quedar unos meses porque su familia estaba arreglando unos papeles, y más adelante que su mamá conseguía un trabajo y venía en septiembre."
+    },
+    {
+      "codigo": "4B-LEC-NAR-137",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "inferencia a partir de indicios",
+      "enunciado": "¿Por qué Joaquín estaba despierto en el pasillo la noche del humo?",
+      "alternativas": [
+        "Porque no podía dormir por el calor de la noche.",
+        "Porque el olor a humo le recordó el incendio de la casa de al lado en el sur.",
+        "Porque esperaba una llamada de su mamá.",
+        "Porque estaba enojado por la falta de papeles de su familia."
+      ],
+      "clave": "B",
+      "justificacion": "Joaquín lo explica en el diálogo: en el sur se quemó la casa de al lado, vivían pegados y él se despertó con el mismo olor. El humo activó ese recuerdo."
+    },
+    {
+      "codigo": "4B-LEC-NAR-138",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una acción",
+      "enunciado": "¿Qué efecto tiene en Joaquín que el narrador se siente en el piso a su lado?",
+      "alternativas": [
+        "Lo hace enojarse porque no dijo nada.",
+        "Lo ayuda a hablar después: al día siguiente empieza a contar su vida y su casa.",
+        "Lo obliga a volver a su pieza sin conversar.",
+        "Lo hace preguntar por el perro Cobre."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el narrador no supo qué decir y se sentó en el piso al lado de él, y luego agrega que después de eso Joaquín empezó a hablar más."
+    },
+    {
+      "codigo": "4B-LEC-NAR-139",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre inicio y cierre",
+      "enunciado": "Al empezar se dice que Joaquín llegó con una mochila y una bolsa de plástico. ¿Por qué el texto lo menciona?",
+      "alternativas": [
+        "Para mostrar que llegó con poco equipaje, porque había perdido o dejado casi todo.",
+        "Para explicar que la bolsa tenía los papeles de su familia.",
+        "Para señalar que no tenía ropa suficiente para el invierno.",
+        "Para indicar que el narrador le prestaría sus cosas."
+      ],
+      "clave": "A",
+      "justificacion": "El detalle del comienzo se cierra al final, cuando Joaquín le deja la bolsa con una piedra del río y dice que es lo único que trajo. Llegó con casi nada porque su familia estaba lejos y su casa de al lado se había quemado."
+    },
+    {
+      "codigo": "4B-LEC-NAR-140",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "El texto dice que su mamá pensaba que Joaquín era callado «por la edad». ¿Qué muestra la historia sobre esa explicación?",
+      "alternativas": [
+        "Que era correcta: los niños de once años hablan poco.",
+        "Que era incompleta: el silencio tenía que ver con lo que había vivido, no solo con la edad.",
+        "Que era falsa: Joaquín hablaba mucho desde el primer día.",
+        "Que no importaba, porque Joaquín se fue en septiembre."
+      ],
+      "clave": "B",
+      "justificacion": "El narrador desconfía de esa explicación desde el comienzo y la historia lo confirma: el silencio venía del incendio y de la separación de su mamá. Cuando habla del tema, Joaquín empieza a conversar más."
+    }
+  ]
+}
