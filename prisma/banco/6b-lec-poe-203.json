@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-POE-203",
+    "titulo": "La bicicleta del domingo",
+    "tipo": "poético",
+    "palabras": 104,
+    "cuerpo": "Mi bicicleta no tiene\nmarcha, ni luces, ni freno.\nTiene el color del óxido\ny un timbre que suena viejo.\n\nEn la bajada del cerro\nvibra como una campana,\ny en la subida se queja,\npero no suelta la carga.\n\nMis amigos se ríen de ella,\ny yo me río con ellos,\nporque el domingo en la calle\nnadie corre más que el viento.\n\nCuando llegamos al río,\nla dejo en la hierba tibia\ny me parece que duerme\ncomo duerme una persona.\n\nMás tarde vuelvo a subir\ncon las rodillas cansadas,\ny la bicicleta sube\nsin que nadie la acompañe."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-POE-211",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el poema, ¿qué le falta a la bicicleta?",
+      "alternativas": [
+        "Ruedas y pedales.",
+        "Marcha, luces y freno.",
+        "Color y timbre.",
+        "El asiento y el manubrio."
+      ],
+      "clave": "B",
+      "justificacion": "El primer verso dice que la bicicleta no tiene marcha, ni luces, ni freno. Lo que sí tiene es el color del óxido y un timbre que suena viejo."
+    },
+    {
+      "codigo": "6B-LEC-POE-212",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "personificación",
+      "enunciado": "El poema dice que en la subida la bicicleta «se queja, pero no suelta la carga». ¿Qué recurso usa?",
+      "alternativas": [
+        "Una comparación con un animal.",
+        "Una personificación, porque le atribuye una acción humana a un objeto.",
+        "Una exageración sobre el peso de la carga.",
+        "Una descripción técnica del funcionamiento."
+      ],
+      "clave": "B",
+      "justificacion": "Quejarse es una acción propia de personas o animales, y aquí se atribuye a la bicicleta. Además el verso insiste en que sigue cargando, lo que refuerza esa imagen."
+    },
+    {
+      "codigo": "6B-LEC-POE-213",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una estrofa",
+      "enunciado": "¿Qué quiere decir que los domingos en la calle «nadie corre más que el viento»?",
+      "alternativas": [
+        "Que ese día hay mucho viento en la calle.",
+        "Que los amigos corren tanto que superan al propio viento.",
+        "Que la calle está vacía los domingos.",
+        "Que el viento impide andar en bicicleta."
+      ],
+      "clave": "B",
+      "justificacion": "La estrofa se ríe de la bicicleta vieja y a la vez afirma que el domingo nadie corre más que el viento, es decir, los amigos van a toda velocidad. El hablante se ríe con ellos y participa."
+    },
+    {
+      "codigo": "6B-LEC-POE-214",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "efecto de una comparación",
+      "enunciado": "El hablante deja la bicicleta en la hierba y le parece que «duerme como duerme una persona». ¿Qué efecto produce esa imagen?",
+      "alternativas": [
+        "Sugiere que la bicicleta está efectivamente rota.",
+        "Presenta la bicicleta como un ser cercano, que descansa junto al hablante.",
+        "Indica que el hablante tiene sueño.",
+        "Explica por qué la bicicleta no tiene freno."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación con una persona que duerme acerca la bicicleta al hablante y la muestra como compañía. El poema ya la había tratado como un ser que se queja y que sube sola."
+    },
+    {
+      "codigo": "6B-LEC-POE-215",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué relación muestra el poema entre el hablante y su bicicleta vieja?",
+      "alternativas": [
+        "Le da vergüenza usarla frente a sus amigos.",
+        "La quiere a pesar de sus fallas y de las burlas de los demás.",
+        "Quiere cambiarla por una nueva en cuanto pueda.",
+        "La usa solo porque no tiene otra cosa."
+      ],
+      "clave": "B",
+      "justificacion": "El poema enumera las fallas sin reproche, cuenta que se ríe junto con sus amigos y cierra con la bicicleta subiendo sin nadie que la acompañe, tratada como un ser querido. No aparece el deseo de cambiarla ni la vergüenza."
+    }
+  ]
+}

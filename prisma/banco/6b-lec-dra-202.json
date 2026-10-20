@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DRA-202",
+    "titulo": "El celular nuevo",
+    "tipo": "dramático",
+    "palabras": 286,
+    "cuerpo": "(Cocina de una casa. MARTINA, de doce años, hace la tarea en la mesa. Su madre, CECILIA, entra con una caja pequeña en la mano.)\n\nCECILIA: Llegó el celular. Pero antes de abrirlo quiero hablar de algo.\n\nMARTINA: (Deja el lápiz.) Ya sé lo que vas a decir.\n\nCECILIA: Dímelo tú, entonces.\n\nMARTINA: Que no lo use en el colegio, que no lo use en la mesa y que no lo use después de las diez.\n\nCECILIA: Eso es lo del papel que firmamos. Lo que quiero hablar es otra cosa.\n\nMARTINA: ¿Qué cosa?\n\nCECILIA: Que en este mes vas a tener un celular y vas a tener derecho a equivocarte con él. Si un desconocido te escribe, no me voy a enterar si no me lo cuentas.\n\nMARTINA: Entonces no me lo des.\n\nCECILIA: (Se sienta.) No dije eso. Dije que quiero que sepas que puedes contarme, incluso si hiciste algo que no correspondía.\n\nMARTINA: ¿Y si te enojas?\n\nCECILIA: Me voy a enojar. Y aun así quiero saberlo antes de que pase un mes.\n\nMARTINA: (Mira la caja.) ¿Y si lo pierdo?\n\nCECILIA: Ahí hay una regla escrita y la vamos a cumplir.\n\nMARTINA: ¿Y si me lo quitan en el colegio?\n\nCECILIA: Entonces hablamos con el colegio, no con el celular.\n\n(Martina estira la mano hacia la caja. Cecilia no la suelta todavía.)\n\nCECILIA: Falta una cosa. Yo también me equivoco. Si te digo algo injusto, me lo dices.\n\nMARTINA: (Sonríe.) Eso no estaba en el papel.\n\nCECILIA: No. Por eso te lo digo ahora.\n\n(Le entrega la caja.)"
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DRA-206",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué reglas ya estaban escritas antes de la conversación?",
+      "alternativas": [
+        "Las que la madre propone en la cocina.",
+        "Las del papel que firmaron: no usarlo en el colegio, ni en la mesa, ni después de las diez.",
+        "Las del colegio sobre el uso de celulares.",
+        "Las que decide Martina al abrir la caja."
+      ],
+      "clave": "B",
+      "justificacion": "Martina enumera las reglas del papel que firmaron y Cecilia confirma: «eso es lo del papel que firmamos». La conversación trata de otro tema."
+    },
+    {
+      "codigo": "6B-LEC-DRA-207",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una réplica",
+      "enunciado": "¿Qué quiere decir Cecilia con «quiero que sepas que puedes contarme, incluso si hiciste algo que no correspondía»?",
+      "alternativas": [
+        "Que no va a aplicar ninguna regla.",
+        "Que prefiere enterarse de un error a que Martina lo oculte por miedo.",
+        "Que Martina no va a equivocarse nunca.",
+        "Que el celular no era una buena idea."
+      ],
+      "clave": "B",
+      "justificacion": "Cecilia aclara que se va a enojar y que aun así quiere saberlo antes de que pase un mes. Lo que le importa es no quedar fuera de lo que le ocurra a su hija."
+    },
+    {
+      "codigo": "6B-LEC-DRA-208",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de una acotación",
+      "enunciado": "¿Qué indica la acotación «Cecilia no la suelta todavía»?",
+      "alternativas": [
+        "Que Cecilia no quiere entregar el celular definitivamente.",
+        "Que todavía falta decir algo importante antes de entregar la caja.",
+        "Que la caja está pegada a su mano.",
+        "Que Martina se arrepintió de pedirlo."
+      ],
+      "clave": "B",
+      "justificacion": "Inmediatamente después Cecilia dice «falta una cosa» y agrega que ella también se equivoca. La acotación marca esa pausa: la entrega se detiene porque aún queda una condición por decir."
+    },
+    {
+      "codigo": "6B-LEC-DRA-209",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "sentido de una condición recíproca",
+      "enunciado": "¿Por qué Cecilia agrega que ella también se equivoca y que Martina debe decírselo?",
+      "alternativas": [
+        "Porque quiere quedar bien con su hija.",
+        "Porque el acuerdo de hablar con franqueza funciona en los dos sentidos, no solo como control sobre Martina.",
+        "Porque sabe que va a cometer errores con el celular.",
+        "Porque el colegio se lo exigió."
+      ],
+      "clave": "B",
+      "justificacion": "La condición aparece como el punto que faltaba y que no estaba en el papel firmado. Al pedir que también le digan sus injusticias, Cecilia convierte el acuerdo en algo recíproco y no en una vigilancia de una sola dirección."
+    },
+    {
+      "codigo": "6B-LEC-DRA-210",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de la escena",
+      "enunciado": "¿Qué caracteriza la forma en que Cecilia entrega el celular?",
+      "alternativas": [
+        "Impone condiciones sin escuchar a su hija.",
+        "Pone reglas, escucha las dudas y agrega un compromiso propio antes de entregarlo.",
+        "Evita hablar del tema y entrega el regalo sin más.",
+        "Deja todas las decisiones en manos de Martina."
+      ],
+      "clave": "B",
+      "justificacion": "Cecilia mantiene las reglas del papel firmado, responde a cada duda de Martina sobre perderlo o que se lo quiten, y antes de entregar la caja agrega una condición que la incluye a ella misma."
+    }
+  ]
+}

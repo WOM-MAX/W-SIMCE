@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-205",
+    "titulo": "Cómo se conserva la comida",
+    "tipo": "informativo",
+    "palabras": 328,
+    "cuerpo": "La comida se descompone por dos causas principales: los microorganismos, como bacterias y hongos, y las reacciones químicas que ocurren en el propio alimento, por ejemplo cuando una fruta se oxida y se pone café.\n\nCasi todos los métodos de conservación atacan una de esas causas. Unos eliminan o frenan a los microorganismos; otros hacen más lentas las reacciones químicas.\n\nEl calor es el método más antiguo. Al hervir un alimento se destruyen muchos microorganismos. Por eso la leche se hierve antes de guardarla. Sin embargo, el calor solo no basta: si el alimento queda expuesto al aire después de hervido, los microorganismos vuelven.\n\nEl frío no mata a los microorganismos, pero detiene casi por completo su reproducción. Por eso la comida refrigerada dura más, aunque no dure para siempre. En el congelador el agua del alimento se convierte en hielo y los microorganismos quedan inactivos, pero se reactivan al descongelar.\n\nEl secado elimina el agua, que es lo que los microorganismos necesitan para crecer. Así se conservan los charquis, las pasas y la leche en polvo. El salado funciona de manera parecida: la sal absorbe el agua disponible y deja el ambiente seco para los microbios.\n\nEl ahumado combina dos efectos: el calor del humo y sustancias que impiden el crecimiento de microorganismos. También aporta sabor, y por eso se sigue usando aunque existan métodos más eficaces.\n\nHay un método que no usa ni frío ni calor: el envasado al vacío. Al quitar el aire, los microorganismos que necesitan oxígeno no pueden crecer. Los que no lo necesitan, en cambio, siguen activos, y por eso el vacío se combina casi siempre con el frío."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-221",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿cuáles son las dos causas principales de que la comida se descomponga?",
+      "alternativas": [
+        "El calor y el frío.",
+        "Los microorganismos y las reacciones químicas del propio alimento.",
+        "La sal y el humo.",
+        "El oxígeno y la humedad."
+      ],
+      "clave": "B",
+      "justificacion": "El primer párrafo enumera las dos causas: los microorganismos, como bacterias y hongos, y las reacciones químicas que ocurren en el alimento, como la oxidación de una fruta."
+    },
+    {
+      "codigo": "6B-LEC-INF-222",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "alcance de un método",
+      "enunciado": "¿Qué logra el frío y qué no logra, según el texto?",
+      "alternativas": [
+        "Mata a los microorganismos, pero no evita las reacciones químicas.",
+        "Detiene su reproducción, pero no los mata.",
+        "Elimina el agua del alimento, pero no lo enfría.",
+        "No produce ningún efecto sobre los microorganismos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el frío no mata a los microorganismos, pero detiene casi por completo su reproducción, y que en el congelador quedan inactivos y se reactivan al descongelar."
+    },
+    {
+      "codigo": "6B-LEC-INF-223",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre métodos",
+      "enunciado": "¿Por qué el secado y el salado consiguen un efecto parecido?",
+      "alternativas": [
+        "Porque los dos usan calor para cocinar el alimento.",
+        "Porque los dos reducen el agua disponible, que los microorganismos necesitan para crecer.",
+        "Porque los dos eliminan el oxígeno del alimento.",
+        "Porque los dos cambian el sabor de la comida."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el secado elimina el agua y que el salado absorbe el agua disponible, dejando un ambiente seco para los microbios. Los dos métodos actúan sobre la humedad."
+    },
+    {
+      "codigo": "6B-LEC-INF-224",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "límite de un método",
+      "enunciado": "¿Por qué el envasado al vacío se combina casi siempre con el frío?",
+      "alternativas": [
+        "Porque el vacío no impide crecer a los microorganismos que no necesitan oxígeno.",
+        "Porque el vacío no cierra bien las bolsas.",
+        "Porque el frío mejora el sabor del alimento envasado.",
+        "Porque el vacío elimina las reacciones químicas por completo."
+      ],
+      "clave": "A",
+      "justificacion": "El texto explica que al quitar el aire los microorganismos que necesitan oxígeno no crecen, pero los que no lo necesitan siguen activos. El frío cubre ese caso."
+    },
+    {
+      "codigo": "6B-LEC-INF-225",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una práctica",
+      "enunciado": "Una persona hierve la leche y la deja enfriar destapada sobre la mesa. ¿Qué objeción corresponde según el texto?",
+      "alternativas": [
+        "Que hervir no sirve para conservar la leche.",
+        "Que el calor solo no basta: si queda expuesta al aire, los microorganismos vuelven.",
+        "Que la leche debería congelarse antes de hervirla.",
+        "Que destaparla mejora la conservación porque elimina el vapor."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que el calor destruye muchos microorganismos, pero que si el alimento queda expuesto al aire después de hervido, los microorganismos vuelven. Dejarla destapada sobre la mesa es justamente ese caso."
+    }
+  ]
+}

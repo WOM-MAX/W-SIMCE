@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-205",
+    "titulo": "La última función",
+    "tipo": "narrativo",
+    "palabras": 314,
+    "cuerpo": "El cine Astral tenía una sola sala y una pantalla con una mancha en la esquina. Lo iban a cerrar a fin de mes para construir un estacionamiento.\n\nLa última función era un sábado. Don Rubén, el dueño, eligió una película vieja que había pasado en el cine el día de su apertura, cuarenta años antes. Lavó la pantalla con cuidado, aunque la mancha no salió.\n\nEsa semana empezó a llegar gente que no venía hacía años. Un hombre trajo una entrada de 1986 que había guardado en un libro. Una mujer contó que había conocido a su marido en la fila del segundo piso. Dos hermanos discutieron frente a la taquilla sobre cuál película habían visto juntos y cuál no.\n\nEl sábado, a las ocho, la sala estaba llena. Don Rubén puso la película y se quedó atrás, de pie, junto a la puerta.\n\nEn el intermedio, una niña de unos nueve años se le acercó.\n\n—Señor, la pantalla tiene una mancha.\n\n—La tiene desde siempre —dijo él.\n\n—¿Y no la arreglan?\n\nDon Rubén se quedó callado. Después dijo:\n\n—El lunes viene una máquina que tira todo abajo.\n\nLa niña lo miró.\n\n—Entonces la mancha se va con todo.\n\nCuando terminó la función, la gente no se fue. Se quedó de pie en la sala, aplaudiendo, aunque nadie subió al escenario. Don Rubén guardó el rollo viejo en una caja y esa noche se lo llevó a su casa.\n\nMeses después, en el estacionamiento, hay un muro de cemento con una placa pequeña. Dice el nombre del cine y dos fechas. La mancha no está, y sin embargo varias personas del barrio, al pasar, levantan la vista hacia el mismo lugar de la pared."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-221",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué iban a cerrar el cine Astral?",
+      "alternativas": [
+        "Porque la pantalla estaba rota.",
+        "Porque lo iban a demoler para construir un estacionamiento.",
+        "Porque don Rubén se jubilaba.",
+        "Porque ya no llegaban películas nuevas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que lo iban a cerrar a fin de mes para construir un estacionamiento, y más adelante que el lunes llegaría una máquina a demolerlo."
+    },
+    {
+      "codigo": "6B-LEC-NAR-222",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de un detalle",
+      "enunciado": "¿Por qué don Rubén elige una película que había pasado el día de la apertura?",
+      "alternativas": [
+        "Porque era la única que tenía disponible.",
+        "Porque cierra el ciclo del cine con la misma película con que comenzó.",
+        "Porque era la favorita de la niña.",
+        "Porque la mancha de la pantalla se notaba menos con esa película."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que eligió una película vieja que había pasado cuarenta años antes, el día de la apertura. La elección tiene sentido con el cierre del local, no con la disponibilidad ni con la mancha."
+    },
+    {
+      "codigo": "6B-LEC-NAR-223",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un diálogo",
+      "enunciado": "La niña dice: «Entonces la mancha se va con todo». ¿Qué efecto tiene esa frase en don Rubén?",
+      "alternativas": [
+        "Lo hace enojar con la niña.",
+        "Lo enfrenta a que la demolición no se lleva solo un defecto, sino el cine completo.",
+        "Lo convence de arreglar la pantalla antes del sábado.",
+        "Lo hace decidir cambiar la película."
+      ],
+      "clave": "B",
+      "justificacion": "Después de esa frase don Rubén se queda callado. La niña había entendido que la mancha era parte del cine y que desaparecería con el edificio, y esa constatación pesa en el momento final."
+    },
+    {
+      "codigo": "6B-LEC-NAR-224",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de un gesto",
+      "enunciado": "¿Por qué la gente aplaude al final, aunque nadie sube al escenario?",
+      "alternativas": [
+        "Porque la película era especialmente buena.",
+        "Porque aplauden al cine mismo, que está a punto de desaparecer.",
+        "Porque esperan que don Rubén diga unas palabras.",
+        "Porque creen que habrá una función más."
+      ],
+      "clave": "B",
+      "justificacion": "La escena ocurre en la última función y el narrador aclara que nadie subió al escenario. El aplauso se dirige al lugar y a lo que significó para el barrio, no a una persona ni a la película."
+    },
+    {
+      "codigo": "6B-LEC-NAR-225",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "El texto termina con personas que, al pasar frente al muro, «levantan la vista hacia el mismo lugar de la pared». ¿Qué muestra eso?",
+      "alternativas": [
+        "Que todavía creen que el cine va a volver.",
+        "Que siguen buscando la pantalla que estuvo ahí, aunque el edificio ya no exista.",
+        "Que la placa está mal ubicada.",
+        "Que el muro tiene otro desperfecto visible."
+      ],
+      "clave": "B",
+      "justificacion": "El gesto de mirar hacia arriba señala la altura donde estaba la pantalla con la mancha. La memoria del lugar sigue asociada a ese punto, aunque ahora haya un muro de cemento."
+    }
+  ]
+}
