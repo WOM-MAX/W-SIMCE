@@ -8,3 +8,6 @@ out/
 tsconfig.tsbuildinfo
 next-env.d.ts
 captura.png
+
+# renders de comprobacion de figuras
+tmp-figuras/
