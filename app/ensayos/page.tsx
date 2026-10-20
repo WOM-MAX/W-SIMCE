@@ -79,6 +79,12 @@ export default async function Ensayos({
                     {e._count.asignaciones} asignaciones
                   </span>
                   <a
+                    href={`/ensayos/${e.id}/imprimir`}
+                    className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+                  >
+                    Imprimir
+                  </a>
+                  <a
                     href={`/ensayos/${e.id}/asignar`}
                     className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
                   >

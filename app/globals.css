@@ -25,3 +25,26 @@ body {
 .tabular {
   font-variant-numeric: tabular-nums;
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+
+  .no-imprimir {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .hoja {
+    break-inside: avoid;
+  }
+
+  .salto {
+    break-after: page;
+  }
+}
