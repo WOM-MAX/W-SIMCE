@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DRA-201",
+    "titulo": "El proyecto de la feria",
+    "tipo": "dramático",
+    "palabras": 292,
+    "cuerpo": "(Sala de ciencias, después de clases. Sobre la mesa hay una maqueta a medio armar y una caja de materiales. LUISA revisa una hoja de instrucciones. VICENTE entra con una bolsa.)\n\nVICENTE: Conseguí el motor. Me lo prestó mi tío, pero hay que devolverlo el viernes.\n\nLUISA: El viernes es la feria.\n\nVICENTE: Ya sé. Por eso lo conseguí hoy.\n\nLUISA: (Señala la hoja.) Las instrucciones dicen que el motor va en la base, con el eje hacia arriba.\n\nVICENTE: Eso no va a funcionar. Si lo ponemos así, la hélice queda pegada al cartón y no gira.\n\nLUISA: Las instrucciones son del profe.\n\nVICENTE: Y el profe no armó nunca esta maqueta. Nosotros sí. Ayer probamos y no giraba.\n\nLUISA: Ayer probamos con el motor viejo, que estaba malo.\n\nVICENTE: (Deja la bolsa en la mesa.) Bueno. Entonces hagamos las dos cosas: armamos como dice la hoja y probamos. Si gira, listo. Si no, lo damos vuelta.\n\nLUISA: Eso me parece bien.\n\n(Se ponen a armar. Pasan unos minutos. VICENTE conecta el motor. La hélice se mueve un poco y se detiene contra el cartón.)\n\nVICENTE: ¿Ves?\n\nLUISA: (Mira la maqueta.) Sí. Tienes razón.\n\nVICENTE: Entonces lo doy vuelta.\n\nLUISA: Espera. Si lo damos vuelta, el motor queda hacia afuera y se ve desde la sala. ¿Está permitido?\n\nVICENTE: (Revisa la hoja.) Las instrucciones no dicen nada de eso.\n\nLUISA: Entonces anotémoslo. En la feria tenemos que explicar por qué lo cambiamos.\n\nVICENTE: (Toma un lápiz.) ¿Y si el profe dice que no?\n\nLUISA: Le mostramos la prueba de ayer y la de hoy. Y le preguntamos antes, no después.\n\nVICENTE: (Escribe en la hoja.) «Cambio en la posición del motor. Motivo: la hélice choca con la base.»\n\nLUISA: Falta la fecha.\n\nVICENTE: (Escribe.) Listo.\n\n(Los dos miran la maqueta.)\n\nLUISA: Ahora sí va a girar."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DRA-201",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué problema tienen Luisa y Vicente con la maqueta?",
+      "alternativas": [
+        "Que no consiguen los materiales para armarla.",
+        "Que la hélice choca con la base y no gira cuando el motor va donde dicen las instrucciones.",
+        "Que la feria se adelantó una semana.",
+        "Que el profesor no les quiso prestar el motor."
+      ],
+      "clave": "B",
+      "justificacion": "Al probar, la hélice se mueve un poco y se detiene contra el cartón. Vicente había advertido que con el motor en la base la hélice quedaría pegada al cartón."
+    },
+    {
+      "codigo": "6B-LEC-DRA-202",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar formato",
+      "conocimiento": "acotaciones en el texto dramático",
+      "enunciado": "¿Qué indica la acotación «Señala la hoja»?",
+      "alternativas": [
+        "Que Luisa lee en voz alta la hoja.",
+        "Que Luisa hace un gesto hacia la hoja, sin decirlo.",
+        "Que la hoja está escrita por Vicente.",
+        "Que la hoja se cayó al suelo."
+      ],
+      "clave": "B",
+      "justificacion": "Las acotaciones indican acciones o gestos de los personajes en escena y no se pronuncian. Señalar la hoja es un gesto que acompaña el diálogo, no una frase dicha en voz alta."
+    },
+    {
+      "codigo": "6B-LEC-DRA-203",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "forma de resolver un desacuerdo",
+      "enunciado": "¿Qué propone Vicente para resolver la discusión?",
+      "alternativas": [
+        "Que cada uno arme su propia maqueta.",
+        "Que armen como dicen las instrucciones y prueben, y si no gira, cambien la posición.",
+        "Que le pregunten al profesor por teléfono antes de armar.",
+        "Que dejen la maqueta para el día de la feria."
+      ],
+      "clave": "B",
+      "justificacion": "Vicente propone armar como dice la hoja y probar; si gira, listo, y si no, lo dan vuelta. Es una solución que no depende de tener razón de antemano, sino de la prueba."
+    },
+    {
+      "codigo": "6B-LEC-DRA-204",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "sentido de una decisión",
+      "enunciado": "¿Por qué Luisa insiste en anotar el cambio y preguntarle al profesor antes de la feria?",
+      "alternativas": [
+        "Porque quiere que el profesor haga el trabajo por ellos.",
+        "Porque el cambio debe poder explicarse y autorizarse, no solo funcionar.",
+        "Porque teme que Vicente rompa el motor prestado.",
+        "Porque las instrucciones prohíben mover el motor."
+      ],
+      "clave": "B",
+      "justificacion": "Luisa ya aceptó que Vicente tenía razón, y aun así pide anotar el motivo y preguntar antes. Las instrucciones no dicen nada sobre la posición del motor, según revisa Vicente, así que la preocupación es que el cambio quede explicado y autorizado."
+    },
+    {
+      "codigo": "6B-LEC-DRA-205",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación del trabajo en equipo",
+      "enunciado": "¿Qué muestra la escena sobre cómo trabajan los dos personajes?",
+      "alternativas": [
+        "Que uno manda y el otro obedece.",
+        "Que discuten con argumentos y aceptan la evidencia cuando la ven.",
+        "Que evitan hablar del problema para no pelear.",
+        "Que necesitan la ayuda constante de un adulto."
+      ],
+      "clave": "B",
+      "justificacion": "Luisa defiende las instrucciones y Vicente su experiencia; la discusión se resuelve con una prueba concreta. Cuando la hélice choca, Luisa reconoce que Vicente tenía razón, y él acepta anotar el cambio."
+    }
+  ]
+}

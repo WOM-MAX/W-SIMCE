@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-202",
+    "titulo": "Para qué sirve dormir",
+    "tipo": "informativo",
+    "palabras": 330,
+    "cuerpo": "Una persona pasa cerca de un tercio de su vida durmiendo. Durante mucho tiempo se pensó que dormir era solo un descanso, una pausa en la que el cuerpo dejaba de hacer cosas. Hoy se sabe que mientras dormimos ocurren procesos que no pueden realizarse despiertos.\n\nUno de ellos es la consolidación de la memoria. Lo que aprendimos durante el día queda, al principio, como una huella frágil. Durante el sueño, el cerebro vuelve sobre esa información y la reorganiza, y así lo aprendido se fija. Por eso estudiar toda la noche sin dormir suele dar malos resultados: falta justamente la etapa en la que el aprendizaje se estabiliza.\n\nEl cuerpo también aprovecha el sueño para reparar tejidos. Se liberan hormonas que participan en el crecimiento y en la recuperación de los músculos, y el sistema de defensas trabaja con menos interrupciones. Las personas que duermen poco se enferman más seguido y se recuperan más lento.\n\nAdemás, el cerebro se limpia. Existe un sistema que arrastra desechos producidos por la actividad de las neuronas, y ese sistema funciona con mucha más eficacia durante el sueño que durante la vigilia.\n\nLos especialistas recomiendan entre ocho y diez horas de sueño a los niños de edad escolar. No es un capricho: la falta de sueño afecta la atención, el ánimo y la capacidad de resolver problemas. Un estudiante que durmió cinco horas rinde peor que el mismo estudiante descansado, aunque haya estudiado el doble.\n\nLa cantidad no lo es todo. También importa la regularidad: acostarse y levantarse a horas parecidas ayuda al cuerpo a anticipar el sueño. Las pantallas antes de dormir lo dificultan, porque su luz parece la del día y retrasa la señal que prepara el descanso."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-206",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué ocurre durante el sueño con lo que aprendimos en el día?",
+      "alternativas": [
+        "Se borra si no lo repasamos al despertar.",
+        "El cerebro vuelve sobre esa información, la reorganiza y así se fija.",
+        "Se guarda en el cuerpo, en los músculos.",
+        "Se transfiere a otras personas por medio del descanso."
+      ],
+      "clave": "B",
+      "justificacion": "El texto describe la consolidación de la memoria: durante el sueño el cerebro vuelve sobre la información del día y la reorganiza, y así lo aprendido se fija."
+    },
+    {
+      "codigo": "6B-LEC-INF-207",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de un ejemplo",
+      "enunciado": "¿Para qué el texto menciona el caso de estudiar toda la noche sin dormir?",
+      "alternativas": [
+        "Para recomendar esa técnica en época de exámenes.",
+        "Para mostrar que sin sueño falta la etapa en que el aprendizaje se estabiliza.",
+        "Para explicar que el estudio nocturno es más eficaz.",
+        "Para indicar que los exámenes deberían ser de día."
+      ],
+      "clave": "B",
+      "justificacion": "El ejemplo aparece justo después de explicar la consolidación de la memoria y sirve para ilustrar esa idea: si no se duerme, falta la etapa en la que el aprendizaje se fija, y el resultado es peor."
+    },
+    {
+      "codigo": "6B-LEC-INF-208",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué las personas que duermen poco se enferman más seguido, según el texto?",
+      "alternativas": [
+        "Porque salen más y se exponen a más virus.",
+        "Porque su sistema de defensas trabaja con menos interrupciones durante el sueño.",
+        "Porque dejan de producir hormonas de crecimiento.",
+        "Porque no pueden limpiar su habitación."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que durante el sueño el sistema de defensas trabaja con menos interrupciones, y relaciona la falta de sueño con enfermarse más seguido y recuperarse más lento."
+    },
+    {
+      "codigo": "6B-LEC-INF-209",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "distinción entre cantidad y regularidad",
+      "enunciado": "El texto dice que «la cantidad no lo es todo». ¿Qué otro factor destaca y por qué importa?",
+      "alternativas": [
+        "La regularidad de los horarios, porque ayuda al cuerpo a anticipar el sueño.",
+        "El tipo de colchón, porque mejora la postura.",
+        "La temperatura de la pieza, porque el frío produce sueño.",
+        "El ruido de la calle, porque interrumpe el descanso."
+      ],
+      "clave": "A",
+      "justificacion": "Después de esa frase el texto menciona la regularidad: acostarse y levantarse a horas parecidas ayuda al cuerpo a anticipar el sueño. Los otros factores no aparecen en el texto."
+    },
+    {
+      "codigo": "6B-LEC-INF-210",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una práctica",
+      "enunciado": "Un estudiante estudia hasta la una de la mañana con el celular encendido y se levanta a las seis. Según el texto, ¿cuál es la objeción más completa?",
+      "alternativas": [
+        "Que estudiar de noche siempre es inútil.",
+        "Que duerme cinco horas, justo cuando el aprendizaje se fija, y la luz de la pantalla retrasa el sueño.",
+        "Que debería estudiar con el celular apagado, pero las horas de sueño no importan.",
+        "Que los exámenes deberían tomarse por la mañana."
+      ],
+      "clave": "B",
+      "justificacion": "El texto reúne los dos problemas del caso: con cinco horas de sueño falta la etapa en que el aprendizaje se estabiliza, y la luz de las pantallas retrasa la señal que prepara el descanso. La primera alternativa es una generalización que el texto no sostiene."
+    }
+  ]
+}

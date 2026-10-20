@@ -1,0 +1,88 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DIS-202",
+    "titulo": "Guía de reciclaje del colegio",
+    "tipo": "informativo-discontinuo",
+    "palabras": 190,
+    "cuerpo": "GUÍA DE RECICLAJE DEL COLEGIO\n\nCONTENEDOR AZUL: PAPEL Y CARTÓN\nSí: hojas usadas, diarios, cajas, cuadernos sin tapas plásticas.\nNo: servilletas sucias, papel de envolver con comida, papel fotográfico.\n\nCONTENEDOR AMARILLO: PLÁSTICO Y LATAS\nSí: botellas plásticas limpias y aplastadas, latas de bebida, tapas, bolsas limpias.\nNo: bombillas, cubiertos de plástico, envases con restos de comida.\n\nCONTENEDOR VERDE: ORGÁNICO\nSí: cáscaras de fruta, restos de verduras, hojas del patio, pan duro.\nNo: aceite usado, lácteos, carnes.\n\nCONTENEDOR GRIS: NO RECICLABLE\nSí: bombillas, cubiertos desechables, envoltorios metálicos, plumones gastados.\nNo: pilas y ampolletas, que van en el contenedor especial de la oficina.\n\nRECORDATORIOS\nTodo envase debe ir limpio y aplastado cuando sea posible.\nSi el material está sucio, va al contenedor gris.\nLos lunes se revisan los contenedores y se informa por curso cuánto se separó."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DIS-206",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de una guía",
+      "enunciado": "¿En qué contenedor van las botellas plásticas limpias y aplastadas?",
+      "alternativas": ["Azul", "Amarillo", "Verde", "Gris"],
+      "clave": "B",
+      "justificacion": "La guía asigna el contenedor amarillo al plástico y las latas, e incluye expresamente las botellas plásticas limpias y aplastadas. El azul es para papel y cartón."
+    },
+    {
+      "codigo": "6B-LEC-DIS-207",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de criterios",
+      "enunciado": "Un estudiante tiene una caja de cartón con restos de comida. ¿Dónde debe dejarla?",
+      "alternativas": [
+        "En el azul, porque es cartón.",
+        "En el gris, porque el material está sucio.",
+        "En el verde, porque tiene restos de comida.",
+        "En el amarillo, porque los envases se aplastan."
+      ],
+      "clave": "B",
+      "justificacion": "El cartón corresponde al azul, pero los recordatorios indican que si el material está sucio va al contenedor gris. Además, el azul excluye el papel de envolver con comida."
+    },
+    {
+      "codigo": "6B-LEC-DIS-208",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "propósito de una instrucción",
+      "enunciado": "¿Para qué la guía pide lavar y aplastar los envases?",
+      "alternativas": [
+        "Para que ocupen menos espacio y no contaminen el resto del material.",
+        "Para que el contenedor pese menos al transportarlo.",
+        "Para que los envases puedan reutilizarse en el colegio.",
+        "Para cumplir con una norma de los fabricantes."
+      ],
+      "clave": "A",
+      "justificacion": "La guía insiste en que el material sucio va al gris, lo que muestra que la limpieza evita contaminar lo demás. Aplastar los envases reduce el volumen que ocupan. Ninguna de las dos instrucciones se relaciona con el peso o con reutilizar en el colegio."
+    },
+    {
+      "codigo": "6B-LEC-DIS-209",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "coherencia entre secciones",
+      "enunciado": "Las bombillas aparecen mencionadas dos veces. ¿Cómo se resuelve esa aparente contradicción?",
+      "alternativas": [
+        "Se prohiben en el colegio, por eso aparecen en dos listas.",
+        "No hay contradicción: no van en el amarillo porque no son envase, y van al gris como no reciclable.",
+        "Van al verde, porque son de origen vegetal.",
+        "La guía se equivoca y debería eliminarlas del gris."
+      ],
+      "clave": "B",
+      "justificacion": "En el amarillo aparecen en la lista de lo que no se acepta, y en el gris en la lista de lo que sí se acepta. Las dos indicaciones apuntan al mismo destino: las bombillas no son reciclables y van al gris."
+    },
+    {
+      "codigo": "6B-LEC-DIS-210",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una norma",
+      "enunciado": "¿Por qué las pilas y las ampolletas tienen un contenedor especial y no van al gris?",
+      "alternativas": [
+        "Porque son objetos de vidrio y metal.",
+        "Porque no son reciclables como el resto de la basura y necesitan un manejo separado.",
+        "Porque ocupan mucho espacio en el contenedor gris.",
+        "Porque el contenedor gris se revisa solo los lunes."
+      ],
+      "clave": "B",
+      "justificacion": "La guía separa el gris, que recibe lo no reciclable común, de un contenedor especial para pilas y ampolletas. Esa distinción indica que esos residuos requieren un tratamiento aparte, y no se explica por tamaño ni por el día de revisión."
+    }
+  ]
+}

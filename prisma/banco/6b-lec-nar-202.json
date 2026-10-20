@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-202",
+    "titulo": "Las tres cajas",
+    "tipo": "narrativo",
+    "palabras": 322,
+    "cuerpo": "Cuando el señor Ibáñez abrió su ferretería necesitaba un ayudante. Puso un aviso en la puerta y llegaron once personas. Al final quedaron dos: Renata, que tenía diecisiete años y hablaba poco, y Damián, que tenía diecinueve y caía bien a todo el mundo.\n\nEl sábado, el señor Ibáñez los citó a los dos.\n\n—Necesito saber quién va a cuidar la caja —dijo—. Les voy a dejar tres cajas sobre el mesón. Una tiene tornillos, otra tiene clavos y la tercera tiene dinero. Cada uno va a ordenar una sola caja y después me cuenta qué encontró.\n\nRenata abrió su caja. Adentro había tornillos mezclados con tuercas y, debajo de todo, un sobre con billetes. Lo contó, anotó la cantidad en un papel y volvió a guardar el sobre en el mismo lugar. Después separó tornillos y tuercas en dos montones.\n\nDamián abrió la suya, que también tenía un sobre. Lo miró, lo dejó sobre el mesón y siguió ordenando.\n\nCuando el señor Ibáñez volvió, Renata le entregó el papel con la cuenta y le dijo que había dinero en su caja. Damián le dijo que la suya tenía clavos y que no había visto nada más, aunque el sobre estaba a la vista, al lado de la balanza.\n\nEl señor Ibáñez no dijo nada delante de los dos. Al lunes siguiente llamó a Renata.\n\n—¿Por qué lo anotaste en un papel y no te lo guardaste? —le preguntó.\n\n—Porque no era mío —contestó ella—. Y porque si me lo guardaba, usted no iba a saber cuánto había.\n\nEl señor Ibáñez le dio el puesto. Damián se enteró por un compañero y fue a reclamar.\n\n—Nunca me quedé con nada —dijo.\n\n—No —contestó el señor Ibáñez—. Pero tampoco me dijiste que estaba ahí."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-206",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué encontró Renata debajo de los tornillos y las tuercas?",
+      "alternativas": [
+        "Un cuaderno con cuentas.",
+        "Un sobre con billetes.",
+        "Una balanza pequeña.",
+        "Las llaves de la ferretería."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que debajo de todo había un sobre con billetes, que ella contó y anotó en un papel antes de guardarlo en el mismo lugar."
+    },
+    {
+      "codigo": "6B-LEC-NAR-207",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una prueba",
+      "enunciado": "¿Qué estaba evaluando el señor Ibáñez con las tres cajas?",
+      "alternativas": [
+        "La rapidez para ordenar tornillos.",
+        "La honestidad y la disposición a informar lo que encontraban.",
+        "El conocimiento de las herramientas de la ferretería.",
+        "La simpatía con los clientes."
+      ],
+      "clave": "B",
+      "justificacion": "La prueba pone dinero en las cajas sin avisar. Lo que distingue a los dos candidatos no es ordenar rápido, sino qué hace cada uno con lo que encuentra y si lo informa."
+    },
+    {
+      "codigo": "6B-LEC-NAR-208",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "contraste entre personajes",
+      "enunciado": "¿Qué diferencia hay entre lo que hizo Renata y lo que hizo Damián con el sobre?",
+      "alternativas": [
+        "Renata lo contó y anotó la cantidad; Damián lo dejó a la vista pero no lo mencionó.",
+        "Renata se lo guardó y Damián lo entregó.",
+        "Los dos lo contaron, pero Damián se equivocó en la cuenta.",
+        "Ninguno de los dos vio el sobre."
+      ],
+      "clave": "A",
+      "justificacion": "Renata contó el dinero, lo anotó y avisó que había un sobre en su caja. Damián vio el sobre, lo dejó sobre el mesón y dijo que no había visto nada más."
+    },
+    {
+      "codigo": "6B-LEC-NAR-209",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "motivo de una decisión",
+      "enunciado": "Cuando Damián reclama, el señor Ibáñez le responde: «Pero tampoco me dijiste que estaba ahí». ¿Qué peso tiene esa razón?",
+      "alternativas": [
+        "Ninguno, porque Damián no se quedó con el dinero.",
+        "Es decisiva: no apropiarse del dinero no basta si se oculta su existencia al empleador.",
+        "Solo sirve para justificar que Renata tenía más experiencia.",
+        "Indica que el señor Ibáñez había perdido el sobre."
+      ],
+      "clave": "B",
+      "justificacion": "El señor Ibáñez reconoce que Damián no se quedó con nada, y aun así lo descarta por no informar. Para el cargo de cuidar la caja, saber cuánto hay y poder verificarlo es parte del trabajo, no un detalle."
+    },
+    {
+      "codigo": "6B-LEC-NAR-210",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Por qué el cuento menciona que Damián «caía bien a todo el mundo»?",
+      "alternativas": [
+        "Para mostrar que la simpatía no reemplaza la responsabilidad en el trabajo.",
+        "Para explicar por qué el señor Ibáñez lo eligió al principio.",
+        "Para señalar que Renata no tenía amigos.",
+        "Para indicar que los clientes preferían a Damián."
+      ],
+      "clave": "A",
+      "justificacion": "El dato aparece al comienzo, justo antes de la prueba, y contrasta con el resultado: Damián es el más simpático y pierde el puesto. El cuento muestra que esa cualidad no compensa ocultar información."
+    }
+  ]
+}
