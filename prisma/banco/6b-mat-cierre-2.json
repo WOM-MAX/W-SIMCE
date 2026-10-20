@@ -1,0 +1,342 @@
+{
+  "lote": "6B matemática, cierre 2",
+  "nivel": "6B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N6B-MAT-21",
+      "eje": "datos-y-probabilidades",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "medidas de tendencia central",
+      "enunciado": "¿Qué representa la mediana de un conjunto de datos?",
+      "alternativas": [
+        "El valor que más veces se repite.",
+        "El valor que queda al centro cuando los datos se ordenan de menor a mayor.",
+        "La suma de todos los datos dividida por la cantidad de datos.",
+        "La diferencia entre el dato mayor y el menor."
+      ],
+      "clave": "B",
+      "justificacion": "La mediana es el valor central de los datos ordenados. El valor que más se repite es la moda, y la suma dividida por la cantidad es la media."
+    },
+    {
+      "codigo": "N6B-MAT-22",
+      "eje": "datos-y-probabilidades",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "mediana",
+      "figura": {
+        "ancho": 280,
+        "alto": 90,
+        "elementos": [
+          { "op": "text", "x": 16, "y": 30, "texto": "Datos del grupo:", "tam": 9, "anclaje": "izquierda", "negrita": true },
+          { "op": "rect", "x": 20, "y": 42, "w": 44, "h": 30, "grosor": 1 },
+          { "op": "rect", "x": 64, "y": 42, "w": 44, "h": 30, "grosor": 1 },
+          { "op": "rect", "x": 108, "y": 42, "w": 44, "h": 30, "grosor": 1 },
+          { "op": "rect", "x": 152, "y": 42, "w": 44, "h": 30, "grosor": 1 },
+          { "op": "rect", "x": 196, "y": 42, "w": 44, "h": 30, "grosor": 1 },
+          { "op": "text", "x": 42, "y": 62, "texto": "4", "tam": 10, "anclaje": "medio" },
+          { "op": "text", "x": 86, "y": 62, "texto": "7", "tam": 10, "anclaje": "medio" },
+          { "op": "text", "x": 130, "y": 62, "texto": "7", "tam": 10, "anclaje": "medio" },
+          { "op": "text", "x": 174, "y": 62, "texto": "9", "tam": 10, "anclaje": "medio" },
+          { "op": "text", "x": 218, "y": 62, "texto": "12", "tam": 10, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La figura muestra cinco datos de un grupo. ¿Cuál es la mediana?",
+      "alternativas": ["4", "7", "9", "7,8"],
+      "clave": "B",
+      "justificacion": "Al ordenar los datos queda 4, 7, 7, 9, 12. El valor central, que deja dos datos a cada lado, es 7. El valor 7,8 corresponde a la media (39 ÷ 5)."
+    },
+    {
+      "codigo": "N6B-MAT-23",
+      "eje": "datos-y-probabilidades",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad simple",
+      "enunciado": "Se lanza un dado de seis caras, numerado de 1 a 6. ¿Cuál es la probabilidad de obtener un número par?",
+      "alternativas": ["1/6", "1/3", "1/2", "2/3"],
+      "clave": "C",
+      "justificacion": "Los números pares del dado son 2, 4 y 6, o sea 3 casos de 6 posibles. La probabilidad es 3/6, que simplificada es 1/2."
+    },
+    {
+      "codigo": "N6B-MAT-24",
+      "eje": "datos-y-probabilidades",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "rango",
+      "enunciado": "Las temperaturas de una semana fueron 5°, 9°, 3°, 11° y 8°. ¿Cuál es el rango de esas temperaturas?",
+      "alternativas": ["5°", "6°", "8°", "11°"],
+      "clave": "C",
+      "justificacion": "El rango es la diferencia entre el dato mayor y el menor: 11 − 3 = 8°. El valor 5° corresponde a la mediana de los datos ordenados."
+    },
+    {
+      "codigo": "N6B-MAT-25",
+      "eje": "datos-y-probabilidades",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad simple",
+      "figura": {
+        "ancho": 260,
+        "alto": 120,
+        "elementos": [
+          { "op": "rect", "x": 20, "y": 20, "w": 220, "h": 80, "grosor": 1.4 },
+          { "op": "circle", "cx": 52, "cy": 48, "r": 12, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 86, "cy": 48, "r": 12, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 120, "cy": 48, "r": 12, "grosor": 1.2, "relleno": "gris" },
+          { "op": "circle", "cx": 160, "cy": 48, "r": 12, "grosor": 1.2 },
+          { "op": "circle", "cx": 194, "cy": 48, "r": 12, "grosor": 1.2 },
+          { "op": "circle", "cx": 52, "cy": 78, "r": 12, "grosor": 1.2 },
+          { "op": "circle", "cx": 86, "cy": 78, "r": 12, "grosor": 1.2 },
+          { "op": "circle", "cx": 120, "cy": 78, "r": 12, "grosor": 1.2 },
+          { "op": "text", "x": 130, "y": 114, "texto": "3 sombreadas y 5 blancas", "tam": 8, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "En una bolsa hay 3 bolitas sombreadas y 5 bolitas blancas. Si se saca una sin mirar, ¿cuál es la probabilidad de que sea blanca?",
+      "alternativas": ["3/5", "3/8", "5/8", "5/3"],
+      "clave": "C",
+      "justificacion": "Hay 5 bolitas blancas de un total de 8 bolitas. La probabilidad es 5/8. La fracción 3/8 corresponde a las sombreadas."
+    },
+    {
+      "codigo": "N6B-MAT-26",
+      "eje": "datos-y-probabilidades",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "lectura de gráficos",
+      "figura": {
+        "ancho": 270,
+        "alto": 160,
+        "elementos": [
+          { "op": "line", "x1": 40, "y1": 20, "x2": 40, "y2": 130, "grosor": 1.2 },
+          { "op": "line", "x1": 40, "y1": 130, "x2": 250, "y2": 130, "grosor": 1.2 },
+          { "op": "poly", "puntos": "60,50 110,70 160,95 220,120", "grosor": 1.6 },
+          { "op": "circle", "cx": 60, "cy": 50, "r": 3, "grosor": 1 },
+          { "op": "circle", "cx": 110, "cy": 70, "r": 3, "grosor": 1 },
+          { "op": "circle", "cx": 160, "cy": 95, "r": 3, "grosor": 1 },
+          { "op": "circle", "cx": 220, "cy": 120, "r": 3, "grosor": 1 },
+          { "op": "text", "x": 60, "y": 144, "texto": "1", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 110, "y": 144, "texto": "2", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 160, "y": 144, "texto": "3", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 220, "y": 144, "texto": "4", "tam": 8, "anclaje": "medio" },
+          { "op": "text", "x": 250, "y": 20, "texto": "temperatura", "tam": 7.5, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "El gráfico muestra la temperatura medida en cuatro momentos del día. ¿Qué ocurre con la temperatura entre el primer y el último registro?",
+      "alternativas": [
+        "Aumenta de forma constante.",
+        "Disminuye de forma sostenida.",
+        "Se mantiene igual.",
+        "Primero aumenta y después baja."
+      ],
+      "clave": "B",
+      "justificacion": "Los cuatro puntos del gráfico van bajando: cada registro está más abajo que el anterior. Eso significa que la temperatura disminuye de forma sostenida."
+    },
+    {
+      "codigo": "N6B-MAT-27",
+      "eje": "datos-y-probabilidades",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "población y muestra",
+      "enunciado": "Para saber cuántas horas duermen los estudiantes de un colegio, se encuesta a 40 estudiantes elegidos al azar. ¿Qué representa ese grupo de 40?",
+      "alternativas": [
+        "La población del colegio.",
+        "Una muestra de la población.",
+        "La mediana de los datos.",
+        "El total de los datos recogidos."
+      ],
+      "clave": "B",
+      "justificacion": "La población son todos los estudiantes del colegio. El grupo de 40 elegidos para representarla es una muestra, que se usa cuando no es posible encuestar a todos."
+    },
+    {
+      "codigo": "N6B-MAT-28",
+      "eje": "datos-y-probabilidades",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "media aritmética",
+      "enunciado": "La media de cinco números es 8. Cuatro de ellos son 6, 7, 9 y 8. ¿Cuál es el quinto número?",
+      "alternativas": ["8", "9", "10", "12"],
+      "clave": "C",
+      "justificacion": "Si la media de cinco números es 8, la suma total es 5 × 8 = 40. Los cuatro conocidos suman 6 + 7 + 9 + 8 = 30, así que el quinto es 40 − 30 = 10."
+    },
+    {
+      "codigo": "N6B-MAT-29",
+      "eje": "patrones-y-algebra",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "sucesiones",
+      "enunciado": "¿Qué caracteriza a una sucesión aritmética?",
+      "alternativas": [
+        "Que cada término se obtiene multiplicando el anterior por un mismo número.",
+        "Que la diferencia entre un término y el siguiente es siempre la misma.",
+        "Que todos sus términos son números primos.",
+        "Que la suma de sus términos es constante."
+      ],
+      "clave": "B",
+      "justificacion": "En una sucesión aritmética la diferencia entre términos consecutivos es constante. Multiplicar por un mismo número define una sucesión geométrica."
+    },
+    {
+      "codigo": "N6B-MAT-30",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "sucesiones con diferencias variables",
+      "enunciado": "Observa la sucesión 2, 6, 12, 20, 30. ¿Qué número sigue?",
+      "alternativas": ["36", "40", "42", "44"],
+      "clave": "C",
+      "justificacion": "Las diferencias entre términos son 4, 6, 8 y 10, y aumentan de dos en dos. La siguiente diferencia debe ser 12, así que el término que sigue es 30 + 12 = 42."
+    },
+    {
+      "codigo": "N6B-MAT-31",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "modelar",
+      "conocimiento": "expresión general",
+      "enunciado": "La sucesión 3, 7, 11, 15 se puede escribir con una expresión que depende de la posición n. ¿Cuál expresión genera esa sucesión?",
+      "alternativas": ["3n", "4n − 1", "2n + 1", "n + 4"],
+      "clave": "B",
+      "justificacion": "Con n = 1: 4 × 1 − 1 = 3. Con n = 2: 4 × 2 − 1 = 7. Con n = 3 da 11 y con n = 4 da 15. La expresión 3n daría 3, 6, 9, 12, que no coincide."
+    },
+    {
+      "codigo": "N6B-MAT-32",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "aplicar",
+      "conocimiento": "evaluación de una expresión",
+      "enunciado": "Si y = 3x + 5, ¿cuánto vale y cuando x = 4?",
+      "alternativas": ["12", "17", "20", "35"],
+      "clave": "B",
+      "justificacion": "Se reemplaza x por 4: y = 3 × 4 + 5 = 12 + 5 = 17. El valor 12 resulta de omitir la suma y el 35 de multiplicar 3 por 5 y luego por 4."
+    },
+    {
+      "codigo": "N6B-MAT-33",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "ecuaciones de primer grado",
+      "enunciado": "Se piensa un número, se multiplica por 5 y al resultado se le restan 7. Si el resultado final es 23, ¿cuál era el número?",
+      "alternativas": ["3", "5", "6", "8"],
+      "clave": "C",
+      "justificacion": "La ecuación es 5x − 7 = 23. Al sumar 7 en ambos lados queda 5x = 30, y al dividir por 5 resulta x = 6."
+    },
+    {
+      "codigo": "N6B-MAT-34",
+      "eje": "patrones-y-algebra",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "reconocer",
+      "conocimiento": "proporcionalidad directa",
+      "enunciado": "En una tabla, al duplicar la cantidad de kilos de pan se duplica también el precio, y al triplicarla se triplica. ¿Qué tipo de relación hay entre kilos y precio?",
+      "alternativas": [
+        "Proporcionalidad directa.",
+        "Proporcionalidad inversa.",
+        "Una relación en la que el precio no cambia.",
+        "Una relación en la que el precio sube de a 100 pesos."
+      ],
+      "clave": "A",
+      "justificacion": "Cuando al duplicar una cantidad se duplica la otra, y al triplicar ocurre lo mismo, las cantidades son directamente proporcionales, con una razón constante entre ellas."
+    },
+    {
+      "codigo": "N6B-MAT-35",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "modelar",
+      "conocimiento": "ecuaciones con una incógnita",
+      "enunciado": "Dos números consecutivos suman 45. ¿Cuáles son?",
+      "alternativas": ["20 y 25", "21 y 24", "22 y 23", "23 y 22,5"],
+      "clave": "C",
+      "justificacion": "Si el menor es n, el otro es n + 1, y n + (n + 1) = 45. Entonces 2n = 44 y n = 22. Los números son 22 y 23, que suman 45 y son consecutivos."
+    },
+    {
+      "codigo": "N6B-MAT-36",
+      "eje": "patrones-y-algebra",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "validación de una regla",
+      "enunciado": "Un estudiante dice que la regla de la sucesión 1, 4, 9, 16 consiste en sumar 3 a cada término. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Es correcta, porque 4 − 1 = 3.",
+        "Es incorrecta, porque las diferencias son 3, 5 y 7, así que no son constantes.",
+        "Es correcta, porque los dos primeros términos cumplen la regla.",
+        "Es incorrecta, porque la sucesión no tiene regla."
+      ],
+      "clave": "B",
+      "justificacion": "Las diferencias entre términos consecutivos son 3, 5 y 7, y van aumentando. Una regla de sumar 3 constante solo funcionaría si la diferencia fuera siempre la misma. La sucesión son los cuadrados de 1, 2, 3 y 4."
+    },
+    {
+      "codigo": "N6B-MAT-37",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área de figuras compuestas",
+      "figura": {
+        "ancho": 220,
+        "alto": 220,
+        "elementos": [
+          { "op": "rect", "x": 30, "y": 30, "w": 160, "h": 160, "grosor": 1.4 },
+          { "op": "circle", "cx": 110, "cy": 110, "r": 80, "grosor": 1.4 },
+          { "op": "text", "x": 110, "y": 208, "texto": "10 cm de lado", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "En un cuadrado de 10 cm de lado se dibuja un círculo inscrito, como muestra la figura. Si se usa π = 3,14, ¿cuál es el área de las cuatro esquinas que quedan fuera del círculo?",
+      "alternativas": ["21,5 cm²", "39,25 cm²", "60 cm²", "78,5 cm²"],
+      "clave": "A",
+      "justificacion": "El área del cuadrado es 10 × 10 = 100 cm². El círculo inscrito tiene radio 5 cm, así que su área es 3,14 × 25 = 78,5 cm². Las esquinas suman 100 − 78,5 = 21,5 cm². El valor 78,5 es el área del círculo y no la diferencia."
+    },
+    {
+      "codigo": "N6B-MAT-38",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "volumen del cubo",
+      "enunciado": "Un cubo mide 4 cm de arista. Si se duplica la arista, ¿qué ocurre con el volumen?",
+      "alternativas": [
+        "Se duplica.",
+        "Se triplica.",
+        "Se cuadruplica.",
+        "Se multiplica por ocho."
+      ],
+      "clave": "D",
+      "justificacion": "El volumen del cubo de arista 4 es 4³ = 64 cm³. Con arista 8 es 8³ = 512 cm³, que es 8 veces 64. Al duplicar la arista el volumen se multiplica por 2³ = 8."
+    },
+    {
+      "codigo": "N6B-MAT-39",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "velocidad media",
+      "enunciado": "Un automóvil recorre 150 kilómetros en 2,5 horas. ¿Cuál fue su velocidad media?",
+      "alternativas": ["50 km/h", "60 km/h", "75 km/h", "90 km/h"],
+      "clave": "B",
+      "justificacion": "La velocidad media es la distancia dividida por el tiempo: 150 ÷ 2,5 = 60 km/h. El valor 75 sale de multiplicar 150 por 0,5, que no corresponde."
+    },
+    {
+      "codigo": "N6B-MAT-40",
+      "eje": "medicion",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "convertir",
+      "conocimiento": "medidas de tiempo",
+      "enunciado": "Una película dura 1,5 horas. ¿A cuántos minutos equivale?",
+      "alternativas": ["75 minutos", "90 minutos", "105 minutos", "150 minutos"],
+      "clave": "B",
+      "justificacion": "Cada hora tiene 60 minutos, así que 1,5 horas son 1,5 × 60 = 90 minutos. El valor 150 resulta de tratar 1,5 como si fueran 2,5 horas."
+    }
+  ]
+}
