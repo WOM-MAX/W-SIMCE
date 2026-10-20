@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-POE-304",
+    "titulo": "Oficio de la palabra",
+    "tipo": "poético",
+    "palabras": 112,
+    "cuerpo": "Mi padre no escribía cartas.\nEscribía listas en el dorso\nde las boletas del almacén:\npan, aceite, fósforos, hilo.\n\nNunca una palabra de más.\nNunca una que no sirviera.\nCuando murió, encontramos\ncuarenta y tres listas.\n\nMi hermana las ordenó por fecha\ny descubrió que la letra\nse fue poniendo más chica\na partir del año en que enfermó.\n\nNo dijo nada. No hacía falta.\nLas listas decían lo mismo:\npan, aceite, fósforos, hilo,\ny a veces, al final, «no olvidar»."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-POE-316",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué escribía el padre, según el poema?",
+      "alternativas": [
+        "Cartas largas a su familia.",
+        "Listas de compras en el dorso de las boletas del almacén.",
+        "Un diario de su enfermedad.",
+        "Poemas en cuadernos pequeños."
+      ],
+      "clave": "B",
+      "justificacion": "El primer verso lo dice: mi padre no escribía cartas, escribía listas en el dorso de las boletas del almacén, con palabras como pan, aceite y fósforos."
+    },
+    {
+      "codigo": "8B-LEC-POE-317",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una afirmación",
+      "enunciado": "¿Qué significa que el padre nunca escribiera «una palabra de más»?",
+      "alternativas": [
+        "Que escribía muy poco porque no sabía escribir.",
+        "Que usaba solo las palabras necesarias, sin adornos.",
+        "Que olvidaba la mitad de las cosas de la lista.",
+        "Que copiaba las listas de otra persona."
+      ],
+      "clave": "B",
+      "justificacion": "La expresión se refiere a la economía del lenguaje: solo las palabras útiles, ninguna que no sirviera. El poema insiste en ese rasgo con la enumeración breve de productos."
+    },
+    {
+      "codigo": "8B-LEC-POE-318",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un detalle",
+      "enunciado": "¿Qué descubre la hermana al ordenar las listas por fecha?",
+      "alternativas": [
+        "Que el padre escribía cada vez más rápido.",
+        "Que la letra se fue haciendo más chica a partir del año en que enfermó.",
+        "Que las listas cambiaron de idioma.",
+        "Que había listas de otras personas mezcladas."
+      ],
+      "clave": "B",
+      "justificacion": "El poema lo dice: la letra se fue poniendo más chica a partir del año en que enfermó. Ese dato aparece como el hallazgo del ordenamiento por fecha."
+    },
+    {
+      "codigo": "8B-LEC-POE-319",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una expresión",
+      "enunciado": "¿Por qué el poema dice que «no hacía falta» que la hermana dijera nada?",
+      "alternativas": [
+        "Porque el padre ya había explicado la enfermedad.",
+        "Porque el dato de la letra mostraba por sí solo lo que estaba ocurriendo.",
+        "Porque la familia no quería hablar del tema.",
+        "Porque las listas eran difíciles de leer."
+      ],
+      "clave": "B",
+      "justificacion": "El descubrimiento de la letra que se achica comunica el avance de la enfermedad sin necesidad de explicarlo. El poema refuerza esa idea con la frase siguiente: las listas decían lo mismo."
+    },
+    {
+      "codigo": "8B-LEC-POE-320",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué valor le da el poema a esas listas de compras?",
+      "alternativas": [
+        "Son documentos sin importancia que se conservan por error.",
+        "Son el registro de una vida cotidiana y del paso de la enfermedad.",
+        "Son pruebas de que el padre tenía buena memoria.",
+        "Son el único texto que el padre sabía escribir."
+      ],
+      "clave": "B",
+      "justificacion": "El poema trata las cuarenta y tres listas como un legado. El detalle de la letra y la expresión «no olvidar» al final de algunas convierten un registro doméstico en testimonio de la vida y de la enfermedad del padre."
+    }
+  ]
+}

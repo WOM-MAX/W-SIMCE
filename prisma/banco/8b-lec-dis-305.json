@@ -1,0 +1,88 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DIS-305",
+    "titulo": "Señales de tránsito para la ciclovía",
+    "tipo": "informativo-discontinuo",
+    "palabras": 188,
+    "cuerpo": "CICLOVÍA COSTANERA\nTramo de 8 kilómetros. Normas para ciclistas y peatones.\n\nSEÑAL | SIGNIFICADO | DÓNDE ESTÁ\nCarril compartido | Peatones y ciclistas usan la misma franja | Del km 0 al 2\nCruce de prioridad peatonal | El ciclista debe bajar de la bicicleta | Km 2,5 y km 5\nZona de velocidad reducida | Máximo 15 km/h | Km 3 al 4\nPendiente pronunciada | Frenar y mantener distancia | Km 6 al 7\nFin de ciclovía | Continuar por la calle lateral | Km 8\n\nREGLAS GENERALES\nLa ciclovía se usa en un solo sentido: de norte a sur.\nLos peatones caminan por la franja izquierda; las bicicletas, por la derecha.\nEl uso de luces es obligatorio entre las 19:00 y las 8:00.\nSe prohíbe circular en patines y en scooters eléctricos.\n\nESTADÍSTICAS DEL AÑO PASADO\n42 accidentes registrados en el tramo.\n28 de ellos ocurrieron en el km 6 y 7, por exceso de velocidad en la bajada.\n9 ocurrieron en los cruces de prioridad peatonal."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DIS-321",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de señalética",
+      "enunciado": "¿Qué debe hacer el ciclista en un cruce de prioridad peatonal?",
+      "alternativas": [
+        "Acelerar para cruzar rápido.",
+        "Bajar de la bicicleta.",
+        "Tocar la bocina o el timbre.",
+        "Cambiar a la franja izquierda."
+      ],
+      "clave": "B",
+      "justificacion": "La tabla indica que en los cruces de prioridad peatonal, ubicados en el km 2,5 y el km 5, el ciclista debe bajar de la bicicleta."
+    },
+    {
+      "codigo": "8B-LEC-DIS-322",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de estadísticas",
+      "enunciado": "¿Qué porcentaje de los accidentes del año pasado ocurrió en el km 6 y 7?",
+      "alternativas": ["28%", "33%", "50%", "67%"],
+      "clave": "D",
+      "justificacion": "Fueron 28 accidentes de un total de 42. Al dividir 28 ÷ 42 se obtiene 0,666, es decir, aproximadamente el 67% de los accidentes del tramo."
+    },
+    {
+      "codigo": "8B-LEC-DIS-323",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre norma y dato",
+      "enunciado": "¿Qué relación hay entre las reglas de la ciclovía y la estadística de accidentes?",
+      "alternativas": [
+        "Ninguna: las estadísticas se refieren a otro tramo.",
+        "Los accidentes se concentran en la bajada, donde existe la señal de pendiente pronunciada y la regla de frenar.",
+        "Los accidentes ocurren por los peatones que caminan por la franja derecha.",
+        "Las estadísticas muestran que las reglas no tienen relación con los accidentes."
+      ],
+      "clave": "B",
+      "justificacion": "El texto indica que 28 de los 42 accidentes ocurrieron en el km 6 y 7 por exceso de velocidad en la bajada, y la señalética de ese tramo advierte la pendiente pronunciada con la instrucción de frenar y mantener distancia."
+    },
+    {
+      "codigo": "8B-LEC-DIS-324",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "coherencia de las normas",
+      "enunciado": "El tramo del km 0 al 2 es de carril compartido y la regla general separa peatones a la izquierda y bicicletas a la derecha. ¿Cómo se compatibilizan?",
+      "alternativas": [
+        "Se contradicen y el tramo compartido anula la separación.",
+        "En el carril compartido la franja es común, y la separación rige donde el carril no es compartido.",
+        "La separación se aplica solo a los patines y scooters.",
+        "La regla general se aplica únicamente de noche."
+      ],
+      "clave": "B",
+      "justificacion": "La señal de carril compartido vale para el km 0 al 2, donde la franja es común. La regla general de separación corresponde al resto del trazado, y las normas no se contradicen porque tienen ámbitos distintos."
+    },
+    {
+      "codigo": "8B-LEC-DIS-325",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una medida",
+      "enunciado": "Para reducir los accidentes del km 6 y 7, ¿qué medida se desprende de los datos del propio aviso?",
+      "alternativas": [
+        "Prohibir la ciclovía en ese tramo.",
+        "Reforzar el control de velocidad en la bajada, donde ocurrieron 28 de los 42 accidentes.",
+        "Obligar a los peatones a usar la franja derecha.",
+        "Aumentar la velocidad máxima permitida para que los ciclistas bajen más rápido."
+      ],
+      "clave": "B",
+      "justificacion": "Los datos concentran dos tercios de los accidentes en la bajada por exceso de velocidad, y en ese tramo ya existe una zona de velocidad reducida en el km 3 al 4. Reforzar el control en la pendiente atiende la causa señalada."
+    }
+  ]
+}

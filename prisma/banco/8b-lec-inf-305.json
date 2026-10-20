@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-INF-305",
+    "titulo": "Cómo se decide el precio de la fruta",
+    "tipo": "informativo",
+    "palabras": 340,
+    "cuerpo": "El precio de una fruta en el puesto de la feria no se fija al azar ni depende solo de lo que costó producirla. Intervienen varios factores que se mueven a diario.\n\nEl primero es la oferta y la demanda. Si ese mes llega mucha fruta de una zona y la gente compra lo mismo que siempre, hay excedente y el precio baja. Si una helada afecta la producción, hay menos fruta disponible y el precio sube. La misma caja de duraznos puede valer el doble en dos semanas distintas.\n\nEl segundo factor es la perecibilidad. La fruta fresca tiene días contados y el vendedor debe decidir rápido. Una caja que no se vende hoy se convierte en pérdida mañana, así que cerca del cierre del día los precios bajan. Un producto que aguanta semanas, como la papa, no sufre la misma urgencia.\n\nEl tercero es el costo oculto de la merma. De cada cien kilos que llegan al puesto, algunos se desechan por golpes, sobre madurez u hongos. Ese porcentaje se reparte en el precio de lo que sí se vende. Por eso la fruta de temporada, que viaja menos y se maltrata menos, suele ser más barata.\n\nEl cuarto factor es la cadena de intermediarios. Entre el productor y el consumidor puede haber uno o varios compradores. Cada uno agrega un margen y también un costo de traslado y almacenamiento.\n\nConviene distinguir precio de valor. Que algo sea barato no significa que haya costado poco producir; puede significar que el vendedor necesita venderlo hoy. Y un precio alto no garantiza que el productor reciba más: depende de en qué punto de la cadena se agregó el margen."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-INF-321",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué ocurre con el precio cuando hay excedente de fruta?",
+      "alternativas": [
+        "Sube, porque hay más variedad para elegir.",
+        "Baja, porque llega mucha fruta y la gente compra lo mismo que siempre.",
+        "Se mantiene igual, porque el costo de producción no cambia.",
+        "Sube, porque el traslado se hace más costoso."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que si ese mes llega mucha fruta y la gente compra lo mismo que siempre, hay excedente y el precio baja. El caso contrario, una helada, produce escasez y alza."
+    },
+    {
+      "codigo": "8B-LEC-INF-322",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "relación entre perecibilidad y precio",
+      "enunciado": "¿Por qué los precios bajan cerca del cierre del día en el caso de la fruta fresca?",
+      "alternativas": [
+        "Porque los clientes tienen menos dinero a esa hora.",
+        "Porque la fruta no vendida se convierte en pérdida al día siguiente y el vendedor necesita venderla.",
+        "Porque el puesto paga menos arriendo de noche.",
+        "Porque la fruta pierde sabor con las horas."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que la fruta fresca tiene días contados y que una caja que no se vende hoy es pérdida mañana. Ese es el motivo de la urgencia, y el texto lo contrasta con la papa."
+    },
+    {
+      "codigo": "8B-LEC-INF-323",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "costo de la merma",
+      "enunciado": "¿Qué es la merma y cómo afecta el precio?",
+      "alternativas": [
+        "Es la fruta que sobra y su costo se reparte en el precio de lo que sí se vende.",
+        "Es el impuesto que paga el puesto de feria.",
+        "Es la ganancia del intermediario.",
+        "Es la diferencia entre el precio mayorista y el minorista."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que de cada cien kilos algunos se desechan por golpes, sobre madurez u hongos, y que ese porcentaje se reparte en el precio de lo que sí se vende."
+    },
+    {
+      "codigo": "8B-LEC-INF-324",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "distinción entre precio y valor",
+      "enunciado": "El texto advierte que hay que distinguir precio de valor. ¿Qué ejemplo corresponde a esa distinción?",
+      "alternativas": [
+        "Una fruta barata puede significar que el vendedor necesita venderla hoy, no que haya costado poco producirla.",
+        "Una fruta cara siempre significa que el productor recibió más dinero.",
+        "El precio de la fruta depende solo del costo de producción.",
+        "El valor de la fruta se mide por su tamaño."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice expresamente que que algo sea barato no significa que haya costado poco producir, y que un precio alto no garantiza que el productor reciba más. El ejemplo de la primera alternativa reproduce esa idea."
+    },
+    {
+      "codigo": "8B-LEC-INF-325",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una explicación",
+      "enunciado": "Un consumidor dice que si la fruta subió es porque el productor se está enriqueciendo. Según el texto, ¿qué le falta considerar?",
+      "alternativas": [
+        "Que el precio también depende de la oferta, la perecibilidad, la merma y los intermediarios.",
+        "Que el productor nunca recibe dinero por su cosecha.",
+        "Que las heladas no afectan la producción de fruta.",
+        "Que el precio de la fruta lo fija el municipio."
+      ],
+      "clave": "A",
+      "justificacion": "El texto presenta cuatro factores que intervienen en el precio y aclara que un precio alto no garantiza que el productor reciba más: depende de en qué punto de la cadena se agregó el margen."
+    }
+  ]
+}
