@@ -1,0 +1,344 @@
+{
+  "lote": "6B matemática, cierre 1",
+  "nivel": "6B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N6B-MAT-01",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área del trapecio",
+      "figura": {
+        "ancho": 250,
+        "alto": 160,
+        "elementos": [
+          { "op": "poly", "puntos": "40,120 210,120 180,50 70,50", "grosor": 1.4 },
+          { "op": "line", "x1": 70, "y1": 50, "x2": 70, "y2": 120, "grosor": 0.9, "punteada": true },
+          { "op": "text", "x": 125, "y": 138, "texto": "8 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 125, "y": 42, "texto": "4 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 104, "y": 88, "texto": "5 cm", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La figura muestra un trapecio con sus medidas. ¿Cuál es su área?",
+      "alternativas": ["24 cm²", "30 cm²", "40 cm²", "60 cm²"],
+      "clave": "B",
+      "justificacion": "El área del trapecio es (base mayor + base menor) ÷ 2 × altura. Entonces (8 + 4) ÷ 2 × 5 = 6 × 5 = 30 cm². El valor 40 resulta de multiplicar 8 por 5, olvidando la base menor y el divisor 2."
+    },
+    {
+      "codigo": "N6B-MAT-02",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área del triángulo",
+      "figura": {
+        "ancho": 250,
+        "alto": 160,
+        "elementos": [
+          { "op": "poly", "puntos": "40,120 200,120 100,40", "grosor": 1.4 },
+          { "op": "line", "x1": 100, "y1": 40, "x2": 100, "y2": 120, "grosor": 0.9, "punteada": true },
+          { "op": "line", "x1": 100, "y1": 112, "x2": 108, "y2": 112, "grosor": 0.9 },
+          { "op": "line", "x1": 108, "y1": 112, "x2": 108, "y2": 120, "grosor": 0.9 },
+          { "op": "text", "x": 120, "y": 138, "texto": "8 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 92, "y": 84, "texto": "?", "tam": 11, "anclaje": "fin", "negrita": true }
+        ]
+      },
+      "enunciado": "Un triángulo tiene 24 cm² de área y su base mide 8 cm. ¿Cuánto mide su altura?",
+      "alternativas": ["3 cm", "6 cm", "8 cm", "12 cm"],
+      "clave": "B",
+      "justificacion": "El área del triángulo es base × altura ÷ 2. Si 8 × altura ÷ 2 = 24, entonces 8 × altura = 48 y la altura mide 6 cm. El valor 3 sale de dividir 24 entre 8 sin duplicar."
+    },
+    {
+      "codigo": "N6B-MAT-03",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "ángulos interiores",
+      "enunciado": "¿Cuánto suman los cuatro ángulos interiores de un cuadrilátero?",
+      "alternativas": ["180°", "270°", "360°", "540°"],
+      "clave": "C",
+      "justificacion": "Todo cuadrilátero se puede dividir en dos triángulos trazando una diagonal. Como cada triángulo suma 180°, los cuatro ángulos suman 2 × 180° = 360°."
+    },
+    {
+      "codigo": "N6B-MAT-04",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "área del círculo",
+      "enunciado": "¿Cuál expresión permite calcular el área de un círculo de radio r?",
+      "alternativas": ["2 × π × r", "π × r²", "π × r", "2 × π × r²"],
+      "clave": "B",
+      "justificacion": "El área de un círculo es π multiplicado por el radio al cuadrado. La expresión 2 × π × r corresponde al perímetro de la circunferencia, no al área."
+    },
+    {
+      "codigo": "N6B-MAT-05",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "perímetro de la circunferencia",
+      "figura": {
+        "ancho": 190,
+        "alto": 180,
+        "elementos": [
+          { "op": "circle", "cx": 95, "cy": 90, "r": 62, "grosor": 1.4 },
+          { "op": "line", "x1": 95, "y1": 90, "x2": 157, "y2": 90, "grosor": 1 },
+          { "op": "text", "x": 126, "y": 82, "texto": "5 cm", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La figura muestra una circunferencia de 5 cm de radio. Si se usa π = 3,14, ¿cuánto mide su perímetro?",
+      "alternativas": ["15,7 cm", "31,4 cm", "78,5 cm", "25 cm"],
+      "clave": "B",
+      "justificacion": "El perímetro de la circunferencia es 2 × π × r = 2 × 3,14 × 5 = 31,4 cm. El valor 15,7 corresponde a π × r, y 78,5 al área (π × 25)."
+    },
+    {
+      "codigo": "N6B-MAT-06",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área del círculo",
+      "enunciado": "Un círculo tiene 10 cm de diámetro. Si se usa π = 3,14, ¿cuál es su área?",
+      "alternativas": ["31,4 cm²", "62,8 cm²", "78,5 cm²", "314 cm²"],
+      "clave": "C",
+      "justificacion": "El diámetro es 10 cm, así que el radio es 5 cm. El área es π × 5² = 3,14 × 25 = 78,5 cm². Usar el diámetro en lugar del radio lleva a 314 cm², que es un error común."
+    },
+    {
+      "codigo": "N6B-MAT-07",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "comparar",
+      "conocimiento": "área y perímetro",
+      "enunciado": "Un rectángulo mide 6 cm por 4 cm y otro mide 8 cm por 3 cm. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Tienen la misma área y el mismo perímetro.",
+        "Tienen la misma área, pero el segundo tiene mayor perímetro.",
+        "Tienen distinta área, pero el mismo perímetro.",
+        "El primero tiene mayor área y menor perímetro."
+      ],
+      "clave": "B",
+      "justificacion": "Las áreas son 6 × 4 = 24 cm² y 8 × 3 = 24 cm², iguales. Los perímetros son 2 × (6 + 4) = 20 cm y 2 × (8 + 3) = 22 cm, distintos: el segundo es mayor."
+    },
+    {
+      "codigo": "N6B-MAT-08",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "volumen del prisma",
+      "figura": {
+        "ancho": 250,
+        "alto": 180,
+        "elementos": [
+          { "op": "poly", "puntos": "50,140 190,140 190,60 50,60", "grosor": 1.3 },
+          { "op": "line", "x1": 50, "y1": 60, "x2": 90, "y2": 34, "grosor": 1.3 },
+          { "op": "line", "x1": 190, "y1": 60, "x2": 230, "y2": 34, "grosor": 1.3 },
+          { "op": "line", "x1": 90, "y1": 34, "x2": 230, "y2": 34, "grosor": 1.3 },
+          { "op": "line", "x1": 190, "y1": 140, "x2": 230, "y2": 114, "grosor": 1.3 },
+          { "op": "line", "x1": 230, "y1": 34, "x2": 230, "y2": 114, "grosor": 1.3 },
+          { "op": "text", "x": 120, "y": 158, "texto": "5 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 200, "y": 104, "texto": "4 cm", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 152, "y": 28, "texto": "3 cm", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "La figura muestra un prisma recto de 5 cm por 4 cm de base y 3 cm de alto. ¿Cuál es su volumen?",
+      "alternativas": ["12 cm³", "20 cm³", "47 cm³", "60 cm³"],
+      "clave": "D",
+      "justificacion": "El volumen del prisma es área de la base por altura: (5 × 4) × 3 = 20 × 3 = 60 cm³. El valor 47 resulta de sumar las tres medidas."
+    },
+    {
+      "codigo": "N6B-MAT-09",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "tipos de ángulos",
+      "enunciado": "¿Qué caracteriza a un ángulo obtuso?",
+      "alternativas": [
+        "Mide exactamente 90°.",
+        "Mide menos de 90°.",
+        "Mide más de 90° y menos de 180°.",
+        "Mide más de 180°."
+      ],
+      "clave": "C",
+      "justificacion": "El ángulo recto mide 90° y el extendido o llano mide 180°. El obtuso queda entre los dos: más de 90° y menos de 180°."
+    },
+    {
+      "codigo": "N6B-MAT-10",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "suma de ángulos del triángulo",
+      "figura": {
+        "ancho": 250,
+        "alto": 150,
+        "elementos": [
+          { "op": "poly", "puntos": "30,120 220,120 120,30", "grosor": 1.4 },
+          { "op": "text", "x": 52, "y": 112, "texto": "65°", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 186, "y": 112, "texto": "48°", "tam": 9, "anclaje": "fin" },
+          { "op": "text", "x": 120, "y": 52, "texto": "?", "tam": 12, "anclaje": "medio", "negrita": true }
+        ]
+      },
+      "enunciado": "En el triángulo de la figura, dos de sus ángulos miden 65° y 48°. ¿Cuánto mide el tercero?",
+      "alternativas": ["57°", "67°", "77°", "113°"],
+      "clave": "B",
+      "justificacion": "Los ángulos interiores de un triángulo suman 180°. Entonces 180 − 65 − 48 = 67°. El valor 113° corresponde a la suma de los dos ángulos dados."
+    },
+    {
+      "codigo": "N6B-MAT-11",
+      "eje": "medicion",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "unidades de longitud",
+      "enunciado": "¿A cuántos metros equivale un kilómetro?",
+      "alternativas": ["10 metros", "100 metros", "1000 metros", "10000 metros"],
+      "clave": "C",
+      "justificacion": "El prefijo kilo significa mil. Un kilómetro equivale a 1000 metros."
+    },
+    {
+      "codigo": "N6B-MAT-12",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "convertir",
+      "conocimiento": "unidades de masa",
+      "enunciado": "Un paquete de 2,5 kilogramos se reparte en bolsas de 250 gramos. ¿Cuántas bolsas se llenan?",
+      "alternativas": ["5 bolsas", "8 bolsas", "10 bolsas", "12 bolsas"],
+      "clave": "C",
+      "justificacion": "Dos kilos y medio son 2500 gramos. Al dividir 2500 entre 250 se obtienen 10 bolsas."
+    },
+    {
+      "codigo": "N6B-MAT-13",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "fracciones y capacidad",
+      "enunciado": "Un jarro tiene tres cuartos de litro de jugo y se le agrega medio litro. ¿Cuánta bebida hay ahora?",
+      "alternativas": ["Un litro", "Un litro y un cuarto", "Un litro y medio", "Dos litros"],
+      "clave": "B",
+      "justificacion": "Tres cuartos de litro son 0,75 litros y medio litro es 0,5 litros. La suma es 0,75 + 0,5 = 1,25 litros, es decir, un litro y un cuarto."
+    },
+    {
+      "codigo": "N6B-MAT-14",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "volumen y capacidad",
+      "figura": {
+        "ancho": 260,
+        "alto": 160,
+        "elementos": [
+          { "op": "poly", "puntos": "40,130 200,130 200,60 40,60", "grosor": 1.3 },
+          { "op": "line", "x1": 40, "y1": 60, "x2": 76, "y2": 38, "grosor": 1.3 },
+          { "op": "line", "x1": 200, "y1": 60, "x2": 236, "y2": 38, "grosor": 1.3 },
+          { "op": "line", "x1": 76, "y1": 38, "x2": 236, "y2": 38, "grosor": 1.3 },
+          { "op": "line", "x1": 200, "y1": 130, "x2": 236, "y2": 108, "grosor": 1.3 },
+          { "op": "line", "x1": 236, "y1": 38, "x2": 236, "y2": 108, "grosor": 1.3 },
+          { "op": "text", "x": 120, "y": 148, "texto": "2 m", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 212, "y": 100, "texto": "1,5 m", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 156, "y": 32, "texto": "0,8 m", "tam": 9, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "Un estanque rectangular mide 2 m de largo, 1,5 m de ancho y 0,8 m de profundidad. ¿Cuántos litros de agua caben en él?",
+      "alternativas": ["24 litros", "240 litros", "1400 litros", "2400 litros"],
+      "clave": "D",
+      "justificacion": "El volumen es 2 × 1,5 × 0,8 = 2,4 m³. Cada metro cúbico son 1000 litros, así que caben 2,4 × 1000 = 2400 litros."
+    },
+    {
+      "codigo": "N6B-MAT-15",
+      "eje": "medicion",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "unidades de superficie",
+      "enunciado": "¿A cuántos centímetros cuadrados equivale un metro cuadrado?",
+      "alternativas": ["100 cm²", "1000 cm²", "10000 cm²", "100000 cm²"],
+      "clave": "C",
+      "justificacion": "Un metro cuadrado es un cuadrado de 100 cm por lado. Su superficie es 100 × 100 = 10000 cm²."
+    },
+    {
+      "codigo": "N6B-MAT-16",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "promedio",
+      "enunciado": "Tres estudiantes corrieron 100 metros en 12, 15 y 18 segundos. ¿Cuál es el tiempo promedio del grupo?",
+      "alternativas": ["13 segundos", "14 segundos", "15 segundos", "16 segundos"],
+      "clave": "C",
+      "justificacion": "Se suman los tiempos y se divide por la cantidad de datos: (12 + 15 + 18) ÷ 3 = 45 ÷ 3 = 15 segundos."
+    },
+    {
+      "codigo": "N6B-MAT-17",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "proporcionalidad directa",
+      "enunciado": "Una receta para 4 personas lleva 300 gramos de harina. Si se quiere cocinar para 10 personas manteniendo la proporción, ¿cuánta harina se necesita?",
+      "alternativas": ["600 gramos", "720 gramos", "750 gramos", "1200 gramos"],
+      "clave": "C",
+      "justificacion": "Para 4 personas se usan 300 gramos, o sea 75 gramos por persona. Para 10 personas: 75 × 10 = 750 gramos. El valor 1200 resulta de sumar 300 por cada 4 personas contadas como si fueran 4 grupos."
+    },
+    {
+      "codigo": "N6B-MAT-18",
+      "eje": "medicion",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "medidas de tiempo",
+      "enunciado": "Una película dura 1 hora y 30 minutos y se le agregan 45 minutos de documental. ¿Cuánto dura el programa completo?",
+      "alternativas": ["1 hora y 45 minutos", "2 horas y 15 minutos", "2 horas y 30 minutos", "3 horas"],
+      "clave": "B",
+      "justificacion": "30 minutos más 45 minutos dan 75 minutos, que es 1 hora y 15 minutos. Al sumar la hora de la película, el total es 2 horas y 15 minutos."
+    },
+    {
+      "codigo": "N6B-MAT-19",
+      "eje": "medicion",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "estimación de superficies",
+      "figura": {
+        "ancho": 260,
+        "alto": 170,
+        "elementos": [
+          { "op": "poly", "puntos": "40,40 200,40 200,110 110,110 110,150 40,150", "grosor": 1.4 },
+          { "op": "line", "x1": 40, "y1": 110, "x2": 110, "y2": 110, "grosor": 0.8, "punteada": true },
+          
+          { "op": "text", "x": 120, "y": 170, "texto": "terreno en L", "tam": 8.5, "anclaje": "medio" }
+        ]
+      },
+      "enunciado": "Para calcular el área del terreno en forma de L de la figura, un estudiante propone dividirlo en dos rectángulos. ¿Qué afirmación es correcta?",
+      "alternativas": [
+        "Es válido, porque toda figura en L se puede partir en rectángulos y sumar sus áreas.",
+        "No es válido, porque las figuras en L no tienen área.",
+        "Es válido solo si los dos rectángulos son iguales.",
+        "No es válido, porque al dividir la figura se pierde una parte."
+      ],
+      "clave": "A",
+      "justificacion": "Dividir una figura compuesta en rectángulos sin superponerlos ni dejar huecos conserva la superficie total. Se calcula cada área parcial y se suman, método que sirve para cualquier figura formada por rectángulos."
+    },
+    {
+      "codigo": "N6B-MAT-20",
+      "eje": "medicion",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "medidas de tiempo",
+      "enunciado": "¿A cuántos segundos equivale una hora?",
+      "alternativas": ["60 segundos", "600 segundos", "3600 segundos", "6000 segundos"],
+      "clave": "C",
+      "justificacion": "Una hora tiene 60 minutos y cada minuto tiene 60 segundos. Entonces 60 × 60 = 3600 segundos."
+    }
+  ]
+}
