@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-NAR-306",
+    "titulo": "El turno de verano",
+    "tipo": "narrativo",
+    "palabras": 330,
+    "cuerpo": "El primer trabajo de Benjamín fue en la bodega de un supermercado, en enero. Entraba a las siete de la mañana y salía a las tres. Descargaba cajas, las abría con un cuchillo corto y acomodaba los productos en los estantes.\n\nA la segunda semana el jefe de turno, un hombre llamado Fuentes, le mostró un rincón detrás de las bebidas.\n\n—Aquí se deja lo que no cuadra —dijo—. Productos vencidos, cajas rotas, lo que sobra. Después se anota.\n\nBenjamín empezó a anotar. Al principio solo los vencidos. Después notó que muchas cajas rotas no estaban rotas: tenían un golpe en la esquina y nada más. Preguntó.\n\n—Se descarta igual —dijo Fuentes—. Si la caja está abollada, el cliente no la compra.\n\nEn marzo, Benjamín vio a un compañero poner tres paquetes de café en el rincón y anotar «roto». Los paquetes no tenían ningún golpe. Al día siguiente ya no estaban.\n\nBenjamín no dijo nada esa semana. La siguiente tampoco. A la tercera, escribió una nota de dos líneas y la dejó en el escritorio de Fuentes: «Los paquetes de café del martes estaban enteros. Lo anoté en el registro». Firmó con su nombre y la fecha.\n\nFuentes lo llamó al día siguiente. Benjamín entró pensando que lo iban a echar.\n\n—¿Por qué firmaste? —preguntó Fuentes.\n\n—Porque si no firmaba, no era una denuncia, era un chisme.\n\nFuentes lo miró un rato.\n\n—El compañero ya no trabaja aquí —dijo—. Y tú vas a seguir anotando, pero ahora en un cuaderno que se revisa los viernes.\n\nBenjamín volvió a la bodega. Ese verano aprendió a cargar cajas, pero lo que recordaría después fue otra cosa: que una nota con nombre y fecha pesa distinto que un comentario en el pasillo."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-NAR-326",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué vio Benjamín que lo llevó a escribir la nota?",
+      "alternativas": [
+        "Que Fuentes se llevaba productos de la bodega.",
+        "Que un compañero puso tres paquetes de café enteros en el rincón de descarte y anotó «roto».",
+        "Que las cajas llegaban todas rotas del camión.",
+        "Que no había cuaderno de registro en la bodega."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que vio a un compañero poner tres paquetes de café en el rincón y anotar «roto», aunque los paquetes no tenían ningún golpe. Al día siguiente ya no estaban."
+    },
+    {
+      "codigo": "8B-LEC-NAR-327",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una distinción",
+      "enunciado": "Benjamín explica por qué firmó la nota: «si no firmaba, no era una denuncia, era un chisme». ¿Qué diferencia establece?",
+      "alternativas": [
+        "Que el chisme se cuenta en voz alta y la denuncia por escrito.",
+        "Que firmar hace que la acusación sea identificable y verificable, en lugar de un comentario sin responsable.",
+        "Que los chismes son más graves que las denuncias.",
+        "Que la denuncia necesita testigos y el chisme no."
+      ],
+      "clave": "B",
+      "justificacion": "La firma convierte el aviso en algo que tiene autor y puede comprobarse. El cierre del cuento refuerza esa idea al decir que una nota con nombre y fecha pesa distinto que un comentario en el pasillo."
+    },
+    {
+      "codigo": "8B-LEC-NAR-328",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de un dato previo",
+      "enunciado": "¿Por qué el texto incluye el dato de las cajas abolladas que se descartaban igual?",
+      "alternativas": [
+        "Para mostrar que la bodega funcionaba mal en general.",
+        "Para mostrar que Benjamín ya conocía la diferencia entre un descarte justificado y uno que no lo era.",
+        "Para explicar por qué faltaban productos.",
+        "Para señalar que Fuentes le ocultaba información."
+      ],
+      "clave": "B",
+      "justificacion": "El episodio anterior establece el criterio: el descarte por abolladura era la norma. Cuando Benjamín ve paquetes sin ningún golpe anotados como rotos, puede distinguir el caso y decidir avisar."
+    },
+    {
+      "codigo": "8B-LEC-NAR-329",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "consecuencia de una acción",
+      "enunciado": "¿Qué resultado tiene la nota en la situación de Benjamín y en la del compañero?",
+      "alternativas": [
+        "Benjamín es despedido y el compañero sigue en el puesto.",
+        "El compañero deja de trabajar allí y Benjamín continúa, con un registro revisado cada viernes.",
+        "Los dos son despedidos por el jefe de turno.",
+        "Nada cambia, porque Fuentes no lee las notas."
+      ],
+      "clave": "B",
+      "justificacion": "Fuentes informa que el compañero ya no trabaja allí y le pide a Benjamín que siga anotando, ahora en un cuaderno que se revisa los viernes. Benjamín había entrado pensando que lo iban a echar."
+    },
+    {
+      "codigo": "8B-LEC-NAR-330",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué aprendizaje destaca el narrador al final, por encima de lo técnico del trabajo?",
+      "alternativas": [
+        "Que conviene callar para no tener problemas en un empleo nuevo.",
+        "Que avisar por escrito y con el nombre propio cambia el peso de lo que se dice.",
+        "Que las bodegas siempre tienen productos vencidos.",
+        "Que el jefe de turno decide quién trabaja y quién no."
+      ],
+      "clave": "B",
+      "justificacion": "El narrador dice que aprendió a cargar cajas, pero que lo que recordaría fue otra cosa, y cierra con la comparación entre una nota con nombre y fecha y un comentario en el pasillo. Ese es el aprendizaje que el texto destaca."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "8B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-8B-LEC-DRA-303",
+    "titulo": "La tarea de historia",
+    "tipo": "dramático",
+    "palabras": 306,
+    "cuerpo": "(Biblioteca del colegio. Dos estudiantes, ELENA y TOMÁS, con el mismo libro abierto. Es la hora del recreo.)\n\nTOMÁS: Copia la respuesta y cambiámosla un poco.\n\nELENA: No.\n\nTOMÁS: Es una pregunta de tres líneas. La profesora no va a notar nada.\n\nELENA: No es por la profesora. Es porque no la entiendo.\n\nTOMÁS: Yo tampoco la entiendo. Por eso la copio.\n\nELENA: Entonces estamos en el mismo punto.\n\nTOMÁS: No exactamente. Si copio, entrego. Si no copio, no entrego.\n\nELENA: (Cierra el libro.) ¿Qué parte no entiendes?\n\nTOMÁS: La pregunta dice «explica las consecuencias». Yo pondría lo que pasó, pero no sé si eso son consecuencias.\n\nELENA: (Abre el libro en otra página.) Mira. Lo que pasó es el hecho. Las consecuencias son lo que vino después, y a quién le afectó.\n\nTOMÁS: ¿Y cómo sé cuáles son?\n\nELENA: (Señala un párrafo.) Aquí dice quiénes se beneficiaron y quiénes perdieron. Eso ya es una consecuencia.\n\nTOMÁS: (Lee un momento.) Ah. Entonces no es lo mismo que la causa.\n\nELENA: No.\n\nTOMÁS: Y si escribo tres consecuencias y dos son la misma cosa con otras palabras, ¿está mal?\n\nELENA: Sí. Y eso es lo que me pasa a mí también.\n\nTOMÁS: (Pausa.) ¿Y si lo hacemos juntos y después cada uno escribe su respuesta?\n\nELENA: Eso sí.\n\n(Empiezan a leer. Pasan unos minutos.)\n\nTOMÁS: Elena. Si no me hubieras dicho que no, ¿te habría copiado?\n\nELENA: Probablemente.\n\nTOMÁS: (Sonríe.) Entonces sí me ayudaste.\n\nELENA: Ayudarte no era dejarte copiar.\n\nTOMÁS: Ya sé. Ahora lo entiendo."
+  },
+  "items": [
+    {
+      "codigo": "8B-LEC-DRA-311",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué propone Tomás al comienzo de la escena?",
+      "alternativas": [
+        "Que estudien juntos la lección.",
+        "Que Elena le pase la respuesta para copiarla y cambiarla un poco.",
+        "Que le pregunte a la profesora qué significa la pregunta.",
+        "Que entreguen la tarea sin responder."
+      ],
+      "clave": "B",
+      "justificacion": "Tomás propone copiar la respuesta y cambiarla un poco, convencido de que la profesora no notará la diferencia en una pregunta de tres líneas."
+    },
+    {
+      "codigo": "8B-LEC-DRA-312",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "distinción conceptual",
+      "enunciado": "¿Cómo explica Elena la diferencia entre lo que pasó y sus consecuencias?",
+      "alternativas": [
+        "Que lo que pasó es la consecuencia y lo posterior es el hecho.",
+        "Que lo que pasó es el hecho y las consecuencias son lo que vino después y a quién afectó.",
+        "Que las consecuencias son siempre económicas.",
+        "Que el hecho y las consecuencias son lo mismo dicho de otra forma."
+      ],
+      "clave": "B",
+      "justificacion": "Elena lo explica con esas palabras: lo que pasó es el hecho, y las consecuencias son lo que vino después y a quién le afectó. Después señala un párrafo donde se indica quiénes se beneficiaron y quiénes perdieron."
+    },
+    {
+      "codigo": "8B-LEC-DRA-313",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de una réplica",
+      "enunciado": "Elena dice «no es por la profesora. Es porque no la entiendo». ¿Qué revela esa respuesta?",
+      "alternativas": [
+        "Que Elena desconfía de la profesora.",
+        "Que su negativa no es una cuestión de reglas, sino de no saber resolver la pregunta.",
+        "Que Elena ya tiene la respuesta y no quiere compartirla.",
+        "Que Elena prefiere no entregar la tarea."
+      ],
+      "clave": "B",
+      "justificacion": "Elena aclara el motivo de su negativa: no es el riesgo de que la profesora lo note, sino que ella tampoco entiende la pregunta. Eso cambia la conversación, que pasa a trabajar sobre el contenido."
+    },
+    {
+      "codigo": "8B-LEC-DRA-314",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una propuesta",
+      "enunciado": "¿Por qué la propuesta final de Tomás es distinta de la inicial?",
+      "alternativas": [
+        "Porque ahora propone copiar sin cambiar nada.",
+        "Porque propone trabajar juntos el contenido y escribir cada uno su propia respuesta.",
+        "Porque propone entregar la misma respuesta firmada por los dos.",
+        "Porque propone preguntar a otro compañero."
+      ],
+      "clave": "B",
+      "justificacion": "La propuesta inicial era copiar y disimular. La final es estudiar juntos el contenido y que cada uno escriba su respuesta, lo que conserva el trabajo individual y resuelve la comprensión."
+    },
+    {
+      "codigo": "8B-LEC-DRA-315",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "Tomás dice al final «entonces sí me ayudaste», y Elena responde que ayudarlo no era dejarlo copiar. ¿Qué muestra ese intercambio?",
+      "alternativas": [
+        "Que Tomás no entendió el contenido de la tarea.",
+        "Que hay formas de ayuda que no consisten en entregar la respuesta hecha.",
+        "Que Elena se arrepiente de no haberlo dejado copiar.",
+        "Que la tarea era demasiado difícil para los dos."
+      ],
+      "clave": "B",
+      "justificacion": "Tomás reconoce que la negativa le permitió entender la pregunta, y Elena precisa el sentido de su ayuda: no fue permitir la copia, sino explicar la diferencia entre hecho y consecuencia."
+    }
+  ]
+}
