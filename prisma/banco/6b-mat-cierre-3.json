@@ -1,0 +1,309 @@
+{
+  "lote": "6B matemática, cierre final",
+  "nivel": "6B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N6B-MAT-41",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "simetría",
+      "enunciado": "¿Qué es un eje de simetría de una figura?",
+      "alternativas": [
+        "La recta que divide la figura en dos partes iguales que coinciden al doblarla.",
+        "La línea más larga que se puede trazar dentro de la figura.",
+        "El punto donde se cruzan todos los lados de la figura.",
+        "La recta que pasa por el centro y toca solo un vértice."
+      ],
+      "clave": "A",
+      "justificacion": "Un eje de simetría es una recta tal que, al doblar la figura por ella, las dos mitades coinciden exactamente. No es una diagonal cualquiera ni una línea que solo pase por el centro."
+    },
+    {
+      "codigo": "N6B-MAT-42",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "aplicar",
+      "conocimiento": "plano cartesiano",
+      "figura": {
+        "ancho": 240,
+        "alto": 240,
+        "elementos": [
+          { "op": "line", "x1": 20, "y1": 120, "x2": 220, "y2": 120, "grosor": 1.2 },
+          { "op": "line", "x1": 120, "y1": 20, "x2": 120, "y2": 220, "grosor": 1.2 },
+          { "op": "text", "x": 226, "y": 124, "texto": "x", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 124, "y": 18, "texto": "y", "tam": 9, "anclaje": "izquierda" },
+          { "op": "circle", "cx": 180, "cy": 160, "r": 3, "grosor": 1, "relleno": "gris" },
+          { "op": "text", "x": 186, "y": 172, "texto": "(3, -2)", "tam": 8, "anclaje": "izquierda" },
+          { "op": "text", "x": 20, "y": 232, "texto": "cada marca mide 1 unidad", "tam": 7.5, "anclaje": "izquierda" }
+        ]
+      },
+      "enunciado": "El punto (3, −2) se refleja respecto del eje x. ¿Cuáles son las coordenadas del punto que resulta?",
+      "alternativas": ["(−3, −2)", "(3, 2)", "(−3, 2)", "(2, −3)"],
+      "clave": "B",
+      "justificacion": "Al reflejar respecto del eje x, la coordenada x se mantiene y la coordenada y cambia de signo. Entonces (3, −2) pasa a (3, 2). Cambiar la x correspondería a reflejar respecto del eje y."
+    },
+    {
+      "codigo": "N6B-MAT-43",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "calcular",
+      "conocimiento": "área del rombo",
+      "enunciado": "Un rombo tiene diagonales de 8 cm y 6 cm. ¿Cuál es su área?",
+      "alternativas": ["14 cm²", "24 cm²", "28 cm²", "48 cm²"],
+      "clave": "B",
+      "justificacion": "El área del rombo es el producto de sus diagonales dividido en 2: (8 × 6) ÷ 2 = 48 ÷ 2 = 24 cm². El valor 48 resulta de omitir la división."
+    },
+    {
+      "codigo": "N6B-MAT-44",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "triángulo isósceles",
+      "enunciado": "En un triángulo isósceles, el ángulo distinto mide 40°. ¿Cuánto mide cada uno de los otros dos ángulos?",
+      "alternativas": ["40° cada uno", "60° cada uno", "70° cada uno", "140° cada uno"],
+      "clave": "C",
+      "justificacion": "Los ángulos de un triángulo suman 180°. Al quitar el ángulo de 40° quedan 140° repartidos en los dos ángulos iguales del isósceles: 140 ÷ 2 = 70° cada uno."
+    },
+    {
+      "codigo": "N6B-MAT-45",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "perímetro de figuras compuestas",
+      "figura": {
+        "ancho": 260,
+        "alto": 240,
+        "elementos": [
+          { "op": "poly", "puntos": "40,40 200,40 200,100 100,100 100,200 40,200", "grosor": 1.4 },
+          { "op": "text", "x": 120, "y": 32, "texto": "8 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 208, "y": 74, "texto": "3 cm", "tam": 9, "anclaje": "izquierda" },
+          { "op": "text", "x": 150, "y": 92, "texto": "5 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 92, "y": 156, "texto": "5 cm", "tam": 9, "anclaje": "fin" },
+          { "op": "text", "x": 70, "y": 216, "texto": "3 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 32, "y": 126, "texto": "8 cm", "tam": 9, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "La figura muestra un terreno en forma de L con sus seis lados rotulados. ¿Cuál es su perímetro?",
+      "alternativas": ["19 cm", "27 cm", "32 cm", "40 cm"],
+      "clave": "C",
+      "justificacion": "Los lados son 8 arriba, 3 a la derecha, 5 abajo del tramo superior, 5 en el borde vertical interior, 3 abajo a la izquierda y 8 en el borde izquierdo: 8 + 3 + 5 + 5 + 3 + 8 = 32 cm. También se obtiene notando que los dos tramos horizontales suman 8 y los dos verticales suman 8, más los dos lados de 8."
+    },
+    {
+      "codigo": "N6B-MAT-46",
+      "eje": "geometria",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "clasificación de triángulos",
+      "enunciado": "¿Cómo se clasifica un triángulo que tiene sus tres lados de distinta medida?",
+      "alternativas": ["Equilátero", "Isósceles", "Escaleno", "Rectángulo"],
+      "clave": "C",
+      "justificacion": "El triángulo con los tres lados distintos se llama escaleno. El equilátero tiene los tres lados iguales y el isósceles tiene dos iguales. Rectángulo se refiere a un ángulo, no a los lados."
+    },
+    {
+      "codigo": "N6B-MAT-47",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "área del paralelogramo",
+      "figura": {
+        "ancho": 260,
+        "alto": 170,
+        "elementos": [
+          { "op": "poly", "puntos": "40,130 220,130 190,50 10,50", "grosor": 1.4 },
+          { "op": "line", "x1": 40, "y1": 130, "x2": 40, "y2": 50, "grosor": 0.9, "punteada": true },
+          { "op": "text", "x": 130, "y": 148, "texto": "9 cm", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 32, "y": 94, "texto": "4 cm", "tam": 9, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "La figura muestra un paralelogramo de 9 cm de base y 4 cm de altura. ¿Cuál es su área?",
+      "alternativas": ["13 cm²", "18 cm²", "26 cm²", "36 cm²"],
+      "clave": "D",
+      "justificacion": "El área del paralelogramo es base por altura: 9 × 4 = 36 cm². El lado inclinado no se usa para el área, aunque sea más largo que la altura."
+    },
+    {
+      "codigo": "N6B-MAT-48",
+      "eje": "geometria",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "área y perímetro",
+      "enunciado": "Dos rectángulos distintos tienen el mismo perímetro. Un estudiante afirma que entonces tienen la misma área. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Es correcto: si el perímetro es igual, el área también.",
+        "Es incorrecto: un rectángulo de 6 por 2 y otro de 5 por 3 tienen perímetro 16 y áreas 12 y 15.",
+        "Es correcto, pero solo cuando los rectángulos son semejantes.",
+        "Es incorrecto, porque un rectángulo nunca tiene área."
+      ],
+      "clave": "B",
+      "justificacion": "El perímetro fija la suma de los lados, no su reparto. Con perímetro 16 hay rectángulos de 6 por 2 (área 12) y de 5 por 3 (área 15), con el mismo perímetro y distinta área."
+    },
+    {
+      "codigo": "N6B-MAT-49",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "fracciones de una medida",
+      "enunciado": "Un jarro contiene 2 litros de jugo y se sirven tres quintos del contenido. ¿Cuántos mililitros se sirvieron?",
+      "alternativas": ["600 ml", "800 ml", "1200 ml", "1500 ml"],
+      "clave": "C",
+      "justificacion": "Dos litros son 2000 mililitros. Tres quintos de 2000 son (2000 ÷ 5) × 3 = 400 × 3 = 1200 ml. El valor 800 corresponde a dos quintos, la parte que queda."
+    },
+    {
+      "codigo": "N6B-MAT-50",
+      "eje": "medicion",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "convertir",
+      "conocimiento": "unidades de masa",
+      "enunciado": "Un paquete pesa 1500 gramos. ¿A cuántos kilogramos equivale?",
+      "alternativas": ["0,15 kg", "1,5 kg", "15 kg", "150 kg"],
+      "clave": "B",
+      "justificacion": "Un kilogramo equivale a 1000 gramos. Al dividir 1500 entre 1000 se obtiene 1,5 kilogramos, o sea un kilo y medio."
+    },
+    {
+      "codigo": "N6B-MAT-51",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "promedio",
+      "enunciado": "Cuatro estudiantes obtuvieron notas 5,5; 6,0; 5,0 y 6,5. ¿Cuál es el promedio del grupo?",
+      "alternativas": ["5,5", "5,75", "6,0", "6,25"],
+      "clave": "B",
+      "justificacion": "Se suman las notas y se divide por 4: 5,5 + 6,0 + 5,0 + 6,5 = 23,0. Al dividir 23 entre 4 se obtiene 5,75."
+    },
+    {
+      "codigo": "N6B-MAT-52",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área y fracciones",
+      "figura": {
+        "ancho": 280,
+        "alto": 160,
+        "elementos": [
+          { "op": "rect", "x": 30, "y": 30, "w": 210, "h": 90, "grosor": 1.4 },
+          { "op": "rect", "x": 30, "y": 30, "w": 105, "h": 45, "grosor": 1, "relleno": "gris" },
+          { "op": "text", "x": 82, "y": 60, "texto": "sembrado", "tam": 8 },
+          { "op": "text", "x": 135, "y": 138, "texto": "30 m", "tam": 9, "anclaje": "medio" },
+          { "op": "text", "x": 22, "y": 78, "texto": "20 m", "tam": 9, "anclaje": "fin" }
+        ]
+      },
+      "enunciado": "Un terreno rectangular mide 30 m por 20 m y se siembra una de sus cuatro partes iguales, como muestra la figura. ¿Cuántos metros cuadrados se sembraron?",
+      "alternativas": ["60 m²", "100 m²", "150 m²", "600 m²"],
+      "clave": "C",
+      "justificacion": "El área total es 30 × 20 = 600 m². Una de cuatro partes iguales es 600 ÷ 4 = 150 m². El valor 600 corresponde al terreno completo."
+    },
+    {
+      "codigo": "N6B-MAT-53",
+      "eje": "medicion",
+      "bloom": "conocimiento",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "unidades de masa",
+      "enunciado": "¿A cuántos kilogramos equivale una tonelada?",
+      "alternativas": ["10 kilogramos", "100 kilogramos", "1000 kilogramos", "10000 kilogramos"],
+      "clave": "C",
+      "justificacion": "Una tonelada equivale a 1000 kilogramos, es decir, un millón de gramos. Se usa para pesos grandes, como la carga de un camión."
+    },
+    {
+      "codigo": "N6B-MAT-54",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "medidas de tiempo",
+      "enunciado": "Un viaje dura 2 horas y 45 minutos, y se hace una escala de 1 hora y 30 minutos. ¿Cuánto tiempo se emplea en total?",
+      "alternativas": ["3 horas y 15 minutos", "3 horas y 45 minutos", "4 horas y 15 minutos", "4 horas y 75 minutos"],
+      "clave": "C",
+      "justificacion": "45 + 30 = 75 minutos, que es 1 hora y 15 minutos. Al sumar las horas: 2 + 1 + 1 = 4 horas, y quedan 15 minutos. El total es 4 horas y 15 minutos."
+    },
+    {
+      "codigo": "N6B-MAT-55",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "velocidad media",
+      "enunciado": "Un bus recorre 240 kilómetros en 3 horas. ¿Cuál es su velocidad media?",
+      "alternativas": ["60 km/h", "72 km/h", "80 km/h", "120 km/h"],
+      "clave": "C",
+      "justificacion": "La velocidad media es distancia dividida por tiempo: 240 ÷ 3 = 80 km/h. El valor 720 resulta de multiplicar en lugar de dividir."
+    },
+    {
+      "codigo": "N6B-MAT-56",
+      "eje": "medicion",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "elección de unidades",
+      "enunciado": "Para informar la superficie de una cancha de fútbol, ¿cuál unidad es la más adecuada?",
+      "alternativas": [
+        "Centímetros cuadrados.",
+        "Metros cuadrados.",
+        "Metros lineales.",
+        "Kilogramos."
+      ],
+      "clave": "B",
+      "justificacion": "La superficie se mide en unidades cuadradas. Los centímetros cuadrados darían cifras enormes y los metros lineales miden longitud, no superficie. Los kilogramos miden masa."
+    },
+    {
+      "codigo": "N6B-MAT-57",
+      "eje": "datos-y-probabilidades",
+      "bloom": "sintesis",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "probabilidad simple",
+      "enunciado": "Una caja tiene 4 bolitas rojas y 2 verdes. Si se saca una sin mirar, ¿cuál es la probabilidad de que sea roja?",
+      "alternativas": ["1/4", "1/2", "2/3", "3/4"],
+      "clave": "C",
+      "justificacion": "Hay 4 rojas de un total de 6 bolitas, así que la probabilidad es 4/6, que simplificada equivale a 2/3. La fracción 1/2 saldría con 3 rojas de 6, y 3/4 con 3 rojas de 4."
+    },
+    {
+      "codigo": "N6B-MAT-58",
+      "eje": "datos-y-probabilidades",
+      "bloom": "analisis",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "moda",
+      "enunciado": "Las edades de un grupo son 9, 10, 10, 11, 12 y 10. ¿Cuál es la moda?",
+      "alternativas": ["9", "10", "11", "12"],
+      "clave": "B",
+      "justificacion": "La moda es el valor que más se repite. El 10 aparece tres veces, mientras que el 9, el 11 y el 12 aparecen una vez cada uno."
+    },
+    {
+      "codigo": "N6B-MAT-59",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "término de una sucesión",
+      "enunciado": "Una sucesión empieza en 7 y cada término se obtiene sumando 3 al anterior. ¿Cuál es el término de la posición 20?",
+      "alternativas": ["60", "64", "67", "70"],
+      "clave": "B",
+      "justificacion": "Entre el primer término y el vigésimo hay 19 saltos de 3. Entonces el término es 7 + 19 × 3 = 7 + 57 = 64. El valor 67 resulta de usar 20 saltos en lugar de 19."
+    },
+    {
+      "codigo": "N6B-MAT-60",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "ecuaciones de primer grado",
+      "enunciado": "Si y = 2x + 3 y además y = 15, ¿cuál es el valor de x?",
+      "alternativas": ["3", "6", "9", "12"],
+      "clave": "B",
+      "justificacion": "Se iguala la expresión con el valor conocido: 2x + 3 = 15. Al restar 3 queda 2x = 12, y al dividir por 2 resulta x = 6. El valor 9 corresponde a 15 − 6, que no sigue el procedimiento."
+    }
+  ]
+}
