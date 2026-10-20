@@ -1,0 +1,277 @@
+{
+  "lote": "4B matemática, cierre de brecha 1",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigo": "N4B-MAT-01",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "área y descomposición de figuras",
+      "enunciado": "Un cuadrado de 6 cm de lado se corta en piezas y con todas ellas se arma un rectángulo de 4 cm de ancho. ¿Cuánto mide el largo del rectángulo?",
+      "alternativas": ["8 cm", "9 cm", "10 cm", "12 cm"],
+      "clave": "B",
+      "justificacion": "El cuadrado tiene 36 cm² de área. Como las piezas no cambian de tamaño, el rectángulo también tiene 36 cm². Si el ancho es 4 cm, el largo es 36 ÷ 4 = 9 cm."
+    },
+    {
+      "codigo": "N4B-MAT-02",
+      "eje": "geometria",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "perímetro y área",
+      "enunciado": "Un cuadrado y un rectángulo tienen el mismo perímetro. El rectángulo no es un cuadrado. ¿Cuál de estas afirmaciones es verdadera?",
+      "alternativas": [
+        "Tienen la misma área, porque el perímetro es el mismo.",
+        "El cuadrado tiene mayor área que el rectángulo.",
+        "El rectángulo tiene mayor área que el cuadrado.",
+        "No se pueden comparar sin conocer las medidas del rectángulo."
+      ],
+      "clave": "B",
+      "justificacion": "Con el mismo perímetro, el cuadrado siempre encierra más área que cualquier rectángulo que no sea cuadrado. Por ejemplo, con perímetro 20: el cuadrado mide 5 por 5 y tiene 25 cm², mientras que un rectángulo de 8 por 2 tiene 16 cm²."
+    },
+    {
+      "codigo": "N4B-MAT-03",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "clasificar",
+      "conocimiento": "clasificación de triángulos",
+      "enunciado": "Un triángulo tiene lados de 5 cm, 12 cm y 13 cm. ¿Qué tipo de triángulo es?",
+      "alternativas": ["Equilátero", "Isósceles", "Rectángulo", "Acutángulo"],
+      "clave": "C",
+      "justificacion": "Se comprueba con el teorema de Pitágoras: 5² + 12² = 25 + 144 = 169, y 13² = 169. Como se cumple la igualdad, el triángulo tiene un ángulo recto."
+    },
+    {
+      "codigo": "N4B-MAT-04",
+      "eje": "geometria",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "perímetro del rectángulo",
+      "enunciado": "¿Cuál es el perímetro de un rectángulo de 7 cm de largo y 3 cm de ancho?",
+      "alternativas": ["10 cm", "20 cm", "21 cm", "24 cm"],
+      "clave": "B",
+      "justificacion": "El perímetro suma los cuatro lados: 7 + 3 + 7 + 3 = 20 cm."
+    },
+    {
+      "codigo": "N4B-MAT-05",
+      "eje": "geometria",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "prismas y volumen",
+      "enunciado": "Con 12 cubos de 1 cm³ se arman prismas rectos completos, sin dejar huecos y usando los 12 cubos. ¿Cuántos prismas de distinto tamaño se pueden armar?",
+      "alternativas": ["2", "3", "4", "6"],
+      "clave": "C",
+      "justificacion": "Los prismas posibles corresponden a las formas de escribir 12 como producto de tres números: 1 × 1 × 12, 1 × 2 × 6, 1 × 3 × 4 y 2 × 2 × 3. Son cuatro prismas distintos."
+    },
+    {
+      "codigo": "N4B-MAT-06",
+      "eje": "geometria",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "reconocer",
+      "conocimiento": "cuerpos geométricos",
+      "enunciado": "Una caja tiene forma de cubo. ¿Cuántas caras, aristas y vértices tiene?",
+      "alternativas": [
+        "6 caras, 12 aristas y 8 vértices",
+        "6 caras, 8 aristas y 12 vértices",
+        "8 caras, 12 aristas y 6 vértices",
+        "4 caras, 12 aristas y 8 vértices"
+      ],
+      "clave": "A",
+      "justificacion": "El cubo tiene 6 caras cuadradas, 12 aristas y 8 vértices, que son las esquinas donde se juntan tres aristas."
+    },
+    {
+      "codigo": "N4B-MAT-07",
+      "eje": "geometria",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "ángulos del triángulo",
+      "enunciado": "Un triángulo tiene un ángulo de 90° y otro de 45°. ¿Qué se puede afirmar de ese triángulo?",
+      "alternativas": [
+        "Es equilátero, porque los tres ángulos son iguales.",
+        "Es isósceles, porque los dos ángulos agudos miden lo mismo.",
+        "Es obtusángulo, porque uno de sus ángulos es recto.",
+        "No se puede saber sin conocer la medida de los lados."
+      ],
+      "clave": "B",
+      "justificacion": "Los ángulos de un triángulo suman 180°, así que el tercer ángulo mide 180 − 90 − 45 = 45°. Al tener dos ángulos iguales, el triángulo es isósceles."
+    },
+    {
+      "codigo": "N4B-MAT-08",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "secuencias numéricas",
+      "enunciado": "Una secuencia empieza en 7 y cada término se obtiene sumando 6 al anterior. ¿Cuál es el sexto término?",
+      "alternativas": ["31", "36", "37", "43"],
+      "clave": "C",
+      "justificacion": "La secuencia es 7, 13, 19, 25, 31 y 37. El sexto término es 37."
+    },
+    {
+      "codigo": "N4B-MAT-09",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "modelar",
+      "conocimiento": "patrones y generalización",
+      "enunciado": "Con palitos se arman cuadrados en fila. El primer cuadrado usa 4 palitos y cada cuadrado que se agrega usa 3 palitos más. ¿Cuántos palitos se necesitan para armar 10 cuadrados?",
+      "alternativas": ["30", "31", "34", "40"],
+      "clave": "B",
+      "justificacion": "El primer cuadrado usa 4 palitos y los 9 siguientes usan 3 cada uno: 4 + 9 × 3 = 31. También se obtiene con la regla 3n + 1 para n = 10."
+    },
+    {
+      "codigo": "N4B-MAT-10",
+      "eje": "patrones-y-algebra",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "reglas de formación",
+      "enunciado": "Un estudiante observa la secuencia 2, 6, 18, 54 y dice que el patrón consiste en sumar 4 al primer término y multiplicar por 3 en los demás. ¿Cuál es la regla que se cumple en todos los pasos?",
+      "alternativas": [
+        "Sumar 4 cada vez.",
+        "Multiplicar por 3 cada vez.",
+        "Sumar 12 cada vez.",
+        "Alternar sumar 4 y multiplicar por 3."
+      ],
+      "clave": "B",
+      "justificacion": "Cada término se obtiene multiplicando el anterior por 3: 2 × 3 = 6, 6 × 3 = 18 y 18 × 3 = 54. La regla se cumple en todos los pasos, no solo en algunos."
+    },
+    {
+      "codigo": "N4B-MAT-11",
+      "eje": "patrones-y-algebra",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "reglas de transformación",
+      "enunciado": "Una regla consiste en multiplicar por 2 y luego restar 1. ¿Qué número se obtiene a partir de 5?",
+      "alternativas": ["8", "9", "10", "11"],
+      "clave": "B",
+      "justificacion": "Se multiplica 5 por 2, que da 10, y luego se resta 1: 10 − 1 = 9."
+    },
+    {
+      "codigo": "N4B-MAT-12",
+      "eje": "patrones-y-algebra",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "expresión general de un patrón",
+      "enunciado": "En una secuencia, el término de la posición n se calcula como 4n − 1. ¿Qué número ocupa la posición 7?",
+      "alternativas": ["24", "26", "27", "28"],
+      "clave": "C",
+      "justificacion": "Se reemplaza n por 7: 4 × 7 − 1 = 28 − 1 = 27."
+    },
+    {
+      "codigo": "N4B-MAT-13",
+      "eje": "patrones-y-algebra",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "modelar",
+      "conocimiento": "ecuaciones con una incógnita",
+      "enunciado": "Una balanza está en equilibrio. En un platillo hay 3 cubos iguales y en el otro hay 1 cubo más una pesa de 8 gramos. Si los cubos pesan lo mismo, ¿cuánto pesa un cubo?",
+      "alternativas": ["2 gramos", "4 gramos", "8 gramos", "12 gramos"],
+      "clave": "B",
+      "justificacion": "Si un cubo pesa x, entonces 3x = x + 8. Al quitar un cubo de cada platillo queda 2x = 8, así que x = 4 gramos."
+    },
+    {
+      "codigo": "N4B-MAT-14",
+      "eje": "medicion",
+      "bloom": "aplicacion",
+      "dificultad": "facil",
+      "habilidad": "calcular",
+      "conocimiento": "unidades de capacidad",
+      "enunciado": "Una botella de 1,5 litros se reparte en vasos de 250 mililitros. ¿Cuántos vasos se llenan?",
+      "alternativas": ["4", "5", "6", "7"],
+      "clave": "C",
+      "justificacion": "Un litro y medio son 1500 mililitros. Al dividir 1500 entre 250 se obtienen 6 vasos."
+    },
+    {
+      "codigo": "N4B-MAT-15",
+      "eje": "medicion",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "resolver problemas",
+      "conocimiento": "ángulos y reloj",
+      "enunciado": "Un reloj marca exactamente las 3:00. ¿Cuánto mide el ángulo que forman las dos manecillas?",
+      "alternativas": ["30°", "60°", "90°", "120°"],
+      "clave": "C",
+      "justificacion": "Entre cada hora del reloj hay 30°, porque 360° repartidos en 12 horas dan 30°. Entre las 12 y las 3 hay tres horas: 3 × 30° = 90°."
+    },
+    {
+      "codigo": "N4B-MAT-16",
+      "eje": "medicion",
+      "bloom": "sintesis",
+      "dificultad": "dificil",
+      "habilidad": "resolver problemas",
+      "conocimiento": "perímetro y medidas",
+      "enunciado": "Un terreno rectangular mide 12 metros de largo y 8 metros de ancho. Se quiere cercar con 3 vueltas de alambre. ¿Cuántos metros de alambre se necesitan?",
+      "alternativas": ["40 metros", "80 metros", "120 metros", "160 metros"],
+      "clave": "C",
+      "justificacion": "El perímetro es 12 + 8 + 12 + 8 = 40 metros. Como se dan 3 vueltas, se necesitan 3 × 40 = 120 metros de alambre."
+    },
+    {
+      "codigo": "N4B-MAT-17",
+      "eje": "medicion",
+      "bloom": "evaluacion",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "equivalencia entre unidades",
+      "enunciado": "Dos estudiantes miden la misma mesa. Uno anota 1,2 metros y el otro anota 120 centímetros. ¿Cuál afirmación es correcta?",
+      "alternativas": [
+        "Las dos medidas son iguales, porque 1,2 metros equivale a 120 centímetros.",
+        "La primera medida es mayor, porque 1,2 es mayor que 120.",
+        "La segunda medida es mayor, porque 120 es mayor que 1,2.",
+        "No se pueden comparar porque usan unidades distintas."
+      ],
+      "clave": "A",
+      "justificacion": "Un metro equivale a 100 centímetros, así que 1,2 metros son 1,2 × 100 = 120 centímetros. Las dos medidas describen el mismo largo."
+    },
+    {
+      "codigo": "N4B-MAT-18",
+      "eje": "datos-y-probabilidades",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "lectura de datos",
+      "enunciado": "En una encuesta a 20 estudiantes, 8 prefieren fútbol y 6 prefieren básquetbol. El resto prefiere tenis. ¿Cuántos estudiantes prefieren tenis?",
+      "alternativas": ["4", "6", "8", "14"],
+      "clave": "B",
+      "justificacion": "Entre fútbol y básquetbol suman 8 + 6 = 14 estudiantes. Como se encuestó a 20, los que prefieren tenis son 20 − 14 = 6."
+    },
+    {
+      "codigo": "N4B-MAT-19",
+      "eje": "datos-y-probabilidades",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "interpretación de gráficos",
+      "enunciado": "Un gráfico de barras muestra las ventas de tres días: el lunes 20 unidades, el martes 30 y el miércoles 25. Un estudiante afirma que el martes se vendió el doble que el lunes. ¿Cuál afirmación sobre lo que dice el estudiante es correcta?",
+      "alternativas": [
+        "Es correcto, porque 30 es el doble de 20.",
+        "Es incorrecto, porque el doble de 20 es 40 y el martes se vendieron 30.",
+        "Es correcto, porque el martes fue el día con más ventas.",
+        "Es incorrecto, porque el miércoles queda entre los otros dos días."
+      ],
+      "clave": "B",
+      "justificacion": "El doble de 20 es 40, no 30. El martes se vendió más que el lunes, pero no el doble. Que sea el día con más ventas no convierte la afirmación en correcta."
+    },
+    {
+      "codigo": "N4B-MAT-20",
+      "eje": "datos-y-probabilidades",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "interpretar",
+      "conocimiento": "tablas de conteo",
+      "enunciado": "En una tabla de conteo, cada marca representa un estudiante. Hay 4 grupos de 5 marcas y además 3 marcas sueltas. ¿Cuántos estudiantes se contaron?",
+      "alternativas": ["12", "20", "23", "25"],
+      "clave": "C",
+      "justificacion": "Los 4 grupos de 5 marcas suman 4 × 5 = 20 estudiantes. Al agregar las 3 marcas sueltas se cuentan 23 estudiantes."
+    }
+  ]
+}
