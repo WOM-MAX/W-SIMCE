@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-101",
+    "titulo": "La llave del invernadero",
+    "tipo": "narrativo",
+    "palabras": 336,
+    "cuerpo": "En el patio trasero de la escuela había un invernadero que llevaba años cerrado. La puerta tenía un candado oxidado y, sobre el vidrio, una calcomanía con la forma de una hoja. Los niños del cuarto básico pasaban frente a él cada recreo sin mirarlo, hasta que una mañana la profesora Javiera llegó con una caja de herramientas.\n\n—Este año vamos a recuperar el invernadero —dijo—. Pero necesito que averigüen algo antes: nadie sabe dónde está la llave.\n\nLa primera pista apareció en la biblioteca. En un libro sobre plantas medicinales, Camila encontró un papel doblado con una frase escrita a lápiz: «La llave duerme donde el agua no llega». El grupo se quedó en silencio.\n\n—¿Dónde no llega el agua? —preguntó Tomás.\n\n—En el desierto —dijo alguien.\n\n—No. En la escuela —corrigió Camila, y señaló el techo.\n\nSubieron a la azotea por la escalera de servicio. Arriba había un tambor de agua desconchado y, junto a él, una maceta de greda con tierra seca. Camila metió la mano y sacó una llave pequeña, envuelta en un pañuelo.\n\nEl candado cedió con un chirrido. Adentro del invernadero el aire olía a tierra mojada y a madera. Las tablas de los maceteros estaban partidas y, en una esquina, quedaba un saco de semillas con la etiqueta borrada.\n\nDurante tres semanas el curso trabajó en los recreos. Tomás y Rafael repararon las tablas. Camila y Josefa limpiaron los vidrios, que dejaron entrar una luz distinta. La profesora trajo semillas de albahaca, de cilantro y de una flor que nadie supo nombrar.\n\nLa primera en brotar fue la albahaca. Cuando las hojas alcanzaron el tamaño de una uña, el curso hizo una lista de tareas para las vacaciones, porque nadie quería volver en marzo y encontrar el invernadero otra vez seco.\n\n—Lo difícil no fue abrir la puerta —dijo Camila el último día—. Lo difícil es que siga abierta."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Dónde estaba escondida la llave del invernadero?",
+      "alternativas": [
+        "Dentro de un libro sobre plantas medicinales, en la biblioteca.",
+        "En una maceta con tierra seca, en la azotea.",
+        "Dentro del tambor de agua que estaba en la azotea.",
+        "En un saco de semillas, dentro del invernadero."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que Camila subió a la azotea, metió la mano en una maceta de greda con tierra seca y sacó la llave envuelta en un pañuelo. El libro solo contenía la pista."
+    },
+    {
+      "codigo": "4B-LEC-NAR-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario en contexto",
+      "enunciado": "El texto dice que el tambor de agua estaba «desconchado». ¿Qué quiere decir esa palabra en ese lugar?",
+      "alternativas": [
+        "Que el tambor estaba lleno hasta el borde.",
+        "Que el tambor tenía la pintura levantada y caída en partes.",
+        "Que el tambor estaba tapado con una tapa nueva.",
+        "Que el tambor goteaba por una perforación del fondo."
+      ],
+      "clave": "B",
+      "justificacion": "Desconchado se usa para las superficies cuya pintura o capa exterior se ha saltado en trozos. El texto lo menciona junto al óxido y al abandono del lugar, no dice nada de que estuviera lleno, tapado o perforado."
+    },
+    {
+      "codigo": "4B-LEC-NAR-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "inferencia local",
+      "enunciado": "¿Por qué Camila entendió que la frase «la llave duerme donde el agua no llega» apuntaba al techo?",
+      "alternativas": [
+        "Porque en el techo estaban guardadas todas las herramientas de la escuela.",
+        "Porque la maceta de la azotea tenía tierra seca y estaba lejos de la llave del agua.",
+        "Porque el tambor de agua de la azotea estaba vacío.",
+        "Porque la profesora le había contado el escondite antes de empezar."
+      ],
+      "clave": "B",
+      "justificacion": "Camila relaciona el agua con el lugar donde se guarda: la maceta de la azotea tenía tierra seca, o sea que el agua no llegaba hasta ahí de forma habitual. Las herramientas y la tapa de la llave no aparecen en esa parte del texto."
+    },
+    {
+      "codigo": "4B-LEC-NAR-104",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "propósito de una acción",
+      "enunciado": "¿Por qué el curso hizo una lista de tareas para las vacaciones?",
+      "alternativas": [
+        "Para repartir el trabajo entre los que se quedaban en la escuela en enero.",
+        "Para anotar qué semillas tendrían que comprar el año siguiente.",
+        "Para asegurar que alguien cuidara las plantas y el invernadero no volviera a secarse.",
+        "Para mostrarle a la profesora que habían aprendido a organizarse."
+      ],
+      "clave": "C",
+      "justificacion": "El texto dice que hicieron la lista «porque nadie quería volver en marzo y encontrar el invernadero otra vez seco». El propósito es mantener el cuidado durante el tiempo en que no hay clases."
+    },
+    {
+      "codigo": "4B-LEC-NAR-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "Camila dice al final: «Lo difícil no fue abrir la puerta. Lo difícil es que siga abierta». ¿Qué quiere decir con eso?",
+      "alternativas": [
+        "Que el candado estaba tan oxidado que costó mucho abrirlo.",
+        "Que mantener el invernadero en funcionamiento cuesta más que haberlo recuperado.",
+        "Que la puerta se vuelve a trabar si no se le pone aceite cada semana.",
+        "Que el curso no alcanzó a terminar los trabajos de reparación."
+      ],
+      "clave": "B",
+      "justificacion": "La frase compara dos esfuerzos: abrir la puerta, que fue un trabajo puntual, con sostener en el tiempo lo que se abrió. El propio texto muestra que el curso se organiza para las vacaciones justamente porque lo difícil viene después."
+    }
+  ]
+}
