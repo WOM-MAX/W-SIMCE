@@ -425,3 +425,156 @@ curl -s -o NUL -w "%{http_code}" https://w-simce-production.up.railway.app/api/h
 
 La clave del administrador conviene cambiarla desde `/admin` en cuanto se use
 con datos reales.
+
+---
+
+## 15. Comparación con K-SIMCE AI y plan por etapas
+
+**Nota de verificación:** el sitio https://k-simce.com es una aplicación cerrada.
+Las páginas públicas (`/`, `/panel`, `/login`, `/register`, `/pricing`) devuelven
+solo el título y la descripción; el panel exige sesión. Todo lo que sigue sobre el
+original procede de tres capturas del panel y del texto público, no de inspección
+directa. **No se usó REA en la construcción de W-SIMCE**: la aplicación se escribió
+desde cero con Next.js. REA sirve para ingeniería inversa de binarios y
+aplicaciones empaquetadas, y aquí no intervino.
+
+### 15.1 Lo que se pudo verificar del original
+
+De las capturas del panel:
+
+- Selector de asignatura y de curso como contexto global.
+- Menús: Inicio, Progreso, Aprende, Practica (adaptativo), Evalúa (adaptativo),
+  Mis amigos, Mi plan, Ajustes.
+- Evalúa contiene: Generar Ensayos, Mis Ensayos PDF, Ensayos PDF Compartidos.
+- Generar Ensayos: pestañas Interactivo e Imprimible (PDF), tipo de ensayo
+  (aleatorio o por área), cantidad de preguntas (5, 10, 20, 30 o libre hasta 100)
+  y tiempo límite (sin límite, 10, 20, 30, 45, 60 o libre hasta 180).
+
+Del texto público y de la portada del panel:
+
+- Tutor personal con inteligencia artificial ("Mr. Kolt", disponible 24/7, voz y chat).
+- Visión artificial para corregir hojas de respuesta fotografiadas.
+- Seguimiento de progreso con indicadores y estimación de desempeño en el SIMCE.
+- Modelo comercial B2C con registro abierto, recuperación de contraseña y planes.
+
+### 15.2 Inventario comparado
+
+Los pesos son una estimación de esfuerzo relativo, no una medición del original.
+
+| Función | Peso | W-SIMCE | Cobertura |
+| --- | --- | --- | --- |
+| Acceso, roles y sesiones | 10 | Listo | 90 % |
+| Banco de ítems y contenido | 10 | 1.159 ítems importados | 100 % |
+| Generar ensayos | 12 | Listo, sin PDF | 60 % |
+| Asignar ensayo a curso y publicar | 8 | **No existe** | 0 % |
+| Rendición con cierre en servidor | 15 | Listo | 100 % |
+| Corrección y niveles de logro | 10 | Listo | 100 % |
+| Reportes y exportación | 10 | Listo, sin PDF | 85 % |
+| Práctica y aprendizaje adaptativo | 6 | No existe | 0 % |
+| Progreso del estudiante | 4 | No existe | 0 % |
+| Tutor con IA | 5 | No existe | 0 % |
+| Visión artificial de hojas | 5 | No existe | 0 % |
+| Social (Mis amigos) | 2 | No existe | 0 % |
+| Planes, registro y pago | 2 | No existe | 0 % |
+| Ajustes por usuario | 1 | Parcial, vía administración | 20 % |
+
+### 15.3 Porcentaje
+
+| Medida | Valor |
+| --- | --- |
+| Núcleo de evaluación (acceso, banco, generar, asignar, rendir, corregir, reportar) | **80 %** |
+| Producto completo, incluyendo IA, visión artificial, adaptativo y B2C | **60 %** |
+
+La diferencia entre las dos cifras es el punto importante: el núcleo está casi
+completo, y lo que resta en el producto completo son funciones que no son "más de
+lo mismo", sino modelos y datos que hoy no existen.
+
+### 15.4 Etapas siguientes
+
+**E1. Asignar ensayos (cierra el ciclo). Prioridad máxima.**
+
+- Página `/ensayos/[id]/asignar`: curso, apertura, cierre, intentos permitidos.
+- `POST /api/ensayos/asignar`: crea la asignación y publica el ensayo en una
+  transacción, guarda el docente de la sesión.
+- Botón "Asignar" en `/ensayos`.
+- Validaciones: ensayo con ítems, curso del colegio, cierre posterior a apertura,
+  sin duplicar asignación activa del mismo ensayo al mismo curso.
+- Aceptación: asignar a 4° básico B, rendir como `W4B-01`, verlo en corrección y
+  en reportes.
+- Estimación: 3 a 4 horas.
+
+**E2. Ciclo del intento completo.**
+
+- Historial de intentos por asignación, con estado y tiempo usado.
+- Anular un intento y habilitar reintento sin borrar el anterior.
+- Prórroga de la fecha de cierre para un estudiante concreto.
+- Vista del docente por curso, no solo por asignación.
+- Estimación: 6 a 8 horas.
+
+**E3. Progreso del estudiante.**
+
+- Serie histórica por eje y habilidad, a partir de `ResultadoDimension`.
+- Comparación entre ensayos del mismo curso.
+- Solo visible si el colegio activa el interruptor.
+- Estimación: 6 a 8 horas.
+
+**E4. Práctica y modo adaptativo.**
+
+- Banco de práctica con corrección inmediata y sin nota.
+- Selección de ítems por dificultad según el desempeño reciente.
+- Advertencia: sin calibración de ítems, el "adaptativo" es una heurística por
+  dificultad declarada, no una medición psicométrica.
+- Estimación: 10 a 14 horas la práctica; 12 a 20 horas el adaptativo.
+
+**E5. PDF imprimible y ensayos compartidos.**
+
+- Hoja de respuestas y prueba imprimible con las figuras convertidas.
+- Complicación: las figuras son primitivas propias que hoy se dibujan en SVG.
+- Estimación: 12 a 20 horas.
+
+**E6. Tutor con IA.**
+
+- Conversación sobre el ítem fallado, con el currículo como contexto.
+- Requiere control de coste por estudiante y límites de uso.
+- Estimación: 20 a 30 horas.
+
+**E7. Visión artificial de hojas de respuesta.**
+
+- Corrección de una foto de hoja de respuestas.
+- Es la tarea más incierta: necesita fotos reales, tolerancia a perspectiva e
+  iluminación, y validación con casos malos.
+- Estimación: 40 horas o más, sin garantía de precisión.
+
+**E8. Producto B2C.**
+
+- Registro abierto, recuperación de contraseña, planes y pago.
+- Solo tiene sentido si el destino es vender, no el uso interno del colegio.
+- Estimación: 15 a 25 horas más la integración de pagos.
+
+**E9. Cierre legal (Ley 21.719).**
+
+- Trazabilidad en la tabla `Evento`, retención definida, exportación por
+  estudiante y límite de intentos en el login.
+- Estimación: 10 a 15 horas.
+
+### 15.5 Lo que no depende de más código
+
+El tutor con IA y la visión artificial no se resuelven escribiendo pantallas.
+Necesitan modelo, datos y evaluación de calidad. Cualquier estimación ahí es una
+aproximación, y conviene decidir si se compran hechos o se construyen.
+
+### 15.6 Estimación total
+
+| Bloque | Horas |
+| --- | --- |
+| E1 a E2 (cerrar el flujo de evaluación) | 9 a 12 |
+| E3 a E4 (progreso y práctica) | 16 a 22 |
+| E5 (impresión) | 12 a 20 |
+| E6 (tutor IA) | 20 a 30 |
+| E7 (visión artificial) | 40 o más |
+| E8 (B2C) | 15 a 25 |
+| E9 (legal) | 10 a 15 |
+
+Para igualar el producto completo: entre 120 y 165 horas, con la salvedad de E7.
+Para cerrar el uso interno del colegio con comodidad (E1, E2, E3 y E9): entre 25
+y 35 horas.
