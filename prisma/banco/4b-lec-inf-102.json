@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-102",
+    "titulo": "Por qué los pingüinos no vuelan",
+    "tipo": "informativo",
+    "palabras": 296,
+    "cuerpo": "Los pingüinos son aves, tienen plumas y ponen huevos, pero no vuelan. Sus alas son cortas, rígidas y cubiertas de plumas apretadas, muy distintas de las alas anchas de un cóndor o de una gaviota.\n\nPara volar hace falta empujar mucho aire hacia abajo con alas grandes y tener un cuerpo liviano. El pingüino tiene lo contrario: un cuerpo pesado y compacto, con huesos densos, y alas pequeñas. Con esas características no podría sostenerse en el aire.\n\nSin embargo, esas mismas alas le sirven para otra cosa. Bajo el agua funcionan como aletas: el pingüino las mueve como si remara y alcanza velocidades de hasta treinta kilómetros por hora. Su cuerpo liso y sus huesos pesados le permiten hundirse sin esfuerzo y girar rápido detrás de los peces.\n\nHay aves que pueden volar y bucear, como algunas gaviotas, pero no llegan a la profundidad ni a la velocidad de un pingüino. Cada cuerpo tiene sus ventajas: el que vuela necesita ser liviano, y el que nada profundo necesita ser denso y tener aletas fuertes.\n\nLos científicos llaman adaptación a este ajuste entre el cuerpo de un animal y el lugar donde vive. El pingüino no perdió la capacidad de volar por un defecto: cambió una habilidad por otra que le resulta más útil en el mar frío donde consigue su alimento."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-106",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿para qué le sirven las alas al pingüino?",
+      "alternativas": [
+        "Para planear distancias cortas sobre el agua.",
+        "Para nadar bajo el agua, moviéndolas como aletas.",
+        "Para mantener el equilibrio cuando camina sobre el hielo.",
+        "Para proteger a sus crías del viento."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que bajo el agua las alas funcionan como aletas y que el pingüino las mueve como si remara, alcanzando hasta treinta kilómetros por hora."
+    },
+    {
+      "codigo": "4B-LEC-INF-107",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "relación de oposición",
+      "enunciado": "El texto dice que el pingüino tiene «lo contrario» de lo que se necesita para volar. ¿A qué se refiere?",
+      "alternativas": [
+        "A que tiene plumas en vez de pelo.",
+        "A que tiene un cuerpo pesado y alas pequeñas, cuando volar exige un cuerpo liviano y alas grandes.",
+        "A que vive en el mar en vez de vivir en el aire.",
+        "A que pone huevos en lugar de tener crías vivas."
+      ],
+      "clave": "B",
+      "justificacion": "El párrafo anterior explica que volar requiere alas grandes y cuerpo liviano; el pingüino tiene cuerpo pesado con huesos densos y alas cortas. Esa es la oposición que el texto describe."
+    },
+    {
+      "codigo": "4B-LEC-INF-108",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "ventaja y desventaja",
+      "enunciado": "¿Qué ventaja le dan al pingüino sus huesos densos?",
+      "alternativas": [
+        "Puede volar más alto que otras aves.",
+        "Puede hundirse sin esfuerzo y girar rápido bajo el agua.",
+        "Puede caminar más rápido sobre el hielo.",
+        "Puede resistir mejor el frío de la Antártica."
+      ],
+      "clave": "B",
+      "justificacion": "El texto relaciona los huesos pesados con hundirse sin esfuerzo y girar rápido detrás de los peces. El frío se menciona como parte del ambiente, pero no se atribuye a los huesos."
+    },
+    {
+      "codigo": "4B-LEC-INF-109",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de información",
+      "enunciado": "El texto menciona gaviotas que vuelan y bucean. ¿Qué diferencia marca entre ellas y los pingüinos?",
+      "alternativas": [
+        "Que las gaviotas no se alimentan de peces.",
+        "Que las gaviotas no alcanzan la profundidad ni la velocidad de un pingüino.",
+        "Que los pingüinos viven en agua dulce y las gaviotas en el mar.",
+        "Que las gaviotas tienen plumas y los pingüinos no."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que esas gaviotas pueden volar y bucear, pero no llegan a la profundidad ni a la velocidad de un pingüino. Los pingüinos sí tienen plumas, y el texto no habla de agua dulce."
+    },
+    {
+      "codigo": "4B-LEC-INF-110",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Un estudiante dice que el pingüino es un ave defectuosa porque no vuela. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el pingüino sí vuela, pero solo distancias muy cortas.",
+        "Que no es un defecto: es una adaptación, cambió una habilidad por otra más útil en su ambiente.",
+        "Que todas las aves que nadan han perdido la capacidad de volar.",
+        "Que el pingüino no es un ave, aunque tenga plumas y ponga huevos."
+      ],
+      "clave": "B",
+      "justificacion": "El último párrafo dice expresamente que no perdió la capacidad de volar por un defecto, sino que cambió una habilidad por otra más útil donde consigue su alimento. El texto también afirma que es un ave."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-103",
+    "titulo": "El ruido del tercer piso",
+    "tipo": "narrativo",
+    "palabras": 330,
+    "cuerpo": "Desde el lunes, en el edificio de la calle Los Aromos pasaba algo raro. A las nueve de la noche, cuando casi todos miraban televisión, se oía un ruido seco en el tercer piso. Tres golpes, una pausa, dos golpes más.\n\nLa señora Elba, del 3B, estaba segura de que venía del departamento de arriba. La señora del 4B decía que venía de abajo. El conserje, don Nicasio, subió tres veces con la linterna y no encontró nada.\n\n—Es una cañería —dijo el lunes.\n—Es un vecino que mueve muebles —dijo el martes.\n—Es el viento en la reja —dijo el miércoles.\n\nEl jueves, la señora Elba se quedó despierta con un cuaderno. Anotó la hora exacta del ruido y desde qué lugar se escuchaba mejor. Descubrió algo: el ruido no venía del cielo ni del piso, sino del pasillo, cerca del ducto de la basura.\n\nEl viernes a las nueve, el conserje y la señora Elba se sentaron en el pasillo con dos sillas. No hablaron. A las nueve y cuatro minutos, exactamente, oyeron los tres golpes.\n\nDon Nicasio abrió la puerta del ducto con cuidado. Adentro, en el tercer piso, había un gato gris que llevaba días atrapado. Se había metido por la abertura del último piso y no podía salir. Cuando se movía, golpeaba la chapa con las patas.\n\nEl gato salió echado, con el pelo sucio y las costillas marcadas. La señora Elba lo envolvió en una toalla y le dio leche en un plato de sopa. Al día siguiente, el gato ya estaba en la ventana del 3B, mirando la calle.\n\n—Lo que me da rabia —dijo la señora Elba el domingo— no es el ruido. Es que estuvimos tres días diciendo cosas sin saber, y mientras tanto el pobre estaba ahí adentro."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-111",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué provocaba el ruido en el tercer piso?",
+      "alternativas": [
+        "Una cañería que golpeaba con el cambio de presión.",
+        "Un vecino que movía muebles todas las noches.",
+        "Un gato atrapado en el ducto de la basura.",
+        "El viento que movía la reja del edificio."
+      ],
+      "clave": "C",
+      "justificacion": "Al abrir la puerta del ducto encontraron un gato gris atrapado que golpeaba la chapa con las patas al moverse. La cañería, los muebles y el viento eran suposiciones que el conserje hizo antes de revisar."
+    },
+    {
+      "codigo": "4B-LEC-NAR-112",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "extraer información",
+      "conocimiento": "secuencia de acciones",
+      "enunciado": "¿Qué hizo la señora Elba el jueves por la noche?",
+      "alternativas": [
+        "Bajó al pasillo con el conserje a esperar el ruido.",
+        "Se quedó despierta anotando la hora del ruido y desde dónde se escuchaba mejor.",
+        "Llamó a la señora del 4B para preguntarle si oía lo mismo.",
+        "Abrió la puerta del ducto de la basura."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el jueves se quedó despierta con un cuaderno, anotó la hora exacta y desde qué lugar se escuchaba mejor, y así descubrió que venía del pasillo. La espera con sillas y la apertura del ducto fueron el viernes."
+    },
+    {
+      "codigo": "4B-LEC-NAR-113",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "inferencia a partir de indicios",
+      "enunciado": "¿Qué permitió encontrar al gato?",
+      "alternativas": [
+        "Que el conserje conocía el edificio desde hacía muchos años.",
+        "Que la señora Elba anotó los datos en vez de solo opinar sobre el origen del ruido.",
+        "Que la señora del 4B escuchó el ruido desde su departamento.",
+        "Que el gato empezó a maullar más fuerte con los días."
+      ],
+      "clave": "B",
+      "justificacion": "Las opiniones del conserje no daban con el origen. Fue el registro de la señora Elba, con la hora y el lugar donde se escuchaba mejor, lo que mostró que el ruido venía del ducto."
+    },
+    {
+      "codigo": "4B-LEC-NAR-114",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "sentido de una escena",
+      "enunciado": "¿Para qué el texto cuenta que el conserje y la señora Elba se sentaron en el pasillo sin hablar?",
+      "alternativas": [
+        "Para mostrar que ya no querían seguir buscando el origen del ruido.",
+        "Para mostrar que esperaron el ruido en silencio y así pudieron ubicarlo con precisión.",
+        "Para mostrar que el conserje desconfiaba de la señora Elba.",
+        "Para mostrar que el pasillo era el único lugar del edificio con sillas."
+      ],
+      "clave": "B",
+      "justificacion": "La escena del silencio y la espera es la que permite oír los tres golpes a las nueve y cuatro minutos y ubicar el ducto. No sugiere desconfianza ni abandono de la búsqueda."
+    },
+    {
+      "codigo": "4B-LEC-NAR-115",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "La señora Elba dice que le da rabia «haber estado tres días diciendo cosas sin saber». ¿Qué idea resume mejor su queja?",
+      "alternativas": [
+        "Que el conserje no sabía hacer su trabajo.",
+        "Que opinar sin datos hizo perder tiempo mientras el gato estaba atrapado.",
+        "Que los vecinos del edificio hablan demasiado entre ellos.",
+        "Que el ruido no era tan molesto como parecía."
+      ],
+      "clave": "B",
+      "justificacion": "La queja es contra las suposiciones: cañería, muebles, viento. Mientras se discutían esas ideas sin comprobarlas, el gato seguía encerrado, y solo los datos la llevaron a encontrarlo."
+    }
+  ]
+}
