@@ -27,6 +27,7 @@ export function Panel({
     { href: '/', nombre: 'Inicio' },
     { href: '/ensayos/nuevo', nombre: 'Generar ensayo' },
     { href: '/ensayos', nombre: 'Ensayos' },
+    { href: '/banco', nombre: 'Banco de ítems' },
     { href: '/correccion', nombre: 'Corrección' },
     { href: '/admin', nombre: 'Administración' },
     { href: '/reportes', nombre: 'Reportes' },
