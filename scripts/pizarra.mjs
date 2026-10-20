@@ -98,7 +98,20 @@ export function pizarra({ ancho = 320, alto = 300, margen = 34, xmin = 0, xmax =
     });
   };
 
-  return { X, Y, linea, texto, punto, ejes, recta, rectangulo, triangulo, elementos, ancho, alto };
+  const curva = (fn, desde, hasta, opciones = {}) => {
+    const paso = opciones.paso ?? 0.05;
+    const puntos = [];
+    for (let x = desde; x <= hasta + 1e-9; x += paso) {
+      puntos.push(`${red(X(x))},${red(Y(fn(x)))}`);
+    }
+    elementos.push({
+      op: 'poly',
+      puntos: puntos.join(' '),
+      grosor: opciones.grosor ?? 1.5,
+    });
+  };
+
+  return { X, Y, linea, texto, punto, ejes, recta, rectangulo, triangulo, curva, elementos, ancho, alto };
 }
 
 function red(n) {
