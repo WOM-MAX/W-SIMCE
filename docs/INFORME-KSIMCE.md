@@ -153,3 +153,44 @@ es legible por JavaScript.
 
 **Recursos:** un CSS de 146 KB y un JS de 1.946 KB, más tres scripts en línea, uno
 de ellos con el token.
+
+## 9. Superficie de API observada
+
+El identificador de la aplicación es `6a897f5a822161be5178093e`. Todas las rutas
+del frontend hablan con el mismo backend gestionado:
+
+```
+GET  /api/apps/{app}/entities/User/me
+GET  /api/apps/{app}/entities/Subscription?q={"user_id":"..."}
+GET  /api/apps/{app}/entities/ContractAcceptance?q={"user_id":"..."}&sort=-created_date&limit=1
+GET  /api/apps/{app}/entities/StudentProfile?q={"student_id":"..."}
+POST /api/apps/{app}/functions/getMyPlan
+POST /api/apps/{app}/functions/recordSignupLocation
+POST /api/apps/{app}/analytics/track/batch
+POST /api/app-logs/{app}/log-user-in-app/{ruta}
+GET  /api/apps/public/prod/public-settings/by-id/{app}
+GET  /api/apps/manifests/{app}/manifest.json
+```
+
+Patrón que repite cada pantalla, en este orden:
+
+1. `User/me` para resolver la sesión.
+2. `public-settings` y `manifest` de la aplicación.
+3. `log-user-in-app/{ruta}`, que registra la visita.
+4. Solo después, las entidades y funciones propias de la pantalla.
+
+Consecuencia para nuestro diseño: su registro de visitas es analítica, no auditoría.
+Anota que entraste a una pantalla, no qué dato modificaste. Nuestra tabla `Evento`
+está pensada para lo segundo, que es lo que exige la Ley 21.719.
+
+Consultas por pantalla, tal como se observaron:
+
+| Pantalla | Consultas propias |
+| --- | --- |
+| `/ensayos` | `ContractAcceptance` (contrato aceptado) y `StudentProfile` por `student_id` |
+| `/mi-plan` | `getMyPlan` y `Subscription` por `user_id` |
+
+Observación de modelo: el original se organiza por **alumno** (`student_id`,
+`StudentProfile`), no por curso. Su selector de curso es contexto de contenido, no
+una entidad de gestión. Nuestro esquema es al revés, multi-colegio y por curso,
+que es lo que necesita un establecimiento con varios niveles.
