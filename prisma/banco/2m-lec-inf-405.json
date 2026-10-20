@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-405",
+    "titulo": "El efecto invernadero no es un error",
+    "tipo": "informativo",
+    "palabras": 358,
+    "cuerpo": "El efecto invernadero suele presentarse como un problema. En realidad es un fenómeno natural sin el cual la temperatura media del planeta sería unos treinta grados menor, y la vida tal como la conocemos no existiría. El problema es su intensificación.\n\nEl mecanismo funciona así. La radiación solar atraviesa la atmósfera y calienta la superficie. La superficie, a su vez, emite energía en forma de radiación infrarroja hacia el espacio. Ciertos gases de la atmósfera, entre ellos el vapor de agua y el dióxido de carbono, absorben parte de esa radiación y la reemiten en todas direcciones, incluida la superficie. El resultado es un calentamiento adicional.\n\nLa comparación con un invernadero es aproximada. En un invernadero de vidrio, el calor se retiene sobre todo porque el vidrio impide la circulación del aire. En la atmósfera no hay vidrio ni techo: lo que ocurre es una absorción selectiva de radiación por parte de los gases.\n\nLo que ha cambiado desde la industrialización es la concentración de esos gases. Al quemar combustibles fósiles se libera carbono que estaba almacenado bajo tierra durante millones de años, y ese carbono pasa a la atmósfera en forma de dióxido de carbono. El sistema recibe más gases de los que puede retirar en el mismo plazo.\n\nConviene distinguir dos afirmaciones que suelen confundirse. La primera, que el efecto invernadero existe y es natural, está establecida. La segunda, que la actividad humana ha aumentado su intensidad, también. Lo que es objeto de debate científico no es la existencia del fenómeno, sino la magnitud de algunos efectos regionales y la velocidad de ciertos cambios.\n\nPor eso las discusiones públicas suelen mezclar planos. Negar el efecto invernadero no es una posición científica alternativa: es un error sobre el mecanismo. Discutir cuánto se debe reducir una emisión específica es una discusión de política, con datos y con intereses en juego."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-421",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Por qué el texto dice que el efecto invernadero no es un error?",
+      "alternativas": [
+        "Porque no existe y es un invento.",
+        "Porque es un fenómeno natural sin el cual la temperatura media sería unos treinta grados menor.",
+        "Porque solo ocurre en los invernaderos de vidrio.",
+        "Porque fue descubierto recientemente."
+      ],
+      "clave": "B",
+      "justificacion": "El texto abre señalando que el efecto invernadero es un fenómeno natural sin el cual la temperatura media del planeta sería unos treinta grados menor, y que el problema es su intensificación."
+    },
+    {
+      "codigo": "2M-LEC-INF-422",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "límite de una comparación",
+      "enunciado": "¿En qué se diferencia el efecto invernadero atmosférico de un invernadero de vidrio?",
+      "alternativas": [
+        "En que el invernadero de vidrio no retiene calor.",
+        "En que en la atmósfera no hay techo: lo que ocurre es una absorción selectiva de radiación por los gases.",
+        "En que el invernadero de vidrio funciona solo de noche.",
+        "En que la atmósfera contiene vidrio en suspensión."
+      ],
+      "clave": "B",
+      "justificacion": "El texto advierte que la comparación es aproximada y explica la diferencia: en el invernadero de vidrio el calor se retiene porque el vidrio impide la circulación del aire, mientras en la atmósfera hay absorción selectiva de radiación por los gases."
+    },
+    {
+      "codigo": "2M-LEC-INF-423",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "origen del exceso de gases",
+      "enunciado": "¿Qué cambió desde la industrialización, según el texto?",
+      "alternativas": [
+        "La cantidad de radiación solar que llega al planeta.",
+        "La concentración de gases, porque al quemar combustibles fósiles se libera carbono almacenado bajo tierra.",
+        "La distancia entre la Tierra y el Sol.",
+        "La composición del vapor de agua de la atmósfera."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que al quemar combustibles fósiles se libera carbono que estaba almacenado bajo tierra durante millones de años, y que ese carbono pasa a la atmósfera como dióxido de carbono."
+    },
+    {
+      "codigo": "2M-LEC-INF-424",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "distinción entre niveles de discusión",
+      "enunciado": "¿Qué distingue el texto entre el debate científico y el debate público?",
+      "alternativas": [
+        "Que en el científico se discute la existencia del fenómeno y en el público no.",
+        "Que lo debatido científicamente es la magnitud y velocidad de algunos efectos, mientras negar el fenómeno es un error sobre el mecanismo.",
+        "Que el público tiene razón y la ciencia se equivoca.",
+        "Que los dos debates tratan exactamente lo mismo."
+      ],
+      "clave": "B",
+      "justificacion": "El texto aclara que la existencia del fenómeno y el aumento por actividad humana están establecidos, y que el debate científico se refiere a la magnitud de algunos efectos regionales y la velocidad de ciertos cambios. Negar el efecto invernadero es, según el texto, un error sobre el mecanismo."
+    },
+    {
+      "codigo": "2M-LEC-INF-425",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de un argumento",
+      "enunciado": "Alguien afirma que, como el efecto invernadero es natural, no hay nada que discutir sobre las emisiones. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el efecto invernadero no es natural.",
+        "Que el fenómeno es natural, pero su intensificación por la actividad humana es un problema y su reducción es una decisión de política.",
+        "Que las emisiones ya se redujeron por completo.",
+        "Que la ciencia no ha estudiado el tema."
+      ],
+      "clave": "B",
+      "justificacion": "El texto acepta que el efecto es natural y aclara que el problema es su intensificación. Además señala que discutir cuánto reducir una emisión específica es una discusión de política, con datos e intereses en juego."
+    }
+  ]
+}

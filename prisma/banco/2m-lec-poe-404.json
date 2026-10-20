@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-POE-404",
+    "titulo": "Carta que no envié",
+    "tipo": "poético",
+    "palabras": 126,
+    "cuerpo": "Te escribí que la casa está bien,\nque arreglé la llave del lavaplatos,\nque la vecina sigue regando\nlas plantas del pasillo.\n\nTe escribí que salgo a caminar\nlos domingos, temprano,\ny que en la esquina nueva\npusieron un almacén.\n\nNo te escribí que a veces\nme quedo mirando el teléfono,\nni que aprendí a cocinar para uno,\nni que hay una silla que no uso.\n\nNo te escribí eso\nporque las cartas se hacen\npara que el otro esté tranquilo,\nno para que uno se alivie.\n\nLa guardé en el cajón.\nAl año la encontré\nsin destinatario, sin estampilla,\ncon la tinta corrida en el borde."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-POE-416",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué le cuenta el hablante a la persona ausente en la carta?",
+      "alternativas": [
+        "Que la casa está bien, que arregló una llave y que salió un almacén nuevo.",
+        "Que se quiere mudar de casa.",
+        "Que la vecina dejó de regar las plantas.",
+        "Que no ha salido a caminar en meses."
+      ],
+      "clave": "A",
+      "justificacion": "Las dos primeras estrofas enumeran esos datos: la casa está bien, arregló la llave del lavaplatos, la vecina sigue regando y en la esquina nueva pusieron un almacén."
+    },
+    {
+      "codigo": "2M-LEC-POE-417",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una omisión",
+      "enunciado": "¿Qué decide no escribir el hablante?",
+      "alternativas": [
+        "Los problemas de la casa.",
+        "Lo que le pasa a él: la espera, la comida para uno, la silla que no usa.",
+        "Las noticias del barrio.",
+        "El precio de las cosas del almacén."
+      ],
+      "clave": "B",
+      "justificacion": "La tercera estrofa enumera lo que no escribió: que a veces se queda mirando el teléfono, que aprendió a cocinar para uno y que hay una silla que no usa."
+    },
+    {
+      "codigo": "2M-LEC-POE-418",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "propósito declarado",
+      "enunciado": "¿Qué razón da el hablante para no escribir lo que siente?",
+      "alternativas": [
+        "Que las cartas se hacen para que el otro esté tranquilo, no para que uno se alivie.",
+        "Que no sabe expresar lo que siente.",
+        "Que teme que la carta se pierda en el correo.",
+        "Que la otra persona ya conoce esos sentimientos."
+      ],
+      "clave": "A",
+      "justificacion": "El poema lo dice de forma directa: no escribió eso porque las cartas se hacen para que el otro esté tranquilo, no para que uno se alivie."
+    },
+    {
+      "codigo": "2M-LEC-POE-419",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "El poema termina con la carta «sin destinatario, sin estampilla, con la tinta corrida en el borde». ¿Qué indica ese estado?",
+      "alternativas": [
+        "Que la carta fue enviada y devuelta.",
+        "Que fue escrita y nunca salió del cajón, y que el tiempo la afectó.",
+        "Que otra persona la escribió en su lugar.",
+        "Que el hablante rompió la carta."
+      ],
+      "clave": "B",
+      "justificacion": "La ausencia de destinatario y de estampilla indica que la carta nunca se despachó, y la tinta corrida muestra el paso del tiempo desde que se guardó en el cajón."
+    },
+    {
+      "codigo": "2M-LEC-POE-420",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué conflicto plantea el poema?",
+      "alternativas": [
+        "La dificultad de mantener una casa en buen estado.",
+        "La tensión entre decir la verdad de lo que uno siente y cuidar al otro ocultándolo.",
+        "El rechazo del hablante hacia la persona ausente.",
+        "La imposibilidad de comunicarse por carta."
+      ],
+      "clave": "B",
+      "justificacion": "El poema opone dos propósitos: tranquilizar al otro y aliviarse uno mismo, y el hablante elige el primero. Las cartas sí sirven para comunicarse, pero la suya nunca se envía por ese cuidado."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-NAR-404",
+    "titulo": "El cuaderno de la enfermera",
+    "tipo": "narrativo",
+    "palabras": 340,
+    "cuerpo": "En el consultorio del pueblo había una enfermera que llevaba un cuaderno aparte del registro oficial. En el cuaderno anotaba otra cosa: quién vivía solo, quién tenía problemas para leer la receta, quién no podía volver solo a su casa después de la atención.\n\nLa jefa del consultorio le dijo una vez que ese cuaderno no correspondía al protocolo. Ella respondió que lo sabía y siguió anotando.\n\nEn marzo llegó una orden de traslado. Ella pidió quedarse hasta que llegara su reemplazo, y lo hizo durante seis semanas. En ese tiempo usó el cuaderno más que nunca.\n\nEl reemplazo se llamaba Ignacio y venía de la ciudad. El primer día revisó el sistema y dijo que estaba todo actualizado. El segundo día, la enfermera le dejó el cuaderno sobre el escritorio.\n\n—Esto no está en el sistema —dijo.\n\nIgnacio lo abrió. Leyó una página y la cerró. Leyó otra y preguntó de qué se trataba.\n\n—De lo que no entra en la ficha —contestó ella—. Ahí dice quién es don Óscar, que no ve bien la receta pero no quiere decirlo, y por qué la señora Julia no puede volver sola los días de lluvia.\n\n—¿Y esto lo anotaste durante cuánto tiempo?\n\n—Nueve años.\n\nIgnacio pasó la tarde leyendo. Al día siguiente preguntó si podía seguir con el cuaderno, y ella dijo que podía, pero que las primeras cuatro páginas eran suyas y no iba a arrancarlas.\n\n—No le estoy pidiendo eso —dijo él.\n\n—Ya sé —dijo ella—. Lo digo por si acaso.\n\nEl último día, Ignacio la acompañó a la parada. Le preguntó si había algo más que necesitara saber, algo que no estuviera escrito.\n\nElla pensó un rato.\n\n—Sí —dijo—. Que el cuaderno sirve si uno lo abre antes de la consulta. Después no sirve para nada."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-NAR-416",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué anotaba la enfermera en su cuaderno aparte?",
+      "alternativas": [
+        "Los horarios de los médicos del consultorio.",
+        "Información que no entra en la ficha: quién vive solo, quién no lee bien la receta, quién no puede volver solo.",
+        "Los reclamos de los pacientes por la atención.",
+        "Las cuentas del consultorio."
+      ],
+      "clave": "B",
+      "justificacion": "El texto enumera el contenido: quién vivía solo, quién tenía problemas para leer la receta y quién no podía volver solo a su casa después de la atención."
+    },
+    {
+      "codigo": "2M-LEC-NAR-417",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una respuesta",
+      "enunciado": "La jefa le dice que el cuaderno no corresponde al protocolo, y la enfermera responde que lo sabe y sigue anotando. ¿Qué muestra esa respuesta?",
+      "alternativas": [
+        "Que no entendió la indicación de su jefa.",
+        "Que decide mantener una práctica que considera útil, aunque no esté formalizada.",
+        "Que planea entregar el cuaderno a la jefatura.",
+        "Que el cuaderno era parte del protocolo oficial."
+      ],
+      "clave": "B",
+      "justificacion": "La respuesta reconoce la norma y no la discute, pero la enfermera continúa con su registro. Las seis semanas antes del traslado, en que usa el cuaderno más que nunca, confirman esa decisión."
+    },
+    {
+      "codigo": "2M-LEC-NAR-418",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de una aclaración",
+      "enunciado": "¿Por qué la enfermera aclara que las primeras cuatro páginas son suyas y no las va a arrancar?",
+      "alternativas": [
+        "Porque esas páginas contienen errores que no quiere mostrar.",
+        "Porque distingue entre entregar el registro y desprenderse de su historia personal en él.",
+        "Porque las primeras páginas son de otra persona.",
+        "Porque quiere que Ignacio le devuelva el cuaderno al año."
+      ],
+      "clave": "B",
+      "justificacion": "Ella acepta que Ignacio siga con el cuaderno, y su condición protege lo ya escrito. Cuando él aclara que no le está pidiendo eso, ella responde «lo digo por si acaso», lo que muestra que la aclaración era una precaución sobre el límite."
+    },
+    {
+      "codigo": "2M-LEC-NAR-419",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de la última advertencia",
+      "enunciado": "¿Qué significa la advertencia final: «el cuaderno sirve si uno lo abre antes de la consulta. Después no sirve para nada»?",
+      "alternativas": [
+        "Que el cuaderno se estropea con el uso.",
+        "Que la información solo es útil si se consulta antes de atender al paciente, no como registro posterior.",
+        "Que Ignacio debe leer el cuaderno una sola vez.",
+        "Que el cuaderno debe guardarse en un cajón."
+      ],
+      "clave": "B",
+      "justificacion": "La advertencia se refiere al momento de uso: el valor del cuaderno está en anticipar necesidades antes de la atención. Consultarlo después no cambia lo que ocurrió en la consulta."
+    },
+    {
+      "codigo": "2M-LEC-NAR-420",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué valora el relato en el trabajo de la enfermera?",
+      "alternativas": [
+        "Su capacidad para cumplir estrictamente el protocolo.",
+        "Su conocimiento de las condiciones de vida de los pacientes, que el registro oficial no recoge.",
+        "Su velocidad para atender en el consultorio.",
+        "Su decisión de trasladarse a la ciudad."
+      ],
+      "clave": "B",
+      "justificacion": "El relato gira sobre el cuaderno que registra lo que no entra en la ficha, y el reemplazo termina adoptándolo. La enfermera no destaca por cumplir el protocolo, del que su cuaderno quedaba fuera."
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DIS-403",
+    "titulo": "Contrato de arriendo",
+    "tipo": "informativo-discontinuo",
+    "palabras": 210,
+    "cuerpo": "CONTRATO DE ARRIENDO\nDepartamento 302, calle Los Olmos 1450\n\nCONDICIONES ECONÓMICAS\nRenta mensual: $380 000, pagadera los primeros 5 días de cada mes.\nGarantía: un mes de renta, reajustable una vez al año.\nGastos comunes: $45 000 mensuales, no incluidos en la renta.\nReajuste anual: según el índice oficial, en el mes de aniversario del contrato.\n\nOBLIGACIONES DEL ARRENDATARIO\nPagar la renta y los gastos comunes dentro de plazo.\nMantener el departamento en buen estado y responder por daños.\nAvisar con 60 días de anticipación si decide no renovar.\nNo subarrendar sin autorización escrita del arrendador.\nPermitir una visita de inspección al año, avisada con 7 días.\n\nOBLIGACIONES DEL ARRENDADOR\nEntregar el departamento en condiciones habitables.\nResponder por reparaciones estructurales.\nDevolver la garantía dentro de 30 días desde la entrega, descontando daños comprobados.\n\nTÉRMINO ANTICIPADO\nSi el arrendatario termina el contrato antes del plazo, paga una multa equivalente a un mes de renta.\n\nOBSERVACIONES\nEl contrato dura 12 meses y se renueva automáticamente por períodos iguales si ninguna parte avisa lo contrario."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DIS-411",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de un contrato",
+      "enunciado": "¿Cuánto debe pagar mensualmente el arrendatario en total, sin considerar consumos propios?",
+      "alternativas": ["$380 000", "$425 000", "$435 000", "$760 000"],
+      "clave": "B",
+      "justificacion": "La renta es $380 000 y los gastos comunes son $45 000, que no están incluidos. La suma es 380 000 + 45 000 = $425 000."
+    },
+    {
+      "codigo": "2M-LEC-DIS-412",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "aplicar reglas",
+      "conocimiento": "uso de condiciones",
+      "enunciado": "El arrendatario quiere irse antes de que termine el contrato. ¿Qué consecuencia establece el documento?",
+      "alternativas": [
+        "Debe avisar con 60 días y no paga nada más.",
+        "Paga una multa equivalente a un mes de renta.",
+        "Pierde la garantía y además paga dos meses.",
+        "No puede terminar el contrato antes del plazo."
+      ],
+      "clave": "B",
+      "justificacion": "El apartado de término anticipado establece que si el arrendatario termina el contrato antes del plazo paga una multa equivalente a un mes de renta. El aviso de 60 días corresponde a la decisión de no renovar."
+    },
+    {
+      "codigo": "2M-LEC-DIS-413",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "función de una cláusula",
+      "enunciado": "¿Para qué el contrato exige avisar con 7 días antes de una inspección?",
+      "alternativas": [
+        "Para que el arrendatario pueda preparar el departamento.",
+        "Para resguardar la privacidad del arrendatario sin eliminar la facultad de inspección del arrendador.",
+        "Para evitar que la inspección se realice.",
+        "Para que el arrendador pueda subir la renta."
+      ],
+      "clave": "B",
+      "justificacion": "La cláusula reconoce el derecho del arrendador a inspeccionar una vez al año y a la vez limita el ejercicio de esa facultad con un aviso previo, lo que protege al arrendatario de una entrada sin aviso."
+    },
+    {
+      "codigo": "2M-LEC-DIS-414",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "efecto de la renovación automática",
+      "enunciado": "¿Qué efecto tiene la cláusula de renovación automática para las dos partes?",
+      "alternativas": [
+        "Obliga a firmar un contrato nuevo cada año.",
+        "Mantiene el contrato vigente sin trámites, pero exige que quien quiera salir avise a tiempo.",
+        "Impide que el arrendatario se vaya alguna vez.",
+        "Permite al arrendador subir la renta cuando quiera."
+      ],
+      "clave": "B",
+      "justificacion": "El documento indica que el contrato se renueva automáticamente por períodos iguales si ninguna parte avisa lo contrario, y la obligación del arrendatario incluye avisar con 60 días si decide no renovar."
+    },
+    {
+      "codigo": "2M-LEC-DIS-415",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una situación",
+      "enunciado": "Al terminar el contrato, el arrendador retiene la garantía completa sin explicar daños. Según el documento, ¿qué corresponde?",
+      "alternativas": [
+        "Es válido, porque la garantía es del arrendador.",
+        "No corresponde: la garantía debe devolverse en 30 días descontando solo daños comprobados.",
+        "Es válido si el arrendatario no avisó con 60 días.",
+        "No corresponde, pero solo si no hubo inspección anual."
+      ],
+      "clave": "B",
+      "justificacion": "Entre las obligaciones del arrendador está devolver la garantía dentro de 30 días desde la entrega, descontando daños comprobados. Retenerla completa y sin explicación incumple esa cláusula."
+    }
+  ]
+}
