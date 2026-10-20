@@ -5,11 +5,16 @@ import { ensayosDelColegio } from '@/lib/ensayos';
 
 export const dynamic = 'force-dynamic';
 
-export default async function Ensayos() {
+export default async function Ensayos({
+  searchParams,
+}: {
+  searchParams: Promise<{ ok?: string; error?: string; curso?: string }>;
+}) {
   const sesion = await sesionActual();
   if (!sesion) redirect('/login');
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
+  const { ok, error, curso } = await searchParams;
   const ensayos = await ensayosDelColegio(sesion.colegioId);
 
   return (
@@ -29,6 +34,20 @@ export default async function Ensayos() {
             Generar ensayo
           </a>
         </div>
+
+        {ok === 'asignado' ? (
+          <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-marca">
+            Evaluación publicada y asignada a {curso ?? 'el curso'}.
+          </p>
+        ) : null}
+
+        {error ? (
+          <p className="rounded-xl bg-rose-50 px-4 py-3 text-sm text-rose-700">
+            {error === 'ensayo'
+              ? 'Esa evaluación no existe o no es de tu colegio.'
+              : 'No se pudo completar la operación.'}
+          </p>
+        ) : null}
 
         <section className="rounded-2xl border border-borde bg-white">
           {ensayos.length === 0 ? (
@@ -59,6 +78,12 @@ export default async function Ensayos() {
                   <span className="rounded-full bg-fondo px-2.5 py-1 text-xs text-tenue">
                     {e._count.asignaciones} asignaciones
                   </span>
+                  <a
+                    href={`/ensayos/${e.id}/asignar`}
+                    className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+                  >
+                    Asignar
+                  </a>
                 </li>
               ))}
             </ul>
