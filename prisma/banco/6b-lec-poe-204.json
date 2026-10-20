@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-POE-204",
+    "titulo": "Semilla en el bolsillo",
+    "tipo": "poético",
+    "palabras": 100,
+    "cuerpo": "Llevo una semilla seca\nen el bolsillo del pantalón.\nNo sé de qué árbol es:\nla recogí del suelo, en el camino,\ncuando volvíamos del cerro.\n\nEs dura como una piedra\npequeña, y tiene una línea\nque la cruza de lado a lado.\nSi la aprieto, no se rompe.\nSi la dejo, no germina.\n\nMi abuela dice que hay que\nenterrarla antes del invierno,\nque la tierra hace su trabajo\nsin que uno se dé cuenta.\n\nAsí que llevo esta semilla\nsabiendo que no veré el árbol.\nAlguien lo verá por mí,\nuno que todavía no ha nacido."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-POE-216",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué señala el poema sobre la semilla?",
+      "alternativas": [
+        "Que no sabe de qué árbol es.",
+        "Que es de un árbol que ya no existe.",
+        "Que la compró en el centro.",
+        "Que se la regaló su abuela."
+      ],
+      "clave": "A",
+      "justificacion": "El hablante dice expresamente que no sabe de qué árbol es, porque la recogió del suelo en el camino, al volver del cerro."
+    },
+    {
+      "codigo": "6B-LEC-POE-217",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "sentido de una imagen",
+      "enunciado": "El poema dice que la semilla es «dura como una piedra». ¿Qué idea aporta esa comparación?",
+      "alternativas": [
+        "Que la semilla es pesada y grande.",
+        "Que la semilla está cerrada y protegida, y por eso no se rompe al apretarla.",
+        "Que la semilla no es una semilla de verdad.",
+        "Que la semilla se puede lanzar lejos."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación aparece junto a los versos que dicen que si se aprieta no se rompe. La dureza describe la resistencia de la semilla, no su tamaño ni su peso."
+    },
+    {
+      "codigo": "6B-LEC-POE-218",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de dos versos paralelos",
+      "enunciado": "¿Qué contraste establecen los versos «si la aprieto, no se rompe» y «si la dejo, no germina»?",
+      "alternativas": [
+        "Que la semilla se rompe con facilidad y germina sola.",
+        "Que la semilla resiste el apretón, pero necesita la tierra para crecer.",
+        "Que la semilla no puede germinar nunca.",
+        "Que la semilla es más útil en el bolsillo que en la tierra."
+      ],
+      "clave": "B",
+      "justificacion": "Los dos versos muestran que la semilla es resistente al contacto, pero que guardada no crece. Ese contraste prepara el consejo de la abuela de enterrarla antes del invierno."
+    },
+    {
+      "codigo": "6B-LEC-POE-219",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una decisión",
+      "enunciado": "¿Qué significa que el hablante siembre «sabiendo que no veré el árbol»?",
+      "alternativas": [
+        "Que duda de que la semilla germine.",
+        "Que acepta que el resultado de su acción llegará después de él.",
+        "Que no le interesa el árbol que va a crecer.",
+        "Que va a regalar la semilla a otra persona."
+      ],
+      "clave": "B",
+      "justificacion": "El cierre lo aclara: alguien lo verá por mí, uno que todavía no ha nacido. El hablante siembra a pesar de que no disfrutará del resultado."
+    },
+    {
+      "codigo": "6B-LEC-POE-220",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué valor destaca el último verso del poema?",
+      "alternativas": [
+        "La paciencia de quien guarda algo por si acaso.",
+        "La disposición a hacer algo cuyos resultados verán otros.",
+        "La importancia de conocer el nombre de los árboles.",
+        "La utilidad de la abuela como fuente de información."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante no guarda la semilla: la entierra, aunque no verá el árbol. El cierre lleva la acción más allá de su propia vida, hacia alguien que todavía no nace."
+    }
+  ]
+}

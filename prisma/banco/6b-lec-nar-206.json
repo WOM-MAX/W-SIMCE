@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-NAR-206",
+    "titulo": "Las cartas del faro",
+    "tipo": "narrativo",
+    "palabras": 306,
+    "cuerpo": "El faro de Punta Chica dejó de funcionar en 1998, cuando instalaron una baliza automática. Mi abuelo fue su último torrero y vivió allí diecinueve años.\n\nEn el cajón del escritorio quedaron sus cartas. No son cartas que él escribió: son cartas que recibió, casi todas de marinos que pasaban por el faro. Mi abuelo les daba agua, les prestaba herramientas y les anotaba la hora en que se iban.\n\nUna de las cartas dice: «Don Hernán: le devuelvo el destornillador. Llegué a puerto a las cuatro de la mañana. Sin su luz no habría encontrado la boca del río». Está firmada con un nombre y el nombre de un barco.\n\nHay otra más corta, escrita a lápiz, de alguien que se quedó tres días esperando que bajara la niebla: «Gracias por la sopa y por no preguntar por qué iba tan apurado».\n\nMi abuelo nunca hablaba de esas cartas. Cuando le preguntaban por su trabajo, decía que era encender una lámpara y anotar la hora. Nada más.\n\nEl año pasado fui al faro. La baliza automática sigue girando, y el edificio está cerrado con una reja. Desde abajo se ve la ventana del cuarto donde él dormía.\n\nAl volver, conté las cartas. Son cuarenta y dos. Las ordené por fecha y noté algo que no había visto antes: entre 1979 y 1998 no hay ni un año sin al menos una carta, y en tres de esos años hay cuatro o cinco.\n\nMi abuelo decía que su trabajo era encender una lámpara. Las cartas dicen otra cosa: cuarenta y dos veces alguien se tomó el trabajo de escribirle para que supiera que había llegado."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-NAR-226",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué relación tenía el abuelo con las cartas del cajón?",
+      "alternativas": [
+        "Las había escrito él a otros torreros.",
+        "Las había recibido de marinos que pasaban por el faro.",
+        "Las había encontrado en el faro abandonado.",
+        "Las había escrito su familia durante los inviernos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto aclara expresamente que no son cartas que él escribió, sino cartas que recibió, casi todas de marinos que pasaban por el faro."
+    },
+    {
+      "codigo": "6B-LEC-NAR-227",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una frase",
+      "enunciado": "¿Qué significa la frase «sin su luz no habría encontrado la boca del río»?",
+      "alternativas": [
+        "Que el faro estaba mal ubicado.",
+        "Que la luz del faro le permitió al barco orientarse y entrar al río.",
+        "Que el abuelo le prestó una linterna al marino.",
+        "Que el río estaba iluminado por el sol."
+      ],
+      "clave": "B",
+      "justificacion": "El marino agradece por la luz del faro, que le permitió ubicar la entrada del río y llegar a puerto. La carta también menciona la devolución del destornillador, que es otro favor distinto."
+    },
+    {
+      "codigo": "6B-LEC-NAR-228",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "contraste entre versiones",
+      "enunciado": "El abuelo decía que su trabajo era «encender una lámpara y anotar la hora». ¿Qué muestra el resto del texto sobre esa descripción?",
+      "alternativas": [
+        "Que era exacta y no había nada más que hacer en el faro.",
+        "Que era incompleta: su trabajo también incluía ayudar a quienes llegaban.",
+        "Que el abuelo no sabía en qué consistía su trabajo.",
+        "Que exageraba la importancia de su tarea."
+      ],
+      "clave": "B",
+      "justificacion": "Las cartas muestran favores concretos: agua, herramientas, sopa, y alguien que pudo entrar al río por la luz. El abuelo describía solo la parte técnica de la tarea."
+    },
+    {
+      "codigo": "6B-LEC-NAR-229",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "función de un dato",
+      "enunciado": "¿Para qué el narrador cuenta que ordenó las cartas por fecha y contó cuántas había por año?",
+      "alternativas": [
+        "Para demostrar que el abuelo escribía mucho.",
+        "Para mostrar con datos que la ayuda fue constante durante casi veinte años.",
+        "Para saber cuántas cartas se habían perdido.",
+        "Para ordenar el archivo familiar antes de donarlo."
+      ],
+      "clave": "B",
+      "justificacion": "El dato muestra que entre 1979 y 1998 no hubo ni un año sin carta y que en tres años hubo cuatro o cinco. Ese patrón sostiene la conclusión del cierre: cuarenta y dos veces alguien le escribió para avisarle que había llegado."
+    },
+    {
+      "codigo": "6B-LEC-NAR-230",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué idea sobre el trabajo del torrero construye el texto?",
+      "alternativas": [
+        "Que era un trabajo solitario sin contacto con nadie.",
+        "Que una tarea que parece mínima puede ser la diferencia para otras personas.",
+        "Que el faro era innecesario porque existían otros medios.",
+        "Que el abuelo prefería su trabajo antes que a su familia."
+      ],
+      "clave": "B",
+      "justificacion": "El texto insiste en la modestia del abuelo al describir su tarea y la contrasta con las cartas, que muestran que esa tarea tenía consecuencias concretas para otros. No hay indicios de que el faro fuera innecesario ni de un conflicto familiar."
+    }
+  ]
+}

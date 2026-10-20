@@ -1,0 +1,93 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-INF-206",
+    "titulo": "Cómo se mide un terremoto",
+    "tipo": "informativo",
+    "palabras": 330,
+    "cuerpo": "Cuando ocurre un terremoto, los medios informan dos cosas distintas: su magnitud y su intensidad. No son lo mismo, y confundirlas lleva a conclusiones equivocadas.\n\nLa magnitud mide la energía liberada en el punto donde se origina el sismo. Es un solo valor para cada terremoto y no depende de dónde se sienta. La escala es logarítmica: un aumento de una unidad significa que la energía liberada es mucho mayor, no el doble. Por eso un sismo de magnitud 7 no es solo un poco más fuerte que uno de 6.\n\nLa intensidad, en cambio, describe los efectos del sismo en un lugar determinado. Se evalúa observando lo que ocurrió: si se movieron los muebles, si se cayeron objetos, si hubo daños en las construcciones. Por eso un mismo terremoto tiene muchas intensidades distintas: la del pueblo cercano al epicentro es mayor que la de la ciudad que está a doscientos kilómetros.\n\nEsto explica una situación habitual. Un sismo de gran magnitud ocurrido en el mar puede sentirse con intensidad débil en la costa, y otro de menor magnitud puede provocar daños serios si su origen está justo debajo de una ciudad con construcciones antiguas.\n\nEl tipo de suelo también influye. Los terrenos blandos amplifican el movimiento más que la roca firme, y por eso dos barrios de la misma ciudad pueden tener intensidades diferentes ante el mismo sismo.\n\nConviene recordar que la escala de magnitud no avisa de lo que va a pasar. Un sismo de magnitud alta en una zona despoblada no produce víctimas, y uno moderado en una ciudad mal preparada puede ser destructivo. La preparación depende de las construcciones y de los planes de evacuación, no de la cifra que informe la radio."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-INF-226",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el texto, ¿qué mide la magnitud de un sismo?",
+      "alternativas": [
+        "Los daños que provoca en las construcciones.",
+        "La energía liberada en el punto donde se origina.",
+        "La cantidad de personas que lo sintieron.",
+        "El tiempo que dura el movimiento."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que la magnitud mide la energía liberada en el punto donde se origina el sismo, y que es un solo valor que no depende de dónde se sienta. Los daños corresponden a la intensidad."
+    },
+    {
+      "codigo": "6B-LEC-INF-227",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "escala logarítmica",
+      "enunciado": "El texto dice que la escala de magnitud es logarítmica. ¿Qué consecuencia tiene eso?",
+      "alternativas": [
+        "Que un aumento de una unidad significa un aumento pequeño de energía.",
+        "Que un aumento de una unidad significa una energía mucho mayor, no el doble.",
+        "Que la escala no admite números mayores que 7.",
+        "Que la magnitud cambia según la distancia al epicentro."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo aclara con un ejemplo: un sismo de magnitud 7 no es solo un poco más fuerte que uno de 6. La escala logarítmica implica saltos grandes de energía entre unidades."
+    },
+    {
+      "codigo": "6B-LEC-INF-228",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "comparación de conceptos",
+      "enunciado": "¿Por qué un mismo terremoto tiene muchas intensidades distintas?",
+      "alternativas": [
+        "Porque la magnitud cambia de un lugar a otro.",
+        "Porque la intensidad describe los efectos en cada lugar, y esos efectos varían con la distancia y el terreno.",
+        "Porque cada persona percibe el sismo de manera diferente.",
+        "Porque los instrumentos miden valores distintos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que la intensidad se evalúa observando los efectos en un lugar determinado, y que por eso el pueblo cercano al epicentro tiene una intensidad mayor que la ciudad lejana. Además el tipo de suelo influye."
+    },
+    {
+      "codigo": "6B-LEC-INF-229",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "relación entre datos",
+      "enunciado": "Según el texto, ¿por qué dos barrios de la misma ciudad pueden sentir distinto el mismo sismo?",
+      "alternativas": [
+        "Porque uno está más cerca del mar.",
+        "Porque los terrenos blandos amplifican el movimiento más que la roca firme.",
+        "Porque en uno hay más edificios altos.",
+        "Porque la magnitud del sismo cambia al cruzar la ciudad."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que los terrenos blandos amplifican el movimiento más que la roca firme, y que por eso dos barrios de la misma ciudad pueden tener intensidades diferentes ante el mismo sismo."
+    },
+    {
+      "codigo": "6B-LEC-INF-230",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Una persona escucha que hubo un sismo de magnitud 7 en una zona despoblada y concluye que fue una catástrofe. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que la magnitud 7 no existe.",
+        "Que la magnitud alta no implica daños: eso depende de las construcciones y de la intensidad en cada lugar.",
+        "Que los sismos en zonas despobladas no se registran.",
+        "Que la radio siempre informa mal."
+      ],
+      "clave": "B",
+      "justificacion": "El texto cierra señalando que un sismo de magnitud alta en una zona despoblada no produce víctimas, y que la preparación depende de las construcciones y de los planes de evacuación, no de la cifra informada."
+    }
+  ]
+}

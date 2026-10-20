@@ -1,0 +1,83 @@
+{
+  "nivel": "6B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-6B-LEC-DIS-205",
+    "titulo": "Campaña del vaso reutilizable",
+    "tipo": "informativo-discontinuo",
+    "palabras": 172,
+    "cuerpo": "CAMPAÑA DEL VASO REUTILIZABLE\nColegio Los Robles, segundo semestre\n\nEL PROBLEMA\nEn el kiosco se venden 120 bebidas al día en vasos desechables.\nCada vaso demora cientos de años en degradarse.\nEn un semestre de 90 días se usan 10 800 vasos.\n\nLA META\nReducir a la mitad los vasos desechables antes de fin de año.\n\nCÓMO PARTICIPAR\nTraer un vaso o botella reutilizable marcado con el nombre.\nEl kiosco cobra $100 menos a quien trae su vaso.\nHay un punto de lavado en el patio techado.\n\nMEDICIÓN\nCada viernes el kiosco informa cuántos vasos desechables se usaron.\nEl curso que más reduzca su consumo recibe un desayuno.\nEl registro se publica en el diario mural.\n\nLO QUE NO CONSIDERA LA CAMPAÑA\nEl agua y el jabón del punto de lavado también tienen un costo ambiental.\nLos vasos reutilizables se pierden: el año pasado se perdieron 40."
+  },
+  "items": [
+    {
+      "codigo": "6B-LEC-DIS-221",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de datos",
+      "enunciado": "¿Cuántos vasos desechables se usan en un semestre de 90 días?",
+      "alternativas": ["1 080", "5 400", "10 800", "12 000"],
+      "clave": "C",
+      "justificacion": "El aviso lo indica: 120 bebidas al día por 90 días dan 10 800 vasos. El valor 5 400 corresponde a la mitad, que es la meta de reducción."
+    },
+    {
+      "codigo": "6B-LEC-DIS-222",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de la campaña",
+      "enunciado": "Si se cumple la meta, ¿cuántos vasos desechables se usarían en esos 90 días?",
+      "alternativas": ["2 700", "5 400", "8 100", "10 800"],
+      "clave": "B",
+      "justificacion": "La meta es reducir a la mitad los vasos desechables. La mitad de 10 800 es 10 800 ÷ 2 = 5 400 vasos. El valor 8 100 correspondería a una reducción de una cuarta parte."
+    },
+    {
+      "codigo": "6B-LEC-DIS-223",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "incentivo de una campaña",
+      "enunciado": "¿Para qué el kiosco cobra $100 menos a quien trae su vaso?",
+      "alternativas": [
+        "Para recuperar el costo de los vasos reutilizables.",
+        "Para dar una razón concreta que motive a los estudiantes a traer el suyo.",
+        "Para pagar el punto de lavado.",
+        "Para reducir las ventas del kiosco."
+      ],
+      "clave": "B",
+      "justificacion": "El descuento aparece entre las formas de participar, junto con marcar el vaso y el punto de lavado. Su función es incentivar la conducta que la campaña busca, no recuperar costos ni reducir ventas."
+    },
+    {
+      "codigo": "6B-LEC-DIS-224",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "coherencia del texto",
+      "enunciado": "El aviso incluye una sección sobre lo que la campaña no considera. ¿Qué efecto tiene esa sección?",
+      "alternativas": [
+        "Contradice la meta y anula la campaña.",
+        "Reconoce costos y límites de la medida, sin dejar de proponerla.",
+        "Indica que la campaña ya fracasó el año anterior.",
+        "Demuestra que los vasos reutilizables son peores."
+      ],
+      "clave": "B",
+      "justificacion": "La sección menciona el agua y el jabón del lavado y la pérdida de vasos, es decir, reconoce efectos secundarios de la medida. La meta y las formas de participar siguen vigentes, así que no anula ni contradice la campaña."
+    },
+    {
+      "codigo": "6B-LEC-DIS-225",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una medida",
+      "enunciado": "Un estudiante afirma que la campaña no tiene sentido porque lavar el vaso también gasta agua. ¿Cuál es la respuesta más adecuada según el aviso?",
+      "alternativas": [
+        "Que tiene razón: el aviso reconoce ese costo, así que no sirve de nada.",
+        "Que el aviso reconoce ese costo, pero la reducción de 5 400 vasos desechables sigue siendo un beneficio.",
+        "Que el punto de lavado no usa agua.",
+        "Que los vasos desechables también se pueden lavar."
+      ],
+      "clave": "B",
+      "justificacion": "El aviso no oculta el costo del lavado, y esa mención no elimina el efecto principal de la medida: pasar de 10 800 a 5 400 vasos desechables. Reconocer un costo secundario no equivale a que la medida sea inútil."
+    }
+  ]
+}
