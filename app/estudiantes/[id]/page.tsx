@@ -44,9 +44,18 @@ export default async function HistorialEstudiante({
               Código {estudiante.codigoAcceso} · {historial.length} evaluaciones rendidas
             </p>
           </div>
-          <a href="/reportes" className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
-            Volver a reportes
-          </a>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href={`/api/estudiantes/${estudiante.id}/exportar`}
+              className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+              title="Descarga todo lo que el sistema guarda de este estudiante"
+            >
+              Exportar sus datos
+            </a>
+            <a href="/reportes" className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
+              Volver a reportes
+            </a>
+          </div>
         </div>
 
         {historial.length === 0 ? (
