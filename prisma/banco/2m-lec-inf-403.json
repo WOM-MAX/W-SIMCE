@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-403",
+    "titulo": "Cómo decide un sistema de recomendaciones",
+    "tipo": "informativo",
+    "palabras": 360,
+    "cuerpo": "Cuando una plataforma sugiere qué ver, escuchar o comprar, detrás hay un sistema que ordena las opciones según la probabilidad de que el usuario interactúe con ellas. Esa probabilidad no se calcula sobre lo que la persona dice querer, sino sobre lo que hizo antes y sobre lo que hicieron otros usuarios parecidos.\n\nUno de los métodos más usados se llama filtrado colaborativo. Compara el historial de una persona con el de miles y busca patrones comunes. Si dos usuarios coincidieron en veinte elecciones y uno de ellos consumió algo que el otro no ha visto, el sistema calcula que hay una probabilidad alta de que también le interese.\n\nEl objetivo declarado del sistema suele ser la relevancia. El objetivo real que se optimiza es otro: el tiempo de permanencia o la cantidad de interacciones. Esa diferencia importa, porque no es lo mismo ofrecer lo que a alguien le resulta útil que ofrecer lo que lo mantiene conectado más tiempo.\n\nHay un efecto conocido de estos sistemas: la concentración. Si el sistema muestra sobre todo lo que se parece a lo ya consumido, el repertorio se estrecha. Ese fenómeno se describe a veces como burbuja de filtros, aunque la evidencia empírica sobre su magnitud es discutida y varía según la plataforma y el tipo de contenido.\n\nTambién hay un problema de medición. Que alguien haga clic en una recomendación no significa que le haya gustado. Un clic puede deberse a una imagen llamativa, a una notificación o a una coincidencia. Si el sistema aprende solo de clics, optimiza la atracción del momento y no la satisfacción posterior.\n\nLas plataformas suelen incorporar señales adicionales para corregir esto: tiempo de visualización, si el contenido se abandona antes de terminar, valoraciones explícitas o preguntas directas al usuario. Ninguna señal por sí sola resuelve el problema.\n\nVale la pena distinguir dos preguntas que suelen confundirse. La primera es técnica: qué tan bien predice el sistema lo que la persona hará. La segunda es de diseño: qué se decide optimizar. La primera se puede mejorar con más datos; la segunda es una elección y no se resuelve con ingeniería."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-411",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿En qué se basa un sistema de recomendaciones para calcular la probabilidad de que un usuario interactúe con algo?",
+      "alternativas": [
+        "En lo que el usuario declara que quiere ver.",
+        "En lo que el usuario hizo antes y en lo que hicieron otros usuarios parecidos.",
+        "En una encuesta que se envía cada mes.",
+        "En el precio del contenido recomendado."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice expresamente que la probabilidad no se calcula sobre lo que la persona dice querer, sino sobre lo que hizo antes y sobre lo que hicieron otros usuarios parecidos."
+    },
+    {
+      "codigo": "2M-LEC-INF-412",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "distinción entre objetivos",
+      "enunciado": "El texto distingue entre el objetivo declarado y el objetivo real del sistema. ¿En qué difieren?",
+      "alternativas": [
+        "El declarado es la relevancia; el que se optimiza es el tiempo de permanencia o las interacciones.",
+        "El declarado es el tiempo de permanencia; el real es la relevancia.",
+        "Los dos son idénticos en la práctica.",
+        "El declarado es la publicidad y el real la satisfacción."
+      ],
+      "clave": "A",
+      "justificacion": "El texto señala que el objetivo declarado suele ser la relevancia, mientras que el objetivo realmente optimizado es el tiempo de permanencia o la cantidad de interacciones, y advierte que no es lo mismo ofrecer lo útil que lo que mantiene conectado."
+    },
+    {
+      "codigo": "2M-LEC-INF-413",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "medición de señales",
+      "enunciado": "¿Por qué el clic es una señal imperfecta para un sistema de recomendaciones?",
+      "alternativas": [
+        "Porque los clics no se pueden registrar técnicamente.",
+        "Porque un clic puede deberse a una imagen llamativa o a una notificación, y no indica satisfacción posterior.",
+        "Porque todos los usuarios hacen clic en lo mismo.",
+        "Porque los clics se registran solo en dispositivos móviles."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que un clic puede deberse a una imagen llamativa, a una notificación o a una coincidencia, y que si el sistema aprende solo de clics optimiza la atracción del momento y no la satisfacción posterior."
+    },
+    {
+      "codigo": "2M-LEC-INF-414",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "distinción entre pregunta técnica y de diseño",
+      "enunciado": "¿Cuál de estas preguntas es de diseño y no de ingeniería, según el texto?",
+      "alternativas": [
+        "Qué tan bien predice el sistema lo que la persona hará.",
+        "Qué se decide optimizar con el sistema.",
+        "Cuántos datos se almacenan de cada usuario.",
+        "Qué algoritmo de predicción tiene menor error."
+      ],
+      "clave": "B",
+      "justificacion": "El cierre del texto separa las dos preguntas: la técnica es qué tan bien predice el sistema, y la de diseño es qué se decide optimizar. Aclara que la primera se mejora con más datos y la segunda es una elección."
+    },
+    {
+      "codigo": "2M-LEC-INF-415",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una afirmación",
+      "enunciado": "Alguien afirma que la burbuja de filtros es un hecho comprobado en todas las plataformas. Según el texto, ¿cuál es la precisión necesaria?",
+      "alternativas": [
+        "Que la afirmación es correcta sin matices.",
+        "Que el fenómeno se describe así, pero la evidencia sobre su magnitud es discutida y varía según la plataforma.",
+        "Que la burbuja de filtros no existe.",
+        "Que solo ocurre en plataformas de compras."
+      ],
+      "clave": "B",
+      "justificacion": "El texto menciona el fenómeno de concentración y la denominación burbuja de filtros, y agrega que la evidencia empírica sobre su magnitud es discutida y varía según la plataforma y el tipo de contenido."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-POE-402",
+    "titulo": "Los que se quedan",
+    "tipo": "poético",
+    "palabras": 120,
+    "cuerpo": "Los que se van mandan fotos\ndel mar, de una ventana,\nde un plato que no conocemos.\nNosotros contestamos con un pulgar arriba.\n\nLos que se quedan limpian la casa\ndonde los otros nacieron,\npagan las cuentas del agua\ny riegan la planta que era de todos.\n\nNadie escribe poemas sobre eso.\nNo hay postal de la cocina a las once,\nni del sobre con la boleta,\nni del ruido del refrigerador.\n\nPero cuando vuelven, en diciembre,\nlos que se fueron dicen «qué lindo está todo»\ny no preguntan quién\nmantuvo la casa en pie todo el año.\n\nYo tampoco pregunto.\nPongo la mesa, cuento las sillas\ny me quedo con la parte\nque nadie va a fotografiar."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-POE-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué hacen los que se quedan, según el poema?",
+      "alternativas": [
+        "Mandan fotos del mar y de una ventana.",
+        "Limpian la casa, pagan las cuentas del agua y riegan la planta.",
+        "Escriben poemas sobre la cocina.",
+        "Viajan en diciembre y vuelven en verano."
+      ],
+      "clave": "B",
+      "justificacion": "La segunda estrofa enumera esas tareas: limpiar la casa donde los otros nacieron, pagar las cuentas del agua y regar la planta que era de todos. Las fotos corresponden a los que se van."
+    },
+    {
+      "codigo": "2M-LEC-POE-407",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de un contraste",
+      "enunciado": "¿Qué contraste establece el poema entre los dos grupos?",
+      "alternativas": [
+        "Que unos tienen más dinero que otros.",
+        "Que unos producen imágenes que se comparten y otros sostienen la vida cotidiana, que no se fotografía.",
+        "Que unos viven en el extranjero y otros en el campo.",
+        "Que unos escriben y otros leen."
+      ],
+      "clave": "B",
+      "justificacion": "El poema opone las fotos que se envían con los pulgares arriba que se responden, frente a las tareas de la casa y las cuentas. La tercera estrofa insiste en que esas tareas no dejan postal ni poema."
+    },
+    {
+      "codigo": "2M-LEC-POE-408",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "efecto de una enumeración",
+      "enunciado": "¿Qué efecto produce la enumeración «la cocina a las once», «el sobre con la boleta», «el ruido del refrigerador»?",
+      "alternativas": [
+        "Embellece las tareas domésticas.",
+        "Muestra lo cotidiano y sin relieve que sostiene la casa, y que nadie registra.",
+        "Indica que la casa está en mal estado.",
+        "Señala que el hablante vive solo."
+      ],
+      "clave": "B",
+      "justificacion": "Los tres elementos son escenas domésticas sin ningún brillo, y aparecen justamente después de la frase «nadie escribe poemas sobre eso». La enumeración da cuerpo a lo que no se fotografía."
+    },
+    {
+      "codigo": "2M-LEC-POE-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "El hablante dice que se queda «con la parte que nadie va a fotografiar». ¿Qué muestra esa decisión?",
+      "alternativas": [
+        "Que renuncia a viajar y se resigna.",
+        "Que asume ese lugar sin reclamar reconocimiento, aunque sabe que no será visto.",
+        "Que espera que en diciembre le reconozcan su trabajo.",
+        "Que planea irse el año siguiente."
+      ],
+      "clave": "B",
+      "justificacion": "El hablante declara que tampoco pregunta, pone la mesa y cuenta las sillas. La frase final muestra que conoce el valor de lo que hace y no espera que se lo reconozcan, en lugar de resignación o de un reclamo diferido."
+    },
+    {
+      "codigo": "2M-LEC-POE-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "tono global del poema",
+      "enunciado": "¿Qué tono predomina en el poema?",
+      "alternativas": [
+        "La denuncia airada contra quienes se fueron.",
+        "La constatación serena de una desigualdad que el hablante decide no reclamar.",
+        "La nostalgia por el mar y los viajes.",
+        "La celebración de la vida en familia."
+      ],
+      "clave": "B",
+      "justificacion": "El poema enuncia una diferencia sin insulto ni súplica, y el hablante aclara que no pregunta. No hay exaltación ni queja airada, y la descripción del reencuentro es sobria."
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-NAR-402",
+    "titulo": "El hombre que arreglaba radios",
+    "tipo": "narrativo",
+    "palabras": 358,
+    "cuerpo": "En el pueblo decían que don Anselmo había arreglado la primera radio que llegó, en 1958. Él nunca lo desmintió, aunque en su taller no había ningún aparato de esa época.\n\nCuando murió, su hija encontró en el entrepano catorce radios apiladas, todas de los años sesenta y setenta, y un cuaderno. En el cuaderno había una lista: nombre del dueño, fecha de entrada, falla, fecha de salida y una palabra final. La palabra final casi siempre era «entregada».\n\nPero en once de las catorce radios la palabra era otra: «no se pudo». Y detrás de cada una había una línea más: «dice que la deja», «dice que vuelve en marzo», «no volvió».\n\nLa hija, que era profesora de historia, leyó el cuaderno completo dos veces. Después llamó a dos vecinos y les preguntó por esas radios.\n\n—Ah, sí —dijo uno—. La mía se la dejé cuando se me quemó el transformador. Nunca fui a buscarla.\n\n—Yo pensé que la había perdido —dijo el otro—. Y después me dio vergüenza preguntar.\n\nLa hija entendió entonces por qué su padre no había desmentido nunca la historia de 1958. No la había desmentido porque en el pueblo nadie iba a creer que un hombre guardaba catorce radios rotas de gente que no volvió. Era más fácil aceptar que había arreglado la primera.\n\nEn octubre, la hija puso las catorce radios en una mesa larga en la plaza, con una tarjeta al lado de cada una: el nombre del dueño y la fecha en que había entrado al taller. Puso también el cuaderno abierto, en una vitrina prestada por la biblioteca.\n\nVinieron siete personas. Cuatro reconocieron su radio y se la llevaron, con cierta incomodidad. Tres no reconocieron ninguna y se quedaron un rato leyendo el cuaderno.\n\nAl final del día quedaron cinco radios y una nota escrita a mano por la hija, que decía: «Se guardan hasta que alguien las reconozca»."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-NAR-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué encontró la hija en el entrepano?",
+      "alternativas": [
+        "Catorce radios y un cuaderno con registros.",
+        "Una radio de 1958 y herramientas.",
+        "Los repuestos de las radios que su padre arreglaba.",
+        "Una carta de los dueños de las radios."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dice que encontró catorce radios apiladas, todas de los años sesenta y setenta, y un cuaderno con una lista de dueños, fechas y fallas."
+    },
+    {
+      "codigo": "2M-LEC-NAR-407",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de un dato",
+      "enunciado": "¿Qué indican las once anotaciones con la frase «no se pudo»?",
+      "alternativas": [
+        "Que Anselmo no sabía reparar esos modelos.",
+        "Que esas radios quedaron en el taller porque sus dueños no volvieron a buscarlas.",
+        "Que las radios se perdieron en un incendio.",
+        "Que Anselmo las vendió sin avisar."
+      ],
+      "clave": "B",
+      "justificacion": "Detrás de cada «no se pudo» hay una línea como «dice que la deja» o «no volvió», y el diálogo con los vecinos confirma que uno nunca fue a buscarla y otro tuvo vergüenza de preguntar."
+    },
+    {
+      "codigo": "2M-LEC-NAR-408",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "motivo de una omisión",
+      "enunciado": "¿Por qué Anselmo nunca desmintió la historia de 1958, según su hija?",
+      "alternativas": [
+        "Porque había olvidado lo que ocurrió realmente.",
+        "Porque la versión heroica resultaba más fácil de aceptar que la verdad de las radios guardadas.",
+        "Porque la historia la había inventado él mismo para conseguir clientes.",
+        "Porque no quería que su hija conociera su taller."
+      ],
+      "clave": "B",
+      "justificacion": "La hija entiende que nadie iba a creer que un hombre guardaba catorce radios rotas de gente que no volvió, y que era más fácil aceptar que había arreglado la primera."
+    },
+    {
+      "codigo": "2M-LEC-NAR-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una acción pública",
+      "enunciado": "¿Qué efecto busca la hija al exponer las radios en la plaza con las tarjetas y el cuaderno?",
+      "alternativas": [
+        "Vender las radios que su padre acumuló.",
+        "Devolver los aparatos a sus dueños y hacer visible la historia real del taller.",
+        "Demostrar que su padre era desordenado.",
+        "Cerrar el tema de la herencia familiar."
+      ],
+      "clave": "B",
+      "justificacion": "La exposición usa el nombre de cada dueño y la fecha de entrada al taller para que cada persona reconozca su radio. El cuaderno abierto y la nota final, que las guarda hasta que alguien las reconozca, confirman esa intención."
+    },
+    {
+      "codigo": "2M-LEC-NAR-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué rasgo del padre destaca el cuento, más allá de la anécdota de las radios?",
+      "alternativas": [
+        "Su habilidad técnica para reparar aparatos antiguos.",
+        "Su decisión de guardar lo ajeno sin reclamarlo, aunque eso lo dejara en una posición incómoda.",
+        "Su interés por la historia del pueblo.",
+        "Su deseo de que su hija heredara el taller."
+      ],
+      "clave": "B",
+      "justificacion": "Anselmo conservó catorce radios ajenas durante años, registró cada intento y nunca las reclamó como propias. El cuento no destaca su pericia, sino ese cuidado silencioso, que la hija hace visible al final."
+    }
+  ]
+}
