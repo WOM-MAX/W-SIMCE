@@ -122,7 +122,7 @@ con IA, que no se veían en las capturas.
 
 - Modelo relacional propio, con ítems versionados y metadata copiada al intento
   para que los informes históricos no cambien.
-- Banco curado por el colegio, no generado por IA.
+- Banco cargado en la base, sin dependencia de la plataforma del original. Origen real: los 1.159 items los genero yo en una sesion anterior y entraron desde la carpeta ENSAYOS SIMCE APP. No estan revisados por un docente, y constan como aprobados porque el seed los marco asi. Esto invalida la version anterior de este punto, que afirmaba un banco curado por el colegio.
 - Corrección determinista con escala y cortes editables.
 - Cierre por tiempo en el servidor, no en el navegador.
 - Sin dependencia de una plataforma externa.
