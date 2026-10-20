@@ -1,0 +1,189 @@
+{
+  "nivel": "2M",
+  "asignatura": "matematica",
+  "lote": "GEN-2M-MAT-2",
+  "items": [
+    {
+      "codigo": "GEN2M-MAT-017", "eje": "numeros", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "propiedades de potencias",
+      "enunciado": "¿Cuál es el valor de 2 al cubo multiplicado por 2 al cuadrado?",
+      "clave": "C", "justificacion": "Se suman los exponentes: 2 elevado a 5 es 32.",
+      "alternativas": ["12", "25", "32", "64"]
+    },
+    {
+      "codigo": "GEN2M-MAT-018", "eje": "numeros", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "valor absoluto",
+      "enunciado": "¿Cuál es el valor absoluto de menos siete?",
+      "clave": "B", "justificacion": "El valor absoluto es la distancia al cero, que es 7.",
+      "alternativas": ["-7", "7", "0", "1/7"]
+    },
+    {
+      "codigo": "GEN2M-MAT-019", "eje": "numeros", "bloom": "comprension",
+      "habilidad": "representar", "dificultad": "media", "conocimiento": "cuadrado de binomio",
+      "enunciado": "La expresión (x + y) al cuadrado es equivalente a:",
+      "clave": "B", "justificacion": "Es el cuadrado del binomio: cuadrado del primero, doble producto y cuadrado del segundo.",
+      "alternativas": ["x² + y²", "x² + 2xy + y²", "x² - 2xy + y²", "2x + 2y"]
+    },
+    {
+      "codigo": "GEN2M-MAT-020", "eje": "numeros", "bloom": "comprension",
+      "habilidad": "representar", "dificultad": "media", "conocimiento": "simplificacion de raices",
+      "enunciado": "La raíz de 50 se puede escribir de forma equivalente como:",
+      "clave": "B", "justificacion": "50 es 25 por 2, y la raíz de 25 es 5, así que queda 5 raíz de 2.",
+      "alternativas": ["2 raíz de 5", "5 raíz de 2", "10 raíz de 5", "25 raíz de 2"]
+    },
+    {
+      "codigo": "GEN2M-MAT-021", "eje": "numeros", "bloom": "sintesis",
+      "habilidad": "argumentar", "dificultad": "dificil", "conocimiento": "orden y cuadrados",
+      "enunciado": "Si a y b son negativos y a es menor que b, ¿qué se puede afirmar sobre sus cuadrados?",
+      "clave": "A", "justificacion": "Al elevar al cuadrado un negativo el resultado es positivo, y el de mayor valor absoluto queda mayor. Por ejemplo, con -3 y -2, resulta 9 mayor que 4.",
+      "alternativas": ["a² es mayor que b²", "a² es menor que b²", "a² es igual a b²", "no se puede determinar"]
+    },
+    {
+      "codigo": "GEN2M-MAT-022", "eje": "numeros", "bloom": "sintesis",
+      "habilidad": "resolver problemas", "dificultad": "dificil", "conocimiento": "promedio y consecutivos",
+      "enunciado": "El promedio de tres números consecutivos es 12. ¿Cuál es el mayor de ellos?",
+      "clave": "C", "justificacion": "Si el promedio es 12, el número del medio es 12, y los otros son 11 y 13.",
+      "alternativas": ["11", "12", "13", "14"]
+    },
+    {
+      "codigo": "GEN2M-MAT-023", "eje": "numeros", "bloom": "sintesis",
+      "habilidad": "modelar", "dificultad": "dificil", "conocimiento": "ecuaciones con fracciones",
+      "enunciado": "A un número se le suma su doble y también su mitad, y el total es 15. ¿Cuál es el número?",
+      "clave": "B", "justificacion": "Planteado como x + 2x + x/2 = 15, se obtiene 3,5x = 15, y x = 6.",
+      "alternativas": ["5", "6", "7", "10"]
+    },
+    {
+      "codigo": "GEN2M-MAT-024", "eje": "algebra-y-funciones", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "pendiente de una recta",
+      "enunciado": "¿Cuál es la pendiente de la recta y = 3x - 5?",
+      "clave": "A", "justificacion": "En la forma y = mx + n, la pendiente es el coeficiente de x, que es 3.",
+      "alternativas": ["3", "-5", "5", "-3"]
+    },
+    {
+      "codigo": "GEN2M-MAT-025", "eje": "algebra-y-funciones", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "funcion afin",
+      "enunciado": "La gráfica de una función afín es:",
+      "clave": "C", "justificacion": "Toda función de la forma y = mx + n es una recta, que pasa por el origen solo si n es cero.",
+      "alternativas": ["Una parábola", "Una recta que siempre pasa por el origen", "Una recta que no necesariamente pasa por el origen", "Una curva creciente"]
+    },
+    {
+      "codigo": "GEN2M-MAT-026", "eje": "algebra-y-funciones", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "media", "conocimiento": "discriminante",
+      "enunciado": "¿Cuál es el valor del discriminante de x² - 4x + 4?",
+      "clave": "A", "justificacion": "El discriminante es b² - 4ac, es decir 16 - 16, que da 0.",
+      "alternativas": ["0", "8", "16", "32"]
+    },
+    {
+      "codigo": "GEN2M-MAT-027", "eje": "algebra-y-funciones", "bloom": "comprension",
+      "habilidad": "interpretar", "dificultad": "media", "conocimiento": "funcion lineal",
+      "enunciado": "Sobre la función f(x) = 3x, ¿qué afirmación es correcta?",
+      "clave": "B", "justificacion": "Pasa por el origen porque no tiene término independiente, y crece porque la pendiente es positiva.",
+      "alternativas": ["Es decreciente y pasa por el origen", "Es creciente y pasa por el origen", "Es creciente y no pasa por el origen", "Es constante"]
+    },
+    {
+      "codigo": "GEN2M-MAT-028", "eje": "algebra-y-funciones", "bloom": "sintesis",
+      "habilidad": "resolver problemas", "dificultad": "dificil", "conocimiento": "sistema de ecuaciones",
+      "enunciado": "Dos números tienen suma 7 y producto 12. ¿Cuáles son?",
+      "clave": "C", "justificacion": "Los pares que suman 7 son 1 y 6, 2 y 5, 3 y 4, y solo 3 por 4 da 12.",
+      "alternativas": ["1 y 6", "2 y 5", "3 y 4", "2 y 6"]
+    },
+    {
+      "codigo": "GEN2M-MAT-029", "eje": "algebra-y-funciones", "bloom": "sintesis",
+      "habilidad": "modelar", "dificultad": "dificil", "conocimiento": "ecuacion de la recta",
+      "enunciado": "Una recta pasa por los puntos (0, 2) y (3, 8). ¿Cuál es su ecuación?",
+      "clave": "B", "justificacion": "La pendiente es (8 - 2) / (3 - 0) = 2, y como corta en 2, la ecuación es y = 2x + 2.",
+      "alternativas": ["y = 2x - 2", "y = 2x + 2", "y = 3x + 2", "y = 6x + 2"]
+    },
+    {
+      "codigo": "GEN2M-MAT-030", "eje": "algebra-y-funciones", "bloom": "sintesis",
+      "habilidad": "argumentar", "dificultad": "dificil", "conocimiento": "coeficientes de la parabola",
+      "enunciado": "La parábola y = x² + bx + c corta al eje y en -6 y su vértice está en x = 1. ¿Cuánto vale b?",
+      "clave": "A", "justificacion": "El vértice está en x = -b/2, y si eso es 1, entonces b = -2.",
+      "alternativas": ["-2", "2", "-1", "1"]
+    },
+    {
+      "codigo": "GEN2M-MAT-031", "eje": "geometria", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "volumen del cilindro",
+      "enunciado": "¿Cuál es la fórmula del volumen de un cilindro de radio r y altura h?",
+      "clave": "C", "justificacion": "El volumen de un cilindro es el área de la base por la altura, es decir pi por r al cuadrado por h.",
+      "alternativas": ["2 pi r h", "pi r² + h", "pi r² h", "(1/3) pi r² h"]
+    },
+    {
+      "codigo": "GEN2M-MAT-032", "eje": "geometria", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "media", "conocimiento": "suma de angulos interiores",
+      "enunciado": "¿Cuánto suman los ángulos interiores de un pentágono?",
+      "clave": "C", "justificacion": "Con la fórmula (n - 2) por 180, para cinco lados resulta 540 grados.",
+      "alternativas": ["360 grados", "450 grados", "540 grados", "720 grados"]
+    },
+    {
+      "codigo": "GEN2M-MAT-033", "eje": "geometria", "bloom": "comprension",
+      "habilidad": "interpretar", "dificultad": "media", "conocimiento": "congruencia",
+      "enunciado": "Si dos triángulos son congruentes, entonces:",
+      "clave": "A", "justificacion": "La congruencia exige igual forma y también igual tamaño.",
+      "alternativas": ["Tienen la misma forma y el mismo tamaño", "Tienen la misma forma, pero pueden tener distinto tamaño", "Tienen la misma área, pero distinta forma", "Tienen los mismos ángulos, pero distinto tamaño"]
+    },
+    {
+      "codigo": "GEN2M-MAT-034", "eje": "geometria", "bloom": "sintesis",
+      "habilidad": "argumentar", "dificultad": "dificil", "conocimiento": "volumen del cono y del cilindro",
+      "enunciado": "Un cono y un cilindro tienen la misma base y la misma altura. ¿Qué relación hay entre sus volúmenes?",
+      "clave": "B", "justificacion": "El cono ocupa un tercio del cilindro cuando comparten base y altura.",
+      "alternativas": ["Son iguales", "El cono es un tercio del cilindro", "El cono es la mitad del cilindro", "El cono es el doble del cilindro"]
+    },
+    {
+      "codigo": "GEN2M-MAT-035", "eje": "geometria", "bloom": "sintesis",
+      "habilidad": "argumentar", "dificultad": "dificil", "conocimiento": "superficie del cubo",
+      "enunciado": "Si el lado de un cubo se duplica, ¿qué ocurre con su superficie total?",
+      "clave": "C", "justificacion": "Cada cara multiplica su área por 4, así que la superficie total también queda cuatro veces mayor.",
+      "alternativas": ["Se duplica", "Se triplica", "Se multiplica por 4", "Se multiplica por 8"]
+    },
+    {
+      "codigo": "GEN2M-MAT-036", "eje": "geometria", "bloom": "sintesis",
+      "habilidad": "resolver problemas", "dificultad": "dificil", "conocimiento": "semejanza y area",
+      "enunciado": "Dos triángulos son semejantes con razón de semejanza 3. Si el área del menor es 5, ¿cuál es el área del mayor?",
+      "clave": "D", "justificacion": "Las áreas varían con el cuadrado de la razón, y 3 al cuadrado es 9, entonces 5 por 9 es 45.",
+      "alternativas": ["15", "25", "30", "45"]
+    },
+    {
+      "codigo": "GEN2M-MAT-037", "eje": "probabilidad-y-estadistica", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "probabilidad del evento seguro",
+      "enunciado": "¿Cuál es la probabilidad de un evento que con seguridad ocurre?",
+      "clave": "D", "justificacion": "Un evento seguro tiene probabilidad 1.",
+      "alternativas": ["0", "0,5", "100", "1"]
+    },
+    {
+      "codigo": "GEN2M-MAT-038", "eje": "probabilidad-y-estadistica", "bloom": "conocimiento",
+      "habilidad": "interpretar", "dificultad": "facil", "conocimiento": "media aritmetica",
+      "enunciado": "¿Cuál es la media de los números 2, 4, 6 y 8?",
+      "clave": "B", "justificacion": "La suma es 20 y al dividir por 4 se obtiene 5.",
+      "alternativas": ["4", "5", "6", "7"]
+    },
+    {
+      "codigo": "GEN2M-MAT-039", "eje": "probabilidad-y-estadistica", "bloom": "comprension",
+      "habilidad": "interpretar", "dificultad": "media", "conocimiento": "frecuencia relativa",
+      "enunciado": "En una tabla de frecuencias, la frecuencia relativa de un dato se obtiene:",
+      "clave": "C", "justificacion": "Se divide la frecuencia absoluta de ese dato por el total de datos.",
+      "alternativas": ["Sumando todas las frecuencias", "Restando la frecuencia mayor menos la menor", "Dividiendo la frecuencia de ese dato por el total de datos", "Multiplicando la frecuencia por 100"]
+    },
+    {
+      "codigo": "GEN2M-MAT-040", "eje": "probabilidad-y-estadistica", "bloom": "aplicacion",
+      "habilidad": "resolver problemas", "dificultad": "media", "conocimiento": "probabilidad frecuentista",
+      "enunciado": "En un curso de 30 estudiantes, 12 son mujeres. Si se elige uno al azar, ¿cuál es la probabilidad de que sea mujer?",
+      "clave": "B", "justificacion": "Son 12 casos favorables de 30 posibles, y al simplificar queda 2/5.",
+      "alternativas": ["12/18", "2/5", "3/5", "1/2"]
+    },
+    {
+      "codigo": "GEN2M-MAT-041", "eje": "probabilidad-y-estadistica", "bloom": "sintesis",
+      "habilidad": "resolver problemas", "dificultad": "dificil", "conocimiento": "probabilidad sin reposicion",
+      "enunciado": "En una urna hay 4 bolitas rojas y 6 azules. Se sacan dos sin devolver la primera. ¿Cuál es la probabilidad de que las dos sean rojas?",
+      "clave": "A", "justificacion": "La primera roja tiene probabilidad 4/10 y la segunda 3/9, y su producto es 12/90, es decir 2/15.",
+      "alternativas": ["2/15", "4/25", "2/5", "1/6"]
+    },
+    {
+      "codigo": "GEN2M-MAT-042", "eje": "probabilidad-y-estadistica", "bloom": "sintesis",
+      "habilidad": "resolver problemas", "dificultad": "dificil", "conocimiento": "suma de dos dados",
+      "enunciado": "Se lanzan dos dados comunes. ¿Cuál es la probabilidad de que la suma de sus caras sea 7?",
+      "clave": "C", "justificacion": "De los 36 resultados posibles, seis suman 7, y 6/36 es 1/6.",
+      "alternativas": ["1/12", "5/36", "1/6", "7/36"]
+    }
+  ]
+}
