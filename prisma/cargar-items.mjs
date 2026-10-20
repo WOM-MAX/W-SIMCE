@@ -89,9 +89,32 @@ for (const it of datos.items) {
     .update(JSON.stringify({ e: it.enunciado, a: it.alternativas, c: it.clave }))
     .digest('hex');
 
+  // Figura opcional: se crea con codigo propio y queda enlazada al item.
+  let figuraId = null;
+  if (it.figura && Array.isArray(it.figura.elementos)) {
+    const codigoFigura = `FIG-${it.codigo}`;
+    const existente = await prisma.figura.findUnique({ where: { codigo: codigoFigura } });
+    const figura =
+      existente ??
+      (await prisma.figura.create({
+        data: {
+          codigo: codigoFigura,
+          primitivas: {
+            ancho: it.figura.ancho,
+            alto: it.figura.alto,
+            elementos: it.figura.elementos,
+          },
+          ancho: it.figura.ancho,
+          alto: it.figura.alto,
+        },
+      }));
+    figuraId = figura.id;
+  }
+
   const item = await prisma.item.create({
     data: {
       codigo: it.codigo,
+      figuraId,
       nivelId: nivel.id,
       asignaturaId: asignatura.id,
       ejeId: eje.id,

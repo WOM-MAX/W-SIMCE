@@ -1,0 +1,56 @@
+[
+  {
+    "codigo": "GEN2M-MAT-014",
+    "ancho": 240,
+    "alto": 180,
+    "elementos": [
+      { "op": "poly", "puntos": "30,150 150,150 150,70", "grosor": 1.2 },
+      { "op": "line", "x1": 150, "y1": 150, "x2": 138, "y2": 150, "grosor": 0.8 },
+      { "op": "line", "x1": 138, "y1": 150, "x2": 138, "y2": 138, "grosor": 0.8 },
+      { "op": "text", "x": 90, "y": 168, "texto": "8 cm", "tam": 10, "anclaje": "medio" },
+      { "op": "text", "x": 158, "y": 115, "texto": "6 cm", "tam": 10, "anclaje": "izquierda" },
+      { "op": "text", "x": 72, "y": 96, "texto": "10 cm", "tam": 10, "anclaje": "medio" }
+    ]
+  },
+  {
+    "codigo": "GEN2M-MAT-035",
+    "ancho": 240,
+    "alto": 180,
+    "elementos": [
+      { "op": "rect", "x": 50, "y": 70, "w": 80, "h": 80, "grosor": 1.2 },
+      { "op": "rect", "x": 85, "y": 40, "w": 80, "h": 80, "grosor": 1.2 },
+      { "op": "line", "x1": 50, "y1": 70, "x2": 85, "y2": 40, "grosor": 1.2 },
+      { "op": "line", "x1": 130, "y1": 70, "x2": 165, "y2": 40, "grosor": 1.2 },
+      { "op": "line", "x1": 130, "y1": 150, "x2": 165, "y2": 120, "grosor": 1.2 },
+      { "op": "text", "x": 90, "y": 168, "texto": "a", "tam": 10, "anclaje": "medio" }
+    ]
+  },
+  {
+    "codigo": "GEN2M-MAT-034",
+    "ancho": 240,
+    "alto": 180,
+    "elementos": [
+      { "op": "rect", "x": 40, "y": 60, "w": 60, "h": 80, "grosor": 1.2 },
+      { "op": "circle", "cx": 70, "cy": 60, "r": 30, "grosor": 1.2 },
+      { "op": "circle", "cx": 70, "cy": 140, "r": 30, "grosor": 1.2 },
+      { "op": "poly", "puntos": "140,140 200,140 170,50", "grosor": 1.2 },
+      { "op": "circle", "cx": 170, "cy": 140, "r": 30, "grosor": 1.2 },
+      { "op": "line", "x1": 70, "y1": 60, "x2": 70, "y2": 140, "grosor": 0.7, "punteada": true },
+      { "op": "line", "x1": 170, "y1": 50, "x2": 170, "y2": 140, "grosor": 0.7, "punteada": true },
+      { "op": "text", "x": 70, "y": 172, "texto": "cilindro", "tam": 9, "anclaje": "medio" },
+      { "op": "text", "x": 170, "y": 172, "texto": "cono", "tam": 9, "anclaje": "medio" }
+    ]
+  },
+  {
+    "codigo": "GEN2M-MAT-036",
+    "ancho": 240,
+    "alto": 180,
+    "elementos": [
+      { "op": "poly", "puntos": "25,150 55,150 55,120", "grosor": 1.2 },
+      { "op": "poly", "puntos": "95,150 185,150 185,60", "grosor": 1.2 },
+      { "op": "text", "x": 40, "y": 168, "texto": "3", "tam": 10, "anclaje": "medio" },
+      { "op": "text", "x": 140, "y": 168, "texto": "9", "tam": 10, "anclaje": "medio" },
+      { "op": "text", "x": 130, "y": 100, "texto": "razón 3", "tam": 9, "anclaje": "izquierda" }
+    ]
+  }
+]
