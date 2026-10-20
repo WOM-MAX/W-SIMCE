@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-106",
+    "titulo": "Los ojos que ven de noche",
+    "tipo": "informativo",
+    "palabras": 264,
+    "cuerpo": "Cuando cae la noche, muchos animales salen a buscar alimento. Para moverse sin luz necesitan cuerpos distintos de los nuestros, y los cambios más notorios están en los ojos.\n\nUn búho tiene los ojos grandes y fijos en la cara. No puede moverlos dentro de la órbita, así que gira la cabeza, y puede girarla mucho más que una persona. Esa cabeza móvil compensa unos ojos que no se mueven.\n\nLos gatos y muchos otros animales nocturnos tienen una capa detrás de la retina que devuelve la luz hacia el interior del ojo. Por eso brillan cuando les llega una linterna: la luz los atraviesa, choca en esa capa y vuelve a salir. Esa segunda oportunidad de usar la misma luz les permite ver con muy poca.\n\nLa pupila también ayuda. De día se cierra y de noche se abre mucho, para que entre la mayor cantidad de luz posible. En un gato, la pupila puede pasar de una línea delgada a un círculo casi tan grande como el ojo.\n\nHay animales que no dependen tanto de la vista. Los murciélagos emiten sonidos muy agudos y escuchan el eco que vuelve de los objetos. Con ese eco conocen la forma y la distancia de lo que tienen delante, aunque esté completamente oscuro."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-126",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cómo compensa el búho que sus ojos no se muevan?",
+      "alternativas": [
+        "Abriendo mucho la pupila durante el día.",
+        "Girando la cabeza, que puede mover mucho más que la de una persona.",
+        "Volando más despacio para mirar con calma.",
+        "Usando el eco de sus propios sonidos."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que el búho no puede mover los ojos dentro de la órbita, así que gira la cabeza y puede girarla mucho más que una persona."
+    },
+    {
+      "codigo": "4B-LEC-INF-127",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "explicación de un fenómeno",
+      "enunciado": "¿Por qué brillan los ojos de un gato cuando les llega una linterna?",
+      "alternativas": [
+        "Porque el ojo del gato produce su propia luz en la oscuridad.",
+        "Porque la luz choca en una capa detrás de la retina y vuelve a salir.",
+        "Porque la pupila del gato refleja el color de la linterna.",
+        "Porque el gato cierra los ojos cuando ve una luz fuerte."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que la luz atraviesa el ojo, choca en una capa detrás de la retina y vuelve a salir, y por eso se ve el brillo. El ojo no produce luz propia."
+    },
+    {
+      "codigo": "4B-LEC-INF-128",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Para qué le sirve a un animal nocturno la capa que devuelve la luz?",
+      "alternativas": [
+        "Para asustar a otros animales en la oscuridad.",
+        "Para aprovechar dos veces la misma luz y ver con muy poca.",
+        "Para cambiar el color de sus ojos según la estación.",
+        "Para proteger la retina del exceso de luz del día."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que esa segunda oportunidad de usar la misma luz les permite ver con muy poca. El brillo es una consecuencia, no la finalidad."
+    },
+    {
+      "codigo": "4B-LEC-INF-129",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "comparar",
+      "conocimiento": "comparación de estrategias",
+      "enunciado": "¿En qué se diferencia la estrategia del murciélago de la del búho?",
+      "alternativas": [
+        "El murciélago usa el eco de sonidos y el búho depende sobre todo de la vista.",
+        "El murciélago ve mejor que el búho en la oscuridad.",
+        "El búho emite sonidos y el murciélago gira la cabeza.",
+        "Los dos usan exactamente el mismo sistema."
+      ],
+      "clave": "A",
+      "justificacion": "El texto dedica los primeros párrafos a los recursos de la vista en el búho y cierra con los murciélagos, que emiten sonidos agudos y escuchan el eco para conocer forma y distancia."
+    },
+    {
+      "codigo": "4B-LEC-INF-130",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Un estudiante concluye que todos los animales nocturnos ven mejor que los diurnos. Según el texto, ¿qué le falta considerar?",
+      "alternativas": [
+        "Que los murciélagos no dependen de la vista, sino del oído.",
+        "Que los gatos también salen de día.",
+        "Que el búho no es un animal nocturno.",
+        "Que la pupila de los animales no cambia con la luz."
+      ],
+      "clave": "A",
+      "justificacion": "El texto muestra dos caminos distintos: ojos adaptados a poca luz, como el búho y el gato, y animales que se orientan por el eco, como el murciélago. Por eso no todos dependen de ver mejor."
+    }
+  ]
+}

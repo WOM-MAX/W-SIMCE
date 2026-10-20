@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-POE-102",
+    "titulo": "El gato de la ventana",
+    "tipo": "poético",
+    "palabras": 84,
+    "cuerpo": "El gato de la ventana\nno duerme cuando hay sol:\ncuenta las hojas secas\nque caen al corredor.\n\nMueve la cola despacio,\ncomo un reloj sin compás,\ny en sus ojos amarillos\nse ve la calle pasar.\n\nSi alguien golpea el vidrio,\nno se molesta en mirar:\ngira la cara muy lenta\ny se pone a bostezar.\n\nY cuando el sol se va,\nse estira, salta y se va,\ncomo si la casa entera\nle hubiera quedado atrás."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-POE-106",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "Según el poema, ¿qué hace el gato cuando alguien golpea el vidrio?",
+      "alternativas": [
+        "Salta y se esconde debajo de la cama.",
+        "Gira la cara muy lento y se pone a bostezar.",
+        "Maúlla hasta que la persona se va.",
+        "Cuenta las hojas secas del corredor."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que si alguien golpea el vidrio no se molesta en mirar, gira la cara muy lenta y se pone a bostezar."
+    },
+    {
+      "codigo": "4B-LEC-POE-107",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "lenguaje figurado",
+      "enunciado": "El poema dice que el gato mueve la cola «como un reloj sin compás». ¿Qué imagen quiere dar?",
+      "alternativas": [
+        "Que la cola se mueve muy rápido y sin parar.",
+        "Que la cola se mueve despacio y de forma constante, sin apuro.",
+        "Que el gato tiene un reloj en el cuello.",
+        "Que la cola hace ruido al moverse."
+      ],
+      "clave": "B",
+      "justificacion": "El verso anterior dice que mueve la cola despacio. La comparación con un reloj agrega la idea de un movimiento regular y sin apuro, no de velocidad ni de ruido."
+    },
+    {
+      "codigo": "4B-LEC-POE-108",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una estrofa",
+      "enunciado": "¿Qué se ve en los ojos amarillos del gato, según el poema?",
+      "alternativas": [
+        "El reflejo de la calle que pasa.",
+        "Las hojas secas que caen del árbol.",
+        "La cara de la persona que golpea el vidrio.",
+        "El sol que se va al final del día."
+      ],
+      "clave": "A",
+      "justificacion": "El poema dice: «en sus ojos amarillos se ve la calle pasar». Las hojas y el sol aparecen en otros versos, no en los ojos del gato."
+    },
+    {
+      "codigo": "4B-LEC-POE-109",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué idea transmite el poema sobre el gato?",
+      "alternativas": [
+        "Que es un animal nervioso y asustadizo.",
+        "Que es un animal tranquilo, que hace sus cosas sin apuro y sin dejarse molestar.",
+        "Que duerme todo el día y no se mueve nunca.",
+        "Que extraña la calle y quiere salir de la casa."
+      ],
+      "clave": "B",
+      "justificacion": "El gato mira sin apuro, mueve la cola despacio, no se molesta en mirar cuando golpean el vidrio y se va cuando el sol se va. Todo el poema lo muestra tranquilo y dueño de su tiempo."
+    },
+    {
+      "codigo": "4B-LEC-POE-110",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "efecto del lenguaje poético",
+      "enunciado": "El último verso dice que el gato se va «como si la casa entera le hubiera quedado atrás». ¿Qué efecto produce esa comparación?",
+      "alternativas": [
+        "Muestra que la casa es más grande que el gato.",
+        "Hace sentir que el gato vive la casa como un lugar pequeño frente a lo que va a hacer afuera.",
+        "Explica que el gato se perdió y no encuentra la puerta.",
+        "Indica que la casa cambió de lugar durante la noche."
+      ],
+      "clave": "B",
+      "justificacion": "La comparación no describe tamaños reales: transmite la actitud del gato, que deja la casa sin esfuerzo, como si todo lo de adentro quedara pequeño detrás de él."
+    }
+  ]
+}

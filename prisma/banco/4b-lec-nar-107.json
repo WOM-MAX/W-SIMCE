@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-107",
+    "titulo": "La plaza sin árboles",
+    "tipo": "narrativo",
+    "palabras": 288,
+    "cuerpo": "El lunes por la mañana, los vecinos de la calle Nueva encontraron la plaza distinta. Habían cortado los tres árboles de la vereda y en su lugar había arena y unas marcas de neumáticos.\n\n—Los sacaron para agrandar el estacionamiento —dijo don Hernán, que había visto la máquina el domingo.\n\nLos niños del barrio no entendieron. En esos árboles estaban los nidos de los chincoles y, en verano, la única sombra del sector.\n\nEsa tarde, Camila y su hermano juntaron a los chicos y contaron lo que habían visto: tres troncos cortados, ramas con nidos en el suelo, arena. Fueron casa por casa con una hoja y un lápiz, y anotaron quién quería que volvieran los árboles. Al final de la semana la lista tenía cuarenta y dos firmas.\n\nLlevaron la hoja a la junta de vecinos. La presidenta los escuchó de pie, con los brazos cruzados.\n\n—Los permisos están en regla —dijo—. Y los árboles no vuelven solos.\n\n—Está bien —contestó Camila—. Entonces preguntamos dónde se planta.\n\nLa presidenta los miró y por primera vez sonrió.\n\nEn septiembre llegaron seis árboles pequeños. No eran los mismos, y ninguno daba sombra todavía. Los niños los plantaron con la ayuda de don Hernán, que trajo una pala y un balde. Pusieron un cartel con una regla escrita a mano: «Estos árboles son de todos. No se pisan».\n\n—No es lo mismo —dijo el hermano de Camila, mirando los palitos nuevos.\n\n—No —dijo Camila—. Pero el año que viene hay nidos."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-131",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué encontraron los vecinos el lunes por la mañana?",
+      "alternativas": [
+        "Tres árboles nuevos plantados en la vereda.",
+        "Los árboles cortados, con arena y marcas de neumáticos en su lugar.",
+        "Un cartel con las reglas de la plaza.",
+        "La máquina que iba a plantar los árboles."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que habían cortado los tres árboles de la vereda y en su lugar había arena y marcas de neumáticos. Los árboles nuevos llegaron en septiembre."
+    },
+    {
+      "codigo": "4B-LEC-NAR-132",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Para qué juntaron Camila y su hermano cuarenta y dos firmas?",
+      "alternativas": [
+        "Para pedir que se hiciera más grande el estacionamiento.",
+        "Para mostrar que muchos vecinos querían que volvieran los árboles.",
+        "Para elegir a la nueva presidenta de la junta de vecinos.",
+        "Para conseguir dinero y comprar seis árboles."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que fueron casa por casa con una hoja y un lápiz y anotaron quién quería que volvieran los árboles, y que al final la lista tenía cuarenta y dos firmas."
+    },
+    {
+      "codigo": "4B-LEC-NAR-133",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivos de un personaje",
+      "enunciado": "¿Por qué la presidenta de la junta de vecinos sonríe cuando Camila pregunta dónde se planta?",
+      "alternativas": [
+        "Porque los niños aceptan que los árboles no vuelven y deciden pasar a la acción.",
+        "Porque cree que los niños van a dejar de molestar con el tema.",
+        "Porque se da cuenta de que los permisos estaban mal hechos.",
+        "Porque le parece graciosa la insistencia de los niños."
+      ],
+      "clave": "A",
+      "justificacion": "La presidenta repite que los permisos están en regla y que los árboles no vuelven solos. Camila no discute eso: pregunta dónde se planta, y esa salida concreta es la que cambia la actitud de la presidenta."
+    },
+    {
+      "codigo": "4B-LEC-NAR-134",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una frase",
+      "enunciado": "Al final Camila dice: «el año que viene hay nidos». ¿Qué quiere decir?",
+      "alternativas": [
+        "Que los chincoles volverán aunque no haya árboles.",
+        "Que los árboles nuevos crecerán y volverán a servir para anidar y dar sombra.",
+        "Que hay que comprar nidos para colgar en la plaza.",
+        "Que los nidos se guardaron para ponerlos en los árboles nuevos."
+      ],
+      "clave": "B",
+      "justificacion": "Los árboles nuevos son pequeños y todavía no dan sombra ni sostienen nidos. La frase mira hacia adelante: cuando crezcan, cumplirán otra vez la función de los que cortaron."
+    },
+    {
+      "codigo": "4B-LEC-NAR-135",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué acción de los niños resultó más decisiva para lograr algo?",
+      "alternativas": [
+        "Reclamar en la plaza el lunes por la mañana.",
+        "Reunir firmas y luego preguntar dónde se planta, en vez de solo protestar.",
+        "Esperar a que don Hernán plantara los árboles.",
+        "Contar a los vecinos cómo habían quedado los nidos en el suelo."
+      ],
+      "clave": "B",
+      "justificacion": "Las firmas mostraron el apoyo del barrio, y la pregunta sobre dónde plantar convirtió el reclamo en una acción que sí dependía de ellos. El texto cierra con los seis árboles plantados, no con la protesta."
+    }
+  ]
+}
