@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
+import { cerrarSiVencido } from '@/lib/rendicion';
 import { Marca } from '@/components/marca';
 
 export const dynamic = 'force-dynamic';
@@ -30,6 +31,15 @@ export default async function Alumno({
         orderBy: { abreEn: 'desc' },
       })
     : [];
+
+  // Un intento vencido se cierra al entrar, aunque el alumno no abra la prueba.
+  const abiertos = await prisma.intento.findMany({
+    where: { estudianteId: sesion.id, estado: 'EN_CURSO', fechaLimite: { lt: new Date() } },
+    select: { id: true },
+  });
+  for (const abierto of abiertos) {
+    await cerrarSiVencido(abierto.id);
+  }
 
   const intentos = await prisma.intento.findMany({
     where: { estudianteId: sesion.id },

@@ -7,6 +7,7 @@ export const dynamic = 'force-dynamic';
 const ERRORES: Record<string, string> = {
   datos: 'Faltan datos. Revisa los campos.',
   credenciales: 'Los datos no coinciden con ninguna cuenta.',
+  bloqueado: 'Demasiados intentos fallidos. Espera quince minutos y vuelve a probar.',
   colegio: 'Tu cuenta no está asociada a ningún colegio.',
   interno: 'No se pudo iniciar sesión. Inténtalo de nuevo.',
   configuracion: 'El servidor no tiene configurado el secreto de sesión. Avisa a quien administra el sistema.',

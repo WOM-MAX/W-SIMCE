@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { guardarSesion, verificarClave, type RolUsuario } from '@/lib/auth';
+import { demasiadosFallos, registrarEvento } from '@/lib/eventos';
 
 // Login por formulario nativo: funciona sin JavaScript y se puede probar con curl.
 // Redirige siempre: éxito a la página del rol, error a /login?error=<codigo>.
@@ -37,13 +38,36 @@ export async function POST(request: Request) {
       const pin = texto(form, 'pin');
       if (!codigo || !pin) return volver(request, '/login?error=datos');
 
+      // Con un PIN de cuatro digitos, el freno importa mas que la politica.
+      const identidad = `estudiante:${codigo}`;
+      if ((await demasiadosFallos(identidad)) >= 5) {
+        return volver(request, '/login?error=bloqueado');
+      }
+
       const candidatos = await prisma.estudiante.findMany({
         where: { codigoAcceso: codigo },
         include: { matriculas: { where: { estado: 'ACTIVA' }, select: { cursoId: true } } },
       });
 
       const estudiante = candidatos.find((c) => verificarClave(pin, c.pinHash));
-      if (!estudiante) return volver(request, '/login?error=credenciales');
+      if (!estudiante) {
+        await registrarEvento({
+          entidad: 'sesion',
+          entidadId: identidad,
+          accion: 'login_fallido',
+          payload: { tipo: 'estudiante' },
+        });
+        return volver(request, '/login?error=credenciales');
+      }
+
+      await registrarEvento({
+        colegioId: estudiante.colegioId,
+        actorId: estudiante.id,
+        entidad: 'sesion',
+        entidadId: identidad,
+        accion: 'login',
+        payload: { tipo: 'estudiante' },
+      });
 
       await guardarSesion({
         tipo: 'estudiante',
@@ -60,14 +84,34 @@ export async function POST(request: Request) {
     const clave = texto(form, 'clave');
     if (!email || !clave) return volver(request, '/login?error=datos');
 
+    const identidad = `usuario:${email}`;
+    if ((await demasiadosFallos(identidad)) >= 5) {
+      return volver(request, '/login?error=bloqueado');
+    }
+
     const usuario = await prisma.usuario.findUnique({
       where: { email },
       include: { membresias: true },
     });
 
     if (!usuario || !usuario.activo || !verificarClave(clave, usuario.hashPassword)) {
+      await registrarEvento({
+        entidad: 'sesion',
+        entidadId: identidad,
+        accion: 'login_fallido',
+        payload: { tipo: 'docente' },
+      });
       return volver(request, '/login?error=credenciales');
     }
+
+    await registrarEvento({
+      colegioId: usuario.membresias[0]?.colegioId ?? null,
+      actorId: usuario.id,
+      entidad: 'sesion',
+      entidadId: identidad,
+      accion: 'login',
+      payload: { tipo: 'docente' },
+    });
 
     const membresia = usuario.membresias[0];
     if (!membresia) return volver(request, '/login?error=colegio');

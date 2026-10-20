@@ -62,7 +62,13 @@ export default async function DetalleReporte({
               {informe.curso} · {informe.rendidos} rendidos · logro promedio {informe.promedioPct}%
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
+            <a
+              href={`/seguimiento/${informe.id}`}
+              className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+            >
+              Seguimiento
+            </a>
             <a
               href={`/api/reportes/csv?asignacion=${informe.id}`}
               className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"

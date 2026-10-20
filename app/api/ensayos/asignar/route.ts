@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { desdeHoraChile } from '@/lib/fechas';
 import { texto, volver } from '@/lib/http';
+import { registrarEvento } from '@/lib/eventos';
 
 export async function POST(request: Request) {
   const sesion = await sesionActual();
@@ -59,6 +60,15 @@ export async function POST(request: Request) {
       }),
       prisma.ensayo.update({ where: { id: ensayoId }, data: { estado: 'PUBLICADO' } }),
     ]);
+
+    await registrarEvento({
+      colegioId: sesion.colegioId,
+      actorId: sesion.id,
+      entidad: 'asignacion',
+      entidadId: ensayoId,
+      accion: 'creada',
+      payload: { cursoId, abreEn: abreEn.toISOString(), cierraEn: cierraEn.toISOString(), intentos },
+    });
 
     const params = new URLSearchParams({ ok: 'asignado', curso: curso.nombre });
     return volver(request, `/ensayos?${params.toString()}`);

@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { hashClave, sesionAdmin } from '@/lib/auth';
 import { siguienteCodigo } from '@/lib/estudiantes';
+import { registrarEvento } from '@/lib/eventos';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
@@ -37,6 +38,15 @@ export async function POST(request: Request) {
     });
 
     await prisma.matricula.create({ data: { estudianteId: estudiante.id, cursoId: curso.id } });
+
+    await registrarEvento({
+      colegioId: sesion.colegioId,
+      actorId: sesion.id,
+      entidad: 'estudiante',
+      entidadId: estudiante.id,
+      accion: 'creado',
+      payload: { cursoId: curso.id, codigoAcceso: estudiante.codigoAcceso },
+    });
 
     return volver(request, '/admin?ok=estudiante');
   } catch (error) {

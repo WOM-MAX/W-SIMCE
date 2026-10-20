@@ -25,6 +25,7 @@ const ERRORES: Record<string, string> = {
   archivo: 'No se pudo leer el archivo. Sube un .xlsx válido.',
   columnas: 'La planilla debe tener las columnas Nombres, Apellidos y Curso.',
   seleccion: 'No marcaste ningún estudiante.',
+  retencion: 'El mínimo de conservación es de 30 días.',
   interno: 'No se pudo completar la operación.',
 };
 
@@ -51,6 +52,8 @@ export default async function Admin({
     if (d) aviso = `${aviso} ${d}`;
   } else if (ok === 'borrados') {
     aviso = `Estudiantes borrados: ${n ?? '0'}.`;
+  } else if (ok === 'mantenimiento') {
+    aviso = `Registros de auditoría borrados: ${n ?? '0'}.`;
   } else if (ok) {
     aviso = MENSAJES[ok] ?? null;
   }
@@ -76,6 +79,10 @@ export default async function Admin({
       orderBy: { nombre: 'asc' },
     }),
   ]);
+
+  const eventos = await prisma.evento.count({
+    where: { OR: [{ colegioId: sesion.colegioId }, { colegioId: null }] },
+  });
 
   const configuracion =
     (await prisma.configuracionColegio.findUnique({
@@ -152,6 +159,30 @@ export default async function Admin({
                 Guardar
               </button>
             </div>
+          </form>
+        </section>
+
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Auditoría</h2>
+          <p className="mt-1 text-xs text-tenue">
+            {eventos} registros. Se guardan los inicios de sesión, la creación y el borrado de
+            estudiantes, las asignaciones de ensayos y los envíos de pruebas. La política del colegio
+            es conservarlos doce meses; el mínimo que permite el sistema son 30 días.
+          </p>
+          <form action="/api/admin/mantenimiento" method="post" className="mt-4 flex flex-wrap items-end gap-3">
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+              Borrar registros con más de
+              <input
+                name="dias"
+                type="number"
+                min="30"
+                defaultValue="365"
+                className="mt-1 w-24 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca"
+              />
+            </label>
+            <button className="rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
+              Purgar
+            </button>
           </form>
         </section>
 

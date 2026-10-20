@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma';
 import { cerrarSiVencido, estudianteActual } from '@/lib/rendicion';
 import { corregirIntento } from '@/lib/correccion';
 import { texto, volver } from '@/lib/http';
+import { registrarEvento } from '@/lib/eventos';
 
 export async function POST(request: Request) {
   const sesion = await estudianteActual();
@@ -61,6 +62,15 @@ export async function POST(request: Request) {
       });
 
       await corregirIntento(intentoId);
+
+      await registrarEvento({
+        colegioId: sesion.colegioId,
+        actorId: sesion.id,
+        entidad: 'intento',
+        entidadId: intentoId,
+        accion: 'enviado',
+        payload: { respondidas, total },
+      });
 
       return volver(request, `/rendir/${intentoId}/fin?respondidas=${respondidas}&total=${total}`);
     }

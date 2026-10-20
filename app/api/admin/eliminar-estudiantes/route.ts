@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { sesionAdmin } from '@/lib/auth';
 import { volver } from '@/lib/http';
+import { registrarEvento } from '@/lib/eventos';
 
 export async function POST(request: Request) {
   const sesion = await sesionAdmin();
@@ -19,6 +20,15 @@ export async function POST(request: Request) {
     const resultado = await prisma.estudiante.deleteMany({
       where: { id: { in: ids }, colegioId: sesion.colegioId },
     });
+    await registrarEvento({
+      colegioId: sesion.colegioId,
+      actorId: sesion.id,
+      entidad: 'estudiante',
+      entidadId: ids.join(','),
+      accion: 'borrados',
+      payload: { cantidad: resultado.count },
+    });
+
     return volver(request, `/admin?ok=borrados&n=${resultado.count}`);
   } catch (error) {
     console.error('borrar estudiantes', error);
