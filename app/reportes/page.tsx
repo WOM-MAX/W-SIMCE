@@ -76,12 +76,20 @@ export default async function Reportes({
             <p className="text-xs text-tenue">Resultados por curso, eje y habilidad</p>
           </div>
           {informe ? (
-            <a
-              href={`/api/reportes/csv?asignacion=${informe.id}`}
-              className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
-            >
-              Descargar CSV
-            </a>
+            <div className="flex gap-2">
+              <a
+                href={`/reportes/${informe.id}`}
+                className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+              >
+                Detalle por pregunta
+              </a>
+              <a
+                href={`/api/reportes/csv?asignacion=${informe.id}`}
+                className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+              >
+                Descargar CSV
+              </a>
+            </div>
           ) : null}
         </div>
 
@@ -179,7 +187,11 @@ export default async function Reportes({
                     {informe.estudiantes.map((e) => (
                       <tr key={e.intentoId} className="border-t border-borde">
                         <td className="px-5 py-2 font-mono text-xs text-tenue">{e.codigo}</td>
-                        <td className="px-3 py-2 text-slate-800">{e.nombre}</td>
+                        <td className="px-3 py-2 text-slate-800">
+                          <a href={`/estudiantes/${e.estudianteId}`} className="hover:text-marca hover:underline">
+                            {e.nombre}
+                          </a>
+                        </td>
                         <td className="tabular px-3 py-2 text-right text-slate-700">
                           {e.correctas} / {e.total}
                         </td>

@@ -3,6 +3,7 @@ import { corregirIntento } from '@/lib/correccion';
 
 export type FilaEstudiante = {
   intentoId: string;
+  estudianteId: string;
   codigo: string;
   nombre: string;
   correctas: number;
@@ -84,7 +85,7 @@ export async function informeDeAsignacion(
     prisma.intento.findMany({
       where: { asignacionId, estado: { in: ['ENVIADO', 'EXPIRADO'] } },
       include: {
-        estudiante: { select: { nombres: true, apellidos: true, codigoAcceso: true } },
+        estudiante: { select: { id: true, nombres: true, apellidos: true, codigoAcceso: true } },
         resultado: { include: { dimensiones: true } },
       },
       orderBy: { enviadoEn: 'asc' },
@@ -106,6 +107,7 @@ export async function informeDeAsignacion(
 
   const estudiantes: FilaEstudiante[] = conResultado.map((i) => ({
     intentoId: i.id,
+    estudianteId: i.estudiante.id,
     codigo: i.estudiante.codigoAcceso,
     nombre: `${i.estudiante.nombres} ${i.estudiante.apellidos}`,
     correctas: i.resultado?.correctas ?? 0,
@@ -153,5 +155,125 @@ export async function informeDeAsignacion(
     porEje: agrupar(dimensiones, 'EJE'),
     porHabilidad: agrupar(dimensiones, 'HABILIDAD'),
     porDificultad: agrupar(dimensiones, 'DIFICULTAD'),
+  };
+}
+
+// ---------------------------------------------------------------- por item ---
+
+export type FilaItem = {
+  orden: number;
+  clave: string;
+  respondidas: number;
+  correctas: number;
+  pct: number;
+  distribucion: Array<{ letra: string; cantidad: number }>;
+};
+
+export async function estadisticasPorItem(asignacionId: string): Promise<FilaItem[]> {
+  const filas = await prisma.intentoItem.findMany({
+    where: { intento: { asignacionId, estado: { in: ['ENVIADO', 'EXPIRADO'] } } },
+    select: {
+      orden: true,
+      itemVersion: { select: { clave: true } },
+      respuesta: { select: { letra: true } },
+    },
+  });
+
+  const mapa = new Map<number, { clave: string; total: number; correctas: number; letras: Map<string, number> }>();
+
+  for (const fila of filas) {
+    const actual =
+      mapa.get(fila.orden) ?? { clave: fila.itemVersion.clave, total: 0, correctas: 0, letras: new Map() };
+    actual.total += 1;
+    const letra = fila.respuesta?.letra ?? null;
+    if (letra) {
+      actual.letras.set(letra, (actual.letras.get(letra) ?? 0) + 1);
+      if (letra === fila.itemVersion.clave) actual.correctas += 1;
+    }
+    mapa.set(fila.orden, actual);
+  }
+
+  return [...mapa.entries()]
+    .map(([orden, valor]) => ({
+      orden,
+      clave: valor.clave,
+      respondidas: valor.total,
+      correctas: valor.correctas,
+      pct: valor.total ? redondear((valor.correctas / valor.total) * 100, 1) : 0,
+      distribucion: [...valor.letras.entries()]
+        .map(([letra, cantidad]) => ({ letra, cantidad }))
+        .sort((a, b) => a.letra.localeCompare(b.letra)),
+    }))
+    .sort((a, b) => a.orden - b.orden);
+}
+
+// ------------------------------------------------------------ historial -----
+
+export type IntentoHistorial = {
+  intentoId: string;
+  ensayo: string;
+  curso: string;
+  fecha: Date | null;
+  correctas: number;
+  total: number;
+  pct: number;
+  escala: number | null;
+  nivel: string | null;
+};
+
+export async function historialDeEstudiante(estudianteId: string, colegioId: string) {
+  const estudiante = await prisma.estudiante.findFirst({
+    where: { id: estudianteId, colegioId },
+    select: { id: true, nombres: true, apellidos: true, codigoAcceso: true },
+  });
+  if (!estudiante) return null;
+
+  const intentos = await prisma.intento.findMany({
+    where: {
+      estudianteId,
+      estado: { in: ['ENVIADO', 'EXPIRADO'] },
+      asignacion: { curso: { colegioId } },
+    },
+    include: {
+      asignacion: { include: { ensayo: { select: { titulo: true } }, curso: { select: { nombre: true } } } },
+      resultado: { include: { dimensiones: true } },
+    },
+    orderBy: { enviadoEn: 'desc' },
+  });
+
+  const historial: IntentoHistorial[] = intentos.map((i) => ({
+    intentoId: i.id,
+    ensayo: i.asignacion.ensayo.titulo,
+    curso: i.asignacion.curso.nombre,
+    fecha: i.enviadoEn,
+    correctas: i.resultado?.correctas ?? 0,
+    total: i.resultado?.total ?? 0,
+    pct: Number(i.resultado?.pctLogro ?? 0),
+    escala: i.resultado?.puntajeEscala ?? null,
+    nivel: i.resultado?.nivelLogro ?? null,
+  }));
+
+  const porEje = new Map<string, { correctas: number; total: number }>();
+  for (const i of intentos) {
+    for (const d of i.resultado?.dimensiones ?? []) {
+      if (d.dimension !== 'EJE') continue;
+      const actual = porEje.get(d.clave) ?? { correctas: 0, total: 0 };
+      actual.correctas += d.correctas;
+      actual.total += d.total;
+      porEje.set(d.clave, actual);
+    }
+  }
+
+  return {
+    estudiante,
+    historial,
+    porEje: [...porEje.entries()]
+      .map(([clave, valor]) => ({
+        clave,
+        correctas: valor.correctas,
+        total: valor.total,
+        pct: valor.total ? redondear((valor.correctas / valor.total) * 100, 1) : 0,
+      }))
+      .sort((a, b) => b.pct - a.pct),
   };
 }
