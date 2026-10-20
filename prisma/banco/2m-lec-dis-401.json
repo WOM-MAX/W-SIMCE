@@ -1,0 +1,83 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DIS-401",
+    "titulo": "Qué hacen los egresados",
+    "tipo": "informativo-discontinuo",
+    "palabras": 194,
+    "cuerpo": "SEGUIMIENTO A EGRESADOS\nTres generaciones de un liceo. Respuesta de 480 de 600 egresados.\n\nSITUACIÓN A LOS DOS AÑOS DE EGRESAR | 2018 | 2020 | 2022\nEstudiando en educación superior | 42% | 38% | 45%\nTrabajando y estudiando | 18% | 21% | 19%\nSolo trabajando | 24% | 27% | 22%\nBuscando trabajo | 9% | 10% | 8%\nSin estudio ni trabajo | 7% | 4% | 6%\n\nTIEMPO PROMEDIO HASTA EL PRIMER EMPLEO\n2018: 8 meses | 2020: 11 meses | 2022: 6 meses\n\nOBSERVACIONES\nLa generación 2020 egresó en el año de la suspensión de clases presenciales.\nEl 68% de quienes trabajan lo hacen en un rubro distinto al que estudiaron.\nSolo el 12% declara haber usado la oficina de orientación del liceo.\n\nLECTURA DE LOS DATOS\nLa generación 2020 muestra el tiempo más largo hasta el primer empleo y el mayor porcentaje de personas que solo trabajan.\nLa generación 2022 tiene más estudiantes en educación superior y menor tiempo hasta el primer empleo."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DIS-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "lectura de tabla",
+      "enunciado": "¿Qué generación tiene el mayor porcentaje de egresados estudiando en educación superior?",
+      "alternativas": ["2018", "2020", "2022", "Las tres son iguales"],
+      "clave": "C",
+      "justificacion": "La tabla muestra 42% en 2018, 38% en 2020 y 45% en 2022. El valor más alto corresponde a la generación 2022."
+    },
+    {
+      "codigo": "2M-LEC-DIS-402",
+      "bloom": "aplicacion",
+      "dificultad": "media",
+      "habilidad": "calcular",
+      "conocimiento": "uso de datos de una tabla",
+      "enunciado": "¿Cuántos egresados de la generación 2022 estaban solo trabajando, si respondieron 480 de 600?",
+      "alternativas": ["22", "106", "132", "480"],
+      "clave": "B",
+      "justificacion": "El porcentaje de 2022 que solo trabaja es 22%. Se aplica sobre los 480 que respondieron: 480 × 0,22 = 105,6, que se redondea a 106. El valor 132 resulta de aplicar el 22% sobre los 600 egresados totales."
+    },
+    {
+      "codigo": "2M-LEC-DIS-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "interpretación de una observación",
+      "enunciado": "¿Qué relación establece el aviso entre la generación 2020 y la suspensión de clases presenciales?",
+      "alternativas": [
+        "Ninguna: la observación solo informa un hecho sin relacionarlo con los datos.",
+        "Que esa generación egresó en el año de la suspensión y presenta el tiempo más largo hasta el primer empleo.",
+        "Que la suspensión de clases afectó solo a los que estudiaban.",
+        "Que la generación 2020 tuvo mejores resultados que las otras."
+      ],
+      "clave": "B",
+      "justificacion": "El aviso incluye la observación de que la generación 2020 egresó en el año de la suspensión y, en la lectura de los datos, señala que esa generación tiene el tiempo más largo hasta el primer empleo y el mayor porcentaje de quienes solo trabajan."
+    },
+    {
+      "codigo": "2M-LEC-DIS-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una relación causal",
+      "enunciado": "¿Es posible afirmar con estos datos que la suspensión de clases causó el retraso en el primer empleo de la generación 2020?",
+      "alternativas": [
+        "Sí, porque la coincidencia de fechas lo demuestra.",
+        "No de manera concluyente: los datos muestran una coincidencia, pero no aíslan otras causas posibles.",
+        "Sí, porque el 68% trabaja en un rubro distinto al que estudió.",
+        "No, porque la encuesta no incluyó a la generación 2020."
+      ],
+      "clave": "B",
+      "justificacion": "El aviso muestra una coincidencia entre el año de la suspensión y los peores indicadores de esa generación, pero no informa un análisis que descarte otras variables. El dato del 68% se refiere a otro asunto, y la generación 2020 sí está incluida en la encuesta."
+    },
+    {
+      "codigo": "2M-LEC-DIS-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de un dato institucional",
+      "enunciado": "El dato de que solo el 12% usó la oficina de orientación, ¿qué tipo de pregunta debería abrir en el liceo?",
+      "alternativas": [
+        "Si conviene cerrar la oficina por falta de interés.",
+        "Por qué un servicio disponible se usa tan poco, y si el problema es el servicio, la información o el horario.",
+        "Si los egresados mienten al responder la encuesta.",
+        "Si el seguimiento debe hacerse solo a quienes estudian."
+      ],
+      "clave": "B",
+      "justificacion": "El dato indica un uso bajo de un servicio existente, y por sí solo no explica la causa. La pregunta pertinente indaga si el servicio no responde a las necesidades, si no se difunde o si sus condiciones de acceso lo hacen poco usable."
+    }
+  ]
+}

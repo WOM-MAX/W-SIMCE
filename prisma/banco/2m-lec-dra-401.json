@@ -1,0 +1,92 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DRA-401",
+    "titulo": "La reunión del domingo",
+    "tipo": "dramático",
+    "palabras": 320,
+    "cuerpo": "(Living de una casa. Tres hermanos alrededor de una mesa con papeles. RODRIGO, el mayor, tiene una carpeta. CAROLINA toma notas. ÁLVARO está de pie junto a la ventana.)\n\nRODRIGO: El tema es la casa de la mamá. Ella no puede seguir sola.\n\nCAROLINA: Está de acuerdo. Lo dijo en marzo.\n\nÁLVARO: Y en marzo dijimos que íbamos a ver opciones. Estamos en agosto.\n\nRODRIGO: Traje tres presupuestos de residencias.\n\nCAROLINA: Yo pensé en que se venga a vivir conmigo.\n\nÁLVARO: (Se da vuelta.) ¿Y tu pieza de arriba?\n\nCAROLINA: Se puede arreglar.\n\nRODRIGO: ¿Con qué plata?\n\nCAROLINA: Con la mía. No estoy pidiendo.\n\nÁLVARO: El problema no es la plata. Es que tú trabajas hasta las ocho.\n\nCAROLINA: Y ustedes, ¿a qué hora salen?\n\n(Silencio.)\n\nRODRIGO: (Cierra la carpeta.) Justo. Ese es el punto.\n\nÁLVARO: Entonces no es quién la quiere más. Es quién va a estar.\n\nCAROLINA: (Deja el lápiz.) Y por eso yo no puedo ofrecer lo que no tengo. Puedo ofrecer la casa, no la tarde.\n\nRODRIGO: Yo puedo pagar la residencia, no puedo ir a verla entre semana.\n\nÁLVARO: (Se sienta por primera vez.) Yo puedo ir entre semana. No puedo pagar la residencia ni recibirla en mi departamento.\n\nCAROLINA: (Pausa.) Entonces hay tres cosas distintas. Plata, casa y tiempo.\n\nRODRIGO: Y ninguno tiene las tres.\n\nÁLVARO: (Mira a los dos.) ¿Y si las repartimos?\n\nCAROLINA: (Toma el lápiz otra vez.) Escribe. Empieza por lo que cada uno puede, no por lo que debería.\n\n(RODRIGO abre la carpeta. ÁLVARO se acerca a la mesa.)"
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DRA-401",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál es el motivo de la reunión de los tres hermanos?",
+      "alternativas": [
+        "Decidir quién hereda la casa de la madre.",
+        "Definir qué harán porque la madre no puede seguir viviendo sola.",
+        "Repartir los gastos del arriendo de Carolina.",
+        "Elegir a un nuevo médico para la madre."
+      ],
+      "clave": "B",
+      "justificacion": "Rodrigo abre la conversación con ese punto: el tema es la casa de la madre, que no puede seguir sola. Carolina confirma que la madre está de acuerdo."
+    },
+    {
+      "codigo": "2M-LEC-DRA-402",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una réplica",
+      "enunciado": "Álvaro dice: «no es quién la quiere más. Es quién va a estar». ¿Qué desplaza esa frase?",
+      "alternativas": [
+        "El eje del desacuerdo, desde el afecto hacia la disponibilidad real de cada uno.",
+        "El tema de la conversación hacia la herencia.",
+        "La decisión de llevar a la madre a una residencia.",
+        "La responsabilidad de Carolina como única hija mujer."
+      ],
+      "clave": "A",
+      "justificacion": "La frase aparece después de que Carolina les pregunta a qué hora salen del trabajo, y lleva la discusión de los sentimientos a la disponibilidad concreta. Esa intervención ordena el resto de la escena."
+    },
+    {
+      "codigo": "2M-LEC-DRA-403",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "reparto de recursos",
+      "enunciado": "¿Qué descubre Carolina al final de la conversación?",
+      "alternativas": [
+        "Que ella es la única que puede hacerse cargo.",
+        "Que los tres aportan cosas distintas: dinero, casa y tiempo, y ninguno tiene las tres.",
+        "Que la residencia es la única opción posible.",
+        "Que Álvaro no quiere participar en la decisión."
+      ],
+      "clave": "B",
+      "justificacion": "Carolina enuncia la conclusión: hay tres cosas distintas, plata, casa y tiempo, y Rodrigo confirma que ninguno tiene las tres. Esa constatación habilita la propuesta de repartir."
+    },
+    {
+      "codigo": "2M-LEC-DRA-404",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una propuesta",
+      "enunciado": "¿Qué caracteriza la propuesta metodológica que hace Carolina al final?",
+      "alternativas": [
+        "Distribuir las tareas según lo que cada uno puede aportar, en lugar de lo que se espera de él.",
+        "Asignar todo a quien tenga más disponibilidad económica.",
+        "Dejar la decisión en manos de la madre.",
+        "Postergar la decisión hasta el verano siguiente."
+      ],
+      "clave": "A",
+      "justificacion": "Carolina pide escribir «empieza por lo que cada uno puede, no por lo que debería». La escena muestra que cada hermano tiene un recurso distinto, y la propuesta ordena el acuerdo sobre esa base."
+    },
+    {
+      "codigo": "2M-LEC-DRA-405",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido de las acotaciones",
+      "enunciado": "¿Qué indican las acotaciones sobre Álvaro a lo largo de la escena?",
+      "alternativas": [
+        "Que se opone a cualquier acuerdo y por eso se queda de pie.",
+        "Que pasa de una posición distante a integrarse en la mesa, cuando los demás reconocen lo que él sí puede aportar.",
+        "Que está apurado y quiere terminar la reunión.",
+        "Que no tiene interés en el tema de la madre."
+      ],
+      "clave": "B",
+      "justificacion": "Álvaro está de pie junto a la ventana al comienzo, critica la propuesta de Carolina y finalmente se sienta por primera vez justo cuando dice lo que él puede hacer. Las acotaciones marcan ese desplazamiento."}
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-402",
+    "titulo": "Cómo se mide la desigualdad",
+    "tipo": "informativo",
+    "palabras": 356,
+    "cuerpo": "Para comparar la desigualdad de ingresos entre países se usan indicadores. Uno de los más citados es el coeficiente de Gini, que resume la distribución en un solo número entre 0 y 1. El valor 0 representa una igualdad perfecta, en la que todos reciben lo mismo, y el valor 1 representa la desigualdad máxima, en la que una sola persona recibe todo.\n\nEl atractivo del Gini es su simplicidad. Su límite es igual de evidente: dos países pueden tener el mismo coeficiente y distribuciones muy distintas. Un país donde la mayoría está en la mitad de la escala y otro con muchos muy pobres y unos pocos muy ricos pueden coincidir en el número, y las políticas necesarias no son las mismas.\n\nPor eso se usan indicadores complementarios. Uno habitual es la razón entre el ingreso del 10% más rico y el del 10% más pobre. Otro es la participación del trabajo en el ingreso total, que indica qué parte de la riqueza producida va a los salarios. Un tercero es la tasa de pobreza, que cuenta a quienes están por debajo de un umbral definido.\n\nHay una discusión importante sobre qué se mide. El ingreso monetario no considera el acceso a servicios. Dos familias con el mismo ingreso pueden tener calidades muy distintas de salud, educación y transporte, según el lugar donde viven y el sistema al que acceden. Por eso algunos países calculan un índice de pobreza multidimensional, que suma carencias en varias dimensiones a la vez en lugar de mirar solo el dinero.\n\nTambién importa la movilidad. Una sociedad puede tener una desigualdad alta y, al mismo tiempo, permitir que los hijos de familias pobres lleguen a posiciones altas. Otra puede tener la misma desigualdad y reproducirla generación tras generación. El coeficiente, por sí solo, no distingue esos dos casos.\n\nUn último punto: los indicadores son herramientas de comparación, no sentencias. Sirven para describir y para orientar decisiones, y siempre conviene mirar más de uno antes de concluir que un país está mejor o peor que otro."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-406",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué representa el valor 0 en el coeficiente de Gini?",
+      "alternativas": [
+        "La desigualdad máxima.",
+        "La igualdad perfecta, en la que todos reciben lo mismo.",
+        "La ausencia de ingresos en el país.",
+        "Un país sin datos disponibles."
+      ],
+      "clave": "B",
+      "justificacion": "El texto indica que el coeficiente va entre 0 y 1, donde 0 representa la igualdad perfecta y 1 la desigualdad máxima, en la que una sola persona recibe todo."
+    },
+    {
+      "codigo": "2M-LEC-INF-407",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "límite de un indicador",
+      "enunciado": "¿Cuál es el límite principal del Gini, según el texto?",
+      "alternativas": [
+        "Que no se puede calcular en todos los países.",
+        "Que dos países con el mismo coeficiente pueden tener distribuciones muy distintas.",
+        "Que solo mide el ingreso del 10% más rico.",
+        "Que cambia todos los años y no permite comparaciones."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que dos países pueden tener el mismo coeficiente y distribuciones muy distintas, y da el ejemplo de uno con la mayoría en la mitad de la escala frente a otro con muchos muy pobres y unos pocos muy ricos."
+    },
+    {
+      "codigo": "2M-LEC-INF-408",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "indicadores complementarios",
+      "enunciado": "¿Por qué se usan indicadores complementarios al Gini?",
+      "alternativas": [
+        "Porque el Gini se calcula mal en la mayoría de los países.",
+        "Porque cada indicador muestra un aspecto distinto que el coeficiente por sí solo no distingue.",
+        "Porque el Gini mide solo a los más pobres.",
+        "Porque los indicadores complementarios son más fáciles de calcular."
+      ],
+      "clave": "B",
+      "justificacion": "El texto presenta la razón entre el 10% más rico y el 10% más pobre, la participación del trabajo en el ingreso y la tasa de pobreza como complementos. Cada uno aporta información que el coeficiente resumido no entrega."
+    },
+    {
+      "codigo": "2M-LEC-INF-409",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "crítica al ingreso monetario",
+      "enunciado": "¿Qué objeción plantea el texto al uso exclusivo del ingreso monetario?",
+      "alternativas": [
+        "Que el dinero no se puede medir con precisión.",
+        "Que dos familias con el mismo ingreso pueden tener accesos muy distintos a salud, educación y transporte.",
+        "Que el ingreso monetario siempre es menor que el ingreso real.",
+        "Que las familias no informan sus ingresos con honestidad."
+      ],
+      "clave": "B",
+      "justificacion": "El texto señala que el ingreso monetario no considera el acceso a servicios, y que dos familias con el mismo ingreso pueden tener calidades muy distintas según el lugar donde viven y el sistema al que acceden. De ahí surge el índice multidimensional."
+    },
+    {
+      "codigo": "2M-LEC-INF-410",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conclusión",
+      "enunciado": "Alguien compara dos países, ve que tienen el mismo Gini y concluye que la situación social es equivalente. Según el texto, ¿qué le falta considerar?",
+      "alternativas": [
+        "Que el Gini solo se calcula en países desarrollados.",
+        "Que las distribuciones pueden ser distintas y que también importa la movilidad social.",
+        "Que el Gini de un país cambia cada mes.",
+        "Que el ingreso monetario es la única dimensión relevante."
+      ],
+      "clave": "B",
+      "justificacion": "El texto advierte dos cosas: el mismo coeficiente puede esconder distribuciones distintas, y una sociedad puede tener igual desigualdad y muy distinta movilidad. Además el cierre aclara que los indicadores describen y orientan, no sentencian."
+    }
+  ]
+}
