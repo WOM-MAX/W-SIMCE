@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-INF-101",
+    "titulo": "El pluviómetro del patio",
+    "tipo": "informativo",
+    "palabras": 302,
+    "cuerpo": "Cada mañana, antes de la primera clase, dos estudiantes del taller de ciencias revisan un tubo de plástico clavado en el patio. El tubo se llama pluviómetro y sirve para medir cuánta lluvia cayó.\n\nEl pluviómetro tiene una boca ancha que recoge el agua y un tubo delgado donde el agua se junta. La boca es más ancha que el tubo, así que una lluvia pequeña se ve como una columna alta. Gracias a eso se puede medir incluso una llovizna.\n\nPara leerlo se mira una regla graduada pegada al tubo. La altura del agua se mide en milímetros. Un milímetro de lluvia equivale a un litro de agua por cada metro cuadrado de terreno. Si el patio del colegio tiene cien metros cuadrados y llovió un milímetro, cayeron cien litros.\n\nDurante abril, el registro del taller fue este: el 3 de abril, 12 milímetros; el 9 de abril, 4 milímetros; el 18 de abril, 27 milímetros; y el 25 de abril, 2 milímetros. El resto de los días no hubo lluvia.\n\nLa profesora explicó por qué conviene vaciar el tubo después de cada medición. Si nadie lo vacía, el agua de dos días se junta y el registro del segundo día queda mal: parece que llovió más de lo que cayó.\n\nEn mayo el curso comparó sus datos con los de la estación meteorológica de la comuna. Los números no coincidían del todo. La profesora dijo que era normal: el colegio mide en un punto del patio, cerca de un muro que tapa parte del viento, y la estación mide en un campo abierto. Ninguno de los dos está equivocado; miden lugares distintos."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-INF-101",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Para qué sirve el pluviómetro que revisan los estudiantes?",
+      "alternativas": [
+        "Para medir cuánta lluvia cayó.",
+        "Para medir la fuerza del viento.",
+        "Para guardar agua para regar el patio.",
+        "Para saber la temperatura del aire."
+      ],
+      "clave": "A",
+      "justificacion": "El texto lo dice en la primera línea: el tubo se llama pluviómetro y sirve para medir cuánta lluvia cayó. El viento y la temperatura se mencionan como factores, pero no es lo que el aparato mide."
+    },
+    {
+      "codigo": "4B-LEC-INF-102",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario en contexto",
+      "enunciado": "El texto dice que gracias a la forma del pluviómetro se puede medir «incluso una llovizna». ¿Qué es una llovizna?",
+      "alternativas": [
+        "Una lluvia muy fuerte y con viento.",
+        "Una lluvia suave, de gotas finas y poca cantidad.",
+        "El agua que queda en el suelo después de llover.",
+        "La primera lluvia del año."
+      ],
+      "clave": "B",
+      "justificacion": "El texto opone la lluvia pequeña a la lluvia abundante. La llovizna es la lluvia suave, la que moja poco, y por eso el aparato necesita una boca ancha para que se note en el tubo."
+    },
+    {
+      "codigo": "4B-LEC-INF-103",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "relación causa y efecto",
+      "enunciado": "¿Por qué el pluviómetro tiene la boca más ancha que el tubo?",
+      "alternativas": [
+        "Para que el agua no se evapore con el sol.",
+        "Para que las lluvias pequeñas se vean como una columna alta y se puedan medir.",
+        "Para que quepa más agua y no haya que vaciarlo todos los días.",
+        "Para que el viento no lo mueva del patio."
+      ],
+      "clave": "B",
+      "justificacion": "El texto explica que la boca ancha y el tubo delgado hacen que una lluvia pequeña se vea como una columna alta, y por eso se puede medir incluso una llovizna. El motivo es hacer visible lo poco, no guardar más agua."
+    },
+    {
+      "codigo": "4B-LEC-INF-104",
+      "bloom": "aplicacion",
+      "dificultad": "dificil",
+      "habilidad": "aplicar información",
+      "conocimiento": "uso de datos del texto",
+      "enunciado": "Según los datos del texto, el 18 de abril llovió 27 milímetros. Si el patio del colegio tiene 100 metros cuadrados, ¿cuántos litros de agua cayeron ese día?",
+      "alternativas": [
+        "27 litros",
+        "127 litros",
+        "270 litros",
+        "2 700 litros"
+      ],
+      "clave": "D",
+      "justificacion": "El texto indica que un milímetro equivale a un litro por metro cuadrado. Entonces 27 milímetros son 27 litros por metro cuadrado. Como el patio tiene 100 metros cuadrados, cayeron 27 × 100 = 2 700 litros."
+    },
+    {
+      "codigo": "4B-LEC-INF-105",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "evaluación de la información",
+      "enunciado": "Los datos del colegio no coinciden con los de la estación meteorológica. ¿Cuál es la mejor explicación según el texto?",
+      "alternativas": [
+        "Los estudiantes midieron mal y hay que descartar sus datos.",
+        "La estación meteorológica es más confiable porque tiene más años de funcionamiento.",
+        "Cada uno mide en un lugar distinto, así que los números pueden diferir sin que ninguno esté equivocado.",
+        "Los datos del colegio son los correctos, porque el patio está dentro de la comuna."
+      ],
+      "clave": "C",
+      "justificacion": "La profesora explica que el colegio mide junto a un muro que tapa parte del viento y la estación mide en un campo abierto. Lugares distintos dan números distintos, y ninguno de los dos está equivocado. El texto no dice que uno sea mejor que el otro."
+    }
+  ]
+}

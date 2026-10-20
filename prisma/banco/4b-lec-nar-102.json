@@ -1,0 +1,93 @@
+{
+  "nivel": "4B",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-4B-LEC-NAR-102",
+    "titulo": "La colecta del curso",
+    "tipo": "narrativo",
+    "palabras": 318,
+    "cuerpo": "El cuarto básico juntaba dinero para el paseo de fin de año. La profesora había propuesto tres formas de reunirlo: vender queques los viernes, hacer una rifa o cobrar una entrada por la obra de teatro que el curso preparaba desde marzo.\n\nEl primer viernes vendieron cuarenta y dos queques. La caja de la colecta quedó pesada y todos celebraron. Al domingo siguiente, en la reunión de apoderados, una mamá levantó la mano.\n\n—Los que vendieron más queques fueron los niños que tienen a alguien que les compra la bandeja entera —dijo—. Mi hija vendió seis y los hizo sola. El curso de al lado vendió el doble porque su presidenta tiene una tía con un almacén.\n\nHubo silencio. Emilia, que era la tesorera, miró la lista de ventas. Era cierto: los tres primeros puestos habían vendido casi la mitad del total, y los tres tenían familiares con negocios.\n\nEsa tarde Emilia caminó hasta la casa de la profesora. Le mostró la lista y le contó lo que había dicho la apoderada.\n\n—No quiero que el paseo se pague con quién tiene más tíos con almacén —dijo.\n\nLa profesora no respondió de inmediato. Al día siguiente, en la clase, puso la lista en la pizarra y pidió al curso que pensara dos cosas: cómo se había repartido el trabajo y qué habría pasado si nadie hubiera tenido parientes con negocio.\n\nEl curso discutió durante toda la clase. Al final votaron cambiar el sistema: cada niño pondría lo mismo, y lo que faltara se juntaría con la obra de teatro, que dependía del trabajo de todos.\n\nLa caja quedó con menos dinero que antes. Nadie se quejó.\n\n—Igual el paseo se va a hacer —dijo Emilia al salir—. Pero ahora es nuestro de verdad."
+  },
+  "items": [
+    {
+      "codigo": "4B-LEC-NAR-106",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Cuál era el motivo de la colecta del curso?",
+      "alternativas": [
+        "Comprar materiales para la obra de teatro.",
+        "Pagar el paseo de fin de año.",
+        "Reponer la caja de la tesorería del colegio.",
+        "Regalar queques a los apoderados."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice al comienzo: el cuarto básico juntaba dinero para el paseo de fin de año. La obra de teatro aparece después como una forma de juntar el dinero que faltaba."
+    },
+    {
+      "codigo": "4B-LEC-NAR-107",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar lenguaje",
+      "conocimiento": "vocabulario en contexto",
+      "enunciado": "En el texto, Emilia era la tesorera del curso. ¿Qué hacía Emilia en ese cargo?",
+      "alternativas": [
+        "Preparaba la obra de teatro del curso.",
+        "Anotaba y cuidaba el dinero que el curso juntaba.",
+        "Repartía los queques entre los apoderados.",
+        "Decidía cuánto debía pagar cada estudiante."
+      ],
+      "clave": "B",
+      "justificacion": "El texto muestra a Emilia mirando la lista de ventas y llevándosela a la profesora, y la nombra como tesorera. La palabra se relaciona con tesoro, es decir, con guardar y llevar la cuenta del dinero."
+    },
+    {
+      "codigo": "4B-LEC-NAR-108",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "motivos de un personaje",
+      "enunciado": "¿Por qué la apoderada consideraba injusto el sistema de venta de queques?",
+      "alternativas": [
+        "Porque su hija había vendido muy pocos queques y se sentía triste.",
+        "Porque los que más vendían tenían familiares con negocios y eso no dependía del esfuerzo de cada niño.",
+        "Porque el curso de al lado siempre vendía el doble.",
+        "Porque la profesora había elegido mal a la tesorera."
+      ],
+      "clave": "B",
+      "justificacion": "La apoderada compara a su hija, que vendió seis sola, con quienes vendieron la bandeja entera por tener un familiar con almacén. Lo injusto no es vender poco, sino que el resultado dependa de la familia y no del trabajo del niño."
+    },
+    {
+      "codigo": "4B-LEC-NAR-109",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "interpretar propósito",
+      "conocimiento": "propósito de una acción",
+      "enunciado": "¿Para qué la profesora puso la lista en la pizarra y pidió pensar dos cosas al curso?",
+      "alternativas": [
+        "Para averiguar quién había vendido menos queques y anotarlo.",
+        "Para que el curso descubriera por sí mismo el problema y decidiera qué hacer.",
+        "Para que los apoderados se enteraran de las ventas de cada niño.",
+        "Para mostrar que el sistema de la profesora había funcionado bien."
+      ],
+      "clave": "B",
+      "justificacion": "La profesora no da la respuesta: pone los datos a la vista y hace dos preguntas para que el curso razone. Después de discutir, los estudiantes votan cambiar el sistema, así que la decisión fue del curso."
+    },
+    {
+      "codigo": "4B-LEC-NAR-110",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "Al final Emilia dice: «Igual el paseo se va a hacer, pero ahora es nuestro de verdad». ¿Qué quiere decir con «nuestro de verdad»?",
+      "alternativas": [
+        "Que ahora el paseo lo van a pagar los apoderados en vez de los niños.",
+        "Que el paseo se consiguió con el aporte parejo y el trabajo de todo el curso, no con las ventas de unos pocos.",
+        "Que el paseo será más caro que antes pero con más dinero en la caja.",
+        "Que la profesora decidirá finalmente a dónde irá el curso."
+      ],
+      "clave": "B",
+      "justificacion": "El curso cambió el sistema para que cada uno aportara lo mismo y lo que faltara saliera de la obra de teatro, que dependía del trabajo de todos. Por eso el paseo pasa a ser de todos, aunque la caja tenga menos dinero."
+    }
+  ]
+}
