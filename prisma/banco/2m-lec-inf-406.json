@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-INF-406",
+    "titulo": "Cómo se fabrica un antibiótico",
+    "tipo": "informativo",
+    "palabras": 352,
+    "cuerpo": "Un antibiótico es una sustancia que detiene el crecimiento de bacterias o las destruye, sin dañar de la misma forma a las células humanas. Esa selectividad es la clave del asunto y también su límite.\n\nEl primer paso para obtener uno es encontrar un compuesto activo. Durante décadas se buscó en el suelo: se cultivaban microorganismos y se probaba si las sustancias que producían impedían el crecimiento de bacterias. La penicilina se descubrió así, por un hongo que contaminó un cultivo y dejó una zona sin bacterias alrededor.\n\nCuando se identifica un compuesto activo, se investiga su mecanismo. Algunos antibióticos impiden que la bacteria construya su pared, otros interfieren en la fabricación de proteínas y otros bloquean la copia de su material genético. Conocer el mecanismo permite saber contra qué bacterias puede funcionar.\n\nDespués vienen las etapas de prueba. Primero se comprueba la seguridad y la dosis en estudios controlados; luego se evalúa si el efecto observado en laboratorio ocurre en pacientes. Este camino toma años y la mayoría de los compuestos que funcionan en un cultivo no llegan a ser medicamentos.\n\nEl límite más importante aparece con el uso. Las bacterias se reproducen muy rápido y acumulan cambios. Si un antibiótico se usa cuando no corresponde, por ejemplo en una infección causada por un virus, se eliminan las bacterias sensibles y sobreviven las que resisten. Esas bacterias se multiplican y transmiten su resistencia. El medicamento no pierde efecto por sí mismo: el uso inadecuado selecciona a las bacterias que no le hacen caso.\n\nPor eso los tratamientos deben completarse y las dosis las define un profesional. Interrumpir un tratamiento cuando uno ya se siente mejor deja vivas a las bacterias más resistentes, que son las que después vuelven."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-INF-426",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué es un antibiótico, según el texto?",
+      "alternativas": [
+        "Una sustancia que elimina virus y bacterias por igual.",
+        "Una sustancia que detiene el crecimiento de bacterias o las destruye, sin dañar de la misma forma a las células humanas.",
+        "Un refuerzo del sistema de defensa del cuerpo.",
+        "Un compuesto que impide todas las infecciones."
+      ],
+      "clave": "B",
+      "justificacion": "El texto define el antibiótico con esa precisión: detiene el crecimiento de bacterias o las destruye sin dañar de la misma forma a las células humanas, y señala que esa selectividad es su clave y su límite."
+    },
+    {
+      "codigo": "2M-LEC-INF-427",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de conocer el mecanismo",
+      "enunciado": "¿Para qué sirve conocer el mecanismo de acción de un antibiótico?",
+      "alternativas": [
+        "Para poder fabricarlo en mayor cantidad.",
+        "Para saber contra qué bacterias puede funcionar.",
+        "Para reducir los años de prueba en pacientes.",
+        "Para eliminar la necesidad de receta médica."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que conocer el mecanismo permite saber contra qué bacterias puede funcionar, y menciona tres mecanismos distintos: impedir la pared, interferir en las proteínas o bloquear la copia del material genético."
+    },
+    {
+      "codigo": "2M-LEC-INF-428",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "origen de la resistencia",
+      "enunciado": "¿Cómo se produce la resistencia a los antibióticos, según el texto?",
+      "alternativas": [
+        "Porque el medicamento pierde efecto con el tiempo por sí mismo.",
+        "Porque el uso inadecuado elimina bacterias sensibles y deja sobrevivir y multiplicarse a las que resisten.",
+        "Porque las bacterias dejan de reproducirse por efecto del medicamento.",
+        "Porque los antibióticos están fabricados con menos compuesto activo que antes."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice con claridad: el medicamento no pierde efecto por sí mismo, sino que el uso inadecuado selecciona a las bacterias que no le hacen caso, y esas se multiplican y transmiten su resistencia."
+    },
+    {
+      "codigo": "2M-LEC-INF-429",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "uso en infecciones virales",
+      "enunciado": "¿Por qué usar un antibiótico en una infección causada por un virus es un problema?",
+      "alternativas": [
+        "Porque el antibiótico no sirve para nada y no tiene efecto alguno.",
+        "Porque no actúa sobre el virus y, al eliminar bacterias sensibles, favorece a las resistentes.",
+        "Porque el virus se convierte en bacteria.",
+        "Porque el antibiótico aumenta la cantidad de virus."
+      ],
+      "clave": "B",
+      "justificacion": "El texto usa ese caso como ejemplo de uso inadecuado: el antibiótico no corresponde a una infección viral, pero su administración igual elimina bacterias sensibles y deja sobrevivir a las resistentes."
+    },
+    {
+      "codigo": "2M-LEC-INF-430",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una conducta",
+      "enunciado": "Una persona se siente mejor y suspende el antibiótico antes de terminar el tratamiento. Según el texto, ¿cuál es la objeción correcta?",
+      "alternativas": [
+        "Que el tratamiento debería haber sido más largo desde el inicio.",
+        "Que interrumpirlo deja vivas a las bacterias más resistentes, que son las que después vuelven.",
+        "Que suspenderlo no tiene consecuencias si ya no hay síntomas.",
+        "Que el medicamento deja de existir en el organismo."
+      ],
+      "clave": "B",
+      "justificacion": "El último párrafo señala que interrumpir un tratamiento cuando uno ya se siente mejor deja vivas a las bacterias más resistentes, y que son esas las que vuelven después. De ahí la recomendación de completar el tratamiento."
+    }
+  ]
+}

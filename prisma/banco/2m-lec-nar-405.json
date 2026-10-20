@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-NAR-405",
+    "titulo": "El regalo de la profesora",
+    "tipo": "narrativo",
+    "palabras": 336,
+    "cuerpo": "La profesora Bustamante se jubiló en diciembre, después de treinta y un años en la misma sala. El último día le regalaron un bolso y una tarjeta firmada por cuarenta estudiantes, la mayoría de cursos que ya habían egresado.\n\nEn la tarjeta alguien había escrito: «Gracias por la clase del poema». Nadie sabía quién lo había escrito ni a qué clase se refería.\n\nEn marzo, cuando guardaba cajas en su casa, la profesora Bustamante encontró un cuaderno de 1997. Era de cuando daba clases en el turno de la tarde, a un curso del que recordaba poco. En una página había anotado, con letra apurada: «Hoy no pude dar la clase. Hablé del poema de la lluvia cuarenta minutos y no alcancé el contenido. Revisar planificación».\n\nRecordó esa tarde. Había llegado sin voz, con un cuaderno de poemas en lugar del libro de texto, y en vez de suspender la clase leyó en voz baja durante cuarenta minutos. Después no recuperó el contenido: lo dio por perdido y siguió adelante, preocupada por la evaluación que venía.\n\nLa profesora Bustamante se quedó con el cuaderno en la mano un buen rato. Treinta y un años de planificaciones, de contenidos recuperados, de clases dictadas con fiebre. Y el agradecimiento que había llegado en una tarjeta, escrito por alguien que no se identificó, se refería justamente a la clase que ella había registrado como una falla.\n\nAl día siguiente llamó a la biblioteca del liceo y preguntó si podían recibir una donación de libros de poesía. Dijo que quería que quedaran en la sala de profesores, no en la estantería principal.\n\n—¿Con alguna dedicatoria? —preguntó la bibliotecaria.\n\n—Sí —contestó—. «Para cuando no alcance el contenido»."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-NAR-421",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué agradecía la frase anónima de la tarjeta?",
+      "alternativas": [
+        "El bolso que le regalaron a la profesora.",
+        "«La clase del poema», sin que nadie supiera quién lo escribió ni a qué clase se refería.",
+        "Los treinta y un años de trabajo en el liceo.",
+        "La donación de libros a la biblioteca."
+      ],
+      "clave": "B",
+      "justificacion": "El texto dice que en la tarjeta alguien escribió «Gracias por la clase del poema» y que nadie sabía quién lo había escrito ni a qué clase se refería."
+    },
+    {
+      "codigo": "2M-LEC-NAR-422",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de un registro",
+      "enunciado": "¿Qué había anotado la profesora en el cuaderno de 1997 sobre esa clase?",
+      "alternativas": [
+        "Que había sido su mejor clase.",
+        "Que no pudo dar el contenido y habló cuarenta minutos, con la nota «revisar planificación».",
+        "Que los estudiantes no habían traído el libro de texto.",
+        "Que había suspendido la clase por enfermedad."
+      ],
+      "clave": "B",
+      "justificacion": "El registro dice: «Hoy no pude dar la clase. Hablé del poema de la lluvia cuarenta minutos y no alcancé el contenido. Revisar planificación»."
+    },
+    {
+      "codigo": "2M-LEC-NAR-423",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "inferir",
+      "conocimiento": "contraste de valoraciones",
+      "enunciado": "¿Qué contraste descubre la profesora al leer su propio cuaderno?",
+      "alternativas": [
+        "Que su letra había cambiado mucho con los años.",
+        "Que la clase que ella registró como una falla es la que alguien agradeció años después.",
+        "Que en 1997 trabajaba menos horas que en sus últimos años.",
+        "Que el curso de 1997 había sido el mejor de su carrera."
+      ],
+      "clave": "B",
+      "justificacion": "El texto lo dice de forma explícita: el agradecimiento se refería justamente a la clase que ella había registrado como una falla. Lo demás que enumera son planificaciones y contenidos recuperados."
+    },
+    {
+      "codigo": "2M-LEC-NAR-424",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido de una decisión",
+      "enunciado": "¿Por qué quiere que los libros de poesía queden en la sala de profesores y no en la estantería principal?",
+      "alternativas": [
+        "Porque en la sala de profesores hay más espacio.",
+        "Porque quiere que estén disponibles para cuando un docente deba improvisar una clase, como le pasó a ella.",
+        "Porque la bibliotecaria le pidió ese lugar.",
+        "Porque los estudiantes no tienen acceso a la estantería principal."
+      ],
+      "clave": "B",
+      "justificacion": "La dedicatoria que elige, «para cuando no alcance el contenido», conecta la donación con su propia experiencia: disponer de poemas a mano para esas clases en que el plan no se cumple."
+    },
+    {
+      "codigo": "2M-LEC-NAR-425",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del texto",
+      "enunciado": "¿Qué idea sobre la enseñanza propone el cuento?",
+      "alternativas": [
+        "Que cumplir la planificación es lo único que los estudiantes valoran.",
+        "Que lo que un profesor considera una desviación puede ser lo que un estudiante más recuerda.",
+        "Que los regalos de despedida miden la calidad del trabajo docente.",
+        "Que treinta y un años en el mismo cargo impiden enseñar bien."
+      ],
+      "clave": "B",
+      "justificacion": "El relato opone el registro profesional, que califica la clase como falla por no alcanzar el contenido, con el recuerdo del estudiante, que agradece precisamente esa clase. El cuento destaca el segundo."
+    }
+  ]
+}

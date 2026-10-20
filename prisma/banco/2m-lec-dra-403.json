@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-DRA-403",
+    "titulo": "La asamblea del club",
+    "tipo": "dramático",
+    "palabras": 322,
+    "cuerpo": "(Sede del club deportivo. Doce socios en sillas plásticas. Al frente, una mesa con una urna de cartón. NORMA, la presidenta, tiene una lista. HÉCTOR, tesorero, sostiene una carpeta. Al fondo, de pie, MARCELA, la más joven del club.)\n\nNORMA: El punto tres es el aumento de la cuota. La propuesta es de cinco mil pesos.\n\nHÉCTOR: Con eso cubrimos el arriendo y la luz. Sin aumento, en marzo no abrimos.\n\nSOCIO 1: ¿Y los que no pueden pagar?\n\nHÉCTOR: La propuesta incluye una lista de exenciones. Hay que aprobarla.\n\nMARCELA: (Desde el fondo.) ¿Cuántas exenciones?\n\nHÉCTOR: Hasta diez.\n\nMARCELA: Somos cuarenta y dos socios. ¿Y si son doce?\n\nHÉCTOR: Entonces el cálculo no cierra.\n\nSOCIO 2: Siempre se puede hacer una rifa.\n\nNORMA: Las rifas se hicieron dos años y alcanzaron para la pintura.\n\nMARCELA: (Se acerca.) Presidenta, ¿puedo proponer algo?\n\nNORMA: Tiene la palabra.\n\nMARCELA: Antes de votar el aumento, propongo saber cuántos socios están en condiciones de pagarlo. Hoy estamos decidiendo con un número que no tenemos.\n\nHÉCTOR: Eso tomaría dos semanas.\n\nMARCELA: Y decidir mal toma un año.\n\n(Silencio. Algunos socios asienten.)\n\nNORMA: (Mira la lista.) La propuesta de Marcela requiere levantar la votación de hoy.\n\nSOCIO 1: Yo voto a favor de levantar.\n\nSOCIO 2: Yo también.\n\nNORMA: (Cuenta las manos.) Se levanta la votación. Héctor, prepara la encuesta.\n\nHÉCTOR: (Anota.) Dos semanas.\n\nMARCELA: (Vuelve a su lugar.) Gracias.\n\nNORMA: (Cierra la carpeta.) La próxima asamblea se decide con datos."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-DRA-411",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué se estaba votando en el punto tres de la asamblea?",
+      "alternativas": [
+        "La reelección de la presidenta.",
+        "Un aumento de la cuota de cinco mil pesos.",
+        "La compra de sillas nuevas para la sede.",
+        "La realización de una rifa."
+      ],
+      "clave": "B",
+      "justificacion": "Norma presenta el punto tres como el aumento de la cuota, y Héctor precisa que la propuesta es de cinco mil pesos para cubrir el arriendo y la luz."
+    },
+    {
+      "codigo": "2M-LEC-DRA-412",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "función de una pregunta",
+      "enunciado": "¿Qué problema detecta Marcela con la propuesta de exenciones?",
+      "alternativas": [
+        "Que las exenciones son demasiadas para el presupuesto.",
+        "Que el cálculo supone hasta diez exenciones, pero no se sabe cuántos socios realmente las necesitan.",
+        "Que las exenciones deberían aprobarse antes del aumento.",
+        "Que nadie ha solicitado exenciones en el club."
+      ],
+      "clave": "B",
+      "justificacion": "Marcela pregunta cuántas exenciones hay y, al saber que hasta diez sobre cuarenta y dos socios, plantea qué pasa si son doce. Su punto es que se decide con un número que no se conoce."
+    },
+    {
+      "codigo": "2M-LEC-DRA-413",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "argumentar",
+      "conocimiento": "evaluación de una objeción",
+      "enunciado": "Héctor objeta que la encuesta tomaría dos semanas. ¿Cómo responde Marcela?",
+      "alternativas": [
+        "Dice que la encuesta puede hacerse en un día.",
+        "Responde que decidir mal toma un año.",
+        "Propone que la encuesta la haga ella sola.",
+        "Acepta la objeción y retira su propuesta."
+      ],
+      "clave": "B",
+      "justificacion": "La respuesta de Marcela compara los dos plazos: dos semanas de encuesta frente a un año de una decisión equivocada. No niega el costo de tiempo, lo pone en relación con la consecuencia."
+    },
+    {
+      "codigo": "2M-LEC-DRA-414",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "procedimiento de una asamblea",
+      "enunciado": "¿Qué debe ocurrir para que la propuesta de Marcela se aplique, según la escena?",
+      "alternativas": [
+        "Que la presidenta la apruebe por su cuenta.",
+        "Que la asamblea vote levantar la votación del aumento, y se apruebe hacer la encuesta.",
+        "Que el tesorero esté de acuerdo con el plazo.",
+        "Que la propuesta se incluya en la próxima asamblea sin votar."
+      ],
+      "clave": "B",
+      "justificacion": "Norma advierte que la propuesta requiere levantar la votación de hoy, y la escena muestra a los socios votando a favor con la mano alzada. Solo después Norma encarga la encuesta."
+    },
+    {
+      "codigo": "2M-LEC-DRA-415",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido de la escena",
+      "enunciado": "¿Qué muestra la escena sobre la toma de decisiones en una organización?",
+      "alternativas": [
+        "Que la opinión del tesorero debe prevalecer por su cargo.",
+        "Que una decisión con consecuencias duraderas conviene tomarla con información, aunque eso postergue la votación.",
+        "Que las asambleas son innecesarias cuando hay una directiva.",
+        "Que los socios más jóvenes no deberían intervenir."
+      ],
+      "clave": "B",
+      "justificacion": "La escena acepta la propuesta de Marcela y cierra con la frase de la presidenta: la próxima asamblea se decide con datos. La objeción sobre el plazo no se descarta, se pondera frente al costo de decidir mal."
+    }
+  ]
+}

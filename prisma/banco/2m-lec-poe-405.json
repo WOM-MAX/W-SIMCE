@@ -1,0 +1,93 @@
+{
+  "nivel": "2M",
+  "asignatura": "lectura",
+  "texto": {
+    "codigo": "TXT-2M-LEC-POE-405",
+    "titulo": "Los nombres del cerro",
+    "tipo": "poético",
+    "palabras": 124,
+    "cuerpo": "El cerro tiene muchos nombres\nsegún quién lo nombre:\npara el mapa es una altura,\npara el pastor es el agua,\npara mi abuela es el lugar\ndonde se perdió su hermano.\n\nLos del pueblo le pusieron\nel nombre que está en el plano.\nLos antiguos le decían\nde otra forma, y esa forma\nno aparece en ninguna parte\nsino en la boca de los viejos.\n\nYo subí una vez de niño\ny no encontré ningún nombre.\nEncontré piedras, un sendero,\ny el viento haciendo su ruido\ncomo si todo el cerro\nestuviera diciendo algo\nque no se puede escribir."
+  },
+  "items": [
+    {
+      "codigo": "2M-LEC-POE-421",
+      "bloom": "comprension",
+      "dificultad": "facil",
+      "habilidad": "extraer información",
+      "conocimiento": "información explícita",
+      "enunciado": "¿Qué significan los distintos nombres del cerro, según las tres primeras comparaciones?",
+      "alternativas": [
+        "Para el mapa es una altura; para el pastor, el agua; para la abuela, el lugar donde se perdió su hermano.",
+        "Para el mapa es agua; para el pastor, una altura; para la abuela, un recuerdo.",
+        "Todos los nombres designan lo mismo sin diferencias.",
+        "El cerro no tiene nombre para la abuela."
+      ],
+      "clave": "A",
+      "justificacion": "El poema asigna esos tres significados en la primera estrofa, uno por cada quien nombra el cerro: el mapa, el pastor y la abuela."
+    },
+    {
+      "codigo": "2M-LEC-POE-422",
+      "bloom": "comprension",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de un contraste",
+      "enunciado": "¿Qué diferencia establece el poema entre el nombre del plano y el de los antiguos?",
+      "alternativas": [
+        "Que el del plano es más largo.",
+        "Que el del plano está escrito, mientras el de los antiguos solo sobrevive en la boca de los viejos.",
+        "Que el de los antiguos se perdió por completo.",
+        "Que los dos aparecen en los mapas actuales."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice que la forma antigua no aparece en ninguna parte sino en la boca de los viejos, y lo contrapone al nombre que está en el plano."
+    },
+    {
+      "codigo": "2M-LEC-POE-423",
+      "bloom": "analisis",
+      "dificultad": "media",
+      "habilidad": "interpretar",
+      "conocimiento": "sentido de una experiencia",
+      "enunciado": "¿Qué encuentra el hablante cuando sube el cerro de niño?",
+      "alternativas": [
+        "Una placa con los nombres escritos.",
+        "Piedras, un sendero y el ruido del viento, pero ningún nombre.",
+        "El lugar donde se perdió el hermano de su abuela.",
+        "Un pastor que le enseña el nombre antiguo."
+      ],
+      "clave": "B",
+      "justificacion": "El poema dice expresamente que subió una vez de niño y no encontró ningún nombre, y enumera lo que sí encontró: piedras, un sendero y el ruido del viento."
+    },
+    {
+      "codigo": "2M-LEC-POE-424",
+      "bloom": "analisis",
+      "dificultad": "dificil",
+      "habilidad": "inferir",
+      "conocimiento": "sentido del cierre",
+      "enunciado": "El poema termina con el ruido del viento, «como si todo el cerro estuviera diciendo algo que no se puede escribir». ¿Qué sugiere esa imagen?",
+      "alternativas": [
+        "Que el cerro carece de significado para el hablante.",
+        "Que existe una experiencia del lugar que no se reduce a los nombres ni al registro escrito.",
+        "Que el viento impide escuchar a las personas.",
+        "Que los mapas deberían incluir sonidos."
+      ],
+      "clave": "B",
+      "justificacion": "El cierre aparece después de que el hablante no encuentra ningún nombre en el cerro. La imagen del viento sugiere un sentido que no cuaja en las palabras ni en el plano, y no una falta de significado."
+    },
+    {
+      "codigo": "2M-LEC-POE-425",
+      "bloom": "evaluacion",
+      "dificultad": "dificil",
+      "habilidad": "reflexionar",
+      "conocimiento": "sentido global del poema",
+      "enunciado": "¿Qué idea sobre los nombres construye el poema?",
+      "alternativas": [
+        "Que un lugar debe tener un solo nombre correcto.",
+        "Que el nombre de un lugar depende de quién lo nombra y de la relación que tiene con él.",
+        "Que los mapas conservan mejor la memoria que las personas.",
+        "Que los nombres antiguos son más precisos que los actuales."
+      ],
+      "clave": "B",
+      "justificacion": "El poema muestra tres nombres para el mismo cerro según quien lo nombre, y agrega que el nombre antiguo solo sobrevive en la boca de los viejos. No jerarquiza uno sobre otro, y el cierre sugiere que hay algo que ningún nombre captura."
+    }
+  ]
+}
