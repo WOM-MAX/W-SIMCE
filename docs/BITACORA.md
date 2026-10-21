@@ -2,10 +2,12 @@
 
 **Qué es:** plataforma de gestión, rendición y analítica de evaluaciones estandarizadas
 para colegios de Chile (SIMCE). Nombre comercial: **W-SIMCE**.
-**Última actualización:** 19 de octubre de 2026.
+**Última actualización:** 21 de octubre de 2026.
 **Estado:** Fase 0 desplegada en producción. Acceso, administración, generación de
 ensayos, rendición, corrección y reportes funcionando. Pendiente asignar los
 ensayos a un curso (ver sección 14).
+**Equipo del colegio:** puesto al día a `1e8ee69` el 21 de octubre de 2026
+(ver sección 18).
 
 > Este archivo existe dos veces con el mismo contenido:
 > `C:\Proyectos\W-SIMCE\docs\BITACORA.md` (versionado, viaja con el código) y
@@ -655,3 +657,63 @@ Es decir: un curso con 180 ítems aprobados alcanza para seis ensayos de 30
 preguntas sin repetir ninguna. Lectura tiene 120 por nivel, así que alcanza para
 cuatro. Los 60 ítems que faltan por nivel de lectura son exactamente lo que
 convierte cuatro ensayos en seis.
+
+---
+
+## 18. Puesta al día del equipo del colegio (21 de octubre de 2026)
+
+El 20 de octubre se trabajó en el equipo de casa; el 21 se retomó en el equipo del
+colegio, que seguía en `84fc4b9` (la versión del 19). Se actualizó a `1e8ee69`:
+117 commits y 202 archivos, con los módulos de acceso, administración, ensayos,
+rendición, corrección, reportes y el banco ampliado.
+
+| Paso | Comando | Resultado |
+| --- | --- | --- |
+| Código | `git pull --ff-only origin main` | `84fc4b9` → `1e8ee69`, sin conflictos |
+| Dependencias | `pnpm install` | `exceljs` 4.4.0 y `@resvg/resvg-js` 2.6.2 (178 paquetes) |
+| Cliente Prisma | `prisma generate` | 6.19.3, sin errores |
+| Migración | `prisma migrate status` | `ConfiguracionColegio` ya aplicada; no se tocó la base |
+| Secreto de sesión | — | `SESSION_SECRET` generado (64 caracteres) |
+| Tipos | `tsc --noEmit --incremental false` | sin errores |
+
+**Estado verificado el 21 de octubre** (reemplaza los conteos de la sección 2):
+
+| Comprobación | Resultado |
+| --- | --- |
+| `/api/health` | 200, latencia 246 ms: 1 colegio, 1 curso, 20 estudiantes, **1.926 ítems**, 19 ensayos |
+| Login administrador | `admin@acropolis.cl` → `/`, panel con datos reales |
+| Login docente | `docente@acropolis.cl` → `/` |
+| Login estudiante | `W4B-01` + PIN `1234` → `/alumno` |
+| Clave incorrecta | `/login?error=credenciales`, sin sesión |
+| Páginas con sesión | `/`, `/admin`, `/banco`, `/ensayos`, `/ensayos/nuevo`, `/reportes`, `/correccion`: 200 sin errores |
+
+**Trampas nuevas de esta puesta al día:**
+
+- El `.env` que llegó del otro equipo trae `channel_binding=require` en las dos
+  cadenas. Prisma 6.19 conecta igual, pero si el pooler falla es lo primero que
+  hay que quitar (es la trampa de la sección 11).
+- El `.env` del equipo del colegio tenía credenciales del 19 de octubre que Neon
+  ya rechazaba (`P1000`). Se reemplazó por las del otro equipo; las cadenas no
+  entran al repositorio.
+- Faltaba `SESSION_SECRET`: la aplicación arranca, pero el login redirige a
+  `/login?error=configuracion`. Se generó uno de 64 caracteres.
+- `tsc --noEmit` a secas falla con `EPERM` si queda un `tsconfig.tsbuildinfo` de
+  otra sesión; con `--incremental false` no escribe ese archivo.
+- En este equipo el clon vive en `C:\Proyectos\W-SIMCE`; la nota de rutas de la
+  sección 14 corresponde al equipo de casa.
+
+**Comandos de la puesta al día:**
+
+```
+git pull --ff-only origin main
+pnpm install
+node node_modules/prisma/build/index.js generate
+node node_modules/prisma/build/index.js migrate status
+node node_modules/typescript/bin/tsc --noEmit --incremental false
+pnpm dev
+```
+
+**Sincronización de esta bitácora:** la copia de OneDrive seguía en la versión del
+19 de octubre (13.470 bytes, secciones 1 a 13). Al copiar este archivo quedó con
+las secciones 14 a 18 incluidas.
+
