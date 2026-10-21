@@ -870,5 +870,41 @@ importador de `/admin` para que arme el código con la sección (`W4A`, `W2MA`).
 `habilidad=localizar` → 238; `estado=BORRADOR` → 6; `q=valor de x` → 15;
 `q=probabilidad` → 42. Todos coinciden con los conteos directos en la base.
 
+---
+
+## 22. La portada, reescrita desde el dolor real (21 de octubre de 2026)
+
+La primera portada hablaba de la app («seis piezas»), que es lo que interesa a quien
+la construyó, no a quien la usa. Al preguntar a coordinación académica, el problema
+no resultó ser corregir: es que **el material es escaso, viene en formatos distintos,
+hay que adaptarlo y no siempre trae clave o figura**. Ese es el dolor de cabeza, y
+la portada ahora lo nombra.
+
+**Cambios de forma:**
+
+- Hero en azul marino con retícula tenue, titular grande y un sello blanco con el
+  emblema; alrededor, la órbita del colegio dibujada en SVG que gira una vuelta por
+  minuto. Es el único movimiento de la página y respeta `prefers-reduced-motion`.
+- Se quitó el menú del encabezado: tres enlaces a secciones de la misma página eran
+  ruido. Quedan la marca y el botón «Ingresar».
+- Sección nueva **«El problema»**, con la frase de coordinación entre comillas y los
+  tres dolores: está repartido, no viene listo, la calidad es despareja.
+- Franja de cifras medidas: **1.926 · 240 · 114 · 0** (preguntas, por curso,
+  objetivos con material, objetivos sin preguntas).
+- Los seis bloques ahora llevan icono y están ordenados por lo que importa al
+  colegio: banco, ensayos, imprimible, rendición, corrección, reportes.
+- Banda oscura para «Cómo funciona», y pie en azul oscuro. Tres tonos en total.
+
+**Lo que se dice y lo que no.** La portada no promete material ilimitado. Cada curso
+tiene 240 ítems: ocho ensayos de 30 sin repetir. En los 114 objetivos con material, el
+mínimo es 3 ítems y la mediana 9; no hay objetivos vacíos. La escasez real aparece al
+nivel de eje (Patrones y álgebra tiene 35 en 4° básico) y Lectura tiene un solo eje,
+así que su granularidad está en el texto, no en el eje. Decirlo así es defendible si
+alguien lo comprueba contra el banco.
+
+**Verificación:** `tsc --noEmit` sin errores; portada 200; capturas renderizadas en
+1440 y 500 px; sin cambios en base de datos ni en rutas.
+
+
 
 

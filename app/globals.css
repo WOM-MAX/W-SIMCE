@@ -26,6 +26,44 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* Órbita del emblema en la portada: un giro muy lento, casi imperceptible. */
+@keyframes orbita {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbita {
+  animation: orbita 60s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.aparecer {
+  animation: aparecer 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbita,
+  .aparecer {
+    animation: none;
+  }
+}
+
+
 @media print {
   @page {
     size: A4;
