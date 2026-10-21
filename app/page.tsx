@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ProgresoLectura } from '@/components/progreso-lectura';
 
 export const metadata: Metadata = {
   title: 'W-SIMCE · Todo para evaluar, en un solo lugar · Colegio Acrópolis',
@@ -144,7 +145,7 @@ function Icono({ d, className = 'h-6 w-6' }: { d: string; className?: string }) 
 /** El emblema como sello, con la órbita del colegio girando muy lento. */
 function Sello() {
   return (
-    <div className="relative mx-auto flex h-[21rem] w-[21rem] items-center justify-center sm:h-[26rem] sm:w-[26rem]">
+    <div className="relative mx-auto flex aspect-square w-[min(21rem,78vw)] items-center justify-center sm:w-[26rem]">
       <div aria-hidden="true" className="absolute h-64 w-64 rounded-full bg-acento/25 blur-[80px]" />
 
       <svg viewBox="0 0 400 400" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
@@ -163,7 +164,7 @@ function Sello() {
         <circle cx="30" cy="244" r="6" fill="#f84828" />
         <circle cx="322" cy="296" r="5" fill="#ffffff" fillOpacity="0.4" />
       </svg>
-      <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full" aria-hidden="true">
+      <svg viewBox="0 0 400 400" className="orbita-inversa absolute inset-0 h-full w-full" aria-hidden="true">
         <ellipse
           cx="200"
           cy="200"
@@ -177,8 +178,10 @@ function Sello() {
         />
       </svg>
 
-      <div className="relative grid h-44 w-44 place-items-center rounded-full bg-white shadow-[0_28px_70px_rgba(0,0,0,0.4)] sm:h-56 sm:w-56">
-        <Emblema className="h-36 w-36 sm:h-44 sm:w-44" />
+      {/* El emblema llena el disco: así el blanco del archivo es el propio escudo y no
+          una banda añadida. Se conserva el escudo completo, con canto de 6 px y aro. */}
+      <div className="relative h-44 w-44 overflow-hidden rounded-full bg-white shadow-[0_0_0_6px_var(--color-marca),0_0_0_7px_rgba(255,255,255,0.22),0_24px_60px_rgba(0,0,0,0.45)] sm:h-56 sm:w-56">
+        <Emblema className="h-full w-full rounded-full object-cover" />
       </div>
     </div>
   );
@@ -187,6 +190,7 @@ function Sello() {
 export default function Portada() {
   return (
     <div className="min-h-dvh bg-white">
+      <ProgresoLectura />
       <header className="sticky top-0 z-40 border-b border-white/10 bg-marca/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3" aria-label="W-SIMCE, inicio">
@@ -198,7 +202,7 @@ export default function Portada() {
           </a>
           <a
             href="/login"
-            className="rounded-full bg-acento px-5 py-2 text-sm font-medium text-white transition hover:bg-acento-oscuro"
+            className="rounded-full bg-acento-boton px-5 py-2 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
           >
             Ingresar
           </a>
@@ -218,25 +222,37 @@ export default function Portada() {
             }}
           />
           <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-24">
-            <div className="aparecer">
-              <p className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.24em] text-white/50">
+            <div>
+              <p
+                className="entra flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.24em] text-white/50"
+                style={{ animationDelay: '0ms' }}
+              >
                 <span className="h-px w-8 bg-acento" aria-hidden="true" />
                 Colegio Acrópolis
               </p>
 
-              <h1 className="mt-7 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+              <h1
+                className="entra mt-7 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]"
+                style={{ animationDelay: '90ms' }}
+              >
                 Todo lo que necesitas para evaluar, en un solo lugar.
               </h1>
 
-              <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
+              <p
+                className="entra mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg"
+                style={{ animationDelay: '180ms' }}
+              >
                 Preguntas con su objetivo y su clave, ensayos que se arman solos, corrección
                 automática y reportes para la reunión. Sin carpetas, sin formatos, sin planillas.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <div
+                className="entra mt-9 flex flex-wrap items-center gap-x-6 gap-y-3"
+                style={{ animationDelay: '270ms' }}
+              >
                 <a
                   href="/login"
-                  className="rounded-full bg-acento px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-oscuro"
+                  className="rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
                 >
                   Ingresar
                 </a>
@@ -248,7 +264,7 @@ export default function Portada() {
                 </a>
               </div>
 
-              <p className="mt-8 text-xs text-white/45">
+              <p className="entra mt-8 text-xs text-white/60" style={{ animationDelay: '360ms' }}>
                 En uso hoy en los cursos del colegio, con coordinación académica.
               </p>
             </div>

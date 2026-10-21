@@ -4,8 +4,9 @@ const config: NextConfig = {
   reactStrictMode: true,
   // Necesario para la imagen Docker de producción (server.js autocontenido).
   output: 'standalone',
-  // Solo desarrollo: permite abrir la app por 127.0.0.1 además de localhost.
-  allowedDevOrigins: ['127.0.0.1'],
+  // Solo desarrollo: permite abrir la app por 127.0.0.1 y por la IP de la red,
+  // para revisar desde el teléfono o una tablet sin que se bloqueen los estilos.
+  allowedDevOrigins: ['127.0.0.1', '192.168.1.88'],
 };
 
 export default config;
