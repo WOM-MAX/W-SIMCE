@@ -134,6 +134,24 @@ const PRIVACIDAD = [
   },
 ];
 
+/** Monograma del colegio: el triángulo, la A y el arco, legible a 40 px. */
+function Monograma({ className }: { className: string }) {
+  return (
+    <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
+      <circle cx="24" cy="24" r="24" fill="#ffffff" />
+      <path d="M24 9 39 37H9Z" fill="#202858" />
+      <path d="M24 16.5l6.6 13.9h-3.4l-1.2-2.7h-4l-1.2 2.7h-3.4z" fill="#ffffff" />
+      <path
+        d="M7.5 28.5c10 5.5 23 5.5 33 0"
+        stroke="#f84828"
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 function Emblema({ className }: { className: string }) {
   return (
     <img
@@ -224,18 +242,18 @@ export default function Portada() {
   return (
     <div className="min-h-dvh bg-white">
       <ProgresoLectura />
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-marca/95 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-barra/95 backdrop-blur">
+        <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3" aria-label="W-SIMCE, inicio">
-            <Emblema className="h-9 w-9 rounded-full bg-white/90 p-0.5" />
-            <span className="flex items-baseline gap-2">
-              <span className="text-[15px] font-semibold tracking-tight text-white">W-SIMCE</span>
-              <span className="hidden text-xs text-white/50 sm:inline">Colegio Acrópolis</span>
+            <Monograma className="h-10 w-10 shrink-0" />
+            <span className="flex items-baseline gap-2.5">
+              <span className="text-[17px] font-semibold tracking-tight text-white">W-SIMCE</span>
+              <span className="hidden text-xs text-white/60 sm:inline">Colegio Acrópolis</span>
             </span>
           </a>
           <a
             href="/login"
-            className="rounded-full bg-acento-boton px-5 py-2 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
+            className="rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
           >
             Ingresar
           </a>
