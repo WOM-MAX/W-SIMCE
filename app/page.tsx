@@ -254,14 +254,16 @@ export default function Portada() {
     <div className="min-h-dvh bg-white">
       <ProgresoLectura />
       <header className="sticky top-0 z-40 border-b border-marca/10 bg-barra/95 backdrop-blur">
-        <div className="mx-auto flex h-[82px] max-w-6xl items-center justify-between px-6">
+        <div className="mx-auto flex h-[88px] max-w-6xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3.5" aria-label="W-SIMCE, inicio">
             <Emblema
               src="/icono-192.png"
-              className="h-[52px] w-[52px] shrink-0 rounded-full object-cover ring-1 ring-marca/20"
+              className="h-14 w-14 shrink-0 rounded-full object-cover ring-1 ring-marca/20"
             />
             <span className="flex items-baseline gap-2.5">
-              <span className="text-[19px] font-semibold tracking-tight text-marca">W-SIMCE</span>
+              <span className="text-[20px] font-semibold tracking-tight text-marca">
+                <span className="text-acento-boton-hover">W</span>-SIMCE
+              </span>
               <span className="hidden text-[13px] text-marca/60 sm:inline">Colegio Acrópolis</span>
             </span>
           </a>
