@@ -134,21 +134,31 @@ const PRIVACIDAD = [
   },
 ];
 
-/** Monograma del colegio: el triángulo, la A y el arco, legible a 40 px.
-    Sobre fondo claro va sin el disco blanco. */
-function Monograma({ className, disco = true }: { className: string; disco?: boolean }) {
+/** Marca del colegio para tamaños pequeños: el triángulo y la A del emblema.
+    El arco naranja se omite a 40 px porque se lee como una raya que corta la base. */
+function Monograma({
+  className,
+  disco = true,
+  arco = true,
+}: {
+  className: string;
+  disco?: boolean;
+  arco?: boolean;
+}) {
   return (
     <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
       {disco ? <circle cx="24" cy="24" r="24" fill="#ffffff" /> : null}
-      <path d="M24 9 39 37H9Z" fill="#202858" />
-      <path d="M24 16.5l6.6 13.9h-3.4l-1.2-2.7h-4l-1.2 2.7h-3.4z" fill="#ffffff" />
-      <path
-        d="M7.5 28.5c10 5.5 23 5.5 33 0"
-        stroke="#f84828"
-        strokeWidth="3"
-        fill="none"
-        strokeLinecap="round"
-      />
+      {arco ? (
+        <path
+          d="M3.5 30.5c11.5 7 29.5 7 41 0"
+          stroke="#f84828"
+          strokeWidth="2.3"
+          fill="none"
+          strokeLinecap="round"
+        />
+      ) : null}
+      <path d="M24 5 43 39H5Z" fill="#202858" />
+      <path d="M24 13.5l8.2 17.6h-4.2l-1.5-3.4h-5l-1.5 3.4H16z" fill="#ffffff" />
     </svg>
   );
 }
@@ -246,7 +256,7 @@ export default function Portada() {
       <header className="sticky top-0 z-40 border-b border-marca/10 bg-barra/95 backdrop-blur">
         <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3" aria-label="W-SIMCE, inicio">
-            <Monograma className="h-10 w-10 shrink-0" disco={false} />
+            <Monograma className="h-10 w-10 shrink-0" disco={false} arco={false} />
             <span className="flex items-baseline gap-2.5">
               <span className="text-[17px] font-semibold tracking-tight text-marca">W-SIMCE</span>
               <span className="hidden text-xs text-marca/60 sm:inline">Colegio Acrópolis</span>
