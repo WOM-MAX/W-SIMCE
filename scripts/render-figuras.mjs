@@ -48,6 +48,12 @@ function color(e) {
   return g === undefined || g === null ? '#000' : tono(g);
 }
 
+// Mismo relleno que el componente: gris son 217 y grisRelleno es la opacidad.
+function rellenoDe(e) {
+  if (e.relleno !== 'gris') return 'fill="none"';
+  return `fill="rgb(217,217,217)" fill-opacity="${numero(e.grisRelleno, 1)}"`;
+}
+
 function partirTexto(texto, ancho, tam) {
   if (!texto) return [''];
   if (!ancho || ancho <= 0) return [texto];
@@ -111,26 +117,23 @@ function partirConPotencia(entrada) {
 }
 
 function dibujar(e) {
-  const grosor = numero(e.grosor, 0.9);
-  const trazo = e.punteada ? ' stroke-dasharray="2.5 2"' : '';
+  const grosor = numero(e.grosor, 1);
+  const trazo = e.punteada ? ' stroke-dasharray="3 3"' : '';
 
   if (e.op === 'rect') {
-    const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
+    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" ${rellenoDe(e)} stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'line') {
     return `<line x1="${numero(e.x1)}" y1="${numero(e.y1)}" x2="${numero(e.x2)}" y2="${numero(e.y2)}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'circle') {
-    const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
+    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" ${rellenoDe(e)} stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'poly') {
-    const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<polygon points="${escapar(e.puntos ?? '')}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
+    return `<polygon points="${escapar(e.puntos ?? '')}" ${rellenoDe(e)} stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'path') {
-    return `<path d="${escapar(e.d ?? '')}" fill="none" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
+    return `<path d="${escapar(e.d ?? '')}" ${rellenoDe(e)} stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'text') {
     const tam = numero(e.tam, 8);
