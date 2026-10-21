@@ -258,7 +258,7 @@ export default function Portada() {
           <a href="/" className="flex items-center gap-4" aria-label="W-SIMCE, inicio">
             {/* la escala 1.06 saca el filo blanco del archivo: el anillo del
                 escudo llega al borde del círculo y no queda halo */}
-            <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full border-[3px] border-marca">
+            <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full">
               <Emblema src="/emblema-192.png" className="h-full w-full object-cover" />
             </span>
             <span className="flex items-baseline gap-3">
@@ -746,11 +746,11 @@ export default function Portada() {
             {/* identidad */}
             <div>
               <div className="flex items-center gap-3">
-                <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full border-[3px] border-marca-oscuro">
+                <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full">
                   <Emblema src="/emblema-192.png" className="h-full w-full rounded-full object-cover" />
                 </span>
                 <div>
-                  <p className="text-base font-semibold tracking-tight text-white">W-SIMCE</p>
+                  <p className="text-[19px] font-semibold tracking-[-0.01em] text-white"><span className="text-acento">W</span>-SIMCE</p>
                   <p className="text-xs text-white/60">Colegio Acrópolis</p>
                 </div>
               </div>
