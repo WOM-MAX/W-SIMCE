@@ -625,54 +625,39 @@ export default function Portada() {
                 necesario para evaluar, y con acceso restringido por rol.
               </p>
 
-              <div className="mt-8 flex items-center gap-5">
-                {/* sello compacto: anillos que giran en sentidos contrarios */}
-                <div className="relative hidden h-24 w-24 shrink-0 sm:block">
-                  <svg viewBox="0 0 200 200" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
-                    <circle
-                      cx="100"
-                      cy="100"
-                      r="92"
-                      fill="none"
-                      stroke="#202858"
-                      strokeOpacity="0.16"
-                      strokeWidth="1.5"
-                      strokeDasharray="2 8"
-                    />
-                    <circle cx="100" cy="100" r="70" fill="none" stroke="#202858" strokeOpacity="0.10" strokeWidth="1" />
-                  </svg>
-                  <svg
-                    viewBox="0 0 200 200"
-                    className="orbita-inversa absolute inset-0 h-full w-full"
-                    aria-hidden="true"
-                  >
-                    <circle
-                      cx="100"
-                      cy="100"
-                      r="80"
-                      fill="none"
-                      stroke="#f84828"
-                      strokeOpacity="0.45"
-                      strokeWidth="1.6"
-                      strokeDasharray="34 210"
-                    />
+              <div className="mt-10 flex items-center gap-5">
+                {/* sello de privacidad: anillos continuos con marcas y escudo al centro */}
+                <div className="relative hidden h-32 w-32 shrink-0 sm:block">
+                  <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" aria-hidden="true">
+                    <circle cx="100" cy="100" r="94" fill="none" stroke="#202858" strokeOpacity="0.16" strokeWidth="1.5" />
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#202858" strokeOpacity="0.08" strokeWidth="1" />
+                    {Array.from({ length: 12 }).map((_, i) => (
+                      <line
+                        key={i}
+                        x1="100"
+                        y1="8"
+                        x2="100"
+                        y2="16"
+                        stroke="#202858"
+                        strokeOpacity="0.22"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        transform={`rotate(${i * 30} 100 100)`}
+                      />
+                    ))}
                   </svg>
                   <div className="absolute inset-0 grid place-items-center">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-marca text-white shadow-[0_12px_26px_rgba(32,40,88,0.28)]">
-                      <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-5 w-5" />
+                    <span className="grid h-16 w-16 place-items-center rounded-full bg-marca text-white shadow-[0_10px_24px_rgba(32,40,88,0.22)]">
+                      <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-7 w-7" />
                     </span>
                   </div>
                 </div>
 
-                <div className="flex-1 rounded-2xl border border-ambar/40 bg-ambar-suave p-4">
-                  <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-ambar-texto">
-                    Estado para producción
-                  </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-tenue">
-                    Antes de operar con datos definitivos falta cerrar la base legal, la minimización,
-                    el plazo de retención y el control de acceso conforme a la Ley 21.719.
-                  </p>
-                </div>
+                <p className="text-[11px] leading-relaxed tracking-[0.04em] text-tenue/70">
+                  Ley 21.719
+                  <br />
+                  protección de datos personales
+                </p>
               </div>
             </div>
 
