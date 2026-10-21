@@ -974,6 +974,57 @@ palabras, pero el mensaje de «llegar a tiempo» apunta justo a eso.
 **Verificación:** `tsc --noEmit` sin errores; portada 200 con las dos secciones nuevas;
 captura en 1440 px revisada.
 
+---
+
+## 25. Dónde quedamos (21 de octubre de 2026, mediodía)
+
+**Repositorio:** `main` al día con GitHub, árbol limpio, CI en verde. El servidor local
+seguía corriendo en `http://localhost:3005` (puerto 3005, `pnpm dev`).
+
+**Lo que quedó hecho hoy:**
+
+| Área | Estado |
+| --- | --- |
+| Código | Actualizado a `1e8ee69` y luego 8 commits propios, todos publicados |
+| Nóminas | 289 alumnos reales en 8 cursos, con RUN (migración aplicada) |
+| Banco | Filtros por curso, asignatura, eje, Bloom, dificultad, habilidad, recursos, origen, estado y texto |
+| Portada | Mensaje «todo en un solo lugar», ciclo de 5 pasos, cuatro audiencias, ficha de pregunta |
+| Login | Uno solo, con detección de rol por el dato |
+| Bitácora | 25 secciones, sincronizada con la copia de OneDrive |
+
+**Pendientes, en orden de prioridad:**
+
+1. **Desplegar.** El push está en GitHub, pero Railway no construyó: tuvo una caída
+   mayor el 21 de octubre desde las 07:24 UTC, con los builds pausados. Al volver,
+   confirmar si el deploy arrancó solo; si no, botón *Deploy* sobre el último commit.
+2. **Dominio.** `w-simce.colegioacropolis.net` existe en el DNS pero apunta a un Apache
+   del colegio (A `162.240.230.181`), no a Railway. Hay que reemplazarlo por un CNAME
+   al destino que entregue Railway, esperar el certificado y definir
+   `PUBLIC_BASE_URL=https://w-simce.colegioacropolis.net`. El sitio principal del
+   colegio ya usa ese patrón (`www` → CNAME a Railway) y sirve de ejemplo.
+3. **Producto.** En orden de valor: enlace privado para que el apoderado vea el
+   resultado de su hijo (sin cuenta, con token); subir un ítem propio desde PDF o Word
+   para agrandar el banco; exportar a CSV la selección del banco; selección múltiple
+   para mandar ítems al generador de ensayos; normalizar el campo `conocimiento`.
+4. **Datos y seguridad.** Conseguir el RBD real del colegio; pasar el repositorio a
+   privado; rotar la credencial de Neon que circuló en el chat.
+
+**Cómo retomar en la tarde:**
+
+```powershell
+cd C:\Proyectos\W-SIMCE
+pnpm dev          # http://localhost:3005
+git pull          # solo si se trabajó desde otro equipo
+```
+
+Credenciales de prueba: `admin@acropolis.cl` / `Acropolis2026`; alumno `W4A-01` /
+PIN `1234`; docente `docente@acropolis.cl` / `demo1234`.
+
+**Recordatorios que no se pueden olvidar:** `pnpm db:seed` hace `TRUNCATE` y borraría a
+los 289 alumnos reales; los archivos con datos personales viven en
+`C:\Proyectos\_matricula-privada`, fuera del repositorio.
+
+
 
 
 
