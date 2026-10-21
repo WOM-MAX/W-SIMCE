@@ -8,6 +8,8 @@ ensayos, rendición, corrección y reportes funcionando. Pendiente asignar los
 ensayos a un curso (ver sección 14).
 **Equipo del colegio:** puesto al día a `1e8ee69` el 21 de octubre de 2026
 (ver sección 18).
+**Datos:** 289 estudiantes reales en 8 cursos, con RUN, cargados el 21 de octubre
+(ver sección 19).
 
 > Este archivo existe dos veces con el mismo contenido:
 > `C:\Proyectos\W-SIMCE\docs\BITACORA.md` (versionado, viaja con el código) y
@@ -716,4 +718,97 @@ pnpm dev
 **Sincronización de esta bitácora:** la copia de OneDrive seguía en la versión del
 19 de octubre (13.470 bytes, secciones 1 a 13). Al copiar este archivo quedó con
 las secciones 14 a 18 incluidas.
+
+---
+
+## 19. Nóminas reales y RUN (21 de octubre de 2026)
+
+El colegio entregó el libro de matrícula `LIBRO DE MATRÍCULA DIGITAL-08-10-2026.xlsx`.
+Tiene 23 hojas, pero las nóminas vigentes están solo en `110-EB` (básica) y
+`310-EM` (media): las hojas `SBÁSICA` y `SMEDIA` están incompletas (4° B aparecía
+con un solo alumno). Nomenclatura: `10` parvularia, `110` básica, `310` media, de
+modo que `110-4A` es 4° básico A.
+
+**Alcance cargado:** los ocho cursos de 4°, 6°, 8° básico y II medio.
+
+| Curso | Vigentes | Códigos |
+| --- | --- | --- |
+| 4° básico A | 36 | `W4A-01…` |
+| 4° básico B | 35 | `W4B-01…` |
+| 6° básico A | 41 | `W6A-01…` |
+| 6° básico B | 41 | `W6B-01…` |
+| 8° básico A | 30 | `W8A-01…` |
+| 8° básico B | 34 | `W8B-01…` |
+| II medio A | 37 | `W2MA-01…` |
+| II medio B | 35 | `W2MB-01…` |
+| **Total** | **289** | PIN inicial `1234` |
+
+Criterios aplicados:
+
+- Se excluyeron **22 retirados definitivos** (no vuelven a aparecer en ninguna
+  sección). Quedaron listados aparte, fuera del repositorio.
+- **4 alumnos** aparecen en las dos secciones del mismo nivel: se interpretaron
+  como cambio de curso y quedaron con **una sola ficha**, con matrícula `RETIRADA`
+  en el origen y `ACTIVA` en el destino, usando las fechas del libro (el retiro del
+  origen coincide con la matrícula del destino).
+- Un RUN traía la fecha de retiro ilegible (`08-05-206`): se leyó como 08-05-2026 y
+  ese alumno quedó excluido.
+- Se borraron los 20 alumnos de prueba de 4° B y su asignación de ensayo. El
+  respaldo quedó en `respaldo-4b.json`, fuera del repositorio.
+- Los códigos de acceso incluyen la sección (`W4A`, `W4B`, `W2MA`…). El importador
+  de `/admin` todavía arma el código con el nivel (`W4B`), así que una importación
+  futura de 4° A por esa vía numeraría `W4B-36…` y no `W4A-…`: queda pendiente.
+
+**RUN como dato del estudiante.** A pedido de la coordinación, el RUN pasó al
+modelo: columna `run` opcional y única por colegio (migración
+`20261021100000_run_estudiante`), cargada en los 289 alumnos. Validación del dígito
+verificador: 278 correctos, 10 con cuerpo de 9 dígitos (RUN de extranjeros, válidos)
+y **1 con dígito erróneo**, que se cargó tal como venía en el libro y quedó anotado
+para confirmar con coordinación. Ningún RUN repetido.
+
+El RUN ya se muestra en `/admin`, se acepta al crear un alumno y en la importación
+desde Excel (columna `RUN` o `RUT`), viene en la plantilla descargable y aparece en
+la ficha del alumno.
+
+**Dónde quedaron los datos:** el libro, los planes intermedios y los respaldos con
+datos personales se movieron a `C:\Proyectos\_matricula-privada`, **fuera del
+repositorio**, para que no puedan versionarse por accidente. Lo único que quedó en
+git es el código.
+
+**Trampa nueva:** `pnpm db:seed` hace `TRUNCATE` de todas las tablas y borraría a
+los 289 alumnos reales. No volver a correrlo contra esta base.
+
+**Verificación:** `/api/health` responde 8 cursos y 289 estudiantes; el login de
+`W4A-01` y de `W2MA-01` con PIN `1234` entra a `/alumno`; `/admin` lista los ocho
+cursos y los 289 códigos.
+
+---
+
+## 20. Portada pública y login único (21 de octubre de 2026)
+
+La aplicación ya no abre en el formulario de identificación. Ahora:
+
+- **`/` es una portada pública**, estática e indexable: emblema del colegio, seis
+  bloques con lo que la plataforma hace hoy, tres pasos de uso y una sección de
+  privacidad que incluye el estado frente a la Ley 21.719. No consulta la base ni
+  expone datos del colegio.
+- **`/panel` es el panel** (antes vivía en `/`); se actualizaron el menú y las diez
+  redirecciones internas.
+- **`/login` es un solo formulario**: «Correo o código» y «Clave o PIN». La ruta
+  deduce el rol por la forma del dato (con `@` es cuenta del equipo; sin `@`, código
+  de estudiante) y sigue aceptando los campos antiguos (`tipo`, `email`, `clave`,
+  `codigo`, `pin`).
+- El emblema se procesó para quitarle el fondo blanco y recortarlo al círculo; de
+  ahí sale también el icono de la pestaña.
+- `robots.txt` y `sitemap.xml` nuevos; las rutas privadas quedan fuera del índice.
+
+Pendiente: el **RBD real** del colegio (el `12345-6` era de la semilla y se quitó
+del pie) y el **dominio definitivo**, que obliga a tocar `metadataBase`,
+`robots.txt` y `sitemap.ts` si algún día deja de ser el de Railway.
+
+**Verificación:** portada 200 con su titular y la sección de privacidad; `/panel`
+sin sesión redirige a `/login`; clave incorrecta a `?error=credenciales`; un docente
+en `/admin` vuelve a `/panel`; administrador y alumno entran a su panel; estáticos
+200; tipos sin errores. Revisada renderizada en 1440, 768 y 500 px.
+
 
