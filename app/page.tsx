@@ -256,7 +256,7 @@ export default function Portada() {
       <header className="sticky top-0 z-40 border-b border-marca/10 bg-barra/95 backdrop-blur">
         <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3" aria-label="W-SIMCE, inicio">
-            <Monograma className="h-10 w-10 shrink-0" disco={false} arco={false} />
+            <Emblema className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-marca/20" />
             <span className="flex items-baseline gap-2.5">
               <span className="text-[17px] font-semibold tracking-tight text-marca">W-SIMCE</span>
               <span className="hidden text-xs text-marca/60 sm:inline">Colegio Acrópolis</span>
@@ -472,7 +472,7 @@ export default function Portada() {
         </section>
 
         {/* --------------------------------------------------------------- roles */}
-        <section className="bg-marca">
+        <section id="roles" className="scroll-mt-20 bg-marca">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="max-w-2xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
@@ -511,7 +511,7 @@ export default function Portada() {
         </section>
 
         {/* ------------------------------------------------------------- anatomía */}
-        <section className="bg-white">
+        <section id="diferencia" className="scroll-mt-20 bg-white">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-24">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
@@ -735,23 +735,84 @@ export default function Portada() {
       </main>
 
       <footer className="bg-marca-oscuro">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-center gap-3">
-            <Emblema className="h-8 w-8 rounded-full bg-white/90 p-0.5" />
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-12">
+            {/* identidad */}
             <div>
-              <p className="text-sm font-medium text-white">W-SIMCE · Colegio Acrópolis</p>
-              <p className="text-xs text-white/50">Puente Alto, Chile</p>
+              <div className="flex items-center gap-3">
+                <span className="block h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
+                  <Emblema className="h-full w-full rounded-full object-cover" />
+                </span>
+                <div>
+                  <p className="text-base font-semibold tracking-tight text-white">W-SIMCE</p>
+                  <p className="text-xs text-white/60">Colegio Acrópolis</p>
+                </div>
+              </div>
+              <p className="mt-5 max-w-xs text-pretty text-sm leading-relaxed text-white/55">
+                Evaluación estandarizada: banco de ítems con su objetivo y su clave, ensayos,
+                rendición en línea, corrección automática y reportes por eje.
+              </p>
+              <p className="mt-4 text-xs text-white/40">Puente Alto, Chile</p>
+            </div>
+
+            {/* plataforma */}
+            <nav aria-label="Plataforma">
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/55">
+                Plataforma
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                {[
+                  { texto: 'Ingresar', href: '/login' },
+                  { texto: 'Panel', href: '/panel' },
+                  { texto: 'Banco de ítems', href: '/banco' },
+                  { texto: 'Reportes', href: '/reportes' },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} className="text-white/65 transition hover:text-white">
+                      {l.texto}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* recorrido */}
+            <nav aria-label="Recorrido">
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/55">
+                Recorrido
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                {[
+                  { texto: 'El ciclo completo', href: '#ciclo' },
+                  { texto: 'Para quién', href: '#roles' },
+                  { texto: 'La diferencia', href: '#diferencia' },
+                  { texto: 'Privacidad y datos', href: '#privacidad' },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <a href={l.href} className="text-white/65 transition hover:text-white">
+                      {l.texto}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* datos */}
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/55">
+                Cómo se trata el dato
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm text-white/65">
+                <li>Acceso por rol: dirección, UTP, docentes y estudiantes</li>
+                <li>Cada cambio de clave queda registrado</li>
+                <li>Tratamiento conforme a la Ley 21.719</li>
+              </ul>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs text-white/50">
-            <a href="/login" className="transition hover:text-white">
-              Ingresar
-            </a>
-            <a href="/api/live" className="transition hover:text-white">
-              Estado del servicio
-            </a>
-            <span>© 2026</span>
+          <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+            <p>© 2026 Colegio Acrópolis · W-SIMCE</p>
+            <p>Plataforma de uso interno</p>
           </div>
         </div>
       </footer>
