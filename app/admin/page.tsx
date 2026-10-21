@@ -43,7 +43,7 @@ export default async function Admin({
   }>;
 }) {
   const sesion = await sesionAdmin();
-  if (!sesion) redirect('/');
+  if (!sesion) redirect('/panel');
 
   const { ok, error, n, o, e, d } = await searchParams;
 

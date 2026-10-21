@@ -24,7 +24,7 @@ export function Panel({
   children: React.ReactNode;
 }) {
   const menu: Item[] = [
-    { href: '/', nombre: 'Inicio' },
+    { href: '/panel', nombre: 'Inicio' },
     { href: '/ensayos/nuevo', nombre: 'Generar ensayo' },
     { href: '/ensayos', nombre: 'Ensayos' },
     { href: '/banco', nombre: 'Banco de ítems' },

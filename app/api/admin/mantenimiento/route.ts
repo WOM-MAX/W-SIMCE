@@ -4,7 +4,7 @@ import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
   const sesion = await sesionAdmin();
-  if (!sesion) return volver(request, '/');
+  if (!sesion) return volver(request, '/panel');
 
   const form = await request.formData();
   const diasCrudos = Number.parseInt(texto(form, 'dias'), 10);

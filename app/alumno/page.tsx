@@ -17,7 +17,7 @@ export default async function Alumno({
 }) {
   const sesion = await sesionActual();
   if (!sesion) redirect('/login');
-  if (sesion.tipo !== 'estudiante') redirect('/');
+  if (sesion.tipo !== 'estudiante') redirect('/panel');
 
   const ahora = new Date();
 

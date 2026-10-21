@@ -30,12 +30,21 @@ function texto(form: FormData, campo: string): string {
 
 export async function POST(request: Request) {
   const form = await request.formData();
-  const tipo = texto(form, 'tipo') || 'docente';
+
+  // Un solo formulario: el dato con "@" es cuenta del equipo; sin "@" es código de estudiante.
+  // Los campos antiguos (tipo/email/clave/codigo/pin) se siguen aceptando.
+  const identificador = texto(form, 'identificador');
+  const secreto = texto(form, 'secreto');
+  const tipo = identificador
+    ? identificador.includes('@')
+      ? 'docente'
+      : 'estudiante'
+    : texto(form, 'tipo') || 'docente';
 
   try {
     if (tipo === 'estudiante') {
-      const codigo = texto(form, 'codigo').toUpperCase();
-      const pin = texto(form, 'pin');
+      const codigo = (identificador || texto(form, 'codigo')).toUpperCase();
+      const pin = secreto || texto(form, 'pin');
       if (!codigo || !pin) return volver(request, '/login?error=datos');
 
       // Con un PIN de cuatro digitos, el freno importa mas que la politica.
@@ -80,8 +89,8 @@ export async function POST(request: Request) {
       return volver(request, '/alumno');
     }
 
-    const email = texto(form, 'email').toLowerCase();
-    const clave = texto(form, 'clave');
+    const email = (identificador || texto(form, 'email')).toLowerCase();
+    const clave = secreto || texto(form, 'clave');
     if (!email || !clave) return volver(request, '/login?error=datos');
 
     const identidad = `usuario:${email}`;
@@ -124,7 +133,7 @@ export async function POST(request: Request) {
       nombre: usuario.nombre,
     });
 
-    return volver(request, '/');
+    return volver(request, '/panel');
   } catch (error) {
     const mensaje = error instanceof Error ? error.message : String(error);
     console.error('login', error);
