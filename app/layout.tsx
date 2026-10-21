@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://w-simce-production.up.railway.app'),
+  metadataBase: new URL('https://w-simce.colegioacropolis.net'),
   title: {
     default: 'W-SIMCE · Evaluación estandarizada · Colegio Acrópolis',
     template: '%s · W-SIMCE',

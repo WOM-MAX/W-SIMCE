@@ -12,4 +12,4 @@ Disallow: /seguimiento
 Disallow: /estudiantes
 Disallow: /api
 
-Sitemap: https://w-simce-production.up.railway.app/sitemap.xml
+Sitemap: https://w-simce.colegioacropolis.net/sitemap.xml

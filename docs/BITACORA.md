@@ -803,8 +803,12 @@ La aplicación ya no abre en el formulario de identificación. Ahora:
 - `robots.txt` y `sitemap.xml` nuevos; las rutas privadas quedan fuera del índice.
 
 Pendiente: el **RBD real** del colegio (el `12345-6` era de la semilla y se quitó
-del pie) y el **dominio definitivo**, que obliga a tocar `metadataBase`,
-`robots.txt` y `sitemap.ts` si algún día deja de ser el de Railway.
+del pie) y la puesta en marcha del **dominio propio**: el colegio definió
+`w-simce.colegioacropolis.net`, que ya está escrito en `metadataBase`,
+`robots.txt` y `sitemap.ts`. Falta cargarlo en Railway (Networking → Custom
+Domain) y crear el CNAME en el DNS del colegio; además conviene definir
+`PUBLIC_BASE_URL` con esa URL para que las redirecciones del login no dependan de
+las cabeceras del proxy.
 
 **Verificación:** portada 200 con su titular y la sección de privacidad; `/panel`
 sin sesión redirige a `/login`; clave incorrecta a `?error=credenciales`; un docente
