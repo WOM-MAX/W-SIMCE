@@ -11,8 +11,13 @@ export const metadata: Metadata = {
     'Plataforma de evaluación estandarizada del Colegio Acrópolis: banco de ítems, ensayos, rendición en línea, corrección automática y reportes por eje y habilidad.',
   applicationName: 'W-SIMCE',
   icons: {
-    icon: '/icono.png',
-    apple: '/icono.png',
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/icono-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icono-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: [{ url: '/icono-180.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
     siteName: 'W-SIMCE',
