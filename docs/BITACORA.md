@@ -949,6 +949,32 @@ cuando existan.
 (titular, ausencia de cifras, ciclo, roles, ficha, privacidad, una sola acción
 principal) todas en verde; capturas en 1440 y 500 px.
 
+---
+
+## 24. El impacto fuera del aula (21 de octubre de 2026)
+
+La portada solo le hablaba a quien usa el sistema. Faltaba el efecto que importa hacia
+afuera: **familias, estudiantes y prestigio del colegio**. Se agregó sin prometer un
+portal de apoderados que no existe.
+
+- **Cuarta tarjeta en «Para quién»**: «Familias y estudiantes — Un resultado que se
+  entiende: qué se evaluó, cómo le fue y qué sigue. No un número suelto al final del
+  semestre».
+- **Sección «Lo que se nota fuera de la sala»**, con tres consecuencias concretas:
+  1. *Nada se arma la última semana* — el material está disponible todo el año.
+  2. *El resultado llega con la prueba* — corrección automática e informe el mismo día.
+  3. *El colegio puede mostrar lo que mide* — objetivo, criterio y registro de cambios:
+     «eso es lo que sostiene el prestigio: no el discurso, la evidencia».
+
+**Contexto real:** este año la implementación se está haciendo a última hora —los datos
+se cargaron en octubre—, así que el beneficio completo se verá el próximo año, cuando
+el banco y los ensayos se planifiquen desde marzo. La portada no lo dice con esas
+palabras, pero el mensaje de «llegar a tiempo» apunta justo a eso.
+
+**Verificación:** `tsc --noEmit` sin errores; portada 200 con las dos secciones nuevas;
+captura en 1440 px revisada.
+
+
 
 
 

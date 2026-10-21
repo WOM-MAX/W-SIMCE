@@ -57,6 +57,29 @@ const ROLES = [
     texto:
       'Elegir el ensayo, imprimirlo o aplicarlo en línea. La corrección y el informe no son trabajo extra.',
   },
+  {
+    titulo: 'Familias y estudiantes',
+    texto:
+      'Un resultado que se entiende: qué se evaluó, cómo le fue y qué sigue. No un número suelto al final del semestre.',
+  },
+];
+
+const FUERA_DEL_AULA = [
+  {
+    titulo: 'Nada se arma la última semana',
+    texto:
+      'El material está disponible todo el año y el ensayo se compone cuando se necesita. La prueba deja de ser una carrera contra el calendario.',
+  },
+  {
+    titulo: 'El resultado llega con la prueba',
+    texto:
+      'La corrección es automática y el informe por curso queda el mismo día. El apoderado no espera a fin de semestre para saber cómo va su hijo.',
+  },
+  {
+    titulo: 'El colegio puede mostrar lo que mide',
+    texto:
+      'Cada evaluación queda con su objetivo, su criterio y su registro de cambios. Eso es lo que sostiene el prestigio: no el discurso, la evidencia.',
+  },
 ];
 
 const FICHA = [
@@ -318,15 +341,15 @@ export default function Portada() {
                 Para quién
               </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Tres lecturas de la misma plataforma.
+                Cada uno mira algo distinto.
               </h2>
               <p className="mt-4 text-pretty leading-relaxed text-white/60">
-                Dirección, coordinación y aula miran cosas distintas. Cada una tiene su vista, y
-                ninguna necesita pedirle una planilla a otra.
+                Dirección, coordinación, aula y familia. Cada uno tiene su vista, y ninguno necesita
+                pedirle una planilla a otro.
               </p>
             </div>
 
-            <ul className="mt-12 grid gap-6 md:grid-cols-3">
+            <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {ROLES.map((r) => (
                 <li key={r.titulo} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
                   <h3 className="text-base font-semibold text-white">{r.titulo}</h3>
@@ -402,6 +425,33 @@ export default function Portada() {
                 diferencia entre el número y 5: 2(x − 5) = 11.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* ------------------------------------------------------ fuera del aula */}
+        <section className="border-y border-borde bg-fondo">
+          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
+                Lo que se nota fuera de la sala
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-marca sm:text-4xl">
+                Un colegio que llega a tiempo.
+              </h2>
+              <p className="mt-4 text-pretty leading-relaxed text-tenue">
+                Cuando la evaluación se arma la última semana, se nota: en el apuro del docente, en
+                la espera del apoderado y en el informe que llega tarde. Esto existe para que no pase.
+              </p>
+            </div>
+
+            <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-borde bg-borde md:grid-cols-3">
+              {FUERA_DEL_AULA.map((d) => (
+                <li key={d.titulo} className="bg-white p-7">
+                  <h3 className="text-base font-semibold tracking-tight text-marca">{d.titulo}</h3>
+                  <p className="mt-2 text-pretty text-sm leading-relaxed text-tenue">{d.texto}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
