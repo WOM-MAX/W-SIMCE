@@ -163,10 +163,10 @@ function Monograma({
   );
 }
 
-function Emblema({ className }: { className: string }) {
+function Emblema({ className, src = '/logo-acropolis.webp' }: { className: string; src?: string }) {
   return (
     <img
-      src="/logo-acropolis.webp"
+      src={src}
       alt="Emblema del Colegio Acrópolis"
       width={372}
       height={378}
@@ -254,12 +254,15 @@ export default function Portada() {
     <div className="min-h-dvh bg-white">
       <ProgresoLectura />
       <header className="sticky top-0 z-40 border-b border-marca/10 bg-barra/95 backdrop-blur">
-        <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-3" aria-label="W-SIMCE, inicio">
-            <Emblema className="h-11 w-11 shrink-0 rounded-full object-cover ring-1 ring-marca/20" />
+        <div className="mx-auto flex h-[82px] max-w-6xl items-center justify-between px-6">
+          <a href="/" className="flex items-center gap-3.5" aria-label="W-SIMCE, inicio">
+            <Emblema
+              src="/icono-192.png"
+              className="h-[52px] w-[52px] shrink-0 rounded-full object-cover ring-1 ring-marca/20"
+            />
             <span className="flex items-baseline gap-2.5">
-              <span className="text-[17px] font-semibold tracking-tight text-marca">W-SIMCE</span>
-              <span className="hidden text-xs text-marca/60 sm:inline">Colegio Acrópolis</span>
+              <span className="text-[19px] font-semibold tracking-tight text-marca">W-SIMCE</span>
+              <span className="hidden text-[13px] text-marca/60 sm:inline">Colegio Acrópolis</span>
             </span>
           </a>
           <a
@@ -740,8 +743,8 @@ export default function Portada() {
             {/* identidad */}
             <div>
               <div className="flex items-center gap-3">
-                <span className="block h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
-                  <Emblema className="h-full w-full rounded-full object-cover" />
+                <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full ring-1 ring-white/20">
+                  <Emblema src="/icono-192.png" className="h-full w-full rounded-full object-cover" />
                 </span>
                 <div>
                   <p className="text-base font-semibold tracking-tight text-white">W-SIMCE</p>
@@ -859,7 +862,7 @@ export default function Portada() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 flex flex-col gap-3 border-t border-acento/80 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 Colegio Acrópolis · W-SIMCE</p>
             <p>Plataforma de uso interno</p>
           </div>
