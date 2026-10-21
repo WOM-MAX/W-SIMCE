@@ -905,6 +905,51 @@ alguien lo comprueba contra el banco.
 **Verificación:** `tsc --noEmit` sin errores; portada 200; capturas renderizadas en
 1440 y 500 px; sin cambios en base de datos ni en rutas.
 
+---
+
+## 23. Portada con el mensaje del colegio (21 de octubre de 2026)
+
+La consigna de dirección fue clara: **«todo lo que necesitas en un solo lugar»**. Es
+lo que busca la gente de educación, y describe mejor el producto que cualquier cifra.
+Además, la portada no le habla a un visitante anónimo: le habla a cinco personas que
+ya viven el problema —dirección, coordinación académica, coordinación de media, el
+coordinador de media y quien mantiene el sistema—, así que el tono es de claridad, no
+de venta.
+
+**Estructura final:**
+
+1. **Hero** en azul marino con el emblema en un sello y su órbita girando: «Todo lo
+   que necesitas para evaluar, en un solo lugar». Subtítulo con el mecanismo y una
+   sola acción («Ingresar»); el segundo enlace es de texto, no de botón.
+2. **De dónde viene**: la frase de coordinación entre comillas y los tres dolores
+   (repartido, no viene listo, calidad despareja).
+3. **El ciclo completo**: cinco pasos —buscar, armar, aplicar, corregir, leer— que hoy
+   viven en cinco lugares distintos y aquí están en uno.
+4. **Para quién**: tres lecturas de la misma plataforma (dirección, coordinación,
+   docentes), en banda oscura.
+5. **La diferencia**: la ficha de una pregunta —objetivo, eje, habilidad, Bloom,
+   dificultad, clave, justificación— con un ejemplo dibujado y rotulado como ejemplo.
+6. **Privacidad** y pie.
+
+**Lo que se quitó a propósito:** la franja de cifras, los seis bloques de módulos y la
+sección duplicada de «cómo funciona». La portada no habla de cantidades porque el banco
+va a crecer después; cuando lo haga, la página no tendrá que cambiar.
+
+**Contraste con la investigación de landing pages:** una sola decisión por página,
+titular de resultado (no de categoría), subtítulo con audiencia y mecanismo, una acción
+principal, una señal de confianza debajo del hero («en uso hoy en los cursos del
+colegio»), beneficios en vez de funciones y tres pasos en lugar de siete.
+
+**Dirección de producto anotada:** terminada la aplicación, el trabajo pasa a los
+coordinadores en el uso diario y a mantención con el autor: agrandar el banco de ítems
+y **sumar funcionalidades nuevas**. La portada actual no las promete; se agregarán
+cuando existan.
+
+**Verificación:** `tsc --noEmit` sin errores; comprobaciones automáticas de contenido
+(titular, ausencia de cifras, ciclo, roles, ficha, privacidad, una sola acción
+principal) todas en verde; capturas en 1440 y 500 px.
+
+
 
 
 

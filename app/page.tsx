@@ -1,82 +1,70 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'W-SIMCE · Evaluación estandarizada · Colegio Acrópolis',
+  title: 'W-SIMCE · Todo para evaluar, en un solo lugar · Colegio Acrópolis',
   description:
-    'El banco de ítems del Colegio Acrópolis: 1.926 preguntas ordenadas por curso, eje y objetivo, ensayos que se arman solos, versión imprimible, rendición en línea y reportes por habilidad.',
+    'El banco de ítems del Colegio Acrópolis en un solo lugar: preguntas con su objetivo y su clave, ensayos que se arman solos, versión imprimible, rendición en línea, corrección automática y reportes por eje y habilidad.',
   openGraph: {
-    title: 'W-SIMCE · Evaluación estandarizada',
+    title: 'W-SIMCE · Todo para evaluar, en un solo lugar',
     description:
-      '1.926 preguntas ordenadas por curso, eje y objetivo. Ensayos, imprimible, rendición y reportes del Colegio Acrópolis.',
+      'Preguntas con su objetivo y su clave, ensayos, imprimible, rendición y reportes del Colegio Acrópolis.',
     type: 'website',
     locale: 'es_CL',
   },
 };
 
-const ICONOS = {
-  banco: 'M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11ZM8 8h8M8 12h8M8 16h5',
-  ensayo: 'M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1-1.5ZM14 3.5V8h4M9 12h6M9 16h4',
-  impresora: 'M7 8V4h10v4M7 17H5.5A1.5 1.5 0 0 1 4 15.5v-5A1.5 1.5 0 0 1 5.5 9h13A1.5 1.5 0 0 1 20 10.5v5a1.5 1.5 0 0 1-1.5 1.5H17M7 13h10v7H7v-7Z',
-  reloj: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3.5 2',
-  check: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM8 12.5l2.5 2.5L16 9.5',
-  grafico: 'M4 19h16M7 16V9M12 16V5M17 16v-4',
-} as const;
-
-const BLOQUES = [
+const CICLO = [
   {
-    icono: ICONOS.banco,
-    titulo: 'Banco de ítems',
-    texto:
-      '240 preguntas por curso, filtrables por eje, objetivo de aprendizaje, habilidad y dificultad. Cada una con su clave y su justificación.',
+    icono: 'M10.5 10.5 21 21M10.5 3a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15Z',
+    titulo: 'Buscar',
+    texto: 'Filtra por curso, eje u objetivo. La pregunta aparece con su clave.',
   },
   {
-    icono: ICONOS.ensayo,
-    titulo: 'Ensayos',
-    texto:
-      'Se arman por cuotas o a mano, y evitan repetir lo que ya se aplicó en las últimas evaluaciones. Nunca salen incompletos.',
+    icono: 'M7 3.5h7l4 4V19a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19V5a1.5 1.5 0 0 1 1-1.5ZM14 3.5V8h4M9 12h6M9 16h4',
+    titulo: 'Armar',
+    texto: 'El ensayo se compone por cuotas y evita repetir lo ya aplicado.',
   },
   {
-    icono: ICONOS.impresora,
-    titulo: 'Versión imprimible',
-    texto:
-      'El mismo ensayo en papel, con hoja de respuestas y clave aparte. Sin rehacer nada en Word.',
+    icono: 'M7 8V4h10v4M7 17H5.5A1.5 1.5 0 0 1 4 15.5v-5A1.5 1.5 0 0 1 5.5 9h13A1.5 1.5 0 0 1 20 10.5v5a1.5 1.5 0 0 1-1.5 1.5H17M7 13h10v7H7v-7Z',
+    titulo: 'Aplicar',
+    texto: 'En papel con hoja de respuestas, o en línea con reloj y guardado.',
   },
   {
-    icono: ICONOS.reloj,
-    titulo: 'Rendición en línea',
-    texto:
-      'Una pregunta por pantalla, con reloj del servidor, guardado en cada paso y cierre automático al expirar.',
+    icono: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM8 12.5l2.5 2.5L16 9.5',
+    titulo: 'Corregir',
+    texto: 'Automática al enviar: puntaje, nivel de logro y desglose.',
   },
   {
-    icono: ICONOS.check,
-    titulo: 'Corrección',
-    texto:
-      'Al enviar: puntaje, nivel de logro y desglose por eje, habilidad, Bloom y dificultad.',
-  },
-  {
-    icono: ICONOS.grafico,
-    titulo: 'Reportes',
-    texto:
-      'Informe por curso, por alumno y por ítem, con exportación para la reunión de UTP.',
+    icono: 'M4 19h16M7 16V9M12 16V5M17 16v-4',
+    titulo: 'Leer',
+    texto: 'Informe por curso, alumno y eje, listo para la reunión de UTP.',
   },
 ];
 
-const PASOS = [
+const ROLES = [
   {
-    numero: '01',
-    titulo: 'Se elige',
-    texto: 'Filtra el banco por curso, eje u objetivo y arma el ensayo en minutos.',
+    titulo: 'Dirección',
+    texto:
+      'Qué se evalúa, con qué criterio y qué muestran los resultados. Cada cambio queda registrado y el acceso va por rol.',
   },
   {
-    numero: '02',
-    titulo: 'Se aplica',
-    texto: 'En papel con hoja de respuestas, o en línea con reloj y guardado automático.',
+    titulo: 'Coordinación académica',
+    texto:
+      'El material en un solo banco, cada pregunta con su objetivo, su clave y su figura. Sin adaptar formatos a mano.',
   },
   {
-    numero: '03',
-    titulo: 'Se lee',
-    texto: 'La corrección es automática y el informe queda listo por eje y habilidad.',
+    titulo: 'Docentes',
+    texto:
+      'Elegir el ensayo, imprimirlo o aplicarlo en línea. La corrección y el informe no son trabajo extra.',
   },
+];
+
+const FICHA = [
+  { etiqueta: 'Objetivo', valor: 'OA 14 · Números' },
+  { etiqueta: 'Eje', valor: 'Números y operaciones' },
+  { etiqueta: 'Habilidad', valor: 'Resolver problemas' },
+  { etiqueta: 'Bloom', valor: 'Aplicación' },
+  { etiqueta: 'Dificultad', valor: 'Media' },
 ];
 
 const PRIVACIDAD = [
@@ -92,8 +80,7 @@ const PRIVACIDAD = [
   },
   {
     titulo: 'Trazabilidad',
-    texto:
-      'Cada acceso, cambio de clave y edición queda en un registro con fecha y responsable.',
+    texto: 'Cada acceso, cambio de clave y edición queda en un registro con fecha y responsable.',
   },
   {
     titulo: 'Acceso por rol',
@@ -114,7 +101,7 @@ function Emblema({ className }: { className: string }) {
   );
 }
 
-function Icono({ d }: { d: string }) {
+function Icono({ d, className = 'h-6 w-6' }: { d: string; className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -123,7 +110,7 @@ function Icono({ d }: { d: string }) {
       strokeWidth="1.4"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-6 w-6"
+      className={className}
       aria-hidden="true"
     >
       <path d={d} />
@@ -131,22 +118,13 @@ function Icono({ d }: { d: string }) {
   );
 }
 
-/** Composición del hero: el emblema como sello, con la órbita del colegio girando. */
+/** El emblema como sello, con la órbita del colegio girando muy lento. */
 function Sello() {
   return (
     <div className="relative mx-auto flex h-[21rem] w-[21rem] items-center justify-center sm:h-[26rem] sm:w-[26rem]">
-      {/* halo cálido */}
-      <div
-        aria-hidden="true"
-        className="absolute h-64 w-64 rounded-full bg-acento/25 blur-[80px]"
-      />
+      <div aria-hidden="true" className="absolute h-64 w-64 rounded-full bg-acento/25 blur-[80px]" />
 
-      {/* órbita: dos elipses inclinadas + tres esferas */}
-      <svg
-        viewBox="0 0 400 400"
-        className="orbita absolute inset-0 h-full w-full"
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 400 400" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
         <ellipse
           cx="200"
           cy="200"
@@ -176,7 +154,6 @@ function Sello() {
         />
       </svg>
 
-      {/* sello blanco con el emblema */}
       <div className="relative grid h-44 w-44 place-items-center rounded-full bg-white shadow-[0_28px_70px_rgba(0,0,0,0.4)] sm:h-56 sm:w-56">
         <Emblema className="h-36 w-36 sm:h-44 sm:w-44" />
       </div>
@@ -208,7 +185,6 @@ export default function Portada() {
       <main>
         {/* ------------------------------------------------------------- hero */}
         <section className="relative overflow-hidden bg-marca">
-          {/* retícula tenue de fondo */}
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 opacity-[0.05]"
@@ -222,35 +198,35 @@ export default function Portada() {
             <div className="aparecer">
               <p className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.24em] text-white/50">
                 <span className="h-px w-8 bg-acento" aria-hidden="true" />
-                Colegio Acrópolis · Evaluación estandarizada
+                Colegio Acrópolis
               </p>
 
-              <h1 className="mt-7 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.6rem]">
-                Encontrar material no debería ser un dolor de cabeza.
+              <h1 className="mt-7 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.5rem]">
+                Todo lo que necesitas para evaluar, en un solo lugar.
               </h1>
 
               <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/70 sm:text-lg">
-                1.926 preguntas ordenadas por curso, eje y objetivo. Ensayos que se arman solos, se
-                imprimen listos y se corrigen solos.
+                Preguntas con su objetivo y su clave, ensayos que se arman solos, corrección
+                automática y reportes para la reunión. Sin carpetas, sin formatos, sin planillas.
               </p>
 
-              <div className="mt-9 flex flex-wrap items-center gap-3">
+              <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <a
                   href="/login"
                   className="rounded-full bg-acento px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-oscuro"
                 >
-                  Ingresar a la plataforma
+                  Ingresar
                 </a>
                 <a
-                  href="#plataforma"
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-medium text-white/90 transition hover:border-white/50 hover:bg-white/5"
+                  href="#ciclo"
+                  className="text-sm font-medium text-white/70 underline-offset-4 transition hover:text-white hover:underline"
                 >
-                  Ver qué incluye
+                  Ver el ciclo completo
                 </a>
               </div>
 
-              <p className="mt-7 text-xs text-white/45">
-                Para docentes, UTP y estudiantes del Colegio Acrópolis.
+              <p className="mt-8 text-xs text-white/45">
+                En uso hoy en los cursos del colegio, con coordinación académica.
               </p>
             </div>
 
@@ -263,7 +239,7 @@ export default function Portada() {
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[0.95fr_1.05fr] md:gap-16 md:py-24">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
-                El problema
+                De dónde viene
               </p>
               <blockquote className="mt-5 border-l-2 border-acento pl-6">
                 <p className="text-balance text-2xl font-medium leading-snug tracking-tight text-marca sm:text-3xl">
@@ -271,9 +247,9 @@ export default function Portada() {
                 </p>
               </blockquote>
               <p className="mt-6 text-pretty leading-relaxed text-tenue">
-                Es lo primero que aparece cuando se le pregunta a coordinación académica. No es la
-                corrección ni el informe: es conseguir la pregunta adecuada, en el formato adecuado,
-                a tiempo.
+                No es la corrección ni el informe: es conseguir la pregunta adecuada. Y no es el
+                problema de una persona —está en dirección, en coordinación y en el aula—, así que la
+                solución tampoco puede vivir en una carpeta compartida.
               </p>
             </div>
 
@@ -282,7 +258,7 @@ export default function Portada() {
                 {
                   titulo: 'Está repartido',
                   texto:
-                    'PDFs, Word, presentaciones y pruebas antiguas. Encontrar una pregunta de un eje específico puede costar más que aplicarla.',
+                    'PDFs, Word, presentaciones y pruebas antiguas. Buscar una pregunta de un eje específico puede costar más que aplicarla.',
                 },
                 {
                   titulo: 'No viene listo',
@@ -304,82 +280,133 @@ export default function Portada() {
           </div>
         </section>
 
-        {/* ------------------------------------------------------------- cifras */}
-        <section className="border-y border-borde bg-fondo">
-          <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 px-6 py-12 text-center sm:grid-cols-4 sm:divide-x sm:divide-borde">
-            {[
-              { valor: '1.926', etiqueta: 'preguntas con clave' },
-              { valor: '240', etiqueta: 'por curso, promedio' },
-              { valor: '114', etiqueta: 'objetivos con material' },
-              { valor: '0', etiqueta: 'objetivos sin preguntas' },
-            ].map((c) => (
-              <div key={c.etiqueta} className="px-4">
-                <p className="tabular text-3xl font-semibold tracking-tight text-marca sm:text-4xl">
-                  {c.valor}
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-tenue">{c.etiqueta}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ------------------------------------------------------------ bloques */}
-        <section id="plataforma" className="scroll-mt-20 bg-white">
+        {/* --------------------------------------------------------------- ciclo */}
+        <section id="ciclo" className="scroll-mt-20 border-y border-borde bg-fondo">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <div className="max-w-2xl">
               <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
-                La plataforma
+                El ciclo completo
               </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-marca sm:text-4xl">
-                Lo que reemplaza a la carpeta de siempre.
+                Cinco pasos que hoy viven en cinco lugares distintos.
               </h2>
-              <p className="mt-4 text-pretty leading-relaxed text-tenue">
-                Seis piezas que ya funcionan con los cursos del colegio, no una maqueta.
-              </p>
             </div>
 
-            <ul className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-borde bg-borde sm:grid-cols-2 lg:grid-cols-3">
-              {BLOQUES.map((b) => (
-                <li key={b.titulo} className="group bg-white p-7 transition hover:bg-fondo">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-acento-suave text-marca transition group-hover:bg-marca group-hover:text-white">
-                    <Icono d={b.icono} />
+            <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+              {CICLO.map((p, i) => (
+                <li key={p.titulo} className="relative border-t border-marca/15 pt-6">
+                  <span className="absolute -top-[5px] left-0 h-2 w-2 rounded-full bg-acento" />
+                  <p className="text-[11px] font-medium tracking-[0.2em] text-tenue">
+                    {String(i + 1).padStart(2, '0')}
+                  </p>
+                  <span className="mt-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-marca ring-1 ring-borde">
+                    <Icono d={p.icono} className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-5 text-base font-semibold tracking-tight text-marca">
-                    {b.titulo}
-                  </h3>
-                  <p className="mt-2 text-pretty text-sm leading-relaxed text-tenue">{b.texto}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* --------------------------------------------------------- cómo funciona */}
-        <section id="como-funciona" className="scroll-mt-20 bg-marca">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <div className="max-w-2xl">
-              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
-                Cómo funciona
-              </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Tres pasos, y ninguno es una planilla.
-              </h2>
-            </div>
-
-            <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-              {PASOS.map((p) => (
-                <li key={p.numero} className="border-t border-white/15 pt-6">
-                  <p className="text-[11px] font-medium tracking-[0.2em] text-acento">{p.numero}</p>
-                  <h3 className="mt-3 text-lg font-semibold tracking-tight text-white">{p.titulo}</h3>
-                  <p className="mt-2 text-pretty text-sm leading-relaxed text-white/60">{p.texto}</p>
+                  <h3 className="mt-3 text-base font-semibold text-marca">{p.titulo}</h3>
+                  <p className="mt-1.5 text-pretty text-sm leading-relaxed text-tenue">{p.texto}</p>
                 </li>
               ))}
             </ol>
           </div>
         </section>
 
+        {/* --------------------------------------------------------------- roles */}
+        <section className="bg-marca">
+          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+            <div className="max-w-2xl">
+              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/50">
+                Para quién
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Tres lecturas de la misma plataforma.
+              </h2>
+              <p className="mt-4 text-pretty leading-relaxed text-white/60">
+                Dirección, coordinación y aula miran cosas distintas. Cada una tiene su vista, y
+                ninguna necesita pedirle una planilla a otra.
+              </p>
+            </div>
+
+            <ul className="mt-12 grid gap-6 md:grid-cols-3">
+              {ROLES.map((r) => (
+                <li key={r.titulo} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                  <h3 className="text-base font-semibold text-white">{r.titulo}</h3>
+                  <p className="mt-2 text-pretty text-sm leading-relaxed text-white/60">{r.texto}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ------------------------------------------------------------- anatomía */}
+        <section className="bg-white">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-24">
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
+                La diferencia
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-marca sm:text-4xl">
+                Cada pregunta viene con su ficha.
+              </h2>
+              <p className="mt-4 text-pretty leading-relaxed text-tenue">
+                No es un PDF con una pregunta suelta: es un ítem con su objetivo, su habilidad, su
+                dificultad, su clave y su justificación. Por eso se puede buscar, combinar y
+                corregir sin volver a leerlo todo.
+              </p>
+              <p className="mt-4 text-pretty leading-relaxed text-tenue">
+                Cuando falte algo, se nota: el filtro del banco muestra qué eje u objetivo quedó
+                corto antes de armar el ensayo, no después de aplicarlo.
+              </p>
+            </div>
+
+            {/* ficha de ejemplo, dibujada: no es una captura de la app */}
+            <div className="rounded-2xl border border-borde bg-white p-6 shadow-[0_20px_60px_rgba(32,40,88,0.08)]">
+              <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-tenue/70">
+                Ejemplo de ficha
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {FICHA.map((f) => (
+                  <span
+                    key={f.etiqueta}
+                    className="rounded-full bg-fondo px-2.5 py-1 text-[11px] text-tenue ring-1 ring-borde"
+                  >
+                    <span className="text-tenue/60">{f.etiqueta}</span>{' '}
+                    <span className="font-medium text-marca">{f.valor}</span>
+                  </span>
+                ))}
+              </div>
+
+              <p className="mt-5 text-sm leading-relaxed text-slate-800">
+                Un número se le resta 5 y el resultado se multiplica por 2, obteniendo 11. ¿Qué
+                ecuación representa la situación?
+              </p>
+
+              <ul className="mt-4 space-y-1.5 text-sm">
+                {['2x − 5 = 11', '2(x − 5) = 11', '2x + 5 = 11', 'x/2 − 5 = 11'].map((a, i) => (
+                  <li
+                    key={a}
+                    className={`flex items-center gap-2 rounded-lg px-2 py-1 ${
+                      i === 1 ? 'bg-acento-suave font-medium text-marca' : 'text-slate-600'
+                    }`}
+                  >
+                    <span className="w-4 text-xs font-semibold">{'ABCD'[i]}</span>
+                    {a}
+                    {i === 1 ? (
+                      <span className="ml-auto text-[10px] uppercase tracking-wide">clave</span>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+
+              <p className="mt-4 border-t border-borde pt-3 text-xs leading-relaxed text-tenue">
+                <span className="font-medium text-marca">Justificación.</span> Se multiplica por 2 la
+                diferencia entre el número y 5: 2(x − 5) = 11.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ----------------------------------------------------------- privacidad */}
-        <section id="privacidad" className="scroll-mt-20 bg-white">
+        <section id="privacidad" className="scroll-mt-20 border-t border-borde bg-white">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[0.85fr_1.15fr] md:gap-16 md:py-24">
             <div>
               <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-tenue">
