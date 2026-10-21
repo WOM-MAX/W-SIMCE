@@ -21,9 +21,9 @@
   --color-teal: #2c8b86;
   --color-teal-suave: #e6f2f1;
   --color-teal-texto: #1f6a66;
-  /* Barra de navegación: verde petróleo, distinto del azul del hero y
-     complementario del naranja del botón y del emblema. */
-  --color-barra: #103f3e;
+  /* Barra de navegación: el plateado de los electrones del emblema.
+     Se distingue del blanco de las secciones y contrasta con el azul del hero. */
+  --color-barra: #cfd8e6;
 }
 
 html,
