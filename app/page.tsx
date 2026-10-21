@@ -146,36 +146,48 @@ function Icono({ d, className = 'h-6 w-6' }: { d: string; className?: string }) 
 function Sello() {
   return (
     <div className="relative mx-auto flex aspect-square w-[min(21rem,78vw)] items-center justify-center sm:w-[26rem]">
+      {/* Resplandor radial: aclara la zona del emblema para que el medallón y los
+          electrones no se pierdan contra el azul plano. */}
+      <div
+        aria-hidden="true"
+        className="absolute h-[34rem] w-[34rem] max-h-[135%] max-w-[135%] rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(104,120,196,0.42) 0%, rgba(72,86,156,0.20) 46%, rgba(32,40,88,0) 78%)',
+        }}
+      />
       <div aria-hidden="true" className="absolute h-64 w-64 rounded-full bg-acento/25 blur-[80px]" />
 
       <svg viewBox="0 0 400 400" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
-        <ellipse
-          cx="200"
-          cy="200"
-          rx="186"
-          ry="70"
-          transform="rotate(-22 200 200)"
-          fill="none"
-          stroke="#ffffff"
-          strokeOpacity="0.22"
-          strokeWidth="1.2"
-        />
-        <circle cx="372" cy="158" r="8" fill="#ffffff" fillOpacity="0.6" />
-        <circle cx="30" cy="244" r="6" fill="#f84828" />
-        <circle cx="322" cy="296" r="5" fill="#ffffff" fillOpacity="0.4" />
+        <g transform="rotate(-22 200 200)">
+          <ellipse
+            cx="200"
+            cy="200"
+            rx="186"
+            ry="70"
+            fill="none"
+            stroke="#ffffff"
+            strokeOpacity="0.26"
+            strokeWidth="1.2"
+          />
+          <circle r="6" fill="#f84828" className="electron" />
+          <circle r="4.5" fill="#ffffff" fillOpacity="0.75" className="electron electron-lento" />
+        </g>
       </svg>
       <svg viewBox="0 0 400 400" className="orbita-inversa absolute inset-0 h-full w-full" aria-hidden="true">
-        <ellipse
-          cx="200"
-          cy="200"
-          rx="176"
-          ry="60"
-          transform="rotate(18 200 200)"
-          fill="none"
-          stroke="#ffffff"
-          strokeOpacity="0.08"
-          strokeWidth="1"
-        />
+        <g transform="rotate(18 200 200)">
+          <ellipse
+            cx="200"
+            cy="200"
+            rx="176"
+            ry="60"
+            fill="none"
+            stroke="#ffffff"
+            strokeOpacity="0.14"
+            strokeWidth="1"
+          />
+          <circle r="4" fill="#ffffff" fillOpacity="0.5" className="electron electron-tercero" />
+        </g>
       </svg>
 
       {/* El emblema llena el disco: así el blanco del archivo es el propio escudo y no

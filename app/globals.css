@@ -26,7 +26,7 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Órbita del emblema en la portada: giro continuo, perceptible pero calmado. */
+/* Deriva muy lenta de los aros: el movimiento principal son los electrones. */
 @keyframes orbita {
   from {
     transform: rotate(0deg);
@@ -37,14 +37,43 @@ body {
 }
 
 .orbita {
-  animation: orbita 30s linear infinite;
+  animation: orbita 90s linear infinite;
   transform-origin: center;
 }
 
-/* Segundo aro, más lento y en sentido contrario, para que el sello no parezca quieto. */
 .orbita-inversa {
-  animation: orbita 45s linear infinite reverse;
+  animation: orbita 120s linear infinite reverse;
   transform-origin: center;
+}
+
+/* Electrones: recorren la elipse, no giran con ella. offset-path los pega al trazo. */
+@keyframes orbitar {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+.electron {
+  offset-path: path("M 14,200 a 186,70 0 1,1 372,0 a 186,70 0 1,1 -372,0");
+  offset-rotate: 0deg;
+  offset-distance: 18%;
+  animation: orbitar 11s linear infinite;
+}
+
+.electron-lento {
+  animation-duration: 15s;
+  animation-direction: reverse;
+  animation-delay: -5s;
+}
+
+.electron-tercero {
+  offset-path: path("M 24,200 a 176,60 0 1,1 352,0 a 176,60 0 1,1 -352,0");
+  animation-duration: 19s;
+  animation-direction: reverse;
+  animation-delay: -9s;
 }
 
 /* Entrada escalonada del hero: los hijos entran con un retraso corto cada uno. */
@@ -81,6 +110,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .orbita,
   .orbita-inversa,
+  .electron,
   .entra,
   .aparecer {
     animation: none;
