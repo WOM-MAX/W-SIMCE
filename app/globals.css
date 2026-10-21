@@ -14,6 +14,13 @@
   --color-borde: #e6e8ee;
   --color-tenue: #5a6480;
   --color-superficie: #ffffff;
+  /* Tonos de apoyo: solo para superficies y gráficos, nunca para texto corrido. */
+  --color-ambar: #eda63a;
+  --color-ambar-suave: #fdf3e2;
+  --color-ambar-texto: #8f5c10;
+  --color-teal: #2c8b86;
+  --color-teal-suave: #e6f2f1;
+  --color-teal-texto: #1f6a66;
 }
 
 html,
@@ -107,13 +114,72 @@ body {
   animation: aparecer 0.7s ease-out both;
 }
 
+/* Revelado por scroll: una sola vez, cuando el bloque entra en pantalla. */
+.revelar {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.revelar.revelado {
+  opacity: 1;
+  transform: none;
+}
+
+/* Segmento de línea que se dibuja al revelarse: el ciclo de pasos lo usa. */
+.trazo-paso {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s linear;
+}
+
+.revelado .trazo-paso {
+  transform: scaleX(1);
+}
+
+/* Deriva lenta de las tarjetas de producto. */
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.flotar {
+  animation: flotar 7s ease-in-out infinite;
+}
+
+.flotar-lento {
+  animation: flotar 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .orbita,
   .orbita-inversa,
   .electron,
   .entra,
-  .aparecer {
+  .aparecer,
+  .flotar,
+  .flotar-lento {
     animation: none;
+  }
+
+  .revelar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .trazo-paso,
+  .revelado .trazo-paso {
+    transform: none;
+    transition: none;
   }
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ProgresoLectura } from '@/components/progreso-lectura';
+import { Revelar } from '@/components/revelar';
 
 export const metadata: Metadata = {
   title: 'W-SIMCE · Todo para evaluar, en un solo lugar · Colegio Acrópolis',
@@ -45,39 +46,55 @@ const CICLO = [
 const ROLES = [
   {
     titulo: 'Dirección',
+    icono: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z',
     texto:
       'Qué se evalúa, con qué criterio y qué muestran los resultados. Cada cambio queda registrado y el acceso va por rol.',
   },
   {
     titulo: 'Coordinación académica',
+    icono: 'M12 3 3 8l9 5 9-5-9-5ZM3 13l9 5 9-5M3 17.5l9 5 9-5',
     texto:
       'El material en un solo banco, cada pregunta con su objetivo, su clave y su figura. Sin adaptar formatos a mano.',
   },
   {
     titulo: 'Docentes',
+    icono: 'M4 20h4L18.5 9.5a2.5 2.5 0 0 0-3.5-3.5L4.5 16.5 4 20Z',
     texto:
       'Elegir el ensayo, imprimirlo o aplicarlo en línea. La corrección y el informe no son trabajo extra.',
   },
   {
     titulo: 'Familias y estudiantes',
+    icono: 'M4 11 12 4l8 7v8a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-8Z',
     texto:
       'Un resultado que se entiende: qué se evaluó, cómo le fue y qué sigue. No un número suelto al final del semestre.',
   },
 ];
 
+// Tintes de apoyo, rotando por paso. Solo superficies y glifos, nunca texto corrido.
+const TONOS = [
+  { fondo: 'bg-acento-suave', texto: 'text-acento-oscuro', aro: 'ring-acento/20' },
+  { fondo: 'bg-ambar-suave', texto: 'text-ambar-texto', aro: 'ring-ambar/30' },
+  { fondo: 'bg-teal-suave', texto: 'text-teal-texto', aro: 'ring-teal/25' },
+  { fondo: 'bg-acento-suave', texto: 'text-acento-oscuro', aro: 'ring-acento/20' },
+  { fondo: 'bg-ambar-suave', texto: 'text-ambar-texto', aro: 'ring-ambar/30' },
+];
+
 const FUERA_DEL_AULA = [
   {
     titulo: 'Nada se arma la última semana',
+    icono: 'M4 7h16v13H4V7ZM8 3v4M16 3v4M4 11h16',
     texto:
       'El material está disponible todo el año y el ensayo se compone cuando se necesita. La prueba deja de ser una carrera contra el calendario.',
   },
   {
     titulo: 'El resultado llega con la prueba',
+    icono: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM8 12l3 3 5-6',
     texto:
       'La corrección es automática y el informe por curso queda el mismo día. El apoderado no espera a fin de semestre para saber cómo va su hijo.',
   },
   {
     titulo: 'El colegio puede mostrar lo que mide',
+    icono: 'M4 20V5M4 20h16M8 17v-6M13 17V7M18 17v-4',
     texto:
       'Cada evaluación queda con su objetivo, su criterio y su registro de cambios. Eso es lo que sostiene el prestigio: no el discurso, la evidencia.',
   },
@@ -302,6 +319,52 @@ export default function Portada() {
                 problema de una persona —está en dirección, en coordinación y en el aula—, así que la
                 solución tampoco puede vivir en una carpeta compartida.
               </p>
+
+              {/* el desorden y el orden, dibujados: tres papeles sueltos y una ficha */}
+              <Revelar>
+                <div aria-hidden="true" className="mt-10 hidden items-center gap-5 sm:flex">
+                  <div className="relative h-36 w-48 shrink-0">
+                    {[
+                      { etiqueta: 'PDF', giro: '-8deg', izq: '0px', arriba: '12px' },
+                      { etiqueta: 'Word', giro: '5deg', izq: '42px', arriba: '2px' },
+                      { etiqueta: 'Planilla', giro: '-3deg', izq: '84px', arriba: '18px' },
+                    ].map((p) => (
+                      <div
+                        key={p.etiqueta}
+                        className="absolute h-28 w-24 rounded-lg border border-borde bg-white p-2.5 shadow-[0_8px_20px_rgba(32,40,88,0.10)]"
+                        style={{ left: p.izq, top: p.arriba, transform: `rotate(${p.giro})` }}
+                      >
+                        <span className="text-[9px] uppercase tracking-[0.14em] text-tenue/70">
+                          {p.etiqueta}
+                        </span>
+                        <span className="mt-2.5 block h-1 w-full rounded-full bg-borde" />
+                        <span className="mt-1.5 block h-1 w-4/5 rounded-full bg-borde" />
+                        <span className="mt-1.5 block h-1 w-3/5 rounded-full bg-borde" />
+                      </div>
+                    ))}
+                  </div>
+
+                  <span className="text-tenue/40">→</span>
+
+                  <div className="relative h-36 w-28 rounded-lg border border-marca/20 bg-white p-2.5 shadow-[0_14px_30px_rgba(32,40,88,0.16)]">
+                    <span className="flex items-center gap-1 text-[9px] uppercase tracking-[0.14em] text-marca/60">
+                      Ficha
+                    </span>
+                    <span className="mt-2.5 flex flex-wrap gap-1">
+                      <span className="h-1.5 w-6 rounded-full bg-acento/70" />
+                      <span className="h-1.5 w-4 rounded-full bg-ambar/80" />
+                      <span className="h-1.5 w-5 rounded-full bg-teal/70" />
+                    </span>
+                    <span className="mt-3 block h-1 w-full rounded-full bg-borde" />
+                    <span className="mt-1.5 block h-1 w-4/5 rounded-full bg-borde" />
+                    <span className="mt-3 flex h-6 w-6 items-center justify-center rounded-full bg-acento text-white">
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M5 12l4 4 10-10" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Revelar>
             </div>
 
             <ul className="divide-y divide-borde border-y border-borde">
@@ -343,21 +406,35 @@ export default function Portada() {
               </h2>
             </div>
 
-            <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
-              {CICLO.map((p, i) => (
-                <li key={p.titulo} className="relative border-t border-marca/15 pt-6">
-                  <span className="absolute -top-[5px] left-0 h-2 w-2 rounded-full bg-acento" />
-                  <p className="text-[11px] font-medium tracking-[0.2em] text-tenue">
-                    {String(i + 1).padStart(2, '0')}
-                  </p>
-                  <span className="mt-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-marca ring-1 ring-borde">
-                    <Icono d={p.icono} className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-3 text-base font-semibold text-marca">{p.titulo}</h3>
-                  <p className="mt-1.5 text-pretty text-sm leading-relaxed text-tenue">{p.texto}</p>
-                </li>
-              ))}
-            </ol>
+            <Revelar>
+              <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
+                {CICLO.map((p, i) => {
+                  const tono = TONOS[i % TONOS.length];
+                  return (
+                    <li key={p.titulo} className="group relative border-t border-marca/10 pt-7">
+                      <span
+                        aria-hidden="true"
+                        className="trazo-paso absolute -top-px left-0 h-[2px] w-full bg-gradient-to-r from-acento via-ambar to-teal"
+                        style={{ transitionDelay: `${i * 110}ms` }}
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute right-0 top-1 select-none text-[46px] font-semibold leading-none text-marca/[0.08]"
+                      >
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span
+                        className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ring-1 transition-transform duration-300 group-hover:-translate-y-0.5 ${tono.fondo} ${tono.texto} ${tono.aro}`}
+                      >
+                        <Icono d={p.icono} className="h-[26px] w-[26px]" />
+                      </span>
+                      <h3 className="mt-4 text-base font-semibold text-marca">{p.titulo}</h3>
+                      <p className="mt-1.5 text-pretty text-sm leading-relaxed text-tenue">{p.texto}</p>
+                    </li>
+                  );
+                })}
+              </ol>
+            </Revelar>
           </div>
         </section>
 
@@ -377,14 +454,26 @@ export default function Portada() {
               </p>
             </div>
 
-            <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {ROLES.map((r) => (
-                <li key={r.titulo} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                  <h3 className="text-base font-semibold text-white">{r.titulo}</h3>
+            <Revelar>
+              <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {ROLES.map((r, i) => (
+                <li
+                  key={r.titulo}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.07]"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`absolute inset-x-0 top-0 h-[3px] ${['bg-acento', 'bg-ambar', 'bg-teal', 'bg-acento'][i % 4]}`}
+                  />
+                  <span className="mt-1 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.08] text-white/80 ring-1 ring-white/10 transition-colors duration-300 group-hover:text-white">
+                    <Icono d={r.icono} className="h-[22px] w-[22px]" />
+                  </span>
+                  <h3 className="mt-4 text-base font-semibold text-white">{r.titulo}</h3>
                   <p className="mt-2 text-pretty text-sm leading-relaxed text-white/60">{r.texto}</p>
                 </li>
               ))}
             </ul>
+            </Revelar>
           </div>
         </section>
 
@@ -410,10 +499,11 @@ export default function Portada() {
             </div>
 
             {/* ficha de ejemplo, dibujada: no es una captura de la app */}
-            <div className="rounded-2xl border border-borde bg-white p-6 shadow-[0_20px_60px_rgba(32,40,88,0.08)]">
-              <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-tenue/70">
-                Ejemplo de ficha
-              </p>
+            <div className="relative">
+              <div className="rounded-2xl border border-borde bg-white p-6 shadow-[0_20px_60px_rgba(32,40,88,0.08)]">
+                <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-tenue/70">
+                  Ejemplo de ficha
+                </p>
               <div className="flex flex-wrap gap-1.5">
                 {FICHA.map((f) => (
                   <span
@@ -452,6 +542,31 @@ export default function Portada() {
                 <span className="font-medium text-marca">Justificación.</span> Se multiplica por 2 la
                 diferencia entre el número y 5: 2(x − 5) = 11.
               </p>
+              </div>
+
+              {/* segunda pieza: el reporte por eje, para que se lea como producto */}
+              <div className="mt-4 flex justify-end">
+                <div className="flotar-lento w-56 rounded-xl border border-borde bg-white p-4 shadow-[0_22px_50px_rgba(32,40,88,0.14)]">
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-tenue/70">Reporte por eje</p>
+                  <ul className="mt-3 space-y-2">
+                    {[
+                      { eje: 'Números', valor: 82, tono: 'bg-acento' },
+                      { eje: 'Álgebra', valor: 64, tono: 'bg-ambar' },
+                      { eje: 'Geometría', valor: 45, tono: 'bg-teal' },
+                    ].map((b) => (
+                      <li key={b.eje}>
+                        <div className="flex items-center justify-between text-[11px] text-tenue">
+                          <span>{b.eje}</span>
+                          <span className="font-medium text-marca">{b.valor}%</span>
+                        </div>
+                        <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-fondo">
+                          <span className={`block h-full rounded-full ${b.tono}`} style={{ width: `${b.valor}%` }} />
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -472,10 +587,18 @@ export default function Portada() {
               </p>
             </div>
 
-            <ul className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-borde bg-borde md:grid-cols-3">
-              {FUERA_DEL_AULA.map((d) => (
-                <li key={d.titulo} className="bg-white p-7">
-                  <h3 className="text-base font-semibold tracking-tight text-marca">{d.titulo}</h3>
+            <ul className="mt-12 grid gap-4 md:grid-cols-3">
+              {FUERA_DEL_AULA.map((d, i) => (
+                <li
+                  key={d.titulo}
+                  className="group rounded-2xl border border-borde bg-white p-7 shadow-[0_1px_0_rgba(32,40,88,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-marca/15 hover:shadow-[0_18px_40px_rgba(32,40,88,0.10)]"
+                >
+                  <span
+                    className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ring-1 ${TONOS[i % TONOS.length].fondo} ${TONOS[i % TONOS.length].texto} ${TONOS[i % TONOS.length].aro}`}
+                  >
+                    <Icono d={d.icono} className="h-[24px] w-[24px]" />
+                  </span>
+                  <h3 className="mt-4 text-base font-semibold tracking-tight text-marca">{d.titulo}</h3>
                   <p className="mt-2 text-pretty text-sm leading-relaxed text-tenue">{d.texto}</p>
                 </li>
               ))}
@@ -504,9 +627,46 @@ export default function Portada() {
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-tenue">
                   Antes de operar con datos definitivos falta cerrar la base legal, la minimización,
-                  el plazo de retención y el control de acceso conforme a la Ley 21.719. El
-                  repositorio del proyecto está público y debe pasar a privado.
+                  el plazo de retención y el control de acceso conforme a la Ley 21.719.
                 </p>
+              </div>
+
+              {/* sello de privacidad: anillos que giran en sentidos contrarios */}
+              <div className="relative mx-auto mt-10 hidden aspect-square w-52 md:block">
+                <svg viewBox="0 0 200 200" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="92"
+                    fill="none"
+                    stroke="#202858"
+                    strokeOpacity="0.14"
+                    strokeWidth="1"
+                    strokeDasharray="2 7"
+                  />
+                  <circle cx="100" cy="100" r="70" fill="none" stroke="#202858" strokeOpacity="0.10" strokeWidth="1" />
+                </svg>
+                <svg
+                  viewBox="0 0 200 200"
+                  className="orbita-inversa absolute inset-0 h-full w-full"
+                  aria-hidden="true"
+                >
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="80"
+                    fill="none"
+                    stroke="#f84828"
+                    strokeOpacity="0.40"
+                    strokeWidth="1.4"
+                    strokeDasharray="30 210"
+                  />
+                </svg>
+                <div className="absolute inset-0 grid place-items-center">
+                  <span className="grid h-20 w-20 place-items-center rounded-full bg-marca text-white shadow-[0_18px_40px_rgba(32,40,88,0.25)]">
+                    <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-8 w-8" />
+                  </span>
+                </div>
               </div>
             </div>
 
