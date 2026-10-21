@@ -736,7 +736,7 @@ export default function Portada() {
 
       <footer className="bg-marca-oscuro">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-12">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:gap-10">
             {/* identidad */}
             <div>
               <div className="flex items-center gap-3">
@@ -752,7 +752,6 @@ export default function Portada() {
                 Evaluación estandarizada: banco de ítems con su objetivo y su clave, ensayos,
                 rendición en línea, corrección automática y reportes por eje.
               </p>
-              <p className="mt-4 text-xs text-white/40">Puente Alto, Chile</p>
             </div>
 
             {/* plataforma */}
@@ -796,6 +795,36 @@ export default function Portada() {
                 ))}
               </ul>
             </nav>
+
+            {/* contacto */}
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/55">
+                Contacto
+              </p>
+              <ul className="mt-4 space-y-2.5 text-sm">
+                <li>
+                  <a
+                    href="tel:+56223194392"
+                    className="inline-flex items-center gap-2 text-white/65 transition hover:text-white"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 4h3.2l1.6 4-2 1.4a11 11 0 0 0 5.8 5.8l1.4-2 4 1.6V18a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 3 6.2 2 2 0 0 1 5 4Z" />
+                    </svg>
+                    +56 2 2319 4392
+                  </a>
+                </li>
+                <li className="text-white/65">Puente Alto, Chile</li>
+              </ul>
+            </div>
 
             {/* datos */}
             <div>
