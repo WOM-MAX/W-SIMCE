@@ -19,6 +19,14 @@ function tono(gris: unknown, defecto = 0): string {
   return `rgb(${c},${c},${c})`;
 }
 
+// gris define el tono del trazo y del texto (665 lineas, 21 textos y 5 paths
+// del banco lo usan). Sin gris el color queda en currentColor.
+function color(e: Elemento, defecto = 'currentColor'): string {
+  const g = e.gris;
+  if (g === undefined || g === null) return defecto;
+  return tono(g);
+}
+
 function ancla(valor: unknown): 'start' | 'middle' | 'end' {
   if (valor === 'medio') return 'middle';
   if (valor === 'fin') return 'end';
@@ -75,7 +83,7 @@ function dibujar(e: Elemento, clave: number) {
         height={numero(e.h)}
         fill={relleno}
         fillOpacity={e.relleno === 'gris' ? numero(e.grisRelleno, 1) : 1}
-        stroke="currentColor"
+        stroke={color(e)}
         strokeWidth={grosor}
         strokeDasharray={trazo}
       />
@@ -90,7 +98,7 @@ function dibujar(e: Elemento, clave: number) {
         y1={numero(e.y1)}
         x2={numero(e.x2)}
         y2={numero(e.y2)}
-        stroke="currentColor"
+        stroke={color(e)}
         strokeWidth={grosor}
         strokeDasharray={trazo}
       />
@@ -106,7 +114,7 @@ function dibujar(e: Elemento, clave: number) {
         r={numero(e.r)}
         fill={e.relleno === 'gris' ? tono(0.85) : 'transparent'}
         fillOpacity={e.relleno === 'gris' ? numero(e.grisRelleno, 1) : 1}
-        stroke="currentColor"
+        stroke={color(e)}
         strokeWidth={grosor}
         strokeDasharray={trazo}
       />
@@ -120,7 +128,7 @@ function dibujar(e: Elemento, clave: number) {
         points={puntos(e.puntos)}
         fill={e.relleno === 'gris' ? tono(0.85) : 'transparent'}
         fillOpacity={e.relleno === 'gris' ? numero(e.grisRelleno, 1) : 1}
-        stroke="currentColor"
+        stroke={color(e)}
         strokeWidth={grosor}
         strokeDasharray={trazo}
       />
@@ -133,7 +141,7 @@ function dibujar(e: Elemento, clave: number) {
         key={clave}
         d={String(e.d ?? '')}
         fill={e.relleno === 'gris' ? tono(0.85) : 'none'}
-        stroke="currentColor"
+        stroke={color(e)}
         strokeWidth={grosor}
         strokeDasharray={trazo}
       />
@@ -156,8 +164,8 @@ function dibujar(e: Elemento, clave: number) {
         fontFamily="Helvetica, Arial, sans-serif"
         fontWeight={e.negrita ? 700 : 400}
         textAnchor={ancla(e.anclaje)}
-        fill="currentColor"
-        stroke={trazo ? 'currentColor' : undefined}
+        fill={color(e)}
+        stroke={trazo ? color(e) : undefined}
         strokeWidth={trazo ? grosor : undefined}
       >
         {lineas.flatMap((linea, i) =>

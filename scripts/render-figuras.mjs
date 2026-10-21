@@ -34,6 +34,20 @@ function escapar(t) {
     .replace(/"/g, '&quot;');
 }
 
+// gris viene en 0..1 (0 negro). Es el tono del trazo y del texto; sin gris, negro.
+function tono(gris, defecto = 0) {
+  let v = numero(gris, defecto);
+  if (v > 1) v = v / 100;
+  v = Math.max(0, Math.min(1, v));
+  const c = Math.round(v * 255);
+  return `rgb(${c},${c},${c})`;
+}
+
+function color(e) {
+  const g = e.gris;
+  return g === undefined || g === null ? '#000' : tono(g);
+}
+
 function partirTexto(texto, ancho, tam) {
   if (!texto) return [''];
   if (!ancho || ancho <= 0) return [texto];
@@ -102,21 +116,21 @@ function dibujar(e) {
 
   if (e.op === 'rect') {
     const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" fill="${relleno}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'line') {
-    return `<line x1="${numero(e.x1)}" y1="${numero(e.y1)}" x2="${numero(e.x2)}" y2="${numero(e.y2)}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<line x1="${numero(e.x1)}" y1="${numero(e.y1)}" x2="${numero(e.x2)}" y2="${numero(e.y2)}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'circle') {
     const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" fill="${relleno}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'poly') {
     const relleno = e.relleno === 'gris' ? '#d9d9d9' : 'none';
-    return `<polygon points="${escapar(e.puntos ?? '')}" fill="${relleno}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<polygon points="${escapar(e.puntos ?? '')}" fill="${relleno}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'path') {
-    return `<path d="${escapar(e.d ?? '')}" fill="none" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<path d="${escapar(e.d ?? '')}" fill="none" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'text') {
     const tam = numero(e.tam, 8);
@@ -137,37 +151,34 @@ function dibujar(e) {
               : `<tspan>${escapar(tramo.texto)}</tspan>`
           )
           .join('');
-        return `<text x="${x}" y="${base}" font-size="${tam}" font-weight="${peso}" font-family="Helvetica, Arial, sans-serif" text-anchor="${anclaje}" fill="#000">${contenido}</text>`;
+        return `<text x="${x}" y="${base}" font-size="${tam}" font-weight="${peso}" font-family="Helvetica, Arial, sans-serif" text-anchor="${anclaje}" fill="${color(e)}">${contenido}</text>`;
       })
       .join('');
   }
   return '';
 }
 
-const codigos = process.argv.slice(2);
-if (!codigos.length) {
-  console.error('Falta al menos un codigo de item.');
+// Uso:
+//   node --env-file=.env scripts/render-figuras.mjs CODIGO_ITEM [CODIGO_ITEM...]
+//   node --env-file=.env scripts/render-figuras.mjs --figura=CODIGO_FIGURA [...]
+// El segundo modo sirve para figuras que todavia no estan enlazadas a un item.
+
+const argumentos = process.argv.slice(2);
+if (!argumentos.length) {
+  console.error('Falta al menos un codigo de item, o --figura=CODIGO.');
   process.exit(1);
 }
 
-for (const codigo of codigos) {
-  const item = await prisma.item.findUnique({
-    where: { codigo },
-    include: { figura: true, versiones: { take: 1 } },
-  });
-  if (!item || !item.figura) {
-    console.log(`${codigo}: sin figura`);
-    continue;
-  }
-  const p = item.figura.primitivas;
+function pintar(etiqueta, primitivas, nota) {
+  const p = primitivas ?? {};
   const ancho = numero(p.ancho, 400);
   const alto = numero(p.alto, 200);
   const elementos = Array.isArray(p.elementos) ? p.elementos : [];
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${ancho}" height="${alto}" viewBox="0 0 ${ancho} ${alto}"><rect width="${ancho}" height="${alto}" fill="#ffffff"/>${elementos.map(dibujar).join('')}</svg>`;
 
-  const svgPath = path.join(salida, `${codigo}.svg`);
-  const pngPath = path.join(salida, `${codigo}.png`);
+  const svgPath = path.join(salida, `${etiqueta}.svg`);
+  const pngPath = path.join(salida, `${etiqueta}.png`);
   fs.writeFileSync(svgPath, svg, 'utf8');
 
   const resvg = new Resvg(svg, {
@@ -180,8 +191,33 @@ for (const codigo of codigos) {
   });
   fs.writeFileSync(pngPath, resvg.render().asPng());
 
-  console.log(`${codigo}: ${elementos.length} elementos -> ${pngPath}`);
-  console.log(`  enunciado: ${String(item.versiones[0]?.enunciado ?? '').slice(0, 90)}`);
+  console.log(`${etiqueta}: ${elementos.length} elementos -> ${pngPath}`);
+  if (nota) console.log(`  ${nota}`);
+}
+
+for (const argumento of argumentos) {
+  const esFigura = argumento.startsWith('--figura=');
+  const codigo = esFigura ? argumento.slice('--figura='.length) : argumento;
+
+  if (esFigura) {
+    const figura = await prisma.figura.findUnique({ where: { codigo } });
+    if (!figura) {
+      console.log(`${codigo}: figura inexistente`);
+      continue;
+    }
+    pintar(codigo, figura.primitivas, 'figura suelta');
+    continue;
+  }
+
+  const item = await prisma.item.findUnique({
+    where: { codigo },
+    include: { figura: true, versiones: { take: 1 } },
+  });
+  if (!item || !item.figura) {
+    console.log(`${codigo}: sin figura`);
+    continue;
+  }
+  pintar(codigo, item.figura.primitivas, `enunciado: ${String(item.versiones[0]?.enunciado ?? '').slice(0, 90)}`);
 }
 
 await prisma.$disconnect();

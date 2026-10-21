@@ -20,6 +20,20 @@ function escapar(t) {
   return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// gris viene en 0..1 (0 negro). Es el tono del trazo y del texto; sin gris, negro.
+function tono(gris, defecto = 0) {
+  let v = numero(gris, defecto);
+  if (v > 1) v = v / 100;
+  v = Math.max(0, Math.min(1, v));
+  const c = Math.round(v * 255);
+  return `rgb(${c},${c},${c})`;
+}
+
+function color(e) {
+  const g = e.gris;
+  return g === undefined || g === null ? '#000' : tono(g);
+}
+
 function partirTexto(texto, ancho, tam) {
   if (!texto) return [''];
   if (!ancho || ancho <= 0) return [texto];
@@ -44,19 +58,19 @@ function dibujar(e) {
   const trazo = e.punteada ? ' stroke-dasharray="3 2.4"' : '';
 
   if (e.op === 'rect') {
-    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<rect x="${numero(e.x)}" y="${numero(e.y)}" width="${numero(e.w)}" height="${numero(e.h)}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'line') {
-    return `<line x1="${numero(e.x1)}" y1="${numero(e.y1)}" x2="${numero(e.x2)}" y2="${numero(e.y2)}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<line x1="${numero(e.x1)}" y1="${numero(e.y1)}" x2="${numero(e.x2)}" y2="${numero(e.y2)}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'circle') {
-    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<circle cx="${numero(e.cx)}" cy="${numero(e.cy)}" r="${numero(e.r)}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'poly') {
-    return `<polygon points="${escapar(e.puntos ?? '')}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<polygon points="${escapar(e.puntos ?? '')}" fill="${e.relleno === 'gris' ? '#d9d9d9' : 'none'}" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'path') {
-    return `<path d="${escapar(e.d ?? '')}" fill="none" stroke="#000" stroke-width="${grosor}"${trazo}/>`;
+    return `<path d="${escapar(e.d ?? '')}" fill="none" stroke="${color(e)}" stroke-width="${grosor}"${trazo}/>`;
   }
   if (e.op === 'text') {
     const tam = numero(e.tam, 8);
@@ -68,7 +82,7 @@ function dibujar(e) {
     return lineas
       .map(
         (linea, i) =>
-          `<text x="${x}" y="${y + i * tam * 1.25}" font-size="${tam}" font-weight="${peso}" font-family="Helvetica, Arial, sans-serif" text-anchor="${anclaje}" fill="#000">${escapar(linea)}</text>`
+          `<text x="${x}" y="${y + i * tam * 1.25}" font-size="${tam}" font-weight="${peso}" font-family="Helvetica, Arial, sans-serif" text-anchor="${anclaje}" fill="${color(e)}">${escapar(linea)}</text>`
       )
       .join('');
   }
