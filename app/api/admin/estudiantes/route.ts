@@ -13,6 +13,7 @@ export async function POST(request: Request) {
   const apellidos = texto(form, 'apellidos');
   const cursoId = texto(form, 'cursoId');
   const pin = texto(form, 'pin');
+  const run = texto(form, 'run').toUpperCase() || null;
 
   if (!nombres || !apellidos || !cursoId || pin.length < 4) {
     return volver(request, '/admin?error=datos');
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
         colegioId: sesion.colegioId,
         nombres,
         apellidos,
+        run,
         codigoAcceso,
         pinHash: hashClave(pin),
       },
@@ -50,6 +52,10 @@ export async function POST(request: Request) {
 
     return volver(request, '/admin?ok=estudiante');
   } catch (error) {
+    // El RUN es único por colegio: si choca, es un dato repetido, no un fallo interno.
+    if ((error as { code?: string }).code === 'P2002') {
+      return volver(request, '/admin?error=run');
+    }
     console.error('crear estudiante', error);
     return volver(request, '/admin?error=interno');
   }

@@ -224,7 +224,7 @@ export type IntentoHistorial = {
 export async function historialDeEstudiante(estudianteId: string, colegioId: string) {
   const estudiante = await prisma.estudiante.findFirst({
     where: { id: estudianteId, colegioId },
-    select: { id: true, nombres: true, apellidos: true, codigoAcceso: true },
+    select: { id: true, nombres: true, apellidos: true, run: true, codigoAcceso: true },
   });
   if (!estudiante) return null;
 

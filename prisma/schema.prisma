@@ -182,6 +182,9 @@ model Estudiante {
   colegioId    String   @db.Uuid
   nombres      String
   apellidos    String
+  // Identificador oficial. Opcional para no bloquear cargas parciales, pero es
+  // el dato que usa el colegio para reconocer al alumno (formato 12345678-9).
+  run          String?
   codigoAcceso String
   pinHash      String
   email        String?
@@ -190,6 +193,7 @@ model Estudiante {
   intentos     Intento[]
 
   @@unique([colegioId, codigoAcceso])
+  @@unique([colegioId, run])
 }
 
 model Matricula {

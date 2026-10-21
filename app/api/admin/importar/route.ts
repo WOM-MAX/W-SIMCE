@@ -41,6 +41,7 @@ export async function POST(request: Request) {
     const colApellidos = columnas.get('apellidos');
     const colCurso = columnas.get('curso');
     const colPin = columnas.get('pin') ?? columnas.get('clave');
+    const colRun = columnas.get('run') ?? columnas.get('rut');
 
     if (!colNombres || !colApellidos || !colCurso) {
       return volver(request, '/admin?error=columnas');
@@ -81,6 +82,7 @@ export async function POST(request: Request) {
       const apellidos = fila.getCell(colApellidos).text.trim();
       const nombreCurso = fila.getCell(colCurso).text.trim();
       const pin = (colPin ? fila.getCell(colPin).text.trim() : '') || '1234';
+      const run = (colRun ? fila.getCell(colRun).text.trim().toUpperCase() : '') || null;
 
       // Fila vacía o la nota aclaratoria al pie.
       if (!nombres && !apellidos && !nombreCurso) continue;
@@ -111,12 +113,26 @@ export async function POST(request: Request) {
         continue;
       }
 
+      // El RUN es único por colegio: si ya está, la fila es un duplicado.
+      if (run) {
+        const repetido = await prisma.estudiante.findFirst({
+          where: { colegioId: sesion.colegioId, run },
+          select: { id: true },
+        });
+        if (repetido) {
+          errores += 1;
+          if (detalles.length < 5) detalles.push(`Fila ${numero}: el RUN ${run} ya está cargado.`);
+          continue;
+        }
+      }
+
       const codigoAcceso = await siguienteCodigo(sesion.colegioId, `W${curso.nivel.codigo}-`);
       const estudiante = await prisma.estudiante.create({
         data: {
           colegioId: sesion.colegioId,
           nombres,
           apellidos,
+          run,
           codigoAcceso,
           pinHash: hashClave(pin),
         },

@@ -41,7 +41,8 @@ export default async function HistorialEstudiante({
               {estudiante.nombres} {estudiante.apellidos}
             </h1>
             <p className="text-xs text-tenue">
-              Código {estudiante.codigoAcceso} · {historial.length} evaluaciones rendidas
+              Código {estudiante.codigoAcceso} · RUN {estudiante.run ?? 'sin registro'} ·{' '}
+              {historial.length} evaluaciones rendidas
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

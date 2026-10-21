@@ -18,6 +18,7 @@ const MENSAJES: Record<string, string> = {
 const ERRORES: Record<string, string> = {
   datos: 'Faltan datos obligatorios.',
   email: 'Ese correo ya existe o no es válido.',
+  run: 'Ese RUN ya está cargado en otro estudiante.',
   curso: 'Elige un curso válido.',
   clave: 'La clave o el PIN deben tener al menos 4 caracteres.',
   permiso: 'No tienes permisos de administración.',
@@ -284,6 +285,10 @@ export default async function Admin({
                 </select>
               </label>
               <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+                RUN (opcional)
+                <input name="run" placeholder="12345678-9" className={CLASE_INPUT} />
+              </label>
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
                 PIN inicial
                 <input name="pin" required minLength={4} defaultValue="1234" className={CLASE_INPUT} />
               </label>
@@ -359,6 +364,7 @@ export default async function Admin({
                   className="h-4 w-4 accent-acento"
                 />
                 <span className="w-20 font-mono text-xs text-tenue">{e.codigoAcceso}</span>
+                <span className="w-24 font-mono text-xs text-tenue">{e.run ?? '—'}</span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-slate-800">
                     {e.nombres} {e.apellidos}
