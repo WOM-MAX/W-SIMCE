@@ -626,32 +626,55 @@ export default function Portada() {
               </p>
 
               <div className="mt-10 flex items-center gap-5">
-                {/* distintivo de seguridad: escudo en placa y marca de verificación */}
-                <div className="relative hidden shrink-0 sm:block">
-                  <div className="relative grid h-28 w-28 place-items-center rounded-[28px] bg-gradient-to-br from-[#26306a] to-marca-oscuro shadow-[0_18px_38px_rgba(32,40,88,0.26)]">
-                    <span
-                      aria-hidden="true"
-                      className="pointer-events-none absolute inset-0 rounded-[28px] bg-gradient-to-tr from-transparent via-white/15 to-transparent"
-                    />
-                    <Icono
-                      d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z"
-                      className="h-12 w-12 text-white"
-                    />
-                  </div>
-                  <span className="absolute -bottom-1.5 -right-1.5 grid h-9 w-9 place-items-center rounded-full border-[3px] border-white bg-acento text-white shadow-[0_6px_14px_rgba(248,72,40,0.45)]">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-4 w-4"
+                {/* escudo con volumen, brillo recortado al contorno y marca de verificación */}
+                <div className="hidden shrink-0 sm:block">
+                  <svg
+                    viewBox="0 0 64 64"
+                    className="h-28 w-28 drop-shadow-[0_14px_26px_rgba(32,40,88,0.26)]"
+                    aria-hidden="true"
+                  >
+                    <defs>
+                      <linearGradient id="escudo-cuerpo" x1="0" y1="0" x2="0.2" y2="1">
+                        <stop offset="0" stopColor="#4467b8" />
+                        <stop offset="1" stopColor="#151d40" />
+                      </linearGradient>
+                      <radialGradient id="escudo-brillo" cx="0.28" cy="0.22" r="0.55">
+                        <stop offset="0" stopColor="#ffffff" stopOpacity="0.55" />
+                        <stop offset="0.55" stopColor="#ffffff" stopOpacity="0.12" />
+                        <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
+                      </radialGradient>
+                      <linearGradient id="escudo-sombra" x1="0.35" y1="0" x2="1" y2="0.9">
+                        <stop offset="0" stopColor="#000000" stopOpacity="0" />
+                        <stop offset="1" stopColor="#000000" stopOpacity="0.28" />
+                      </linearGradient>
+                      <clipPath id="escudo-recorte">
+                        <path d="M32 3.5 55 11v16.5C55 40.6 45.2 51.9 32 60.5 18.8 51.9 9 40.6 9 27.5V11Z" />
+                      </clipPath>
+                    </defs>
+                    <g clipPath="url(#escudo-recorte)">
+                      <rect width="64" height="64" fill="url(#escudo-cuerpo)" />
+                      <rect width="64" height="64" fill="url(#escudo-brillo)" />
+                      <rect width="64" height="64" fill="url(#escudo-sombra)" />
+                    </g>
+                    <path
+                      d="M21 32.5l7.5 7.5L44 22"
                       fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
+                      stroke="#0b1230"
+                      strokeOpacity="0.28"
+                      strokeWidth="6.6"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M5 12l4 4 10-10" />
-                    </svg>
-                  </span>
+                      transform="translate(0,1.6)"
+                    />
+                    <path
+                      d="M21 32.5l7.5 7.5L44 22"
+                      fill="none"
+                      stroke="#ffffff"
+                      strokeWidth="6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
 
                 <p className="text-[11px] leading-relaxed tracking-[0.04em] text-tenue/70">
