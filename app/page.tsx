@@ -626,31 +626,32 @@ export default function Portada() {
               </p>
 
               <div className="mt-10 flex items-center gap-5">
-                {/* sello de privacidad: anillos continuos con marcas y escudo al centro */}
-                <div className="relative hidden h-32 w-32 shrink-0 sm:block">
-                  <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" aria-hidden="true">
-                    <circle cx="100" cy="100" r="94" fill="none" stroke="#202858" strokeOpacity="0.16" strokeWidth="1.5" />
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="#202858" strokeOpacity="0.08" strokeWidth="1" />
-                    {Array.from({ length: 12 }).map((_, i) => (
-                      <line
-                        key={i}
-                        x1="100"
-                        y1="8"
-                        x2="100"
-                        y2="16"
-                        stroke="#202858"
-                        strokeOpacity="0.22"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        transform={`rotate(${i * 30} 100 100)`}
-                      />
-                    ))}
-                  </svg>
-                  <div className="absolute inset-0 grid place-items-center">
-                    <span className="grid h-16 w-16 place-items-center rounded-full bg-marca text-white shadow-[0_10px_24px_rgba(32,40,88,0.22)]">
-                      <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-7 w-7" />
-                    </span>
+                {/* distintivo de seguridad: escudo en placa y marca de verificación */}
+                <div className="relative hidden shrink-0 sm:block">
+                  <div className="relative grid h-28 w-28 place-items-center rounded-[28px] bg-gradient-to-br from-[#26306a] to-marca-oscuro shadow-[0_18px_38px_rgba(32,40,88,0.26)]">
+                    <span
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 rounded-[28px] bg-gradient-to-tr from-transparent via-white/15 to-transparent"
+                    />
+                    <Icono
+                      d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z"
+                      className="h-12 w-12 text-white"
+                    />
                   </div>
+                  <span className="absolute -bottom-1.5 -right-1.5 grid h-9 w-9 place-items-center rounded-full border-[3px] border-white bg-acento text-white shadow-[0_6px_14px_rgba(248,72,40,0.45)]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12l4 4 10-10" />
+                    </svg>
+                  </span>
                 </div>
 
                 <p className="text-[11px] leading-relaxed tracking-[0.04em] text-tenue/70">
