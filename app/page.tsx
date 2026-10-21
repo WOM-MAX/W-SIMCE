@@ -111,20 +111,24 @@ const FICHA = [
 const PRIVACIDAD = [
   {
     titulo: 'Alojamiento',
+    icono: 'M4 5h16v5H4V5ZM4 14h16v5H4v-5ZM7 7.5h.01M7 16.5h.01',
     texto:
       'Datos en PostgreSQL sobre Neon, con cifrado en tránsito y conexiones separadas para lectura y migraciones.',
   },
   {
     titulo: 'Sesión firmada',
+    icono: 'M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5v-9Z',
     texto:
       'Cookie httpOnly con firma HMAC SHA-256. La clave de cada ítem nunca viaja al navegador durante la prueba.',
   },
   {
     titulo: 'Trazabilidad',
+    icono: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 8v5l3 2',
     texto: 'Cada acceso, cambio de clave y edición queda en un registro con fecha y responsable.',
   },
   {
     titulo: 'Acceso por rol',
+    icono: 'M15 7a4 4 0 1 1-3.6 5.8L9 15.4H7v2H4v-3l6.4-6.4A4 4 0 0 1 15 7Z',
     texto:
       'Administración, UTP y docentes ven solo lo que les corresponde. El estudiante ve únicamente sus evaluaciones.',
   },
@@ -621,60 +625,70 @@ export default function Portada() {
                 necesario para evaluar, y con acceso restringido por rol.
               </p>
 
-              <div className="mt-8 rounded-2xl border border-borde bg-fondo p-5">
-                <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-tenue">
-                  Estado para producción
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-tenue">
-                  Antes de operar con datos definitivos falta cerrar la base legal, la minimización,
-                  el plazo de retención y el control de acceso conforme a la Ley 21.719.
-                </p>
-              </div>
+              <div className="mt-8 flex items-center gap-5">
+                {/* sello compacto: anillos que giran en sentidos contrarios */}
+                <div className="relative hidden h-24 w-24 shrink-0 sm:block">
+                  <svg viewBox="0 0 200 200" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="92"
+                      fill="none"
+                      stroke="#202858"
+                      strokeOpacity="0.16"
+                      strokeWidth="1.5"
+                      strokeDasharray="2 8"
+                    />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#202858" strokeOpacity="0.10" strokeWidth="1" />
+                  </svg>
+                  <svg
+                    viewBox="0 0 200 200"
+                    className="orbita-inversa absolute inset-0 h-full w-full"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="80"
+                      fill="none"
+                      stroke="#f84828"
+                      strokeOpacity="0.45"
+                      strokeWidth="1.6"
+                      strokeDasharray="34 210"
+                    />
+                  </svg>
+                  <div className="absolute inset-0 grid place-items-center">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-marca text-white shadow-[0_12px_26px_rgba(32,40,88,0.28)]">
+                      <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-5 w-5" />
+                    </span>
+                  </div>
+                </div>
 
-              {/* sello de privacidad: anillos que giran en sentidos contrarios */}
-              <div className="relative mx-auto mt-10 hidden aspect-square w-52 md:block">
-                <svg viewBox="0 0 200 200" className="orbita absolute inset-0 h-full w-full" aria-hidden="true">
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="92"
-                    fill="none"
-                    stroke="#202858"
-                    strokeOpacity="0.14"
-                    strokeWidth="1"
-                    strokeDasharray="2 7"
-                  />
-                  <circle cx="100" cy="100" r="70" fill="none" stroke="#202858" strokeOpacity="0.10" strokeWidth="1" />
-                </svg>
-                <svg
-                  viewBox="0 0 200 200"
-                  className="orbita-inversa absolute inset-0 h-full w-full"
-                  aria-hidden="true"
-                >
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="80"
-                    fill="none"
-                    stroke="#f84828"
-                    strokeOpacity="0.40"
-                    strokeWidth="1.4"
-                    strokeDasharray="30 210"
-                  />
-                </svg>
-                <div className="absolute inset-0 grid place-items-center">
-                  <span className="grid h-20 w-20 place-items-center rounded-full bg-marca text-white shadow-[0_18px_40px_rgba(32,40,88,0.25)]">
-                    <Icono d="M12 3l7 3v5c0 4.4-3 8.2-7 10-4-1.8-7-5.6-7-10V6l7-3Z" className="h-8 w-8" />
-                  </span>
+                <div className="flex-1 rounded-2xl border border-ambar/40 bg-ambar-suave p-4">
+                  <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-ambar-texto">
+                    Estado para producción
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-tenue">
+                    Antes de operar con datos definitivos falta cerrar la base legal, la minimización,
+                    el plazo de retención y el control de acceso conforme a la Ley 21.719.
+                  </p>
                 </div>
               </div>
             </div>
 
-            <ul className="divide-y divide-borde border-y border-borde">
-              {PRIVACIDAD.map((p) => (
-                <li key={p.titulo} className="grid gap-1 py-5 sm:grid-cols-[10rem_1fr] sm:gap-6">
-                  <h3 className="text-sm font-semibold text-marca">{p.titulo}</h3>
-                  <p className="text-pretty text-sm leading-relaxed text-tenue">{p.texto}</p>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {PRIVACIDAD.map((p, i) => (
+                <li
+                  key={p.titulo}
+                  className="rounded-2xl border border-borde bg-fondo p-5 transition-colors duration-300 hover:border-marca/15"
+                >
+                  <span
+                    className={`inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ${TONOS[i % TONOS.length].fondo} ${TONOS[i % TONOS.length].texto} ${TONOS[i % TONOS.length].aro}`}
+                  >
+                    <Icono d={p.icono} className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-3 text-sm font-semibold text-marca">{p.titulo}</h3>
+                  <p className="mt-1.5 text-pretty text-sm leading-relaxed text-tenue">{p.texto}</p>
                 </li>
               ))}
             </ul>
