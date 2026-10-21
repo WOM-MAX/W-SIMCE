@@ -1,9 +1,16 @@
-# Encargo a Codex: reparar las figuras del banco W-SIMCE
+# Anexo técnico para Codex: reparación de figuras del banco W-SIMCE
 
-Este documento es la orden de trabajo completa. Si algo de aquí choca con una instrucción
-posterior, manda este documento. Si algo no está previsto, se pregunta y se espera.
+Este documento no define quién manda: eso lo define el plan de trabajo del usuario. Aquí solo
+están los datos verificados, el formato de las figuras, las herramientas y las comprobaciones
+técnicas que hacen falta para repararlas sin dañar nada.
 
-El operador humano manda. Vos ejecutás y reportás. No negociás el alcance.
+Reparto vigente: la reparación de ítems y figuras es de Codex. DeepSeek programa la aplicación y
+no escribe en `Item`, `ItemVersion`, `Alternativa`, `Figura` ni `TextoLectura`. La aplicación
+puede leer el banco.
+
+Condición previa: Codex debe renderizar con el código en el commit `4b9424a` o posterior. Los
+commits `e2f20d0` y `4b9424a` corrigen tres defectos del dibujo que hacían que el render no
+representara lo que ve el alumno. Con código anterior, cualquier veredicto visual es inválido.
 
 ---
 
@@ -57,9 +64,9 @@ Estas reglas existen para que un error no destruya datos. Se cumplen siempre.
    reporta. La clave no se toca nunca.
 6. Nada de operaciones masivas. Una figura por escritura, verificada.
 7. Sin `git`. No se hace commit, ni stash, ni checkout, ni reset.
-8. No se revierte el commit `e2f20d0`. Corrige el tono `gris` en los tres renderizadores y
-   agrega `--figura=` al script de render. Sin esa corrección las figuras se ven mal y no se
-   puede comprobar nada.
+8. No se revierten los commits `e2f20d0` ni `4b9424a`. Corrigen el tono `gris`, el grosor, los
+   guiones y la opacidad del relleno en los tres renderizadores, y agregan `--figura=` al script
+   de render. Sin ellos las figuras se ven mal y no se puede comprobar nada.
 9. No se para el servidor de desarrollo del puerto 3005.
 10. No se ejecuta `prisma generate` mientras el 3005 esté arriba. En Windows el motor queda
     bloqueado y la regeneración falla con `EPERM` (comprobado dos veces).
