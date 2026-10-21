@@ -815,4 +815,60 @@ sin sesión redirige a `/login`; clave incorrecta a `?error=credenciales`; un do
 en `/admin` vuelve a `/panel`; administrador y alumno entran a su panel; estáticos
 200; tipos sin errores. Revisada renderizada en 1440, 768 y 500 px.
 
+---
+
+## 21. Banco de ítems con filtros reales (21 de octubre de 2026)
+
+El banco tenía cuatro botones que en realidad eran combinaciones fijas y una
+búsqueda por código; con 1.926 ítems eran 193 páginas de 10, la paginación perdía
+el código buscado y un `` `n `` de plantilla se imprimía como texto suelto.
+
+Ahora `/banco` filtra por:
+
+| Filtro | Valores |
+| --- | --- |
+| Curso | 4° · 6° · 8° básico · II medio (multiselección) |
+| Asignatura | Matemática · Lectura |
+| Eje | los 9 ejes, agrupados por nombre (el modelo los repite por nivel) |
+| Bloom | 6 |
+| Dificultad | 3 |
+| Habilidad | 6 categorías agrupadas en el código, sin tocar los datos |
+| Recursos | con/sin figura, con/sin texto, con OA |
+| Origen | originales · generados (`GEN`) |
+| Estado | aprobados · borradores (hoy 1.920 y 6) |
+| Texto | búsqueda por código y por frase del enunciado, sin tildes |
+
+Detalles de comportamiento: cada opción muestra **cuántos ítems dejaría**
+contando el resto de los filtros; los filtros activos aparecen como etiquetas con
+«×» y «limpiar todo»; todo el estado vive en la URL, así que el filtro se comparte
+por enlace; hay orden (código, curso, dificultad, eje), tamaño de página (10/25/50),
+paginación con páginas vecinas y una vista de tabla compacta además de las tarjetas.
+
+**Decisiones:**
+
+- **No se reescribieron los datos.** `habilidad` tiene 22 valores con sinónimos
+  («interpretar», «interpretar lenguaje», «interpretar propósito»…): se agrupan en
+  seis categorías al filtrar y la tarjeta sigue mostrando el valor original.
+- `conocimiento` quedó **fuera de los filtros**: tiene 456 valores distintos porque
+  mezcla tipo de conocimiento (conceptual, procedimental, factual, metacognitivo)
+  con tema («área del círculo», «sentido del desenlace»). Normalizarlo es una tarea
+  de datos aparte, con revisión.
+- La marca del panel (`components/marca.tsx`) pasó del candado al emblema del
+  colegio, para que coincida con la portada y el login.
+
+**Nota técnica:** para contar las facetas se lee una vez el banco con campos ligeros
+más el enunciado de la última versión, y se filtra en memoria. Con 1.926 ítems es
+inmediato; a partir de unas 20.000 filas habrá que mover el filtrado a SQL.
+
+**Deuda pendiente:** exportar la selección a CSV, selección múltiple de ítems para
+mandarlos al generador de ensayos, normalizar `conocimiento` y corregir el
+importador de `/admin` para que arme el código con la sección (`W4A`, `W2MA`).
+
+**Verificación:** con sesión de administrador, `/banco` → 1.926; `nivel=4B` → 486;
+`4B + matemática` → 246; `2M + lectura` → 240; `recurso=figura` → 439;
+`origen=gen` → 59; `bloom=aplicacion + dificultad=dificil` → 7;
+`habilidad=localizar` → 238; `estado=BORRADOR` → 6; `q=valor de x` → 15;
+`q=probabilidad` → 42. Todos coinciden con los conteos directos en la base.
+
+
 
