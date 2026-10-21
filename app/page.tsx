@@ -736,7 +736,7 @@ export default function Portada() {
 
       <footer className="bg-marca-oscuro">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr] lg:gap-10">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.5fr_1fr_1fr_1.5fr_1fr] xl:gap-10">
             {/* identidad */}
             <div>
               <div className="flex items-center gap-3">
@@ -802,6 +802,26 @@ export default function Portada() {
                 Contacto
               </p>
               <ul className="mt-4 space-y-2.5 text-sm">
+                <li>
+                  <a
+                    href="mailto:contacto@colegioacropolis.net"
+                    className="inline-flex items-center gap-2 whitespace-nowrap text-[13px] text-white/65 transition hover:text-white"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 6h18v12H3V6Zm0 .5 9 6.5 9-6.5" />
+                    </svg>
+                    contacto@colegioacropolis.net
+                  </a>
+                </li>
                 <li>
                   <a
                     href="tel:+56223194392"
