@@ -57,8 +57,9 @@ Estas reglas existen para que un error no destruya datos. Se cumplen siempre.
    reporta. La clave no se toca nunca.
 6. Nada de operaciones masivas. Una figura por escritura, verificada.
 7. Sin `git`. No se hace commit, ni stash, ni checkout, ni reset.
-8. No se revierte `components/figura.tsx`, `scripts/dibujo.mjs` ni `scripts/render-figuras.mjs`.
-   Tienen una corrección pendiente de commit que hace que el tono `gris` se respete.
+8. No se revierte el commit `e2f20d0`. Corrige el tono `gris` en los tres renderizadores y
+   agrega `--figura=` al script de render. Sin esa corrección las figuras se ven mal y no se
+   puede comprobar nada.
 9. No se para el servidor de desarrollo del puerto 3005.
 10. No se ejecuta `prisma generate` mientras el 3005 esté arriba. En Windows el motor queda
     bloqueado y la regeneración falla con `EPERM` (comprobado dos veces).
