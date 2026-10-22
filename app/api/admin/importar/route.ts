@@ -62,6 +62,14 @@ export async function POST(request: Request) {
     for (const curso of cursos) {
       porNombre.set(normalizar(curso.nombre), curso);
       porNombre.set(normalizar(`${curso.nivel.nombre} ${curso.letra}`), curso);
+
+      // El Libro de Matricula nombra el curso con un codigo: 110-4B es 4 basico B
+      // y 310-2A es II medio A. Se registra tambien esa forma.
+      const digito = (curso.nivel.codigo.match(/\d+/) ?? [''])[0];
+      if (digito) {
+        const prefijo = /M$/i.test(curso.nivel.codigo) ? '310' : '110';
+        porNombre.set(normalizar(`${prefijo}-${digito}${curso.letra}`), curso);
+      }
     }
 
     // Para no duplicar al reimportar la misma planilla.
