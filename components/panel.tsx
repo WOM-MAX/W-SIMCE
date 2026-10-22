@@ -141,7 +141,7 @@ export function Panel({
             </div>
           </div>
           <form action="/api/auth/logout" method="post">
-            <button className="w-full rounded-lg border border-white/15 px-3 py-2 text-xs text-white/70 transition hover:bg-white/10 hover:text-white">
+            <button className="pulsable w-full rounded-lg border border-white/15 px-3 py-2 text-xs text-white/70 transition hover:bg-white/10 hover:text-white">
               Cerrar sesión
             </button>
           </form>
@@ -152,7 +152,7 @@ export function Panel({
         <div className="flex items-center justify-between border-b border-borde bg-marca px-4 py-3 md:hidden">
           <Marca claro />
           <form action="/api/auth/logout" method="post">
-            <button className="rounded-lg border border-white/20 px-3 py-1.5 text-xs text-white/80">
+            <button className="pulsable rounded-lg border border-white/20 px-3 py-1.5 text-xs text-white/80">
               Salir
             </button>
           </form>

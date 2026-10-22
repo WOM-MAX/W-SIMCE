@@ -124,7 +124,7 @@ export default async function Seguimiento({
             </div>
             <form action="/api/asignaciones/intentos" method="post">
               <input type="hidden" name="asignacionId" value={asignacion.id} />
-              <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
+              <button className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
                 Dar un intento más al curso
               </button>
             </form>
@@ -180,7 +180,7 @@ export default async function Seguimiento({
                             defaultValue={15}
                             className="w-16 rounded border border-borde px-1.5 py-1 text-xs"
                           />
-                          <button className="rounded border border-borde bg-white px-2 py-1 text-xs text-slate-700 hover:bg-fondo">
+                          <button className="pulsable rounded border border-borde bg-white px-2 py-1 text-xs text-slate-700 hover:bg-fondo">
                             Prorrogar
                           </button>
                         </form>
@@ -189,7 +189,7 @@ export default async function Seguimiento({
                       {i.estado !== 'ANULADO' ? (
                         <form action="/api/intentos/anular" method="post">
                           <input type="hidden" name="intentoId" value={i.id} />
-                          <button className="rounded border border-acento px-2 py-1 text-xs text-acento-oscuro hover:bg-acento-suave">
+                          <button className="pulsable rounded border border-acento px-2 py-1 text-xs text-acento-oscuro hover:bg-acento-suave">
                             Anular
                           </button>
                         </form>

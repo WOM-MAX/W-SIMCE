@@ -69,25 +69,25 @@ export default async function Imprimir({
         <div className="flex items-center gap-2">
           <a
             href={`/ensayos/${ensayo.id}/imprimir?clave=${conClave ? '0' : '1'}`}
-            className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+            className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
           >
             {conClave ? 'Ver como estudiante' : 'Ver con la clave'}
           </a>
           <a
             href="/ensayos"
-            className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+            className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
           >
             Volver
           </a>
           <a
             href={`/api/ensayos/${ensayo.id}/docx?tamano=${medida}${conClave ? '&clave=1' : ''}`}
-            className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
+            className="pulsable rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
           >
             Descargar Word
           </a>
           <a
             href={`/api/ensayos/${ensayo.id}/pdf?tamano=${medida}${conClave ? '&clave=1' : ''}`}
-            className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
+            className="pulsable rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
           >
             Descargar PDF
           </a>

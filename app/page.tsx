@@ -255,7 +255,7 @@ export default function Portada() {
       <ProgresoLectura />
       <header className="sticky top-0 z-40 border-b border-marca/10 bg-barra/95 backdrop-blur">
         <div className="mx-auto flex h-[96px] max-w-6xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-4" aria-label="W-SIMCE, inicio">
+          <a href="/" className="pulsable flex items-center gap-4" aria-label="W-SIMCE, inicio">
             {/* la escala 1.06 saca el filo blanco del archivo: el anillo del
                 escudo llega al borde del círculo y no queda halo */}
             <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full">
@@ -270,7 +270,7 @@ export default function Portada() {
           </a>
           <a
             href="/login"
-            className="rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
+            className="pulsable rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
           >
             Ingresar
           </a>
@@ -320,13 +320,13 @@ export default function Portada() {
               >
                 <a
                   href="/login"
-                  className="rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
+                  className="pulsable rounded-full bg-acento-boton px-6 py-3 text-sm font-medium text-white transition hover:bg-acento-boton-hover"
                 >
                   Ingresar
                 </a>
                 <a
                   href="#ciclo"
-                  className="text-sm font-medium text-white/70 underline-offset-4 transition hover:text-white hover:underline"
+                  className="pulsable text-sm font-medium text-white/70 underline-offset-4 transition hover:text-white hover:underline"
                 >
                   Ver el ciclo completo
                 </a>
@@ -773,7 +773,7 @@ export default function Portada() {
                   { texto: 'Reportes', href: '/reportes' },
                 ].map((l) => (
                   <li key={l.href}>
-                    <a href={l.href} className="text-white/65 transition hover:text-white">
+                    <a href={l.href} className="pulsable text-white/65 transition hover:text-white">
                       {l.texto}
                     </a>
                   </li>
@@ -794,7 +794,7 @@ export default function Portada() {
                   { texto: 'Privacidad y datos', href: '#privacidad' },
                 ].map((l) => (
                   <li key={l.href}>
-                    <a href={l.href} className="text-white/65 transition hover:text-white">
+                    <a href={l.href} className="pulsable text-white/65 transition hover:text-white">
                       {l.texto}
                     </a>
                   </li>
@@ -811,7 +811,7 @@ export default function Portada() {
                 <li>
                   <a
                     href="mailto:contacto@colegioacropolis.net"
-                    className="inline-flex items-center gap-2 whitespace-nowrap text-[13px] text-white/65 transition hover:text-white"
+                    className="pulsable inline-flex items-center gap-2 whitespace-nowrap text-[13px] text-white/65 transition hover:text-white"
                   >
                     <svg
                       viewBox="0 0 24 24"
@@ -831,7 +831,7 @@ export default function Portada() {
                 <li>
                   <a
                     href="tel:+56223194392"
-                    className="inline-flex items-center gap-2 text-white/65 transition hover:text-white"
+                    className="pulsable inline-flex items-center gap-2 text-white/65 transition hover:text-white"
                   >
                     <svg
                       viewBox="0 0 24 24"

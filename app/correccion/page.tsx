@@ -70,7 +70,7 @@ export default async function Correccion() {
           accion={
             <a
               href="/reportes"
-              className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+              className="pulsable rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
             >
               Ver reportes
             </a>
@@ -84,7 +84,7 @@ export default async function Correccion() {
               accion={
                 <a
                   href="/ensayos"
-                  className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
+                  className="pulsable mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
                 >
                   Ir a los ensayos
                   <span aria-hidden="true">→</span>
@@ -136,7 +136,7 @@ export default async function Correccion() {
                   ))}
                   <a
                     href={`/seguimiento/${asignacion.id}`}
-                    className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white transition hover:bg-marca-oscuro"
+                    className="pulsable rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white transition hover:bg-marca-oscuro"
                   >
                     Seguimiento
                   </a>

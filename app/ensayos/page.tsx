@@ -50,7 +50,7 @@ export default async function Ensayos({
           accion={
             <a
               href="/ensayos/nuevo"
-              className="inline-flex items-center gap-2 rounded-xl bg-acento-boton px-4 py-2.5 text-sm font-medium text-white transition hover:bg-acento-boton-hover focus:outline-none focus-visible:ring-4 focus-visible:ring-acento/25"
+              className="pulsable inline-flex items-center gap-2 rounded-xl bg-acento-boton px-4 py-2.5 text-sm font-medium text-white transition hover:bg-acento-boton-hover focus:outline-none focus-visible:ring-4 focus-visible:ring-acento/25"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
                 <path d="M12 5v14M5 12h14" />
@@ -81,7 +81,7 @@ export default async function Ensayos({
               accion={
                 <a
                   href="/ensayos/nuevo"
-                  className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
+                  className="pulsable mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
                 >
                   Generar el primero
                   <span aria-hidden="true">→</span>
@@ -127,19 +127,19 @@ export default async function Ensayos({
                       <div className="flex flex-wrap items-center gap-1">
                         <a
                           href={`/ensayos/${e.id}/asignar`}
-                          className="rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo"
+                          className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo"
                         >
                           Asignar
                         </a>
 
                         <form method="post" action={`/api/ensayos/${e.id}/duplicar`}>
-                          <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
+                          <button className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
                             Duplicar
                           </button>
                         </form>
 
                         <details className="relative">
-                          <summary className="cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
+                          <summary className="pulsable cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
                             Renombrar
                           </summary>
                           <form
@@ -158,7 +158,7 @@ export default async function Ensayos({
                                 className="mt-1.5 w-full rounded-lg border border-borde px-2.5 py-2 text-sm text-marca outline-none focus:border-acento/50 focus:ring-4 focus:ring-acento/10"
                               />
                             </label>
-                            <button className="mt-3 w-full rounded-lg bg-marca px-3 py-2 text-xs font-medium text-white transition hover:bg-marca-oscuro">
+                            <button className="pulsable mt-3 w-full rounded-lg bg-marca px-3 py-2 text-xs font-medium text-white transition hover:bg-marca-oscuro">
                               Guardar nombre
                             </button>
                           </form>
@@ -171,13 +171,13 @@ export default async function Ensayos({
                         />
 
                         <details className="relative">
-                          <summary className="cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
+                          <summary className="pulsable cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
                             Imprimir
                           </summary>
                           <div className="absolute right-0 z-20 mt-2 w-64 rounded-xl border border-borde bg-white p-3 shadow-xl">
                             <a
                               href={`/ensayos/${e.id}/imprimir`}
-                              className="mb-2 flex items-center justify-between rounded-lg bg-fondo px-2.5 py-2 text-xs font-medium text-marca transition hover:bg-borde/60"
+                              className="pulsable mb-2 flex items-center justify-between rounded-lg bg-fondo px-2.5 py-2 text-xs font-medium text-marca transition hover:bg-borde/60"
                             >
                               Ver la hoja y imprimir
                               <span aria-hidden="true">→</span>
@@ -196,13 +196,13 @@ export default async function Ensayos({
                                   <span className="flex gap-1">
                                     <a
                                       href={`/api/ensayos/${e.id}/docx?tamano=${valor}`}
-                                      className="rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
+                                      className="pulsable rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
                                     >
                                       Word
                                     </a>
                                     <a
                                       href={`/api/ensayos/${e.id}/pdf?tamano=${valor}`}
-                                      className="rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
+                                      className="pulsable rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
                                     >
                                       PDF
                                     </a>
@@ -216,13 +216,13 @@ export default async function Ensayos({
                             <div className="mt-2 flex gap-1">
                               <a
                                 href={`/api/ensayos/${e.id}/docx?tamano=carta&clave=1`}
-                                className="flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
+                                className="pulsable flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
                               >
                                 Word
                               </a>
                               <a
                                 href={`/api/ensayos/${e.id}/pdf?tamano=carta&clave=1`}
-                                className="flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
+                                className="pulsable flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
                               >
                                 PDF
                               </a>

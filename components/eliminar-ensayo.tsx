@@ -69,7 +69,7 @@ export function EliminarEnsayo({
               </button>
               <button
                 type="submit"
-                className="rounded-xl bg-rose-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-rose-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-rose-200"
+                className="pulsable rounded-xl bg-rose-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-rose-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-rose-200"
               >
                 Eliminar
               </button>

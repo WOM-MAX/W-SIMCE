@@ -398,14 +398,14 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
           <div className="flex items-center gap-2 text-xs">
             <a
               href={url(params, { vista: vista === 'tabla' ? '' : 'tabla' })}
-              className="rounded-lg border border-borde px-3 py-1.5 text-slate-700 hover:bg-fondo"
+              className="pulsable rounded-lg border border-borde px-3 py-1.5 text-slate-700 hover:bg-fondo"
             >
               {vista === 'tabla' ? 'Ver tarjetas' : 'Ver tabla'}
             </a>
             {hayFiltros ? (
               <a
                 href="/banco"
-                className="rounded-lg border border-borde px-3 py-1.5 text-slate-700 hover:bg-fondo"
+                className="pulsable rounded-lg border border-borde px-3 py-1.5 text-slate-700 hover:bg-fondo"
               >
                 Limpiar todo
               </a>
@@ -581,7 +581,7 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
                 className="mt-1 w-64 rounded-lg border border-borde px-3 py-1.5 text-sm text-marca"
               />
             </label>
-            <button className="rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
+            <button className="pulsable rounded-lg border border-borde px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
               Buscar
             </button>
           </form>
@@ -594,13 +594,13 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
               <a
                 key={a.etiqueta + a.quitar}
                 href={a.quitar}
-                className="inline-flex items-center gap-1.5 rounded-full bg-acento-suave px-3 py-1 text-xs font-medium text-marca"
+                className="pulsable inline-flex items-center gap-1.5 rounded-full bg-acento-suave px-3 py-1 text-xs font-medium text-marca"
               >
                 {a.etiqueta}
                 <span aria-hidden="true">×</span>
               </a>
             ))}
-            <a href="/banco" className="px-2 text-xs text-tenue underline-offset-2 hover:underline">
+            <a href="/banco" className="pulsable px-2 text-xs text-tenue underline-offset-2 hover:underline">
               limpiar todo
             </a>
           </div>
@@ -643,7 +643,7 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
                 ))}
               </select>
             </label>
-            <button className="rounded-lg border border-borde px-2 py-1 hover:bg-fondo">Aplicar</button>
+            <button className="pulsable rounded-lg border border-borde px-2 py-1 hover:bg-fondo">Aplicar</button>
           </form>
           <span className="tabular">
             Página {paginaActual + 1} de {paginas}

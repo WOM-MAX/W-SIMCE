@@ -138,10 +138,10 @@ export default async function AsignarEnsayo({
             </p>
 
             <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+              <button className="pulsable rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Asignar y publicar
               </button>
-              <a href="/ensayos" className="text-xs text-tenue hover:text-marca">
+              <a href="/ensayos" className="pulsable text-xs text-tenue hover:text-marca">
                 Volver a ensayos
               </a>
             </div>

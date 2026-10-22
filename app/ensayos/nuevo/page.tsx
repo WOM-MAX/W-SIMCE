@@ -87,7 +87,7 @@ export default async function NuevoEnsayo({
             {Number(params.rep ?? 0) > 0
               ? `De ellas, ${params.rep} ya se habían usado en evaluaciones anteriores porque no quedaban suficientes sin repetir. `
               : 'Todas son nuevas respecto de las últimas evaluaciones. '}
-            <a href="/ensayos" className="underline">
+            <a href="/ensayos" className="pulsable underline">
               Ver mis ensayos
             </a>
           </p>
@@ -153,7 +153,7 @@ export default async function NuevoEnsayo({
               ))}
             </select>
           </label>
-          <button className="rounded-lg border border-borde bg-white px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
+          <button className="pulsable rounded-lg border border-borde bg-white px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
             Cambiar
           </button>
         </form>
@@ -284,7 +284,7 @@ export default async function NuevoEnsayo({
             </p>
           </section>
 
-          <button className="w-full rounded-xl bg-marca px-4 py-3 text-sm font-medium text-white hover:bg-marca-oscuro">
+          <button className="pulsable w-full rounded-xl bg-marca px-4 py-3 text-sm font-medium text-white hover:bg-marca-oscuro">
             Generar ensayo
           </button>
         </form>

@@ -63,7 +63,7 @@ export default async function Pregunta({
       <main className="mx-auto max-w-4xl space-y-5 px-6 py-8">
         {lectura ? (
           <details className="rounded-2xl border border-borde bg-white px-5 py-4" open={actual === 1}>
-            <summary className="cursor-pointer text-sm font-medium text-slate-700">
+            <summary className="pulsable cursor-pointer text-sm font-medium text-slate-700">
               Texto de lectura: {lectura.titulo}
             </summary>
             <div className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-700">
@@ -115,7 +115,7 @@ export default async function Pregunta({
                 name="accion"
                 value="anterior"
                 disabled={actual === 1}
-                className="rounded-lg border border-borde px-4 py-2 text-sm text-slate-600 hover:bg-fondo disabled:opacity-40"
+                className="pulsable rounded-lg border border-borde px-4 py-2 text-sm text-slate-600 hover:bg-fondo disabled:opacity-40"
               >
                 Anterior
               </button>
@@ -129,7 +129,7 @@ export default async function Pregunta({
                   type="submit"
                   name="accion"
                   value="enviar"
-                  className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro"
+                  className="pulsable rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro"
                 >
                   Enviar evaluación
                 </button>
@@ -138,7 +138,7 @@ export default async function Pregunta({
                   type="submit"
                   name="accion"
                   value="siguiente"
-                  className="rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover"
+                  className="pulsable rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover"
                 >
                   Guardar y seguir
                 </button>

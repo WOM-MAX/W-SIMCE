@@ -77,7 +77,7 @@ export default async function Alumno({
           <Marca subtitulo={`Hola, ${sesion.nombre}`} />
           <form action="/api/auth/logout" method="post">
             <button
-              className="rounded-lg border border-borde px-3 py-2 text-xs font-medium text-slate-700 hover:bg-fondo"
+              className="pulsable rounded-lg border border-borde px-3 py-2 text-xs font-medium text-slate-700 hover:bg-fondo"
               title="Cierra tu sesión y vuelve a la pantalla de acceso"
             >
               Cerrar sesión
@@ -174,7 +174,7 @@ export default async function Alumno({
                   ) : disponible ? (
                     <form action="/api/rendir/iniciar" method="post" className="mt-4">
                       <input type="hidden" name="asignacionId" value={a.id} />
-                      <button className="rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
+                      <button className="pulsable rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
                         Comenzar
                       </button>
                     </form>

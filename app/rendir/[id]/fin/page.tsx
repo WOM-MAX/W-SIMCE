@@ -108,7 +108,7 @@ export default async function Fin({ params }: { params: Promise<{ id: string }> 
 
           <a
             href="/alumno"
-            className="mt-5 inline-block rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro"
+            className="pulsable mt-5 inline-block rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro"
           >
             Volver a mis evaluaciones
           </a>

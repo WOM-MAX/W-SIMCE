@@ -65,17 +65,17 @@ export default async function DetalleReporte({
           <div className="flex flex-wrap gap-2">
             <a
               href={`/seguimiento/${informe.id}`}
-              className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+              className="pulsable rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
             >
               Seguimiento
             </a>
             <a
               href={`/api/reportes/csv?asignacion=${informe.id}`}
-              className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
+              className="pulsable rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
             >
               Descargar CSV
             </a>
-            <a href="/reportes" className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
+            <a href="/reportes" className="pulsable rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo">
               Volver
             </a>
           </div>
@@ -171,7 +171,7 @@ export default async function DetalleReporte({
                   ))}
                 </select>
               </label>
-              <button className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+              <button className="pulsable rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Comparar
               </button>
             </form>
@@ -224,7 +224,7 @@ export default async function DetalleReporte({
                 <span className="w-20 font-mono text-xs text-tenue">{e.codigo}</span>
                 <a
                   href={`/estudiantes/${e.estudianteId}`}
-                  className="min-w-0 flex-1 truncate text-sm text-slate-800 hover:text-marca hover:underline"
+                  className="pulsable min-w-0 flex-1 truncate text-sm text-slate-800 hover:text-marca hover:underline"
                 >
                   {e.nombre}
                 </a>

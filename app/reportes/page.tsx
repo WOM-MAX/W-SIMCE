@@ -59,7 +59,7 @@ export default async function Reportes({
               titulo="Todavía no hay evaluaciones asignadas"
               detalle="El informe se arma solo cuando un curso rinde un ensayo asignado. Mientras tanto, aquí no hay nada que mostrar."
               accion={
-                <a href="/ensayos" className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline">
+                <a href="/ensayos" className="pulsable mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline">
                   Ir a los ensayos
                   <span aria-hidden="true">→</span>
                 </a>
@@ -85,13 +85,13 @@ export default async function Reportes({
               <div className="flex gap-2">
                 <a
                   href={`/reportes/${informe.id}`}
-                  className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+                  className="pulsable rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
                 >
                   Detalle por pregunta
                 </a>
                 <a
                   href={`/api/reportes/csv?asignacion=${informe.id}`}
-                  className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+                  className="pulsable rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
                 >
                   Descargar CSV
                 </a>
@@ -198,7 +198,7 @@ export default async function Reportes({
                       <tr key={e.intentoId} className="border-t border-borde">
                         <td className="px-5 py-2 font-mono text-xs text-tenue">{e.codigo}</td>
                         <td className="px-3 py-2 text-slate-800">
-                          <a href={`/estudiantes/${e.estudianteId}`} className="hover:text-marca hover:underline">
+                          <a href={`/estudiantes/${e.estudianteId}`} className="pulsable hover:text-marca hover:underline">
                             {e.nombre}
                           </a>
                         </td>

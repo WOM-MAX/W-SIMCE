@@ -54,7 +54,7 @@ export default async function Inicio() {
           accion={
             <a
               href="/ensayos/nuevo"
-              className="inline-flex items-center gap-2 rounded-xl bg-acento-boton px-4 py-2.5 text-sm font-medium text-white transition hover:bg-acento-boton-hover focus:outline-none focus-visible:ring-4 focus-visible:ring-acento/25"
+              className="pulsable inline-flex items-center gap-2 rounded-xl bg-acento-boton px-4 py-2.5 text-sm font-medium text-white transition hover:bg-acento-boton-hover focus:outline-none focus-visible:ring-4 focus-visible:ring-acento/25"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true">
                 <path d="M12 5v14M5 12h14" />
@@ -126,7 +126,7 @@ export default async function Inicio() {
               accion={
                 <a
                   href="/ensayos/nuevo"
-                  className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
+                  className="pulsable mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
                 >
                   Generar el primero
                   <span aria-hidden="true">→</span>

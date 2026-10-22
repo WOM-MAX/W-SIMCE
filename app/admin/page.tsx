@@ -169,7 +169,7 @@ export default async function Admin({
               />
             </label>
             <div className="flex items-end">
-              <button className="w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+              <button className="pulsable w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Guardar
               </button>
             </div>
@@ -194,7 +194,7 @@ export default async function Admin({
                 className="mt-1 w-24 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca"
               />
             </label>
-            <button className="rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
+            <button className="pulsable rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
               Purgar
             </button>
           </form>
@@ -209,7 +209,7 @@ export default async function Admin({
           <div className="flex flex-wrap items-end gap-4">
             <a
               href="/api/admin/plantilla"
-              className="rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo"
+              className="pulsable rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo"
             >
               Descargar plantilla
             </a>
@@ -229,7 +229,7 @@ export default async function Admin({
                   className="mt-1 block text-xs text-slate-700"
                 />
               </label>
-              <button className="rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+              <button className="pulsable rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Importar
               </button>
             </form>
@@ -265,7 +265,7 @@ export default async function Admin({
                   <input name="clave" required minLength={4} className={CLASE_INPUT} />
                 </label>
               </div>
-              <button className="w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
+              <button className="pulsable w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Crear docente
               </button>
             </form>
@@ -305,7 +305,7 @@ export default async function Admin({
                 PIN inicial
                 <input name="pin" required minLength={4} defaultValue="1234" className={CLASE_INPUT} />
               </label>
-              <button className="w-full rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
+              <button className="pulsable w-full rounded-lg bg-acento-boton px-4 py-2 text-sm font-medium text-white hover:bg-acento-boton-hover">
                 Crear estudiante
               </button>
             </form>
@@ -337,7 +337,7 @@ export default async function Admin({
                     placeholder="Nueva clave"
                     className="w-32 rounded-lg border border-borde px-2 py-1 text-xs"
                   />
-                  <button className="rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
+                  <button className="pulsable rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
                     Cambiar
                   </button>
                 </form>
@@ -356,7 +356,7 @@ export default async function Admin({
               <span className="text-xs text-tenue">{estudiantesVisibles.length}</span>
               <button
                 form="borrar-estudiantes"
-                className="rounded-lg border border-acento px-3 py-1.5 text-xs font-medium text-acento-oscuro hover:bg-acento-suave"
+                className="pulsable rounded-lg border border-acento px-3 py-1.5 text-xs font-medium text-acento-oscuro hover:bg-acento-suave"
                 title="Borra los estudiantes marcados, con sus intentos y respuestas"
               >
                 Borrar marcados
@@ -416,7 +416,7 @@ export default async function Admin({
                     placeholder="Nuevo PIN"
                     className="w-28 rounded-lg border border-borde px-2 py-1 text-xs"
                   />
-                  <button className="rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
+                  <button className="pulsable rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
                     Cambiar
                   </button>
                 </form>

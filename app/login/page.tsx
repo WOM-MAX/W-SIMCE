@@ -103,13 +103,13 @@ export default async function Login({
       <main className="flex min-h-dvh flex-col">
         {/* encabezado compacto, solo en móvil */}
         <header className="flex h-16 items-center justify-between border-b border-borde/70 px-6 lg:hidden">
-          <a href="/" className="flex items-center gap-2.5" aria-label="Volver a la portada">
+          <a href="/" className="pulsable flex items-center gap-2.5" aria-label="Volver a la portada">
             <span className="block h-9 w-9 shrink-0 overflow-hidden rounded-full">
               <img src="/emblema-192.png" alt="" width={192} height={192} className="h-full w-full object-cover" />
             </span>
             <span className="text-[15px] font-semibold tracking-tight text-marca">W-SIMCE</span>
           </a>
-          <a href="/" className="text-sm text-tenue transition hover:text-marca">
+          <a href="/" className="pulsable text-sm text-tenue transition hover:text-marca">
             Volver
           </a>
         </header>
@@ -119,7 +119,7 @@ export default async function Login({
             <div className="hidden lg:block">
               <a
                 href="/"
-                className="inline-flex items-center gap-1.5 text-sm text-tenue transition hover:text-marca"
+                className="pulsable inline-flex items-center gap-1.5 text-sm text-tenue transition hover:text-marca"
               >
                 <span aria-hidden="true" className="text-acento">
                   ←
