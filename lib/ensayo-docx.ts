@@ -59,8 +59,9 @@ export async function documentoDocx(doc: Documento): Promise<Buffer> {
     parrafo(
       `${doc.asignatura} · ${doc.nivel} · ${doc.preguntas.length} preguntas · ` +
         (doc.tiempoMin === 0 ? 'sin límite de tiempo' : `${doc.tiempoMin} minutos`),
-      { tam: 10, gris: '555555', espacio: 120 }
+      { tam: 10, gris: '555555', espacio: 60 }
     ),
+    parrafo(`Curso: ${doc.curso} · Descargado el ${doc.fecha}`, { tam: 9, gris: '777777', espacio: 120 }),
     parrafo('Nombre: ______________________________________     Curso: ____________     Fecha: ____________', {
       tam: 10,
       espacio: 120,

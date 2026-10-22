@@ -40,6 +40,8 @@ export type Documento = {
   tiempoMin: number;
   conClave: boolean;
   tamano: Tamano;
+  curso: string;
+  fecha: string;
   preguntas: PreguntaDoc[];
   avisos: string[];
 };
@@ -64,6 +66,7 @@ export async function cargarDocumento(
       nivel: true,
       asignatura: true,
       colegio: true,
+      asignaciones: { include: { curso: { select: { nombre: true } } } },
       items: {
         orderBy: { orden: 'asc' },
         include: {
@@ -81,6 +84,16 @@ export async function cargarDocumento(
   if (!ensayo) return null;
 
   const anchoMm = anchoFiguraMm(opciones.tamano);
+
+  // El curso solo existe cuando el ensayo está asignado; si no, se usa el nivel.
+  const cursos = [...new Set(ensayo.asignaciones.map((a) => a.curso.nombre))];
+  const curso = cursos.length > 0 ? cursos.join(', ') : ensayo.nivel.nombre;
+  const fecha = new Date().toLocaleDateString('es-CL', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    timeZone: 'America/Santiago',
+  });
   const textosVistos = new Set<string>();
   const avisos: string[] = [];
 
@@ -131,6 +144,8 @@ export async function cargarDocumento(
     nivel: ensayo.nivel.nombre,
     asignatura: ensayo.asignatura.nombre,
     tiempoMin: ensayo.tiempoMin,
+    curso,
+    fecha,
     conClave: opciones.conClave,
     tamano: opciones.tamano,
     preguntas,
@@ -147,5 +162,13 @@ export function nombreArchivo(doc: Documento, extension: 'docx' | 'pdf'): string
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
     .slice(0, 60);
-  return `${base || 'ensayo'}-${doc.tamano}.${extension}`;
+  const curso = doc.curso
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 30);
+  const fecha = doc.fecha.replace(/[^0-9]/g, '-');
+  return `${base || 'ensayo'}-${curso}-${fecha}-${doc.tamano}.${extension}`;
 }

@@ -85,6 +85,11 @@ export async function documentoPdf(doc: Documento): Promise<Buffer> {
     ),
     React.createElement(
       Text,
+      { key: 'cur', style: s.subtitulo },
+      `Curso: ${doc.curso} · Descargado el ${doc.fecha}`
+    ),
+    React.createElement(
+      Text,
       { key: 'dat', style: s.datos },
       'Nombre: ______________________________________     Curso: ____________     Fecha: ____________'
     ),
