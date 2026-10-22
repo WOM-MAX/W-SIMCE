@@ -36,6 +36,7 @@ export default async function Admin({
   searchParams: Promise<{
     ok?: string;
     error?: string;
+    curso?: string;
     n?: string;
     o?: string;
     e?: string;
@@ -45,7 +46,7 @@ export default async function Admin({
   const sesion = await sesionAdmin();
   if (!sesion) redirect('/panel');
 
-  const { ok, error, n, o, e, d } = await searchParams;
+  const { ok, error, n, o, e, d, curso: cursoFiltro } = await searchParams;
 
   let aviso: string | null = null;
   if (ok === 'importados') {
@@ -80,6 +81,17 @@ export default async function Admin({
       orderBy: { nombre: 'asc' },
     }),
   ]);
+
+  // Filtro por curso y recuento, calculados en memoria: son 289 alumnos.
+  const cursoDe = (e: (typeof estudiantes)[number]) => e.matriculas[0]?.cursoId ?? '';
+  const conteoPorCurso = new Map<string, number>();
+  for (const e of estudiantes) {
+    const id = cursoDe(e);
+    conteoPorCurso.set(id, (conteoPorCurso.get(id) ?? 0) + 1);
+  }
+  const estudiantesVisibles = cursoFiltro
+    ? estudiantes.filter((e) => cursoDe(e) === cursoFiltro)
+    : estudiantes;
 
   const eventos = await prisma.evento.count({
     where: { OR: [{ colegioId: sesion.colegioId }, { colegioId: null }] },
@@ -339,7 +351,7 @@ export default async function Admin({
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-borde px-5 py-4">
             <h2 className="font-semibold text-marca">Estudiantes</h2>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-tenue">{estudiantes.length}</span>
+              <span className="text-xs text-tenue">{estudiantesVisibles.length}</span>
               <button
                 form="borrar-estudiantes"
                 className="rounded-lg border border-acento px-3 py-1.5 text-xs font-medium text-acento-oscuro hover:bg-acento-suave"
@@ -349,11 +361,36 @@ export default async function Admin({
               </button>
             </div>
           </div>
+          <div className="flex flex-wrap gap-1.5 border-b border-borde px-5 py-3">
+            <a
+              href="/admin#estudiantes"
+              className={`rounded-full border px-3 py-1 text-xs transition ${
+                cursoFiltro ? 'border-borde bg-white text-marca hover:bg-fondo' : 'border-marca bg-marca text-white'
+              }`}
+            >
+              Todos {estudiantes.length}
+            </a>
+            {cursos
+              .filter((c) => (conteoPorCurso.get(c.id) ?? 0) > 0)
+              .map((c) => (
+                <a
+                  key={c.id}
+                  href={`/admin?curso=${c.id}#estudiantes`}
+                  className={`rounded-full border px-3 py-1 text-xs transition ${
+                    cursoFiltro === c.id
+                      ? 'border-marca bg-marca text-white'
+                      : 'border-borde bg-white text-marca hover:bg-fondo'
+                  }`}
+                >
+                  {c.nombre} {conteoPorCurso.get(c.id) ?? 0}
+                </a>
+              ))}
+          </div>
           <p className="border-b border-borde bg-fondo px-5 py-2 text-xs text-tenue">
             Borrar un estudiante elimina también sus intentos y respuestas. Marca con cuidado.
           </p>
           <ul className="divide-y divide-borde">
-            {estudiantes.map((e) => (
+            {estudiantesVisibles.map((e) => (
               <li key={e.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
                 <input
                   type="checkbox"
