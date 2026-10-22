@@ -731,8 +731,8 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
                     {(v?.alternativas ?? []).map((a) => (
                       <li
                         key={a.id}
-                        className={`flex gap-2 rounded px-2 py-1 text-sm ${
-                          a.letra === v?.clave ? 'bg-acento-suave font-medium text-marca' : 'text-slate-700'
+                        className={`flex items-center gap-2 rounded px-2 py-1 text-sm ${
+                          a.letra === v?.clave ? 'border-l-[3px] border-acento bg-acento-suave/60 font-medium text-marca' : 'border-l-[3px] border-transparent text-slate-700'
                         }`}
                       >
                         <span className="w-4 shrink-0 font-semibold">{a.letra}</span>
@@ -740,7 +740,7 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
                           <TextoPotencia texto={a.texto ?? ''} />
                         </span>
                         {a.letra === v?.clave ? (
-                          <span className="ml-auto text-xs uppercase tracking-wide">clave</span>
+                          <span className="ml-auto shrink-0 rounded bg-acento px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">clave</span>
                         ) : null}
                       </li>
                     ))}
