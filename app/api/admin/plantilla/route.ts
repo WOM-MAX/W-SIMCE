@@ -16,6 +16,7 @@ export async function GET() {
     { header: 'Apellido paterno', key: 'paterno', width: 22 },
     { header: 'Apellido materno', key: 'materno', width: 22 },
     { header: 'PIN', key: 'pin', width: 10 },
+    { header: 'Fecha de retiro', key: 'retiro', width: 18 },
   ];
   hoja.getRow(1).font = { bold: true };
 
@@ -30,7 +31,7 @@ export async function GET() {
 
   const nota = hoja.addRow({});
   nota.getCell(1).value =
-    'Una fila por estudiante. El RUN es opcional pero no puede repetirse. Los apellidos pueden venir en una columna sola ("Apellidos") o separados en paterno y materno. El curso debe coincidir con el nombre exacto que aparece en el sistema. Si dejas el PIN vacío se usa 1234.';
+    'Una fila por estudiante. El RUN es opcional pero no puede repetirse. Fecha de retiro vacia significa alumno activo: esta es la misma columna FECHA DE RETIRO del Libro de Matricula, y si trae fecha el alumno no se importa. Los apellidos pueden venir en una columna sola ("Apellidos") o separados en paterno y materno. El curso debe coincidir con el nombre exacto que aparece en el sistema. Si dejas el PIN vacío se usa 1234.';
   nota.font = { italic: true, size: 9, color: { argb: 'FF5A6480' } };
 
   const buffer = await libro.xlsx.writeBuffer();

@@ -47,6 +47,8 @@ export async function POST(request: Request) {
     const colCurso = columnas.get('curso');
     const colPin = columnas.get('pin') ?? columnas.get('clave');
     const colRun = columnas.get('run') ?? columnas.get('rut');
+    const colRetiro =
+      columnas.get('fecha de retiro') ?? columnas.get('retiro') ?? columnas.get('estado');
 
     if (!colNombres || (!colApellidos && !apellidosSeparados) || !colCurso) {
       return volver(request, '/admin?error=columnas');
@@ -90,6 +92,8 @@ export async function POST(request: Request) {
       const nombreCurso = fila.getCell(colCurso).text.trim();
       const pin = (colPin ? fila.getCell(colPin).text.trim() : '') || '1234';
       const run = (colRun ? fila.getCell(colRun).text.trim().toUpperCase() : '') || null;
+      const retiro = (colRetiro ? fila.getCell(colRetiro).text.trim() : '').toLowerCase();
+      const esRetiro = retiro !== '' && !['no', 'activo', 'activa', '0'].includes(retiro);
 
       // Fila vacía o la nota aclaratoria al pie.
       if (!nombres && !apellidos && !nombreCurso) continue;
@@ -98,6 +102,13 @@ export async function POST(request: Request) {
       if (!nombres || !apellidos || !nombreCurso) {
         errores += 1;
         if (detalles.length < 5) detalles.push(`Fila ${numero}: faltan datos.`);
+        continue;
+      }
+
+      // El alumno retirado no se carga: el libro lo marca con fecha de retiro.
+      if (esRetiro) {
+        omitidos += 1;
+        if (detalles.length < 5) detalles.push(`Fila ${numero}: ${nombres} ${apellidos} figura retirado.`);
         continue;
       }
 
