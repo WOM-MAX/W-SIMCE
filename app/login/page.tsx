@@ -14,7 +14,9 @@ const ERRORES: Record<string, string> = {
 };
 
 const CLASE_INPUT =
-  'mt-1.5 w-full rounded-xl border border-borde bg-white px-3.5 py-2.5 text-sm text-marca outline-none transition placeholder:text-tenue/60 focus:border-marca/40 focus:ring-4 focus:ring-marca/5';
+  'mt-2 h-12 w-full rounded-xl border border-borde bg-white px-3.5 text-[15px] text-marca outline-none transition placeholder:text-tenue/50 focus:border-marca/40 focus:ring-4 focus:ring-marca/10';
+
+const MODULOS = ['Banco de ítems con su clave', 'Ensayos que se arman solos', 'Corrección y reportes el mismo día'];
 
 export default async function Login({
   searchParams,
@@ -28,79 +30,138 @@ export default async function Login({
   const mensaje = error ? (ERRORES[error] ?? ERRORES.interno) : null;
 
   return (
-    <div className="flex min-h-dvh flex-col bg-white">
-      <header className="border-b border-borde/80">
-        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <a href="/" className="flex items-center gap-3" aria-label="Volver a la portada">
+    <div className="min-h-dvh lg:grid lg:grid-cols-[1.05fr_1fr]">
+      {/* panel de marca: solo en pantallas grandes */}
+      <aside className="relative hidden overflow-hidden bg-marca lg:flex lg:flex-col lg:justify-between lg:p-12">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage: 'url(/textura-figuras.svg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.07,
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(circle at 32% 22%, rgba(104,120,196,0.55) 0%, rgba(72,86,156,0.22) 42%, rgba(32,40,88,0) 70%)',
+          }}
+        />
+
+        <div className="relative flex items-center gap-4">
+          <span className="block h-16 w-16 shrink-0 overflow-hidden rounded-full">
             <img
-              src="/logo-acropolis.webp"
-              alt=""
-              width={372}
-              height={378}
-              className="h-9 w-9"
+              src="/emblema-192.png"
+              alt="Emblema del Colegio Acrópolis"
+              width={192}
+              height={192}
+              className="h-full w-full object-cover"
             />
+          </span>
+          <span className="flex flex-col">
+            <span className="text-[17px] font-semibold tracking-tight text-white">W-SIMCE</span>
+            <span className="text-[13px] text-white/60">Colegio Acrópolis</span>
+          </span>
+        </div>
+
+        <div className="relative max-w-md">
+          <p className="text-balance text-[32px] font-semibold leading-[1.15] tracking-tight text-white">
+            Evaluar, aplicar y corregir, en un solo lugar.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {MODULOS.map((m) => (
+              <li key={m} className="flex items-center gap-3 text-sm text-white/70">
+                <span aria-hidden="true" className="h-px w-5 bg-acento" />
+                {m}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="relative text-xs text-white/40">Puente Alto, Chile</p>
+      </aside>
+
+      <main className="flex min-h-dvh flex-col">
+        {/* encabezado compacto, solo en móvil */}
+        <header className="flex h-16 items-center justify-between border-b border-borde/70 px-6 lg:hidden">
+          <a href="/" className="flex items-center gap-2.5" aria-label="Volver a la portada">
+            <span className="block h-9 w-9 shrink-0 overflow-hidden rounded-full">
+              <img src="/emblema-192.png" alt="" width={192} height={192} className="h-full w-full object-cover" />
+            </span>
             <span className="text-[15px] font-semibold tracking-tight text-marca">W-SIMCE</span>
           </a>
           <a href="/" className="text-sm text-tenue transition hover:text-marca">
             Volver
           </a>
-        </div>
-      </header>
+        </header>
 
-      <main className="flex flex-1 items-center justify-center px-6 py-14">
-        <div className="w-full max-w-sm">
-          <h1 className="text-2xl font-semibold tracking-tight text-marca">Ingresar</h1>
-          <p className="mt-2 text-sm leading-relaxed text-tenue">
-            Usa tu correo institucional o el código que te entregó el colegio.
-          </p>
+        <div className="flex flex-1 items-center justify-center px-6 py-14">
+          <div className="w-full max-w-[400px]">
+            <div className="hidden lg:block">
+              <a href="/" className="text-sm text-tenue transition hover:text-marca">
+                ← Volver a la portada
+              </a>
+            </div>
 
-          {mensaje ? (
-            <p
-              role="alert"
-              className="mt-6 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700"
-            >
-              {mensaje}
+            <h1 className="mt-0 text-[30px] font-semibold tracking-tight text-marca lg:mt-8">
+              Ingresar
+            </h1>
+            <p className="mt-2 max-w-[36ch] text-[15px] leading-relaxed text-tenue">
+              Usa tu correo institucional o el código que te entregó el colegio.
             </p>
-          ) : null}
 
-          <form action="/api/auth/login" method="post" className="mt-8 space-y-4">
-            <label className="block text-[11px] font-medium uppercase tracking-[0.16em] text-tenue">
-              Correo o código
-              <input
-                name="identificador"
-                required
-                autoFocus
-                autoComplete="username"
-                autoCapitalize="none"
-                spellCheck={false}
-                placeholder="docente@acropolis.cl o W4A-01"
-                className={CLASE_INPUT}
-              />
-            </label>
+            {mensaje ? (
+              <p
+                role="alert"
+                className="mt-6 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700"
+              >
+                {mensaje}
+              </p>
+            ) : null}
 
-            <label className="block text-[11px] font-medium uppercase tracking-[0.16em] text-tenue">
-              Clave o PIN
-              <input
-                name="secreto"
-                type="password"
-                required
-                autoComplete="current-password"
-                className={CLASE_INPUT}
-              />
-            </label>
+            <form action="/api/auth/login" method="post" className="mt-8 space-y-5">
+              <label className="block text-[12px] font-semibold text-marca">
+                Correo o código
+                <input
+                  name="identificador"
+                  required
+                  autoFocus
+                  autoComplete="username"
+                  autoCapitalize="none"
+                  spellCheck={false}
+                  placeholder="docente@acropolis.cl o W4A-01"
+                  className={CLASE_INPUT}
+                />
+              </label>
 
-            <button
-              type="submit"
-              className="w-full rounded-xl bg-marca px-4 py-3 text-sm font-medium text-white transition hover:bg-marca-oscuro"
-            >
-              Entrar
-            </button>
-          </form>
+              <label className="block text-[12px] font-semibold text-marca">
+                Clave o PIN
+                <input
+                  name="secreto"
+                  type="password"
+                  required
+                  autoComplete="current-password"
+                  className={CLASE_INPUT}
+                />
+              </label>
 
-          <p className="mt-8 border-t border-borde pt-6 text-xs leading-relaxed text-tenue">
-            Si no recuerdas tus datos, pídelos a la coordinación académica. Los estudiantes ingresan
-            con el código del colegio y un PIN de cuatro dígitos.
-          </p>
+              <button
+                type="submit"
+                className="h-12 w-full rounded-xl bg-marca text-[15px] font-medium text-white transition hover:bg-marca-oscuro focus:outline-none focus-visible:ring-4 focus-visible:ring-marca/20"
+              >
+                Entrar
+              </button>
+            </form>
+
+            <p className="mt-8 border-t border-borde pt-6 text-[13px] leading-relaxed text-tenue">
+              Si no recuerdas tus datos, pídelos a la coordinación académica. Los estudiantes
+              ingresan con el código del colegio y un PIN de cuatro dígitos.
+            </p>
+          </div>
         </div>
       </main>
     </div>
