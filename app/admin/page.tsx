@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { sesionAdmin } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { Panel } from '@/components/panel';
+import { MarcarTodos } from '@/components/marcar-todos';
 
 export const dynamic = 'force-dynamic';
 
@@ -351,6 +352,7 @@ export default async function Admin({
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-borde px-5 py-4">
             <h2 className="font-semibold text-marca">Estudiantes</h2>
             <div className="flex items-center gap-3">
+              <MarcarTodos />
               <span className="text-xs text-tenue">{estudiantesVisibles.length}</span>
               <button
                 form="borrar-estudiantes"
