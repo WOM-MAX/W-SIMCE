@@ -244,7 +244,21 @@ body {
 }
 
 .pulsable {
-  transition: background-color 150ms ease, border-color 150ms ease, transform 100ms ease, box-shadow 150ms ease;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 100ms ease,
+    box-shadow 150ms ease,
+    filter 120ms ease;
+}
+
+/* El oscurecido funciona sobre cualquier color: blanco, gris o naranja. */
+.pulsable:hover {
+  filter: brightness(0.955);
+}
+
+.pulsable:active {
+  filter: brightness(0.9);
 }
 
 @media (prefers-reduced-motion: reduce) {
