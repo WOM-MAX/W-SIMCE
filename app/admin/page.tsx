@@ -3,6 +3,7 @@ import { sesionAdmin } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { Panel } from '@/components/panel';
 import { MarcarTodos } from '@/components/marcar-todos';
+import { SelectorArchivo } from '@/components/selector-archivo';
 
 export const dynamic = 'force-dynamic';
 
@@ -217,22 +218,11 @@ export default async function Admin({
               action="/api/admin/importar"
               method="post"
               encType="multipart/form-data"
-              className="flex flex-wrap items-end gap-3"
+              className="w-full"
             >
-              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
-                Archivo .xlsx
-                <input
-                  name="archivo"
-                  type="file"
-                  accept=".xlsx"
-                  required
-                  className="mt-1 block text-xs text-slate-700"
-                />
-              </label>
-              <button className="pulsable rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
-                Importar
-              </button>
+              <SelectorArchivo />
             </form>
+
           </div>
         </section>
 
