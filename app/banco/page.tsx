@@ -351,11 +351,15 @@ export default async function Banco({ searchParams }: { searchParams: Promise<Co
   }) {
     return (
       <a
-        href={href}
+        href={cuenta === 0 && !activo ? undefined : href}
+        aria-disabled={cuenta === 0 && !activo ? true : undefined}
+        title={cuenta === 0 && !activo ? 'No queda ningun item con las otras opciones elegidas' : undefined}
         className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs transition ${
-          activo
-            ? 'border-marca bg-marca text-white'
-            : 'border-borde bg-white text-slate-700 hover:border-marca/30 hover:bg-fondo'
+          cuenta === 0 && !activo
+            ? 'cursor-not-allowed border-borde/60 bg-white text-tenue/40'
+            : activo
+              ? 'border-marca bg-marca text-white'
+              : 'border-borde bg-white text-slate-700 hover:border-marca/30 hover:bg-fondo'
         }`}
       >
         {children}
