@@ -34,7 +34,7 @@ export default async function Login({
   return (
     <div className="min-h-dvh lg:grid lg:grid-cols-[1.05fr_1fr]">
       {/* panel de marca: solo en pantallas grandes */}
-      <aside className="relative hidden overflow-hidden border-t-[3px] border-acento bg-marca lg:flex lg:flex-col lg:justify-between lg:p-12">
+      <aside className="relative hidden overflow-hidden border-t-[3px] border-acento bg-marca lg:flex lg:flex-col lg:justify-between lg:gap-14 lg:p-14">
         {/* arcos concéntricos: el lenguaje de la órbita del emblema, a escala
             arquitectónica. Sustituye al mosaico de figuras, que se leía como garabatos. */}
         <svg
@@ -83,16 +83,16 @@ export default async function Login({
         </div>
 
         <div className="relative max-w-[34rem]">
-          <p className="text-balance text-[38px] font-semibold uppercase leading-[1.1] tracking-[-0.01em] text-white">
+          <p className="text-balance text-[38px] font-semibold uppercase leading-[1.16] tracking-[-0.01em] text-white">
             Evaluar, aplicar y{' '}
             <span className="inline-block text-[1.18em] leading-[0.9] tracking-[-0.03em] text-acento">
               corregir
             </span>{' '}
             en un solo lugar.
           </p>
-          <ul className="mt-8 space-y-3">
+          <ul className="mt-12 space-y-4">
             {MODULOS.map((m) => (
-              <li key={m} className="flex items-center gap-3 text-sm text-white/70">
+              <li key={m} className="flex items-center gap-3 text-[15px] text-white/70">
                 <span aria-hidden="true" className="h-[2px] w-5 bg-acento" />
                 {m}
               </li>
