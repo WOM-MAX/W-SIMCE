@@ -84,11 +84,8 @@ export default async function Login({
 
         <div className="relative max-w-[34rem]">
           <p className="text-balance text-[38px] font-semibold uppercase leading-[1.16] tracking-[-0.01em] text-white">
-            Evaluar, aplicar y{' '}
-            <span className="inline-block text-[1.18em] leading-[0.9] tracking-[-0.03em] text-acento">
-              corregir
-            </span>{' '}
-            en un solo lugar.
+            Evaluar, aplicar y corregir en un{' '}
+            <span className="text-acento">solo lugar</span>.
           </p>
           <ul className="mt-12 space-y-4">
             {MODULOS.map((m) => (
