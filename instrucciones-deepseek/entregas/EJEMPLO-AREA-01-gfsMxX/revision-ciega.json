@@ -1,0 +1,71 @@
+{
+  "formato": "w-simce-revision-ciega-v1",
+  "loteId": "EJEMPLO-AREA-01",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "items": [
+    {
+      "codigoLocal": "DS4B-EJEMPLO-001",
+      "versionCandidata": 1,
+      "sha256Candidato": "2001dcd64a6edaeed132494d9f084fa1c14e2ca4e7c5bf035bdd9c5b35e30b0e",
+      "enunciado": "Un cantero rectangular mide 8 metros de largo y 3 metros de ancho, como muestra la figura. ¿Cuál es el área del cantero?",
+      "alternativas": [
+        {
+          "letra": "A",
+          "texto": "11 m²"
+        },
+        {
+          "letra": "B",
+          "texto": "22 m²"
+        },
+        {
+          "letra": "C",
+          "texto": "24 m²"
+        },
+        {
+          "letra": "D",
+          "texto": "48 m²"
+        }
+      ],
+      "necesitaFigura": true,
+      "figura": {
+        "ancho": 250,
+        "alto": 150,
+        "elementos": [
+          {
+            "op": "rect",
+            "x": 40,
+            "y": 42,
+            "w": 160,
+            "h": 60,
+            "grosor": 1.2
+          },
+          {
+            "op": "text",
+            "x": 120,
+            "y": 28,
+            "texto": "8 m",
+            "tam": 14,
+            "anclaje": "medio"
+          },
+          {
+            "op": "text",
+            "x": 222,
+            "y": 77,
+            "texto": "3 m",
+            "tam": 14,
+            "anclaje": "medio"
+          },
+          {
+            "op": "text",
+            "x": 125,
+            "y": 130,
+            "texto": "Cantero rectangular",
+            "tam": 12,
+            "anclaje": "medio"
+          }
+        ]
+      }
+    }
+  ]
+}

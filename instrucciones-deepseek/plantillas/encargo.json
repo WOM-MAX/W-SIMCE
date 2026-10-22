@@ -1,0 +1,20 @@
+{
+  "tipo": "plantilla-de-encargo-no-ejecutada",
+  "estado": "PROPUESTO_PENDIENTE_DE_ENCARGO",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "cantidadPropuesta": 5,
+  "distribucionPropuesta": {
+    "numeros-y-operaciones": 1,
+    "patrones-y-algebra": 1,
+    "geometria": 1,
+    "medicion": 1,
+    "datos-y-probabilidades": 1
+  },
+  "seleccionOADelegada": null,
+  "oaEncargados": [],
+  "exclusiones": [],
+  "evidenciaEncargoUsuario": null,
+  "escrituraBaseAutorizada": false,
+  "publicacionAutorizada": false
+}

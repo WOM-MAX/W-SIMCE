@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Candidatos W-SIMCE, sin permiso de importación",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["formato", "loteId", "estado", "nivel", "asignatura", "generador", "items"],
+  "properties": {
+    "formato": {"const": "w-simce-candidatos-v1"},
+    "loteId": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9-]{2,49}$"},
+    "estado": {"const": "CANDIDATO"},
+    "nivel": {"const": "4B"},
+    "asignatura": {"const": "matematica"},
+    "generador": {
+      "type": "object", "additionalProperties": false,
+      "required": ["herramienta", "modeloDeclarado"],
+      "properties": {"herramienta": {"type": "string", "minLength": 1, "maxLength": 80}, "modeloDeclarado": {"type": ["string", "null"], "maxLength": 100}}
+    },
+    "items": {"type": "array", "minItems": 1, "maxItems": 20, "items": {"$ref": "#/$defs/item"}}
+  },
+  "$defs": {
+    "item": {
+      "type": "object", "additionalProperties": false,
+      "required": ["codigoLocal", "versionCandidata", "eje", "oa", "habilidad", "demandaCognitivaEstimada", "dificultadEstimada", "enunciado", "alternativas", "clavePropuesta", "justificacionPropuesta", "necesitaFigura", "figura", "modeloGeometrico"],
+      "properties": {
+        "codigoLocal": {"type": "string", "pattern": "^DS4B-[A-Z0-9-]{3,60}$"},
+        "versionCandidata": {"type": "integer", "minimum": 1},
+        "eje": {"enum": ["numeros-y-operaciones", "patrones-y-algebra", "geometria", "medicion", "datos-y-probabilidades"]},
+        "oa": {
+          "type": "object", "additionalProperties": false,
+          "required": ["codigo", "fuente", "justificacionEncaje"],
+          "properties": {
+            "codigo": {"type": "string", "pattern": "^MA04 OA (0?[1-9]|1[0-9]|2[0-7])$"},
+            "fuente": {"type": "string", "minLength": 15, "maxLength": 500},
+            "justificacionEncaje": {"type": "string", "minLength": 20, "maxLength": 1000}
+          }
+        },
+        "habilidad": {"type": "string", "minLength": 3, "maxLength": 100},
+        "demandaCognitivaEstimada": {"type": "string", "minLength": 10, "maxLength": 500},
+        "dificultadEstimada": {"enum": ["baja", "media", "alta"]},
+        "enunciado": {"type": "string", "minLength": 20, "maxLength": 2000},
+        "alternativas": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/alternativa"}},
+        "clavePropuesta": {"enum": ["A", "B", "C", "D"]},
+        "justificacionPropuesta": {"type": "string", "minLength": 30, "maxLength": 2000},
+        "necesitaFigura": {"type": "boolean"},
+        "figura": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/figura"}]},
+        "modeloGeometrico": {"type": ["object", "null"]}
+      }
+    },
+    "alternativa": {
+      "type": "object", "additionalProperties": false,
+      "required": ["letra", "texto", "errorEsperado"],
+      "properties": {
+        "letra": {"enum": ["A", "B", "C", "D"]},
+        "texto": {"type": ["string", "null"], "minLength": 1, "maxLength": 1200},
+        "errorEsperado": {"type": ["string", "null"], "minLength": 10, "maxLength": 1000}
+      }
+    },
+    "figura": {
+      "type": "object", "additionalProperties": false,
+      "required": ["ancho", "alto", "elementos"],
+      "properties": {
+        "ancho": {"type": "number", "minimum": 20, "maximum": 2000},
+        "alto": {"type": "number", "minimum": 20, "maximum": 2000},
+        "elementos": {"type": "array", "minItems": 1, "maxItems": 1000, "items": {"$ref": "#/$defs/elemento"}}
+      }
+    },
+    "elemento": {
+      "type": "object", "additionalProperties": false, "required": ["op"],
+      "properties": {
+        "op": {"enum": ["rect", "line", "circle", "poly", "path", "text"]},
+        "x": {"type": "number"}, "y": {"type": "number"},
+        "x1": {"type": "number"}, "y1": {"type": "number"}, "x2": {"type": "number"}, "y2": {"type": "number"},
+        "cx": {"type": "number"}, "cy": {"type": "number"},
+        "r": {"type": "number", "minimum": 0.1},
+        "w": {"type": "number", "minimum": 0.1}, "h": {"type": "number", "minimum": 0.1},
+        "puntos": {"type": "array", "minItems": 3, "items": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}}},
+        "cerrado": {"const": true},
+        "d": {"type": "string", "minLength": 1, "maxLength": 10000},
+        "texto": {"type": "string", "maxLength": 400},
+        "tam": {"type": "number", "minimum": 6, "maximum": 100},
+        "ancho": {"type": "number", "minimum": 1},
+        "anclaje": {"enum": ["inicio", "medio", "fin"]},
+        "negrita": {"type": "boolean"}, "punteada": {"type": "boolean"},
+        "grosor": {"type": "number", "minimum": 0, "maximum": 100},
+        "gris": {"type": "number", "minimum": 0, "maximum": 1},
+        "relleno": {"enum": ["gris", null]},
+        "grisRelleno": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    }
+  }
+}

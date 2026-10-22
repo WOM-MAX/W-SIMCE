@@ -1,0 +1,45 @@
+{
+  "advertencia": "No abrir antes de registrar resolución propia. No contiene dictámenes emitidos.",
+  "loteId": "EJEMPLO-AREA-01",
+  "items": [
+    {
+      "codigoLocal": "DS4B-EJEMPLO-001",
+      "versionCandidata": 1,
+      "sha256Candidato": "2001dcd64a6edaeed132494d9f084fa1c14e2ca4e7c5bf035bdd9c5b35e30b0e",
+      "oa": {
+        "codigo": "MA04 OA 23",
+        "fuente": "https://www.curriculumnacional.cl/docentes/Educacion-General/Matematica-4-basico/MA04-OA-23/17614%3AMA04-OA-23",
+        "justificacionEncaje": "El candidato pide determinar el área de un rectángulo en metros cuadrados, con medidas y representación explícitas. Es un ejemplo de formato, no un ítem aprobado para el banco."
+      },
+      "demandaCognitivaEstimada": "Seleccionar el producto de largo por ancho y distinguir área de perímetro.",
+      "dificultadEstimada": "baja",
+      "clavePropuesta": "C",
+      "justificacionPropuesta": "El área del rectángulo se obtiene multiplicando 8 m por 3 m: 24 m². Once suma lados; 22 es el perímetro; 48 duplica el área. Solo C responde a la superficie pedida.",
+      "erroresPropuestos": [
+        {
+          "letra": "A",
+          "errorEsperado": "Suma el largo y el ancho en vez de multiplicarlos."
+        },
+        {
+          "letra": "B",
+          "errorEsperado": "Calcula el perímetro y lo expresa como si fuera un área."
+        },
+        {
+          "letra": "C",
+          "errorEsperado": null
+        },
+        {
+          "letra": "D",
+          "errorEsperado": "Duplica el producto de largo y ancho sin que se pidan dos superficies."
+        }
+      ],
+      "modeloGeometrico": {
+        "tipo": "rectangulo",
+        "largo": 8,
+        "ancho": 3,
+        "unidad": "m",
+        "escalaLienzo": 20
+      }
+    }
+  ]
+}

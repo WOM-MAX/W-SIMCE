@@ -1,0 +1,41 @@
+{
+  "formato": "w-simce-candidatos-v1",
+  "loteId": "EJEMPLO-AREA-01",
+  "estado": "CANDIDATO",
+  "nivel": "4B",
+  "asignatura": "matematica",
+  "generador": {"herramienta": "Ejemplo didáctico preparado para la guía", "modeloDeclarado": null},
+  "items": [{
+    "codigoLocal": "DS4B-EJEMPLO-001",
+    "versionCandidata": 1,
+    "eje": "medicion",
+    "oa": {
+      "codigo": "MA04 OA 23",
+      "fuente": "https://www.curriculumnacional.cl/docentes/Educacion-General/Matematica-4-basico/MA04-OA-23/17614%3AMA04-OA-23",
+      "justificacionEncaje": "El candidato pide determinar el área de un rectángulo en metros cuadrados, con medidas y representación explícitas. Es un ejemplo de formato, no un ítem aprobado para el banco."
+    },
+    "habilidad": "Resolver problemas",
+    "demandaCognitivaEstimada": "Seleccionar el producto de largo por ancho y distinguir área de perímetro.",
+    "dificultadEstimada": "baja",
+    "enunciado": "Un cantero rectangular mide 8 metros de largo y 3 metros de ancho, como muestra la figura. ¿Cuál es el área del cantero?",
+    "alternativas": [
+      {"letra": "A", "texto": "11 m²", "errorEsperado": "Suma el largo y el ancho en vez de multiplicarlos."},
+      {"letra": "B", "texto": "22 m²", "errorEsperado": "Calcula el perímetro y lo expresa como si fuera un área."},
+      {"letra": "C", "texto": "24 m²", "errorEsperado": null},
+      {"letra": "D", "texto": "48 m²", "errorEsperado": "Duplica el producto de largo y ancho sin que se pidan dos superficies."}
+    ],
+    "clavePropuesta": "C",
+    "justificacionPropuesta": "El área del rectángulo se obtiene multiplicando 8 m por 3 m: 24 m². Once suma lados; 22 es el perímetro; 48 duplica el área. Solo C responde a la superficie pedida.",
+    "necesitaFigura": true,
+    "figura": {
+      "ancho": 250, "alto": 150,
+      "elementos": [
+        {"op": "rect", "x": 40, "y": 42, "w": 160, "h": 60, "grosor": 1.2},
+        {"op": "text", "x": 120, "y": 28, "texto": "8 m", "tam": 14, "anclaje": "medio"},
+        {"op": "text", "x": 222, "y": 77, "texto": "3 m", "tam": 14, "anclaje": "medio"},
+        {"op": "text", "x": 125, "y": 130, "texto": "Cantero rectangular", "tam": 12, "anclaje": "medio"}
+      ]
+    },
+    "modeloGeometrico": {"tipo": "rectangulo", "largo": 8, "ancho": 3, "unidad": "m", "escalaLienzo": 20}
+  }]
+}

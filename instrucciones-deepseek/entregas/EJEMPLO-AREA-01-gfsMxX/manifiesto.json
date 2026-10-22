@@ -1,0 +1,20 @@
+{
+  "formato": "w-simce-manifiesto-local-v1",
+  "loteId": "EJEMPLO-AREA-01",
+  "estado": "PREPARADO_PARA_REVISION_NO_APROBADO",
+  "archivoCandidatoSHA256": "6432a7974804df5c4135c95c67960feeb7ab59116d0ae03794ae386f9b647f0d",
+  "revisionCiegaSHA256": "05bd6d7ec5a54a18a5939f67a66258fe7f3c4d4b969416ab250ab53928d7f94b",
+  "sobreRespuestasSHA256": "8d13b9409902784d03e1e995da6ce51fe193314e59c4549c2ff8f4027f4170c7",
+  "componenteSHA256": "e20de7df1ca37a6b004014ed34e67dee91f6334e2d6f1d4d5c511e0a20cfd4a5",
+  "figuras": [
+    {
+      "codigoLocal": "DS4B-EJEMPLO-001",
+      "pngSHA256": "d8a4210df828588afeaefa98f457708f8971d45aeeb467e762b9ce07a126b1e4",
+      "svgSHA256": "ae8355bb5c5eb4080f1c6fd8a82d5101045ccd030276a34ba5b9d17452a55feb"
+    }
+  ],
+  "conexionBase": false,
+  "publicado": false,
+  "certificaContenido": false,
+  "alcance": "Inspección de dibujo y preparación del flujo. Faltan revisión matemática, currículo, duplicados semánticos, tamaño CSS/A4 y dictamen independiente."
+}

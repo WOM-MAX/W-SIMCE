@@ -1,0 +1,24 @@
+{
+  "tipo": "plantilla-dictamen-no-emitido",
+  "codigoLocal": null,
+  "versionCandidata": null,
+  "sha256Candidato": null,
+  "revisor": null,
+  "fecha": null,
+  "resolucionPropiaArchivo": null,
+  "opcionesValidas": [],
+  "estado": "REQUIERE_AJUSTES",
+  "criterios": {
+    "matematica": {"estado": "pendiente", "evidencia": null},
+    "unicidad": {"estado": "pendiente", "evidencia": null},
+    "curriculum": {"estado": "pendiente", "evidencia": null},
+    "distractores": {"estado": "pendiente", "evidencia": null},
+    "figura": {"estado": "pendiente", "evidencia": null},
+    "tamano": {"estado": "pendiente", "evidencia": null},
+    "duplicados": {"estado": "pendiente", "evidencia": null}
+  },
+  "hallazgos": [],
+  "fuentesConsultadas": [],
+  "alcance": "Revision tecnica y de contenido; sin validacion psicometrica ni publicacion",
+  "publicacionAutorizada": false
+}

@@ -1,0 +1,16 @@
+{
+  "tipo": "plantilla-resolucion-no-completada",
+  "codigoLocal": null,
+  "versionCandidata": null,
+  "sha256Candidato": null,
+  "revisor": null,
+  "fechaRegistro": null,
+  "claveConocidaAntesDeResolver": null,
+  "procedimientoPropio": null,
+  "resultadoPropio": null,
+  "opcionesValidas": [],
+  "supuestos": [],
+  "dudas": [],
+  "sobreConsultadoDespuesDeRegistrar": null,
+  "publicacionAutorizada": false
+}
