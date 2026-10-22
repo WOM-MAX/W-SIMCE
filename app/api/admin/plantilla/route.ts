@@ -10,21 +10,21 @@ export async function GET() {
   const hoja = libro.addWorksheet('Estudiantes');
 
   hoja.columns = [
+    { header: 'Curso', key: 'curso', width: 22 },
     { header: 'RUN', key: 'run', width: 14 },
     { header: 'Nombres', key: 'nombres', width: 26 },
     { header: 'Apellido paterno', key: 'paterno', width: 22 },
     { header: 'Apellido materno', key: 'materno', width: 22 },
-    { header: 'Curso', key: 'curso', width: 22 },
     { header: 'PIN', key: 'pin', width: 10 },
   ];
   hoja.getRow(1).font = { bold: true };
 
   hoja.addRow({
+    curso: '4° básico B',
     run: '12345678-9',
     nombres: 'Martina',
     paterno: 'González',
     materno: 'Rojas',
-    curso: '4° básico B',
     pin: '1234',
   });
 

@@ -363,15 +363,15 @@ export default async function Admin({
                   aria-label={`Marcar a ${e.nombres} ${e.apellidos}`}
                   className="h-4 w-4 accent-acento"
                 />
-                <span className="w-20 font-mono text-xs text-tenue">{e.codigoAcceso}</span>
+                <span className="w-28 shrink-0 truncate text-xs font-medium text-marca">
+                  {e.matriculas[0]?.curso.nombre ?? 'Sin matrícula'}
+                </span>
                 <span className="w-24 font-mono text-xs text-tenue">{e.run ?? '—'}</span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-slate-800">
                     {e.nombres} {e.apellidos}
                   </p>
-                  <p className="truncate text-xs text-tenue">
-                    {e.matriculas[0]?.curso.nombre ?? 'Sin matrícula activa'}
-                  </p>
+                  <p className="truncate font-mono text-[11px] text-tenue">{e.codigoAcceso}</p>
                 </div>
                 <form action="/api/admin/clave" method="post" className="flex items-center gap-2">
                   <input type="hidden" name="tipo" value="estudiante" />
