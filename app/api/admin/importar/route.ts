@@ -39,11 +39,16 @@ export async function POST(request: Request) {
 
     const colNombres = columnas.get('nombres');
     const colApellidos = columnas.get('apellidos');
+    const colPaterno =
+      columnas.get('apellido paterno') ?? columnas.get('apellido paterno estud');
+    const colMaterno =
+      columnas.get('apellido materno') ?? columnas.get('apellido materno estud');
+    const apellidosSeparados = Boolean(colPaterno && colMaterno);
     const colCurso = columnas.get('curso');
     const colPin = columnas.get('pin') ?? columnas.get('clave');
     const colRun = columnas.get('run') ?? columnas.get('rut');
 
-    if (!colNombres || !colApellidos || !colCurso) {
+    if (!colNombres || (!colApellidos && !apellidosSeparados) || !colCurso) {
       return volver(request, '/admin?error=columnas');
     }
 
@@ -79,7 +84,9 @@ export async function POST(request: Request) {
     for (let numero = 2; numero <= ultimaFila; numero += 1) {
       const fila = hoja.getRow(numero);
       const nombres = fila.getCell(colNombres).text.trim();
-      const apellidos = fila.getCell(colApellidos).text.trim();
+      const apellidos = apellidosSeparados
+      ? `${fila.getCell(colPaterno as number).text.trim()} ${fila.getCell(colMaterno as number).text.trim()}`.trim()
+      : fila.getCell(colApellidos as number).text.trim();
       const nombreCurso = fila.getCell(colCurso).text.trim();
       const pin = (colPin ? fila.getCell(colPin).text.trim() : '') || '1234';
       const run = (colRun ? fila.getCell(colRun).text.trim().toUpperCase() : '') || null;

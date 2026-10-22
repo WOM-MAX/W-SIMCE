@@ -12,7 +12,8 @@ export async function GET() {
   hoja.columns = [
     { header: 'RUN', key: 'run', width: 14 },
     { header: 'Nombres', key: 'nombres', width: 26 },
-    { header: 'Apellidos', key: 'apellidos', width: 30 },
+    { header: 'Apellido paterno', key: 'paterno', width: 22 },
+    { header: 'Apellido materno', key: 'materno', width: 22 },
     { header: 'Curso', key: 'curso', width: 22 },
     { header: 'PIN', key: 'pin', width: 10 },
   ];
@@ -21,14 +22,15 @@ export async function GET() {
   hoja.addRow({
     run: '12345678-9',
     nombres: 'Martina',
-    apellidos: 'González Rojas',
+    paterno: 'González',
+    materno: 'Rojas',
     curso: '4° básico B',
     pin: '1234',
   });
 
   const nota = hoja.addRow({});
   nota.getCell(1).value =
-    'Una fila por estudiante. El RUN es opcional pero no puede repetirse. El curso debe coincidir con el nombre exacto que aparece en el sistema. Si dejas el PIN vacío se usa 1234.';
+    'Una fila por estudiante. El RUN es opcional pero no puede repetirse. Los apellidos pueden venir en una columna sola ("Apellidos") o separados en paterno y materno. El curso debe coincidir con el nombre exacto que aparece en el sistema. Si dejas el PIN vacío se usa 1234.';
   nota.font = { italic: true, size: 9, color: { argb: 'FF5A6480' } };
 
   const buffer = await libro.xlsx.writeBuffer();
