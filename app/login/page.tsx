@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
+import { FormularioIngreso } from '@/components/formulario-ingreso';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,10 +14,11 @@ const ERRORES: Record<string, string> = {
     'El servidor no tiene configurado el secreto de sesión. Avisa a quien administra el sistema.',
 };
 
-const CLASE_INPUT =
-  'mt-2 h-12 w-full rounded-xl border border-borde bg-white px-3.5 text-[15px] text-marca outline-none transition placeholder:text-tenue/50 focus:border-marca/40 focus:ring-4 focus:ring-marca/10';
-
-const MODULOS = ['Banco de ítems con su clave', 'Ensayos que se arman solos', 'Corrección y reportes el mismo día'];
+const MODULOS = [
+  'Banco de ítems con su clave',
+  'Ensayos que se arman solos',
+  'Corrección y reportes el mismo día',
+];
 
 export default async function Login({
   searchParams,
@@ -32,7 +34,7 @@ export default async function Login({
   return (
     <div className="min-h-dvh lg:grid lg:grid-cols-[1.05fr_1fr]">
       {/* panel de marca: solo en pantallas grandes */}
-      <aside className="relative hidden overflow-hidden bg-marca lg:flex lg:flex-col lg:justify-between lg:p-12">
+      <aside className="relative hidden overflow-hidden border-t-[3px] border-acento bg-marca lg:flex lg:flex-col lg:justify-between lg:p-12">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -40,7 +42,7 @@ export default async function Login({
             backgroundImage: 'url(/textura-figuras.svg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.07,
+            opacity: 0.1,
           }}
         />
         <div
@@ -70,12 +72,12 @@ export default async function Login({
 
         <div className="relative max-w-md">
           <p className="text-balance text-[32px] font-semibold leading-[1.15] tracking-tight text-white">
-            Evaluar, aplicar y corregir, en un solo lugar.
+            Evaluar, aplicar y <span className="text-acento">corregir</span>, en un solo lugar.
           </p>
           <ul className="mt-8 space-y-3">
             {MODULOS.map((m) => (
               <li key={m} className="flex items-center gap-3 text-sm text-white/70">
-                <span aria-hidden="true" className="h-px w-5 bg-acento" />
+                <span aria-hidden="true" className="h-[2px] w-5 bg-acento" />
                 {m}
               </li>
             ))}
@@ -102,8 +104,14 @@ export default async function Login({
         <div className="flex flex-1 items-center justify-center px-6 py-14">
           <div className="w-full max-w-[400px]">
             <div className="hidden lg:block">
-              <a href="/" className="text-sm text-tenue transition hover:text-marca">
-                ← Volver a la portada
+              <a
+                href="/"
+                className="inline-flex items-center gap-1.5 text-sm text-tenue transition hover:text-marca"
+              >
+                <span aria-hidden="true" className="text-acento">
+                  ←
+                </span>
+                Volver a la portada
               </a>
             </div>
 
@@ -123,39 +131,7 @@ export default async function Login({
               </p>
             ) : null}
 
-            <form action="/api/auth/login" method="post" className="mt-8 space-y-5">
-              <label className="block text-[12px] font-semibold text-marca">
-                Correo o código
-                <input
-                  name="identificador"
-                  required
-                  autoFocus
-                  autoComplete="username"
-                  autoCapitalize="none"
-                  spellCheck={false}
-                  placeholder="docente@acropolis.cl o W4A-01"
-                  className={CLASE_INPUT}
-                />
-              </label>
-
-              <label className="block text-[12px] font-semibold text-marca">
-                Clave o PIN
-                <input
-                  name="secreto"
-                  type="password"
-                  required
-                  autoComplete="current-password"
-                  className={CLASE_INPUT}
-                />
-              </label>
-
-              <button
-                type="submit"
-                className="h-12 w-full rounded-xl bg-marca text-[15px] font-medium text-white transition hover:bg-marca-oscuro focus:outline-none focus-visible:ring-4 focus-visible:ring-marca/20"
-              >
-                Entrar
-              </button>
-            </form>
+            <FormularioIngreso conError={Boolean(mensaje)} />
 
             <p className="mt-8 border-t border-borde pt-6 text-[13px] leading-relaxed text-tenue">
               Si no recuerdas tus datos, pídelos a la coordinación académica. Los estudiantes
