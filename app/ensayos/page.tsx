@@ -175,6 +175,59 @@ export default async function Ensayos({
                           titulo={e.titulo}
                           asignaciones={e._count.asignaciones}
                         />
+
+                        <details className="relative">
+                          <summary className="cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
+                            Descargar
+                          </summary>
+                          <div className="absolute right-0 z-20 mt-2 w-64 rounded-xl border border-borde bg-white p-3 shadow-xl">
+                            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-tenue">
+                              Estudiante
+                            </p>
+                            <ul className="mt-2 space-y-1.5">
+                              {[
+                                ['carta', 'Carta'],
+                                ['a4', 'A4'],
+                                ['oficio', 'Oficio'],
+                              ].map(([valor, nombre]) => (
+                                <li key={valor} className="flex items-center justify-between gap-2">
+                                  <span className="text-xs text-marca">{nombre}</span>
+                                  <span className="flex gap-1">
+                                    <a
+                                      href={`/api/ensayos/${e.id}/docx?tamano=${valor}`}
+                                      className="rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
+                                    >
+                                      Word
+                                    </a>
+                                    <a
+                                      href={`/api/ensayos/${e.id}/pdf?tamano=${valor}`}
+                                      className="rounded-md border border-borde px-2 py-1 text-[11px] text-marca transition hover:bg-fondo"
+                                    >
+                                      PDF
+                                    </a>
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                            <p className="mt-3 border-t border-borde pt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-tenue">
+                              Con la clave (carta)
+                            </p>
+                            <div className="mt-2 flex gap-1">
+                              <a
+                                href={`/api/ensayos/${e.id}/docx?tamano=carta&clave=1`}
+                                className="flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
+                              >
+                                Word
+                              </a>
+                              <a
+                                href={`/api/ensayos/${e.id}/pdf?tamano=carta&clave=1`}
+                                className="flex-1 rounded-md border border-borde px-2 py-1 text-center text-[11px] text-marca transition hover:bg-fondo"
+                              >
+                                PDF
+                              </a>
+                            </div>
+                          </div>
+                        </details>
                       </div>
                     </div>
                   </li>

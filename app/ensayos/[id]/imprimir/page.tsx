@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { Figura } from '@/components/figura';
 import { TextoPotencia } from '@/components/texto-potencia';
+import { TAMANOS, tamanoDe } from '@/lib/documento';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,15 +14,17 @@ export default async function Imprimir({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ clave?: string }>;
+  searchParams: Promise<{ clave?: string; tamano?: string }>;
 }) {
   const sesion = await sesionActual();
   if (!sesion) redirect('/login');
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
   const { id } = await params;
-  const { clave } = await searchParams;
+  const { clave, tamano } = await searchParams;
   const conClave = clave === '1';
+  const medida = tamanoDe(tamano);
+  const hoja = TAMANOS[medida];
 
   const ensayo = await prisma.ensayo.findFirst({
     where: { id, colegioId: sesion.colegioId },
@@ -76,13 +79,27 @@ export default async function Imprimir({
           >
             Volver
           </a>
-          <span className="rounded-lg bg-marca px-3 py-1.5 text-xs text-white">
-            Ctrl+P para guardar en PDF
-          </span>
+          <a
+            href={`/api/ensayos/${ensayo.id}/docx?tamano=${medida}${conClave ? '&clave=1' : ''}`}
+            className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
+          >
+            Descargar Word
+          </a>
+          <a
+            href={`/api/ensayos/${ensayo.id}/pdf?tamano=${medida}${conClave ? '&clave=1' : ''}`}
+            className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white hover:bg-marca-oscuro"
+          >
+            Descargar PDF
+          </a>
         </div>
       </div>
 
-      <main className="mx-auto max-w-[210mm] bg-white px-8 py-10 text-slate-900 print:px-0 print:py-0">
+      <style>{`@page { size: ${hoja.css}; margin: 0; }`}</style>
+
+      <main
+        className="mx-auto bg-white px-8 py-10 text-slate-900 print:px-0 print:py-0"
+        style={{ maxWidth: `${hoja.mm[0]}mm` }}
+      >
         <header className="hoja mb-8 border-b border-slate-300 pb-4">
           <p className="text-xs uppercase tracking-wide text-slate-500">
             {ensayo.colegio?.nombre ?? 'Colegio'}
