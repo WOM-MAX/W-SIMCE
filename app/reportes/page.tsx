@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
 import { asignacionesDelColegio, informeDeAsignacion } from '@/lib/reportes';
+import { Cabecera, EstadoVacio } from '@/components/ui-panel';
 
 export const dynamic = 'force-dynamic';
 
@@ -52,13 +53,19 @@ export default async function Reportes({
     return (
       <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/reportes">
         <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
-          <div>
-            <h1 className="text-xl font-semibold tracking-tight text-marca">Reportes</h1>
-            <p className="text-xs text-tenue">Resultados por curso, eje y habilidad</p>
+          <Cabecera titulo="Reportes" detalle="Resultados por curso, eje y habilidad" />
+          <div className="rounded-2xl border border-borde bg-white">
+            <EstadoVacio
+              titulo="Todavía no hay evaluaciones asignadas"
+              detalle="El informe se arma solo cuando un curso rinde un ensayo asignado. Mientras tanto, aquí no hay nada que mostrar."
+              accion={
+                <a href="/ensayos" className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline">
+                  Ir a los ensayos
+                  <span aria-hidden="true">→</span>
+                </a>
+              }
+            />
           </div>
-          <p className="rounded-2xl border border-dashed border-borde bg-white p-6 text-sm text-tenue">
-            Todavía no hay evaluaciones asignadas en este colegio.
-          </p>
         </div>
       </Panel>
     );
@@ -70,28 +77,28 @@ export default async function Reportes({
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/reportes">
       <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <div>
-            <h1 className="text-xl font-semibold tracking-tight text-marca">Reportes</h1>
-            <p className="text-xs text-tenue">Resultados por curso, eje y habilidad</p>
-          </div>
-          {informe ? (
-            <div className="flex gap-2">
-              <a
-                href={`/reportes/${informe.id}`}
-                className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
-              >
-                Detalle por pregunta
-              </a>
-              <a
-                href={`/api/reportes/csv?asignacion=${informe.id}`}
-                className="rounded-lg border border-borde bg-white px-3 py-1.5 text-xs text-slate-700 hover:bg-fondo"
-              >
-                Descargar CSV
-              </a>
-            </div>
-          ) : null}
-        </div>
+        <Cabecera
+          titulo="Reportes"
+          detalle="Resultados por curso, eje y habilidad"
+          accion={
+            informe ? (
+              <div className="flex gap-2">
+                <a
+                  href={`/reportes/${informe.id}`}
+                  className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+                >
+                  Detalle por pregunta
+                </a>
+                <a
+                  href={`/api/reportes/csv?asignacion=${informe.id}`}
+                  className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+                >
+                  Descargar CSV
+                </a>
+              </div>
+            ) : null
+          }
+        />
 
         <div className="flex flex-wrap gap-2">
           {asignaciones.map((a) => (
@@ -110,9 +117,12 @@ export default async function Reportes({
         </div>
 
         {!informe ? (
-          <p className="rounded-2xl border border-dashed border-borde bg-white p-6 text-sm text-tenue">
-            Esa evaluación no pertenece a tu colegio.
-          </p>
+          <div className="rounded-2xl border border-borde bg-white">
+            <EstadoVacio
+              titulo="Esa evaluación no pertenece a tu colegio"
+              detalle="Elige otra evaluación en la lista de arriba."
+            />
+          </div>
         ) : (
           <>
             <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

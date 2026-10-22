@@ -3,13 +3,14 @@ import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { corregirIntento } from '@/lib/correccion';
 import { Panel } from '@/components/panel';
+import { Cabecera, EstadoVacio } from '@/components/ui-panel';
 
 export const dynamic = 'force-dynamic';
 
 const COLOR_NIVEL: Record<string, string> = {
   Insuficiente: 'bg-rose-50 text-rose-700',
-  Elemental: 'bg-amber-50 text-amber-800',
-  Adecuado: 'bg-acento-suave text-marca',
+  Elemental: 'bg-ambar-suave text-ambar-texto',
+  Adecuado: 'bg-teal-suave text-teal-texto',
 };
 
 export default async function Correccion() {
@@ -63,14 +64,34 @@ export default async function Correccion() {
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/correccion">
       <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight text-marca">Corrección</h1>
-          <p className="text-xs text-tenue">Resultados por curso y por estudiante</p>
-        </div>
+        <Cabecera
+          titulo="Corrección"
+          detalle="Resultados por curso y por estudiante"
+          accion={
+            <a
+              href="/reportes"
+              className="rounded-xl border border-borde bg-white px-4 py-2.5 text-sm font-medium text-marca transition hover:bg-fondo"
+            >
+              Ver reportes
+            </a>
+          }
+        />
         {refrescadas.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-borde bg-white p-6 text-sm text-tenue">
-            Todavía no hay evaluaciones asignadas.
-          </p>
+          <div className="rounded-2xl border border-borde bg-white">
+            <EstadoVacio
+              titulo="Todavía no hay evaluaciones asignadas"
+              detalle="Cuando asignes un ensayo a un curso, aquí aparece el detalle por alumno: correctas, logro, escala y nivel, con la opción de anular un intento o prorrogar el plazo."
+              accion={
+                <a
+                  href="/ensayos"
+                  className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-acento-boton-hover transition hover:underline"
+                >
+                  Ir a los ensayos
+                  <span aria-hidden="true">→</span>
+                </a>
+              }
+            />
+          </div>
         ) : null}
 
         {refrescadas.map((asignacion) => {
@@ -113,6 +134,12 @@ export default async function Correccion() {
                       {nivel}: {cantidad}
                     </span>
                   ))}
+                  <a
+                    href={`/seguimiento/${asignacion.id}`}
+                    className="rounded-lg bg-marca px-3 py-1.5 text-xs font-medium text-white transition hover:bg-marca-oscuro"
+                  >
+                    Seguimiento
+                  </a>
                 </div>
               </div>
 
