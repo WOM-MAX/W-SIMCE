@@ -23,7 +23,7 @@ export function SelectorArchivo() {
       <button
         type="button"
         onClick={() => entrada.current?.click()}
-        className="pulsable rounded-lg border border-borde px-3 py-2 text-xs font-medium text-marca transition hover:bg-fondo"
+        className="pulsable rounded-lg border border-marca/30 px-3.5 py-2 text-xs font-semibold text-marca transition hover:border-marca/60 hover:bg-fondo"
       >
         {nombre ? 'Cambiar archivo' : 'Elegir archivo'}
       </button>
@@ -33,7 +33,9 @@ export function SelectorArchivo() {
       <button
         disabled={!nombre}
         className={`pulsable rounded-lg px-4 py-2 text-sm font-medium text-white transition ${
-          nombre ? 'bg-marca hover:bg-marca-oscuro' : 'cursor-not-allowed bg-marca/40'
+          nombre
+            ? 'bg-acento-boton hover:bg-acento-boton-hover'
+            : 'cursor-not-allowed border border-borde bg-fondo text-tenue'
         }`}
       >
         Importar

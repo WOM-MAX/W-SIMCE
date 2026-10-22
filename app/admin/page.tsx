@@ -195,7 +195,7 @@ export default async function Admin({
                 className="mt-1 w-24 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca"
               />
             </label>
-            <button className="pulsable rounded-lg border border-borde px-3 py-2 text-xs text-slate-700 hover:bg-fondo">
+            <button className="pulsable rounded-lg border border-marca/30 px-3.5 py-2 text-xs font-semibold text-marca transition hover:border-marca/60 hover:bg-fondo">
               Purgar
             </button>
           </form>
