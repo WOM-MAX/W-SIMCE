@@ -126,12 +126,6 @@ export default async function Ensayos({
 
                       <div className="flex flex-wrap items-center gap-1">
                         <a
-                          href={`/ensayos/${e.id}/imprimir`}
-                          className="rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo"
-                        >
-                          Imprimir
-                        </a>
-                        <a
                           href={`/ensayos/${e.id}/asignar`}
                           className="rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo"
                         >
@@ -178,11 +172,18 @@ export default async function Ensayos({
 
                         <details className="relative">
                           <summary className="cursor-pointer list-none rounded-lg border border-borde px-3 py-1.5 text-xs text-marca transition hover:bg-fondo">
-                            Descargar
+                            Imprimir
                           </summary>
                           <div className="absolute right-0 z-20 mt-2 w-64 rounded-xl border border-borde bg-white p-3 shadow-xl">
+                            <a
+                              href={`/ensayos/${e.id}/imprimir`}
+                              className="mb-2 flex items-center justify-between rounded-lg bg-fondo px-2.5 py-2 text-xs font-medium text-marca transition hover:bg-borde/60"
+                            >
+                              Ver la hoja y imprimir
+                              <span aria-hidden="true">→</span>
+                            </a>
                             <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-tenue">
-                              Estudiante
+                              Descargar para el estudiante
                             </p>
                             <ul className="mt-2 space-y-1.5">
                               {[

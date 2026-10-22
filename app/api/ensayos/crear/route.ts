@@ -41,7 +41,15 @@ export async function POST(request: Request) {
     });
     return volver(
       request,
-      `/ensayos/nuevo?ok=creado&n=${ensayo.items}&rep=${ensayo.repetidas}&id=${ensayo.id}`
+      (() => {
+      const modo = texto(form, 'modo');
+      const tam = texto(form, 'tamano');
+      const tamano = tam === 'a4' || tam === 'oficio' ? tam : 'carta';
+      if (modo === 'imprimible') {
+        return `/api/ensayos/${ensayo.id}/docx?tamano=${tamano}`;
+      }
+      return `/ensayos/nuevo?ok=creado&n=${ensayo.items}&rep=${ensayo.repetidas}&id=${ensayo.id}`;
+    })()
     );
   } catch (error) {
     const mensaje = error instanceof Error ? error.message : '';

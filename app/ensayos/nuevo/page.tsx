@@ -30,6 +30,8 @@ export default async function NuevoEnsayo({
     rep?: string;
     id?: string;
     error?: string;
+    modo?: string;
+    tamano?: string;
   }>;
 }) {
   const sesion = await sesionActual();
@@ -37,6 +39,8 @@ export default async function NuevoEnsayo({
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
   const params = await searchParams;
+  const imprimible = params.modo === 'imprimible';
+  const tamano = params.tamano === 'a4' || params.tamano === 'oficio' ? params.tamano : 'carta';
 
   const [niveles, asignaturas] = await Promise.all([
     prisma.nivel.findMany({ orderBy: { orden: 'asc' } }),
@@ -104,15 +108,24 @@ export default async function NuevoEnsayo({
         ) : null}
 
         <div className="flex gap-2 rounded-xl bg-borde/40 p-1">
-          <span className="flex-1 rounded-lg bg-white px-4 py-2 text-center text-xs font-medium text-marca shadow-sm">
-            Interactivo
-          </span>
-          <span
-            className="flex-1 rounded-lg px-4 py-2 text-center text-xs text-tenue"
-            title="La versión imprimible todavía no está disponible"
+          <a
+            href={`/ensayos/nuevo?nivel=${nivel?.codigo ?? ''}&asignatura=${asignatura?.codigo ?? ''}`}
+            aria-current={!imprimible ? 'page' : undefined}
+            className={`flex-1 rounded-lg px-4 py-2 text-center text-xs transition ${
+              imprimible ? 'text-tenue hover:bg-white/60' : 'bg-white font-medium text-marca shadow-sm'
+            }`}
           >
-            Imprimible (PDF) · pronto
-          </span>
+            Interactivo
+          </a>
+          <a
+            href={`/ensayos/nuevo?nivel=${nivel?.codigo ?? ''}&asignatura=${asignatura?.codigo ?? ''}&modo=imprimible`}
+            aria-current={imprimible ? 'page' : undefined}
+            className={`flex-1 rounded-lg px-4 py-2 text-center text-xs transition ${
+              imprimible ? 'bg-white font-medium text-marca shadow-sm' : 'text-tenue hover:bg-white/60'
+            }`}
+          >
+            Para imprimir
+          </a>
         </div>
 
         <form action="/ensayos/nuevo" method="get" className="flex flex-wrap items-end gap-3">
@@ -150,6 +163,8 @@ export default async function NuevoEnsayo({
         </form>
 
         <form action="/api/ensayos/crear" method="post" className="space-y-6">
+          <input type="hidden" name="modo" value={imprimible ? 'imprimible' : 'interactivo'} />
+          <input type="hidden" name="tamano" value={tamano} />
           <input type="hidden" name="nivelId" value={nivel?.id ?? ''} />
           <input type="hidden" name="asignaturaId" value={asignatura?.id ?? ''} />
 
