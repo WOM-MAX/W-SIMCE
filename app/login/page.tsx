@@ -35,16 +35,28 @@ export default async function Login({
     <div className="min-h-dvh lg:grid lg:grid-cols-[1.05fr_1fr]">
       {/* panel de marca: solo en pantallas grandes */}
       <aside className="relative hidden overflow-hidden border-t-[3px] border-acento bg-marca lg:flex lg:flex-col lg:justify-between lg:p-12">
-        <div
+        {/* arcos concéntricos: el lenguaje de la órbita del emblema, a escala
+            arquitectónica. Sustituye al mosaico de figuras, que se leía como garabatos. */}
+        <svg
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage: 'url(/textura-figuras.svg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.1,
-          }}
-        />
+          viewBox="0 0 330 520"
+          preserveAspectRatio="xMinYMax slice"
+          className="pointer-events-none absolute inset-0 h-full w-full"
+          fill="none"
+        >
+          <g stroke="#ffffff" strokeOpacity="0.1" strokeWidth="1" transform="translate(18,505)">
+            {[130, 185, 240, 295, 350].map((r) => (
+              <circle key={r} r={r} />
+            ))}
+            <line x1="-40" y1="0" x2="360" y2="0" strokeDasharray="2 7" />
+            <line x1="0" y1="-500" x2="0" y2="20" strokeDasharray="2 7" />
+            <g strokeOpacity="0.2" strokeWidth="1.6">
+              {[130, 185, 240, 295, 350].map((r) => (
+                <line key={r} x1={r} y1="-5" x2={r} y2="5" />
+              ))}
+            </g>
+          </g>
+        </svg>
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -70,9 +82,13 @@ export default async function Login({
           </span>
         </div>
 
-        <div className="relative max-w-md">
-          <p className="text-balance text-[32px] font-semibold leading-[1.15] tracking-tight text-white">
-            Evaluar, aplicar y <span className="text-acento">corregir</span>, en un solo lugar.
+        <div className="relative max-w-[34rem]">
+          <p className="text-balance text-[38px] font-semibold uppercase leading-[1.1] tracking-[-0.01em] text-white">
+            Evaluar, aplicar y{' '}
+            <span className="inline-block text-[1.18em] leading-[0.9] tracking-[-0.03em] text-acento">
+              corregir
+            </span>{' '}
+            en un solo lugar.
           </p>
           <ul className="mt-8 space-y-3">
             {MODULOS.map((m) => (
