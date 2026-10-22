@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
+import { Cabecera } from '@/components/ui-panel';
 
 export const dynamic = 'force-dynamic';
 
@@ -71,12 +72,10 @@ export default async function NuevoEnsayo({
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/ensayos/nuevo">
       <div className="mx-auto max-w-3xl space-y-6 px-6 py-8">
-        <div>
-          <h1 className="text-xl font-semibold tracking-tight text-marca">Generar ensayo</h1>
-          <p className="text-xs text-tenue">
-            Queda como borrador y lo asignas a un curso cuando quieras.
-          </p>
-        </div>
+        <Cabecera
+          titulo="Generar ensayo"
+          detalle="Queda como borrador y lo asignas a un curso cuando quieras."
+        />
 
         {params.ok === 'creado' ? (
           <p className="rounded-xl bg-acento-suave px-4 py-3 text-sm text-marca">
