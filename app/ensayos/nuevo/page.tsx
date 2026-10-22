@@ -17,7 +17,7 @@ const TIEMPOS = [
 ];
 
 const CLASE_TARJETA =
-  'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-borde bg-white px-4 py-6 text-center text-sm transition hover:border-acento has-[:checked]:border-acento has-[:checked]:bg-acento-suave has-[:checked]:font-medium';
+  'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-borde bg-white px-4 py-6 text-center text-sm transition hover:border-acento hover:bg-acento-suave/50 has-[:checked]:border-acento has-[:checked]:bg-acento-suave has-[:checked]:font-medium has-[:checked]:ring-2 has-[:checked]:ring-acento/20 has-[:checked]:text-marca';
 
 export default async function NuevoEnsayo({
   searchParams,
