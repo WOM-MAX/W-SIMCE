@@ -86,7 +86,7 @@ export function Panel({
           key={item.href}
           href={item.href}
           aria-current={aqui ? 'page' : undefined}
-          className={`relative flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition ${
+          className={`pulsable relative flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm ${
             aqui
               ? 'bg-white/10 font-medium text-white'
               : 'text-white/70 hover:bg-white/[0.06] hover:text-white'

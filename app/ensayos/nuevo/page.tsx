@@ -17,7 +17,7 @@ const TIEMPOS = [
 ];
 
 const CLASE_TARJETA =
-  'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-borde bg-white px-4 py-6 text-center text-sm transition hover:border-acento hover:bg-acento-suave/50 has-[:checked]:border-acento has-[:checked]:bg-acento-suave has-[:checked]:font-medium has-[:checked]:ring-2 has-[:checked]:ring-acento/20 has-[:checked]:text-marca';
+  'opcion flex cursor-pointer flex-col items-center justify-center gap-2 rounded-2xl border border-borde bg-white px-4 py-6 text-center text-sm';
 
 export default async function NuevoEnsayo({
   searchParams,
@@ -111,18 +111,14 @@ export default async function NuevoEnsayo({
           <a
             href={`/ensayos/nuevo?nivel=${nivel?.codigo ?? ''}&asignatura=${asignatura?.codigo ?? ''}`}
             aria-current={!imprimible ? 'page' : undefined}
-            className={`flex-1 rounded-lg px-4 py-2 text-center text-xs transition ${
-              imprimible ? 'text-tenue hover:bg-white/60' : 'bg-white font-medium text-marca shadow-sm'
-            }`}
+            className={`opcion flex-1 rounded-lg px-4 py-2 text-center text-xs ${imprimible ? 'border border-transparent text-tenue' : 'border border-borde bg-white font-medium text-marca shadow-sm'}`}
           >
             Interactivo
           </a>
           <a
             href={`/ensayos/nuevo?nivel=${nivel?.codigo ?? ''}&asignatura=${asignatura?.codigo ?? ''}&modo=imprimible`}
             aria-current={imprimible ? 'page' : undefined}
-            className={`flex-1 rounded-lg px-4 py-2 text-center text-xs transition ${
-              imprimible ? 'bg-white font-medium text-marca shadow-sm' : 'text-tenue hover:bg-white/60'
-            }`}
+            className={`opcion flex-1 rounded-lg px-4 py-2 text-center text-xs ${imprimible ? 'border border-borde bg-white font-medium text-marca shadow-sm' : 'border border-transparent text-tenue'}`}
           >
             Para imprimir
           </a>

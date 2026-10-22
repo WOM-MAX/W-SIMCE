@@ -366,9 +366,7 @@ export default async function Admin({
           <div className="flex flex-wrap gap-1.5 border-b border-borde px-5 py-3">
             <a
               href="/admin#estudiantes"
-              className={`rounded-full border px-3 py-1 text-xs transition ${
-                cursoFiltro ? 'border-borde bg-white text-marca hover:bg-fondo' : 'border-marca bg-marca text-white'
-              }`}
+              className={`opcion rounded-full border px-3 py-1 text-xs ${cursoFiltro ? 'border-borde bg-white text-marca' : 'border-marca bg-marca text-white'}`}
             >
               Todos {estudiantes.length}
             </a>
@@ -378,11 +376,7 @@ export default async function Admin({
                 <a
                   key={c.id}
                   href={`/admin?curso=${c.id}#estudiantes`}
-                  className={`rounded-full border px-3 py-1 text-xs transition ${
-                    cursoFiltro === c.id
-                      ? 'border-marca bg-marca text-white'
-                      : 'border-borde bg-white text-marca hover:bg-fondo'
-                  }`}
+                  className={`opcion rounded-full border px-3 py-1 text-xs ${cursoFiltro === c.id ? 'border-marca bg-marca text-white' : 'border-borde bg-white text-marca'}`}
                 >
                   {c.nombre} {conteoPorCurso.get(c.id) ?? 0}
                 </a>

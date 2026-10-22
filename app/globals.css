@@ -209,3 +209,47 @@ body {
     break-after: page;
   }
 }
+
+
+/* ---------------------------------------------------------------- seleccion
+   Tres estados iguales en toda la app: encima, presionado y elegido.
+   El hundimiento del clic es lo que confirma el toque sin mirar el color. */
+
+.opcion {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 100ms ease;
+}
+
+.opcion:hover {
+  border-color: color-mix(in srgb, var(--color-acento) 55%, transparent);
+  background-color: color-mix(in srgb, var(--color-acento-suave) 55%, white);
+}
+
+.opcion:active,
+.pulsable:active {
+  transform: translateY(1.5px);
+}
+
+.opcion[aria-pressed='true'],
+.opcion[aria-current='page'],
+.opcion:has(input:checked) {
+  border-color: var(--color-acento);
+  background-color: var(--color-acento-suave);
+  color: var(--color-marca);
+  font-weight: 500;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-acento) 20%, transparent);
+}
+
+.pulsable {
+  transition: background-color 150ms ease, border-color 150ms ease, transform 100ms ease, box-shadow 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opcion:active,
+  .pulsable:active {
+    transform: none;
+  }
+}
