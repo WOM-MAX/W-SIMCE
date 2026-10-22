@@ -35,7 +35,7 @@ export function SelectorArchivo() {
         className={`pulsable rounded-lg px-4 py-2 text-sm font-medium text-white transition ${
           nombre
             ? 'bg-acento-boton hover:bg-acento-boton-hover'
-            : 'cursor-not-allowed border border-borde bg-fondo text-tenue'
+            : 'cursor-not-allowed border border-borde bg-white text-tenue/60'
         }`}
       >
         Importar

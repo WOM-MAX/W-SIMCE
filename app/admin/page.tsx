@@ -125,8 +125,9 @@ export default async function Admin({
         <section className="rounded-2xl border border-borde bg-white p-6">
           <h2 className="text-base font-semibold text-marca">Resultados y niveles de logro</h2>
           <p className="mt-1 mb-4 text-xs text-tenue">
-            Decide si el estudiante ve su puntaje y fija los cortes con que la UTP clasifica a cada
-            curso.
+            Descarga la plantilla, una fila por estudiante, y súbela. Se omiten los que ya están
+            cargados en el mismo curso, los que traen fecha de retiro y los de cursos que no existen
+            en la plataforma. El resumen dice cuántos y por qué.
           </p>
           <form
             action="/api/admin/configuracion"
@@ -218,7 +219,7 @@ export default async function Admin({
               action="/api/admin/importar"
               method="post"
               encType="multipart/form-data"
-              className="w-full"
+              className="flex flex-wrap items-center gap-3"
             >
               <SelectorArchivo />
             </form>
