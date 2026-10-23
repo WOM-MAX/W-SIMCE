@@ -94,9 +94,25 @@ export async function borrarSesion(): Promise<void> {
   store.delete(COOKIE);
 }
 
-export async function sesionActual(): Promise<Sesion | null> {
+// Sesión real, sin suplantación. Sirve para saber quién está detrás del teclado.
+export async function sesionReal(): Promise<Sesion | null> {
   const store = await cookies();
   return verificarSesion(store.get(COOKIE)?.value);
+}
+
+// Sesión efectiva: si un administrador está en "ver como", se devuelve la del
+// suplantado. La sesión real queda intacta en su cookie.
+export async function sesionActual(): Promise<Sesion | null> {
+  const real = await sesionReal();
+  if (!real) return null;
+
+  if (real.tipo === 'usuario' && real.rol === 'ADMIN') {
+    const { leerVerComo } = await import('@/lib/ver-como');
+    const suplente = await leerVerComo();
+    if (suplente) return suplente;
+  }
+
+  return real;
 }
 
 // Para páginas: si no hay sesión, manda al login.

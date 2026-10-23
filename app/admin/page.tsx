@@ -21,6 +21,7 @@ const MENSAJES: Record<string, string> = {
   'anio-activado': 'Año escolar activado.',
   'anio-cerrado': 'Año escolar cerrado: queda en solo lectura.',
   'anio-planificado': 'Año escolar devuelto a planificación.',
+  'ver-como-fin': 'Volviste a tu cuenta de administrador.',
   configuracion: 'Configuración guardada.',
 };
 
@@ -471,6 +472,14 @@ export default async function Admin({
                     <span className="rounded-full bg-borde px-2.5 py-1 text-xs text-slate-600">
                       {membresia?.rol ?? 'SIN ROL'}
                     </span>
+                    {tecnico && u.id !== sesion.id ? (
+                      <form action="/api/admin/ver-como" method="post">
+                        <input type="hidden" name="usuarioId" value={u.id} />
+                        <button className="pulsable rounded-lg border border-ambar/50 px-2 py-1 text-xs text-ambar-texto hover:bg-ambar-suave">
+                          Ver como
+                        </button>
+                      </form>
+                    ) : null}
                     {tecnico ? (
                       <form action="/api/admin/clave" method="post" className="flex items-center gap-2">
                         <input type="hidden" name="tipo" value="usuario" />

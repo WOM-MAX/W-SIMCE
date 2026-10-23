@@ -120,8 +120,11 @@ export async function estudianteVisible(
   return Boolean(estudiante);
 }
 
-// Escritura: el rol debe permitirla y el año no puede estar cerrado.
+// Escritura: el rol debe permitirla, el año no puede estar cerrado y no se puede
+// escribir mientras se está en "ver como".
 export async function puedeEditar(sesion: SesionUsuario): Promise<boolean> {
   if (soloLectura(sesion)) return false;
+  const { hayVerComo } = await import('@/lib/ver-como');
+  if (await hayVerComo()) return false;
   return anioEscribible(await anioActual(sesion));
 }

@@ -1,6 +1,7 @@
 import { Marca } from '@/components/marca';
 import { EstadoBase } from '@/components/estado-base';
 import { SelectorAnio } from '@/components/selector-anio';
+import { BannerVerComo } from '@/components/banner-ver-como';
 
 type Item = { href: string; nombre: string; icono: string; pronto?: boolean };
 
@@ -172,7 +173,10 @@ export function Panel({
           {contenidoMenu(true)}
         </nav>
 
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <BannerVerComo />
+          {children}
+        </main>
       </div>
     </div>
   );
