@@ -152,6 +152,12 @@ export function Panel({
               {rol ? <p className="truncate text-[11px] text-white/50">{rol}</p> : null}
             </div>
           </div>
+          <a
+            href="/cuenta"
+            className="pulsable block rounded-lg border border-white/15 px-3 py-2 text-xs text-white/70 transition hover:bg-white/10 hover:text-white"
+          >
+            Mi cuenta
+          </a>
           <form action="/api/auth/logout" method="post">
             <button className="pulsable w-full rounded-lg border border-white/15 px-3 py-2 text-xs text-white/70 transition hover:bg-white/10 hover:text-white">
               Cerrar sesión

@@ -143,3 +143,29 @@ mano.
 La sesión se firma con HMAC-SHA256 y viaja en una cookie `httpOnly`. Requiere
 `SESSION_SECRET` de 32 caracteres o más en el entorno; sin ella el login
 responde con un error de configuración, no con un fallo genérico.
+
+## Roles
+
+| Rol | Alcance | Puede |
+|---|---|---|
+| `ADMIN` | Colegio completo | Todo, incluidas cuentas, claves, años y auditoría |
+| `DIRECCION` | Colegio completo | Solo lectura: panel de dirección y reportes |
+| `UTP` | Sus cursos | Lo mismo que un docente, en los cursos de su nivel |
+| `DOCENTE` | Sus cursos | Ensayos, corrección, estudiantes y reportes de sus cursos |
+
+El detalle completo está en [`docs/ROLES-Y-PERMISOS.md`](docs/ROLES-Y-PERMISOS.md).
+La operación (despliegue, respaldo, incidentes) en
+[`docs/OPERACION.md`](docs/OPERACION.md), y el ciclo anual en
+[`docs/CICLO-ANUAL.md`](docs/CICLO-ANUAL.md).
+
+## Año escolar
+
+Todo se acota al año seleccionado en la barra lateral. Un año cerrado queda en
+solo lectura. En marzo se activa el año nuevo y se promueven los estudiantes
+desde Administración → Pasar estudiantes al año siguiente.
+
+## Respaldo
+
+```bash
+pnpm db:respaldo    # escribe respaldos/<fecha>/ con un JSON por tabla
+```
