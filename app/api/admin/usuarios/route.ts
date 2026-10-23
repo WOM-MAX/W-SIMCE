@@ -28,7 +28,7 @@ function pantallaEnlace(datos: {
 }): NextResponse {
   const nota =
     datos.motivo === 'sin-proveedor'
-      ? 'El envío de correo no está configurado (falta RESEND_API_KEY).'
+      ? 'El envío de correo no está configurado en este servidor. Entrega el enlace por otra vía.'
       : 'El correo no se pudo enviar en este momento.';
   const html = `<!doctype html>
 <html lang="es">
