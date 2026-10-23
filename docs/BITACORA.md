@@ -1210,3 +1210,31 @@ para revisar, y si el docente puede reordenar los ítems o solo marcarlos.
 - Banco: panel de filtros por capas y quitar la fila de filtros activos duplicada.
 - Revisión visual del Word y del PDF: dónde corta la página.
 - Resend queda descartado mientras el buzón del colegio funcione.
+
+### 27.5 Desorden en «Docentes y equipo» (anotado el 23 de octubre)
+
+Lo que se ve hoy y por qué estorba:
+
+1. Cada usuario muestra de una vez la rejilla completa de los ocho cursos con sus
+   casillas. Con cinco cuentas son veinte líneas de casillas; con veinte cuentas la
+   lista deja de servir para lo único que sirve: encontrar a una persona.
+2. Las acciones de la fila compiten: `Ver como`, `Nueva clave` con su campo y su
+   botón, y la rejilla de cursos. No se distingue cuál es la acción principal.
+3. Dos docentes tienen **los ocho cursos marcados** aunque se llamen «Profesora 4°B».
+   La pantalla lo permite y nadie lo revisó. Un docente con todos los cursos ve todo
+   el colegio, que es justo lo que el alcance por curso quería evitar.
+4. Hay dos cuentas de la misma persona: `walterorellana@` como ADMIN y
+   `wom@colegioacropolis.net` como DOCENTE. La pantalla no avisa cuando el nombre se
+   repite.
+
+Propuesta:
+
+- La fila muestra resumen, no edición: nombre, correo, rol y los cursos en texto
+  («4° básico A»). El `Ver como` y un menú con `Cambiar clave` y `Cursos`.
+- La asignación de cursos se abre solo al pedirla, en una fila expandida o en un panel.
+- Avisar cuando un docente queda con más de dos cursos o con todos: es señal de error
+  de configuración, no de uso normal.
+- Avisar cuando el nombre ya existe, aunque el correo sea distinto.
+- Revisar los datos actuales: recortar los cursos de Michael Contreras y de
+  «Profesora 4°B» a lo que de verdad atienden, y decidir si las dos cuentas de Walter
+  se unifican.
