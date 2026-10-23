@@ -23,7 +23,8 @@ function mezclar<T>(entrada: T[]): T[] {
 export async function crearEnsayoBorrador(
   colegioId: string,
   opciones: OpcionesGeneracion,
-  creadoPorId: string
+  creadoPorId: string,
+  anioId: string | null
 ): Promise<{ id: string; titulo: string; items: number; repetidas: number }> {
   const [nivel, asignatura, eje] = await Promise.all([
     prisma.nivel.findUnique({ where: { id: opciones.nivelId } }),
@@ -96,6 +97,7 @@ export async function crearEnsayoBorrador(
       estado: 'BORRADOR',
       origen: 'ALEATORIO',
       creadoPorId,
+      anioId,
       items: {
         create: elegidos.map((itemVersionId, indice) => ({
           orden: indice + 1,

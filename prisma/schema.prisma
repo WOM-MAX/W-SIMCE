@@ -79,9 +79,14 @@ model AnioEscolar {
   id        String   @id @default(uuid()) @db.Uuid
   colegioId String   @db.Uuid
   anio      Int
+  // planificacion | activo | cerrado
   estado    String   @default("activo")
+  // Por defecto 1 de marzo y 21 de diciembre; configurables por anio.
+  fechaInicio DateTime?
+  fechaCierre DateTime?
   colegio   Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
   cursos    Curso[]
+  ensayos   Ensayo[]
 
   @@unique([colegioId, anio])
 }
@@ -324,7 +329,10 @@ model Ensayo {
   creadoEn     DateTime      @default(now())
   // Dueno del ensayo. Nulo en los ensayos anteriores a esta columna.
   creadoPorId  String?       @db.Uuid
+  // Anio escolar al que pertenece. Nulo en los ensayos anteriores a esta columna.
+  anioId       String?       @db.Uuid
   colegio      Colegio?      @relation(fields: [colegioId], references: [id])
+  anio         AnioEscolar?  @relation(fields: [anioId], references: [id], onDelete: SetNull)
   creadoPor    Usuario?      @relation(fields: [creadoPorId], references: [id], onDelete: SetNull)
   nivel        Nivel         @relation(fields: [nivelId], references: [id])
   asignatura   Asignatura    @relation(fields: [asignaturaId], references: [id])
@@ -332,6 +340,7 @@ model Ensayo {
   asignaciones Asignacion[]
 
   @@index([colegioId, creadoPorId])
+  @@index([colegioId, anioId])
 }
 
 model EnsayoItem {

@@ -17,6 +17,10 @@ const MENSAJES: Record<string, string> = {
   clave: 'Credencial actualizada.',
   cursos: 'Cursos a cargo actualizados.',
   cortes: 'Cortes del nivel guardados.',
+  'anio-creado': 'Año escolar creado en planificación.',
+  'anio-activado': 'Año escolar activado.',
+  'anio-cerrado': 'Año escolar cerrado: queda en solo lectura.',
+  'anio-planificado': 'Año escolar devuelto a planificación.',
   configuracion: 'Configuración guardada.',
 };
 
@@ -27,6 +31,8 @@ const ERRORES: Record<string, string> = {
   curso: 'Elige un curso válido.',
   clave: 'La clave o el PIN deben tener al menos 4 caracteres.',
   cursos: 'Solo docentes y coordinadores tienen cursos a cargo.',
+  anio: 'Ese año ya existe o no es válido.',
+  'anio-activo': 'Ya hay un año activo. Ciérralo antes de activar otro.',
   permiso: 'No tienes permisos de administración.',
   cortes: 'Los cortes deben ir de 0 a 100 y el segundo ser mayor que el primero.',
   archivo: 'No se pudo leer el archivo. Sube un .xlsx válido.',
@@ -69,7 +75,7 @@ export default async function Admin({
 
   const fallo = error ? (ERRORES[error] ?? ERRORES.interno) : null;
 
-  const [usuarios, estudiantes, cursos, niveles, cortes] = await Promise.all([
+  const [usuarios, estudiantes, cursos, niveles, cortes, anios] = await Promise.all([
     prisma.usuario.findMany({
       where: { membresias: { some: { colegioId: sesion.colegioId } } },
       include: {
@@ -94,6 +100,11 @@ export default async function Admin({
     }),
     prisma.nivel.findMany({ orderBy: { orden: 'asc' } }),
     prisma.corteNivel.findMany({ where: { colegioId: sesion.colegioId } }),
+    prisma.anioEscolar.findMany({
+      where: { colegioId: sesion.colegioId },
+      orderBy: { anio: 'desc' },
+      include: { _count: { select: { cursos: true, ensayos: true } } },
+    }),
   ]);
 
   // Filtro por curso y recuento, calculados en memoria: son 289 alumnos.
@@ -165,6 +176,85 @@ export default async function Admin({
             </div>
           </form>
         </section>
+
+        {tecnico ? (
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Años escolares</h2>
+          <p className="mt-1 mb-4 text-xs text-tenue">
+            Un solo año activo a la vez. Al cerrar un año, todo queda en solo lectura: sirve para
+            cerrar el proceso en diciembre y abrir el siguiente en marzo.
+          </p>
+
+          <ul className="space-y-2">
+            {anios.map((a) => (
+              <li
+                key={a.id}
+                className="flex flex-wrap items-center gap-3 rounded-xl border border-borde px-4 py-2.5"
+              >
+                <span className="text-sm font-semibold text-marca">{a.anio}</span>
+                <span className="rounded-full bg-borde px-2.5 py-1 text-xs text-slate-600">
+                  {a.estado}
+                </span>
+                <span className="text-xs text-tenue">
+                  {a._count.cursos} cursos · {a._count.ensayos} ensayos
+                </span>
+                <div className="ml-auto flex flex-wrap gap-2">
+                  {a.estado !== 'activo' ? (
+                    <form action="/api/admin/anios" method="post">
+                      <input type="hidden" name="anioId" value={a.id} />
+                      <input type="hidden" name="accion" value="activar" />
+                      <button className="pulsable rounded-lg border border-marca/30 px-2.5 py-1 text-xs font-semibold text-marca hover:border-marca/60 hover:bg-fondo">
+                        Activar
+                      </button>
+                    </form>
+                  ) : null}
+                  {a.estado === 'activo' ? (
+                    <form action="/api/admin/anios" method="post">
+                      <input type="hidden" name="anioId" value={a.id} />
+                      <input type="hidden" name="accion" value="cerrar" />
+                      <button className="pulsable rounded-lg border border-rose-200 px-2.5 py-1 text-xs font-semibold text-rose-700 hover:bg-rose-50">
+                        Cerrar año
+                      </button>
+                    </form>
+                  ) : null}
+                  {a.estado === 'cerrado' ? (
+                    <form action="/api/admin/anios" method="post">
+                      <input type="hidden" name="anioId" value={a.id} />
+                      <input type="hidden" name="accion" value="planificar" />
+                      <button className="pulsable rounded-lg border border-borde px-2.5 py-1 text-xs text-slate-600 hover:bg-fondo">
+                        Reabrir para planificar
+                      </button>
+                    </form>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <form
+            action="/api/admin/anios"
+            method="post"
+            className="mt-4 flex flex-wrap items-end gap-3 border-t border-borde pt-4"
+          >
+            <input type="hidden" name="accion" value="crear" />
+            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+              Nuevo año
+              <input
+                name="anio"
+                type="number"
+                min="2000"
+                max="2100"
+                required
+                placeholder="2027"
+                className="mt-1 w-28 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca outline-none focus:border-acento"
+              />
+            </label>
+            <button className="pulsable rounded-lg bg-marca px-3.5 py-2 text-xs font-semibold text-white hover:bg-marca-oscuro">
+              Crear en planificación
+            </button>
+          </form>
+        </section>
+        ) : null}
 
         <section className="rounded-2xl border border-borde bg-white p-6">
           <h2 className="text-base font-semibold text-marca">Cortes de logro por nivel</h2>

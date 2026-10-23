@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
-import { puedeEscribir, whereCursos, whereEnsayos } from '@/lib/alcance';
+import { puedeEditar, whereCursos, whereEnsayos } from '@/lib/alcance';
 import { desdeHoraChile } from '@/lib/fechas';
 import { texto, volver } from '@/lib/http';
 import { registrarEvento } from '@/lib/eventos';
@@ -8,7 +8,7 @@ import { registrarEvento } from '@/lib/eventos';
 export async function POST(request: Request) {
   const sesion = await sesionActual();
   if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
-  if (!puedeEscribir(sesion)) return volver(request, '/ensayos?error=permiso');
+  if (!(await puedeEditar(sesion))) return volver(request, '/ensayos?error=permiso');
 
   const form = await request.formData();
   const ensayoId = texto(form, 'ensayoId');

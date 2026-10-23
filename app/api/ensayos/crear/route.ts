@@ -1,12 +1,13 @@
 import { sesionActual } from '@/lib/auth';
-import { puedeEscribir } from '@/lib/alcance';
+import { puedeEditar } from '@/lib/alcance';
+import { anioActual } from '@/lib/anio';
 import { crearEnsayoBorrador } from '@/lib/ensayos';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
   const sesion = await sesionActual();
   if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
-  if (!puedeEscribir(sesion)) return volver(request, '/ensayos?error=permiso');
+  if (!(await puedeEditar(sesion))) return volver(request, '/ensayos?error=permiso');
 
   const form = await request.formData();
   const nivelId = texto(form, 'nivelId');
@@ -33,6 +34,7 @@ export async function POST(request: Request) {
   }
 
   try {
+    const anio = await anioActual(sesion);
     const ensayo = await crearEnsayoBorrador(
       sesion.colegioId,
       {
@@ -43,7 +45,8 @@ export async function POST(request: Request) {
         tiempoMin,
         evitar: evitarValido,
       },
-      sesion.id
+      sesion.id,
+      anio?.id ?? null
     );
     return volver(
       request,

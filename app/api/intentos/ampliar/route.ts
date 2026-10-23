@@ -1,13 +1,13 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
-import { puedeEscribir, whereAsignaciones } from '@/lib/alcance';
+import { puedeEditar, whereAsignaciones } from '@/lib/alcance';
 import { registrarEvento } from '@/lib/eventos';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
   const sesion = await sesionActual();
   if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
-  if (!puedeEscribir(sesion)) return volver(request, '/seguimiento?error=permiso');
+  if (!(await puedeEditar(sesion))) return volver(request, '/seguimiento?error=permiso');
 
   const form = await request.formData();
   const intentoId = texto(form, 'intentoId');

@@ -1,5 +1,6 @@
 import { Marca } from '@/components/marca';
 import { EstadoBase } from '@/components/estado-base';
+import { SelectorAnio } from '@/components/selector-anio';
 
 type Item = { href: string; nombre: string; icono: string; pronto?: boolean };
 
@@ -125,6 +126,9 @@ export function Panel({
         <div className="relative">
           <div className="px-5 py-5">
             <Marca claro />
+          </div>
+          <div className="px-3 pb-3">
+            <SelectorAnio />
           </div>
           <nav className="space-y-0.5 px-3">{contenidoMenu(false)}</nav>
         </div>
