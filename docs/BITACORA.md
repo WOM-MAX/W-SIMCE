@@ -1024,6 +1024,130 @@ PIN `1234`; docente `docente@acropolis.cl` / `demo1234`.
 los 289 alumnos reales; los archivos con datos personales viven en
 `C:\Proyectos\_matricula-privada`, fuera del repositorio.
 
+## 26. Puesta al día, roles y ciclo anual (23 de octubre de 2026)
+
+Sesión larga, de la mañana al mediodía. El PC estaba **56 commits por detrás** de
+GitHub y la plataforma no dejaba entrar. Se actualizó, se corrigieron dos fallos de
+producción y se implementó el plan completo de roles y ciclo anual.
+
+### 26.1 Estado con el que se empezó
+
+| Punto | Situación |
+| --- | --- |
+| Repositorio | `b9bada1`, 0 adelante / 56 atrás, árbol limpio |
+| Dependencias | Faltaban `docx` y `@react-pdf/renderer` (Word y PDF del lote nuevo) |
+| Login | Fallaba con «No se pudo iniciar sesión» |
+| Producción | Sin emblemas ni iconos: todo `public/` respondía 404 |
+
+### 26.2 Los tres problemas de esa mañana
+
+1. **El login fallaba por la credencial de Neon.** Se había rotado la contraseña y el
+   `.env` estaba correcto, pero el servidor en marcha conservaba la cadena vieja:
+   `lib/prisma.ts` crea el cliente una sola vez y lo cachea en `globalThis`. Editar
+   `.env` no basta: hay que reiniciar `pnpm dev`. Comprobado con `/api/health` (503,
+   «Authentication failed») y con un login de clave falsa, que devolvía `interno`
+   antes de comparar credenciales.
+2. **Producción servía el código nuevo pero sin `public/`.** El `Dockerfile` copiaba
+   `.next/standalone`, `.next/static` y `prisma`, nunca `public`. En modo `standalone`
+   Next sirve esa carpeta desde el disco, así que emblemas, favicon y `robots.txt`
+   daban 404. Arreglado en `c80b47c`; verificado en vivo a las 11:03.
+3. **Un `pnpm dev` ejecutado en `C:\Users\DELL>`** en vez de la carpeta del proyecto:
+   `ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL`. No era un fallo del proyecto.
+
+### 26.3 Invitaciones por correo
+
+Alta de funcionarios sin fijar clave: la cuenta nace con una clave aleatoria que nadie
+conoce y se envía una invitación para que la persona defina la suya. El token se
+guarda hasheado, sirve una vez y vence en siete días. Sin `RESEND_API_KEY` no falla:
+la pantalla muestra el enlace para entregarlo a mano. Commit `cea2cd4`.
+
+### 26.4 Diseño antes de programar
+
+Tres documentos nuevos, commit `1967765`:
+
+- `docs/ROLES-Y-PERMISOS.md`: cuatro roles, matriz de permisos y atribuciones.
+- `docs/CICLO-ANUAL.md`: año escolar, promoción, cierre y retención.
+- `docs/PLAN-DE-IMPLEMENTACION.md`: ocho fases con dependencias y riesgos.
+
+Decisión sobre niveles de logro: se mantienen los nombres SIMCE (Insuficiente,
+Elemental, Adecuado) con un aviso de que son **referenciales del colegio**. Los
+oficiales se fijan con puntajes de corte sobre la escala de cada prueba, no con
+porcentajes de acierto.
+
+### 26.5 Las ocho fases del plan
+
+| Fase | Commit | Qué quedó |
+| --- | --- | --- |
+| 0 | — | Respaldo lógico: 28 tablas, 14.780 filas, manifiesto con SHA-256 |
+| 1 | `a57ac19` | Alcance por cursos, `Ensayo.creadoPorId`, rol `DIRECCION` |
+| 2 | `7374bd5` | `CorteNivel` y aviso SIMCE en los informes |
+| 3 | `6cff1db` | `Ensayo.anioId`, selector de año, cierre que bloquea escritura |
+| 4 | `662d7a8` | Promoción de estudiantes, reporte de cierre, código estable |
+| 5 | `782859e` | Panel de dirección con CSV |
+| 6 | `161aa41` | «Ver como» en solo lectura, con banner y auditoría |
+| 7 | `df6a0c2` | «Mi cuenta» y `docs/OPERACION.md` |
+
+Siete migraciones aditivas, todas aplicadas. La base pasó de 4 a 7 migraciones.
+
+### 26.6 Un dato que estaba mal desde antes
+
+18 de los 19 ensayos tenían `colegioId` nulo: el tablero los contaba, la lista no los
+mostraba y nadie podía usarlos. Se adoptaron al Colegio Acrópolis y al año 2026. Ahora
+la lista y el tablero coinciden: 19.
+
+### 26.7 Un error propio, corregido
+
+La prueba de «ver como» borraba un ensayo con la cookie real de administrador para
+comprobar el bloqueo. El health lo delató: 19 → 18 ensayos. Se restauró desde el
+respaldo de la Fase 0 con `scripts/restaurar-ensayo.mjs` («Ensayo 1 de Matemática ·
+30 ítems») y la prueba se corrigió en `ade1907` para que solo intente el borrado con
+la sesión suplantada. **Queda por revisar ese ensayo.**
+
+### 26.8 Sobre el catálogo de niveles
+
+Se agregaron por error ocho niveles (1° a 8° y I a IV medio) suponiendo que faltaban
+5° y 7°. El colegio usa siempre **4°, 6°, 8° y II medio**: se revirtió todo y la
+promoción sugiere 4°→6°, 6°→8°, 8°→II medio, II medio egresa.
+
+### 26.9 Verificación
+
+| Prueba | Resultado |
+| --- | --- |
+| Matriz de permisos por rol | 10/10 |
+| Año escolar | 8/8 |
+| Promoción | 11/11 |
+| Panel de dirección | 10/10 |
+| «Ver como» | 10/10 |
+| Mi cuenta | 6/6 |
+| **Total** | **55/55** |
+
+Producción: `/api/health` en 200 con 1 colegio, 8 cursos, 289 estudiantes, 1.926 ítems
+y 19 ensayos. `/`, `/login`, `/direccion`, `/cuenta` y `/admin/promocion` responden.
+
+### 26.10 Pendientes para retomar
+
+1. **Revisar el ensayo restaurado** en la lista de ensayos.
+2. **Ajustar cursos por docente.** Los dos docentes quedaron con los 8 cursos como red
+   de seguridad del despliegue; hay que recortarlos en Administración → Cursos a cargo.
+3. **Correo real.** Crear cuenta en Resend, verificar `colegioacropolis.net` con SPF y
+   DKIM, y cargar `RESEND_API_KEY` y `MAIL_FROM` en Railway.
+4. **Segundo administrador técnico** y acuerdo de confidencialidad.
+5. **Restauración completa.** El respaldo es lógico; para `pg_restore` hay que instalar
+   las herramientas de PostgreSQL en el PC (ver `docs/OPERACION.md`).
+6. **Ampliar la cobertura de pruebas** a los flujos de rendición y corrección: hoy no
+   hay intentos en la base, así que esas pantallas no se ejercitaron con datos reales.
+
+### 26.11 Cómo retomar
+
+```powershell
+cd C:\Proyectos\W-SIMCE
+git pull
+pnpm dev          # http://localhost:3005
+```
+
+Antes de tocar Prisma, detener `pnpm dev` (Windows bloquea el motor y `prisma generate`
+falla con `EPERM`).
+
 
 
 
