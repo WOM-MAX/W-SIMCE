@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { hashClave, sesionAdmin, type RolUsuario } from '@/lib/auth';
+import { esTecnico, hashClave, sesionActual, type RolUsuario } from '@/lib/auth';
 import { origen, texto, volver } from '@/lib/http';
 import { claveProvisional, crearInvitacion, enlaceActivacion } from '@/lib/invitacion';
 import { enviarInvitacion } from '@/lib/correo';
@@ -10,7 +10,7 @@ import { enviarInvitacion } from '@/lib/correo';
 // persona defina la suya. Si el correo no está configurado, se muestra el
 // enlace en pantalla para entregarlo por otra vía.
 
-const ROLES: RolUsuario[] = ['ADMIN', 'UTP', 'DOCENTE'];
+const ROLES: RolUsuario[] = ['ADMIN', 'DIRECCION', 'UTP', 'DOCENTE'];
 
 function escapar(valor: string): string {
   return valor
@@ -65,8 +65,9 @@ function pantallaEnlace(datos: {
 }
 
 export async function POST(request: Request) {
-  const sesion = await sesionAdmin();
-  if (!sesion) return volver(request, '/panel');
+  const sesion = await sesionActual();
+  if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
+  if (!esTecnico(sesion)) return volver(request, '/admin?error=permiso');
 
   const form = await request.formData();
   const nombre = texto(form, 'nombre');

@@ -15,6 +15,7 @@ datasource db {
 
 enum Rol {
   ADMIN
+  DIRECCION
   UTP
   DOCENTE
 }
@@ -99,6 +100,7 @@ model Usuario {
 
   membresias   Membresia[]
   asignaciones Asignacion[]
+  ensayosCreados Ensayo[]
 }
 
 model Membresia {
@@ -109,7 +111,23 @@ model Membresia {
   usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
   colegio   Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
 
+  // Cursos que atiende esta persona. Define su alcance: un docente ve sus cursos,
+  // un coordinador los de su nivel. El administrador y direccion no los necesitan.
+  cursos    MembresiaCurso[]
+
   @@unique([usuarioId, colegioId])
+}
+
+// Alcance por curso: que ve y sobre que puede actuar cada persona.
+model MembresiaCurso {
+  id          String    @id @default(uuid()) @db.Uuid
+  membresiaId String    @db.Uuid
+  cursoId     String    @db.Uuid
+  membresia   Membresia @relation(fields: [membresiaId], references: [id], onDelete: Cascade)
+  curso       Curso     @relation(fields: [cursoId], references: [id], onDelete: Cascade)
+
+  @@unique([membresiaId, cursoId])
+  @@index([cursoId])
 }
 
 model Nivel {
@@ -178,6 +196,7 @@ model Curso {
   nivel     Nivel    @relation(fields: [nivelId], references: [id])
   matriculas Matricula[]
   asignaciones Asignacion[]
+  membresias MembresiaCurso[]
 
   @@unique([colegioId, anioId, nivelId, letra])
 }
@@ -301,11 +320,16 @@ model Ensayo {
   estado       EstadoEnsayo  @default(BORRADOR)
   origen       OrigenEnsayo  @default(IMPORTADO)
   creadoEn     DateTime      @default(now())
+  // Dueno del ensayo. Nulo en los ensayos anteriores a esta columna.
+  creadoPorId  String?       @db.Uuid
   colegio      Colegio?      @relation(fields: [colegioId], references: [id])
+  creadoPor    Usuario?      @relation(fields: [creadoPorId], references: [id], onDelete: SetNull)
   nivel        Nivel         @relation(fields: [nivelId], references: [id])
   asignatura   Asignatura    @relation(fields: [asignaturaId], references: [id])
   items        EnsayoItem[]
   asignaciones Asignacion[]
+
+  @@index([colegioId, creadoPorId])
 }
 
 model EnsayoItem {

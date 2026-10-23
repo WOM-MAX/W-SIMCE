@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
-import { asignacionesDelColegio, informeDeAsignacion } from '@/lib/reportes';
+import { asignacionesVisibles, informeDeAsignacion } from '@/lib/reportes';
 import { Cabecera, EstadoVacio } from '@/components/ui-panel';
 
 export const dynamic = 'force-dynamic';
@@ -47,7 +47,7 @@ export default async function Reportes({
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
   const { asignacion } = await searchParams;
-  const asignaciones = await asignacionesDelColegio(sesion.colegioId);
+  const asignaciones = await asignacionesVisibles(sesion);
 
   if (asignaciones.length === 0) {
     return (
@@ -72,7 +72,7 @@ export default async function Reportes({
   }
 
   const elegida = asignacion ?? asignaciones[0].id;
-  const informe = await informeDeAsignacion(elegida, sesion.colegioId);
+  const informe = await informeDeAsignacion(sesion, elegida);
 
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/reportes">

@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { whereAsignaciones } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
 import { informeDeAsignacion, estadisticasPorItem } from '@/lib/reportes';
 
@@ -32,11 +33,11 @@ export default async function DetalleReporte({
   const { id } = await params;
   const { comparar } = await searchParams;
 
-  const informe = await informeDeAsignacion(id, sesion.colegioId);
+  const informe = await informeDeAsignacion(sesion, id);
   if (!informe) redirect('/reportes');
 
   const asignacion = await prisma.asignacion.findFirst({
-    where: { id, curso: { colegioId: sesion.colegioId } },
+    where: { id, ...(await whereAsignaciones(sesion)) },
     select: { cursoId: true },
   });
 
@@ -50,7 +51,7 @@ export default async function DetalleReporte({
 
   const items = await estadisticasPorItem(id);
   const masDificiles = [...items].sort((a, b) => a.pct - b.pct).slice(0, 5);
-  const otra = comparar ? await informeDeAsignacion(comparar, sesion.colegioId) : null;
+  const otra = comparar ? await informeDeAsignacion(sesion, comparar) : null;
 
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/reportes">

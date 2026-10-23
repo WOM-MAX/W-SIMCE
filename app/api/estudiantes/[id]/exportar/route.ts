@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { whereEstudiantes } from '@/lib/alcance';
 import { registrarEvento } from '@/lib/eventos';
 
 // Derecho de acceso: todo lo que el sistema guarda de un estudiante, en un archivo.
@@ -15,7 +16,7 @@ export async function GET(
   const { id } = await params;
 
   const estudiante = await prisma.estudiante.findFirst({
-    where: { id, colegioId: sesion.colegioId },
+    where: { id, ...(await whereEstudiantes(sesion)) },
     include: {
       matriculas: { include: { curso: { select: { nombre: true } } } },
       intentos: {

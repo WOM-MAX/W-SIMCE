@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const asignacionId = url.searchParams.get('asignacion');
   if (!asignacionId) return new Response('Falta el parámetro asignación', { status: 400 });
 
-  const informe = await informeDeAsignacion(asignacionId, sesion.colegioId);
+  const informe = await informeDeAsignacion(sesion, asignacionId);
   if (!informe) return new Response('Asignación no encontrada', { status: 404 });
 
   const lineas: string[] = [];

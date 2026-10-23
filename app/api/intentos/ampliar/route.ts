@@ -1,11 +1,13 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { puedeEscribir, whereAsignaciones } from '@/lib/alcance';
 import { registrarEvento } from '@/lib/eventos';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
   const sesion = await sesionActual();
   if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
+  if (!puedeEscribir(sesion)) return volver(request, '/seguimiento?error=permiso');
 
   const form = await request.formData();
   const intentoId = texto(form, 'intentoId');
@@ -16,7 +18,7 @@ export async function POST(request: Request) {
   if (minutos < 1 || minutos > 120) return volver(request, '/seguimiento?error=minutos');
 
   const intento = await prisma.intento.findFirst({
-    where: { id: intentoId, asignacion: { curso: { colegioId: sesion.colegioId } } },
+    where: { id: intentoId, asignacion: await whereAsignaciones(sesion) },
     include: { asignacion: { select: { id: true } } },
   });
   if (!intento) return volver(request, '/seguimiento?error=intento');

@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { sesionAdmin } from '@/lib/auth';
+import { esTecnico, sesionAdmin } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { Panel } from '@/components/panel';
 import { MarcarTodos } from '@/components/marcar-todos';
@@ -15,6 +15,7 @@ const MENSAJES: Record<string, string> = {
   invitado: 'Invitación enviada. La persona debe abrir el correo y definir su clave.',
   estudiante: 'Estudiante creado.',
   clave: 'Credencial actualizada.',
+  cursos: 'Cursos a cargo actualizados.',
   configuracion: 'Configuración guardada.',
 };
 
@@ -24,6 +25,7 @@ const ERRORES: Record<string, string> = {
   run: 'Ese RUN ya está cargado en otro estudiante.',
   curso: 'Elige un curso válido.',
   clave: 'La clave o el PIN deben tener al menos 4 caracteres.',
+  cursos: 'Solo docentes y coordinadores tienen cursos a cargo.',
   permiso: 'No tienes permisos de administración.',
   cortes: 'Los cortes deben ir de 0 a 100 y el segundo ser mayor que el primero.',
   archivo: 'No se pudo leer el archivo. Sube un .xlsx válido.',
@@ -48,6 +50,7 @@ export default async function Admin({
 }) {
   const sesion = await sesionAdmin();
   if (!sesion) redirect('/panel');
+  const tecnico = esTecnico(sesion);
 
   const { ok, error, n, o, e, d, curso: cursoFiltro } = await searchParams;
 
@@ -68,7 +71,12 @@ export default async function Admin({
   const [usuarios, estudiantes, cursos] = await Promise.all([
     prisma.usuario.findMany({
       where: { membresias: { some: { colegioId: sesion.colegioId } } },
-      include: { membresias: { where: { colegioId: sesion.colegioId } } },
+      include: {
+        membresias: {
+          where: { colegioId: sesion.colegioId },
+          include: { cursos: { select: { cursoId: true } } },
+        },
+      },
       orderBy: { nombre: 'asc' },
     }),
     prisma.estudiante.findMany({
@@ -229,6 +237,7 @@ export default async function Admin({
         </section>
 
         <section className="grid gap-6 lg:grid-cols-2">
+          {tecnico ? (
           <div className="rounded-2xl border border-borde bg-white p-6">
             <h2 className="text-base font-semibold text-marca">Nuevo docente o directivo</h2>
             <p className="mt-1 mb-4 text-xs text-tenue">
@@ -249,6 +258,7 @@ export default async function Admin({
                 <select name="rol" className={CLASE_INPUT} defaultValue="DOCENTE">
                   <option value="DOCENTE">Docente</option>
                   <option value="UTP">UTP</option>
+                  <option value="DIRECCION">Dirección (solo lectura)</option>
                   <option value="ADMIN">Administrador</option>
                 </select>
               </label>
@@ -257,6 +267,15 @@ export default async function Admin({
               </button>
             </form>
           </div>
+          ) : (
+            <div className="rounded-2xl border border-borde bg-white p-6">
+              <h2 className="text-base font-semibold text-marca">Cuentas del equipo</h2>
+              <p className="mt-2 text-xs leading-relaxed text-tenue">
+                Las cuentas de personal las crea el administrador técnico. Desde aquí puedes
+                gestionar estudiantes y ver quién tiene acceso.
+              </p>
+            </div>
+          )}
 
           <div className="rounded-2xl border border-borde bg-white p-6">
             <h2 className="text-base font-semibold text-marca">Nuevo estudiante</h2>
@@ -305,31 +324,73 @@ export default async function Admin({
             <span className="text-xs text-tenue">{usuarios.length}</span>
           </div>
           <ul className="divide-y divide-borde">
-            {usuarios.map((u) => (
-              <li key={u.id} className="flex flex-wrap items-center gap-3 px-5 py-3">
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-medium text-slate-800">{u.nombre}</p>
-                  <p className="truncate text-xs text-tenue">{u.email}</p>
-                </div>
-                <span className="rounded-full bg-borde px-2.5 py-1 text-xs text-slate-600">
-                  {u.membresias[0]?.rol ?? 'SIN ROL'}
-                </span>
-                <form action="/api/admin/clave" method="post" className="flex items-center gap-2">
-                  <input type="hidden" name="tipo" value="usuario" />
-                  <input type="hidden" name="id" value={u.id} />
-                  <input
-                    name="valor"
-                    required
-                    minLength={4}
-                    placeholder="Nueva clave"
-                    className="w-32 rounded-lg border border-borde px-2 py-1 text-xs"
-                  />
-                  <button className="pulsable rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
-                    Cambiar
-                  </button>
-                </form>
-              </li>
-            ))}
+            {usuarios.map((u) => {
+              const membresia = u.membresias[0];
+              const conCursos = membresia?.rol === 'DOCENTE' || membresia?.rol === 'UTP';
+              return (
+                <li key={u.id} className="px-5 py-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-medium text-slate-800">{u.nombre}</p>
+                      <p className="truncate text-xs text-tenue">{u.email}</p>
+                    </div>
+                    <span className="rounded-full bg-borde px-2.5 py-1 text-xs text-slate-600">
+                      {membresia?.rol ?? 'SIN ROL'}
+                    </span>
+                    {tecnico ? (
+                      <form action="/api/admin/clave" method="post" className="flex items-center gap-2">
+                        <input type="hidden" name="tipo" value="usuario" />
+                        <input type="hidden" name="id" value={u.id} />
+                        <input
+                          name="valor"
+                          required
+                          minLength={4}
+                          placeholder="Nueva clave"
+                          className="w-32 rounded-lg border border-borde px-2 py-1 text-xs"
+                        />
+                        <button className="pulsable rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
+                          Cambiar
+                        </button>
+                      </form>
+                    ) : null}
+                  </div>
+
+                  {tecnico && conCursos && membresia ? (
+                    <form
+                      action="/api/admin/cursos"
+                      method="post"
+                      className="mt-3 flex flex-wrap items-center gap-2 border-t border-borde pt-3"
+                    >
+                      <input type="hidden" name="membresiaId" value={membresia.id} />
+                      <span className="text-xs font-medium uppercase tracking-wide text-tenue">
+                        Cursos a cargo
+                      </span>
+                      {cursos.map((c) => {
+                        const marcado = membresia.cursos.some((mc) => mc.cursoId === c.id);
+                        return (
+                          <label
+                            key={c.id}
+                            className="flex items-center gap-1.5 rounded-lg border border-borde px-2 py-1 text-xs text-slate-600"
+                          >
+                            <input
+                              type="checkbox"
+                              name="cursoId"
+                              value={c.id}
+                              defaultChecked={marcado}
+                              className="h-3.5 w-3.5 accent-acento"
+                            />
+                            {c.nombre}
+                          </label>
+                        );
+                      })}
+                      <button className="pulsable rounded-lg border border-borde px-2 py-1 text-xs text-slate-600 hover:bg-fondo">
+                        Guardar cursos
+                      </button>
+                    </form>
+                  ) : null}
+                </li>
+              );
+            })}
           </ul>
         </section>
 

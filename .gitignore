@@ -11,3 +11,6 @@ captura.png
 
 # renders de comprobacion de figuras
 tmp-figuras/
+
+# respaldos logicos de la base (contienen datos de estudiantes, no se versionan)
+respaldos/

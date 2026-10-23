@@ -7,7 +7,7 @@ import { cookies } from 'next/headers';
 const COOKIE = 'wsimce_sesion';
 const DURACION_SEG = 60 * 60 * 12;
 
-export type RolUsuario = 'ADMIN' | 'UTP' | 'DOCENTE';
+export type RolUsuario = 'ADMIN' | 'DIRECCION' | 'UTP' | 'DOCENTE';
 
 export type Sesion =
   | {
@@ -112,4 +112,26 @@ export async function sesionAdmin(): Promise<Extract<Sesion, { tipo: 'usuario' }
   if (!sesion || sesion.tipo !== 'usuario') return null;
   if (sesion.rol !== 'ADMIN' && sesion.rol !== 'UTP') return null;
   return sesion;
+}
+
+export type SesionUsuario = Extract<Sesion, { tipo: 'usuario' }>;
+
+// Administracion tecnica: cuentas, claves, mantencion y auditoria.
+export function esTecnico(sesion: SesionUsuario): boolean {
+  return sesion.rol === 'ADMIN';
+}
+
+// Direccion: ve todo el colegio y no modifica nada.
+export function esDireccion(sesion: SesionUsuario): boolean {
+  return sesion.rol === 'DIRECCION';
+}
+
+// Direccion y administracion comparten el alcance: todo el colegio.
+export function veTodoElColegio(sesion: SesionUsuario): boolean {
+  return esTecnico(sesion) || esDireccion(sesion);
+}
+
+// Un rol de solo lectura no puede escribir en ninguna parte.
+export function soloLectura(sesion: SesionUsuario): boolean {
+  return esDireccion(sesion);
 }

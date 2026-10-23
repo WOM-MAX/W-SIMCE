@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
+import { estudianteVisible } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
 import { historialDeEstudiante } from '@/lib/reportes';
 
@@ -26,6 +27,7 @@ export default async function HistorialEstudiante({
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
   const { id } = await params;
+  if (!(await estudianteVisible(sesion, id))) redirect('/reportes');
   const datos = await historialDeEstudiante(id, sesion.colegioId);
   if (!datos) redirect('/reportes');
 

@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { puedeEscribir, whereCursos, whereEnsayos } from '@/lib/alcance';
 import { desdeHoraChile } from '@/lib/fechas';
 import { texto, volver } from '@/lib/http';
 import { registrarEvento } from '@/lib/eventos';
@@ -7,6 +8,7 @@ import { registrarEvento } from '@/lib/eventos';
 export async function POST(request: Request) {
   const sesion = await sesionActual();
   if (!sesion || sesion.tipo !== 'usuario') return volver(request, '/login');
+  if (!puedeEscribir(sesion)) return volver(request, '/ensayos?error=permiso');
 
   const form = await request.formData();
   const ensayoId = texto(form, 'ensayoId');
@@ -28,14 +30,14 @@ export async function POST(request: Request) {
 
   try {
     const ensayo = await prisma.ensayo.findFirst({
-      where: { id: ensayoId, colegioId: sesion.colegioId },
+      where: { id: ensayoId, ...(await whereEnsayos(sesion)) },
       include: { _count: { select: { items: true } } },
     });
     if (!ensayo) return volver(request, `/ensayos?error=ensayo`);
     if (ensayo._count.items === 0) return volver(request, `${destino}?error=vacio`);
 
     const curso = await prisma.curso.findFirst({
-      where: { id: cursoId, colegioId: sesion.colegioId },
+      where: { id: cursoId, ...(await whereCursos(sesion)) },
       select: { id: true, nombre: true },
     });
     if (!curso) return volver(request, `${destino}?error=curso`);

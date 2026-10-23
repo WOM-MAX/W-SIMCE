@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
+import { whereCursos, whereEnsayos } from '@/lib/alcance';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
 import { aHoraChile } from '@/lib/fechas';
@@ -36,7 +37,7 @@ export default async function AsignarEnsayo({
   const { error } = await searchParams;
 
   const ensayo = await prisma.ensayo.findFirst({
-    where: { id, colegioId: sesion.colegioId },
+    where: { id, ...(await whereEnsayos(sesion)) },
     include: {
       nivel: true,
       asignatura: true,
@@ -51,7 +52,7 @@ export default async function AsignarEnsayo({
   if (!ensayo) redirect('/ensayos?error=ensayo');
 
   const cursos = await prisma.curso.findMany({
-    where: { colegioId: sesion.colegioId },
+    where: await whereCursos(sesion),
     orderBy: { nombre: 'asc' },
   });
 

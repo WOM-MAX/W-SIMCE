@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { corregirIntento } from '@/lib/correccion';
+import { whereAsignaciones } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
 import { Cabecera, EstadoVacio } from '@/components/ui-panel';
 
@@ -18,8 +19,10 @@ export default async function Correccion() {
   if (!sesion) redirect('/login');
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
+  const filtro = await whereAsignaciones(sesion);
+
   const asignaciones = await prisma.asignacion.findMany({
-    where: { curso: { colegioId: sesion.colegioId } },
+    where: filtro,
     include: {
       ensayo: true,
       curso: true,
@@ -45,7 +48,7 @@ export default async function Correccion() {
   }
 
   const refrescadas = await prisma.asignacion.findMany({
-    where: { curso: { colegioId: sesion.colegioId } },
+    where: filtro,
     include: {
       ensayo: true,
       curso: true,

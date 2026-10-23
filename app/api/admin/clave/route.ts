@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma';
-import { hashClave, sesionAdmin } from '@/lib/auth';
+import { esTecnico, hashClave, sesionAdmin } from '@/lib/auth';
 import { texto, volver } from '@/lib/http';
 
 export async function POST(request: Request) {
@@ -10,6 +10,9 @@ export async function POST(request: Request) {
   const tipo = texto(form, 'tipo');
   const id = texto(form, 'id');
   const valor = texto(form, 'valor');
+
+  // Las claves del personal solo las restablece el administrador tecnico.
+  if (tipo === 'usuario' && !esTecnico(sesion)) return volver(request, '/admin?error=permiso');
 
   if (!id || valor.length < 4) return volver(request, '/admin?error=clave');
 

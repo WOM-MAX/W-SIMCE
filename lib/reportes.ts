@@ -1,5 +1,7 @@
 import { prisma } from '@/lib/prisma';
 import { corregirIntento } from '@/lib/correccion';
+import type { SesionUsuario } from '@/lib/auth';
+import { whereAsignaciones } from '@/lib/alcance';
 
 export type FilaEstudiante = {
   intentoId: string;
@@ -63,20 +65,20 @@ function agrupar(
     .sort((a, b) => b.pct - a.pct);
 }
 
-export async function asignacionesDelColegio(colegioId: string) {
+export async function asignacionesVisibles(sesion: SesionUsuario) {
   return prisma.asignacion.findMany({
-    where: { curso: { colegioId } },
+    where: await whereAsignaciones(sesion),
     include: { ensayo: true, curso: true },
     orderBy: { creadaEn: 'desc' },
   });
 }
 
 export async function informeDeAsignacion(
-  asignacionId: string,
-  colegioId: string
+  sesion: SesionUsuario,
+  asignacionId: string
 ): Promise<InformeAsignacion | null> {
   const asignacion = await prisma.asignacion.findFirst({
-    where: { id: asignacionId, curso: { colegioId } },
+    where: { id: asignacionId, ...(await whereAsignaciones(sesion)) },
     include: { ensayo: true, curso: true },
   });
   if (!asignacion) return null;

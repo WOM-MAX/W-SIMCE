@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { sesionActual } from '@/lib/auth';
 import { Panel } from '@/components/panel';
-import { ensayosDelColegio } from '@/lib/ensayos';
+import { ensayosVisibles } from '@/lib/ensayos';
 import { Cabecera, EstadoVacio, Tarjeta } from '@/components/ui-panel';
 import { EliminarEnsayo } from '@/components/eliminar-ensayo';
 
@@ -15,6 +15,7 @@ const AVISOS: Record<string, string> = {
 
 const ERRORES: Record<string, string> = {
   ensayo: 'Esa evaluación no existe o no es de tu colegio.',
+  permiso: 'Tu perfil es de solo lectura: no puedes modificar evaluaciones.',
   'con-asignaciones': 'No se puede eliminar: el ensayo tiene asignaciones a cursos.',
   'titulo-corto': 'El nombre necesita al menos tres caracteres.',
   generico: 'No se pudo completar la operación.',
@@ -30,7 +31,7 @@ export default async function Ensayos({
   if (sesion.tipo !== 'usuario') redirect('/alumno');
 
   const { ok, error, curso, nombre } = await searchParams;
-  const ensayos = await ensayosDelColegio(sesion.colegioId);
+  const ensayos = await ensayosVisibles(sesion);
 
   const mensajeOk =
     ok === 'asignado'

@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { whereEnsayos } from '@/lib/alcance';
 import { Figura } from '@/components/figura';
 import { TextoPotencia } from '@/components/texto-potencia';
 import { TAMANOS, tamanoDe } from '@/lib/documento';
@@ -27,7 +28,7 @@ export default async function Imprimir({
   const hoja = TAMANOS[medida];
 
   const ensayo = await prisma.ensayo.findFirst({
-    where: { id, colegioId: sesion.colegioId },
+    where: { id, ...(await whereEnsayos(sesion)) },
     include: {
       nivel: true,
       asignatura: true,

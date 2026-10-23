@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { whereAsignaciones } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
 import { aHoraChile } from '@/lib/fechas';
 
@@ -42,7 +43,7 @@ export default async function Seguimiento({
   const { ok, error } = await searchParams;
 
   const asignacion = await prisma.asignacion.findFirst({
-    where: { id, curso: { colegioId: sesion.colegioId } },
+    where: { id, ...(await whereAsignaciones(sesion)) },
     include: {
       ensayo: { select: { titulo: true, tiempoMin: true } },
       curso: {

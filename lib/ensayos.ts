@@ -1,4 +1,6 @@
 import { prisma } from '@/lib/prisma';
+import type { SesionUsuario } from '@/lib/auth';
+import { whereEnsayos } from '@/lib/alcance';
 
 export type OpcionesGeneracion = {
   nivelId: string;
@@ -20,7 +22,8 @@ function mezclar<T>(entrada: T[]): T[] {
 
 export async function crearEnsayoBorrador(
   colegioId: string,
-  opciones: OpcionesGeneracion
+  opciones: OpcionesGeneracion,
+  creadoPorId: string
 ): Promise<{ id: string; titulo: string; items: number; repetidas: number }> {
   const [nivel, asignatura, eje] = await Promise.all([
     prisma.nivel.findUnique({ where: { id: opciones.nivelId } }),
@@ -92,6 +95,7 @@ export async function crearEnsayoBorrador(
       tiempoMin: opciones.tiempoMin,
       estado: 'BORRADOR',
       origen: 'ALEATORIO',
+      creadoPorId,
       items: {
         create: elegidos.map((itemVersionId, indice) => ({
           orden: indice + 1,
@@ -106,12 +110,14 @@ export async function crearEnsayoBorrador(
   return { id: ensayo.id, titulo: ensayo.titulo, items: elegidos.length, repetidas };
 }
 
-export async function ensayosDelColegio(colegioId: string) {
+// Ensayos que la persona puede ver: los suyos y los que le asignaron.
+export async function ensayosVisibles(sesion: SesionUsuario) {
   return prisma.ensayo.findMany({
-    where: { colegioId },
+    where: await whereEnsayos(sesion),
     include: {
       nivel: true,
       asignatura: true,
+      creadoPor: { select: { nombre: true } },
       _count: { select: { items: true, asignaciones: true } },
     },
     orderBy: { creadoEn: 'desc' },

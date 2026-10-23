@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
+import { whereAsignaciones, whereCursos, whereEnsayos, whereEstudiantes } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
 import { MODULOS } from '@/lib/modulos';
 import { Cabecera, CabezaTarjeta, EstadoVacio, EtiquetaEstado, Tarjeta } from '@/components/ui-panel';
@@ -20,13 +21,21 @@ export default async function Inicio() {
   if (!sesion) redirect('/login');
   if (sesion.tipo === 'estudiante') redirect('/alumno');
 
+  const [fCursos, fEstudiantes, fEnsayos, fAsignaciones] = await Promise.all([
+    whereCursos(sesion),
+    whereEstudiantes(sesion),
+    whereEnsayos(sesion),
+    whereAsignaciones(sesion),
+  ]);
+
   const [colegios, cursos, estudiantes, items, ensayos, asignaciones] = await Promise.all([
     prisma.colegio.count(),
-    prisma.curso.count(),
-    prisma.estudiante.count(),
+    prisma.curso.count({ where: fCursos }),
+    prisma.estudiante.count({ where: fEstudiantes }),
     prisma.item.count(),
-    prisma.ensayo.count(),
+    prisma.ensayo.count({ where: fEnsayos }),
     prisma.asignacion.findMany({
+      where: fAsignaciones,
       include: { ensayo: true, curso: true },
       orderBy: { creadaEn: 'desc' },
       take: 5,
