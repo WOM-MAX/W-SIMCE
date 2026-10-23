@@ -1,7 +1,7 @@
 import ExcelJS from 'exceljs';
 import { prisma } from '@/lib/prisma';
 import { hashClave, sesionAdmin } from '@/lib/auth';
-import { siguienteCodigo } from '@/lib/estudiantes';
+import { siguienteCodigoEstable } from '@/lib/estudiantes';
 import { volver } from '@/lib/http';
 
 const MAX_FILAS = 500;
@@ -152,7 +152,7 @@ export async function POST(request: Request) {
         }
       }
 
-      const codigoAcceso = await siguienteCodigo(sesion.colegioId, `W${curso.nivel.codigo}-`);
+      const codigoAcceso = await siguienteCodigoEstable(sesion.colegioId);
       const estudiante = await prisma.estudiante.create({
         data: {
           colegioId: sesion.colegioId,

@@ -253,6 +253,14 @@ export default async function Admin({
               Crear en planificación
             </button>
           </form>
+
+          <a
+            href="/admin/promocion"
+            className="pulsable mt-4 inline-flex items-center gap-1.5 border-t border-borde pt-4 text-sm font-medium text-acento-boton-hover hover:underline"
+          >
+            Pasar estudiantes al año siguiente
+            <span aria-hidden="true">→</span>
+          </a>
         </section>
         ) : null}
 

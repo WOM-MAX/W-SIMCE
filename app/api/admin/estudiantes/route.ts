@@ -1,6 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { hashClave, sesionAdmin } from '@/lib/auth';
-import { siguienteCodigo } from '@/lib/estudiantes';
+import { siguienteCodigoEstable } from '@/lib/estudiantes';
 import { registrarEvento } from '@/lib/eventos';
 import { texto, volver } from '@/lib/http';
 
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     });
     if (!curso) return volver(request, '/admin?error=curso');
 
-    const codigoAcceso = await siguienteCodigo(sesion.colegioId, `W${curso.nivel.codigo}-`);
+    const codigoAcceso = await siguienteCodigoEstable(sesion.colegioId);
 
     const estudiante = await prisma.estudiante.create({
       data: {
