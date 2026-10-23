@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { sesionActual } from '@/lib/auth';
 import { whereAsignaciones } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
+import { AvisoNiveles } from '@/components/aviso-niveles';
 import { informeDeAsignacion, estadisticasPorItem } from '@/lib/reportes';
 
 export const dynamic = 'force-dynamic';
@@ -56,6 +57,7 @@ export default async function DetalleReporte({
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/reportes">
       <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
+        <AvisoNiveles />
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="text-xl font-semibold tracking-tight text-marca">{informe.titulo}</h1>

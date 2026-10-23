@@ -158,8 +158,7 @@ export default async function Alumno({
                             {propios[0].resultado.nivelLogro ?? 'Sin nivel'}
                           </span>
                         </p>
-                      ) : (
-                        <p className="mt-1 text-xs text-tenue">
+                      ) : (                        <p className="mt-1 text-xs text-tenue">
                           El resultado se publica cuando el colegio lo habilita.
                         </p>
                       )}

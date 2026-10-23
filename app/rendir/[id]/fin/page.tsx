@@ -99,6 +99,9 @@ export default async function Fin({ params }: { params: Promise<{ id: string }> 
                   {resultado.nivelLogro ?? 'Sin nivel'}
                 </span>
               </div>
+              <p className="mt-3 text-[11px] leading-relaxed text-tenue">
+                El nivel es referencial del colegio y no equivale a los niveles oficiales SIMCE.
+              </p>
             </div>
           ) : (
             <p className="mt-5 rounded-xl bg-amber-50 px-4 py-3 text-xs text-amber-800">

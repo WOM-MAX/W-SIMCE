@@ -72,6 +72,7 @@ model Colegio {
   estudiantes Estudiante[]
   ensayos   Ensayo[]
   configuracion ConfiguracionColegio?
+  cortesNivel CorteNivel[]
 }
 
 model AnioEscolar {
@@ -139,6 +140,7 @@ model Nivel {
   ejes       Eje[]
   items      Item[]
   ensayos    Ensayo[]
+  cortesNivel CorteNivel[]
 }
 
 model Asignatura {
@@ -457,10 +459,24 @@ model ConfiguracionColegio {
   colegioId               String   @id @db.Uuid
   // Si está activo, el estudiante ve su puntaje y su nivel de logro.
   estudiantesVenResultados Boolean @default(false)
-  // Cortes de nivel de logro en porcentaje de logro. Provisional: los fija la UTP.
+  // Cortes por defecto del colegio. Cada nivel puede tener los suyos en CorteNivel.
   corteElemental          Int      @default(50)
   corteAdecuado           Int      @default(75)
   actualizadoEn           DateTime @updatedAt
   colegio                 Colegio  @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+}
+
+// Cortes de logro por nivel educativo. Un ensayo de 4° basico y uno de II medio no
+// comparten umbrales. Si un nivel no tiene fila, se usan los del colegio.
+model CorteNivel {
+  id             String  @id @default(uuid()) @db.Uuid
+  colegioId      String  @db.Uuid
+  nivelId        String  @db.Uuid
+  corteElemental Int
+  corteAdecuado  Int
+  colegio        Colegio @relation(fields: [colegioId], references: [id], onDelete: Cascade)
+  nivel          Nivel   @relation(fields: [nivelId], references: [id], onDelete: Cascade)
+
+  @@unique([colegioId, nivelId])
 }
 

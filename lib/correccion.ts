@@ -33,7 +33,12 @@ export async function corregirIntento(intentoId: string): Promise<void> {
     where: { id: intentoId },
     select: {
       id: true,
-      asignacion: { select: { curso: { select: { colegioId: true } } } },
+      asignacion: {
+        select: {
+          curso: { select: { colegioId: true } },
+          ensayo: { select: { nivelId: true } },
+        },
+      },
       items: {
         select: {
           ejeClave: true,
@@ -49,9 +54,16 @@ export async function corregirIntento(intentoId: string): Promise<void> {
   if (!intento) return;
 
   const colegioId = intento.asignacion.curso.colegioId;
+  const nivelId = intento.asignacion.ensayo.nivelId;
   const config = await prisma.configuracionColegio.findUnique({ where: { colegioId } });
-  const corteElemental = config?.corteElemental ?? 50;
-  const corteAdecuado = config?.corteAdecuado ?? 75;
+
+  // El nivel del ensayo manda; si no tiene cortes propios, se usan los del colegio.
+  const corteNivel = await prisma.corteNivel.findUnique({
+    where: { colegioId_nivelId: { colegioId, nivelId } },
+    select: { corteElemental: true, corteAdecuado: true },
+  });
+  const corteElemental = corteNivel?.corteElemental ?? config?.corteElemental ?? 50;
+  const corteAdecuado = corteNivel?.corteAdecuado ?? config?.corteAdecuado ?? 75;
 
   const total = intento.items.length;
   let correctas = 0;

@@ -16,6 +16,7 @@ const MENSAJES: Record<string, string> = {
   estudiante: 'Estudiante creado.',
   clave: 'Credencial actualizada.',
   cursos: 'Cursos a cargo actualizados.',
+  cortes: 'Cortes del nivel guardados.',
   configuracion: 'Configuración guardada.',
 };
 
@@ -68,7 +69,7 @@ export default async function Admin({
 
   const fallo = error ? (ERRORES[error] ?? ERRORES.interno) : null;
 
-  const [usuarios, estudiantes, cursos] = await Promise.all([
+  const [usuarios, estudiantes, cursos, niveles, cortes] = await Promise.all([
     prisma.usuario.findMany({
       where: { membresias: { some: { colegioId: sesion.colegioId } } },
       include: {
@@ -91,6 +92,8 @@ export default async function Admin({
       include: { nivel: true },
       orderBy: { nombre: 'asc' },
     }),
+    prisma.nivel.findMany({ orderBy: { orden: 'asc' } }),
+    prisma.corteNivel.findMany({ where: { colegioId: sesion.colegioId } }),
   ]);
 
   // Filtro por curso y recuento, calculados en memoria: son 289 alumnos.
@@ -132,11 +135,9 @@ export default async function Admin({
         ) : null}
 
         <section className="rounded-2xl border border-borde bg-white p-6">
-          <h2 className="text-base font-semibold text-marca">Resultados y niveles de logro</h2>
+          <h2 className="text-base font-semibold text-marca">Resultados y visibilidad</h2>
           <p className="mt-1 mb-4 text-xs text-tenue">
-            Descarga la plantilla, una fila por estudiante, y súbela. Se omiten los que ya están
-            cargados en el mismo curso, los que traen fecha de retiro y los de cursos que no existen
-            en la plataforma. El resumen dice cuántos y por qué.
+            Decide si el estudiante ve su puntaje y su nivel de logro al terminar.
           </p>
           <form
             action="/api/admin/configuracion"
@@ -157,34 +158,69 @@ export default async function Admin({
                 </span>
               </span>
             </label>
-            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
-              Corte Insuficiente / Elemental (%)
-              <input
-                name="corteElemental"
-                type="number"
-                min="0"
-                max="100"
-                defaultValue={configuracion.corteElemental}
-                className={CLASE_INPUT}
-              />
-            </label>
-            <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
-              Corte Elemental / Adecuado (%)
-              <input
-                name="corteAdecuado"
-                type="number"
-                min="0"
-                max="100"
-                defaultValue={configuracion.corteAdecuado}
-                className={CLASE_INPUT}
-              />
-            </label>
             <div className="flex items-end">
               <button className="pulsable w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Guardar
               </button>
             </div>
           </form>
+        </section>
+
+        <section className="rounded-2xl border border-borde bg-white p-6">
+          <h2 className="text-base font-semibold text-marca">Cortes de logro por nivel</h2>
+          <p className="mt-1 mb-1 text-xs text-tenue">
+            Un ensayo de 4° básico y uno de II medio no comparten umbrales. Si un nivel queda
+            vacío, se usan los cortes del colegio ({configuracion.corteElemental}% y{' '}
+            {configuracion.corteAdecuado}%).
+          </p>
+          <p className="mb-4 text-xs text-tenue">
+            Son niveles <strong className="font-medium text-marca">referenciales del colegio</strong>
+            : no equivalen a los niveles oficiales SIMCE, que se definen por puntajes de corte
+            sobre la escala de cada prueba.
+          </p>
+          <div className="space-y-3">
+            {niveles.map((nivel) => {
+              const fila = cortes.find((c) => c.nivelId === nivel.id);
+              return (
+                <form
+                  key={nivel.id}
+                  action="/api/admin/cortes"
+                  method="post"
+                  className="flex flex-wrap items-end gap-3 border-t border-borde pt-3 first:border-t-0 first:pt-0"
+                >
+                  <input type="hidden" name="nivelId" value={nivel.id} />
+                  <span className="min-w-24 text-sm font-medium text-slate-700">{nivel.nombre}</span>
+                  <label className="text-xs font-medium uppercase tracking-wide text-tenue">
+                    Insuficiente / Elemental (%)
+                    <input
+                      name="corteElemental"
+                      type="number"
+                      min="0"
+                      max="99"
+                      required
+                      defaultValue={fila?.corteElemental ?? configuracion.corteElemental}
+                      className="mt-1 w-24 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca outline-none focus:border-acento"
+                    />
+                  </label>
+                  <label className="text-xs font-medium uppercase tracking-wide text-tenue">
+                    Elemental / Adecuado (%)
+                    <input
+                      name="corteAdecuado"
+                      type="number"
+                      min="1"
+                      max="100"
+                      required
+                      defaultValue={fila?.corteAdecuado ?? configuracion.corteAdecuado}
+                      className="mt-1 w-24 rounded-lg border border-borde px-2 py-1.5 text-sm text-marca outline-none focus:border-acento"
+                    />
+                  </label>
+                  <button className="pulsable rounded-lg border border-marca/30 px-3 py-1.5 text-xs font-semibold text-marca hover:border-marca/60 hover:bg-fondo">
+                    Guardar
+                  </button>
+                </form>
+              );
+            })}
+          </div>
         </section>
 
         <section className="rounded-2xl border border-borde bg-white p-6">

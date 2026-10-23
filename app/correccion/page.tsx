@@ -4,6 +4,7 @@ import { sesionActual } from '@/lib/auth';
 import { corregirIntento } from '@/lib/correccion';
 import { whereAsignaciones } from '@/lib/alcance';
 import { Panel } from '@/components/panel';
+import { AvisoNiveles } from '@/components/aviso-niveles';
 import { Cabecera, EstadoVacio } from '@/components/ui-panel';
 
 export const dynamic = 'force-dynamic';
@@ -67,6 +68,7 @@ export default async function Correccion() {
   return (
     <Panel nombre={sesion.nombre} rol={sesion.rol} activo="/correccion">
       <div className="mx-auto max-w-6xl space-y-6 px-6 py-8">
+        <AvisoNiveles />
         <Cabecera
           titulo="Corrección"
           detalle="Resultados por curso y por estudiante"
