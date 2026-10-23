@@ -92,6 +92,11 @@ model Usuario {
   activo       Boolean  @default(true)
   creadoEn     DateTime @default(now())
 
+  // Invitación pendiente: se guarda el hash del token, nunca el token.
+  // Al activar la cuenta se escribe hashPassword y se limpian ambos campos.
+  tokenInvitacion  String?   @unique
+  invitacionExpira DateTime?
+
   membresias   Membresia[]
   asignaciones Asignacion[]
 }

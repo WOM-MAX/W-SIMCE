@@ -67,6 +67,18 @@ DIRECT_URL="postgresql://.......neon.tech/neondb?sslmode=require"           # di
 La pooled la usa la aplicación; la directa, las migraciones. Si rotas la
 credencial, cambia ambas.
 
+Para enviar las invitaciones por correo (opcional):
+
+```
+RESEND_API_KEY="re_..."                                        # proveedor de envío
+MAIL_FROM="W-SIMCE <no-reply@colegioacropolis.net>"            # remitente verificado
+PUBLIC_BASE_URL="https://w-simce.colegioacropolis.net"         # opcional: base del enlace
+```
+
+Sin `RESEND_API_KEY` el alta de un funcionario igual funciona, pero el enlace de
+activación se muestra en pantalla en vez de enviarse. El dominio del remitente
+debe tener SPF y DKIM en el DNS del colegio.
+
 ## Estructura
 
 ```
@@ -120,6 +132,13 @@ Si el correo ya existe, lo promueve a ADMIN y le cambia la clave.
 
 Con esa cuenta, `/admin` permite crear docentes (con rol DOCENTE, UTP o ADMIN),
 crear estudiantes con código automático, y restablecer claves y PIN.
+
+Al crear un docente o directivo **no se fija una clave**: la cuenta nace con una
+clave aleatoria que nadie conoce y se envía una invitación para que la persona
+defina la suya. El enlace (`/activar?token=...`) sirve una sola vez y vence en
+siete días; en la base queda solo el hash del token. Si `RESEND_API_KEY` no está
+configurada, el alta no falla: la pantalla muestra el enlace para entregarlo a
+mano.
 
 La sesión se firma con HMAC-SHA256 y viaja en una cookie `httpOnly`. Requiere
 `SESSION_SECRET` de 32 caracteres o más en el entorno; sin ella el login

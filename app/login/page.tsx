@@ -20,16 +20,21 @@ const MODULOS = [
   'Corrección y reportes el mismo día',
 ];
 
+const EXITOS: Record<string, string> = {
+  activado: 'Tu clave quedó guardada. Ya puedes ingresar.',
+};
+
 export default async function Login({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; ok?: string }>;
 }) {
   const sesion = await sesionActual();
   if (sesion) redirect(sesion.tipo === 'estudiante' ? '/alumno' : '/panel');
 
-  const { error } = await searchParams;
+  const { error, ok } = await searchParams;
   const mensaje = error ? (ERRORES[error] ?? ERRORES.interno) : null;
+  const exito = ok ? (EXITOS[ok] ?? null) : null;
 
   return (
     <div className="min-h-dvh lg:grid lg:grid-cols-[1.05fr_1fr]">
@@ -134,6 +139,15 @@ export default async function Login({
             <p className="mt-2 max-w-[36ch] text-[15px] leading-relaxed text-tenue">
               Usa tu correo institucional o el código que te entregó el colegio.
             </p>
+
+            {exito ? (
+              <p
+                role="status"
+                className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800"
+              >
+                {exito}
+              </p>
+            ) : null}
 
             {mensaje ? (
               <p

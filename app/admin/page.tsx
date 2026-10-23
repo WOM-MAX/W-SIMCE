@@ -12,6 +12,7 @@ const CLASE_INPUT =
 
 const MENSAJES: Record<string, string> = {
   usuario: 'Docente creado.',
+  invitado: 'Invitación enviada. La persona debe abrir el correo y definir su clave.',
   estudiante: 'Estudiante creado.',
   clave: 'Credencial actualizada.',
   configuracion: 'Configuración guardada.',
@@ -231,7 +232,8 @@ export default async function Admin({
           <div className="rounded-2xl border border-borde bg-white p-6">
             <h2 className="text-base font-semibold text-marca">Nuevo docente o directivo</h2>
             <p className="mt-1 mb-4 text-xs text-tenue">
-              La clave se guarda cifrada con scrypt. No se puede recuperar, solo restablecer.
+              Se envía una invitación al correo para que la persona defina su propia clave. El
+              enlace sirve una sola vez y vence en siete días.
             </p>
             <form action="/api/admin/usuarios" method="post" className="space-y-3">
               <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
@@ -242,22 +244,16 @@ export default async function Admin({
                 Correo
                 <input name="email" type="email" required placeholder="ana@acropolis.cl" className={CLASE_INPUT} />
               </label>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
-                  Rol
-                  <select name="rol" className={CLASE_INPUT} defaultValue="DOCENTE">
-                    <option value="DOCENTE">Docente</option>
-                    <option value="UTP">UTP</option>
-                    <option value="ADMIN">Administrador</option>
-                  </select>
-                </label>
-                <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
-                  Clave inicial
-                  <input name="clave" required minLength={4} className={CLASE_INPUT} />
-                </label>
-              </div>
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+                Rol
+                <select name="rol" className={CLASE_INPUT} defaultValue="DOCENTE">
+                  <option value="DOCENTE">Docente</option>
+                  <option value="UTP">UTP</option>
+                  <option value="ADMIN">Administrador</option>
+                </select>
+              </label>
               <button className="pulsable w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
-                Crear docente
+                Crear e invitar
               </button>
             </form>
           </div>
