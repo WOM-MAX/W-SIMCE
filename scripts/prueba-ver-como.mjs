@@ -63,8 +63,7 @@ try {
   const ensayos = await get('/ensayos', ambas);
   revisar('ve lo mismo que el docente', !ensayos.texto.includes(ensayo.titulo));
 
-  const eliminar = await post(`/api/ensayos/${ensayo.id}/eliminar`, {}, admin.cookie);
-  // Con la cookie de admin sin suplantar sí podría; con suplantación se bloquea.
+  // Nunca con la cookie real: eso eliminaría el ensayo de verdad.
   const eliminarSuplente = await fetch(`${BASE}/api/ensayos/${ensayo.id}/eliminar`, {
     method: 'POST',
     redirect: 'manual',
