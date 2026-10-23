@@ -32,12 +32,6 @@ function escapar(texto: string): string {
 }
 
 export async function enviarInvitacion(datos: Invitacion): Promise<ResultadoEnvio> {
-  const clave = process.env['RESEND_API_KEY'];
-  if (!clave) {
-    console.warn('correo: falta RESEND_API_KEY; la invitación no se envió');
-    return { enviado: false, motivo: 'sin-proveedor' };
-  }
-
   const rol = NOMBRE_ROL[datos.rol] ?? datos.rol;
   const texto = [
     `Hola ${datos.nombre}:`,
@@ -82,6 +76,40 @@ export async function enviarInvitacion(datos: Invitacion): Promise<ResultadoEnvi
     </table>
   </body>
 </html>`;
+
+  const smtpHost = process.env['SMTP_HOST'];
+  const smtpUser = process.env['SMTP_USER'];
+  const smtpPass = process.env['SMTP_PASS'];
+
+  // Buzón del colegio primero: no necesita dominio verificado ni DNS.
+  if (smtpHost && smtpUser && smtpPass) {
+    try {
+      const { default: nodemailer } = await import('nodemailer');
+      const transporte = nodemailer.createTransport({
+        host: smtpHost,
+        port: Number(process.env['SMTP_PORT'] ?? 587),
+        secure: false,
+        auth: { user: smtpUser, pass: smtpPass },
+      });
+      await transporte.sendMail({
+        from: remitente(),
+        to: datos.para,
+        subject: 'Tu acceso a W-SIMCE',
+        text: texto,
+        html,
+      });
+      return { enviado: true };
+    } catch (error) {
+      console.error('correo: fallo al enviar por SMTP', error);
+      return { enviado: false, motivo: 'red' };
+    }
+  }
+
+  const clave = process.env['RESEND_API_KEY'];
+  if (!clave) {
+    console.warn('correo: sin SMTP ni RESEND_API_KEY; la invitación no se envió');
+    return { enviado: false, motivo: 'sin-proveedor' };
+  }
 
   try {
     const respuesta = await fetch('https://api.resend.com/emails', {
