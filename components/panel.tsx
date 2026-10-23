@@ -45,11 +45,18 @@ export function Panel({
       icono: 'M4 7h6M14 7h6M4 17h3M11 17h9M7 12h10',
     },
     { href: '/reportes', nombre: 'Reportes', icono: 'M4 20V5M4 20h16M8 17v-5M12.5 17V8M17 17v-7' },
+    {
+      href: '/direccion',
+      nombre: 'Dirección',
+      icono: 'M12 3v18M4 8h16M6 8v6M18 8v6M4 20h16',
+    },
   ];
 
-  const visibles = menu.filter(
-    (i) => i.href !== '/admin' || rol === 'ADMIN' || rol === 'UTP'
-  );
+  const visibles = menu.filter((i) => {
+    if (i.href === '/admin') return rol === 'ADMIN' || rol === 'UTP';
+    if (i.href === '/direccion') return rol === 'ADMIN' || rol === 'DIRECCION';
+    return true;
+  });
 
   const Icono = ({ d, className = 'h-[18px] w-[18px]' }: { d: string; className?: string }) => (
     <svg
