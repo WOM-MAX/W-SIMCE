@@ -73,6 +73,7 @@ export async function POST(request: Request) {
   const nombre = texto(form, 'nombre');
   const email = texto(form, 'email').toLowerCase();
   const rol = (texto(form, 'rol') || 'DOCENTE') as RolUsuario;
+  const cursoId = texto(form, 'cursoId');
 
   if (!nombre || !email) return volver(request, '/admin?error=datos');
   if (!ROLES.includes(rol)) return volver(request, '/admin?error=datos');
@@ -87,7 +88,14 @@ export async function POST(request: Request) {
         hashPassword: hashClave(claveProvisional()),
         tokenInvitacion: tokenHash,
         invitacionExpira: expira,
-        membresias: { create: { colegioId: sesion.colegioId, rol } },
+        membresias: {
+          create: {
+            colegioId: sesion.colegioId,
+            rol,
+            // Un docente puede crearse ya con su curso: es lo que define su alcance.
+            cursos: cursoId ? { create: [{ cursoId }] } : undefined,
+          },
+        },
       },
     });
 

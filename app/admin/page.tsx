@@ -397,6 +397,17 @@ export default async function Admin({
                   <option value="ADMIN">Administrador</option>
                 </select>
               </label>
+              <label className="block text-xs font-medium uppercase tracking-wide text-tenue">
+                Curso a cargo
+                <select name="cursoId" className={CLASE_INPUT} defaultValue="">
+                  <option value="">Se asigna después</option>
+                  {cursos.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.nombre}
+                    </option>
+                  ))}
+                </select>
+              </label>
               <button className="pulsable w-full rounded-lg bg-marca px-4 py-2 text-sm font-medium text-white hover:bg-marca-oscuro">
                 Crear e invitar
               </button>

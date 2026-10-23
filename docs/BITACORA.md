@@ -1154,3 +1154,59 @@ falla con `EPERM`).
 
 
 
+
+## 27. Con qué empezar mañana
+
+### 27.1 Hecho el 23 de octubre por la tarde
+
+- Correo saliente por el buzón del colegio: `lib/correo.ts` usa SMTP si están
+  `SMTP_HOST`, `SMTP_USER` y `SMTP_PASS`, y cae a Resend si no. Probado con
+  `no-responder@colegioacropolis.net` en `smtp.gmail.com:587`: credenciales
+  aceptadas y mensaje recibido.
+- El aviso de invitación ya no nombra a Resend cuando el envío no está configurado.
+- Al crear una cuenta se puede elegir el curso a cargo en el mismo formulario. Si
+  se deja vacío, se asigna después con "Guardar cursos" en la fila del usuario.
+- Neon: contraseña del rol `neondb_owner` rotada. `SESSION_SECRET` rotado en local.
+- Railway volvió a desplegar y producción corre el código nuevo: `/direccion`
+  responde y el eslogan del acceso es el actual.
+
+### 27.2 Pendiente de configurar en Railway
+
+Variables del servicio: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS` y
+`MAIL_FROM`. Sin ellas las invitaciones no salen desde producción; el enlace se
+muestra en pantalla para entregarlo a mano.
+
+Falta confirmar si `SESSION_SECRET` de Railway también se rotó. Si quedó el viejo,
+una cookie emitida antes del cambio seguiría siendo válida.
+
+### 27.3 La siguiente función: el docente arma su ensayo
+
+Idea del usuario, aceptada: el profesor del curso elige los ítems del banco, en vez
+de recibir un ensayo generado solo por especificación. La razón es que conoce lo que
+más les ha costado a sus estudiantes.
+
+Qué hay que construir:
+
+| Pieza | Detalle |
+| --- | --- |
+| Banco | Casillas por ítem, contador de marcados y botón "Crear ensayo con estos" |
+| Ruta | Envío nuevo que reciba la lista de ítems elegidos y cree el ensayo |
+| Validación | Todos del mismo nivel y asignatura; avisar si se mezclan |
+| Permisos | El docente solo puede marcar ítems de los cursos que tiene a cargo |
+
+Lo que ya existe y sirve de base: `MembresiaCurso` define el alcance del docente y
+`lib/alcance.ts` lo aplica; el banco ya está restringido por curso.
+
+Lo que hay que decidir antes de empezar: si el ensayo creado así nace como borrador
+para revisar, y si el docente puede reordenar los ítems o solo marcarlos.
+
+### 27.4 Otros pendientes
+
+- Tres contadores separados en el resumen de importación: hoy los retirados se
+  cuentan como "omitidos por duplicado".
+- Cargar los siete cursos restantes desde la planilla del Libro de Matrícula.
+- Revisar el ensayo restaurado "Ensayo 1 de Matemática · 30 ítems" (lo pide la
+  sección 26.7).
+- Banco: panel de filtros por capas y quitar la fila de filtros activos duplicada.
+- Revisión visual del Word y del PDF: dónde corta la página.
+- Resend queda descartado mientras el buzón del colegio funcione.
