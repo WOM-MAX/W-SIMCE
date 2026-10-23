@@ -37,6 +37,9 @@ RUN npm install -g prisma@6.19.3
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+# En modo standalone Next no empaqueta public/: server.js lo busca junto a si
+# mismo. Sin esta linea, emblemas, iconos y robots.txt responden 404.
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
 
 USER nextjs
